@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 import tagger from "@dhiwise/component-tagger";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -16,7 +17,19 @@ export default defineConfig({
     outDir: "build",
     chunkSizeWarningLimit: 2000,
   },
-  plugins: [tsconfigPaths(), react(), tagger()],
+  plugins: [
+    tsconfigPaths(),
+    react(),
+    tagger(),
+    viteStaticCopy({
+      targets: [
+        {
+          src: '_redirects',
+          dest: ''
+        }
+      ]
+    })
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

@@ -54,7 +54,8 @@
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
     "tailwindcss-elevation": "^2.0.0",
-    "tailwindcss-fluid-type": "^2.0.7"
+    "tailwindcss-fluid-type": "^2.0.7",
+    "vite-plugin-static-copy": "^3.2.0"
   },
   "scripts": {
     "start": "vite",

@@ -47,7 +47,7 @@ const TestSelectionDashboard = () => {
         } else {
           // Fallback if DB is empty or error (dev environment safety)
           try {
-            const response = await fetch("http://localhost:5000/api/test-sets");
+            const response = await fetch("https://l-hit-aged7aquila.onrender.com/api/test-sets");
             const data = await response.json();
             if (data.success && Array.isArray(data.sets)) fetchedTests = data.sets;
           } catch (apiError) {

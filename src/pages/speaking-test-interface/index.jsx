@@ -114,7 +114,7 @@ const SpeakingTestInterface = () => {
   useEffect(() => {
     const startSession = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/speaking/session/start", {
+        const response = await fetch("https://l-hit-aged7aquila.onrender.com/api/speaking/session/start", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -139,7 +139,7 @@ const SpeakingTestInterface = () => {
   useEffect(() => {
     if (!testSetId) return;
 
-    fetch(`http://localhost:5000/api/questions/set?testSetId=${testSetId}`)
+    fetch(`https://l-hit-aged7aquila.onrender.com/api/questions/set?testSetId=${testSetId}`)
       .then(res => res.json())
       .then(data => {
         if (data.success) {
@@ -271,7 +271,7 @@ const SpeakingTestInterface = () => {
         formData.append("audioDuration", recordingTime);
 
         try {
-          const response = await fetch(`http://localhost:5000/api/speaking/session/${sessionId}/response`, {
+          const response = await fetch(`https://l-hit-aged7aquila.onrender.com/api/speaking/session/${sessionId}/response`, {
             method: "POST",
             body: formData
           });
@@ -369,7 +369,7 @@ const SpeakingTestInterface = () => {
       console.log("Completing session...");
   
       await fetch(
-        `http://localhost:5000/api/speaking/session/${sessionId}/complete`,
+        `https://l-hit-aged7aquila.onrender.com/api/speaking/session/${sessionId}/complete`,
         {
           method: "POST"
         }
@@ -377,12 +377,12 @@ const SpeakingTestInterface = () => {
   
       console.log("Triggering AI evaluation...");
   
-      // await fetch(
-      //   `http://localhost:5000/api/speaking/session/${sessionId}/evaluate-ai`,
-      //   {
-      //     method: "POST"
-      //   }
-      // );
+      await fetch(
+        `https://l-hit-aged7aquila.onrender.com/api/speaking/session/${sessionId}/evaluate-ai`,
+        {
+          method: "POST"
+        }
+      );
   
       console.log("AI evaluation triggered.");
   
