@@ -11,6 +11,7 @@ import TestTimer from './components/TestTimer';
 import NavigationControls from './components/NavigationControls';
 import ConfidenceBooster from './components/ConfidenceBooster';
 import Icon from '../../components/AppIcon';
+import AIEvaluationRunning from './components/AIEvaluationRunning';
 
 const SpeakingTestInterface = () => {
   const navigate = useNavigate();
@@ -34,6 +35,7 @@ const SpeakingTestInterface = () => {
   const [speakingTimeLeft, setSpeakingTimeLeft] = useState(120);
   const [autoSaveStatus, setAutoSaveStatus] = useState('saved');
   const [recordingError, setRecordingError] = useState(null);
+  const [isEvaluating, setIsEvaluating] = useState(false);
   
   const recordingTimerRef = useRef(null);
   const preparationTimerRef = useRef(null);
@@ -159,6 +161,26 @@ const SpeakingTestInterface = () => {
         console.error("Error fetching questions:", err);
       });
   }, [currentPart, testSetId]);
+
+  useEffect(() => {
+    if (!isEvaluating || !sessionId) return;
+  
+    const checkStatus = async () => {
+      const { data } = await supabase
+        .from("speaking_sessions")
+        .select("status")
+        .eq("id", sessionId)
+        .single();
+  
+      if (data?.status === "evaluated") {
+        navigate(`/ai-feedback-results/${sessionId}`);
+      }
+    };
+  
+    const interval = setInterval(checkStatus, 3000);
+  
+    return () => clearInterval(interval);
+  }, [isEvaluating, sessionId, navigate]);
 
   useEffect(() => {
     if (isRecording && !isPaused) {
@@ -367,6 +389,7 @@ const SpeakingTestInterface = () => {
   
     try {
       console.log("Completing session...");
+      setIsEvaluating(true);
   
       await fetch(
         `https://l-hit-aged7aquila.onrender.com/api/speaking/session/${sessionId}/complete`,
@@ -386,10 +409,9 @@ const SpeakingTestInterface = () => {
   
       console.log("AI evaluation triggered.");
   
-      navigate(`/ai-feedback-results/${sessionId}`);
-  
     } catch (error) {
       console.error("Submit failed:", error);
+      setIsEvaluating(false);
     }
   };
 
@@ -564,6 +586,7 @@ const SpeakingTestInterface = () => {
           </div>
         </div>
       </main>
+      {isEvaluating && <AIEvaluationRunning />}
     </div>
   );
 };

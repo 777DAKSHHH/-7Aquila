@@ -87,19 +87,36 @@ const AIFeedbackResults = () => {
       try {
         setIsLoading(true);
 
-        // Fetch session data
-        const { data: session, error: sessionError } = await supabase
-          .from('speaking_sessions')
-          .select('*')
-          .eq('id', attemptId)
-          .maybeSingle();
+        let session = null;
+        let attempts = 0;
 
-        if (sessionError) throw sessionError;
+        // Retry up to 5 times (important for production)
+        while (!session && attempts < 5) {
+          const { data, error } = await supabase
+            .from('speaking_sessions')
+            .select('*')
+            .eq('id', attemptId)
+            .maybeSingle();
+
+          if (error) throw error;
+
+          session = data;
+
+          if (!session) {
+            await new Promise(res => setTimeout(res, 1500));
+          }
+
+          attempts++;
+        }
+
         if (!session) {
           throw new Error(`No session found for attempt ID: ${attemptId}`);
         }
 
-        // Fetch responses with question details
+        if (session.status !== "evaluated") {
+          await new Promise(res => setTimeout(res, 2000));
+        }
+
         const { data: responses, error: responsesError } = await supabase
           .from('speaking_responses')
           .select('*, speaking_questions(*)')
@@ -108,14 +125,17 @@ const AIFeedbackResults = () => {
 
         if (responsesError) throw responsesError;
 
-        // Process responses to include public URL for audio
         const responsesWithUrl = responses.map(response => {
-          const { data } = supabase.storage.from('speaking-audio').getPublicUrl(response.audio_path);
+          const { data } = supabase.storage
+            .from('speaking-audio')
+            .getPublicUrl(response.audio_path);
+
           return { ...response, audioUrl: data.publicUrl };
         });
 
         setResults({ session, responses: responsesWithUrl });
         setParsedFeedback(parseAIFeedback(session.ai_feedback));
+
       } catch (err) {
         setError(err.message);
       } finally {

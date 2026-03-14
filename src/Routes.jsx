@@ -37,7 +37,6 @@ const Routes = () => {
               <Route path="/lobby" element={<Lobby />} />
               <Route path="/faculty-dashboard" element={<FacultyDashboard />} />
               <Route path="/speaking-test-interface" element={<SpeakingTestInterface />} />
-              <Route path="/ai-feedback-results" element={<AIFeedbackResults />} />
               <Route path="/ai-feedback-results/:attemptId" element={<AIFeedbackResults />} />
               <Route path="/student-audio-review" element={<StudentAudioReview />} />
               <Route path="/student-audio-review/:attemptId" element={<StudentAudioReview />} />
