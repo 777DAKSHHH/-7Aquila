@@ -177,7 +177,7 @@ const SpeakingTestInterface = () => {
       }
     };
   
-    const interval = setInterval(checkStatus, 3000);
+    const interval = setInterval(checkStatus, 5000);
   
     return () => clearInterval(interval);
   }, [isEvaluating, sessionId, navigate]);

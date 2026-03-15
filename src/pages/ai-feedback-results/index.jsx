@@ -27,7 +27,7 @@ const parseAIFeedback = (feedbackText) => {
   };
 
   const getScore = (content) => {
-    const match = content.match(/Band Score:\s*(\d+(\.\d+)?)/i);
+    const match = content.match(/(\d+(\.\d+)?)/);
     return match ? parseFloat(match[1]) : 0;
   };
 
@@ -40,7 +40,7 @@ const parseAIFeedback = (feedbackText) => {
   const lexicalContent = getSectionContent('Lexical Resource', 'Grammatical Range and Accuracy');
   const grammarContent = getSectionContent('Grammatical Range and Accuracy', 'Pronunciation');
   const pronunciationContent = getSectionContent('Pronunciation', 'Overall Band Score');
-  const improvementsContent = getSectionContent('suggestions for improvement', '---end-of-text---');
+  const improvementsContent = getSectionContent('areas for improvement', null);
 
   const improvements = improvementsContent
     .split('\n')
@@ -127,7 +127,7 @@ const AIFeedbackResults = () => {
 
         const responsesWithUrl = responses.map(response => {
           const { data } = supabase.storage
-            .from('speaking-audio')
+            .from('sessions')
             .getPublicUrl(response.audio_path);
 
           return { ...response, audioUrl: data.publicUrl };

@@ -26,8 +26,8 @@ const parseAIFeedback = (feedbackText) => {
   };
 
   const getScore = (content) => {
-    const match = content.match(/Band Score:\s*(\d+(\.\d+)?)/i);
-    return match ? match[1] : "0";
+    const match = content.match(/(\d+(\.\d+)?)/);
+    return match ? parseFloat(match[1]) : 0;
   };
 
   const getExplanation = (content) => {
@@ -40,7 +40,7 @@ const parseAIFeedback = (feedbackText) => {
   const grammarContent = getSectionContent('Grammatical Range and Accuracy', 'Pronunciation');
   const pronunciationContent = getSectionContent('Pronunciation', 'Overall Band Score');
   
-  const improvementsContent = getSectionContent('suggestions for improvement', '---end-of-text---');
+  const improvementsContent = getSectionContent('areas for improvement', null);
   const globalImprovements = improvementsContent
     .split('\n')
     .map(line => line.replace(/^-/, '').trim())
@@ -48,7 +48,7 @@ const parseAIFeedback = (feedbackText) => {
 
   return {
     scores: {
-      overall: getScore(getSectionContent('Overall Band Score', null)) || "0",
+      overall: getScore(getSectionContent('Overall Band Score', null)) || 0,
       fluency: getScore(fluencyContent),
       lexical: getScore(lexicalContent),
       grammar: getScore(grammarContent),
@@ -103,7 +103,7 @@ const StudentAudioReview = () => {
         // Get public URLs for audio
         const responsesWithUrls = responseList.map(r => {
           if (r.audio_path) {
-            const { data } = supabase.storage.from('speaking-audio').getPublicUrl(r.audio_path);
+            const { data } = supabase.storage.from('sessions').getPublicUrl(r.audio_path);
             return { ...r, audioUrl: data.publicUrl };
           }
           return r;
