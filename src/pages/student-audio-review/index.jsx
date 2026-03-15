@@ -14,15 +14,39 @@ import AIAssessmentDetails from './components/AIAssessmentDetails';
 const parseAIFeedback = (feedbackText) => {
   if (!feedbackText) return null;
 
-  const getSectionContent = (startMarker, endMarker) => {
-    const startIndex = feedbackText.toLowerCase().indexOf(startMarker.toLowerCase());
+  const getSectionContent = (startMarkers, endMarkers) => {
+    const markers = Array.isArray(startMarkers) ? startMarkers : [startMarkers];
+    let startIndex = -1;
+    let markerLength = 0;
+
+    for (const marker of markers) {
+      const index = feedbackText.toLowerCase().indexOf(marker.toLowerCase());
+      if (index !== -1) {
+        if (startIndex === -1 || index < startIndex) {
+          startIndex = index;
+          markerLength = marker.length;
+        }
+      }
+    }
+
     if (startIndex === -1) return '';
-    const endIndex = endMarker ? feedbackText.toLowerCase().indexOf(endMarker.toLowerCase(), startIndex) : -1;
+
+    let endIndex = -1;
+    if (endMarkers) {
+      const eMarkers = Array.isArray(endMarkers) ? endMarkers : [endMarkers];
+      for (const marker of eMarkers) {
+        const index = feedbackText.toLowerCase().indexOf(marker.toLowerCase(), startIndex + markerLength);
+        if (index !== -1 && (endIndex === -1 || index < endIndex)) {
+          endIndex = index;
+        }
+      }
+    }
+
     const content = feedbackText.substring(
-      startIndex + startMarker.length,
+      startIndex + markerLength,
       endIndex !== -1 ? endIndex : undefined
     );
-    return content.trim();
+    return content.replace(/^[:\-\s]+/, '').trim();
   };
 
   const getScore = (content) => {
@@ -31,19 +55,22 @@ const parseAIFeedback = (feedbackText) => {
   };
 
   const getExplanation = (content) => {
-    const match = content.match(/Band Score:\s*\d+(\.\d+)?\s*([\s\S]*)/i);
-    return match ? match[2].trim() : content;
+    return content.replace(/^(band\s*score)?\s*[:\-]?\s*\d+(\.\d+)?\s*[:\-]?\s*/i, '').trim();
   };
 
-  const fluencyContent = getSectionContent('Fluency and Coherence', 'Lexical Resource');
-  const lexicalContent = getSectionContent('Lexical Resource', 'Grammatical Range and Accuracy');
-  const grammarContent = getSectionContent('Grammatical Range and Accuracy', 'Pronunciation');
-  const pronunciationContent = getSectionContent('Pronunciation', 'Overall Band Score');
+  const fluencyContent = getSectionContent(['Fluency and Coherence', 'Fluency & Coherence'], ['Lexical Resource', 'Vocabulary']);
+  const lexicalContent = getSectionContent(['Lexical Resource', 'Vocabulary'], ['Grammatical Range and Accuracy', 'Grammar']);
+  const grammarContent = getSectionContent(['Grammatical Range and Accuracy', 'Grammar'], ['Pronunciation']);
+  const pronunciationContent = getSectionContent(['Pronunciation'], ['Overall Band Score', 'Areas for improvement', 'Suggestions']);
   
-  const improvementsContent = getSectionContent('areas for improvement', null);
+  const improvementsContent = getSectionContent(
+    ['areas for improvement', 'suggestions for improvement', 'improvements', 'weaknesses'], 
+    ['overall recommendation', 'overall band score', 'conclusion']
+  );
+
   const globalImprovements = improvementsContent
     .split('\n')
-    .map(line => line.replace(/^-/, '').trim())
+    .map(line => line.replace(/^[-\*\d\.]+\s*/, '').trim())
     .filter(line => line.length > 0 && !line.toLowerCase().includes('overall band score'));
 
   return {
@@ -102,11 +129,17 @@ const StudentAudioReview = () => {
 
         // Get public URLs for audio
         const responsesWithUrls = responseList.map(r => {
-          if (r.audio_path) {
-            const { data } = supabase.storage.from('sessions').getPublicUrl(r.audio_path);
-            return { ...r, audioUrl: data.publicUrl };
+          let finalAudioUrl = r.audio_url;
+          
+          if (!finalAudioUrl && r.audio_path) {
+            if (r.audio_path.startsWith('http')) {
+              finalAudioUrl = r.audio_path;
+            } else {
+              const { data } = supabase.storage.from('sessions').getPublicUrl(r.audio_path);
+              finalAudioUrl = data.publicUrl;
+            }
           }
-          return r;
+          return { ...r, audioUrl: finalAudioUrl };
         });
 
         setSessionData(session);
@@ -172,9 +205,10 @@ const StudentAudioReview = () => {
     : null;
   
   // Concatenate all transcripts for the viewer if desired, or just show the primary one
-  const fullTranscript = responses.map(r => 
-    `[Part ${r.speaking_questions?.part || '?'}] ${r.speaking_questions?.question_text || ''}\n${r.transcript || '(No transcript)'}`
-  ).join('\n\n');
+  const fullTranscript = responses.map(r => {
+    const qObj = Array.isArray(r.speaking_questions) ? r.speaking_questions[0] : r.speaking_questions;
+    return `[Part ${qObj?.part || '?'}] ${qObj?.question_text || qObj?.question || ''}\n${r.transcript || '(No transcript)'}`;
+  }).join('\n\n');
 
   return (
     <div className="min-h-screen bg-background">

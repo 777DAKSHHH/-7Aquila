@@ -15,15 +15,39 @@ const parseAIFeedback = (feedbackText) => {
     return { criteriaScores: {}, feedback: {}, strengths: [], improvements: [] };
   }
 
-  const getSectionContent = (startMarker, endMarker) => {
-    const startIndex = feedbackText.toLowerCase().indexOf(startMarker.toLowerCase());
+  const getSectionContent = (startMarkers, endMarkers) => {
+    const markers = Array.isArray(startMarkers) ? startMarkers : [startMarkers];
+    let startIndex = -1;
+    let markerLength = 0;
+
+    for (const marker of markers) {
+      const index = feedbackText.toLowerCase().indexOf(marker.toLowerCase());
+      if (index !== -1) {
+        if (startIndex === -1 || index < startIndex) {
+          startIndex = index;
+          markerLength = marker.length;
+        }
+      }
+    }
+
     if (startIndex === -1) return '';
-    const endIndex = endMarker ? feedbackText.toLowerCase().indexOf(endMarker.toLowerCase(), startIndex) : -1;
+
+    let endIndex = -1;
+    if (endMarkers) {
+      const eMarkers = Array.isArray(endMarkers) ? endMarkers : [endMarkers];
+      for (const marker of eMarkers) {
+        const index = feedbackText.toLowerCase().indexOf(marker.toLowerCase(), startIndex + markerLength);
+        if (index !== -1 && (endIndex === -1 || index < endIndex)) {
+          endIndex = index;
+        }
+      }
+    }
+
     const content = feedbackText.substring(
-      startIndex + startMarker.length,
+      startIndex + markerLength,
       endIndex !== -1 ? endIndex : undefined
     );
-    return content.trim();
+    return content.replace(/^[:\-\s]+/, '').trim();
   };
 
   const getScore = (content) => {
@@ -32,19 +56,22 @@ const parseAIFeedback = (feedbackText) => {
   };
 
   const getExplanation = (content) => {
-    const match = content.match(/Band Score:\s*\d+(\.\d+)?\s*([\s\S]*)/i);
-    return match ? match[2].trim() : content;
+    return content.replace(/^(band\s*score)?\s*[:\-]?\s*\d+(\.\d+)?\s*[:\-]?\s*/i, '').trim();
   };
 
-  const fluencyContent = getSectionContent('Fluency and Coherence', 'Lexical Resource');
-  const lexicalContent = getSectionContent('Lexical Resource', 'Grammatical Range and Accuracy');
-  const grammarContent = getSectionContent('Grammatical Range and Accuracy', 'Pronunciation');
-  const pronunciationContent = getSectionContent('Pronunciation', 'Overall Band Score');
-  const improvementsContent = getSectionContent('areas for improvement', null);
+  const fluencyContent = getSectionContent(['Fluency and Coherence', 'Fluency & Coherence'], ['Lexical Resource', 'Vocabulary']);
+  const lexicalContent = getSectionContent(['Lexical Resource', 'Vocabulary'], ['Grammatical Range and Accuracy', 'Grammar']);
+  const grammarContent = getSectionContent(['Grammatical Range and Accuracy', 'Grammar'], ['Pronunciation']);
+  const pronunciationContent = getSectionContent(['Pronunciation'], ['Overall Band Score', 'Areas for improvement', 'Suggestions']);
+  
+  const improvementsContent = getSectionContent(
+    ['areas for improvement', 'suggestions for improvement', 'improvements', 'weaknesses'], 
+    ['overall recommendation', 'overall band score', 'conclusion']
+  );
 
   const improvements = improvementsContent
     .split('\n')
-    .map(line => line.replace(/^-/, '').trim())
+    .map(line => line.replace(/^[-\*\d\.]+\s*/, '').trim())
     .filter(line => line.length > 0 && !line.toLowerCase().includes('overall band score'));
 
   return {
@@ -126,11 +153,18 @@ const AIFeedbackResults = () => {
         if (responsesError) throw responsesError;
 
         const responsesWithUrl = responses.map(response => {
-          const { data } = supabase.storage
-            .from('sessions')
-            .getPublicUrl(response.audio_path);
+          let finalAudioUrl = response.audio_url;
+          
+          if (!finalAudioUrl && response.audio_path) {
+            if (response.audio_path.startsWith('http')) {
+              finalAudioUrl = response.audio_path;
+            } else {
+              const { data } = supabase.storage.from('sessions').getPublicUrl(response.audio_path);
+              finalAudioUrl = data.publicUrl;
+            }
+          }
 
-          return { ...response, audioUrl: data.publicUrl };
+          return { ...response, audioUrl: finalAudioUrl };
         });
 
         setResults({ session, responses: responsesWithUrl });
