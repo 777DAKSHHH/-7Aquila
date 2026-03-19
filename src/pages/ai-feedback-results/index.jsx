@@ -63,6 +63,11 @@ const parseAIFeedback = (feedbackText) => {
   const lexicalContent = getSectionContent(['Lexical Resource', 'Vocabulary'], ['Grammatical Range and Accuracy', 'Grammar']);
   const grammarContent = getSectionContent(['Grammatical Range and Accuracy', 'Grammar'], ['Pronunciation']);
   const pronunciationContent = getSectionContent(['Pronunciation'], ['Overall Band Score', 'Areas for improvement', 'Suggestions']);
+
+  const strengthsContent = getSectionContent(
+    ['strengths', 'key strengths'], 
+    ['areas for improvement', 'suggestions for improvement', 'improvements', 'weaknesses', 'overall recommendation', 'conclusion']
+  );
   
   const improvementsContent = getSectionContent(
     ['areas for improvement', 'suggestions for improvement', 'improvements', 'weaknesses'], 
@@ -70,6 +75,11 @@ const parseAIFeedback = (feedbackText) => {
   );
 
   const improvements = improvementsContent
+    .split('\n')
+    .map(line => line.replace(/^[-\*\d\.]+\s*/, '').trim())
+    .filter(line => line.length > 0 && !line.toLowerCase().includes('overall band score'));
+
+  const strengths = strengthsContent
     .split('\n')
     .map(line => line.replace(/^[-\*\d\.]+\s*/, '').trim())
     .filter(line => line.length > 0 && !line.toLowerCase().includes('overall band score'));
@@ -87,7 +97,7 @@ const parseAIFeedback = (feedbackText) => {
       grammar: getExplanation(grammarContent),
       pronunciation: getExplanation(pronunciationContent),
     },
-    strengths: [], // The current AI prompt does not request strengths.
+    strengths: strengths,
     improvements: improvements,
   };
 };
@@ -146,7 +156,14 @@ const AIFeedbackResults = () => {
 
         const { data: responses, error: responsesError } = await supabase
           .from('speaking_responses')
-          .select('*, speaking_questions(*)')
+          .select(`
+            *,
+            speaking_questions:question_id (
+              id,
+              question_text,
+              part
+            )
+          `)
           .eq('session_id', attemptId)
           .order('created_at', { ascending: true });
 
@@ -159,7 +176,7 @@ const AIFeedbackResults = () => {
             if (response.audio_path.startsWith('http')) {
               finalAudioUrl = response.audio_path;
             } else {
-              const { data } = supabase.storage.from('sessions').getPublicUrl(response.audio_path);
+              const { data } = supabase.storage.from('speaking-audio').getPublicUrl(response.audio_path);
               finalAudioUrl = data.publicUrl;
             }
           }

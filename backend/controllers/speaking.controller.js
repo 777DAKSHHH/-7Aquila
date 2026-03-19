@@ -477,7 +477,8 @@ Then:
 
 - Provide an overall band score (rounded to the nearest 0.5).
 - Provide a short summary paragraph explaining the overall performance.
-- Provide 3–5 concise, practical suggestions for improvement.
+- Provide 3-5 specific strengths demonstrated in the student's response (under the exact heading "Strengths").
+- Provide 3-5 concise, practical suggestions for improvement (under the exact heading "Areas for improvement").
 
 Important Instructions:
 

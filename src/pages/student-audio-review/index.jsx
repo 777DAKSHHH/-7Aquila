@@ -62,6 +62,11 @@ const parseAIFeedback = (feedbackText) => {
   const lexicalContent = getSectionContent(['Lexical Resource', 'Vocabulary'], ['Grammatical Range and Accuracy', 'Grammar']);
   const grammarContent = getSectionContent(['Grammatical Range and Accuracy', 'Grammar'], ['Pronunciation']);
   const pronunciationContent = getSectionContent(['Pronunciation'], ['Overall Band Score', 'Areas for improvement', 'Suggestions']);
+
+  const strengthsContent = getSectionContent(
+    ['strengths', 'key strengths'], 
+    ['areas for improvement', 'suggestions for improvement', 'improvements', 'weaknesses', 'overall recommendation', 'conclusion']
+  );
   
   const improvementsContent = getSectionContent(
     ['areas for improvement', 'suggestions for improvement', 'improvements', 'weaknesses'], 
@@ -69,6 +74,11 @@ const parseAIFeedback = (feedbackText) => {
   );
 
   const globalImprovements = improvementsContent
+    .split('\n')
+    .map(line => line.replace(/^[-\*\d\.]+\s*/, '').trim())
+    .filter(line => line.length > 0 && !line.toLowerCase().includes('overall band score'));
+
+  const globalStrengths = strengthsContent
     .split('\n')
     .map(line => line.replace(/^[-\*\d\.]+\s*/, '').trim())
     .filter(line => line.length > 0 && !line.toLowerCase().includes('overall band score'));
@@ -86,7 +96,8 @@ const parseAIFeedback = (feedbackText) => {
       lexical: { score: getScore(lexicalContent), details: getExplanation(lexicalContent), strengths: [], improvements: [] },
       grammar: { score: getScore(grammarContent), details: getExplanation(grammarContent), strengths: [], improvements: [] },
       pronunciation: { score: getScore(pronunciationContent), details: getExplanation(pronunciationContent), strengths: [], improvements: [] },
-      overallRecommendation: globalImprovements.join(" ")
+      overallRecommendation: globalImprovements.join(" "),
+      strengths: globalStrengths
     }
   };
 };
@@ -121,7 +132,14 @@ const StudentAudioReview = () => {
         // Fetch responses
         const { data: responseList, error: respError } = await supabase
           .from('speaking_responses')
-          .select('*, speaking_questions(*)')
+          .select(`
+            *,
+            speaking_questions:question_id (
+              id,
+              question_text,
+              part
+            )
+          `)
           .eq('session_id', attemptId)
           .order('created_at', { ascending: true });
 
@@ -135,7 +153,7 @@ const StudentAudioReview = () => {
             if (r.audio_path.startsWith('http')) {
               finalAudioUrl = r.audio_path;
             } else {
-              const { data } = supabase.storage.from('sessions').getPublicUrl(r.audio_path);
+              const { data } = supabase.storage.from('speaking-audio').getPublicUrl(r.audio_path);
               finalAudioUrl = data.publicUrl;
             }
           }
