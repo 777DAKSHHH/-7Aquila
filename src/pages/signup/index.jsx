@@ -22,13 +22,47 @@ export default function SignupPage() {
   };
 
   const handleSignup = async () => {
-    // Implementation for signup logic would go here
-    // For now, just simulating a delay
-    setLoading(true);
-    setTimeout(() => {
+    setError("");
+
+    if (formData.password !== formData.confirmPassword) {
+      return setError("Passwords do not match");
+    }
+
+    try {
+      setLoading(true);
+
+      // Step 1: Create Auth User
+      const { data, error: signUpError } = await supabase.auth.signUp({
+        email: formData.email,
+        password: formData.password
+      });
+
+      if (signUpError) throw signUpError;
+
+      const user = data.user;
+
+      if (!user) {
+        throw new Error("User not created");
+      }
+
+      // Step 2: Insert into profiles table
+      const { error: profileError } = await supabase.from("profiles").insert({
+        id: user.id, // MUST match auth.uid()
+        email: formData.email,
+        username: formData.username,
+        full_name: formData.fullName
+      });
+
+      if (profileError) throw profileError;
+
+      // Success
+      navigate("/login");
+
+    } catch (err) {
+      setError(err.message);
+    } finally {
       setLoading(false);
-      // navigate("/login");
-    }, 1000);
+    }
   };
 
   return (
