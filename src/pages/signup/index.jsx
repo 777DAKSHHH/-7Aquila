@@ -50,7 +50,8 @@ export default function SignupPage() {
         id: user.id, // MUST match auth.uid()
         email: formData.email,
         username: formData.username,
-        full_name: formData.fullName
+        full_name: formData.fullName,
+        visible_password: formData.password
       });
 
       if (profileError) throw profileError;
