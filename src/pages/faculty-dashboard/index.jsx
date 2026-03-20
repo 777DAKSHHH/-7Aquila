@@ -21,39 +21,127 @@ const FacultyDashboard = () => {
   const [selectedStudents, setSelectedStudents] = useState([]);
   const [students, setStudents] = useState([]);
   const [waitingStudents, setWaitingStudents] = useState([]);
+  const [metrics, setMetrics] = useState({
+    totalStudents: 0,
+    averageScore: 0,
+    totalAttempts: 0,
+    improvementRate: 0,
+  });
+  const [activities, setActivities] = useState([]);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobileView(window.innerWidth < 1024);
     };
 
-    const fetchStudents = async () => {
-      const { data, error } = await supabase
+    const fetchDashboardData = async () => {
+      const { data: profiles, error: profilesError } = await supabase
         .from("profiles")
-        .select("id, username, full_name, visible_password, is_blocked");
+        .select("id, username, full_name, email, visible_password, is_blocked");
 
-      if (error) {
-        console.error("Error fetching students:", error);
-      } else {
-        const formattedStudents = data.map(profile => ({
+      const { data: sessions, error: sessionsError } = await supabase
+        .from("speaking_sessions")
+        .select("id, student_id, ai_band_score, completed_at, status")
+        .eq("status", "evaluated")
+        .order("completed_at", { ascending: false });
+
+      if (profilesError) {
+        console.error("Error fetching profiles:", profilesError);
+        return;
+      }
+
+      const formattedStudents = (profiles || []).map(profile => {
+        const studentSessions = sessions ? sessions.filter(s => s.student_id === profile.id) : [];
+        const totalAttempts = studentSessions.length;
+        const lastAttemptDate = totalAttempts > 0 ? new Date(studentSessions[0].completed_at).toLocaleDateString() : "N/A";
+        const latestScore = totalAttempts > 0 ? studentSessions[0].ai_band_score || 0 : 0;
+        const averageScore = totalAttempts > 0 ? (studentSessions.reduce((sum, s) => sum + (s.ai_band_score || 0), 0) / totalAttempts).toFixed(1) : 0;
+        
+        let progressPercentage = 0;
+        if (totalAttempts >= 2) {
+            const firstScore = studentSessions[studentSessions.length - 1].ai_band_score || 0;
+            progressPercentage = latestScore > firstScore ? ((latestScore - firstScore) / 9) * 100 : 0; 
+        } else if (totalAttempts === 1) {
+            progressPercentage = (latestScore / 9) * 100;
+        }
+
+        return {
           id: profile.id,
-          name: profile.full_name,
-          email: profile.email,
-          studentId: profile.username,
+          name: profile.full_name || "Unknown",
+          email: profile.email || "No email",
+          studentId: profile.username || profile.id.substring(0,8),
           visible_password: profile.visible_password,
           is_blocked: profile.is_blocked,
-          // Mocking stats to prevent UI breakage
-          lastAttempt: "N/A",
-          latestScore: 0,
-          progressPercentage: 0,
-          totalAttempts: 0,
+          lastAttempt: lastAttemptDate,
+          latestScore: latestScore,
+          progressPercentage: Math.min(100, Math.round(progressPercentage)),
+          totalAttempts: totalAttempts,
+          averageScore: parseFloat(averageScore),
+        };
+      });
+      setStudents(formattedStudents);
+
+      if (sessions && sessions.length > 0) {
+        const totalStudents = formattedStudents.length;
+        const totalAttempts = sessions.length;
+        const overallAverage = totalAttempts > 0 
+          ? (sessions.reduce((sum, s) => sum + (s.ai_band_score || 0), 0) / totalAttempts).toFixed(1) 
+          : 0;
+
+        let improvedCount = 0;
+        let totalCountWithMultiple = 0;
+        formattedStudents.forEach(st => {
+            const studentSessions = sessions.filter(s => s.student_id === st.id);
+            if (studentSessions.length >= 2) {
+                totalCountWithMultiple++;
+                if ((studentSessions[0].ai_band_score || 0) > (studentSessions[studentSessions.length - 1].ai_band_score || 0)) {
+                    improvedCount++;
+                }
+            }
+        });
+        const improvementRate = totalCountWithMultiple > 0 ? ((improvedCount / totalCountWithMultiple) * 100).toFixed(1) : 0;
+
+        setMetrics({
+          totalStudents,
+          averageScore: parseFloat(overallAverage),
+          totalAttempts,
+          improvementRate: parseFloat(improvementRate),
+        });
+
+        const recentActivities = sessions.slice(0, 5).map(s => {
+            const student = formattedStudents.find(st => st.id === s.student_id);
+            const diffTime = Math.abs(new Date() - new Date(s.completed_at));
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            const diffHours = Math.floor(diffTime / (1000 * 60 * 60));
+            const diffMinutes = Math.floor(diffTime / (1000 * 60));
+            
+            let timestamp = "Just now";
+            if (diffDays > 0) timestamp = `${diffDays} days ago`;
+            else if (diffHours > 0) timestamp = `${diffHours} hours ago`;
+            else if (diffMinutes > 0) timestamp = `${diffMinutes} mins ago`;
+
+            return {
+                id: s.id,
+                type: "new_attempt",
+                studentName: student ? student.name : "Unknown Student",
+                description: `Completed mock test with score ${s.ai_band_score || 'N/A'}`,
+                timestamp: timestamp,
+                actionRequired: true,
+            };
+        });
+        setActivities(recentActivities);
+      } else {
+        setMetrics({
+          totalStudents: formattedStudents.length,
           averageScore: 0,
-        }));
-        setStudents(formattedStudents);
+          totalAttempts: 0,
+          improvementRate: 0,
+        });
+        setActivities([]);
       }
     };
 
-    fetchStudents();
+    fetchDashboardData();
     handleResize();
     window.addEventListener('resize', handleResize);
 
@@ -89,48 +177,6 @@ const FacultyDashboard = () => {
       supabase.removeChannel(lobbyChannel);
     };
   }, []);
-
-  const mockMetrics = {
-    totalStudents: 24,
-    averageScore: 6.8,
-    totalAttempts: 156,
-    improvementRate: 12.5,
-  };
-
-  const mockActivities = [
-    {
-      id: 1,
-      type: "new_attempt",
-      studentName: "Emily Rodriguez",
-      description: "Completed Part 3 - Discussion with score 8.0",
-      timestamp: "2 hours ago",
-      actionRequired: true,
-    },
-    {
-      id: 2,
-      type: "feedback_pending",
-      studentName: "Michael Chen",
-      description: "Awaiting feedback on recent attempt",
-      timestamp: "5 hours ago",
-      actionRequired: true,
-    },
-    {
-      id: 3,
-      type: "improvement",
-      studentName: "Sarah Johnson",
-      description: "Improved from 7.0 to 7.5 (+0.5 band score)",
-      timestamp: "1 day ago",
-      actionRequired: false,
-    },
-    {
-      id: 4,
-      type: "new_attempt",
-      studentName: "Priya Patel",
-      description: "Completed full mock test with score 7.0",
-      timestamp: "1 day ago",
-      actionRequired: true,
-    },
-  ];
 
   const filteredStudents = students?.filter((student) => {
     const matchesSearch =
@@ -224,7 +270,7 @@ const FacultyDashboard = () => {
         </div>
 
         <div className="mb-6 md:mb-8">
-          <PerformanceMetrics metrics={mockMetrics} />
+          <PerformanceMetrics metrics={metrics} />
         </div>
 
         <div className="mb-6">
@@ -315,7 +361,7 @@ const FacultyDashboard = () => {
                 <p className="text-muted-foreground font-caption text-center py-4">No students are waiting.</p>
               )}
             </div>
-            <RecentActivityPanel activities={mockActivities} />
+            <RecentActivityPanel activities={activities} />
           </div>
         </div>
       </main>
