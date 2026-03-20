@@ -14,18 +14,15 @@ const TranscriptViewer = ({ responses }) => {
       </div>
       <div className="divide-y divide-border">
         {responses?.map((response, index) => {
-          // Handle both object and array relational mapping
-          const qObj = Array.isArray(response.speaking_questions) ? response.speaking_questions[0] : response.speaking_questions;
-          
           return (
             <div key={response.id || index} className="p-4 md:p-6">
               <div className="space-y-4">
                 <div>
                   <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-1 block">
-                    {qObj?.part ? `Part ${qObj.part}` : 'Question'}
+                    {response.part ? `Part ${response.part}` : 'Question'}
                   </span>
                   <p className="font-medium text-foreground text-lg">
-                    {qObj?.question_text || qObj?.question || "Question text not available"}
+                    {response.question_text || "Question text not available"}
                   </p>
                 </div>
                 

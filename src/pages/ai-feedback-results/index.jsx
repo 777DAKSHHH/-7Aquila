@@ -170,18 +170,21 @@ const AIFeedbackResults = () => {
         if (responsesError) throw responsesError;
 
         const responsesWithUrl = responses.map(response => {
-          let finalAudioUrl = response.audio_url;
-          
-          if (!finalAudioUrl && response.audio_path) {
-            if (response.audio_path.startsWith('http')) {
-              finalAudioUrl = response.audio_path;
-            } else {
-              const { data } = supabase.storage.from('speaking-audio').getPublicUrl(response.audio_path);
-              finalAudioUrl = data.publicUrl;
-            }
-          }
+          // Handle potentially array or object from Supabase relation
+          const qObj = Array.isArray(response.speaking_questions) 
+            ? response.speaking_questions[0] 
+            : response.speaking_questions;
 
-          return { ...response, audioUrl: finalAudioUrl };
+          const { data } = supabase.storage
+            .from('speaking-audio')
+            .getPublicUrl(response.audio_path);
+
+          return { 
+            ...response, 
+            audioUrl: data?.publicUrl || null,
+            question_text: qObj?.question_text || null,
+            part: qObj?.part || null
+          };
         });
 
         setResults({ session, responses: responsesWithUrl });
