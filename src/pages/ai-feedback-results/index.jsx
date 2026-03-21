@@ -150,10 +150,6 @@ const AIFeedbackResults = () => {
           throw new Error(`No session found for attempt ID: ${attemptId}`);
         }
 
-        if (session.status !== "evaluated") {
-          await new Promise(res => setTimeout(res, 2000));
-        }
-
         const { data: responses, error: responsesError } = await supabase
           .from('speaking_responses')
           .select(`
@@ -169,23 +165,36 @@ const AIFeedbackResults = () => {
 
         if (responsesError) throw responsesError;
 
-        const responsesWithUrl = responses.map(response => {
-          // Handle potentially array or object from Supabase relation
-          const qObj = Array.isArray(response.speaking_questions) 
-            ? response.speaking_questions[0] 
-            : response.speaking_questions;
+        const responsesWithUrl = await Promise.all(
+          responses.map(async (response) => {
+            // Handle potentially array or object from Supabase relation
+            const qObj = Array.isArray(response.speaking_questions) 
+              ? response.speaking_questions[0] 
+              : response.speaking_questions;
 
-          const { data } = supabase.storage
-            .from('speaking-audio')
-            .getPublicUrl(response.audio_path);
+            let audioUrl = null;
+            if (response.audio_path) {
+              const { data, error } = await supabase.storage
+                .from('speaking-audio')
+                .createSignedUrl(response.audio_path, 3600); // 1 hour
+              
+              if (!error) {
+                audioUrl = data?.signedUrl || null;
+              } else {
+                console.error("Audio URL error:", error);
+              }
+            }
 
-          return { 
-            ...response, 
-            audioUrl: data?.publicUrl || null,
-            question_text: qObj?.question_text || null,
-            part: qObj?.part || null
-          };
-        });
+            return { 
+              ...response, 
+              audioUrl,
+              question_text: qObj?.question_text || "Question not available",
+              part: qObj?.part || null
+            };
+          })
+        );
+        
+        console.log("RESPONSES FINAL:", responsesWithUrl);
 
         setResults({ session, responses: responsesWithUrl });
         setParsedFeedback(parseAIFeedback(session.ai_feedback));

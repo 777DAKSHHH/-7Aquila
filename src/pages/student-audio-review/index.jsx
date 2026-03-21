@@ -145,23 +145,34 @@ const StudentAudioReview = () => {
 
         if (respError) throw respError;
 
-        // Get public URLs for audio
-        const responsesWithUrls = responseList.map(r => {
-          const qObj = Array.isArray(r.speaking_questions) 
-            ? r.speaking_questions[0] 
-            : r.speaking_questions;
+        // Get signed URLs for audio (private bucket)
+        const responsesWithUrls = await Promise.all(
+          responseList.map(async (r) => {
+            const qObj = Array.isArray(r.speaking_questions) 
+              ? r.speaking_questions[0] 
+              : r.speaking_questions;
 
-          const { data } = supabase.storage
-            .from('speaking-audio')
-            .getPublicUrl(r.audio_path);
+            let audioUrl = null;
+            if (r.audio_path) {
+              const { data, error } = await supabase.storage
+                .from('speaking-audio')
+                .createSignedUrl(r.audio_path, 3600); // 1 hour
+              
+              if (!error) {
+                audioUrl = data?.signedUrl || null;
+              } else {
+                console.error("Faculty Audio URL error:", error);
+              }
+            }
 
-          return { 
-            ...r, 
-            audioUrl: data?.publicUrl || null,
-            question_text: qObj?.question_text || null,
-            part: qObj?.part || null
-          };
-        });
+            return { 
+              ...r, 
+              audioUrl,
+              question_text: qObj?.question_text || "Question not available",
+              part: qObj?.part || null
+            };
+          })
+        );
 
         setSessionData(session);
         setResponses(responsesWithUrls);

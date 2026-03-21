@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from "../../contexts/AuthContext.jsx";
+import { supabase } from '../../supabaseClient';
 import TopNav from '../../components/ui/TopNav';
 import TestProgressIndicator from '../../components/ui/TestProgressIndicator';
 import AudioRecordingPanel from '../../components/ui/AudioRecordingPanel';
@@ -165,21 +166,55 @@ const SpeakingTestInterface = () => {
   useEffect(() => {
     if (!isEvaluating || !sessionId) return;
   
+    let isMounted = true;
+
     const checkStatus = async () => {
-      const { data } = await supabase
-        .from("speaking_sessions")
-        .select("status")
-        .eq("id", sessionId)
-        .single();
-  
-      if (data?.status === "evaluated") {
-        navigate(`/ai-feedback-results/${sessionId}`);
+      try {
+        const { data, error } = await supabase
+          .from("speaking_sessions")
+          .select("status")
+          .eq("id", sessionId)
+          .single();
+
+        if (error) {
+          console.error("Polling error:", error);
+          return;
+        }
+
+        console.log("Polling status:", data?.status);
+
+        if (data?.status === "evaluated") {
+          if (!isMounted) return;
+
+          // STOP LOADER
+          setIsEvaluating(false);
+
+          // REDIRECT
+          navigate(`/ai-feedback-results/${sessionId}`, { replace: true });
+        }
+
+      } catch (err) {
+        console.error("Polling failed:", err);
       }
     };
   
+    // Run immediately (important UX fix)
+    checkStatus();
+
     const interval = setInterval(checkStatus, 5000);
   
-    return () => clearInterval(interval);
+    // HARD SAFETY TIMEOUT (2 minutes max)
+    const timeout = setTimeout(() => {
+      console.warn("Polling timeout reached. Redirecting anyway...");
+      setIsEvaluating(false);
+      navigate(`/ai-feedback-results/${sessionId}`, { replace: true });
+    }, 120000); // 120 sec
+
+    return () => {
+      isMounted = false;
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
   }, [isEvaluating, sessionId, navigate]);
 
   useEffect(() => {
