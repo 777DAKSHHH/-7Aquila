@@ -5,7 +5,7 @@ const CueCard = ({
   topic = '',
   bulletPoints = [],
   isPreparationTime = false,
-  preparationTimeLeft = 60
+  preparationTimeLeft = 75
 }) => {
   return (
     <div className="bg-card rounded-lg shadow-md border-2 border-accent">
@@ -65,7 +65,7 @@ const CueCard = ({
                 Preparation Tips:
               </p>
               <p className="text-sm text-muted-foreground font-caption leading-relaxed">
-                Use your 1-minute preparation time to make brief notes. Think about specific examples and details you can include. Aim to speak for 1-2 minutes without stopping.
+                Use your 1 minute and 15 seconds preparation time to make brief notes. Think about specific examples and details you can include. Aim to speak for 1-2 minutes without stopping.
               </p>
             </div>
           </div>

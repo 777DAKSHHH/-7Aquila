@@ -32,7 +32,7 @@ const SpeakingTestInterface = () => {
   const [questions, setQuestions] = useState([]);
   const [preparationNotes, setPreparationNotes] = useState('');
   const [isPreparationPhase, setIsPreparationPhase] = useState(false);
-  const [preparationTimeLeft, setPreparationTimeLeft] = useState(60);
+  const [preparationTimeLeft, setPreparationTimeLeft] = useState(75);
   const [speakingTimeLeft, setSpeakingTimeLeft] = useState(120);
   const [autoSaveStatus, setAutoSaveStatus] = useState('saved');
   const [recordingError, setRecordingError] = useState(null);
@@ -287,7 +287,7 @@ const SpeakingTestInterface = () => {
   useEffect(() => {
     if (currentPart === 2) {
       setIsPreparationPhase(true);
-      setPreparationTimeLeft(60);
+      setPreparationTimeLeft(75);
       setSpeakingTimeLeft(120);
     }
   }, [currentPart]);
@@ -514,7 +514,7 @@ const SpeakingTestInterface = () => {
             {currentPart === 2 && isPreparationPhase && (
               <TestTimer
                 timeLeft={preparationTimeLeft}
-                totalTime={60}
+                totalTime={75}
                 isActive={true}
                 label="Preparation Time"
                 variant="preparation"

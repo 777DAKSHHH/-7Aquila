@@ -46,7 +46,7 @@ const QuestionDisplay = ({
           </div>
           <p className="text-sm md:text-base text-muted-foreground font-caption">
             {part === 1 && "Answer the following questions about yourself and your life"}
-            {part === 2 && "Speak for 1-2 minutes on the topic below after 1 minute preparation"}
+            {part === 2 && "Speak for 1-2 minutes on the topic below after 1 minute and 15 seconds of preparation"}
             {part === 3 && "Discuss abstract ideas and issues related to the topic"}
           </p>
         </div>

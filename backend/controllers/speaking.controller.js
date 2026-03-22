@@ -180,7 +180,10 @@ if (count >= MAX_QUESTIONS) {
     }
 
     // Build storage path
-    const fileExt = path.extname(req.file.originalname);
+    let fileExt = path.extname(req.file.originalname);
+    if (!fileExt || fileExt === '.blob') {
+      fileExt = '.webm'; // Fallback for Blobs sent from frontend
+    }
     const storagePath = `sessions/${sessionId}/${questionId}${fileExt}`;
 
     // Upload to Supabase Storage

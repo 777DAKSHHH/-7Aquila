@@ -36,7 +36,7 @@ const PreparationNotes = ({
       <div className="mt-4 flex items-start gap-3 p-4 bg-muted/30 rounded-lg">
         <Icon name="Info" size={18} color="var(--color-primary)" className="flex-shrink-0 mt-0.5" />
         <p className="text-sm text-muted-foreground font-caption leading-relaxed">
-          These notes are for your reference only and won't be submitted. Use bullet points and keywords to organize your thoughts during the 1-minute preparation time.
+          These notes are for your reference only and won't be submitted. Use bullet points and keywords to organize your thoughts during the preparation time.
         </p>
       </div>
     </div>
