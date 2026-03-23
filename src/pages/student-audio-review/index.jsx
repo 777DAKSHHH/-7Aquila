@@ -154,20 +154,14 @@ const StudentAudioReview = () => {
 
             let audioUrl = null;
             if (r.audio_path) {
-              let path = r.audio_path;
-              // 🔥 FIX: ensure extension exists
-              if (!path.endsWith(".webm")) {
-                path = `${path}.webm`;
-              }
-
               const { data, error } = await supabase.storage
-                .from('speaking-audio')
-                .createSignedUrl(path, 3600); // 1 hour
-              
+                .from("speaking-audio")
+                .createSignedUrl(r.audio_path, 3600);
+
               if (!error) {
                 audioUrl = data?.signedUrl || null;
               } else {
-                console.error("Faculty Audio URL error:", error);
+                console.error("Signed URL error:", error);
               }
             }
 

@@ -10,10 +10,19 @@ const openai = new OpenAI({
 
 export const startSpeakingSession = async (req, res) => {
   try {
-    // TEMP student id (replace with auth later)
-    const studentId =
-      req.body.studentId ||
-      "669ac0c0-1aff-4d55-86a7-66ab54695cb9";
+    const authHeader = req.headers.authorization;
+
+    const { data: { user }, error: authError } =
+      await supabase.auth.getUser(authHeader);
+
+    if (authError || !user) {
+      return res.status(401).json({
+        success: false,
+        message: "Unauthorized user"
+      });
+    }
+
+    const studentId = user.id;
 
     const deleteAfter = new Date();
     deleteAfter.setDate(deleteAfter.getDate() + 4); // 4-day lifecycle
@@ -291,17 +300,21 @@ export const getSpeakingSessionSummary = async (req, res) => {
 
     if (responseError) throw responseError;
 
-    // 4️⃣ Generate public URLs for audio files
-    const responsesWithUrls = responses.map(response => {
-      if (!response.audio_path) return response;
-      const { data: publicUrlData } = supabase.storage
-        .from("speaking-audio")
-        .getPublicUrl(response.audio_path);
-      return {
-        ...response,
-        audio_path: publicUrlData.publicUrl,
-      };
-    });
+    // 4️⃣ Generate signed URLs for audio files
+    const responsesWithUrls = await Promise.all(
+      responses.map(async (response) => {
+        if (!response.audio_path) return response;
+
+        const { data, error } = await supabase.storage
+          .from("speaking-audio")
+          .createSignedUrl(response.audio_path, 3600);
+
+        return {
+          ...response,
+          audioUrl: data?.signedUrl || null
+        };
+      })
+    );
     // 4️⃣ Compute total speaking time
     const totalDuration = responses.reduce(
       (sum, r) => sum + (r.audio_duration || 0),

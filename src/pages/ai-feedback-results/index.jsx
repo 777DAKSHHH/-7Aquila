@@ -174,15 +174,9 @@ const AIFeedbackResults = () => {
 
             let audioUrl = null;
             if (response.audio_path) {
-              let path = response.audio_path;
-              // 🔥 FIX: ensure extension exists
-              if (!path.endsWith(".webm")) {
-                path = `${path}.webm`;
-              }
-
               const { data, error } = await supabase.storage
                 .from('speaking-audio')
-                .createSignedUrl(path, 3600); // 1 hour
+                .createSignedUrl(response.audio_path, 3600); // 1 hour
               
               if (!error) {
                 audioUrl = data?.signedUrl || null;
