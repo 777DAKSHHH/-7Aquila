@@ -5,8 +5,7 @@ import TopNav from '../../components/ui/TopNav';
 import Button from '../../components/ui/Button';
 import Icon from '../../components/AppIcon';
 import StudentInfoHeader from './components/StudentInfoHeader';
-import AudioPlayerWithWaveform from './components/AudioPlayerWithWaveform';
-import TranscriptViewer from './components/TranscriptViewer';
+import TranscriptViewer from '../ai-feedback-results/components/TranscriptViewer';
 import FeedbackPanel from './components/FeedbackPanel';
 import AIAssessmentDetails from './components/AIAssessmentDetails';
 
@@ -105,7 +104,7 @@ const parseAIFeedback = (feedbackText) => {
 const StudentAudioReview = () => {
   const { attemptId } = useParams();
   const navigate = useNavigate();
-  const [showCommentModal, setShowCommentModal] = useState(false);
+  const [commentData, setCommentData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [sessionData, setSessionData] = useState(null);
   const [responses, setResponses] = useState([]);
@@ -206,8 +205,8 @@ const StudentAudioReview = () => {
     alert("Feedback sent to student (simulated)");
   };
 
-  const handleAddComment = () => {
-    setShowCommentModal(true);
+  const handleAddComment = (responseId, time) => {
+    setCommentData({ responseId, time });
   };
 
   if (loading) {
@@ -230,16 +229,6 @@ const StudentAudioReview = () => {
   }
 
   const student = sessionData.profiles || { name: "Unknown Student", email: "N/A" };
-  // Use the first response for the main player/transcript for now, or concat
-  // For this view, let's display the longest response (likely Part 2) or default to the first
-  const primaryResponse = responses.length > 0 
-    ? responses.reduce((prev, current) => (prev.audio_duration > current.audio_duration) ? prev : current)
-    : null;
-  
-  // Concatenate all transcripts for the viewer if desired, or just show the primary one
-  const fullTranscript = responses.map(r => {
-    return `[Part ${r.part || '?'}] ${r.question_text || ''}\n${r.transcript || '(No transcript)'}`;
-  }).join('\n\n');
 
   return (
     <div className="min-h-screen bg-background">
@@ -282,14 +271,8 @@ const StudentAudioReview = () => {
             }}
             aiScores={aiData?.scores} />
 
-          <AudioPlayerWithWaveform
-            audioUrl={primaryResponse?.audioUrl || ""}
-            duration={primaryResponse?.audio_duration || 0}
-            onAddComment={handleAddComment} />
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-            {/* Pass full concatenated transcript or just the primary one */}
-            <TranscriptViewer transcript={fullTranscript || "No recording available."} highlights={[]} />
+            <TranscriptViewer responses={responses} onAddComment={handleAddComment} />
             <AIAssessmentDetails assessment={aiData?.assessment} />
           </div>
 
@@ -321,13 +304,13 @@ const StudentAudioReview = () => {
         </div>
       </div>
 
-      {showCommentModal &&
+      {commentData &&
       <div className="fixed inset-0 z-[200] bg-background/80 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-card rounded-lg shadow-lg border border-border max-w-md w-full p-6">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-heading font-semibold text-foreground">Add Comment</h3>
+              <h3 className="text-lg font-heading font-semibold text-foreground">Add Comment at {Math.floor(commentData.time / 60)}:{String(Math.floor(commentData.time % 60)).padStart(2, '0')}</h3>
               <button
-              onClick={() => setShowCommentModal(false)}
+              onClick={() => setCommentData(null)}
               className="p-1 hover:bg-muted rounded-md transition-colors duration-base">
 
                 <Icon name="X" size={20} />
@@ -338,10 +321,10 @@ const StudentAudioReview = () => {
             className="w-full min-h-[120px] p-3 bg-input border border-border rounded-md text-foreground placeholder:text-muted-foreground focus-ring resize-none mb-4" />
 
             <div className="flex gap-3">
-              <Button variant="outline" fullWidth onClick={() => setShowCommentModal(false)}>
+              <Button variant="outline" fullWidth onClick={() => setCommentData(null)}>
                 Cancel
               </Button>
-              <Button variant="default" fullWidth onClick={() => setShowCommentModal(false)}>
+              <Button variant="default" fullWidth onClick={() => setCommentData(null)}>
                 Add Comment
               </Button>
             </div>

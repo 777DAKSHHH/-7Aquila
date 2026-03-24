@@ -77,6 +77,7 @@ const FacultyDashboard = () => {
           progressPercentage: Math.min(100, Math.round(progressPercentage)),
           totalAttempts: totalAttempts,
           averageScore: parseFloat(averageScore),
+          latestSessionId: totalAttempts > 0 ? studentSessions[0].id : null,
         };
       });
       setStudents(formattedStudents);
@@ -200,11 +201,21 @@ const FacultyDashboard = () => {
   });
 
   const handleViewAttempts = (studentId) => {
-    navigate('/student-audio-review', { state: { studentId } });
+    const student = students.find(s => s.id === studentId);
+    if (student && student.latestSessionId) {
+      navigate(`/student-audio-review/${student.latestSessionId}`);
+    } else {
+      alert("No complete sessions found for this student.");
+    }
   };
 
   const handleAddFeedback = (studentId) => {
-    navigate('/student-audio-review', { state: { studentId, openFeedback: true } });
+    const student = students.find(s => s.id === studentId);
+    if (student && student.latestSessionId) {
+      navigate(`/student-audio-review/${student.latestSessionId}`, { state: { openFeedback: true } });
+    } else {
+      alert("No complete sessions found for this student.");
+    }
   };
 
   const handleResetFilters = () => {

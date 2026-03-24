@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Icon from '../../../components/AppIcon';
+import AudioPlayerWithWaveform from '../../student-audio-review/components/AudioPlayerWithWaveform';
 
-const ResponseAudioTranscript = ({ response, currentTime = 0, onWordClick }) => {
+const ResponseAudioTranscript = ({ response, onAddComment }) => {
+  const [currentTime, setCurrentTime] = useState(0);
 
   return (
     <div className="space-y-4">
@@ -14,6 +16,19 @@ const ResponseAudioTranscript = ({ response, currentTime = 0, onWordClick }) => 
         </p>
       </div>
       
+      {response.audioUrl && (
+        <div className="mb-4">
+          <AudioPlayerWithWaveform
+            audioUrl={response.audioUrl}
+            duration={response.audio_duration || 0}
+            currentTime={currentTime}
+            onTimeUpdate={(time) => setCurrentTime(time)}
+            onSeek={(time) => setCurrentTime(time)}
+            onAddComment={onAddComment ? () => onAddComment(response.id, currentTime) : undefined}
+          />
+        </div>
+      )}
+
       {response.word_timestamps && response.word_timestamps.length > 0 ? (
         <div className="bg-muted/10 p-4 rounded-md border border-border/50">
           <p className="text-muted-foreground leading-relaxed">
@@ -22,7 +37,7 @@ const ResponseAudioTranscript = ({ response, currentTime = 0, onWordClick }) => 
               return (
                 <span 
                   key={idx}
-                  onClick={() => onWordClick && onWordClick(segment.start)}
+                  onClick={() => setCurrentTime(segment.start)}
                   className={`cursor-pointer transition-colors duration-150 ${isActive ? 'bg-primary/20 text-primary font-medium rounded px-1' : 'hover:text-foreground'}`}
                 >
                   {(segment.word || segment.text).trim()}{' '}
@@ -44,7 +59,7 @@ const ResponseAudioTranscript = ({ response, currentTime = 0, onWordClick }) => 
   );
 };
 
-const TranscriptViewer = ({ responses, currentTime, onWordClick }) => {
+const TranscriptViewer = ({ responses, onAddComment }) => {
   return (
     <div className="bg-card rounded-lg shadow-sm border border-border overflow-hidden">
       <div className="p-4 md:p-6 border-b border-border">
@@ -59,11 +74,7 @@ const TranscriptViewer = ({ responses, currentTime, onWordClick }) => {
         {responses?.map((response, index) => {
           return (
             <div key={response.id || index} className="p-4 md:p-6">
-              <ResponseAudioTranscript 
-                response={response} 
-                currentTime={currentTime} 
-                onWordClick={onWordClick} 
-              />
+              <ResponseAudioTranscript response={response} onAddComment={onAddComment} />
             </div>
         )})}
         {(!responses || responses.length === 0) && (
