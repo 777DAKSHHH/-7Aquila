@@ -445,10 +445,11 @@ export const evaluateAISession = async (req, res) => {
           .eq("id", response.id);
 
         fullTranscript += `
-Question (Part ${response.speaking_questions?.part}):
-${response.speaking_questions.question_text}
+--- PART ${response.speaking_questions?.part || 'UNKNOWN'} ---
+QUESTION:
+${response.speaking_questions?.question_text || 'No question text provided'}
 
-Student Answer:
+STUDENT RESPONSE:
 ${transcriptText}
 
 `;
@@ -470,43 +471,158 @@ ${transcriptText}
 
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
+      response_format: { type: "json_object" },
       messages: [
         {
           role: "system",
-          content: `Below is an IELTS Speaking response given by a student.
+          content: `
+You are a certified IELTS Speaking Examiner.
 
-Please evaluate the response strictly according to the official IDP IELTS Speaking band descriptors.
+Below is a student's IELTS Speaking response and the question they answered.
 
-Assessment must be based on the following four criteria:
+Your task is to generate a COMPLETE evaluation + learning feedback system.
 
-1. Fluency and Coherence
-2. Lexical Resource
-3. Grammatical Range and Accuracy
-4. Pronunciation
+-------------------------------------
+SECTION 1: IELTS BAND EVALUATION
+-------------------------------------
 
-For each criterion:
+Evaluate strictly based on official IELTS criteria:
 
-- Provide an estimated band score (from 0 to 9, in 0.5 increments where appropriate).
-- Provide a clear explanation referring to the relevant band descriptor characteristics (such as flexibility, range, accuracy, hesitation, coherence, vocabulary control, pronunciation clarity, etc.).
+1. Fluency and Coherence  
+2. Lexical Resource  
+3. Grammatical Range and Accuracy  
+4. Pronunciation  
 
-Then:
+For EACH:
 
-- Provide an overall band score (rounded to the nearest 0.5).
-- Provide a short summary paragraph explaining the overall performance.
-- Provide 3-5 specific strengths demonstrated in the student's response (under the exact heading "Strengths").
-- Provide 3-5 concise, practical suggestions for improvement (under the exact heading "Areas for improvement").
+- Give band score (0–9, allow .5)
+- Give detailed explanation using IELTS descriptors
 
-Important Instructions:
+Then provide:
 
-- If the student response does not address the question properly or is off-topic, clearly state this in your evaluation.
-- Do NOT rewrite the student’s full response.
-- Do NOT use bold, underline, highlighting, or special formatting.
-- Do NOT refer to any sample answer.
-- Base the evaluation only on the student’s spoken transcript.
-- Maintain a professional examiner tone.
-- Ensure the scoring aligns logically with the official IELTS Speaking descriptors (Bands 6–9).
+- Overall Band Score (rounded to .5)
+- Summary paragraph
+- Pacing and Hesitation: Provide specific feedback on the student's pacing, pauses, and hesitation.
 
-Here is the student’s transcript:`
+-------------------------------------
+SECTION 2: PERFORMANCE ANALYTICS
+-------------------------------------
+
+Analyze transcript deeply and return:
+
+- filler_words_count (e.g. um, uh, like)
+- repetitions_count
+- long_pauses_count (>2 seconds)
+- words_per_minute (estimate)
+- fluency_observation (short explanation)
+
+-------------------------------------
+SECTION 3: VOCABULARY ENHANCEMENT
+-------------------------------------
+
+Based STRICTLY on student's actual mistakes and level:
+
+### A. Recommendations (3–5 items)
+
+Format:
+- instead_of
+- better_alternatives (2–3)
+- reason
+- example_sentence (NEW sentence, not copied)
+
+### B. Topic Words (5–8 words)
+
+Each must include:
+- word
+- level (Intermediate / Advanced)
+- meaning
+- example_sentence
+
+(MUST be relevant to student's topic)
+
+### C. Useful Phrases (5–7 phrases)
+
+Each must include:
+- phrase
+- usage
+- category (Opinion / Contrast / etc.)
+- example_sentence
+
+-------------------------------------
+SECTION 4: STRENGTHS & IMPROVEMENTS
+-------------------------------------
+
+- Strengths (3–5)
+- Areas for improvement (3–5)
+
+-------------------------------------
+STRICT RULES
+-------------------------------------
+
+- DO NOT repeat student's transcript
+- DO NOT use markdown or formatting symbols
+- ALL output must be structured JSON ONLY
+- Base everything ONLY on student's response
+- Keep tone professional and examiner-like
+
+-------------------------------------
+OUTPUT FORMAT (STRICT JSON)
+-------------------------------------
+
+Return ONLY JSON in this exact structure:
+
+{
+  "scores": {
+    "fluency": number,
+    "lexical": number,
+    "grammar": number,
+    "pronunciation": number,
+    "overall": number
+  },
+  "feedback": {
+    "fluency": "...",
+    "lexical": "...",
+    "grammar": "...",
+    "pronunciation": "...",
+    "summary": "...",
+    "pacing_and_hesitation": "..."
+  },
+  "analytics": {
+    "filler_words": number,
+    "repetitions": number,
+    "long_pauses": number,
+    "wpm": number,
+    "fluency_note": "..."
+  },
+  "vocabulary": {
+    "recommendations": [
+      {
+        "instead_of": "...",
+        "better": ["...", "..."],
+        "reason": "...",
+        "example": "..."
+      }
+    ],
+    "topic_words": [
+      {
+        "word": "...",
+        "level": "...",
+        "meaning": "...",
+        "example": "..."
+      }
+    ],
+    "phrases": [
+      {
+        "phrase": "...",
+        "usage": "...",
+        "category": "...",
+        "example": "..."
+      }
+    ]
+  },
+  "strengths": ["...", "..."],
+  "improvements": ["...", "..."]
+}`
         },
         {
           role: "user",
@@ -517,17 +633,29 @@ Here is the student’s transcript:`
 
     const aiResponse = completion.choices[0].message.content;
 
-    // Extract band score safely (basic parsing)
-    const bandMatch = aiResponse.match(/Overall Band Score:\s*(\d+(\.\d+)?)/i);
-    const aiBandScore = bandMatch ? parseFloat(bandMatch[1]) : 6.0;
-    const aiFeedback = aiResponse;
+    // Parse JSON safely
+    let parsedFeedback = {};
+    let aiBandScore = 6.0;
+    
+    try {
+      parsedFeedback = JSON.parse(aiResponse);
+      
+      if (!parsedFeedback?.scores || !parsedFeedback?.feedback) {
+        console.warn("⚠️ Invalid AI response structure detected from GPT.");
+      }
+
+      aiBandScore = parsedFeedback?.scores?.overall || 6.0;
+    } catch (parseError) {
+      console.error("Failed to parse GPT JSON response:", parseError);
+    }
 
     // 3️⃣ Save AI evaluation
     const { data, error: updateError } = await supabase
       .from("speaking_sessions")
       .update({
         ai_band_score: aiBandScore,
-        ai_feedback: aiFeedback,
+        ai_feedback: parsedFeedback?.feedback?.summary || aiResponse,
+        ai_detailed_feedback: parsedFeedback,
         evaluated_at: new Date().toISOString(),
         status: "evaluated"
       })

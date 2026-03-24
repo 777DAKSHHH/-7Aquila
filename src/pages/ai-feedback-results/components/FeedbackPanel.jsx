@@ -38,6 +38,14 @@ const FeedbackPanel = ({
       color: 'text-orange-600',
       bgColor: 'bg-orange-50',
       content: feedback?.pronunciation || ''
+    },
+    {
+      key: 'pacing',
+      title: 'Pacing & Hesitation',
+      icon: 'Clock',
+      color: 'text-rose-600',
+      bgColor: 'bg-rose-50',
+      content: feedback?.pacing_and_hesitation || ''
     }
   ];
 

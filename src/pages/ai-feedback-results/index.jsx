@@ -9,6 +9,7 @@ import BandScoreCard from './components/BandScoreCard';
 import TranscriptViewer from './components/TranscriptViewer';
 import FeedbackPanel from './components/FeedbackPanel';
 import VocabularyEnhancement from './components/VocabularyEnhancement';
+import AudioPlayerWithWaveform from '../student-audio-review/components/AudioPlayerWithWaveform';
 
 const parseAIFeedback = (feedbackText) => {
   if (!feedbackText) {
@@ -110,6 +111,7 @@ const AIFeedbackResults = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
+  const [audioCurrentTime, setAudioCurrentTime] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -197,7 +199,23 @@ const AIFeedbackResults = () => {
         console.log("RESPONSES FINAL:", responsesWithUrl);
 
         setResults({ session, responses: responsesWithUrl });
-        setParsedFeedback(parseAIFeedback(session.ai_feedback));
+        
+        // Map dynamic JSON from backend if it exists, otherwise fallback to parsing legacy string
+        if (session.ai_detailed_feedback) {
+          let ai = session.ai_detailed_feedback;
+          if (typeof ai === 'string') try { ai = JSON.parse(ai); } catch (e) {} // Safety fallback
+          
+          setParsedFeedback({
+            criteriaScores: ai.scores || {},
+            feedback: ai.feedback || {},
+            strengths: ai.strengths || [],
+            improvements: ai.improvements || [],
+            vocabulary: ai.vocabulary || { recommendations: [], topic_words: [], phrases: [] },
+            analytics: ai.analytics || {}
+          });
+        } else {
+          setParsedFeedback(parseAIFeedback(session.ai_feedback));
+        }
 
       } catch (err) {
         setError(err.message);
@@ -251,6 +269,11 @@ const AIFeedbackResults = () => {
     );
   }
   
+  // Get the longest response to display in the main audio player
+  const primaryResponse = results?.responses?.length > 0 
+    ? results.responses.reduce((prev, current) => (prev.audio_duration > current.audio_duration) ? prev : current)
+    : null;
+
   return (
     <>
       <Helmet>
@@ -302,8 +325,19 @@ const AIFeedbackResults = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
               <div className="space-y-6 md:space-y-8">
+                {primaryResponse && (
+                  <AudioPlayerWithWaveform
+                    audioUrl={primaryResponse.audioUrl || ""}
+                    duration={primaryResponse.audio_duration || 0}
+                    currentTime={audioCurrentTime}
+                    onTimeUpdate={(time) => setAudioCurrentTime(time)}
+                    onSeek={(time) => setAudioCurrentTime(time)}
+                  />
+                )}
                 <TranscriptViewer
                   responses={results?.responses}
+                  currentTime={audioCurrentTime}
+                  onWordClick={(time) => setAudioCurrentTime(time)}
                 />
               </div>
 
@@ -317,9 +351,9 @@ const AIFeedbackResults = () => {
             </div>
 
             <VocabularyEnhancement
-              recommendations={[]}
-              topicWords={[]}
-              phrases={[]}
+              recommendations={parsedFeedback?.vocabulary?.recommendations || []}
+              topicWords={parsedFeedback?.vocabulary?.topic_words || []}
+              phrases={parsedFeedback?.vocabulary?.phrases || []}
             />
 
             <div className="bg-card rounded-lg p-6 md:p-8 shadow-md border border-border">
