@@ -35,51 +35,73 @@ const FacultyDashboard = () => {
     };
 
     const fetchDashboardData = async () => {
-      const { data: profiles, error: profilesError } = await supabase
-        .from("profiles")
-        .select("id, username, full_name, email, visible_password, is_blocked");
-
       const { data: sessions, error: sessionsError } = await supabase
         .from("speaking_sessions")
-        .select("id, student_id, ai_band_score, completed_at, status")
+        .select(`
+          id, 
+          student_id, 
+          ai_band_score, 
+          completed_at, 
+          status,
+          profiles (
+            id,
+            username,
+            full_name,
+            email,
+            visible_password,
+            is_blocked
+          )
+        `)
         .eq("status", "evaluated")
         .order("completed_at", { ascending: false });
 
-      if (profilesError) {
-        console.error("Error fetching profiles:", profilesError);
+      if (sessionsError) {
+        console.error("Error fetching dashboard data:", sessionsError);
         return;
       }
 
-      const formattedStudents = (profiles || []).map(profile => {
-        const studentSessions = sessions ? sessions.filter(s => s.student_id === profile.id) : [];
-        const totalAttempts = studentSessions.length;
-        const lastAttemptDate = totalAttempts > 0 ? new Date(studentSessions[0].completed_at).toLocaleDateString() : "N/A";
-        const latestScore = totalAttempts > 0 ? studentSessions[0].ai_band_score || 0 : 0;
-        const averageScore = totalAttempts > 0 ? (studentSessions.reduce((sum, s) => sum + (s.ai_band_score || 0), 0) / totalAttempts).toFixed(1) : 0;
-        
-        let progressPercentage = 0;
-        if (totalAttempts >= 2) {
-            const firstScore = studentSessions[studentSessions.length - 1].ai_band_score || 0;
-            progressPercentage = latestScore > firstScore ? ((latestScore - firstScore) / 9) * 100 : 0; 
-        } else if (totalAttempts === 1) {
-            progressPercentage = (latestScore / 9) * 100;
-        }
+      const studentMap = {};
+      (sessions || []).forEach(s => {
+        const sid = s.student_id;
+        if (!sid) return;
 
+        if (!studentMap[sid]) {
+          studentMap[sid] = {
+            id: sid,
+            name: s.profiles?.full_name || "Unknown",
+            email: s.profiles?.email || "No email",
+            studentId: s.profiles?.username || sid.substring(0,8),
+            visible_password: s.profiles?.visible_password,
+            is_blocked: s.profiles?.is_blocked,
+            lastAttempt: new Date(s.completed_at).toLocaleDateString(),
+            latestScore: s.ai_band_score || 0,
+            progressPercentage: 0,
+            totalAttempts: 0,
+            averageScore: 0,
+            latestSessionId: s.id,
+            sumScores: 0,
+            firstScore: s.ai_band_score || 0
+          };
+        }
+        studentMap[sid].totalAttempts += 1;
+        studentMap[sid].sumScores += (s.ai_band_score || 0);
+        studentMap[sid].firstScore = s.ai_band_score || 0;
+      });
+
+      const formattedStudents = Object.values(studentMap).map(st => {
+        let progressPercentage = 0;
+        if (st.totalAttempts >= 2) {
+          progressPercentage = st.latestScore > st.firstScore ? ((st.latestScore - st.firstScore) / 9) * 100 : 0; 
+        } else if (st.totalAttempts === 1) {
+          progressPercentage = (st.latestScore / 9) * 100;
+        }
         return {
-          id: profile.id,
-          name: profile.full_name || "Unknown",
-          email: profile.email || "No email",
-          studentId: profile.username || profile.id.substring(0,8),
-          visible_password: profile.visible_password,
-          is_blocked: profile.is_blocked,
-          lastAttempt: lastAttemptDate,
-          latestScore: latestScore,
-          progressPercentage: Math.min(100, Math.round(progressPercentage)),
-          totalAttempts: totalAttempts,
-          averageScore: parseFloat(averageScore),
-          latestSessionId: totalAttempts > 0 ? studentSessions[0].id : null,
+          ...st,
+          averageScore: parseFloat((st.sumScores / st.totalAttempts).toFixed(1)),
+          progressPercentage: Math.min(100, Math.round(progressPercentage))
         };
       });
+
       setStudents(formattedStudents);
 
       if (sessions && sessions.length > 0) {

@@ -45,7 +45,7 @@ const PracticeHistory = () => {
               )
             )
           `)
-          .eq('student_id', user.id)
+          .eq('student_id', user?.id)
           .eq('status', 'evaluated')
           .order('created_at', { ascending: false });
 
@@ -101,7 +101,7 @@ const PracticeHistory = () => {
       .channel('practice-history-changes')
       .on(
         'postgres_changes',
-        { event: '*', schema: 'public', table: 'speaking_sessions', filter: `student_id=eq.${user.id}` },
+        { event: '*', schema: 'public', table: 'speaking_sessions', filter: `student_id=eq.${user?.id}` },
         (payload) => {
           fetchHistory(true);
         }

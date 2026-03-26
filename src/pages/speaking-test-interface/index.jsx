@@ -117,15 +117,31 @@ const SpeakingTestInterface = () => {
   useEffect(() => {
     const startSession = async () => {
       try {
+        // 1. Get the auth token securely
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session) {
+          console.error("No active session found, user might be logged out.");
+          return;
+        }
+
         const response = await fetch("https://l-hit-aged7aquila.onrender.com/api/speaking/session/start", {
           method: "POST",
           headers: {
-            "Content-Type": "application/json"
-          }
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${session.access_token}`
+          },
         });
   
+        if (!response.ok) {
+          throw new Error("Server error during session creation");
+        }
+
         const data = await response.json();
   
+        if (!data.success) {
+          throw new Error(data.message || "Session creation failed");
+        }
+
         if (data.success && data.data?.id) {
           setSessionId(data.data.id);
         } else {
@@ -265,8 +281,8 @@ const SpeakingTestInterface = () => {
       speakingTimerRef.current = setInterval(() => {
         setSpeakingTimeLeft(prev => {
           if (prev <= 1) {
-            handleStopRecording();
-            return 0;
+            clearInterval(speakingTimerRef.current);
+            return 0; // Stop timer at 0, but don't stop recording
           }
           return prev - 1;
         });
@@ -327,17 +343,48 @@ const SpeakingTestInterface = () => {
         formData.append("questionId", currentQuestionObject.id);
         formData.append("audioDuration", recordingTime);
 
-        try {
-          const response = await fetch(`https://l-hit-aged7aquila.onrender.com/api/speaking/session/${sessionId}/response`, {
-            method: "POST",
-            body: formData
-          });
-          const result = await response.json();
-          console.log("Audio uploaded successfully:", result);
-          setAutoSaveStatus('saved');
-        } catch (error) {
-          console.error("Audio upload failed:", error);
+        // Get Auth Token for Upload
+        const { data: { session } } = await supabase.auth.getSession();
+        
+        if (!session?.access_token) {
+          console.error("No auth token found. Cannot upload audio.");
           setAutoSaveStatus('error');
+          return;
+        }
+
+        // Retry Logic (Up to 3 times) for network safety
+        let attempts = 0;
+        let uploadSuccess = false;
+        setAutoSaveStatus('saving');
+
+        while (attempts < 3 && !uploadSuccess) {
+          try {
+            const response = await fetch(`https://l-hit-aged7aquila.onrender.com/api/speaking/session/${sessionId}/response`, {
+              method: "POST",
+              headers: {
+                "Authorization": `Bearer ${session?.access_token}`
+                // Note: Do NOT set Content-Type manually when sending FormData, the browser handles boundaries automatically
+              },
+              body: formData
+            });
+            
+            const result = await response.json();
+            if (response.ok && result.success) {
+              console.log("Audio uploaded successfully:", result);
+              setAutoSaveStatus('saved');
+              uploadSuccess = true;
+            } else {
+              throw new Error(result.message || "Upload failed from backend");
+            }
+          } catch (error) {
+            attempts++;
+            console.error(`Audio upload failed (Attempt ${attempts}/3):`, error);
+            if (attempts >= 3) {
+              setAutoSaveStatus('error');
+            } else {
+              await new Promise(resolve => setTimeout(resolve, 1500)); // Wait 1.5s before retry
+            }
+          }
         }
 
         stream?.getTracks()?.forEach(track => track?.stop());
@@ -426,10 +473,24 @@ const SpeakingTestInterface = () => {
       console.log("Completing session...");
       setIsEvaluating(true);
   
+      const { data: { session } } = await supabase.auth.getSession();
+      
+      if (!session?.access_token) {
+        console.error("No auth token found. Cannot submit test.");
+        setIsEvaluating(false);
+        return;
+      }
+
+      const authHeaders = {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${session?.access_token}`
+      };
+
       await fetch(
         `https://l-hit-aged7aquila.onrender.com/api/speaking/session/${sessionId}/complete`,
         {
-          method: "POST"
+          method: "POST",
+          headers: authHeaders
         }
       );
   
@@ -438,7 +499,8 @@ const SpeakingTestInterface = () => {
       await fetch(
         `https://l-hit-aged7aquila.onrender.com/api/speaking/session/${sessionId}/evaluate-ai`,
         {
-          method: "POST"
+          method: "POST",
+          headers: authHeaders
         }
       );
   
@@ -535,7 +597,6 @@ const SpeakingTestInterface = () => {
               isRecording={isRecording}
               isPaused={isPaused}
               recordingTime={recordingTime}
-              maxDuration={currentPart === 2 ? 120 : 60}
               onStartRecording={handleStartRecording}
               onStopRecording={handleStopRecording}
               onPauseRecording={handlePauseRecording}

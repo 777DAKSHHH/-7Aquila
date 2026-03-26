@@ -102,7 +102,7 @@ const parseAIFeedback = (feedbackText) => {
 };
 
 const StudentAudioReview = () => {
-  const { attemptId } = useParams();
+  const { sessionId } = useParams();
   const navigate = useNavigate();
   const [commentData, setCommentData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -112,7 +112,7 @@ const StudentAudioReview = () => {
   const [aiData, setAiData] = useState(null);
 
   useEffect(() => {
-    if (!attemptId) {
+    if (!sessionId) {
       setLoading(false);
       return;
     }
@@ -123,7 +123,7 @@ const StudentAudioReview = () => {
         const { data: session, error: sessionError } = await supabase
           .from('speaking_sessions')
           .select('*, profiles:student_id(*)')
-          .eq('id', attemptId)
+          .eq('id', sessionId)
           .maybeSingle();
 
         if (sessionError) throw sessionError;
@@ -139,7 +139,7 @@ const StudentAudioReview = () => {
               part
             )
           `)
-          .eq('session_id', attemptId)
+          .eq('session_id', sessionId)
           .order('created_at', { ascending: true });
 
         if (respError) throw respError;
@@ -187,8 +187,8 @@ const StudentAudioReview = () => {
       }
     };
 
-    if (attemptId) fetchData();
-  }, [attemptId]);
+    if (sessionId) fetchData();
+  }, [sessionId]);
 
   const handleSaveFeedback = async (feedbackData) => {
     try {
@@ -228,7 +228,11 @@ const StudentAudioReview = () => {
     );
   }
 
-  const student = sessionData.profiles || { name: "Unknown Student", email: "N/A" };
+  const student = sessionData.profiles || { 
+    full_name: "Unknown Student", 
+    email: "N/A", 
+    id: sessionData.student_id || "00000000" 
+  };
 
   return (
     <div className="min-h-screen bg-background">

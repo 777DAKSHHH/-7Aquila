@@ -29,15 +29,15 @@ const VocabularyEnhancement = ({
                   <div className="flex-1">
                     <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
                       <span className="text-sm md:text-base font-medium text-foreground">
-                        Instead of: <span className="text-error">{item?.used}</span>
+                        Instead of: <span className="text-error">{item?.instead_of}</span>
                       </span>
                       <Icon name="ArrowRight" size={16} color="var(--color-muted-foreground)" className="hidden sm:block" />
                       <span className="text-sm md:text-base font-medium text-foreground">
-                        Try: <span className="text-success">{item?.suggested}</span>
+                        Try: <span className="text-success">{Array.isArray(item?.better) ? item.better.join(', ') : item?.better}</span>
                       </span>
                     </div>
                     <p className="text-sm text-muted-foreground font-caption">
-                      {item?.explanation}
+                      {item?.reason}
                     </p>
                     <div className="mt-2 text-xs md:text-sm text-muted-foreground font-caption italic">
                       Example: "{item?.example}"
@@ -63,7 +63,7 @@ const VocabularyEnhancement = ({
                   </span>
                 </div>
                 <p className="text-sm text-muted-foreground font-caption mb-2">
-                  {word?.definition}
+                  {word?.meaning}
                 </p>
                 <div className="text-xs md:text-sm text-foreground italic">
                   "{word?.example}"
@@ -90,6 +90,9 @@ const VocabularyEnhancement = ({
                     <div className="flex items-center gap-2 text-xs text-muted-foreground font-caption">
                       <Icon name="Tag" size={14} />
                       <span>{phrase?.category}</span>
+                    </div>
+                    <div className="mt-2 text-xs md:text-sm text-foreground italic">
+                      "{phrase?.example}"
                     </div>
                   </div>
                 </div>

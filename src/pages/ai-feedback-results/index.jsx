@@ -104,7 +104,7 @@ const parseAIFeedback = (feedbackText) => {
 
 const AIFeedbackResults = () => {
   const navigate = useNavigate();
-  const { attemptId } = useParams();
+  const { sessionId } = useParams();
   const [results, setResults] = useState(null);
   const [parsedFeedback, setParsedFeedback] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -114,7 +114,7 @@ const AIFeedbackResults = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    if (!attemptId) {
+    if (!sessionId) {
       setIsLoading(false);
       setError("No session ID found in URL.");
       return;
@@ -131,8 +131,14 @@ const AIFeedbackResults = () => {
         while (!session && attempts < 5) {
           const { data, error } = await supabase
             .from('speaking_sessions')
-            .select('*')
-            .eq('id', attemptId)
+            .select(`
+              *,
+              speaking_responses (
+                *,
+                speaking_questions ( question_text, part )
+              )
+            `)
+            .eq('id', sessionId)
             .maybeSingle();
 
           if (error) throw error;
@@ -147,27 +153,13 @@ const AIFeedbackResults = () => {
         }
 
         if (!session) {
-          throw new Error(`No session found for attempt ID: ${attemptId}`);
+          throw new Error(`No session found for session ID: ${sessionId}`);
         }
 
-        const { data: responses, error: responsesError } = await supabase
-          .from('speaking_responses')
-          .select(`
-            *,
-            speaking_questions:question_id (
-              id,
-              question_text,
-              part
-            )
-          `)
-          .eq('session_id', attemptId)
-          .order('created_at', { ascending: true });
-
-        if (responsesError) throw responsesError;
+        const responses = (session.speaking_responses || []).sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
 
         const responsesWithUrl = await Promise.all(
           responses.map(async (response) => {
-            // Handle potentially array or object from Supabase relation
             const qObj = Array.isArray(response.speaking_questions) 
               ? response.speaking_questions[0] 
               : response.speaking_questions;
@@ -223,7 +215,7 @@ const AIFeedbackResults = () => {
     };
 
     fetchResults();
-  }, [attemptId]);
+  }, [sessionId]);
 
   const handleSaveResults = async () => {
     setIsSaving(true);

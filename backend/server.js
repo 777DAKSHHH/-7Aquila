@@ -15,7 +15,16 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "https://sevenbandaquila.onrender.com",
+    "http://localhost:5173",
+    "http://localhost:3000"
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true
+}));
+app.options('*', cors());
 app.use(express.json());
 
 app.use("/api/speaking", speakingRoutes);

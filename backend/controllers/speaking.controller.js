@@ -12,8 +12,17 @@ export const startSpeakingSession = async (req, res) => {
   try {
     const authHeader = req.headers.authorization;
 
+    if (!authHeader) {
+      return res.status(401).json({
+        success: false,
+        message: "Missing Authorization header"
+      });
+    }
+
+    const token = authHeader.replace('Bearer ', '').trim();
+
     const { data: { user }, error: authError } =
-      await supabase.auth.getUser(authHeader);
+      await supabase.auth.getUser(token);
 
     if (authError || !user) {
       return res.status(401).json({
