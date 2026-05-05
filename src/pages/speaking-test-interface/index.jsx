@@ -29,6 +29,7 @@ const SpeakingTestInterface = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [recordingTime, setRecordingTime] = useState(0);
   const [audioLevel, setAudioLevel] = useState(0);
+  const [allQuestions, setAllQuestions] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [preparationNotes, setPreparationNotes] = useState('');
   const [isPreparationPhase, setIsPreparationPhase] = useState(false);
@@ -37,12 +38,16 @@ const SpeakingTestInterface = () => {
   const [autoSaveStatus, setAutoSaveStatus] = useState('saved');
   const [recordingError, setRecordingError] = useState(null);
   const [isEvaluating, setIsEvaluating] = useState(false);
+
+  const [currentResponse, setCurrentResponse] = useState(null);
+  const [showRetakeModal, setShowRetakeModal] = useState(false);
   
   const recordingTimerRef = useRef(null);
   const preparationTimerRef = useRef(null);
   const speakingTimerRef = useRef(null);
   const mediaRecorderRef = useRef(null);
   const audioChunksRef = useRef([]);
+  const isUploadingRef = useRef(false);
 
   const getCurrentQuestionData = () => {
     // Ensure we don't show stale data from a previous part while fetching
@@ -98,20 +103,14 @@ const SpeakingTestInterface = () => {
   };
 
   const getTotalQuestions = () => {
-    // TODO: Fetch all question counts at the start for accuracy
-    return 4 + 1 + 4;
+    return allQuestions.length || questions.length || 0;
   };
 
   const getCurrentQuestionNumber = () => {
-    if (currentPart === 1) {
-      return currentQuestion + 1;
-    } else if (currentPart === 2) {
-      // TODO: Fetch all question counts at the start for accuracy
-      return 4 + 1;
-    } else {
-      // TODO: Fetch all question counts at the start for accuracy
-      return 4 + 1 + currentQuestion + 1;
-    }
+    if (!allQuestions.length || !questions[currentQuestion]) return currentQuestion + 1;
+    const currentQId = questions[currentQuestion].id;
+    const index = allQuestions.findIndex(q => q.id === currentQId);
+    return index !== -1 ? index + 1 : currentQuestion + 1;
   };
 
   useEffect(() => {
@@ -121,6 +120,7 @@ const SpeakingTestInterface = () => {
         const { data: { session } } = await supabase.auth.getSession();
         if (!session) {
           console.error("No active session found, user might be logged out.");
+          navigate('/login');
           return;
         }
 
@@ -162,6 +162,7 @@ const SpeakingTestInterface = () => {
       .then(res => res.json())
       .then(data => {
         if (data.success) {
+          setAllQuestions(data.questions);
           // Filter by part on frontend
           const filtered = data.questions.filter(
             q => q.part == currentPart
@@ -178,6 +179,30 @@ const SpeakingTestInterface = () => {
         console.error("Error fetching questions:", err);
       });
   }, [currentPart, testSetId]);
+
+  useEffect(() => {
+    const fetchCurrentResponse = async () => {
+      const qId = questions[currentQuestion]?.id;
+      if (!sessionId || !qId) {
+        setCurrentResponse(null);
+        return;
+      }
+      
+      const { data } = await supabase
+        .from("speaking_responses")
+        .select("*")
+        .eq("session_id", sessionId)
+        .eq("question_id", qId)
+        .eq("is_active", true)
+        .order("created_at", { ascending: false })
+        .limit(1)
+        .maybeSingle();
+
+      setCurrentResponse(data || null);
+    };
+
+    fetchCurrentResponse();
+  }, [currentQuestion, currentPart, questions, sessionId]);
 
   useEffect(() => {
     if (!isEvaluating || !sessionId) return;
@@ -308,7 +333,43 @@ const SpeakingTestInterface = () => {
     }
   }, [currentPart]);
 
-  const handleStartRecording = async () => {
+  const handleRetakeClick = () => {
+    if ((currentResponse?.retake_count || 0) >= 2) {
+      alert("Maximum 2 retakes allowed");
+      return;
+    }
+    setShowRetakeModal(true);
+  };
+
+  const confirmRetake = async () => {
+    try {
+      setShowRetakeModal(false);
+      setAutoSaveStatus('saving');
+
+      if (!currentResponse?.id) return;
+
+      await supabase.from("speaking_responses").update({ is_active: false }).eq("id", currentResponse.id);
+
+      const newRetakeCount = (currentResponse?.retake_count || 0) + 1;
+      const originalId = currentResponse?.original_response_id || currentResponse?.id;
+
+      setCurrentResponse(null);
+      setRecordingTime(0);
+      setAudioLevel(0);
+      setAutoSaveStatus('idle');
+
+      handleStartRecording(newRetakeCount, originalId);
+    } catch (err) {
+      console.error("Error starting retake:", err);
+      setAutoSaveStatus('error');
+    }
+  };
+
+  const handleStartRecording = async (retakeCountArg = 0, originalIdArg = null) => {
+    const isRetake = typeof retakeCountArg === 'number';
+    const retakeCount = isRetake ? retakeCountArg : 0;
+    const originalId = isRetake ? originalIdArg : null;
+
     try {
       setRecordingError(null);
       const stream = await navigator.mediaDevices?.getUserMedia({ audio: true });
@@ -323,6 +384,9 @@ const SpeakingTestInterface = () => {
       };
 
       mediaRecorderRef.current.onstop = async () => {
+        if (isUploadingRef.current) return;
+        isUploadingRef.current = true;
+
         const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
         
         if (!sessionId) {
@@ -342,6 +406,10 @@ const SpeakingTestInterface = () => {
         formData.append("audio_file", audioBlob);
         formData.append("questionId", currentQuestionObject.id);
         formData.append("audioDuration", recordingTime);
+        formData.append("retake_count", retakeCount);
+        if (originalId) {
+          formData.append("original_response_id", originalId);
+        }
 
         // Get Auth Token for Upload
         const { data: { session } } = await supabase.auth.getSession();
@@ -371,6 +439,20 @@ const SpeakingTestInterface = () => {
             const result = await response.json();
             if (response.ok && result.success) {
               console.log("Audio uploaded successfully:", result);
+              
+              if (!result?.data?.id) {
+                setAutoSaveStatus('error');
+                isUploadingRef.current = false;
+                return;
+              }
+
+              setCurrentResponse({
+                id: result.data.id,
+                retake_count: retakeCount,
+                original_response_id: originalId,
+                is_active: true
+              });
+
               setAutoSaveStatus('saved');
               uploadSuccess = true;
             } else {
@@ -386,6 +468,8 @@ const SpeakingTestInterface = () => {
             }
           }
         }
+
+        isUploadingRef.current = false;
 
         stream?.getTracks()?.forEach(track => track?.stop());
       };
@@ -450,8 +534,8 @@ const SpeakingTestInterface = () => {
       setCurrentQuestion(prev => prev - 1);
     } else if (currentPart === 2) {
       setCurrentPart(1);
-      // TODO: This should be dynamic based on actual part 1 length
-      setCurrentQuestion(4 - 1);
+      const part1Questions = allQuestions.filter(q => q.part == 1);
+      setCurrentQuestion(Math.max(0, part1Questions.length - 1));
       setPreparationNotes('');
     } else if (currentPart === 3) {
       if (currentQuestion > 0) {
@@ -603,6 +687,10 @@ const SpeakingTestInterface = () => {
               onResumeRecording={handleResumeRecording}
               audioLevel={audioLevel}
               error={recordingError}
+              hasRecorded={!!currentResponse}
+              onRetake={handleRetakeClick}
+              retakeCount={currentResponse?.retake_count || 0}
+              maxRetakes={2}
             />
 
             {currentPart === 2 && (
@@ -682,6 +770,32 @@ const SpeakingTestInterface = () => {
           </div>
         </div>
       </main>
+      {showRetakeModal && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-background/95 backdrop-blur-sm p-4">
+          <div className="bg-card rounded-lg shadow-2xl border border-border max-w-md w-full p-6 md:p-8 animate-scale-in text-center">
+            <div className="w-12 h-12 rounded-full bg-warning/10 flex items-center justify-center mx-auto mb-4">
+              <Icon name="AlertTriangle" size={24} color="var(--color-warning)" />
+            </div>
+            <h2 className="text-xl font-heading font-semibold text-foreground mb-4">
+              Retake Answer
+            </h2>
+            <p className="text-base text-muted-foreground mb-6 whitespace-pre-line text-left">
+              Are you sure you want to retake this answer?{"\n\n"}
+              • Your previous answer will NOT be evaluated{"\n"}
+              • This will count as retake {(currentResponse?.retake_count || 0) + 1} of 2{"\n\n"}
+              Do you want to continue?
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <Button variant="outline" size="default" onClick={() => setShowRetakeModal(false)} className="w-full sm:w-auto">
+                I'm not sure
+              </Button>
+              <Button variant="destructive" size="default" onClick={confirmRetake} className="w-full sm:w-auto">
+                I'm sure
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
       {isEvaluating && <AIEvaluationRunning />}
     </div>
   );

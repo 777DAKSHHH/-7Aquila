@@ -13,6 +13,10 @@ const AudioRecordingPanel = ({
   onResumeRecording = () => {},
   audioLevel = 0,
   error = null,
+  hasRecorded = false,
+  onRetake = () => {},
+  retakeCount = 0,
+  maxRetakes = 2,
 }) => {
   const [displayTime, setDisplayTime] = useState('00:00');
   const canvasRef = useRef(null);
@@ -69,7 +73,7 @@ const AudioRecordingPanel = ({
             }`}
           />
           <h3 className="text-lg font-heading font-semibold text-foreground">
-            {isRecording ? (isPaused ? 'Recording Paused' : 'Recording...') : 'Ready to Record'}
+            {isRecording ? (isPaused ? 'Recording Paused' : 'Recording...') : (hasRecorded ? 'Answer Recorded' : 'Ready to Record')}
           </h3>
         </div>
         <div
@@ -103,7 +107,7 @@ const AudioRecordingPanel = ({
         </div>
       </div>
       <div className="flex items-center justify-center gap-3">
-        {!isRecording ? (
+        {!isRecording && !hasRecorded ? (
           <Button
             variant="default"
             size="lg"
@@ -113,6 +117,18 @@ const AudioRecordingPanel = ({
             className="min-w-[160px]"
           >
             Start Recording
+          </Button>
+        ) : !isRecording && hasRecorded ? (
+          <Button
+            variant="outline"
+            size="lg"
+            iconName="RotateCcw"
+            iconPosition="left"
+            onClick={onRetake}
+            disabled={retakeCount >= maxRetakes}
+            className="min-w-[160px]"
+          >
+            Retake {retakeCount > 0 ? `(${retakeCount}/${maxRetakes})` : ''}
           </Button>
         ) : (
           <>

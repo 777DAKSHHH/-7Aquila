@@ -2,12 +2,25 @@ import React, { useEffect, useState } from "react";
 import Icon from '../../../components/AppIcon';
 
 const messages = [
+  "Transcribing audio responses...",
   "Analyzing pronunciation...",
+  "Detecting hesitations and long pauses...",
   "Evaluating grammar accuracy...",
+  "Assessing sentence complexity...",
   "Checking lexical resource...",
+  "Identifying advanced vocabulary usage...",
   "Measuring fluency and coherence...",
   "Calculating IELTS band score...",
-  "Generating personalized feedback..."
+  "Generating personalized feedback...",
+  "Reviewing topic relevance...",
+  "Scoring Part 1: Introduction...",
+  "Scoring Part 2: Cue Card...",
+  "Scoring Part 3: Discussion...",
+  "Calculating overall IELTS band score...",
+  "Preparing vocabulary enhancement suggestions...",
+  "Compiling strengths and areas for improvement...",
+  "Generating personalized feedback...",
+  "Finalizing evaluation report..."
 ];
 
 const AIEvaluationRunning = () => {
