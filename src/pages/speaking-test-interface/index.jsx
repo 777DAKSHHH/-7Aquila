@@ -489,6 +489,7 @@ const SpeakingTestInterface = () => {
       setIsRecording(false);
       setIsPaused(false);
       setAudioLevel(0);
+      setAutoSaveStatus('saving');
     }
   };
 
@@ -688,6 +689,7 @@ const SpeakingTestInterface = () => {
               audioLevel={audioLevel}
               error={recordingError}
               hasRecorded={!!currentResponse}
+              isUploading={autoSaveStatus === 'saving'}
               onRetake={handleRetakeClick}
               retakeCount={currentResponse?.retake_count || 0}
               maxRetakes={2}

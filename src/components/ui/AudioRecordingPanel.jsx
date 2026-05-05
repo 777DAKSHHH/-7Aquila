@@ -14,6 +14,7 @@ const AudioRecordingPanel = ({
   audioLevel = 0,
   error = null,
   hasRecorded = false,
+  isUploading = false,
   onRetake = () => {},
   retakeCount = 0,
   maxRetakes = 2,
@@ -73,7 +74,7 @@ const AudioRecordingPanel = ({
             }`}
           />
           <h3 className="text-lg font-heading font-semibold text-foreground">
-            {isRecording ? (isPaused ? 'Recording Paused' : 'Recording...') : (hasRecorded ? 'Answer Recorded' : 'Ready to Record')}
+            {isRecording ? (isPaused ? 'Recording Paused' : 'Recording...') : isUploading ? 'Saving...' : (hasRecorded ? 'Answer Recorded' : 'Ready to Record')}
           </h3>
         </div>
         <div
@@ -107,7 +108,7 @@ const AudioRecordingPanel = ({
         </div>
       </div>
       <div className="flex items-center justify-center gap-3">
-        {!isRecording && !hasRecorded ? (
+        {!isRecording && !hasRecorded && !isUploading ? (
           <Button
             variant="default"
             size="lg"
@@ -118,17 +119,17 @@ const AudioRecordingPanel = ({
           >
             Start Recording
           </Button>
-        ) : !isRecording && hasRecorded ? (
+        ) : !isRecording && (hasRecorded || isUploading) ? (
           <Button
             variant="outline"
             size="lg"
             iconName="RotateCcw"
             iconPosition="left"
             onClick={onRetake}
-            disabled={retakeCount >= maxRetakes}
+            disabled={isUploading || retakeCount >= maxRetakes}
             className="min-w-[160px]"
           >
-            Retake {retakeCount > 0 ? `(${retakeCount}/${maxRetakes})` : ''}
+            {isUploading ? 'Saving...' : `Retake ${retakeCount > 0 ? `(${retakeCount}/${maxRetakes})` : ''}`}
           </Button>
         ) : (
           <>
