@@ -108,29 +108,32 @@ const AudioRecordingPanel = ({
         </div>
       </div>
       <div className="flex items-center justify-center gap-3">
-        {!isRecording && !hasRecorded && !isUploading ? (
-          <Button
-            variant="default"
-            size="lg"
-            iconName="Mic"
-            iconPosition="left"
-            onClick={onStartRecording}
-            className="min-w-[160px]"
-          >
-            Start Recording
-          </Button>
-        ) : !isRecording && (hasRecorded || isUploading) ? (
-          <Button
-            variant="outline"
-            size="lg"
-            iconName="RotateCcw"
-            iconPosition="left"
-            onClick={onRetake}
-            disabled={isUploading || retakeCount >= maxRetakes}
-            className="min-w-[160px]"
-          >
-            {isUploading ? 'Saving...' : `Retake ${retakeCount > 0 ? `(${retakeCount}/${maxRetakes})` : ''}`}
-          </Button>
+        {!isRecording ? (
+          <>
+            {!hasRecorded && !isUploading && (
+              <Button
+                variant="default"
+                size="lg"
+                iconName="Mic"
+                iconPosition="left"
+                onClick={onStartRecording}
+                className="min-w-[160px]"
+              >
+                Start Recording
+              </Button>
+            )}
+            <Button
+              variant="outline"
+              size="lg"
+              iconName="RotateCcw"
+              iconPosition="left"
+              onClick={onRetake}
+              disabled={!hasRecorded || isUploading || retakeCount >= maxRetakes}
+              className="min-w-[160px]"
+            >
+              {isUploading ? 'Saving...' : `Retake ${retakeCount > 0 ? \`(${retakeCount}/${maxRetakes})\` : ''}`}
+            </Button>
+          </>
         ) : (
           <>
             {isPaused ? (

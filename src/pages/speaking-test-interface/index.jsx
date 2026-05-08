@@ -13,6 +13,7 @@ import NavigationControls from './components/NavigationControls';
 import ConfidenceBooster from './components/ConfidenceBooster';
 import Icon from '../../components/AppIcon';
 import AIEvaluationRunning from './components/AIEvaluationRunning';
+import Button from '../../components/ui/Button';
 
 const SpeakingTestInterface = () => {
   const navigate = useNavigate();
