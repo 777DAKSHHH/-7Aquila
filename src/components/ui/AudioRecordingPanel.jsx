@@ -131,7 +131,7 @@ const AudioRecordingPanel = ({
               disabled={!hasRecorded || isUploading || retakeCount >= maxRetakes}
               className="min-w-[160px]"
             >
-              {isUploading ? 'Saving...' : `Retake ${retakeCount > 0 ? \`(${retakeCount}/${maxRetakes})\` : ''}`}
+              {isUploading ? 'Saving...' : 'Retake' + (retakeCount > 0 ? ` (${retakeCount}/${maxRetakes})` : '')}
             </Button>
           </>
         ) : (
