@@ -532,8 +532,8 @@ Return ONLY JSON:
     const completion = await openai.chat.completions.create({
       model: "gpt-4.1",
       response_format: { type: "json_object" },
-      temperature: 0.7,
-      max_tokens: 1800,
+      temperature: 0.3,
+      max_tokens: 4000,
       messages: [
         {
           role: "system",
@@ -734,7 +734,14 @@ Return ONLY JSON in this exact structure:
     let aiBandScore = 6.0;
     
     try {
-      parsedFeedback = JSON.parse(aiResponse);
+      const cleanedContent = aiResponse
+        .replace(/```json/g, "")
+        .replace(/```/g, "")
+        .trim();
+
+      console.log("RAW GPT:", cleanedContent);
+
+      parsedFeedback = JSON.parse(cleanedContent);
       
       if (!parsedFeedback?.scores || !parsedFeedback?.feedback) {
         console.warn("⚠️ Invalid AI response structure detected from GPT.");
@@ -742,7 +749,9 @@ Return ONLY JSON in this exact structure:
 
       aiBandScore = parsedFeedback?.scores?.overall || 6.0;
     } catch (parseError) {
-      console.error("Failed to parse GPT JSON response:", parseError);
+      console.error("GPT JSON PARSE ERROR:", parseError);
+      console.error("RAW GPT RESPONSE:", aiResponse);
+      throw new Error("Failed to parse GPT response");
     }
 
     // 3️⃣ Save AI evaluation
