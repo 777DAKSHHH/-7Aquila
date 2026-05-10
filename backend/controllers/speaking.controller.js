@@ -479,10 +479,10 @@ ${transcriptText}
     }
 
     const analysis = await openai.chat.completions.create({
-      model: "gpt-4.1",
+      model: "gpt-4o",
       response_format: { type: "json_object" },
-      temperature: 0.5,
-      max_tokens: 1200,
+      temperature: 0.3,
+      max_tokens: 2500,
       messages: [
         {
           role: "system",
@@ -530,10 +530,10 @@ Return ONLY JSON:
     );
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4.1",
+      model: "gpt-4o",
       response_format: { type: "json_object" },
       temperature: 0.3,
-      max_tokens: 4000,
+      max_tokens: 2500,
       messages: [
         {
           role: "system",
@@ -543,6 +543,12 @@ You are a certified IELTS Speaking Examiner.
 Below is a student's IELTS Speaking response and the question they answered.
 
 Your task is to generate a COMPLETE evaluation + learning feedback system.
+
+CRITICAL INSTRUCTIONS FOR YOUR EVALUATION:
+- Provide better reasoning and deeper explanations for your scores and corrections.
+- Offer a more nuanced evaluation of the student's actual linguistic abilities.
+- Maintain stronger consistency with the official IELTS grading rubrics.
+- Keep your outputs considerable and manageable (highly detailed, but strictly structured to avoid JSON truncation).
 
 -------------------------------------
 SECTION 1: IELTS BAND EVALUATION
