@@ -9,10 +9,13 @@ import BandScoreCard from './components/BandScoreCard';
 import TranscriptViewer from './components/TranscriptViewer';
 import FeedbackPanel from './components/FeedbackPanel';
 import VocabularyEnhancement from './components/VocabularyEnhancement';
+import ErrorAnalysisPanel from './components/ErrorAnalysisPanel';
+import IdealAnswerPanel from './components/IdealAnswerPanel';
+import StudentLevelBadge from './components/StudentLevelBadge';
 
 const parseAIFeedback = (feedbackText) => {
   if (!feedbackText) {
-    return { criteriaScores: {}, feedback: {}, strengths: [], improvements: [] };
+    return { criteriaScores: {}, feedback: {}, strengths: [], improvements: [], errors: [], ideal_answer: '', level: '' };
   }
 
   const getSectionContent = (startMarkers, endMarkers) => {
@@ -99,6 +102,9 @@ const parseAIFeedback = (feedbackText) => {
     },
     strengths: strengths,
     improvements: improvements,
+    errors: [],
+    ideal_answer: '',
+    level: ''
   };
 };
 
@@ -201,7 +207,10 @@ const AIFeedbackResults = () => {
             strengths: ai.strengths || [],
             improvements: ai.improvements || [],
             vocabulary: ai.vocabulary || { recommendations: [], topic_words: [], phrases: [] },
-            analytics: ai.analytics || {}
+            analytics: ai.analytics || {},
+            errors: ai.errors || [],
+            ideal_answer: ai.ideal_answers || ai.ideal_answer || "",
+            level: ai.level || session.student_level || ""
           });
         } else {
           setParsedFeedback(parseAIFeedback(session.ai_feedback));
@@ -274,9 +283,12 @@ const AIFeedbackResults = () => {
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground mb-2">
                   Your Test Results
                 </h1>
-                <p className="text-sm md:text-base text-muted-foreground font-caption">
-                  Comprehensive AI-powered analysis of your speaking performance
-                </p>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3 mt-2">
+                  <p className="text-sm md:text-base text-muted-foreground font-caption">
+                    Comprehensive AI-powered analysis of your speaking performance
+                  </p>
+                  <StudentLevelBadge level={results?.session?.student_level || parsedFeedback?.level} />
+                </div>
               </div>
               <div className="flex items-center gap-2">
                 <Button
@@ -308,27 +320,31 @@ const AIFeedbackResults = () => {
               testType="Full IELTS Speaking Test"
             />
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-              <div className="space-y-6 md:space-y-8">
-                <TranscriptViewer
-                  responses={results?.responses}
-                />
-              </div>
-
-              <div className="space-y-6 md:space-y-8">
-                <FeedbackPanel
-                  feedback={parsedFeedback?.feedback}
-                  strengths={parsedFeedback?.strengths}
-                  improvements={parsedFeedback?.improvements}
-                />
-              </div>
+            {/* 2-Column Grid for Feedback Summary and Error Analysis */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start">
+              <FeedbackPanel
+                feedback={parsedFeedback?.feedback}
+                strengths={parsedFeedback?.strengths}
+                improvements={parsedFeedback?.improvements}
+              />
+              
+              <ErrorAnalysisPanel errors={parsedFeedback?.errors} />
             </div>
+
+            <IdealAnswerPanel answers={parsedFeedback?.ideal_answer} />
 
             <VocabularyEnhancement
               recommendations={parsedFeedback?.vocabulary?.recommendations || []}
               topicWords={parsedFeedback?.vocabulary?.topic_words || []}
               phrases={parsedFeedback?.vocabulary?.phrases || []}
             />
+
+            {/* Transcript moved safely to the very bottom */}
+            <div className="w-full pt-4">
+              <TranscriptViewer
+                responses={results?.responses}
+              />
+            </div>
 
             <div className="bg-card rounded-lg p-6 md:p-8 shadow-md border border-border">
               <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">

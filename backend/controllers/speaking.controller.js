@@ -478,9 +478,62 @@ ${transcriptText}
       });
     }
 
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+    const analysis = await openai.chat.completions.create({
+      model: "gpt-4.1",
       response_format: { type: "json_object" },
+      temperature: 0.5,
+      max_tokens: 1200,
+      messages: [
+        {
+          role: "system",
+          content: `
+You are an IELTS linguistic analysis engine.
+
+Analyze deeply:
+- grammar mistakes
+- vocabulary issues
+- fluency problems
+- coherence issues
+
+Return ONLY JSON:
+
+{
+  "grammar_errors": [
+    {
+      "mistake": "...",
+      "correction": "...",
+      "explanation": "..."
+    }
+  ],
+  "vocabulary_issues": [
+    {
+      "original": "...",
+      "improved": "...",
+      "reason": "..."
+    }
+  ],
+  "fluency_issues": [],
+  "coherence_issues": [],
+  "estimated_level": ""
+}
+`
+        },
+        {
+          role: "user",
+          content: fullTranscript
+        }
+      ]
+    });
+
+    const analysisData = JSON.parse(
+      analysis.choices[0].message.content
+    );
+
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4.1",
+      response_format: { type: "json_object" },
+      temperature: 0.7,
+      max_tokens: 1800,
       messages: [
         {
           role: "system",
@@ -514,7 +567,27 @@ Then provide:
 - Pacing and Hesitation: Provide specific feedback on the student's pacing, pauses, and hesitation.
 
 -------------------------------------
-SECTION 2: PERFORMANCE ANALYTICS
+SECTION 2: LANGUAGE ERRORS
+-------------------------------------
+
+Identify:
+- grammar mistakes
+- awkward phrasing
+- unnatural expressions
+
+For each:
+- original
+- correction
+- explanation
+
+-------------------------------------
+SECTION 3: IDEAL ANSWER
+-------------------------------------
+
+Rewrite the student's answer into a Band 7+ level response while preserving the original meaning.
+
+-------------------------------------
+SECTION 4: PERFORMANCE ANALYTICS
 -------------------------------------
 
 Analyze transcript deeply and return:
@@ -526,7 +599,7 @@ Analyze transcript deeply and return:
 - fluency_observation (short explanation)
 
 -------------------------------------
-SECTION 3: VOCABULARY ENHANCEMENT
+SECTION 5: VOCABULARY ENHANCEMENT
 -------------------------------------
 
 Based STRICTLY on student's actual mistakes and level:
@@ -558,7 +631,7 @@ Each must include:
 - example_sentence
 
 -------------------------------------
-SECTION 4: STRENGTHS & IMPROVEMENTS
+SECTION 6: STRENGTHS & IMPROVEMENTS
 -------------------------------------
 
 - Strengths (3–5)
@@ -573,6 +646,8 @@ STRICT RULES
 - ALL output must be structured JSON ONLY
 - Base everything ONLY on student's response
 - Keep tone professional and examiner-like
+- You are STRICT.
+- Do NOT inflate IELTS scores.
 
 -------------------------------------
 OUTPUT FORMAT (STRICT JSON)
@@ -603,6 +678,14 @@ Return ONLY JSON in this exact structure:
     "wpm": number,
     "fluency_note": "..."
   },
+  "errors": [
+    {
+      "original": "...",
+      "correction": "...",
+      "explanation": "..."
+    }
+  ],
+  "ideal_answer": "...",
   "vocabulary": {
     "recommendations": [
       {
@@ -630,12 +713,16 @@ Return ONLY JSON in this exact structure:
     ]
   },
   "strengths": ["...", "..."],
-  "improvements": ["...", "..."]
+  "improvements": ["...", "..."],
+  "level": "..."
 }`
         },
         {
           role: "user",
-          content: fullTranscript
+          content: JSON.stringify({
+            transcript: fullTranscript,
+            analysis: analysisData
+          })
         }
       ]
     });
@@ -664,6 +751,11 @@ Return ONLY JSON in this exact structure:
       .update({
         ai_band_score: aiBandScore,
         ai_feedback: parsedFeedback?.feedback?.summary || aiResponse,
+        student_level: aiBandScore >= 7 
+          ? "Advanced" 
+          : aiBandScore >= 5.5 
+          ? "Intermediate" 
+          : "Beginner",
         ai_detailed_feedback: parsedFeedback,
         evaluated_at: new Date().toISOString(),
         status: "evaluated"
