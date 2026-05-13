@@ -21,15 +21,36 @@ const ErrorAnalysisPanel = ({ errors }) => {
       </div>
 
       <div className="space-y-5">
-        {errors.map((err, idx) => (
-          <div key={idx} className="flex flex-col gap-2 pb-5 border-b border-border last:border-0 last:pb-0">
-            <div className="px-3 py-2 rounded-md bg-error/10 border border-error/20 text-sm md:text-base text-error-foreground font-medium">
-              <span className="text-xs font-bold text-error uppercase mr-2 opacity-80">Mistake:</span> {err.original || err.mistake}
+        {errors?.map((error, index) => (
+          <div key={index} className="rounded-xl border border-border p-4 space-y-3">
+            
+            <div>
+              <p className="text-sm font-semibold text-red-600">
+                Mistake
+              </p>
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                {error.original || error.mistake}
+              </p>
             </div>
-            <div className="px-3 py-2 rounded-md bg-success/10 border border-success/20 text-sm md:text-base text-success-foreground font-medium">
-              <span className="text-xs font-bold text-success uppercase mr-2 opacity-80">Correction:</span> {err.correction || err.improved}
+
+            <div>
+              <p className="text-sm font-semibold text-green-600">
+                Correction
+              </p>
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                {error.correction || error.improved}
+              </p>
             </div>
-            <p className="text-sm text-muted-foreground mt-1 px-1">{err.explanation || err.reason}</p>
+
+            <div>
+              <p className="text-sm font-semibold text-blue-600">
+                Explanation
+              </p>
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                {error.explanation || error.reason}
+              </p>
+            </div>
+
           </div>
         ))}
       </div>
