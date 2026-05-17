@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
+import { supabase } from '../../../supabaseClient';
+import JSZip from 'jszip';
+import { saveAs } from 'file-saver';
 
 
 const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
   const [sortField, setSortField] = useState('date');
   const [sortDirection, setSortDirection] = useState('desc');
   const [playingId, setPlayingId] = useState(null);
+  const [downloadingId, setDownloadingId] = useState(null);
 
   const handleSort = (field) => {
     const newDirection = sortField === field && sortDirection === 'asc' ? 'desc' : 'asc';
@@ -24,6 +28,79 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
     if (score >= 7) return 'text-success';
     if (score >= 5) return 'text-warning';
     return 'text-error';
+  };
+
+  const handleDownloadZip = async (attempt) => {
+    try {
+      setDownloadingId(attempt?.id);
+
+      // 1. Fetch all responses for this specific attempt from Supabase
+      const { data: session, error } = await supabase
+        .from('speaking_sessions')
+        .select(`
+          *,
+          speaking_responses (
+            *,
+            speaking_questions ( part )
+          )
+        `)
+        .eq('id', attempt?.id)
+        .single();
+
+      if (error) throw error;
+
+      if (!session || !session.speaking_responses || session.speaking_responses.length === 0) {
+        alert('No recordings found for this attempt.');
+        return;
+      }
+
+      const zip = new JSZip();
+      // Format the folder/file name: topic-speaking-date (e.g. teachers-speaking-5-17-2026)
+      const safeTopic = (attempt?.topic || 'practice').replace(/\s+/g, '-').toLowerCase();
+      const safeDate = attempt?.date ? attempt.date.replace(/\//g, '-') : 'unknown-date';
+      const folderName = `${safeTopic}-speaking-${safeDate}`;
+      const folder = zip.folder(folderName);
+
+      // Sort responses chronologically to ensure they are downloaded in order (Response_1, Response_2, etc.)
+      const responses = session.speaking_responses.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+
+      // 2. Fetch all audio blobs and add to zip concurrently
+      await Promise.all(responses.map(async (response, index) => {
+        if (!response.audio_path) return;
+        
+        const { data: urlData } = await supabase.storage.from('speaking-audio').createSignedUrl(response.audio_path, 3600);
+        if (!urlData?.signedUrl) return;
+
+        const audioRes = await fetch(urlData.signedUrl);
+        const audioBlob = await audioRes.blob();
+
+        // Name the file: PartX_Response_Y.webm
+        const part = response.speaking_questions?.part ? `Part${response.speaking_questions.part}_` : '';
+        folder.file(`${part}Response_${index + 1}.webm`, audioBlob);
+      }));
+
+      // Add a scores summary text file to the zip
+      const scoresText = `IELTS Speaking Practice Results\n` +
+        `Date: ${attempt?.date || 'N/A'}\n` +
+        `Topic: ${attempt?.topic || 'N/A'}\n\n` +
+        `Scores:\n` +
+        `Overall Band: ${attempt?.overallScore || 'N/A'}\n` +
+        `Fluency & Coherence: ${attempt?.fluency || 'N/A'}\n` +
+        `Lexical Resource: ${attempt?.lexical || 'N/A'}\n` +
+        `Grammar Range & Accuracy: ${attempt?.grammar || 'N/A'}\n` +
+        `Pronunciation: ${attempt?.pronunciation || 'N/A'}\n`;
+      
+      folder.file('scores.txt', scoresText);
+
+      // 3. Generate & Download ZIP
+      const zipBlob = await zip.generateAsync({ type: 'blob' });
+      saveAs(zipBlob, `${folderName}.zip`);
+    } catch (err) {
+      console.error("Error downloading zip:", err);
+      alert("Failed to download recordings. Please try again.");
+    } finally {
+      setDownloadingId(null);
+    }
   };
 
   const SortIcon = ({ field }) => {
@@ -149,7 +226,7 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
                           color="var(--color-primary)"
                         />
                       </button>
-                      <Link to={`/ai-feedback-results?attemptId=${attempt?.id}`}>
+                      <Link to={`/ai-feedback-results/${attempt?.id}`}>
                         <button
                           className="p-2 rounded-md hover:bg-muted transition-colors duration-base focus-ring"
                           aria-label="View details"
@@ -158,10 +235,16 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
                         </button>
                       </Link>
                       <button
+                        onClick={() => handleDownloadZip(attempt)}
+                        disabled={downloadingId === attempt?.id}
                         className="p-2 rounded-md hover:bg-muted transition-colors duration-base focus-ring"
                         aria-label="Download recording"
                       >
-                        <Icon name="Download" size={16} color="var(--color-primary)" />
+                        {downloadingId === attempt?.id ? (
+                          <Icon name="Loader" size={16} className="animate-spin text-primary" />
+                        ) : (
+                          <Icon name="Download" size={16} color="var(--color-primary)" />
+                        )}
                       </button>
                     </div>
                   </td>

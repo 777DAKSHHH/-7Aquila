@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
+import { supabase } from '../../../supabaseClient';
+import JSZip from 'jszip';
+import { saveAs } from 'file-saver';
 
 const AttemptCard = ({ attempt }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
 
   const handlePlayAudio = () => {
     setIsPlaying(!isPlaying);
@@ -22,6 +26,74 @@ const AttemptCard = ({ attempt }) => {
     if (score >= 7) return 'bg-success/10';
     if (score >= 5) return 'bg-warning/10';
     return 'bg-error/10';
+  };
+
+  const handleDownloadZip = async () => {
+    try {
+      setIsDownloading(true);
+
+      // 1. Fetch all responses for this specific attempt from Supabase
+      const { data: session, error } = await supabase
+        .from('speaking_sessions')
+        .select(`
+          *,
+          speaking_responses (
+            *,
+            speaking_questions ( part )
+          )
+        `)
+        .eq('id', attempt?.id)
+        .single();
+
+      if (error) throw error;
+
+      if (!session || !session.speaking_responses || session.speaking_responses.length === 0) {
+        alert('No recordings found for this attempt.');
+        return;
+      }
+
+      const zip = new JSZip();
+      const safeTopic = (attempt?.topic || 'practice').replace(/\s+/g, '-').toLowerCase();
+      const safeDate = attempt?.date ? attempt.date.replace(/\//g, '-') : 'unknown-date';
+      const folderName = `${safeTopic}-speaking-${safeDate}`;
+      const folder = zip.folder(folderName);
+
+      const responses = session.speaking_responses.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+
+      await Promise.all(responses.map(async (response, index) => {
+        if (!response.audio_path) return;
+        
+        const { data: urlData } = await supabase.storage.from('speaking-audio').createSignedUrl(response.audio_path, 3600);
+        if (!urlData?.signedUrl) return;
+
+        const audioRes = await fetch(urlData.signedUrl);
+        const audioBlob = await audioRes.blob();
+
+        const part = response.speaking_questions?.part ? `Part${response.speaking_questions.part}_` : '';
+        folder.file(`${part}Response_${index + 1}.webm`, audioBlob);
+      }));
+
+      // Add a scores summary text file to the zip
+      const scoresText = `IELTS Speaking Practice Results\n` +
+        `Date: ${attempt?.date || 'N/A'}\n` +
+        `Topic: ${attempt?.topic || 'N/A'}\n\n` +
+        `Scores:\n` +
+        `Overall Band: ${attempt?.overallScore || 'N/A'}\n` +
+        `Fluency & Coherence: ${attempt?.fluency || 'N/A'}\n` +
+        `Lexical Resource: ${attempt?.lexical || 'N/A'}\n` +
+        `Grammar Range & Accuracy: ${attempt?.grammar || 'N/A'}\n` +
+        `Pronunciation: ${attempt?.pronunciation || 'N/A'}\n`;
+      
+      folder.file('scores.txt', scoresText);
+
+      const zipBlob = await zip.generateAsync({ type: 'blob' });
+      saveAs(zipBlob, `${folderName}.zip`);
+    } catch (err) {
+      console.error("Error downloading zip:", err);
+      alert("Failed to download recordings. Please try again.");
+    } finally {
+      setIsDownloading(false);
+    }
   };
 
   return (
@@ -99,7 +171,7 @@ const AttemptCard = ({ attempt }) => {
             {isPlaying ? 'Pause' : 'Play'} Audio
           </Button>
 
-          <Link to={`/ai-feedback-results?attemptId=${attempt?.id}`}>
+          <Link to={`/ai-feedback-results/${attempt?.id}`}>
             <Button variant="default" size="sm" iconName="Eye" iconPosition="left">
               View Details
             </Button>
@@ -115,8 +187,15 @@ const AttemptCard = ({ attempt }) => {
             {isExpanded ? 'Less' : 'More'}
           </Button>
 
-          <Button variant="ghost" size="sm" iconName="Download" iconPosition="left">
-            Download
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            iconName={isDownloading ? 'Loader' : 'Download'} 
+            iconPosition="left"
+            onClick={handleDownloadZip}
+            disabled={isDownloading}
+          >
+            {isDownloading ? 'Downloading...' : 'Download'}
           </Button>
         </div>
       </div>
