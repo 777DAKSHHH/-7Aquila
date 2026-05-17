@@ -587,10 +587,15 @@ For each:
 - explanation
 
 -------------------------------------
-SECTION 3: IDEAL ANSWER
+SECTION 3: IDEAL ANSWERS
 -------------------------------------
 
-Rewrite the student's answer into a Band 7+ level response while preserving the original meaning.
+For EVERY SINGLE question the student answered in the transcript, rewrite their exact response into a full-length Band 7+ level ideal answer.
+Preserve their original meaning but elevate the vocabulary, grammar, and coherence.
+
+Return an array containing an object for each question answered:
+- question (the exact question asked)
+- ideal_answer (the full-length rewritten answer)
 
 -------------------------------------
 SECTION 4: PERFORMANCE ANALYTICS
@@ -691,7 +696,12 @@ Return ONLY JSON in this exact structure:
       "explanation": "..."
     }
   ],
-  "ideal_answer": "...",
+  "ideal_answers": [
+    {
+      "question": "...",
+      "ideal_answer": "..."
+    }
+  ],
   "vocabulary": {
     "recommendations": [
       {

@@ -2,15 +2,23 @@ import React, { useState } from 'react';
 import Icon from '../../../components/AppIcon';
 import AudioPlayerWithWaveform from '../../student-audio-review/components/AudioPlayerWithWaveform';
 
-const ResponseAudioTranscript = ({ response, onAddComment }) => {
+const ResponseAudioTranscript = ({ response, onAddComment, idealAnswer, isRetake, attemptNumber }) => {
   const [currentTime, setCurrentTime] = useState(0);
+  const [isIdealAnswerOpen, setIsIdealAnswerOpen] = useState(false);
 
   return (
     <div className="space-y-4">
       <div>
-        <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-1 block">
-          {response.part ? `Part ${response.part}` : 'Question'}
-        </span>
+        <div className="flex items-center gap-2 mb-1">
+          <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider block">
+            {response.part ? `Part ${response.part}` : 'Question'}
+          </span>
+          {isRetake && (
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-warning/20 text-warning-foreground uppercase tracking-wider border border-warning/30">
+              Retaken Answer {attemptNumber > 2 ? `(${attemptNumber - 1})` : ''}
+            </span>
+          )}
+        </div>
         <p className="font-medium text-foreground text-lg">
           {response.question_text || "Question text not available"}
         </p>
@@ -20,7 +28,7 @@ const ResponseAudioTranscript = ({ response, onAddComment }) => {
         <div className="mb-4">
           <AudioPlayerWithWaveform
             audioUrl={response.audioUrl}
-            duration={response.audio_duration || 0}
+            duration={response.audio_duration > 0 ? response.audio_duration : undefined}
             currentTime={currentTime}
             onTimeUpdate={(time) => setCurrentTime(time)}
             onSeek={(time) => setCurrentTime(time)}
@@ -55,11 +63,32 @@ const ResponseAudioTranscript = ({ response, onAddComment }) => {
            <span>No transcript available for this response.</span>
         </div>
       )}
+
+      {idealAnswer && (
+        <div className="mt-4 border border-primary/20 rounded-lg overflow-hidden shadow-sm">
+          <button
+            onClick={() => setIsIdealAnswerOpen(!isIdealAnswerOpen)}
+            className="w-full flex items-center justify-between p-3 bg-primary/5 hover:bg-primary/10 transition-colors"
+          >
+            <span className="text-sm font-bold text-primary uppercase tracking-wider flex items-center gap-2">
+              <Icon name="Star" size={16} /> Ideal Answer (Band 7+)
+            </span>
+            <Icon name={isIdealAnswerOpen ? "ChevronUp" : "ChevronDown"} size={20} className="text-primary/70" />
+          </button>
+          {isIdealAnswerOpen && (
+            <div className="p-5 bg-card text-base text-foreground leading-relaxed whitespace-pre-line italic">
+              {idealAnswer}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };
 
-const TranscriptViewer = ({ responses, onAddComment }) => {
+const TranscriptViewer = ({ responses, onAddComment, idealAnswers, isFaculty = false }) => {
+  const questionCounts = {};
+
   return (
     <div className="bg-card rounded-lg shadow-sm border border-border overflow-hidden">
       <div className="p-4 md:p-6 border-b border-border">
@@ -72,9 +101,26 @@ const TranscriptViewer = ({ responses, onAddComment }) => {
       </div>
       <div className="divide-y divide-border">
         {responses?.map((response, index) => {
+          // Try to match the answer by question context, fallback to index order if exact match fails
+          const matchedIdealAnswerData = idealAnswers?.find(
+            (ia) => ia.question && response.question_text && response.question_text.toLowerCase().includes(ia.question.toLowerCase().substring(0, 15))
+          ) || idealAnswers?.[index];
+
+          // Track question occurrences to identify retakes
+          const qKey = response.question_text || response.question_id || index;
+          questionCounts[qKey] = (questionCounts[qKey] || 0) + 1;
+          const attemptNumber = questionCounts[qKey];
+          const isRetake = attemptNumber > 1 && isFaculty;
+
           return (
-            <div key={response.id || index} className="p-4 md:p-6">
-              <ResponseAudioTranscript response={response} onAddComment={onAddComment} />
+            <div key={response.id || index} className={`p-4 md:p-6 ${isRetake ? 'bg-warning/5' : ''}`}>
+              <ResponseAudioTranscript 
+                response={response} 
+                onAddComment={onAddComment}
+                idealAnswer={matchedIdealAnswerData?.ideal_answer} 
+                isRetake={isRetake}
+                attemptNumber={attemptNumber}
+              />
             </div>
         )})}
         {(!responses || responses.length === 0) && (

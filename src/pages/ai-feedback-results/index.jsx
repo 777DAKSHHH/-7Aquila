@@ -103,7 +103,7 @@ const parseAIFeedback = (feedbackText) => {
     strengths: strengths,
     improvements: improvements,
     errors: [],
-    ideal_answer: '',
+    ideal_answers: [],
     level: ''
   };
 };
@@ -209,7 +209,7 @@ const AIFeedbackResults = () => {
             vocabulary: ai.vocabulary || { recommendations: [], topic_words: [], phrases: [] },
             analytics: ai.analytics || {},
             errors: ai.errors || [],
-            ideal_answer: ai.ideal_answers || ai.ideal_answer || "",
+            ideal_answers: ai.ideal_answers || [],
             level: ai.level || session.student_level || ""
           });
         } else {
@@ -233,11 +233,25 @@ const AIFeedbackResults = () => {
     alert('Results saved successfully!');
   };
 
+  const cleanupBeforeNavigation = () => {
+    // 1. Force stop all playing audio to prevent "ghost" audio in the background
+    document.querySelectorAll('audio').forEach(audio => {
+      audio.pause();
+      audio.currentTime = 0;
+    });
+    
+    // 2. Clear frontend state so the next test starts from Question 1, not resumed
+    localStorage.removeItem('currentSessionId'); // Change this key to match whatever you use!
+    sessionStorage.removeItem('currentSessionId');
+  };
+
   const handleRetakeTest = () => {
+    cleanupBeforeNavigation();
     navigate('/test-selection-dashboard');
   };
 
   const handleViewHistory = () => {
+    cleanupBeforeNavigation();
     navigate('/practice-history');
   };
 
@@ -331,8 +345,6 @@ const AIFeedbackResults = () => {
               <ErrorAnalysisPanel errors={parsedFeedback?.errors} />
             </div>
 
-            <IdealAnswerPanel answers={parsedFeedback?.ideal_answer} />
-
             <VocabularyEnhancement
               recommendations={parsedFeedback?.vocabulary?.recommendations || []}
               topicWords={parsedFeedback?.vocabulary?.topic_words || []}
@@ -343,6 +355,7 @@ const AIFeedbackResults = () => {
             <div className="w-full pt-4">
               <TranscriptViewer
                 responses={results?.responses}
+                idealAnswers={parsedFeedback?.ideal_answers}
               />
             </div>
 
