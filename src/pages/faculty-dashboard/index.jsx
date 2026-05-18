@@ -41,6 +41,7 @@ const FacultyDashboard = () => {
           id, 
           student_id, 
           ai_band_score, 
+          ai_detailed_feedback,
           completed_at, 
           status,
           profiles (
@@ -66,6 +67,12 @@ const FacultyDashboard = () => {
         if (!sid) return;
 
         if (!studentMap[sid]) {
+          let ai = s.ai_detailed_feedback;
+          if (typeof ai === 'string') {
+            try { ai = JSON.parse(ai); } catch (e) {}
+          }
+          const scores = ai?.scores || {};
+
           studentMap[sid] = {
             id: sid,
             name: s.profiles?.full_name || "Unknown",
@@ -75,6 +82,10 @@ const FacultyDashboard = () => {
             is_blocked: s.profiles?.is_blocked,
             lastAttempt: new Date(s.completed_at).toLocaleDateString(),
             latestScore: s.ai_band_score || 0,
+            fluency: scores.fluency || s.ai_band_score || 0,
+            lexical: scores.lexical || s.ai_band_score || 0,
+            grammar: scores.grammar || s.ai_band_score || 0,
+            pronunciation: scores.pronunciation || s.ai_band_score || 0,
             progressPercentage: 0,
             totalAttempts: 0,
             averageScore: 0,

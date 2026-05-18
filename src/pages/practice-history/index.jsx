@@ -63,9 +63,21 @@ const PracticeHistory = () => {
             const secs = Math.round(totalSeconds % 60);
             const duration = `${mins}:${secs.toString().padStart(2, '0')}`;
 
-            // For sub-scores, if not stored separately, we fallback to overall score or estimate
-            // In a real app, you might parse `ai_feedback` if it's JSON
             const score = session.ai_band_score || 0;
+            
+            // Parse the detailed feedback object to extract real subscores & feedback strings
+            let ai = session.ai_detailed_feedback;
+            if (typeof ai === 'string') {
+              try { ai = JSON.parse(ai); } catch (e) {}
+            }
+            
+            const scores = ai?.scores || {};
+            const strengths = ai?.strengths?.length > 0 
+              ? (Array.isArray(ai.strengths) ? ai.strengths.join(', ') : ai.strengths) 
+              : 'View detailed feedback for analysis.';
+            const improvements = ai?.improvements?.length > 0 
+              ? (Array.isArray(ai.improvements) ? ai.improvements.join(', ') : ai.improvements) 
+              : 'View detailed feedback for recommendations.';
 
             return {
               id: session.id,
@@ -75,13 +87,12 @@ const PracticeHistory = () => {
               topicType: question?.topic_type || 'General',
               duration: duration,
               overallScore: score,
-              // Fallback subscores to overall if not available individually
-              fluency: score,
-              lexical: score,
-              grammar: score,
-              pronunciation: score,
-              strengths: 'View detailed feedback for analysis.',
-              improvements: 'View detailed feedback for recommendations.'
+              fluency: scores.fluency || score,
+              lexical: scores.lexical || score,
+              grammar: scores.grammar || score,
+              pronunciation: scores.pronunciation || score,
+              strengths,
+              improvements
             };
           });
           setAttempts(formattedAttempts);

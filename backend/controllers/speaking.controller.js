@@ -260,6 +260,7 @@ export const getSpeakingSessionSummary = async (req, res) => {
         completed_at,
         ai_band_score,
         ai_feedback,
+        ai_detailed_feedback,
         students (
           id,
           full_name,
@@ -338,6 +339,7 @@ export const getSpeakingSessionSummary = async (req, res) => {
           id: session.id,
           ai_band_score: session.ai_band_score,
           ai_feedback: session.ai_feedback,
+          ai_detailed_feedback: session.ai_detailed_feedback,
           started_at: session.started_at,
           completed_at: session.completed_at
         },

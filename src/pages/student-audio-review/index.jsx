@@ -176,7 +176,33 @@ const StudentAudioReview = () => {
         setSessionData(session);
         setResponses(responsesWithUrls);
         
-        if (session.ai_feedback) {
+        if (session.ai_detailed_feedback) {
+          let ai = session.ai_detailed_feedback;
+          if (typeof ai === 'string') {
+            try { ai = JSON.parse(ai); } catch (e) {}
+          }
+          
+          const scores = ai?.scores || {};
+          const feedback = ai?.feedback || {};
+          
+          setAiData({
+            scores: {
+              overall: scores.overall || session.ai_band_score || 0,
+              fluency: scores.fluency || session.ai_band_score || 0,
+              lexical: scores.lexical || session.ai_band_score || 0,
+              grammar: scores.grammar || session.ai_band_score || 0,
+              pronunciation: scores.pronunciation || session.ai_band_score || 0
+            },
+            assessment: {
+              fluency: { score: scores.fluency || session.ai_band_score || 0, details: feedback.fluency || '', strengths: [], improvements: [] },
+              lexical: { score: scores.lexical || session.ai_band_score || 0, details: feedback.lexical || '', strengths: [], improvements: [] },
+              grammar: { score: scores.grammar || session.ai_band_score || 0, details: feedback.grammar || '', strengths: [], improvements: [] },
+              pronunciation: { score: scores.pronunciation || session.ai_band_score || 0, details: feedback.pronunciation || '', strengths: [], improvements: [] },
+              overallRecommendation: ai?.improvements ? (Array.isArray(ai.improvements) ? ai.improvements.join(' ') : ai.improvements) : 'No recommendations available.',
+              strengths: ai?.strengths ? (Array.isArray(ai.strengths) ? ai.strengths : [ai.strengths]) : []
+            }
+          });
+        } else if (session.ai_feedback) {
           setAiData(parseAIFeedback(session.ai_feedback));
         }
 
