@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Icon from '../AppIcon';
 import Button from './Button';
+import { supabase } from '../../supabaseClient';
 
 const TopNav = ({ userRole = 'student' }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -38,6 +40,15 @@ const TopNav = ({ userRole = 'student' }) => {
   const navItems = userRole === 'faculty' ? facultyNavItems : studentNavItems;
 
   const isActive = (path) => location?.pathname === path;
+
+  const handleLogout = async () => {
+    try {
+      await supabase.auth.signOut();
+      navigate('/login');
+    } catch (err) {
+      console.error('Logout error:', err);
+    }
+  };
 
   return (
     <>
@@ -77,10 +88,10 @@ const TopNav = ({ userRole = 'student' }) => {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="ghost" iconName="Settings" iconPosition="left" size="sm">
+            <Button variant="ghost" iconName="Settings" iconPosition="left" size="sm" onClick={() => navigate('/settings')}>
               Settings
             </Button>
-            <Button variant="outline" iconName="LogOut" iconPosition="left" size="sm">
+            <Button variant="outline" iconName="LogOut" iconPosition="left" size="sm" onClick={handleLogout}>
               Logout
             </Button>
           </div>
@@ -116,10 +127,10 @@ const TopNav = ({ userRole = 'student' }) => {
             ))}
 
             <div className="mt-6 pt-6 border-t border-border flex flex-col gap-2">
-              <Button variant="ghost" iconName="Settings" iconPosition="left" fullWidth>
+              <Button variant="ghost" iconName="Settings" iconPosition="left" fullWidth onClick={() => { setIsMobileMenuOpen(false); navigate('/settings'); }}>
                 Settings
               </Button>
-              <Button variant="outline" iconName="LogOut" iconPosition="left" fullWidth>
+              <Button variant="outline" iconName="LogOut" iconPosition="left" fullWidth onClick={handleLogout}>
                 Logout
               </Button>
             </div>

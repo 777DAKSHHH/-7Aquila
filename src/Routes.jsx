@@ -13,6 +13,7 @@ import LoginPage from "./pages/login/index.jsx";
 import Lobby from "./pages/lobby/index.jsx";
 import SignupPage from "./pages/signup/index.jsx";
 import GatePage from "./pages/gate/index.jsx";
+import Settings from "./pages/settings/index.jsx";
 
 const Routes = () => {
   const [gateOpen, setGateOpen] = useState(false);
@@ -41,6 +42,7 @@ const Routes = () => {
               <Route path="/student-audio-review/:sessionId" element={<StudentAudioReview />} />
               <Route path="/practice-history" element={<PracticeHistory />} />
               <Route path="/test-selection-dashboard" element={<TestSelectionDashboard />} />
+              <Route path="/settings" element={<Settings />} />
               <Route path="*" element={<NotFound />} />
             </>
           )}

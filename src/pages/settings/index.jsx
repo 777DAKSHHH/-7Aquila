@@ -8,7 +8,6 @@ import {
   IeltsPreferences,
   TestExperienceSettings,
   AudioSettings,
-  AppearanceSettings,
   AccountSettings
 } from './components/SettingsSections';
 
@@ -17,7 +16,6 @@ const TABS = [
   { id: 'ielts', label: 'IELTS Preferences', icon: 'Target' },
   { id: 'test', label: 'Test Experience', icon: 'Monitor' },
   { id: 'audio', label: 'Audio & Mic', icon: 'Mic' },
-  { id: 'appearance', label: 'Appearance', icon: 'Moon' },
   { id: 'account', label: 'Account', icon: 'Shield' },
 ];
 
@@ -40,7 +38,6 @@ const Settings = () => {
       case 'ielts': return <IeltsPreferences settings={settings} updateSettings={updateSettings} />;
       case 'test': return <TestExperienceSettings settings={settings} updateSettings={updateSettings} />;
       case 'audio': return <AudioSettings settings={settings} updateSettings={updateSettings} />;
-      case 'appearance': return <AppearanceSettings />;
       case 'account': return <AccountSettings />;
       default: return null;
     }

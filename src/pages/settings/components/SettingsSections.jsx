@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { supabase } from '../../../supabaseClient';
 import Button from '../../../components/ui/Button';
 import Icon from '../../../components/AppIcon';
-import { useTheme } from '../../../contexts/ThemeContext';
 
 // ---------------------------------------------
 // A. PROFILE SETTINGS
@@ -300,46 +299,6 @@ export const AudioSettings = ({ settings, updateSettings }) => {
           <Button onClick={handleSave}>Save Audio Settings</Button>
           {status && <span className="text-sm text-success dark:text-green-400">{status}</span>}
         </div>
-      </div>
-    </div>
-  );
-};
-
-// ---------------------------------------------
-// E. APPEARANCE SETTINGS
-// ---------------------------------------------
-export const AppearanceSettings = () => {
-  const { theme, setTheme } = useTheme();
-
-  const options = [
-    { id: 'light', label: 'Light', icon: 'Sun', desc: 'Clean and bright' },
-    { id: 'dark', label: 'Dark', icon: 'Moon', desc: 'Premium slate tones' },
-    { id: 'system', label: 'System', icon: 'Monitor', desc: 'Syncs with OS' },
-  ];
-
-  return (
-    <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div>
-        <h2 className="text-xl font-heading font-semibold text-foreground dark:text-slate-100">Appearance</h2>
-        <p className="text-sm text-muted-foreground dark:text-slate-400 mt-1">Customize the platform's look and feel.</p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {options.map((opt) => (
-          <button
-            key={opt.id}
-            onClick={() => setTheme(opt.id)}
-            className={`flex flex-col items-center justify-center p-6 rounded-xl border transition-all duration-200 ${
-              theme === opt.id
-                ? 'bg-primary/10 border-primary text-primary dark:bg-primary/20 dark:text-primary-foreground'
-                : 'bg-card dark:bg-slate-800 border-border dark:border-slate-700 text-muted-foreground dark:text-slate-400 hover:border-primary/50 hover:bg-muted/50 dark:hover:bg-slate-700'
-            }`}
-          >
-            <Icon name={opt.icon} size={32} className="mb-3" />
-            <span className="font-semibold text-foreground dark:text-slate-100">{opt.label}</span>
-            <span className="text-xs text-muted-foreground dark:text-slate-400 mt-1">{opt.desc}</span>
-          </button>
-        ))}
       </div>
     </div>
   );
