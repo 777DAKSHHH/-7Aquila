@@ -1,42 +1,122 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../../../supabaseClient';
 import Button from '../../../components/ui/Button';
 import Icon from '../../../components/AppIcon';
+
+// This should be your backend's public URL, ideally from an environment variable.
+// e.g., import.meta.env.VITE_BACKEND_URL
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+const DEFAULT_AVATAR_URL = `${API_BASE_URL}/uploads/speaking/eagle-spade-logo.png`;
 
 // ---------------------------------------------
 // A. PROFILE SETTINGS
 // ---------------------------------------------
 export const ProfileSettings = ({ user, settings, updateSettings }) => {
   const [localSettings, setLocalSettings] = useState({
-    full_name: settings.full_name || '',
+    full_name: settings.full_name || user?.user_metadata?.full_name || '',
     username: settings.username || ''
   });
   const [saving, setSaving] = useState(false);
   const [status, setStatus] = useState('');
+  const [avatarFile, setAvatarFile] = useState(null);
+  const [avatarPreview, setAvatarPreview] = useState(null);
+  const fileInputRef = useRef(null);
+
+  const handleAvatarChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setAvatarFile(file);
+      setAvatarPreview(URL.createObjectURL(file));
+    }
+  };
 
   const handleSave = async () => {
-    if (!localSettings.full_name) return setStatus('Full name is required.');
+    if (!localSettings.full_name) {
+      setStatus('Full name is required.');
+      setTimeout(() => setStatus(''), 3000);
+      return;
+    }
+
     setSaving(true);
-    const res = await updateSettings(localSettings);
-    setSaving(false);
-    setStatus(res.success ? 'Profile updated!' : 'Failed to update.');
-    setTimeout(() => setStatus(''), 3000);
+    setStatus('Saving...');
+
+    let updates = { ...localSettings };
+
+    try {
+      // 1. If a new avatar is selected, upload it first.
+      if (avatarFile) {
+        const fileExt = avatarFile.name.split('.').pop();
+        const filePath = `${user.id}.${fileExt}`;
+
+        // Upload to Supabase Storage in the 'avatars' bucket
+        const { error: uploadError } = await supabase.storage
+          .from('avatars')
+          .upload(filePath, avatarFile, {
+            cacheControl: '3600',
+            upsert: true,
+          });
+
+        if (uploadError) throw uploadError;
+
+        // Get the public URL for the newly uploaded file and add a timestamp to bust the cache
+        const { data: { publicUrl } } = supabase.storage
+          .from('avatars')
+          .getPublicUrl(filePath);
+        
+        updates.profile_picture_url = `${publicUrl}?t=${new Date().getTime()}`;
+      }
+
+      // 2. Save all settings (including new avatar URL if applicable)
+      const { error } = await updateSettings(updates);
+
+      if (error) throw error;
+
+      setStatus('Profile updated successfully!');
+      setAvatarFile(null);
+      setAvatarPreview(null);
+
+    } catch (err) {
+      console.error('Error saving profile:', err);
+      setStatus('Failed to update profile.');
+    } finally {
+      setSaving(false);
+      setTimeout(() => setStatus(''), 3000);
+    }
   };
+
+  const finalAvatarUrl = avatarPreview || settings.profile_picture_url || DEFAULT_AVATAR_URL;
 
   return (
     <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div>
         <h2 className="text-xl font-heading font-semibold text-foreground dark:text-slate-100">Profile Settings</h2>
-        <p className="text-sm text-muted-foreground dark:text-slate-400 mt-1">Manage your personal information.</p>
+        <p className="text-sm text-muted-foreground dark:text-slate-400 mt-1">Manage your personal information and avatar.</p>
       </div>
 
       <div className="flex items-center gap-4 mb-6">
-        <div className="w-20 h-20 rounded-full bg-primary/10 dark:bg-slate-700 flex items-center justify-center text-primary dark:text-slate-300 border border-primary/20 dark:border-slate-600 overflow-hidden">
-          <Icon name="User" size={32} />
-        </div>
+        <img 
+          src={finalAvatarUrl} 
+          alt="Profile Avatar" 
+          className="w-20 h-20 rounded-full object-cover bg-muted dark:bg-slate-700 border border-border dark:border-slate-600"
+          onError={(e) => { e.target.onerror = null; e.target.src = DEFAULT_AVATAR_URL; }}
+        />
         <div>
-          <Button variant="outline" size="sm">Change Avatar</Button>
+          <input 
+            type="file" 
+            ref={fileInputRef} 
+            onChange={handleAvatarChange}
+            accept="image/png, image/jpeg"
+            className="hidden"
+          />
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={() => fileInputRef.current.click()}
+            disabled={saving}
+          >
+            Change Avatar
+          </Button>
           <p className="text-xs text-muted-foreground dark:text-slate-400 mt-2">JPG, GIF or PNG. 2MB max.</p>
         </div>
       </div>
@@ -55,8 +135,10 @@ export const ProfileSettings = ({ user, settings, updateSettings }) => {
           <input type="text" value={localSettings.username} onChange={e => setLocalSettings({...localSettings, username: e.target.value})} className="w-full p-2.5 bg-input dark:bg-slate-900 border border-border dark:border-slate-700 rounded-md text-foreground dark:text-slate-100 focus-ring transition-colors" />
         </div>
         <div className="pt-4 flex items-center gap-4">
-          <Button onClick={handleSave} disabled={saving}>{saving ? 'Saving...' : 'Save Profile'}</Button>
-          {status && <span className={`text-sm ${status.includes('required') || status.includes('Failed') ? 'text-error dark:text-red-400' : 'text-success dark:text-green-400'}`}>{status}</span>}
+          <Button onClick={handleSave} disabled={saving}>
+            {saving ? 'Saving...' : 'Save Profile'}
+          </Button>
+          {status && <span className={`text-sm ${status.includes('Failed') || status.includes('required') ? 'text-error dark:text-red-400' : 'text-success dark:text-green-400'}`}>{status}</span>}
         </div>
       </div>
     </div>

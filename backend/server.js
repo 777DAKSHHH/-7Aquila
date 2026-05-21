@@ -27,6 +27,9 @@ app.use(cors({
 app.options('*', cors());
 app.use(express.json());
 
+// Serve static files from the 'uploads' directory
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
 app.use("/api/speaking", speakingRoutes);
 app.use("/api/questions", questionsRoutes);
 app.use("/api/test-sets", testSetsRoutes);
