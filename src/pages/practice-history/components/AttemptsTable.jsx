@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import { supabase } from '../../../supabaseClient';
-import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
+import { ZipWriter, BlobWriter, BlobReader, TextReader } from '@zip.js/zip.js';
 
 
 const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
@@ -41,7 +41,7 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
           *,
           speaking_responses (
             *,
-            speaking_questions ( part )
+            speaking_questions ( part, category, topic, question_text )
           )
         `)
         .eq('id', attempt?.id)
@@ -54,46 +54,95 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
         return;
       }
 
-      const zip = new JSZip();
-      // Format the folder/file name: topic-speaking-date (e.g. teachers-speaking-5-17-2026)
+      const zipWriter = new ZipWriter(new BlobWriter("application/zip"), { password: "JAN7MMVI" });
+
       const safeTopic = (attempt?.topic || 'practice').replace(/\s+/g, '-').toLowerCase();
       const safeDate = attempt?.date ? attempt.date.replace(/\//g, '-') : 'unknown-date';
       const folderName = `${safeTopic}-speaking-${safeDate}`;
-      const folder = zip.folder(folderName);
 
       // Sort responses chronologically to ensure they are downloaded in order (Response_1, Response_2, etc.)
       const responses = session.speaking_responses.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
 
-      // 2. Fetch all audio blobs and add to zip concurrently
-      await Promise.all(responses.map(async (response, index) => {
-        if (!response.audio_path) return;
+      // 2. Fetch all audio blobs concurrently
+      const downloadedFiles = await Promise.all(responses.map(async (response, index) => {
+        if (!response.audio_path) return null;
         
         const { data: urlData } = await supabase.storage.from('speaking-audio').createSignedUrl(response.audio_path, 3600);
-        if (!urlData?.signedUrl) return;
+        if (!urlData?.signedUrl) return null;
 
         const audioRes = await fetch(urlData.signedUrl);
         const audioBlob = await audioRes.blob();
 
         // Name the file: PartX_Response_Y.webm
         const part = response.speaking_questions?.part ? `Part${response.speaking_questions.part}_` : '';
-        folder.file(`${part}Response_${index + 1}.webm`, audioBlob);
+        return { path: `${folderName}/${part}Response_${index + 1}.webm`, blob: audioBlob };
       }));
 
+      // Add fetched files to the encrypted zip sequentially
+      for (const file of downloadedFiles) {
+        if (file) {
+          await zipWriter.add(file.path, new BlobReader(file.blob));
+        }
+      }
+
       // Add a scores summary text file to the zip
-      const scoresText = `IELTS Speaking Practice Results\n` +
-        `Date: ${attempt?.date || 'N/A'}\n` +
-        `Topic: ${attempt?.topic || 'N/A'}\n\n` +
-        `Scores:\n` +
-        `Overall Band: ${attempt?.overallScore || 'N/A'}\n` +
-        `Fluency & Coherence: ${attempt?.fluency || 'N/A'}\n` +
-        `Lexical Resource: ${attempt?.lexical || 'N/A'}\n` +
-        `Grammar Range & Accuracy: ${attempt?.grammar || 'N/A'}\n` +
-        `Pronunciation: ${attempt?.pronunciation || 'N/A'}\n`;
+      let ai = session.ai_detailed_feedback;
+      if (typeof ai === 'string') {
+        try { ai = JSON.parse(ai); } catch (e) {}
+      }
+      const errors = ai?.errors || [];
+      const idealAnswers = ai?.ideal_answers || [];
+
+      let scoresText = `======================================================\n`;
+      scoresText += `              IELTS SPEAKING TEST RESULTS             \n`;
+      scoresText += `======================================================\n\n`;
+
+      scoresText += `Test Date: ${attempt?.date || 'N/A'}\n`;
+      scoresText += `Overall Band Score: ${attempt?.overallScore || 'N/A'}\n\n`;
       
-      folder.file('scores.txt', scoresText);
+      scoresText += `--- Criteria Scores ---\n`;
+      scoresText += `Fluency & Coherence: ${attempt?.fluency || 'N/A'}\n`;
+      scoresText += `Lexical Resource: ${attempt?.lexical || 'N/A'}\n`;
+      scoresText += `Grammatical Range & Accuracy: ${attempt?.grammar || 'N/A'}\n`;
+      scoresText += `Pronunciation: ${attempt?.pronunciation || 'N/A'}\n\n`;
+
+      scoresText += `======================================================\n`;
+      scoresText += `             QUESTION & RESPONSE ANALYSIS             \n`;
+      scoresText += `======================================================\n\n`;
+
+      responses.forEach((response, index) => {
+        const q = response.speaking_questions || {};
+        const category = q.category || 'General';
+        const topic = q.topic || 'N/A';
+        const questionText = q.question_text || 'N/A';
+        
+        scoresText += `[Part ${q.part || 'Unknown'}] - Question ${index + 1}\n`;
+        scoresText += `Category: ${category} | Topic: ${topic}\n`;
+        scoresText += `Question: ${questionText}\n\n`;
+        
+        const ideal = idealAnswers.find(ia => ia.question === questionText);
+        if (ideal) {
+          scoresText += `--- Ideal Band 7+ Answer ---\n`;
+          scoresText += `${ideal.ideal_answer}\n\n`;
+        }
+      });
+
+      if (errors.length > 0) {
+        scoresText += `======================================================\n`;
+        scoresText += `                   ERROR ANALYSIS                     \n`;
+        scoresText += `======================================================\n\n`;
+        
+        errors.forEach((err, index) => {
+          scoresText += `${index + 1}. You said: "${err.original}"\n`;
+          scoresText += `   Correction: "${err.correction}"\n`;
+          scoresText += `   Explanation: ${err.explanation}\n\n`;
+        });
+      }
+      
+      await zipWriter.add(`${folderName}/scores.txt`, new TextReader(scoresText));
 
       // 3. Generate & Download ZIP
-      const zipBlob = await zip.generateAsync({ type: 'blob' });
+      const zipBlob = await zipWriter.close();
       saveAs(zipBlob, `${folderName}.zip`);
     } catch (err) {
       console.error("Error downloading zip:", err);
