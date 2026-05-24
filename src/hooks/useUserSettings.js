@@ -38,7 +38,7 @@ export const useUserSettings = () => {
 
       const { data, error } = await supabase
         .from('user_settings')
-        .upsert(updatePayload)
+        .upsert(updatePayload, { onConflict: 'user_id' })
         .select()
         .single();
 

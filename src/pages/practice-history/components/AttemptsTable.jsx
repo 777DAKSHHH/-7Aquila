@@ -41,7 +41,7 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
           *,
           speaking_responses (
             *,
-            speaking_questions ( part, category, topic, question_text )
+            speaking_questions ( part, topic, question_text, difficulty )
           )
         `)
         .eq('id', attempt?.id)
@@ -112,12 +112,12 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
 
       responses.forEach((response, index) => {
         const q = response.speaking_questions || {};
-        const category = q.category || 'General';
         const topic = q.topic || 'N/A';
+        const difficulty = q.difficulty ? q.difficulty.charAt(0).toUpperCase() + q.difficulty.slice(1) : 'N/A';
         const questionText = q.question_text || 'N/A';
         
         scoresText += `[Part ${q.part || 'Unknown'}] - Question ${index + 1}\n`;
-        scoresText += `Category: ${category} | Topic: ${topic}\n`;
+        scoresText += `Topic: ${topic} | Difficulty: ${difficulty}\n`;
         scoresText += `Question: ${questionText}\n\n`;
         
         const ideal = idealAnswers.find(ia => ia.question === questionText);
