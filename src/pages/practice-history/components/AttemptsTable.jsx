@@ -183,6 +183,24 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
               </th>
               <th className="text-left p-4 text-sm font-heading font-semibold text-foreground">
                 <button
+                  onClick={() => handleSort('topicType')}
+                  className="flex items-center gap-2 hover:text-primary transition-colors duration-base"
+                >
+                  Category
+                  <SortIcon field="topicType" />
+                </button>
+              </th>
+              <th className="text-left p-4 text-sm font-heading font-semibold text-foreground">
+                <button
+                  onClick={() => handleSort('difficulty')}
+                  className="flex items-center gap-2 hover:text-primary transition-colors duration-base"
+                >
+                  Difficulty
+                  <SortIcon field="difficulty" />
+                </button>
+              </th>
+              <th className="text-left p-4 text-sm font-heading font-semibold text-foreground">
+                <button
                   onClick={() => handleSort('overallScore')}
                   className="flex items-center gap-2 hover:text-primary transition-colors duration-base"
                 >
@@ -210,7 +228,7 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
           <tbody>
             {attempts?.length === 0 ? (
               <tr>
-                <td colSpan="8" className="p-8 text-center">
+                <td colSpan="10" className="p-8 text-center">
                   <Icon name="FileText" size={48} className="mx-auto mb-3 opacity-30" />
                   <p className="text-muted-foreground font-caption">No practice attempts found</p>
                 </td>
@@ -230,12 +248,24 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
                     </div>
                   </td>
                   <td className="p-4">
-                    <div className="flex flex-col">
-                      <span className="text-sm font-medium text-foreground">{attempt?.topic}</span>
-                      <span className="text-xs text-muted-foreground font-caption">
-                        {attempt?.topicType}
-                      </span>
-                    </div>
+                    <span className="text-sm font-medium text-foreground max-w-[200px] line-clamp-2" title={attempt?.topic}>
+                      {attempt?.topic || '-'}
+                    </span>
+                  </td>
+                  <td className="p-4">
+                    <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-muted text-muted-foreground capitalize">
+                      {attempt?.topicType || '-'}
+                    </span>
+                  </td>
+                  <td className="p-4">
+                    <span className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium capitalize ${
+                      attempt?.difficulty?.toLowerCase() === 'hard' ? 'bg-error/10 text-error' :
+                      attempt?.difficulty?.toLowerCase() === 'medium' ? 'bg-warning/10 text-warning' :
+                      attempt?.difficulty?.toLowerCase() === 'easy' ? 'bg-success/10 text-success' :
+                      'bg-muted text-muted-foreground'
+                    }`}>
+                      {attempt?.difficulty || '-'}
+                    </span>
                   </td>
                   <td className="p-4">
                     <span className={`text-lg font-heading font-bold ${getScoreColor(attempt?.overallScore)}`}>

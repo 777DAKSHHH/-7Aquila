@@ -34,31 +34,36 @@ const ProgressChart = ({ data = [], height = 300 }) => {
           <span>Overall Score</span>
         </div>
       </div>
-      <ResponsiveContainer width="100%" height={height}>
-        <LineChart data={data} margin={{ top: 5, right: 10, left: -20, bottom: 5 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" />
-          <XAxis 
-            dataKey="date" 
-            stroke="var(--color-muted-foreground)"
-            style={{ fontSize: '12px', fontFamily: 'var(--font-caption)' }}
-          />
-          <YAxis 
-            domain={[0, 9]} 
-            ticks={[0, 3, 6, 9]}
-            stroke="var(--color-muted-foreground)"
-            style={{ fontSize: '12px', fontFamily: 'var(--font-caption)' }}
-          />
-          <Tooltip content={<CustomTooltip />} />
-          <Line 
-            type="monotone" 
-            dataKey="score" 
-            stroke="var(--color-primary)" 
-            strokeWidth={3}
-            dot={{ fill: 'var(--color-primary)', r: 5 }}
-            activeDot={{ r: 7 }}
-          />
-        </LineChart>
-      </ResponsiveContainer>
+      {/* Added a scrollable wrapper to prevent squishing when there are many attempts */}
+      <div className="overflow-x-auto w-full pb-2">
+        <div style={{ minWidth: data?.length > 10 ? `${data.length * 50}px` : '100%', height }}>
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart data={data} margin={{ top: 5, right: 10, left: -20, bottom: 5 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" />
+              <XAxis 
+                dataKey="date" 
+                stroke="var(--color-muted-foreground)"
+                style={{ fontSize: '12px', fontFamily: 'var(--font-caption)' }}
+              />
+              <YAxis 
+                domain={[0, 9]} 
+                ticks={[0, 3, 6, 9]}
+                stroke="var(--color-muted-foreground)"
+                style={{ fontSize: '12px', fontFamily: 'var(--font-caption)' }}
+              />
+              <Tooltip content={<CustomTooltip />} />
+              <Line 
+                type="monotone" 
+                dataKey="score" 
+                stroke="var(--color-primary)" 
+                strokeWidth={3}
+                dot={{ fill: 'var(--color-primary)', r: 5 }}
+                activeDot={{ r: 7 }}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
     </div>
   );
 };

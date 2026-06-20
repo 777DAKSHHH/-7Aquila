@@ -166,6 +166,19 @@ const AttemptCard = ({ attempt }) => {
               <span className="px-2 py-0.5 bg-muted rounded text-xs">
                 {attempt?.topicType}
               </span>
+              {attempt?.difficulty && (
+                <>
+                  <span>•</span>
+                  <span className={`px-2 py-0.5 rounded text-xs font-medium capitalize ${
+                    attempt?.difficulty?.toLowerCase() === 'hard' ? 'bg-error/10 text-error' :
+                    attempt?.difficulty?.toLowerCase() === 'medium' ? 'bg-warning/10 text-warning' :
+                    attempt?.difficulty?.toLowerCase() === 'easy' ? 'bg-success/10 text-success' :
+                    'bg-muted text-muted-foreground'
+                  }`}>
+                    {attempt?.difficulty}
+                  </span>
+                </>
+              )}
             </div>
           </div>
           <div className={`flex flex-col items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-lg ${getScoreBgColor(attempt?.overallScore)}`}>

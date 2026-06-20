@@ -132,7 +132,6 @@ const PracticeHistory = () => {
       score: a.overallScore,
       fluency: a.fluency
     }))
-    .slice(-10); // Show last 10 attempts max
 
   useEffect(() => {
     let filtered = [...attempts];
@@ -193,6 +192,12 @@ const PracticeHistory = () => {
   const improvementPercentage = firstScore > 0 ? (((lastScore - firstScore) / firstScore) * 100)?.toFixed(1) : 0;
   const lastAttemptDate = attempts?.[0]?.date || "N/A";
 
+  // Calculate average criteria scores
+  const averageFluency = totalAttempts > 0 ? attempts?.reduce((sum, a) => sum + (a?.fluency || 0), 0) / totalAttempts : 0;
+  const averageLexical = totalAttempts > 0 ? attempts?.reduce((sum, a) => sum + (a?.lexical || 0), 0) / totalAttempts : 0;
+  const averageGrammar = totalAttempts > 0 ? attempts?.reduce((sum, a) => sum + (a?.grammar || 0), 0) / totalAttempts : 0;
+  const averagePronunciation = totalAttempts > 0 ? attempts?.reduce((sum, a) => sum + (a?.pronunciation || 0), 0) / totalAttempts : 0;
+
   return (
     <div className="min-h-screen bg-background">
       <TopNav userRole="student" />
@@ -239,6 +244,10 @@ const PracticeHistory = () => {
             averageScore={averageScore}
             improvementPercentage={parseFloat(improvementPercentage)}
             lastAttemptDate={lastAttemptDate}
+            averageFluency={averageFluency}
+            averageLexical={averageLexical}
+            averageGrammar={averageGrammar}
+            averagePronunciation={averagePronunciation}
           />
 
           <ProgressChart data={chartData} height={300} />

@@ -389,9 +389,8 @@ export const evaluateAISession = async (req, res) => {
     let totalDuration = 0;
     let totalSessionWords = 0;
 
-    for (const response of responses) {
-      totalDuration += response.audio_duration || 0;
-
+    // 🚀 Execute all transcriptions concurrently for lightning-fast speeds!
+    const transcriptionResults = await Promise.all(responses.map(async (response) => {
       const tempFilePath = path.join(
         process.cwd(),
         `temp-${response.id}.webm`
@@ -423,7 +422,6 @@ export const evaluateAISession = async (req, res) => {
         // 🔹 Fluency Analytics
         const wordsArray = transcriptText.trim().split(/\s+/);
         const wordsCount = wordsArray.length;
-        totalSessionWords += wordsCount;
 
         const minutes = (response.audio_duration || 1) / 60;
         const wordsPerMinute = wordsCount / minutes;
@@ -455,21 +453,27 @@ export const evaluateAISession = async (req, res) => {
           })
           .eq("id", response.id);
 
-        fullTranscript += `
---- PART ${response.speaking_questions?.part || 'UNKNOWN'} ---
-QUESTION:
-${response.speaking_questions?.question_text || 'No question text provided'}
-
-STUDENT RESPONSE:
-${transcriptText}
-
-`;
+        return {
+          duration: response.audio_duration || 0,
+          wordsCount: wordsCount,
+          transcriptPart: `\n--- PART ${response.speaking_questions?.part || 'Unknown'} ---\nQUESTION:\n${response.speaking_questions?.question_text || 'No question text provided'}\n\nSTUDENT RESPONSE:\n${transcriptText}\n\n`
+        };
+      } catch (err) {
+        // Wrap the error with context so the frontend gets an exact reason why it failed
+        throw new Error(`Failed transcribing Part ${response.speaking_questions?.part || '?'}: ${err.message}`);
       } finally {
         // Delete temp file regardless of success or failure
         if (fs.existsSync(tempFilePath)) {
           fs.unlinkSync(tempFilePath);
         }
       }
+    }));
+
+    // Assemble results in chronological order
+    for (const result of transcriptionResults) {
+      totalDuration += result.duration;
+      totalSessionWords += result.wordsCount;
+      fullTranscript += result.transcriptPart;
     }
 
     // 4️⃣ TRANSCRIPT FALLBACK PROTECTION (Protect GPT Cost)
@@ -817,7 +821,8 @@ Return ONLY JSON in this exact structure:
     console.error("AI Evaluation Error:", err);
     res.status(500).json({
       success: false,
-      message: err.message
+      message: err.message,
+      errorDetails: err.stack // Sends stack trace to the browser network/console tab for easier debugging
     });
   }
 };
