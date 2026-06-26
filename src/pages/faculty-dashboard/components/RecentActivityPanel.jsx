@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 
-const RecentActivityPanel = ({ activities = [] }) => {
+const RecentActivityPanel = ({ activities = [], onReviewActivity }) => {
   const getActivityIcon = (type) => {
     switch (type) {
       case 'new_attempt':
@@ -68,7 +68,12 @@ const RecentActivityPanel = ({ activities = [] }) => {
               </div>
               {activity?.actionRequired && (
                 <Button variant="outline" size="xs" iconName="ArrowRight">
-                  Review
+                  <Link
+                    to={`/student-audio-review/${activity.id}`}
+                    className="after:absolute after:inset-0"
+                  >
+                    Review
+                  </Link>
                 </Button>
               )}
             </div>

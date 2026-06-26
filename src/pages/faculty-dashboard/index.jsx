@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../../supabaseClient';
 import TopNav from '../../components/ui/TopNav';
-import PerformanceMetrics from './components/PerformanceMetrics';
+import PerformanceMetrics from './components/PerformanceMetrics'; // prettier-ignore
 import FilterControls from './components/FilterControls';
 import StudentListTable from './components/StudentListTable';
 import StudentListCards from './components/StudentListCards';
@@ -11,7 +11,7 @@ import BulkActionsBar from './components/BulkActionsBar';
 import Button from '../../components/ui/Button';
 import Icon from '../../components/AppIcon';
 
-const FacultyDashboard = () => {
+const FacultyDashboard = () => { // prettier-ignore
   const navigate = useNavigate();
   const [isMobileView, setIsMobileView] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -29,12 +29,7 @@ const FacultyDashboard = () => {
   });
   const [activities, setActivities] = useState([]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth < 1024);
-    };
-
-    const fetchDashboardData = async () => {
+  const fetchDashboardData = async () => {
       const { data: sessions, error: sessionsError } = await supabase
         .from("speaking_sessions")
         .select(`
@@ -175,11 +170,18 @@ const FacultyDashboard = () => {
       }
     };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth < 1024);
+    };
+
     fetchDashboardData();
     handleResize();
     window.addEventListener('resize', handleResize);
 
     const fetchWaitingStudents = async () => {
+      // This function is defined inside useEffect because it only pertains to the realtime subscription
+      // and is not needed elsewhere.
       const { data, error } = await supabase
         .from("lobby")
         .select("*")
@@ -205,10 +207,25 @@ const FacultyDashboard = () => {
       )
       .subscribe();
 
+    const sessionsChannel = supabase
+      .channel('faculty-sessions-realtime')
+      .on(
+        'postgres_changes',
+        {
+          event: '*',
+          schema: 'public',
+          table: 'speaking_sessions'
+        },
+        () => {
+          fetchDashboardData();
+        }
+      )
+      .subscribe();
 
     return () => {
       window.removeEventListener('resize', handleResize);
       supabase.removeChannel(lobbyChannel);
+      supabase.removeChannel(sessionsChannel);
     };
   }, []);
 
@@ -240,6 +257,10 @@ const FacultyDashboard = () => {
     } else {
       alert("No complete sessions found for this student.");
     }
+  };
+
+  const handleReviewActivity = (sessionId) => {
+    navigate(`/student-audio-review/${sessionId}`);
   };
 
   const handleAddFeedback = (studentId) => {
@@ -405,7 +426,10 @@ const FacultyDashboard = () => {
                 <p className="text-muted-foreground font-caption text-center py-4">No students are waiting.</p>
               )}
             </div>
-            <RecentActivityPanel activities={activities} />
+            <RecentActivityPanel
+              activities={activities}
+              onReviewActivity={handleReviewActivity}
+            />
           </div>
         </div>
       </main>
