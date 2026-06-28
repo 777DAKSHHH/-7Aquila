@@ -14,6 +14,15 @@ import Lobby from "./pages/lobby/index.jsx";
 import SignupPage from "./pages/signup/index.jsx";
 import GatePage from "./pages/gate/index.jsx";
 import Settings from "./pages/settings/index.jsx";
+import AssessmentLayout from "./layouts/AssessmentLayout";
+import { APP_ROUTES } from "./config/routes";
+
+import WritingDashboard from "./pages/assessment/writing";
+import WritingTaskSelection from "./pages/assessment/writing/task-selection";
+import WritingTask1 from "./pages/assessment/writing/task1";
+import WritingTask2 from "./pages/assessment/writing/task2";
+import WritingHistory from "./pages/assessment/writing/history";
+import WritingResults from "./pages/assessment/writing/results";
 
 const Routes = () => {
   const [gateOpen, setGateOpen] = useState(false);
@@ -43,6 +52,39 @@ const Routes = () => {
               <Route path="/practice-history" element={<PracticeHistory />} />
               <Route path="/test-selection-dashboard" element={<TestSelectionDashboard />} />
               <Route path="/settings" element={<Settings />} />
+              <Route element={<AssessmentLayout />}>
+
+                <Route
+                  path={APP_ROUTES.WRITING}
+                  element={<WritingDashboard />}
+                />
+
+                <Route
+                  path={APP_ROUTES.WRITING_SELECTION}
+                  element={<WritingTaskSelection />}
+                />
+
+                <Route
+                  path={APP_ROUTES.WRITING_TASK1}
+                  element={<WritingTask1 />}
+                />
+
+                <Route
+                  path={APP_ROUTES.WRITING_TASK2}
+                  element={<WritingTask2 />}
+                />
+
+                <Route
+                  path={APP_ROUTES.WRITING_HISTORY}
+                  element={<WritingHistory />}
+                />
+
+                <Route
+                  path={APP_ROUTES.WRITING_RESULTS}
+                  element={<WritingResults />}
+                />
+
+              </Route>
               <Route path="*" element={<NotFound />} />
             </>
           )}
