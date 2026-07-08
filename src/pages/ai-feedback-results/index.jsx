@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { supabase } from '../../supabaseClient';
+import { supabase } from '../../supabaseClient.js';
 import TopNav from '../../components/ui/TopNav';
 import Button from '../../components/ui/Button';
 import Icon from '../../components/AppIcon';
 import BandScoreCard from './components/BandScoreCard';
-import TranscriptViewer from './components/TranscriptViewer';
 import FeedbackPanel from './components/FeedbackPanel';
+import TeacherFeedbackDisplay from './components/TeacherFeedbackDisplay';
 import VocabularyEnhancement from './components/VocabularyEnhancement';
 import ErrorAnalysisPanel from './components/ErrorAnalysisPanel';
 import IdealAnswerPanel from './components/IdealAnswerPanel';
@@ -328,11 +328,17 @@ const AIFeedbackResults = () => {
 
           <div className="space-y-6 md:space-y-8">
             <BandScoreCard
-              overallScore={results?.session?.ai_band_score}
-              criteriaScores={parsedFeedback?.criteriaScores}
-              testDate={new Date(results?.session?.completed_at).toLocaleDateString()}
+              session={results?.session}
+              testDate={new Date(results?.session?.completed_at || Date.now()).toLocaleDateString()}
               testType="Full IELTS Speaking Test"
             />
+
+            {/* Conditionally display the teacher's text feedback */}
+            {results?.session?.teacher_feedback && (
+              <TeacherFeedbackDisplay
+                feedback={results.session.teacher_feedback}
+              />
+            )}
 
             {/* 2-Column Grid for Feedback Summary and Error Analysis */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start">
@@ -351,13 +357,10 @@ const AIFeedbackResults = () => {
               phrases={parsedFeedback?.vocabulary?.phrases || []}
             />
 
-            {/* Transcript moved safely to the very bottom */}
-            <div className="w-full pt-4">
-              <TranscriptViewer
-                responses={results?.responses}
-                idealAnswers={parsedFeedback?.ideal_answers}
-              />
-            </div>
+            <IdealAnswerPanel
+              responses={results?.responses}
+              idealAnswers={parsedFeedback?.ideal_answers}
+            />
 
             <div className="bg-card rounded-lg p-6 md:p-8 shadow-md border border-border">
               <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { supabase } from '../../supabaseClient';
+import axios from 'axios';
 import TopNav from '../../components/ui/TopNav';
 import Button from '../../components/ui/Button';
 import Icon from '../../components/AppIcon';
@@ -110,6 +111,7 @@ const StudentAudioReview = () => {
   const [responses, setResponses] = useState([]);
   const [currentResponseIndex, setCurrentResponseIndex] = useState(0);
   const [aiData, setAiData] = useState(null);
+  const [isSaving, setIsSaving] = useState(false);
 
   useEffect(() => {
     if (!sessionId) {
@@ -217,18 +219,70 @@ const StudentAudioReview = () => {
   }, [sessionId]);
 
   const handleSaveFeedback = async (feedbackData) => {
+    if (isSaving) return;
+    setIsSaving(true);
+
     try {
-      // In a real app, you might save this to a 'faculty_feedback' table or column
-      console.log("Saving feedback:", feedbackData);
-      alert("Feedback saved (simulated)");
+      const token = (await supabase.auth.getSession()).data.session?.access_token;
+
+      const response = await axios.post(
+        `/api/speaking/sessions/${sessionId}/teacher-review`,
+        feedbackData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (response.data.success) {
+        alert("Feedback saved successfully!");
+        // Update local state to reflect the saved data immediately
+        setSessionData(prev => ({ ...prev, ...response.data.data }));
+      } else {
+        throw new Error(response.data.message || "Failed to save feedback.");
+      }
     } catch (error) {
       console.error("Error saving feedback:", error);
+      const message = error.response?.data?.message || error.message || "An unexpected error occurred.";
+      alert(`Error: ${message}`);
+    } finally {
+      setIsSaving(false);
     }
   };
 
   const handleSendToStudent = () => {
     // Logic to notify student would go here
     alert("Feedback sent to student (simulated)");
+  };
+
+  const handleMarkAsReviewed = async () => {
+    if (isSaving) return;
+    setIsSaving(true);
+
+    try {
+      const token = (await supabase.auth.getSession()).data.session?.access_token;
+
+      const response = await axios.post(
+        `/api/speaking/sessions/${sessionId}/mark-reviewed`,
+        {}, // No body needed for this request
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+
+      if (response.data.success) {
+        alert("Session marked as reviewed!");
+        setSessionData(prev => ({ ...prev, ...response.data.data }));
+      } else {
+        throw new Error(response.data.message || "Failed to mark as reviewed.");
+      }
+    } catch (error) {
+      console.error("Error marking as reviewed:", error);
+      alert(`Error: ${error.response?.data?.message || error.message}`);
+    } finally {
+      setIsSaving(false);
+    }
   };
 
   const handleAddComment = (responseId, time) => {
@@ -309,7 +363,18 @@ const StudentAudioReview = () => {
           <FeedbackPanel
             onSaveFeedback={handleSaveFeedback}
             onSendToStudent={handleSendToStudent}
-            existingFeedback={null} />
+            onMarkAsReviewed={handleMarkAsReviewed}
+            existingFeedback={{
+              text: sessionData.teacher_feedback,
+              overrideScores: {
+                overall: sessionData.teacher_band_score,
+                fluency: sessionData.teacher_fluency_score,
+                lexical: sessionData.teacher_lexical_score,
+                grammar: sessionData.teacher_grammar_score,
+                pronunciation: sessionData.teacher_pronunciation_score,
+              },
+            }}
+            isSaving={isSaving} />
 
         </div>
 

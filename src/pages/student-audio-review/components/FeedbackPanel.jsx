@@ -4,7 +4,7 @@ import Button from '../../../components/ui/Button';
 import Input from '../../../components/ui/Input';
 import { Checkbox } from '../../../components/ui/Checkbox';
 
-const FeedbackPanel = ({ onSaveFeedback, onSendToStudent, existingFeedback }) => {
+const FeedbackPanel = ({ onSaveFeedback, onSendToStudent, onMarkAsReviewed, existingFeedback, isSaving }) => {
   const [feedbackText, setFeedbackText] = useState(existingFeedback?.text || '');
   const [isRecordingVoice, setIsRecordingVoice] = useState(false);
   const [voiceRecordingTime, setVoiceRecordingTime] = useState(0);
@@ -79,10 +79,15 @@ const FeedbackPanel = ({ onSaveFeedback, onSendToStudent, existingFeedback }) =>
 
   const handleSave = () => {
     onSaveFeedback({
-      text: feedbackText,
-      overrideScores,
-      templates: selectedTemplates,
-      voiceRecording: isRecordingVoice ? null : voiceRecordingTime > 0,
+      teacherFeedback: feedbackText,
+      teacherBandScore: overrideScores.overall ? parseFloat(overrideScores.overall) : null,
+      teacherFluencyScore: overrideScores.fluency ? parseFloat(overrideScores.fluency) : null,
+      teacherLexicalScore: overrideScores.lexical ? parseFloat(overrideScores.lexical) : null,
+      teacherGrammarScore: overrideScores.grammar ? parseFloat(overrideScores.grammar) : null,
+      teacherPronunciationScore: overrideScores.pronunciation ? parseFloat(overrideScores.pronunciation) : null,
+      // The following are kept for local state but not sent to this specific endpoint
+      // templates: selectedTemplates,
+      // voiceRecording: isRecordingVoice ? null : voiceRecordingTime > 0,
     });
   };
 
@@ -260,7 +265,7 @@ const FeedbackPanel = ({ onSaveFeedback, onSendToStudent, existingFeedback }) =>
           </p>
           {feedbackTemplates?.map((template) => (
             <div
-              key={template?.id}
+              key={template.id}
               className={`border rounded-md p-4 transition-all duration-base cursor-pointer ${
                 selectedTemplates?.find((t) => t?.id === template?.id)
                   ? 'border-primary bg-primary/5' :'border-border hover:border-primary/50'
@@ -282,13 +287,13 @@ const FeedbackPanel = ({ onSaveFeedback, onSendToStudent, existingFeedback }) =>
         </div>
       )}
       <div className="mt-6 pt-6 border-t border-border flex flex-col md:flex-row gap-3">
-        <Button variant="outline" fullWidth iconName="Save" iconPosition="left" onClick={handleSave}>
+        <Button variant="outline" fullWidth iconName="Save" iconPosition="left" onClick={handleSave} disabled={isSaving} loading={isSaving}>
           Save Feedback
         </Button>
-        <Button variant="default" fullWidth iconName="Send" iconPosition="left" onClick={onSendToStudent}>
+        <Button variant="default" fullWidth iconName="Send" iconPosition="left" onClick={onSendToStudent} disabled={isSaving} loading={isSaving}>
           Send to Student
         </Button>
-        <Button variant="ghost" fullWidth iconName="CheckCircle" iconPosition="left">
+        <Button variant="ghost" fullWidth iconName="CheckCircle" iconPosition="left" onClick={onMarkAsReviewed} disabled={isSaving}>
           Mark as Reviewed
         </Button>
       </div>

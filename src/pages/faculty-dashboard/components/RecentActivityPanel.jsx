@@ -66,7 +66,12 @@ const RecentActivityPanel = ({ activities = [], onReviewActivity }) => {
                 <p className="text-sm text-muted-foreground font-caption">{activity?.description}</p>
                 <p className="text-xs text-muted-foreground font-caption mt-1">{activity?.timestamp}</p>
               </div>
-              {activity?.actionRequired && (
+              {activity?.isReviewed ? (
+                <div className="flex items-center gap-1.5 text-xs font-medium text-success bg-success/10 px-2 py-1 rounded-full">
+                  <Icon name="CheckCircle" size={14} />
+                  <span>Reviewed</span>
+                </div>
+              ) : activity?.actionRequired && (
                 <Button variant="outline" size="xs" iconName="ArrowRight">
                   <Link
                     to={`/student-audio-review/${activity.id}`}

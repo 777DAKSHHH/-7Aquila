@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
-import { supabase } from '../../../supabaseClient';
-import { saveAs } from 'file-saver';
-import { ZipWriter, BlobWriter, BlobReader, TextReader } from '@zip.js/zip.js';
+import { downloadAttemptZip } from '../../../utils/downloadUtils.js';
+import { getAttemptScores } from '../../../utils/scoreUtils.js';
 
 
 const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
@@ -33,117 +32,7 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
   const handleDownloadZip = async (attempt) => {
     try {
       setDownloadingId(attempt?.id);
-
-      // 1. Fetch all responses for this specific attempt from Supabase
-      const { data: session, error } = await supabase
-        .from('speaking_sessions')
-        .select(`
-          *,
-          speaking_responses (
-            *,
-            speaking_questions ( part, topic, question_text, difficulty )
-          )
-        `)
-        .eq('id', attempt?.id)
-        .single();
-
-      if (error) throw error;
-
-      if (!session || !session.speaking_responses || session.speaking_responses.length === 0) {
-        alert('No recordings found for this attempt.');
-        return;
-      }
-
-      const zipWriter = new ZipWriter(new BlobWriter("application/zip"), { password: "JAN7MMVI" });
-
-      const safeTopic = (attempt?.topic || 'practice').replace(/\s+/g, '-').toLowerCase();
-      const safeDate = attempt?.date ? attempt.date.replace(/\//g, '-') : 'unknown-date';
-      const folderName = `${safeTopic}-speaking-${safeDate}`;
-
-      // Sort responses chronologically to ensure they are downloaded in order (Response_1, Response_2, etc.)
-      const responses = session.speaking_responses.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
-
-      // 2. Fetch all audio blobs concurrently
-      const downloadedFiles = await Promise.all(responses.map(async (response, index) => {
-        if (!response.audio_path) return null;
-        
-        const { data: urlData } = await supabase.storage.from('speaking-audio').createSignedUrl(response.audio_path, 3600);
-        if (!urlData?.signedUrl) return null;
-
-        const audioRes = await fetch(urlData.signedUrl);
-        const audioBlob = await audioRes.blob();
-
-        // Name the file: PartX_Response_Y.webm
-        const part = response.speaking_questions?.part ? `Part${response.speaking_questions.part}_` : '';
-        return { path: `${folderName}/${part}Response_${index + 1}.webm`, blob: audioBlob };
-      }));
-
-      // Add fetched files to the encrypted zip sequentially
-      for (const file of downloadedFiles) {
-        if (file) {
-          await zipWriter.add(file.path, new BlobReader(file.blob));
-        }
-      }
-
-      // Add a scores summary text file to the zip
-      let ai = session.ai_detailed_feedback;
-      if (typeof ai === 'string') {
-        try { ai = JSON.parse(ai); } catch (e) {}
-      }
-      const errors = ai?.errors || [];
-      const idealAnswers = ai?.ideal_answers || [];
-
-      let scoresText = `======================================================\n`;
-      scoresText += `              IELTS SPEAKING TEST RESULTS             \n`;
-      scoresText += `======================================================\n\n`;
-
-      scoresText += `Test Date: ${attempt?.date || 'N/A'}\n`;
-      scoresText += `Overall Band Score: ${attempt?.overallScore || 'N/A'}\n\n`;
-      
-      scoresText += `--- Criteria Scores ---\n`;
-      scoresText += `Fluency & Coherence: ${attempt?.fluency || 'N/A'}\n`;
-      scoresText += `Lexical Resource: ${attempt?.lexical || 'N/A'}\n`;
-      scoresText += `Grammatical Range & Accuracy: ${attempt?.grammar || 'N/A'}\n`;
-      scoresText += `Pronunciation: ${attempt?.pronunciation || 'N/A'}\n\n`;
-
-      scoresText += `======================================================\n`;
-      scoresText += `             QUESTION & RESPONSE ANALYSIS             \n`;
-      scoresText += `======================================================\n\n`;
-
-      responses.forEach((response, index) => {
-        const q = response.speaking_questions || {};
-        const topic = q.topic || 'N/A';
-        const difficulty = q.difficulty ? q.difficulty.charAt(0).toUpperCase() + q.difficulty.slice(1) : 'N/A';
-        const questionText = q.question_text || 'N/A';
-        
-        scoresText += `[Part ${q.part || 'Unknown'}] - Question ${index + 1}\n`;
-        scoresText += `Topic: ${topic} | Difficulty: ${difficulty}\n`;
-        scoresText += `Question: ${questionText}\n\n`;
-        
-        const ideal = idealAnswers.find(ia => ia.question === questionText);
-        if (ideal) {
-          scoresText += `--- Ideal Band 7+ Answer ---\n`;
-          scoresText += `${ideal.ideal_answer}\n\n`;
-        }
-      });
-
-      if (errors.length > 0) {
-        scoresText += `======================================================\n`;
-        scoresText += `                   ERROR ANALYSIS                     \n`;
-        scoresText += `======================================================\n\n`;
-        
-        errors.forEach((err, index) => {
-          scoresText += `${index + 1}. You said: "${err.original}"\n`;
-          scoresText += `   Correction: "${err.correction}"\n`;
-          scoresText += `   Explanation: ${err.explanation}\n\n`;
-        });
-      }
-      
-      await zipWriter.add(`${folderName}/scores.txt`, new TextReader(scoresText));
-
-      // 3. Generate & Download ZIP
-      const zipBlob = await zipWriter.close();
-      saveAs(zipBlob, `${folderName}.zip`);
+      await downloadAttemptZip(attempt);
     } catch (err) {
       console.error("Error downloading zip:", err);
       alert("Failed to download recordings. Please try again.");
@@ -234,10 +123,12 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
                 </td>
               </tr>
             ) : (
-              attempts?.map((attempt) => (
-                <tr
+              attempts?.map((attempt) => {
+                const scores = getAttemptScores(attempt);
+                return (
+                  <tr
                   key={attempt?.id}
-                  className="border-b border-border hover:bg-muted/30 transition-colors duration-base"
+                  className={`border-b border-border hover:bg-muted/30 transition-colors duration-base ${scores.isReviewed ? 'bg-primary/5' : ''}`}
                 >
                   <td className="p-4">
                     <div className="flex flex-col">
@@ -248,9 +139,17 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
                     </div>
                   </td>
                   <td className="p-4">
-                    <span className="text-sm font-medium text-foreground max-w-[200px] line-clamp-2" title={attempt?.topic}>
-                      {attempt?.topic || '-'}
-                    </span>
+                    <div className="flex flex-col gap-1">
+                      <span className="text-sm font-medium text-foreground max-w-[200px] line-clamp-2" title={attempt?.topic}>
+                        {attempt?.topic || '-'}
+                      </span>
+                      {scores.isReviewed && (
+                        <div className="flex items-center gap-1.5 text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full w-fit">
+                          <Icon name="UserCheck" size={14} />
+                          <span>Reviewed by Faculty</span>
+                        </div>
+                      )}
+                    </div>
                   </td>
                   <td className="p-4">
                     <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-muted text-muted-foreground capitalize">
@@ -268,28 +167,28 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
                     </span>
                   </td>
                   <td className="p-4">
-                    <span className={`text-lg font-heading font-bold ${getScoreColor(attempt?.overallScore)}`}>
-                      {attempt?.overallScore}
+                    <span className={`text-lg font-heading font-bold ${getScoreColor(scores.overall)}`}>
+                      {scores.overall}
                     </span>
                   </td>
                   <td className="p-4">
-                    <span className={`text-sm font-semibold ${getScoreColor(attempt?.fluency)}`}>
-                      {attempt?.fluency}
+                    <span className={`text-sm font-semibold ${getScoreColor(scores.fluency)}`}>
+                      {scores.fluency}
                     </span>
                   </td>
                   <td className="p-4">
-                    <span className={`text-sm font-semibold ${getScoreColor(attempt?.lexical)}`}>
-                      {attempt?.lexical}
+                    <span className={`text-sm font-semibold ${getScoreColor(scores.lexical)}`}>
+                      {scores.lexical}
                     </span>
                   </td>
                   <td className="p-4">
-                    <span className={`text-sm font-semibold ${getScoreColor(attempt?.grammar)}`}>
-                      {attempt?.grammar}
+                    <span className={`text-sm font-semibold ${getScoreColor(scores.grammar)}`}>
+                      {scores.grammar}
                     </span>
                   </td>
                   <td className="p-4">
-                    <span className={`text-sm font-semibold ${getScoreColor(attempt?.pronunciation)}`}>
-                      {attempt?.pronunciation}
+                    <span className={`text-sm font-semibold ${getScoreColor(scores.pronunciation)}`}>
+                      {scores.pronunciation}
                     </span>
                   </td>
                   <td className="p-4">
@@ -328,7 +227,8 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
                     </div>
                   </td>
                 </tr>
-              ))
+                );
+              })
             )}
           </tbody>
         </table>
