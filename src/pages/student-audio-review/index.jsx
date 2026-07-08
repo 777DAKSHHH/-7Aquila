@@ -226,7 +226,7 @@ const StudentAudioReview = () => {
       const token = (await supabase.auth.getSession()).data.session?.access_token;
 
       const response = await axios.post(
-        `/api/speaking/sessions/${sessionId}/teacher-review`,
+        `https://application.rocket.new/api/speaking/sessions/${sessionId}/teacher-review`,
         feedbackData,
         {
           headers: {
@@ -264,7 +264,7 @@ const StudentAudioReview = () => {
       const token = (await supabase.auth.getSession()).data.session?.access_token;
 
       const response = await axios.post(
-        `/api/speaking/sessions/${sessionId}/mark-reviewed`,
+        `https://application.rocket.new/api/speaking/sessions/${sessionId}/mark-reviewed`,
         {}, // No body needed for this request
         {
           headers: { Authorization: `Bearer ${token}` },
