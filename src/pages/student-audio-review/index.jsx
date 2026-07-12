@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { supabase } from '../../supabaseClient';
-import axios from 'axios';
+import api from '../../services/api';
 import TopNav from '../../components/ui/TopNav';
 import Button from '../../components/ui/Button';
 import Icon from '../../components/AppIcon';
@@ -223,16 +223,9 @@ const StudentAudioReview = () => {
     setIsSaving(true);
 
     try {
-      const token = (await supabase.auth.getSession()).data.session?.access_token;
-
-      const response = await axios.post(
-        `https://application.rocket.new/api/speaking/sessions/${sessionId}/teacher-review`,
-        feedbackData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
+      const response = await api.patch(
+        `/speaking/session/${sessionId}/teacher-review`,
+        feedbackData
       );
 
       if (response.data.success) {
@@ -261,14 +254,9 @@ const StudentAudioReview = () => {
     setIsSaving(true);
 
     try {
-      const token = (await supabase.auth.getSession()).data.session?.access_token;
-
-      const response = await axios.post(
-        `https://application.rocket.new/api/speaking/sessions/${sessionId}/mark-reviewed`,
-        {}, // No body needed for this request
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
+      const response = await api.patch(
+        `/speaking/session/${sessionId}/mark-reviewed`,
+        {} // No body needed for this request
       );
 
       if (response.data.success) {

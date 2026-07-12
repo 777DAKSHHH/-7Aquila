@@ -47,42 +47,45 @@ const RecentActivityPanel = ({ activities = [], onReviewActivity }) => {
             <p className="text-muted-foreground font-caption">No recent activity</p>
           </div>
         ) : (
-          activities?.map((activity) => (
-            <div
-              key={activity?.id}
-              className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted/30 transition-colors duration-base"
-            >
+          activities?.map((activity) => {
+            const reviewed = activity?.reviewed_at !== null && activity?.reviewed_at !== undefined;
+
+            return (
               <div
-                className={`w-10 h-10 rounded-lg bg-${getActivityColor(activity?.type)}/10 flex items-center justify-center flex-shrink-0`}
+                key={activity?.id}
+                className={`flex items-start gap-3 p-3 rounded-lg transition-colors duration-base ${
+                  reviewed ? 'bg-success/5' : 'hover:bg-muted/30'
+                }`}
               >
-                <Icon
-                  name={getActivityIcon(activity?.type)}
-                  size={20}
-                  color={`var(--color-${getActivityColor(activity?.type)})`}
-                />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-foreground">{activity?.studentName}</p>
-                <p className="text-sm text-muted-foreground font-caption">{activity?.description}</p>
-                <p className="text-xs text-muted-foreground font-caption mt-1">{activity?.timestamp}</p>
-              </div>
-              {activity?.isReviewed ? (
-                <div className="flex items-center gap-1.5 text-xs font-medium text-success bg-success/10 px-2 py-1 rounded-full">
-                  <Icon name="CheckCircle" size={14} />
-                  <span>Reviewed</span>
+                <div
+                  className={`w-10 h-10 rounded-lg bg-${getActivityColor(activity?.type)}/10 flex items-center justify-center flex-shrink-0`}
+                >
+                  <Icon
+                    name={getActivityIcon(activity?.type)}
+                    size={20}
+                    color={`var(--color-${getActivityColor(activity?.type)})`}
+                  />
                 </div>
-              ) : activity?.actionRequired && (
-                <Button variant="outline" size="xs" iconName="ArrowRight">
-                  <Link
-                    to={`/student-audio-review/${activity.id}`}
-                    className="after:absolute after:inset-0"
-                  >
-                    Review
-                  </Link>
-                </Button>
-              )}
-            </div>
-          ))
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-medium text-foreground">{activity?.studentName}</p>
+                  <p className="text-sm text-muted-foreground font-caption">{activity?.description}</p>
+                  <p className="text-xs text-muted-foreground font-caption mt-1">{activity?.timestamp}</p>
+                </div>
+                {reviewed ? (
+                  <div className="flex items-center gap-1.5 text-xs font-medium text-success bg-success/10 px-2 py-1 rounded-full">
+                    <Icon name="CheckCircle" size={14} />
+                    <span>✓ Reviewed</span>
+                  </div>
+                ) : activity?.actionRequired && (
+                  <Button variant="outline" size="xs" iconName="ArrowRight">
+                    <Link to={`/student-audio-review/${activity.id}`} className="after:absolute after:inset-0">
+                      Review
+                    </Link>
+                  </Button>
+                )}
+              </div>
+            );
+          })
         )}
       </div>
     </div>

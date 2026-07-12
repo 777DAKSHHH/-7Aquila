@@ -4,7 +4,7 @@ import Button from '../../../components/ui/Button';
 import Input from '../../../components/ui/Input';
 import { Checkbox } from '../../../components/ui/Checkbox';
 
-const FeedbackPanel = ({ onSaveFeedback, onSendToStudent, onMarkAsReviewed, existingFeedback, isSaving }) => {
+const FeedbackPanel = ({ onSaveFeedback, onSendToStudent, onMarkAsReviewed, existingFeedback, isSaving, feedbackTemplates = [] }) => {
   const [feedbackText, setFeedbackText] = useState(existingFeedback?.text || '');
   const [isRecordingVoice, setIsRecordingVoice] = useState(false);
   const [voiceRecordingTime, setVoiceRecordingTime] = useState(0);
@@ -17,39 +17,6 @@ const FeedbackPanel = ({ onSaveFeedback, onSendToStudent, onMarkAsReviewed, exis
   });
   const [selectedTemplates, setSelectedTemplates] = useState([]);
   const [activeTab, setActiveTab] = useState('text');
-
-  const feedbackTemplates = [
-    {
-      id: 1,
-      title: 'Excellent Fluency',
-      content: 'Your speech flows naturally with minimal hesitation. Continue practicing to maintain this level.',
-    },
-    {
-      id: 2,
-      title: 'Vocabulary Enhancement',
-      content: 'Consider using more varied vocabulary. Try incorporating synonyms and topic-specific terms.',
-    },
-    {
-      id: 3,
-      title: 'Grammar Improvement',
-      content: 'Focus on complex sentence structures. Practice using conditional and relative clauses.',
-    },
-    {
-      id: 4,
-      title: 'Pronunciation Practice',
-      content: 'Work on word stress and intonation patterns. Listen to native speakers and mimic their pronunciation.',
-    },
-    {
-      id: 5,
-      title: 'Reduce Fillers',
-      content: 'Try to minimize filler words like "um", "uh", and "like". Pause briefly instead of using fillers.',
-    },
-    {
-      id: 6,
-      title: 'Coherence Tips',
-      content: 'Use linking words effectively to connect your ideas. Practice organizing thoughts before speaking.',
-    },
-  ];
 
   const handleTemplateToggle = (template) => {
     if (selectedTemplates?.find((t) => t?.id === template?.id)) {

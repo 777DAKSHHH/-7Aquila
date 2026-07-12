@@ -25,7 +25,7 @@ const IdealAnswerPanel = ({ answers }) => {
       </div>
       <div className="p-5 md:p-6 rounded-lg bg-accent/5 border border-accent/20 relative shadow-inner">
         <Icon name="Quote" size={28} className="absolute top-4 right-4 text-accent/20" />
-        <p className="text-base md:text-lg text-foreground leading-relaxed italic whitespace-pre-line">{answerList[0]}</p>
+        <p className="text-base md:text-lg text-foreground leading-relaxed italic whitespace-pre-line">{answerList[0]?.ideal_answer || answerList[0]}</p>
       </div>
     </div>
   );

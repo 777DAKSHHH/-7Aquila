@@ -4,13 +4,14 @@ import { Helmet } from 'react-helmet';
 import { supabase } from '../../supabaseClient.js';
 import TopNav from '../../components/ui/TopNav';
 import Button from '../../components/ui/Button';
-import Icon from '../../components/AppIcon';
-import BandScoreCard from './components/BandScoreCard';
+import Icon from '../../components/AppIcon.jsx';
+import BandScoreCard from './components/BandScoreCard.jsx';
 import FeedbackPanel from './components/FeedbackPanel';
 import TeacherFeedbackDisplay from './components/TeacherFeedbackDisplay';
 import VocabularyEnhancement from './components/VocabularyEnhancement';
 import ErrorAnalysisPanel from './components/ErrorAnalysisPanel';
-import IdealAnswerPanel from './components/IdealAnswerPanel';
+import TranscriptViewer from './components/TranscriptViewer.jsx';
+import IdealAnswerPanel from './components/IdealAnswerPanel.jsx';
 import StudentLevelBadge from './components/StudentLevelBadge';
 
 const parseAIFeedback = (feedbackText) => {
@@ -116,6 +117,7 @@ const AIFeedbackResults = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
+  const [activeTab, setActiveTab] = useState('part1');
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -336,7 +338,7 @@ const AIFeedbackResults = () => {
             {/* Conditionally display the teacher's text feedback */}
             {results?.session?.teacher_feedback && (
               <TeacherFeedbackDisplay
-                feedback={results.session.teacher_feedback}
+                session={results?.session}
               />
             )}
 
@@ -357,10 +359,12 @@ const AIFeedbackResults = () => {
               phrases={parsedFeedback?.vocabulary?.phrases || []}
             />
 
-            <IdealAnswerPanel
+            <TranscriptViewer
               responses={results?.responses}
               idealAnswers={parsedFeedback?.ideal_answers}
             />
+
+            <IdealAnswerPanel answers={parsedFeedback?.ideal_answers} />
 
             <div className="bg-card rounded-lg p-6 md:p-8 shadow-md border border-border">
               <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">

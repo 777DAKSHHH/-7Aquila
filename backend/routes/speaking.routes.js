@@ -6,7 +6,8 @@ import {
   testSupabaseConnection,
   getSpeakingSessionSummary,
   evaluateAISession,
-  teacherReviewSession
+  teacherReviewSession,
+  markSessionAsReviewed
 } from "../controllers/speaking.controller.js";
 
 import upload from "../middleware/upload.middleware.js";
@@ -49,6 +50,11 @@ router.post(
 router.patch(
   "/session/:sessionId/teacher-review",
   teacherReviewSession
+);
+
+router.patch(
+  "/session/:sessionId/mark-reviewed",
+  markSessionAsReviewed
 );
 
 router.post("/cleanup/audio", cleanupExpiredAudio);

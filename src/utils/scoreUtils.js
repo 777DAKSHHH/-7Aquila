@@ -1,14 +1,37 @@
+export const isFacultyReviewed = (attempt) => {
+  return (
+    attempt?.reviewed_at !== null && attempt?.reviewed_at !== undefined
+  );
+};
+
+export const getDisplayedScore = (attempt) => {
+  return isFacultyReviewed(attempt)
+    ? attempt.teacher_band_score
+    : attempt.overallScore;
+};
+
+export const getReviewBadge = (attempt) => {
+  return isFacultyReviewed(attempt)
+    ? 'Faculty Reviewed'
+    : 'AI Evaluated';
+};
+
+export const getReviewColor = (attempt) => {
+  return isFacultyReviewed(attempt)
+    ? 'bg-primary/5'
+    : '';
+};
+
 export const getAttemptScores = (attempt) => {
-  const isReviewed = !!attempt.teacher_band_score;
-  if (isReviewed) {
+  if (isFacultyReviewed(attempt)) {
     return {
+      ...attempt,
       overall: attempt.teacher_band_score,
       fluency: attempt.teacher_fluency_score,
       lexical: attempt.teacher_lexical_score,
       grammar: attempt.teacher_grammar_score,
       pronunciation: attempt.teacher_pronunciation_score,
       isReviewed: true,
-      ...attempt,
     };
   }
   // Fallback to AI scores

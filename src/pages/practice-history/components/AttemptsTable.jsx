@@ -143,12 +143,18 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
                       <span className="text-sm font-medium text-foreground max-w-[200px] line-clamp-2" title={attempt?.topic}>
                         {attempt?.topic || '-'}
                       </span>
-                      {scores.isReviewed && (
+                      {scores.isReviewed ? (
                         <div className="flex items-center gap-1.5 text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full w-fit">
                           <Icon name="UserCheck" size={14} />
-                          <span>Reviewed by Faculty</span>
+                          <span>Faculty Reviewed</span>
                         </div>
-                      )}
+                      ) : (
+                        <div className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded-full w-fit">
+                          <Icon name="Brain" size={14} />
+                          <span>AI Evaluated</span>
+                        </div>
+                      )
+                      }
                     </div>
                   </td>
                   <td className="p-4">
@@ -167,9 +173,12 @@ const AttemptsTable = ({ attempts = [], onSort = () => {} }) => {
                     </span>
                   </td>
                   <td className="p-4">
-                    <span className={`text-lg font-heading font-bold ${getScoreColor(scores.overall)}`}>
-                      {scores.overall}
-                    </span>
+                    <div className="flex flex-col items-start">
+                      <span className="text-xs font-caption text-muted-foreground">{scores.isReviewed ? 'Official' : 'AI'}</span>
+                      <span className={`text-lg font-heading font-bold ${getScoreColor(scores.overall)}`}>
+                        {scores.overall}
+                      </span>
+                    </div>
                   </td>
                   <td className="p-4">
                     <span className={`text-sm font-semibold ${getScoreColor(scores.fluency)}`}>

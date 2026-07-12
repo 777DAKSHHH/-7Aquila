@@ -51,12 +51,19 @@ const AttemptCard = ({ attempt }) => {
               <h4 className="text-base md:text-lg font-heading font-semibold text-foreground">
                 {attempt?.topic}
               </h4>
-              {scores.isReviewed && (
+              {scores.isReviewed ? (
                 <div className="flex items-center gap-1.5 text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full w-fit">
                   <Icon name="UserCheck" size={14} />
-                  <span>Reviewed by Faculty</span>
+                  <span>Faculty Reviewed</span>
                 </div>
-              )}
+              ) : (
+                <div className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded-full w-fit">
+                  <Icon name="Brain" size={14} />
+                  <span>AI Evaluated</span>
+                </div>
+              )
+              
+              }
             </div>
             <div className="flex flex-wrap items-center gap-2 text-xs md:text-sm text-muted-foreground font-caption">
               <div className="flex items-center gap-1">
@@ -91,7 +98,9 @@ const AttemptCard = ({ attempt }) => {
             <span className={`text-2xl md:text-3xl font-heading font-bold ${getScoreColor(scores.overall)}`}>
               {scores.overall}
             </span>
-            <span className="text-xs text-muted-foreground font-caption">Band</span>
+            <span className="text-xs text-muted-foreground font-caption">
+              {scores.isReviewed ? "Official" : "AI Band"}
+            </span>
           </div>
         </div>
 

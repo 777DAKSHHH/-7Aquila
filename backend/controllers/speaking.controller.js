@@ -261,7 +261,14 @@ export const getSpeakingSessionSummary = async (req, res) => {
         ai_band_score,
         ai_feedback,
         ai_detailed_feedback,
-        students (
+        teacher_band_score,
+        teacher_feedback,
+        teacher_fluency_score,
+        teacher_lexical_score,
+        teacher_grammar_score,
+        teacher_pronunciation_score,
+        reviewed_at,
+        profiles (
           id,
           full_name,
           email
@@ -278,7 +285,7 @@ export const getSpeakingSessionSummary = async (req, res) => {
     }
 
     // 2️⃣ HARD STOP if session not evaluated
-    if (session.status !== "evaluated") {
+    if (session.status !== "evaluated" && session.status !== "reviewed") {
       return res.status(403).json({
         success: false,
         message: "Session not completed yet"
@@ -341,9 +348,16 @@ export const getSpeakingSessionSummary = async (req, res) => {
           ai_feedback: session.ai_feedback,
           ai_detailed_feedback: session.ai_detailed_feedback,
           started_at: session.started_at,
-          completed_at: session.completed_at
+          completed_at: session.completed_at,
+          teacher_band_score: session.teacher_band_score,
+          teacher_feedback: session.teacher_feedback,
+          teacher_fluency_score: session.teacher_fluency_score,
+          teacher_lexical_score: session.teacher_lexical_score,
+          teacher_grammar_score: session.teacher_grammar_score,
+          teacher_pronunciation_score: session.teacher_pronunciation_score,
+          reviewed_at: session.reviewed_at
         },
-        student: session.students,
+        student: session.profiles,
         total_questions: responses.length,
         total_speaking_time_seconds: totalDuration,
         responses: responsesWithUrls
@@ -830,36 +844,48 @@ Return ONLY JSON in this exact structure:
 export const teacherReviewSession = async (req, res) => {
   try {
     const { sessionId } = req.params;
-    const { teacherBandScore, teacherFeedback } = req.body;
+    const {
+      teacherBandScore,
+      teacherFluencyScore,
+      teacherLexicalScore,
+      teacherGrammarScore,
+      teacherPronunciationScore,
+      teacherFeedback
+    } = req.body;
 
-    if (!teacherBandScore || !teacherFeedback) {
+    if (!teacherBandScore || !teacherFeedback || !teacherFluencyScore || !teacherLexicalScore || !teacherGrammarScore || !teacherPronunciationScore) {
       return res.status(400).json({
         success: false,
-        message: "Teacher band score and feedback are required"
+        message: "All teacher scores and feedback are required."
       });
     }
 
-    // Update ONLY teacher fields
+    const updateData = {
+      teacher_band_score: teacherBandScore,
+      teacher_fluency_score: teacherFluencyScore,
+      teacher_lexical_score: teacherLexicalScore,
+      teacher_grammar_score: teacherGrammarScore,
+      teacher_pronunciation_score: teacherPronunciationScore,
+      teacher_feedback: teacherFeedback,
+      reviewed_at: new Date().toISOString(),
+      status: "reviewed"
+    };
+
     const { data, error } = await supabase
       .from("speaking_sessions")
-      .update({
-        teacher_band_score: teacherBandScore,
-        teacher_feedback: teacherFeedback
-      })
+      .update(updateData)
       .eq("id", sessionId)
       .select()
       .single();
 
     if (error || !data) {
-      return res.status(404).json({
-        success: false,
-        message: "Session not found"
-      });
+      console.error(error);
+      return res.status(500).json({ success: false, message: error.message });
     }
 
-    return res.json({
+    return res.status(200).json({
       success: true,
-      message: "Teacher review saved",
+      message: "Teacher review saved successfully.",
       data
     });
   } catch (err) {
@@ -868,5 +894,37 @@ export const teacherReviewSession = async (req, res) => {
       success: false,
       message: err.message
     });
+  }
+};
+
+export const markSessionAsReviewed = async (req, res) => {
+  try {
+    const { sessionId } = req.params;
+
+    const { data, error } = await supabase
+      .from("speaking_sessions")
+      .update({
+        status: "reviewed",
+        reviewed_at: new Date().toISOString()
+      })
+      .eq("id", sessionId)
+      .select()
+      .single();
+
+    if (error || !data) {
+      return res.status(404).json({
+        success: false,
+        message: "Session not found or could not be updated."
+      });
+    }
+
+    return res.json({
+      success: true,
+      message: "Session marked as reviewed.",
+      data
+    });
+  } catch (err) {
+    console.error("Mark as reviewed error:", err);
+    res.status(500).json({ success: false, message: err.message });
   }
 };
