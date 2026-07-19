@@ -15,16 +15,21 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use(cors({
+const corsOptions = {
   origin: [
     "https://sevenbandaquila.onrender.com",
     "http://localhost:5173",
     "http://localhost:3000"
   ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  methods: [
+    "GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"
+  ],
   credentials: true
-}));
-app.options('*', cors());
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
+
 app.use(express.json());
 
 // Serve static files from the 'uploads' directory

@@ -20,6 +20,7 @@ const FacultyDashboard = () => { // prettier-ignore
   const [progressFilter, setProgressFilter] = useState('all');
   const [selectedStudents, setSelectedStudents] = useState([]);
   const [students, setStudents] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [waitingStudents, setWaitingStudents] = useState([]);
   const [metrics, setMetrics] = useState({
     totalStudents: 0,
@@ -30,6 +31,8 @@ const FacultyDashboard = () => { // prettier-ignore
   const [activities, setActivities] = useState([]);
 
   const fetchDashboardData = async () => {
+    setLoading(true);
+    try {
       const { data: sessions, error: sessionsError } = await supabase
         .from("speaking_sessions")
         .select(`
@@ -52,8 +55,7 @@ const FacultyDashboard = () => { // prettier-ignore
         .order("completed_at", { ascending: false });
 
       if (sessionsError) {
-        console.error("Error fetching dashboard data:", sessionsError);
-        return;
+        throw sessionsError;
       }
 
       const studentMap = {};
@@ -137,28 +139,6 @@ const FacultyDashboard = () => { // prettier-ignore
           improvementRate: parseFloat(improvementRate),
         });
 
-        const recentActivities = sessions.slice(0, 5).map(s => {
-            const student = formattedStudents.find(st => st.id === s.student_id);
-            const diffTime = Math.abs(new Date() - new Date(s.completed_at));
-            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-            const diffHours = Math.floor(diffTime / (1000 * 60 * 60));
-            const diffMinutes = Math.floor(diffTime / (1000 * 60));
-            
-            let timestamp = "Just now";
-            if (diffDays > 0) timestamp = `${diffDays} days ago`;
-            else if (diffHours > 0) timestamp = `${diffHours} hours ago`;
-            else if (diffMinutes > 0) timestamp = `${diffMinutes} mins ago`;
-
-            return {
-                id: s.id,
-                type: "new_attempt",
-                studentName: student ? student.name : "Unknown Student",
-                description: `Completed mock test with score ${s.ai_band_score || 'N/A'}`,
-                timestamp: timestamp,
-                actionRequired: true,
-            };
-        });
-        setActivities(recentActivities);
       } else {
         setMetrics({
           totalStudents: formattedStudents.length,
@@ -168,7 +148,23 @@ const FacultyDashboard = () => { // prettier-ignore
         });
         setActivities([]);
       }
-    };
+    } catch (error) {
+      console.error("Error fetching dashboard data:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const fetchRecentActivities = async () => {
+    try {
+      const response = await api.get('/speaking/activities/recent');
+      if (response.data.success) {
+        setActivities(response.data.data);
+      }
+    } catch (error) {
+      console.error("Failed to fetch recent activities:", error);
+    }
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -176,6 +172,7 @@ const FacultyDashboard = () => { // prettier-ignore
     };
 
     fetchDashboardData();
+    fetchRecentActivities();
     handleResize();
     window.addEventListener('resize', handleResize);
 
@@ -218,6 +215,7 @@ const FacultyDashboard = () => { // prettier-ignore
         },
         () => {
           fetchDashboardData();
+          fetchRecentActivities();
         }
       )
       .subscribe();

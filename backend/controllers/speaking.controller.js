@@ -928,3 +928,45 @@ export const markSessionAsReviewed = async (req, res) => {
     res.status(500).json({ success: false, message: err.message });
   }
 };
+
+export const getRecentActivities = async (req, res) => {
+  try {
+    const { data, error } = await supabase
+      .from('speaking_sessions')
+      .select(`
+        id,
+        created_at,
+        status,
+        reviewed_at,
+        profiles (
+          full_name
+        )
+      `)
+      .order('created_at', { ascending: false })
+      .limit(20); // Increased limit from 5 to 20
+
+    if (error) throw error;
+
+    const activities = data.map(session => ({
+      id: session.id,
+      studentName: session.profiles?.full_name || 'Unknown Student',
+      description: `Completed a new speaking attempt.`,
+      timestamp: new Date(session.created_at).toLocaleString(),
+      type: session.status === 'completed' ? 'feedback_pending' : 'new_attempt',
+      actionRequired: session.status === 'completed' || session.status === 'evaluated',
+      reviewed_at: session.reviewed_at,
+    }));
+
+    return res.status(200).json({
+      success: true,
+      data: activities,
+    });
+
+  } catch (err) {
+    console.error("Error fetching recent activities:", err);
+    res.status(500).json({
+      success: false,
+      message: "Failed to fetch recent activities."
+    });
+  }
+};

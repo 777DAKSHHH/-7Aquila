@@ -7,7 +7,8 @@ import {
   getSpeakingSessionSummary,
   evaluateAISession,
   teacherReviewSession,
-  markSessionAsReviewed
+  markSessionAsReviewed,
+  getRecentActivities
 } from "../controllers/speaking.controller.js";
 
 import upload from "../middleware/upload.middleware.js";
@@ -17,6 +18,11 @@ import { cleanupExpiredAudio } from "../controllers/audioCleanup.controller.js";
 const router = express.Router();
 
 router.get("/session/:sessionId/summary", getSpeakingSessionSummary);
+
+/**
+ * Get recent activities for faculty dashboard
+ */
+router.get("/activities/recent", getRecentActivities);
 
 /**
  * Test Supabase DB connection

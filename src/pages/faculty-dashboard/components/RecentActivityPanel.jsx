@@ -34,7 +34,7 @@ const RecentActivityPanel = ({ activities = [], onReviewActivity }) => {
     <div className="bg-card rounded-lg border border-border p-4 md:p-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-heading font-semibold text-foreground">Recent Activity</h3>
-        <Link to="/student-audio-review">
+        <Link to="/practice-history">
           <Button variant="ghost" size="sm" iconName="ArrowRight" iconPosition="right">
             View All
           </Button>
