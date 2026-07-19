@@ -943,7 +943,7 @@ export const getRecentActivities = async (req, res) => {
         )
       `)
       .order('created_at', { ascending: false })
-      .limit(20); // Increased limit from 5 to 20
+      .limit(50); // Fetch up to 50 recent student attempts
 
     if (error) throw error;
 

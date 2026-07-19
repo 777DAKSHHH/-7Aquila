@@ -53,10 +53,21 @@ setLoading(false)
 return
 }
 
+const { data: existingLobby } = await supabase
+  .from("lobby")
+  .select("status")
+  .eq("user_id", profile.id)
+  .maybeSingle();
+
+if (existingLobby?.status === "approved") {
+  navigate("/test-selection-dashboard");
+  return;
+}
+
 await supabase
-.from("lobby")
-.delete()
-.eq("user_id", profile.id)
+  .from("lobby")
+  .delete()
+  .eq("user_id", profile.id);
 
 await supabase.from("lobby").insert({
   user_id: profile.id,

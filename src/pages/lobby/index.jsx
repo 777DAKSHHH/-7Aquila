@@ -8,39 +8,89 @@ export default function Lobby() {
 
   useEffect(() => {
     let channel;
-    const setupListener = async () => {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) return;
+    let pollInterval;
+    let isMounted = true;
 
+    const handleApproved = () => {
+      if (!isMounted) return;
+      navigate("/test-selection-dashboard", { replace: true });
+    };
+
+    const handleRejected = () => {
+      if (!isMounted) return;
+      alert("Your request to enter the test session was rejected by faculty.");
+      navigate("/login", { replace: true });
+    };
+
+    const checkCurrentStatus = async (userId) => {
+      try {
+        const { data, error } = await supabase
+          .from("lobby")
+          .select("status")
+          .eq("user_id", userId)
+          .maybeSingle();
+
+        if (error) {
+          console.error("Lobby status check error:", error);
+          return;
+        }
+
+        if (data?.status === "approved") {
+          handleApproved();
+        } else if (data?.status === "rejected") {
+          handleRejected();
+        }
+      } catch (err) {
+        console.error("Lobby status check exception:", err);
+      }
+    };
+
+    const setupLobby = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) {
+        navigate("/login", { replace: true });
+        return;
+      }
+
+      // 1. Initial immediate check on mount / page refresh / device change
+      await checkCurrentStatus(user.id);
+
+      // 2. Real-time WebSocket listener for immediate faculty click response
       channel = supabase
         .channel("lobby-channel")
         .on(
           "postgres_changes",
           {
-            event: "UPDATE",
+            event: "*",
             schema: "public",
             table: "lobby",
             filter: `user_id=eq.${user.id}`,
           },
           (payload) => {
-            console.log("Lobby update:", payload);
-
-            if (payload.new.status === "approved") {
-              navigate("/test-selection-dashboard");
+            console.log("Lobby update payload:", payload);
+            if (payload.new?.status === "approved") {
+              handleApproved();
+            } else if (payload.new?.status === "rejected") {
+              handleRejected();
             }
           }
         )
         .subscribe();
+
+      // 3. Backup polling loop every 2.5 seconds (handles dropped WebSockets or sleeping mobile tabs)
+      pollInterval = setInterval(() => {
+        checkCurrentStatus(user.id);
+      }, 2500);
     };
 
-    setupListener();
+    setupLobby();
 
     return () => {
-      if (channel) {
-        supabase.removeChannel(channel);
-      }
+      isMounted = false;
+      if (pollInterval) clearInterval(pollInterval);
+      if (channel) supabase.removeChannel(channel);
     };
-  }, []);
+  }, [navigate]);
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-slate-50 relative overflow-hidden">

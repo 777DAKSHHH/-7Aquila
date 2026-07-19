@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 
 const RecentActivityPanel = ({ activities = [], onReviewActivity }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const displayedActivities = isExpanded ? activities.slice(0, 35) : activities.slice(0, 5);
+
   const getActivityIcon = (type) => {
     switch (type) {
       case 'new_attempt':
@@ -34,20 +38,33 @@ const RecentActivityPanel = ({ activities = [], onReviewActivity }) => {
     <div className="bg-card rounded-lg border border-border p-4 md:p-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-heading font-semibold text-foreground">Recent Activity</h3>
-        <Link to="/practice-history">
-          <Button variant="ghost" size="sm" iconName="ArrowRight" iconPosition="right">
-            View All
-          </Button>
-        </Link>
+        <div className="flex items-center gap-2">
+          {activities?.length > 5 && (
+            <Button
+              variant="ghost"
+              size="sm"
+              iconName={isExpanded ? "ChevronUp" : "ChevronDown"}
+              iconPosition="right"
+              onClick={() => setIsExpanded(!isExpanded)}
+            >
+              {isExpanded ? "Show Less" : `View All (${Math.min(activities.length, 35)})`}
+            </Button>
+          )}
+          <Link to="/practice-history">
+            <Button variant="ghost" size="sm" iconName="ArrowRight" iconPosition="right">
+              History
+            </Button>
+          </Link>
+        </div>
       </div>
-      <div className="space-y-3">
+      <div className="space-y-3 max-h-[600px] overflow-y-auto pr-1">
         {activities?.length === 0 ? (
           <div className="text-center py-8">
             <Icon name="Inbox" size={48} className="mx-auto mb-3 opacity-30" />
             <p className="text-muted-foreground font-caption">No recent activity</p>
           </div>
         ) : (
-          activities?.map((activity) => {
+          displayedActivities?.map((activity) => {
             const reviewed = activity?.reviewed_at !== null && activity?.reviewed_at !== undefined;
 
             return (

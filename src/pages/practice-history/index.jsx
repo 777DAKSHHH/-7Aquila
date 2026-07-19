@@ -46,7 +46,7 @@ const PracticeHistory = () => {
             )
           `)
           .eq('student_id', user?.id)
-          .eq('status', 'evaluated')
+          .in('status', ['evaluated', 'reviewed'])
           .order('created_at', { ascending: false });
 
         if (error) throw error;
@@ -63,7 +63,8 @@ const PracticeHistory = () => {
             const secs = Math.round(totalSeconds % 60);
             const duration = `${mins}:${secs.toString().padStart(2, '0')}`;
 
-            const score = session.ai_band_score || 0;
+            const isReviewed = session.teacher_band_score !== null && session.teacher_band_score !== undefined;
+            const score = (isReviewed ? session.teacher_band_score : session.ai_band_score) || 0;
             
             // Parse the detailed feedback object to extract real subscores & feedback strings
             let ai = session.ai_detailed_feedback;
@@ -87,12 +88,20 @@ const PracticeHistory = () => {
               topicType: question?.topic_type || 'General',
               duration: duration,
               overallScore: score,
-              fluency: scores.fluency || score,
-              lexical: scores.lexical || score,
-              grammar: scores.grammar || score,
-              pronunciation: scores.pronunciation || score,
+              fluency: (isReviewed ? session.teacher_fluency_score : scores.fluency) || score,
+              lexical: (isReviewed ? session.teacher_lexical_score : scores.lexical) || score,
+              grammar: (isReviewed ? session.teacher_grammar_score : scores.grammar) || score,
+              pronunciation: (isReviewed ? session.teacher_pronunciation_score : scores.pronunciation) || score,
               strengths,
-              improvements
+              improvements,
+              reviewed_at: session.reviewed_at,
+              teacher_band_score: session.teacher_band_score,
+              teacher_fluency_score: session.teacher_fluency_score,
+              teacher_lexical_score: session.teacher_lexical_score,
+              teacher_grammar_score: session.teacher_grammar_score,
+              teacher_pronunciation_score: session.teacher_pronunciation_score,
+              teacher_feedback: session.teacher_feedback,
+              status: session.status
             };
           });
           setAttempts(formattedAttempts);

@@ -51,7 +51,7 @@ const FacultyDashboard = () => { // prettier-ignore
             is_blocked
           )
         `)
-        .eq("status", "evaluated")
+        .in("status", ["evaluated", "reviewed"])
         .order("completed_at", { ascending: false });
 
       if (sessionsError) {
@@ -146,7 +146,6 @@ const FacultyDashboard = () => { // prettier-ignore
           totalAttempts: 0,
           improvementRate: 0,
         });
-        setActivities([]);
       }
     } catch (error) {
       console.error("Error fetching dashboard data:", error);
@@ -158,11 +157,44 @@ const FacultyDashboard = () => { // prettier-ignore
   const fetchRecentActivities = async () => {
     try {
       const response = await api.get('/speaking/activities/recent');
-      if (response.data.success) {
+      if (response.data?.success && response.data?.data?.length > 0) {
         setActivities(response.data.data);
+        return;
       }
     } catch (error) {
-      console.error("Failed to fetch recent activities:", error);
+      console.warn("Backend API fetch failed for recent activities, using direct Supabase fallback:", error);
+    }
+
+    // Direct Supabase fallback
+    try {
+      const { data, error } = await supabase
+        .from('speaking_sessions')
+        .select(`
+          id,
+          created_at,
+          status,
+          reviewed_at,
+          profiles (
+            full_name
+          )
+        `)
+        .order('created_at', { ascending: false })
+        .limit(50);
+
+      if (!error && data) {
+        const formatted = data.map(session => ({
+          id: session.id,
+          studentName: session.profiles?.full_name || 'Unknown Student',
+          description: `Completed a speaking attempt.`,
+          timestamp: new Date(session.created_at).toLocaleString(),
+          type: session.status === 'completed' ? 'feedback_pending' : 'new_attempt',
+          actionRequired: session.status === 'completed' || session.status === 'evaluated',
+          reviewed_at: session.reviewed_at,
+        }));
+        setActivities(formatted);
+      }
+    } catch (fallbackErr) {
+      console.error("Fallback Supabase fetch failed:", fallbackErr);
     }
   };
 
