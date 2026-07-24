@@ -79,12 +79,9 @@ export const IELTS_TASK1_RUBRIC = {
   },
 };
 
-/**
- * Target JSON Schema for AI Providers
- */
 export const TARGET_EVALUATION_SCHEMA = {
   $schema: "http://json-schema.org/draft-07/schema#",
-  title: "IELTSTask1EvaluationResult",
+  title: "IELTSTaskEvaluationResult",
   type: "object",
   required: [
     "overall_band",
@@ -97,6 +94,9 @@ export const TARGET_EVALUATION_SCHEMA = {
     "grammar_feedback",
     "improvement_plan",
     "summary",
+    "grammar_errors",
+    "vocabulary_recommendations",
+    "ideal_essay",
   ],
   properties: {
     overall_band: {
@@ -141,27 +141,66 @@ export const TARGET_EVALUATION_SCHEMA = {
       type: "string",
       description: "Overall summary assessment by the examiner.",
     },
+    grammar_errors: {
+      type: "array",
+      items: {
+        type: "object",
+        required: ["mistake", "correction", "explanation"],
+        properties: {
+          mistake: { type: "string" },
+          correction: { type: "string" },
+          explanation: { type: "string" }
+        }
+      },
+      description: "List of specific grammar, punctuation, spelling or word order mistakes with explanations."
+    },
+    vocabulary_recommendations: {
+      type: "array",
+      items: {
+        type: "object",
+        required: ["instead_of", "better_alternatives", "reason", "example_sentence"],
+        properties: {
+          instead_of: { type: "string" },
+          better_alternatives: {
+            type: "array",
+            items: { type: "string" }
+          },
+          reason: { type: "string" },
+          example_sentence: { type: "string" }
+        }
+      },
+      description: "Suggestions for replacing simple/repetitive words with academic vocabulary or precise collocations."
+    },
+    ideal_essay: {
+      type: "string",
+      description: "A complete rewrite of the student's response at a Band 7.5+ level, preserving their arguments but elevating vocabulary, cohesion, and grammar."
+    }
   },
 };
 
 /**
  * System Prompt Builder
  */
-export const buildSystemPrompt = () => {
-  return `You are a Senior Certified IELTS Examiner for Academic Writing Task 1.
-Your task is to evaluate a candidate's Task 1 report response strictly according to official IELTS assessment criteria.
+export const buildSystemPrompt = (isTask2 = false) => {
+  const taskTitle = isTask2 ? "Writing Task 2 (Essay)" : "Writing Task 1 (Academic Report)";
+  const taskDesc = isTask2
+    ? "Task Response (TR): Fulfilling the essay prompt, presenting a clear position, and developing ideas."
+    : "Task Achievement (TA): Fulfilling the report requirements, presenting an overview, and illustrating key data.";
+  
+  return `You are a Senior Certified IELTS Examiner for ${taskTitle}.
+Your task is to evaluate a candidate's response strictly according to official IELTS assessment criteria.
 
 ASSESSMENT CRITERIA:
-1. Task Achievement (TA): Response to prompt, overview of main features, accurate data points.
+1. ${taskDesc}
 2. Coherence & Cohesion (CC): Logical organization, paragraphing, cohesive devices, referencing.
-3. Lexical Resource (LR): Range and precision of vocabulary, collocation, reporting style, spelling accuracy.
-4. Grammatical Range & Accuracy (GRA): Variety of complex structures, error-free sentences, punctuation.
+3. Lexical Resource (LR): Range and precision of vocabulary, collocation, academic style, spelling accuracy.
+4. Grammatical Range & Accuracy (GRA): Variety of complex structures, error-free sentences, punctuation control.
 
-SCORING RULES:
-- Evaluate objectively based only on the provided prompt and candidate response.
-- Assign individual band scores (0.0 to 9.0 in half-band increments: e.g. 5.5, 6.0, 6.5, 7.0) for each criterion.
-- Calculate overall band by averaging the 4 criteria and rounding according to IELTS standards.
-- Word count recommendation for Task 1 is at least 150 words.
+DETAILED FEEDBACK INSTRUCTIONS:
+- You must deeply analyze the candidate's essay. Be strict and objective. Do not inflate scores.
+- grammar_errors: Find specific spelling, grammar, punctuation, or word choices mistakes. Provide the original mistake, the correction, and a clear, certified examiner-style grammatical explanation.
+- vocabulary_recommendations: Find repetitive, basic, or informal words. Suggest higher-level academic replacements and provide a clean example sentence using them.
+- ideal_essay: Rewrite the candidate's response into a model Band 7.5+ response. Preserve their core arguments, opinion, and layout, but elevate the vocabulary, grammar, and coherence to the highest caliber.
 
 OUTPUT FORMAT INSTRUCTION:
 - You MUST return a single, strictly valid JSON object matching the requested schema.
@@ -179,8 +218,11 @@ export const buildUserPrompt = ({
   minWords = 150,
   essayText,
   wordCount,
+  isTask2 = false,
 }) => {
-  return `EVALUATION REQUEST - IELTS ACADEMIC WRITING TASK 1
+  const taskHeader = isTask2 ? "IELTS WRITING TASK 2 (ESSAY)" : "IELTS ACADEMIC WRITING TASK 1 (REPORT)";
+  
+  return `EVALUATION REQUEST - ${taskHeader}
 
 QUESTION TITLE:
 ${questionTitle}
@@ -201,7 +243,7 @@ CANDIDATE RESPONSE METRICS:
 - Word Count: ${wordCount} words
 - Minimum Target Met: ${wordCount >= minWords ? "YES" : "NO"}
 
-INSTRUCTION: Evaluate the candidate response above according to official IELTS Academic Writing Task 1 criteria and output the result strictly as a valid JSON object matching the target schema.`;
+INSTRUCTION: Evaluate the candidate response above according to official IELTS criteria and output the result strictly as a valid JSON object matching the target schema.`;
 };
 
 export const PromptTemplates = {

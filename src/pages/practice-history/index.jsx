@@ -143,7 +143,7 @@ const PracticeHistory = () => {
               reading_tests (title, difficulty)
             `)
             .eq('student_id', user?.id)
-            .order('created_at', { ascending: false });
+            .order('started_at', { ascending: false });
 
           if (error) throw error;
 
@@ -154,8 +154,8 @@ const PracticeHistory = () => {
 
               return {
                 id: session.id,
-                date: new Date(session.created_at).toLocaleDateString(),
-                rawDate: new Date(session.created_at),
+                date: new Date(session.started_at).toLocaleDateString(),
+                rawDate: new Date(session.started_at),
                 topic: t?.title || 'IELTS Reading Exam',
                 topicType: 'Reading',
                 duration: session.completed_at ? 'Completed' : 'Incomplete',
@@ -174,7 +174,7 @@ const PracticeHistory = () => {
               listening_tests (title, difficulty)
             `)
             .eq('student_id', user?.id)
-            .order('created_at', { ascending: false });
+            .order('started_at', { ascending: false });
 
           if (error) throw error;
 
@@ -185,8 +185,8 @@ const PracticeHistory = () => {
 
               return {
                 id: session.id,
-                date: new Date(session.created_at).toLocaleDateString(),
-                rawDate: new Date(session.created_at),
+                date: new Date(session.started_at).toLocaleDateString(),
+                rawDate: new Date(session.started_at),
                 topic: t?.title || 'IELTS Listening Exam',
                 topicType: 'Listening',
                 duration: session.completed_at ? 'Completed' : 'Incomplete',
@@ -210,20 +210,25 @@ const PracticeHistory = () => {
 
     fetchHistory();
 
-    // Subscribe to realtime changes (mainly Speaking)
-    const channel = supabase
-      .channel('practice-history-changes')
-      .on(
-        'postgres_changes',
-        { event: '*', schema: 'public', table: `${activeModule}_sessions`, filter: `student_id=eq.${user?.id}` },
-        () => {
-          fetchHistory(true);
-        }
-      )
-      .subscribe();
+    // Subscribe to realtime changes (mainly Speaking & Writing)
+    let channel;
+    if (activeModule === 'speaking' || activeModule === 'writing') {
+      channel = supabase
+        .channel('practice-history-changes')
+        .on(
+          'postgres_changes',
+          { event: '*', schema: 'public', table: `${activeModule}_sessions`, filter: `student_id=eq.${user?.id}` },
+          () => {
+            fetchHistory(true);
+          }
+        )
+        .subscribe();
+    }
 
     return () => {
-      supabase.removeChannel(channel);
+      if (channel) {
+        supabase.removeChannel(channel);
+      }
     };
   }, [user, activeModule]);
 

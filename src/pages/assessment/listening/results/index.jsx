@@ -62,17 +62,23 @@ const ListeningResults = () => {
   const handleTogglePlayAudio = (sectionIndex, audioUrl) => {
     if (!audioRef.current) return;
     
-    if (activePlayingSec === sectionIndex) {
+    const targetSrc = getAudioUrl(audioUrl);
+    const isSameAudio = audioRef.current.src === targetSrc || (audioRef.current.src && audioRef.current.src.endsWith(audioUrl));
+
+    if (isSameAudio) {
       if (isPlaying) {
         audioRef.current.pause();
         setIsPlaying(false);
       } else {
-        audioRef.current.play().then(() => setIsPlaying(true));
+        audioRef.current.play().then(() => {
+          setIsPlaying(true);
+          setActivePlayingSec(sectionIndex);
+        });
       }
     } else {
       audioRef.current.pause();
       setActivePlayingSec(sectionIndex);
-      audioRef.current.src = getAudioUrl(audioUrl);
+      audioRef.current.src = targetSrc;
       audioRef.current.load();
       audioRef.current.play().then(() => setIsPlaying(true));
     }

@@ -39,10 +39,13 @@ export const getQuestions = async (module, filters = {}) => {
     let query = supabase
       .from(table)
       .select("*")
-      .eq("is_active", true)
-      .order("display_order", {
-        ascending: true,
-      });
+      .eq("is_active", true);
+
+    if (module === "writing_task1" || module === "writing_task2") {
+      query = query.order("question_code", { ascending: true });
+    } else {
+      query = query.order("id", { ascending: true });
+    }
 
     if (filters.difficulty && filters.difficulty !== "all") {
       query = query.eq("difficulty", filters.difficulty);
@@ -75,7 +78,7 @@ export const getQuestions = async (module, filters = {}) => {
  */
 export const getWritingTask1Stats = async () => {
   try {
-    const table = QUESTION_TABLES[module_table_task1()];
+    const table = QUESTION_TABLES.writing_task1;
 
     const { data, error } = await supabase
       .from(table)

@@ -13,8 +13,8 @@ import { APP_ROUTES } from "../../../config/routes";
 
 const TASK1_TYPES = [
   { value: "all", label: "All Types" },
-  { value: "bar_chart", label: "Bar Graph" },
-  { value: "line_graph", label: "Line Graph" },
+  { value: "bar_graph", label: "Bar Graph" },
+  { value: "line_chart", label: "Line Graph" },
   { value: "pie_chart", label: "Pie Chart" },
   { value: "table", label: "Table" },
   { value: "map", label: "Map" },

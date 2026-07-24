@@ -167,15 +167,21 @@ const ListeningCbtTest = () => {
   };
 
   // Audio lifecycle hooks
+  const prevAudioUrlRef = useRef("");
+
   useEffect(() => {
-    // Reset player when section audio changes
-    setIsPlaying(false);
-    setAudioCurrentTime(0);
-    if (audioRef.current) {
-      audioRef.current.load();
-      audioRef.current.playbackRate = playbackSpeed;
+    const currentAudioUrl = activeSection ? activeSection.audio_url : "";
+    if (currentAudioUrl !== prevAudioUrlRef.current) {
+      // Audio URL has changed, reset player
+      setIsPlaying(false);
+      setAudioCurrentTime(0);
+      if (audioRef.current) {
+        audioRef.current.load();
+        audioRef.current.playbackRate = playbackSpeed;
+      }
+      prevAudioUrlRef.current = currentAudioUrl;
     }
-  }, [activeSectionIdx]);
+  }, [activeSectionIdx, activeSection]);
 
   // Format time (seconds to MM:SS)
   const formatTime = (timeInSecs) => {

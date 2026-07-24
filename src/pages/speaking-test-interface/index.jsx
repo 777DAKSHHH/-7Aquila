@@ -356,6 +356,8 @@ const SpeakingTestInterface = () => {
 
       setCurrentResponse(null);
       setRecordingTime(0);
+      setSpeakingTimeLeft(120);
+      setPreparationTimeLeft(75);
       setAudioLevel(0);
       setAutoSaveStatus('idle');
 

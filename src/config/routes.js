@@ -33,7 +33,7 @@ export const APP_ROUTES = {
         "/assessment/writing",
 
     WRITING_SELECTION:
-        "/assessment/writing/task-selection",
+        "/assessment/writing",
 
     WRITING_TASK1:
         "/assessment/writing/task1",

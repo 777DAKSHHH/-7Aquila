@@ -59,7 +59,11 @@ export const constructEvaluationPackage = (evaluationContext) => {
 
   try {
     // 2. Generate System & User Prompts
-    const systemPrompt = buildSystemPrompt();
+    const isTask2 = (question.minWords && question.minWords >= 200) || 
+                    (question.code && String(question.code).includes("WT2")) || 
+                    (question.question_code && String(question.question_code).includes("WT2"));
+
+    const systemPrompt = buildSystemPrompt(isTask2);
     const userPrompt = buildUserPrompt({
       questionTitle: question.title,
       questionPrompt: question.prompt || "",
@@ -67,6 +71,7 @@ export const constructEvaluationPackage = (evaluationContext) => {
       minWords: question.minWords || 150,
       essayText: essay.text,
       wordCount: essay.wordCount || 0,
+      isTask2,
     });
 
     // 3. Assemble Complete, Immutable Evaluation Package

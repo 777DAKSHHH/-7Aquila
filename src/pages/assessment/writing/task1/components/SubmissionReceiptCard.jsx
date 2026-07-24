@@ -215,17 +215,127 @@ const SubmissionReceiptCard = ({
 
             {/* TAB 1: Student Report View Model */}
             {activeTab === "student" && evalResults.studentReport && (
-              <div className="space-y-3 text-xs font-caption animate-in fade-in duration-200">
-                <div className="flex items-center justify-between bg-emerald-500/10 p-3 rounded-lg border border-emerald-500/30">
-                  <span className="font-bold text-emerald-600">Student Overall Score</span>
-                  <span className="font-mono font-extrabold text-emerald-600 text-sm">
+              <div className="space-y-5 text-xs font-caption animate-in fade-in duration-200">
+                {/* Score Summary */}
+                <div className="flex items-center justify-between bg-emerald-500/10 p-4 rounded-xl border border-emerald-500/20">
+                  <div>
+                    <span className="font-bold text-emerald-600 block text-sm">Overall Band Score</span>
+                    <span className="text-[10px] text-muted-foreground">Standard IELTS Band Scale</span>
+                  </div>
+                  <span className="font-mono font-extrabold text-emerald-600 text-xl">
                     Band {evalResults.studentReport.overallBand?.toFixed(1)}
                   </span>
                 </div>
-                <div className="bg-muted/20 p-3 rounded-lg border border-border/40 leading-relaxed">
-                  <span className="font-bold text-primary block mb-1">Examiner Summary</span>
-                  <p>{evalResults.studentReport.summary}</p>
+
+                {/* Subscores Grid */}
+                {normalizedEval?.criterion_scores && (
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    <div className="bg-muted/30 border border-border/40 p-3 rounded-lg text-center">
+                      <span className="text-[10px] text-muted-foreground block uppercase font-semibold">Task Response</span>
+                      <span className="text-base font-bold text-foreground mt-1 block">
+                        {normalizedEval.criterion_scores.task_achievement || normalizedEval.criterion_scores.task_response || "N/A"}
+                      </span>
+                    </div>
+                    <div className="bg-muted/30 border border-border/40 p-3 rounded-lg text-center">
+                      <span className="text-[10px] text-muted-foreground block uppercase font-semibold">Coherence</span>
+                      <span className="text-base font-bold text-foreground mt-1 block">
+                        {normalizedEval.criterion_scores.coherence_and_cohesion || "N/A"}
+                      </span>
+                    </div>
+                    <div className="bg-muted/30 border border-border/40 p-3 rounded-lg text-center">
+                      <span className="text-[10px] text-muted-foreground block uppercase font-semibold">Vocabulary</span>
+                      <span className="text-base font-bold text-foreground mt-1 block">
+                        {normalizedEval.criterion_scores.lexical_resource || "N/A"}
+                      </span>
+                    </div>
+                    <div className="bg-muted/30 border border-border/40 p-3 rounded-lg text-center">
+                      <span className="text-[10px] text-muted-foreground block uppercase font-semibold">Grammar</span>
+                      <span className="text-base font-bold text-foreground mt-1 block">
+                        {normalizedEval.criterion_scores.grammatical_range_and_accuracy || "N/A"}
+                      </span>
+                    </div>
+                  </div>
+                )}
+
+                {/* Examiner Summary */}
+                <div className="bg-muted/20 p-4 rounded-xl border border-border/40 leading-relaxed space-y-1">
+                  <span className="font-bold text-primary block text-xs uppercase tracking-wide">Examiner Summary</span>
+                  <p className="text-foreground/90">{evalResults.studentReport.summary}</p>
                 </div>
+
+                {/* Detailed Grammar Mistakes List */}
+                {normalizedEval?.grammar_errors && normalizedEval.grammar_errors.length > 0 && (
+                  <div className="space-y-3">
+                    <span className="font-bold text-foreground block text-xs uppercase tracking-wide border-b border-border/60 pb-1 flex items-center gap-1.5 text-primary">
+                      <AppIcon name="AlertCircle" size={14} />
+                      Grammar & Phrasing Corrections
+                    </span>
+                    <div className="space-y-3 max-h-[300px] overflow-y-auto pr-1">
+                      {normalizedEval.grammar_errors.map((err, idx) => (
+                        <div key={idx} className="bg-destructive/5 border border-destructive/10 rounded-xl p-3 space-y-2">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                            <div className="text-rose-600 bg-rose-500/5 p-2 rounded-lg border border-rose-500/10 font-mono">
+                              <span className="text-[9px] uppercase tracking-wider block font-bold text-rose-500/80 mb-0.5">Original</span>
+                              "{err.mistake}"
+                            </div>
+                            <div className="text-emerald-600 bg-emerald-500/5 p-2 rounded-lg border border-emerald-500/10 font-mono">
+                              <span className="text-[9px] uppercase tracking-wider block font-bold text-emerald-500/80 mb-0.5">Correction</span>
+                              "{err.correction}"
+                            </div>
+                          </div>
+                          <p className="text-[11px] text-muted-foreground leading-relaxed pl-1 pt-1 border-t border-border/30">
+                            <span className="font-bold text-foreground/80">Explanation:</span> {err.explanation}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Vocabulary Recommendations */}
+                {normalizedEval?.vocabulary_recommendations && normalizedEval.vocabulary_recommendations.length > 0 && (
+                  <div className="space-y-3">
+                    <span className="font-bold text-foreground block text-xs uppercase tracking-wide border-b border-border/60 pb-1 flex items-center gap-1.5 text-primary">
+                      <AppIcon name="BookOpen" size={14} />
+                      Vocabulary Enhancements
+                    </span>
+                    <div className="space-y-3 max-h-[300px] overflow-y-auto pr-1">
+                      {normalizedEval.vocabulary_recommendations.map((rec, idx) => (
+                        <div key={idx} className="bg-indigo-50/20 border border-indigo-100/30 rounded-xl p-3 space-y-2">
+                          <div className="flex justify-between items-center gap-2 flex-wrap">
+                            <div className="flex items-center gap-1.5">
+                              <span className="text-rose-500 line-through font-mono font-medium">{rec.instead_of}</span>
+                              <AppIcon name="ArrowRight" size={12} className="text-muted-foreground" />
+                              <span className="text-emerald-600 font-bold bg-emerald-500/10 px-2 py-0.5 rounded font-mono">
+                                {Array.isArray(rec.better_alternatives) ? rec.better_alternatives.join(", ") : rec.better_alternatives}
+                              </span>
+                            </div>
+                          </div>
+                          <p className="text-[11px] text-muted-foreground leading-relaxed pl-1">
+                            <span className="font-bold text-foreground/80">Reason:</span> {rec.reason}
+                          </p>
+                          <div className="bg-card p-2 rounded border border-border/40 font-mono text-[10px] text-foreground/80 italic">
+                            <span className="text-[9px] uppercase tracking-wider block font-bold text-primary/80 not-italic mb-0.5">Example Usage</span>
+                            "{rec.example_sentence}"
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Ideal Essay Rewrite */}
+                {normalizedEval?.ideal_essay && (
+                  <div className="space-y-3">
+                    <span className="font-bold text-foreground block text-xs uppercase tracking-wide border-b border-border/60 pb-1 flex items-center gap-1.5 text-primary">
+                      <AppIcon name="Sparkles" size={14} />
+                      Band 7.5+ Model Essay Rewrite
+                    </span>
+                    <div className="bg-emerald-500/5 border border-emerald-500/10 rounded-xl p-4 leading-relaxed text-foreground select-text whitespace-pre-wrap max-h-[350px] overflow-y-auto font-medium font-caption">
+                      {normalizedEval.ideal_essay}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
 
