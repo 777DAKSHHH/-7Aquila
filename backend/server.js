@@ -44,6 +44,32 @@ app.use("/api/reading", readingRoutes);
 app.use("/api/listening", listeningRoutes);
 app.use("/api", authRoutes);
 
+import { supabase } from "./config/supabaseClient.js";
+
+app.get("/api/db-debug", async (req, res) => {
+  try {
+    const { data: testSets, error: errSets } = await supabase.from("test_sets").select("id");
+    const { data: readingTests, error: errRead } = await supabase.from("reading_tests").select("id");
+    const { data: listeningTests, error: errListen } = await supabase.from("listening_tests").select("id");
+    
+    res.json({
+      success: true,
+      supabaseUrl: process.env.SUPABASE_URL,
+      testSetsCount: testSets ? testSets.length : 0,
+      testSetsError: errSets ? errSets.message : null,
+      readingTestsCount: readingTests ? readingTests.length : 0,
+      readingTestsError: errRead ? errRead.message : null,
+      listeningTestsCount: listeningTests ? listeningTests.length : 0,
+      listeningTestsError: errListen ? errListen.message : null
+    });
+  } catch (err) {
+    res.json({
+      success: false,
+      error: err.message
+    });
+  }
+});
+
 app.get("/", (req, res) => {
   res.json({
     success: true,
