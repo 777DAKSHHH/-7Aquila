@@ -5,6 +5,13 @@ import ListeningQuestionPane from "./components/ListeningQuestionPane";
 import AppIcon from "components/AppIcon";
 import Button from "components/ui/Button";
 
+const getAudioUrl = (url) => {
+  if (!url) return "";
+  if (url.startsWith("http")) return url;
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+  return `${backendUrl}${url}`;
+};
+
 const ListeningCbtTest = () => {
   const { sessionId } = useParams();
   const navigate = useNavigate();
@@ -472,7 +479,7 @@ const ListeningCbtTest = () => {
         {/* HTML5 Audio Tag */}
         <audio
           ref={audioRef}
-          src={activeSection ? activeSection.audio_url : ""}
+          src={activeSection ? getAudioUrl(activeSection.audio_url) : ""}
           onTimeUpdate={handleAudioTimeUpdate}
           onLoadedMetadata={handleAudioLoadedMetadata}
           onEnded={() => setIsPlaying(false)}

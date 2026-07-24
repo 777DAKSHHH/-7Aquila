@@ -4,6 +4,13 @@ import { ListeningService } from "services/assessment/listeningService";
 import Button from "components/ui/Button";
 import AppIcon from "components/AppIcon";
 
+const getAudioUrl = (url) => {
+  if (!url) return "";
+  if (url.startsWith("http")) return url;
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+  return `${backendUrl}${url}`;
+};
+
 const ListeningResults = () => {
   const { sessionId } = useParams();
   const navigate = useNavigate();
@@ -64,7 +71,7 @@ const ListeningResults = () => {
     } else {
       audioRef.current.pause();
       setActivePlayingSec(sectionIndex);
-      audioRef.current.src = audioUrl;
+      audioRef.current.src = getAudioUrl(audioUrl);
       audioRef.current.load();
       audioRef.current.play().then(() => setIsPlaying(true));
     }
