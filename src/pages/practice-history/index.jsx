@@ -14,6 +14,8 @@ import ComparisonModal from './components/ComparisonModal';
 
 const PracticeHistory = () => {
   const { user } = useAuth();
+  
+  const [activeModule, setActiveModule] = useState('speaking'); // 'speaking' | 'writing' | 'reading' | 'listening'
   const [viewMode, setViewMode] = useState('table');
   const [dateRange, setDateRange] = useState('all');
   const [topicType, setTopicType] = useState('all');
@@ -31,82 +33,174 @@ const PracticeHistory = () => {
     const fetchHistory = async (isBackgroundUpdate = false) => {
       if (!isBackgroundUpdate) setLoading(true);
       try {
-        // Fetch sessions with responses to try and get the topic info
-        const { data, error } = await supabase
-          .from('speaking_sessions')
-          .select(`
-            *,
-            speaking_responses (
-              id,
-              audio_duration,
-              speaking_questions (
-                topic,
-                topic_type:topic
+        let fetchedData = [];
+
+        if (activeModule === 'speaking') {
+          const { data, error } = await supabase
+            .from('speaking_sessions')
+            .select(`
+              *,
+              speaking_responses (
+                id,
+                audio_duration,
+                speaking_questions (
+                  topic
+                )
               )
-            )
-          `)
-          .eq('student_id', user?.id)
-          .in('status', ['evaluated', 'reviewed'])
-          .order('created_at', { ascending: false });
+            `)
+            .eq('student_id', user?.id)
+            .in('status', ['evaluated', 'reviewed'])
+            .order('created_at', { ascending: false });
 
-        if (error) throw error;
+          if (error) throw error;
 
-        if (data) {
-          const formattedAttempts = data.map(session => {
-            // Try to extract topic from the first response's question
-            const firstResponse = session.speaking_responses?.[0];
-            const question = firstResponse?.speaking_questions;
-            
-            // Calculate total duration from all responses
-            const totalSeconds = session.speaking_responses?.reduce((acc, curr) => acc + (curr.audio_duration || 0), 0) || 0;
-            const mins = Math.floor(totalSeconds / 60);
-            const secs = Math.round(totalSeconds % 60);
-            const duration = `${mins}:${secs.toString().padStart(2, '0')}`;
+          if (data) {
+            fetchedData = data.map(session => {
+              const firstResponse = session.speaking_responses?.[0];
+              const question = firstResponse?.speaking_questions;
+              const totalSeconds = session.speaking_responses?.reduce((acc, curr) => acc + (curr.audio_duration || 0), 0) || 0;
+              const mins = Math.floor(totalSeconds / 60);
+              const secs = Math.round(totalSeconds % 60);
+              const duration = `${mins}:${secs.toString().padStart(2, '0')}`;
 
-            const isReviewed = session.teacher_band_score !== null && session.teacher_band_score !== undefined;
-            const score = (isReviewed ? session.teacher_band_score : session.ai_band_score) || 0;
-            
-            // Parse the detailed feedback object to extract real subscores & feedback strings
-            let ai = session.ai_detailed_feedback;
-            if (typeof ai === 'string') {
-              try { ai = JSON.parse(ai); } catch (e) {}
-            }
-            
-            const scores = ai?.scores || {};
-            const strengths = ai?.strengths?.length > 0 
-              ? (Array.isArray(ai.strengths) ? ai.strengths.join(', ') : ai.strengths) 
-              : 'View detailed feedback for analysis.';
-            const improvements = ai?.improvements?.length > 0 
-              ? (Array.isArray(ai.improvements) ? ai.improvements.join(', ') : ai.improvements) 
-              : 'View detailed feedback for recommendations.';
+              const isReviewed = session.teacher_band_score !== null && session.teacher_band_score !== undefined;
+              const score = (isReviewed ? session.teacher_band_score : session.ai_band_score) || 0;
+              
+              let ai = session.ai_detailed_feedback;
+              if (typeof ai === 'string') {
+                try { ai = JSON.parse(ai); } catch (e) {}
+              }
+              
+              const scores = ai?.scores || {};
+              const strengths = ai?.strengths?.length > 0 
+                ? (Array.isArray(ai.strengths) ? ai.strengths.join(', ') : ai.strengths) 
+                : 'View detailed feedback for analysis.';
+              const improvements = ai?.improvements?.length > 0 
+                ? (Array.isArray(ai.improvements) ? ai.improvements.join(', ') : ai.improvements) 
+                : 'View detailed feedback for recommendations.';
 
-            return {
-              id: session.id,
-              date: new Date(session.created_at).toLocaleDateString(),
-              rawDate: new Date(session.created_at), // For sorting
-              topic: question?.topic || 'IELTS Speaking Practice',
-              topicType: question?.topic_type || 'General',
-              duration: duration,
-              overallScore: score,
-              fluency: (isReviewed ? session.teacher_fluency_score : scores.fluency) || score,
-              lexical: (isReviewed ? session.teacher_lexical_score : scores.lexical) || score,
-              grammar: (isReviewed ? session.teacher_grammar_score : scores.grammar) || score,
-              pronunciation: (isReviewed ? session.teacher_pronunciation_score : scores.pronunciation) || score,
-              strengths,
-              improvements,
-              reviewed_at: session.reviewed_at,
-              teacher_band_score: session.teacher_band_score,
-              teacher_fluency_score: session.teacher_fluency_score,
-              teacher_lexical_score: session.teacher_lexical_score,
-              teacher_grammar_score: session.teacher_grammar_score,
-              teacher_pronunciation_score: session.teacher_pronunciation_score,
-              teacher_feedback: session.teacher_feedback,
-              status: session.status
-            };
-          });
-          setAttempts(formattedAttempts);
-          setFilteredAttempts(formattedAttempts);
+              return {
+                id: session.id,
+                date: new Date(session.created_at).toLocaleDateString(),
+                rawDate: new Date(session.created_at),
+                topic: question?.topic || 'IELTS Speaking Practice',
+                topicType: 'Speaking',
+                duration,
+                overallScore: score,
+                fluency: (isReviewed ? session.teacher_fluency_score : scores.fluency) || score,
+                lexical: (isReviewed ? session.teacher_lexical_score : scores.lexical) || score,
+                grammar: (isReviewed ? session.teacher_grammar_score : scores.grammar) || score,
+                pronunciation: (isReviewed ? session.teacher_pronunciation_score : scores.pronunciation) || score,
+                strengths,
+                improvements,
+                status: session.status,
+                difficulty: 'Medium'
+              };
+            });
+          }
+        } else if (activeModule === 'writing') {
+          const { data, error } = await supabase
+            .from('writing_sessions')
+            .select(`
+              *,
+              writing_task1_questions (title, difficulty),
+              writing_task2_questions (title, difficulty)
+            `)
+            .eq('student_id', user?.id)
+            .in('status', ['evaluated', 'reviewed'])
+            .order('created_at', { ascending: false });
+
+          if (error) throw error;
+
+          if (data) {
+            fetchedData = data.map(session => {
+              const isTask2 = !!session.task2_question_id;
+              const q = isTask2 ? session.writing_task2_questions : session.writing_task1_questions;
+              const mins = Math.floor((session.total_time_seconds || 0) / 60);
+              const duration = `${mins} min`;
+
+              return {
+                id: session.id,
+                date: new Date(session.created_at).toLocaleDateString(),
+                rawDate: new Date(session.created_at),
+                topic: q?.title || (isTask2 ? 'IELTS Essay Task 2' : 'IELTS Report Task 1'),
+                topicType: isTask2 ? 'Task 2 Essay' : 'Task 1 Report',
+                duration,
+                overallScore: session.overall_band || 0,
+                task1Band: session.task1_band,
+                task2Band: session.task2_band,
+                aiFeedback: session.ai_feedback,
+                status: session.status,
+                difficulty: q?.difficulty || 'Medium'
+              };
+            });
+          }
+        } else if (activeModule === 'reading') {
+          const { data, error } = await supabase
+            .from('reading_sessions')
+            .select(`
+              *,
+              reading_tests (title, difficulty)
+            `)
+            .eq('student_id', user?.id)
+            .order('created_at', { ascending: false });
+
+          if (error) throw error;
+
+          if (data) {
+            fetchedData = data.map(session => {
+              const t = session.reading_tests;
+              const rawScore = session.raw_score !== null && session.raw_score !== undefined ? `${session.raw_score} / 40` : 'Incomplete';
+
+              return {
+                id: session.id,
+                date: new Date(session.created_at).toLocaleDateString(),
+                rawDate: new Date(session.created_at),
+                topic: t?.title || 'IELTS Reading Exam',
+                topicType: 'Reading',
+                duration: session.completed_at ? 'Completed' : 'Incomplete',
+                overallScore: session.band_score || 0,
+                correctAnswers: rawScore,
+                status: session.completed_at ? 'completed' : 'in_progress',
+                difficulty: t?.difficulty || 'Medium'
+              };
+            });
+          }
+        } else if (activeModule === 'listening') {
+          const { data, error } = await supabase
+            .from('listening_sessions')
+            .select(`
+              *,
+              listening_tests (title, difficulty)
+            `)
+            .eq('student_id', user?.id)
+            .order('created_at', { ascending: false });
+
+          if (error) throw error;
+
+          if (data) {
+            fetchedData = data.map(session => {
+              const t = session.listening_tests;
+              const rawScore = session.raw_score !== null && session.raw_score !== undefined ? `${session.raw_score} / 40` : 'Incomplete';
+
+              return {
+                id: session.id,
+                date: new Date(session.created_at).toLocaleDateString(),
+                rawDate: new Date(session.created_at),
+                topic: t?.title || 'IELTS Listening Exam',
+                topicType: 'Listening',
+                duration: session.completed_at ? 'Completed' : 'Incomplete',
+                overallScore: session.band_score || 0,
+                correctAnswers: rawScore,
+                status: session.completed_at ? 'completed' : 'in_progress',
+                difficulty: t?.difficulty || 'Medium'
+              };
+            });
+          }
         }
+
+        setAttempts(fetchedData);
+        setFilteredAttempts(fetchedData);
       } catch (err) {
         console.error("Error fetching practice history:", err);
       } finally {
@@ -116,13 +210,13 @@ const PracticeHistory = () => {
 
     fetchHistory();
 
-    // Subscribe to realtime changes
+    // Subscribe to realtime changes (mainly Speaking)
     const channel = supabase
       .channel('practice-history-changes')
       .on(
         'postgres_changes',
-        { event: '*', schema: 'public', table: 'speaking_sessions', filter: `student_id=eq.${user?.id}` },
-        (payload) => {
+        { event: '*', schema: 'public', table: `${activeModule}_sessions`, filter: `student_id=eq.${user?.id}` },
+        () => {
           fetchHistory(true);
         }
       )
@@ -131,16 +225,16 @@ const PracticeHistory = () => {
     return () => {
       supabase.removeChannel(channel);
     };
-  }, [user]);
+  }, [user, activeModule]);
 
-  // Generate chart data from attempts (reversed for chronological order)
+  // Generate chart data
   const chartData = [...filteredAttempts]
     .sort((a, b) => a.rawDate - b.rawDate)
     .map(a => ({
-      date: a.date.split('/').slice(0, 2).join('/'), // MM/DD format
+      date: a.date.split('/').slice(0, 2).join('/'),
       score: a.overallScore,
-      fluency: a.fluency
-    }))
+      fluency: a.fluency || a.overallScore
+    }));
 
   useEffect(() => {
     let filtered = [...attempts];
@@ -211,13 +305,37 @@ const PracticeHistory = () => {
     <div className="min-h-screen bg-background">
       <TopNav userRole="student" />
       <main className="container-safe py-6 md:py-8 lg:py-12">
+        
+        {/* Module Tab Toggles */}
+        <div className="flex border-b border-border mb-6">
+          {[
+            { id: 'speaking', label: 'Speaking Module', icon: 'Mic' },
+            { id: 'writing', label: 'Writing Module', icon: 'Edit3' },
+            { id: 'reading', label: 'Reading Module', icon: 'BookOpen' },
+            { id: 'listening', label: 'Listening Module', icon: 'Headphones' },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveModule(tab.id)}
+              className={`px-5 py-3 text-sm font-semibold border-b-2 transition-all flex items-center gap-2 ${
+                activeModule === tab.id
+                  ? "border-primary text-primary"
+                  : "border-transparent text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Icon name={tab.icon} size={15} />
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6 md:mb-8">
           <div>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground mb-2">
               Practice History
             </h1>
             <p className="text-sm md:text-base text-muted-foreground font-caption">
-              Track your progress and review past speaking test attempts
+              Track your progress and review past practice test attempts.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2 md:gap-3">
@@ -230,16 +348,20 @@ const PracticeHistory = () => {
             >
               Download Report
             </Button>
-            <Button
-              variant="default"
-              size="sm"
-              iconName="GitCompare"
-              iconPosition="left"
-              onClick={handleCompareAttempts}
-            >
-              Compare Attempts
-            </Button>
-            <Link to="/test-selection-dashboard">
+            {activeModule === 'speaking' && (
+              <Button
+                variant="default"
+                size="sm"
+                iconName="GitCompare"
+                iconPosition="left"
+                onClick={handleCompareAttempts}
+              >
+                Compare Attempts
+              </Button>
+            )}
+            <Link to={
+              activeModule === 'speaking' ? '/test-selection-dashboard' : `/assessment/${activeModule}`
+            }>
               <Button variant="default" size="sm" iconName="Plus" iconPosition="left">
                 New Test
               </Button>
@@ -257,9 +379,10 @@ const PracticeHistory = () => {
             averageLexical={averageLexical}
             averageGrammar={averageGrammar}
             averagePronunciation={averagePronunciation}
+            activeModule={activeModule}
           />
 
-          <ProgressChart data={chartData} height={300} />
+          {totalAttempts > 0 && <ProgressChart data={chartData} height={300} />}
 
           <FilterControls
             dateRange={dateRange}
@@ -302,7 +425,11 @@ const PracticeHistory = () => {
 
             {viewMode === 'table' ? (
               <div className="hidden lg:block">
-                {loading ? <div className="p-8 text-center">Loading history...</div> : <AttemptsTable attempts={filteredAttempts} onSort={handleSort} />}
+                {loading ? (
+                  <div className="p-8 text-center">Loading history...</div>
+                ) : (
+                  <AttemptsTable attempts={filteredAttempts} activeModule={activeModule} onSort={handleSort} />
+                )}
               </div>
             ) : null}
 
@@ -320,7 +447,7 @@ const PracticeHistory = () => {
                     </div>
                   ) : (
                     filteredAttempts?.map((attempt) => (
-                      <AttemptCard key={attempt?.id} attempt={attempt} />
+                      <AttemptCard key={attempt?.id} attempt={attempt} activeModule={activeModule} />
                     ))
                   )}
                 </div>

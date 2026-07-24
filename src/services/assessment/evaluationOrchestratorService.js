@@ -112,14 +112,18 @@ export const orchestrateEvaluation = async ({
       throw new Error("Session is not finalized or ready for evaluation.");
     }
 
-    // 4. Fetch Attached Task 1 Question
-    if (!sessionData.task1_question_id) {
-      throw new Error("Missing associated Task 1 question ID.");
+    // 4. Fetch Attached Question (supports Task 1 and Task 2)
+    const isTask2 = !!sessionData.task2_question_id;
+    const questionId = isTask2 ? sessionData.task2_question_id : sessionData.task1_question_id;
+    const moduleType = isTask2 ? "writing_task2" : "writing_task1";
+
+    if (!questionId) {
+      throw new Error(`Missing associated ${isTask2 ? "Task 2" : "Task 1"} question ID.`);
     }
 
     const questionRes = await QuestionService.getQuestionById(
-      "writing_task1",
-      sessionData.task1_question_id
+      moduleType,
+      questionId
     );
 
     if (!questionRes || !questionRes.success || !questionRes.data) {
@@ -132,16 +136,16 @@ export const orchestrateEvaluation = async ({
 
     // 5. Load Essay Response & Perform Writing Analysis
     const answerText = (
-      sessionData.task1_answer ||
-      sessionData.task1_content ||
-      ""
+      isTask2
+        ? (sessionData.task2_answer || "")
+        : (sessionData.task1_answer || sessionData.task1_content || "")
     ).trim();
 
     if (!answerText) {
       throw new Error("Essay response text is empty.");
     }
 
-    const minWords = questionData.min_words || 150;
+    const minWords = questionData.min_words || (isTask2 ? 250 : 150);
     const writingAnalysis = WritingAnalysisService.analyzeWritingText(
       answerText,
       minWords
@@ -153,12 +157,12 @@ export const orchestrateEvaluation = async ({
     const evaluationContext = {
       sessionId,
       studentId: sessionData.student_id,
-      questionId: sessionData.task1_question_id,
-      module: "writing_task1",
+      questionId,
+      module: moduleType,
       question: {
         id: questionData.id,
-        code: questionData.question_code || "WT1-CBT",
-        title: questionData.title || questionData.question_title || "Writing Task 1",
+        code: questionData.question_code || (isTask2 ? "WT2-CBT" : "WT1-CBT"),
+        title: questionData.title || questionData.question_title || (isTask2 ? "Writing Task 2" : "Writing Task 1"),
         prompt: questionData.prompt || questionData.question_prompt || "",
         type: questionData.question_type || "general",
         minWords,
@@ -173,12 +177,12 @@ export const orchestrateEvaluation = async ({
       timestamps: {
         submittedAt: sessionData.submitted_at || sessionData.completed_at,
         completedAt: sessionData.completed_at,
-        timeTakenSeconds: sessionData.task1_time_seconds || 0,
+        timeTakenSeconds: (isTask2 ? sessionData.task2_time_seconds : sessionData.task1_time_seconds) || 0,
       },
       config: {
         targetModel: "gpt-4o",
         version: "v1.0.0",
-        rubric: "IELTS_ACADEMIC_WRITING_TASK1",
+        rubric: isTask2 ? "IELTS_ACADEMIC_WRITING_TASK2" : "IELTS_ACADEMIC_WRITING_TASK1",
       },
     };
 

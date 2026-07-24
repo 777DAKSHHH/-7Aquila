@@ -23,7 +23,7 @@
  * @param {number} params.remainingSeconds - Remaining countdown seconds
  * @returns {Object} Structured validation result
  */
-export const validateTask1Submission = ({
+export const validateWritingSubmission = ({
   session,
   question,
   answer,
@@ -47,7 +47,7 @@ export const validateTask1Submission = ({
 
   // 2. Validate Question Existence
   if (!question || !question.id) {
-    errors.push("Missing associated Task 1 question data.");
+    errors.push("Missing associated writing question data.");
     if (!blockingReason) blockingReason = "Question data is missing.";
   }
 
@@ -102,5 +102,6 @@ export const validateTask1Submission = ({
  * Exported Submission Validation Engine
  */
 export const SubmissionValidationService = {
-  validateTask1Submission,
+  validateTask1Submission: validateWritingSubmission,
+  validateTask2Submission: validateWritingSubmission,
 };

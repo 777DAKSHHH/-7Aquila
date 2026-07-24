@@ -4,9 +4,8 @@ import { supabase } from '../../../supabaseClient';
 import Button from '../../../components/ui/Button';
 import Icon from '../../../components/AppIcon';
 
-// This should be your backend's public URL, ideally from an environment variable.
-// e.g., import.meta.env.VITE_BACKEND_URL
-const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+import { API_BASE_URL } from '../../../config/apiConfig';
+
 const DEFAULT_AVATAR_URL = `${API_BASE_URL}/uploads/speaking/eagle-spade-logo.png`;
 
 // ---------------------------------------------
@@ -237,7 +236,7 @@ export const TestExperienceSettings = ({ settings, updateSettings }) => {
     show_timer: settings.show_timer ?? true,
     auto_submit: settings.auto_submit ?? false,
     detailed_analytics: settings.analytics_enabled ?? true,
-    part2_prep_time: settings.part2_prep_time || '60 sec',
+    part2_prep_time: settings.part2_prep_time ? `${settings.part2_prep_time} sec` : "75 sec",
   });
   const [status, setStatus] = useState('');
 
@@ -245,7 +244,8 @@ export const TestExperienceSettings = ({ settings, updateSettings }) => {
     const mappedSettings = {
       show_timer: localSettings.show_timer,
       auto_submit: localSettings.auto_submit,
-      analytics_enabled: localSettings.detailed_analytics
+      analytics_enabled: localSettings.detailed_analytics,
+      part2_prep_time: parseInt(localSettings.part2_prep_time)
     };
     const res = await updateSettings(mappedSettings);
     setStatus(!res?.error ? 'Experience settings updated!' : 'Failed to update.');
@@ -305,8 +305,12 @@ export const TestExperienceSettings = ({ settings, updateSettings }) => {
 
 export const AudioSettings = ({ settings, updateSettings }) => {
   const [localSettings, setLocalSettings] = useState({
-    audio_quality: settings.audio_quality || 'Balanced',
-    playback_speed: settings.playback_speed || '1x'
+    audio_quality: settings.audio_quality 
+      ? (settings.audio_quality.charAt(0).toUpperCase() + settings.audio_quality.slice(1)) 
+      : 'Balanced',
+    playback_speed: settings.playback_speed 
+      ? `${settings.playback_speed}x` 
+      : '1x'
   });
   const [status, setStatus] = useState('');
   const [isTestingMic, setIsTestingMic] = useState(false);
@@ -317,9 +321,12 @@ export const AudioSettings = ({ settings, updateSettings }) => {
   const audioCtxRef = React.useRef(null);
 
   const handleSave = async () => {
-    // These columns don't exist in the user_settings table right now!
-    // Faking success so it doesn't crash the app until you add them to the database.
-    setStatus('Audio settings updated!');
+    const mappedSettings = {
+      audio_quality: localSettings.audio_quality.toLowerCase(),
+      playback_speed: parseFloat(localSettings.playback_speed)
+    };
+    const res = await updateSettings(mappedSettings);
+    setStatus(!res?.error ? 'Audio settings updated!' : 'Failed to update.');
     setTimeout(() => setStatus(''), 3000);
   };
 

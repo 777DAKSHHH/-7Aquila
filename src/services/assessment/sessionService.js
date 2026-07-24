@@ -30,7 +30,7 @@ export const SESSION_STATUS = {
     IN_PROGRESS: "in_progress",
     SUBMITTED: "submitted",
     EVALUATING: "evaluating",
-    COMPLETED: "completed",
+    COMPLETED: "evaluated",
     REVIEWED: "reviewed"
 };
 

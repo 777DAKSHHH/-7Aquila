@@ -74,20 +74,28 @@ export const finalizeWritingSession = async ({
       };
     }
 
+    const isTask2 = !!currentSession.task2_question_id;
+
     // 2. Calculate Final Statistics
     const timeTakenSeconds = Math.max(0, durationSeconds - remainingSeconds);
     const completionTimestamp = new Date().toISOString();
 
     const finalPayload = {
-      status: SESSION_STATUS.COMPLETED,
+      status: SESSION_STATUS.COMPLETED, // resolves to "evaluated"
       is_draft: false,
-      task1_word_count: Number(wordCount) || 0,
-      task1_time_seconds: timeTakenSeconds,
       total_time_seconds: timeTakenSeconds,
       completed_at: completionTimestamp,
       submitted_at: currentSession.submitted_at || completionTimestamp,
       last_saved_at: completionTimestamp,
     };
+
+    if (isTask2) {
+      finalPayload.task2_word_count = Number(wordCount) || 0;
+      finalPayload.task2_time_seconds = timeTakenSeconds;
+    } else {
+      finalPayload.task1_word_count = Number(wordCount) || 0;
+      finalPayload.task1_time_seconds = timeTakenSeconds;
+    }
 
     // 3. Persist Finalization to Database via SessionService
     const updateRes = await SessionService.updateWritingSession(

@@ -71,14 +71,19 @@ export const persistEvaluationResults = async ({
     const session = sessionRes.data;
 
     // Idempotency: Return existing record if already persisted with evaluation data
-    if (session.task1_eval_completed_at && session.task1_eval_data) {
+    const isTask2 = !!session.task2_question_id;
+    const isAlreadyPersisted = isTask2
+      ? (session.task2_band !== null && session.task2_band !== undefined && session.ai_detailed_feedback !== null)
+      : (session.task1_band !== null && session.task1_band !== undefined && session.ai_detailed_feedback !== null);
+
+    if (isAlreadyPersisted) {
       return {
         success: true,
         data: Object.freeze({
           sessionId,
           alreadyPersisted: true,
-          persistedAt: session.task1_eval_completed_at,
-          evaluationData: session.task1_eval_data,
+          persistedAt: session.completed_at || session.submitted_at || new Date().toISOString(),
+          evaluationData: session.ai_detailed_feedback,
         }),
       };
     }
@@ -107,13 +112,35 @@ export const persistEvaluationResults = async ({
       }),
     });
 
+    const completionTimestamp = new Date().toISOString();
     const updatePayload = {
-      status: SESSION_STATUS.COMPLETED,
-      task1_score: officialScore.overallBand,
-      task1_eval_data: evalDataPayload,
-      task1_eval_completed_at: new Date().toISOString(),
-      updated_at: new Date().toISOString(),
+      status: SESSION_STATUS.COMPLETED, // resolves to "evaluated"
+      ai_detailed_feedback: evalDataPayload,
+      ai_feedback: structuredFeedback.summary || "AI evaluation successfully completed.",
+      updated_at: completionTimestamp,
+      completed_at: session.completed_at || completionTimestamp,
+      submitted_at: session.submitted_at || completionTimestamp,
     };
+
+    if (isTask2) {
+      updatePayload.task2_band = officialScore.overallBand;
+      if (session.task1_band !== null && session.task1_band !== undefined) {
+        const avg = (parseFloat(session.task1_band) + 2 * parseFloat(officialScore.overallBand)) / 3;
+        // IELTS rounds to nearest 0.5 band
+        updatePayload.overall_band = Math.round(avg * 2) / 2;
+      } else {
+        updatePayload.overall_band = officialScore.overallBand;
+      }
+    } else {
+      updatePayload.task1_band = officialScore.overallBand;
+      if (session.task2_band !== null && session.task2_band !== undefined) {
+        const avg = (parseFloat(officialScore.overallBand) + 2 * parseFloat(session.task2_band)) / 3;
+        // IELTS rounds to nearest 0.5 band
+        updatePayload.overall_band = Math.round(avg * 2) / 2;
+      } else {
+        updatePayload.overall_band = officialScore.overallBand;
+      }
+    }
 
     // 3. Execute Database Update
     const updateRes = await SessionService.updateWritingSession(
@@ -132,7 +159,7 @@ export const persistEvaluationResults = async ({
     const persistedResult = Object.freeze({
       sessionId,
       alreadyPersisted: false,
-      persistedAt: updatePayload.task1_eval_completed_at,
+      persistedAt: completionTimestamp,
       overallBand: officialScore.overallBand,
       evaluationRecord: evalDataPayload,
       persistenceMetrics: Object.freeze({

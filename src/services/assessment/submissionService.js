@@ -64,6 +64,14 @@ export const executeSubmissionPipeline = async ({
   }
 
   try {
+    // 1. Fetch Session to determine if it is Task 1 or Task 2
+    const sessionRes = await SessionService.getWritingSession(sessionId);
+    if (!sessionRes || !sessionRes.success || !sessionRes.data) {
+      throw new Error("Failed to retrieve writing session to determine task type.");
+    }
+    const sessionRecord = sessionRes.data;
+    const isTask2 = !!sessionRecord.task2_question_id;
+
     // 2. Flush Pending Autosave & Clear Debounce Queues
     onStatusChange?.(SUBMISSION_STATES.FLUSHING_AUTOSAVE);
     if (typeof forceSave === "function") {
@@ -73,7 +81,11 @@ export const executeSubmissionPipeline = async ({
     // 3. Persist Final Answer Payload to Database via SessionService
     onStatusChange?.(SUBMISSION_STATES.SAVING);
 
-    const payload = {
+    const payload = isTask2 ? {
+      task2_answer: (answer || "").trim(),
+      task2_word_count: Number(wordCount) || 0,
+      last_saved_at: new Date().toISOString(),
+    } : {
       task1_answer: (answer || "").trim(),
       task1_word_count: Number(wordCount) || 0,
       last_saved_at: new Date().toISOString(),
@@ -96,8 +108,9 @@ export const executeSubmissionPipeline = async ({
     }
 
     const verifiedSession = verifyRes.data;
-    const verifiedText =
-      verifiedSession.task1_answer || verifiedSession.task1_content || "";
+    const verifiedText = isTask2
+      ? (verifiedSession.task2_answer || "")
+      : (verifiedSession.task1_answer || verifiedSession.task1_content || "");
 
     if (verifiedText.trim() !== (answer || "").trim()) {
       throw new Error("Persisted content mismatch detected during verification.");
@@ -115,7 +128,7 @@ export const executeSubmissionPipeline = async ({
       data: {
         sessionId,
         submissionTimestamp,
-        verifiedWordCount: verifiedSession.task1_word_count || wordCount,
+        verifiedWordCount: (isTask2 ? verifiedSession.task2_word_count : verifiedSession.task1_word_count) || wordCount,
         locked: true,
       },
     };

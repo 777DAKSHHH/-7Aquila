@@ -75,24 +75,28 @@ export const orchestrateSessionRecovery = async ({
       };
     }
 
-    // 4. Fetch Attached Task 1 Question Record
-    if (!sessionData.task1_question_id) {
+    // 4. Fetch Attached Question Record (supports Task 1 and Task 2)
+    const isTask2 = !!sessionData.task2_question_id;
+    const questionId = isTask2 ? sessionData.task2_question_id : sessionData.task1_question_id;
+    const moduleType = isTask2 ? "writing_task2" : "writing_task1";
+
+    if (!questionId) {
       return {
         success: false,
-        error: "No Task 1 question is attached to this writing session.",
+        error: `No ${isTask2 ? "Task 2" : "Task 1"} question is attached to this writing session.`,
         errorCode: "MISSING_QUESTION_ID",
       };
     }
 
     const questionRes = await QuestionService.getQuestionById(
-      "writing_task1",
-      sessionData.task1_question_id
+      moduleType,
+      questionId
     );
 
     if (!questionRes.success || !questionRes.data) {
       return {
         success: false,
-        error: questionRes.error || "Associated Task 1 question could not be loaded from database.",
+        error: questionRes.error || `Associated ${isTask2 ? "Task 2" : "Task 1"} question could not be loaded from database.`,
         errorCode: "QUESTION_NOT_FOUND",
       };
     }
@@ -108,7 +112,7 @@ export const orchestrateSessionRecovery = async ({
     );
     const isIncomplete = !hasTitle && !hasPrompt;
 
-    // 5. Resolve Asset Image Public URL
+    // 5. Resolve Asset Image Public URL (only applicable for Task 1, check map/chart images)
     const rawImagePath =
       questionData.image_path ||
       questionData.chart_image_url ||
@@ -122,11 +126,12 @@ export const orchestrateSessionRecovery = async ({
     }
 
     // 6. Restore Answer Content
-    const restoredAnswer =
-      sessionData.task1_answer ||
-      sessionData.task1_content ||
-      sessionData.draft_content ||
-      "";
+    const restoredAnswer = isTask2
+      ? (sessionData.task2_answer || "")
+      : (sessionData.task1_answer ||
+        sessionData.task1_content ||
+        sessionData.draft_content ||
+        "");
 
     // 7. Format Metadata
     const rawType = questionData.question_type || questionData.type || "general";
@@ -141,27 +146,27 @@ export const orchestrateSessionRecovery = async ({
       title:
         questionData.title ||
         questionData.question_title ||
-        TASK1_DEFAULTS.DEFAULT_TITLE,
+        (isTask2 ? "Writing Task 2 Essay" : TASK1_DEFAULTS.DEFAULT_TITLE),
       prompt:
         questionData.prompt ||
         questionData.question_prompt ||
         questionData.description ||
-        TASK1_DEFAULTS.DEFAULT_INSTRUCTIONS,
+        (isTask2 ? "Write an essay on the given topic." : TASK1_DEFAULTS.DEFAULT_INSTRUCTIONS),
       code:
         questionData.question_code ||
         questionData.code ||
-        (questionData.id ? `WT1-${questionData.id.slice(0, 6).toUpperCase()}` : "WT1-CBT"),
+        (questionData.id ? `${isTask2 ? "WT2" : "WT1"}-${questionData.id.slice(0, 6).toUpperCase()}` : (isTask2 ? "WT2-CBT" : "WT1-CBT")),
       questionType: rawType,
       questionTypeLabel: typeLabel,
       difficulty: (questionData.difficulty || "medium").toLowerCase(),
-      minWords: questionData.min_words || TASK1_DEFAULTS.MIN_WORD_COUNT,
+      minWords: questionData.min_words || (isTask2 ? 250 : TASK1_DEFAULTS.MIN_WORD_COUNT),
       timeLimitMinutes:
-        questionData.time_limit_minutes || TASK1_DEFAULTS.TIME_LIMIT_MINUTES,
-      module: questionData.module || TASK1_DEFAULTS.MODULE,
+        questionData.time_limit_minutes || (isTask2 ? 40 : TASK1_DEFAULTS.TIME_LIMIT_MINUTES),
+      module: questionData.module || (isTask2 ? "writing_task2" : TASK1_DEFAULTS.MODULE),
     };
 
     // 8. Restore Timer Parameters
-    const initialTimeSeconds = sessionData.task1_time_seconds || 0;
+    const initialTimeSeconds = (isTask2 ? sessionData.task2_time_seconds : sessionData.task1_time_seconds) || 0;
     const timeLimitSeconds = formattedMetadata.timeLimitMinutes * 60;
     const remainingSeconds = Math.max(0, timeLimitSeconds - initialTimeSeconds);
     const isExpired = remainingSeconds <= 0;

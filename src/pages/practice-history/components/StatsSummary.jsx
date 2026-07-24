@@ -9,7 +9,8 @@ const StatsSummary = ({
   averageFluency = 0,
   averageLexical = 0,
   averageGrammar = 0,
-  averagePronunciation = 0
+  averagePronunciation = 0,
+  activeModule = 'speaking'
 }) => {
   const stats = [
     {
@@ -42,6 +43,8 @@ const StatsSummary = ({
     }
   ];
 
+  const isSpeaking = activeModule === 'speaking';
+
   return (
     <div className="space-y-4 md:space-y-6">
       {/* Main High-Level Stats */}
@@ -66,8 +69,8 @@ const StatsSummary = ({
         ))}
       </div>
 
-      {/* Detailed Criteria Breakdown */}
-      {totalAttempts > 0 && (
+      {/* Detailed Criteria Breakdown (Only for Speaking) */}
+      {isSpeaking && totalAttempts > 0 && (
         <div className="bg-card rounded-lg p-4 md:p-6 border border-border shadow-sm">
           <h3 className="text-sm font-heading font-semibold text-foreground mb-4">Average Criteria Scores</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 divide-x divide-border">
