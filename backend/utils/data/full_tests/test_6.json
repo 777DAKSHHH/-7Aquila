@@ -1,0 +1,586 @@
+{
+  "title": "IELTS Academic Reading Practice Test 6",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 60,
+  "passages": [
+    {
+      "passage_number": 1,
+      "title": "The History and Science of Cocoa",
+      "sub_title": "Exploring the cultivation of the Theobroma cacao tree, its role in ancient Mesoamerican rituals, and its path to global popularity.",
+      "content_html": "<p>Cocoa is derived from the seeds of the Theobroma cacao tree, a tropical evergreen native to the deep rain forests of the Amazon and Orinoco river basins. The genus name Theobroma literally translates to ''food of the gods'' in Greek, reflecting the high value placed on this plant throughout human history. Today, cocoa is grown in tropical regions worldwide, particularly in West Africa, which produces the majority of the world''s commercial supply, but its cultural and historical journey began thousands of years ago in Mesoamerica.</p><p>The earliest known users of cocoa were the Olmecs of southern Mexico around 1500 BCE. Although no written records survive, chemical analysis of ancient pottery jars reveals traces of theobromine, a stimulant compound unique to the cocoa plant. Later, the Maya and the Aztecs developed highly sophisticated methods of cocoa preparation. Unlike modern sweet chocolate, ancient Mesoamericans consumed cocoa as a bitter, frothy beverage mixed with water, chili peppers, cornmeal, and vanilla. This drink was believed to provide strength, health, and spiritual clarity.</p><p>For the Aztecs, cocoa beans were so valuable that they functioned as currency. A single bean could buy a tomato, while one hundred beans could purchase a slave. Because of their value, cocoa beans were collected as taxes from conquered regions. The consumption of the beverage was strictly regulated, reserved for priests, military officers, nobility, and warriors before battles. Commoners were forbidden from consuming it. When Spanish explorer Hernán Cortés arrived in the Aztec capital in 1519, he observed Emperor Montezuma II drinking dozens of golden cups of cocoa daily.</p><p>The Spanish introduced cocoa to Europe in the 16th century, where it initially faced skepticism. Because of its bitter taste, Spanish cooks began mixing the hot liquid with sugar, cinnamon, and milk, creating a warm sweet drink that quickly became a fashionable luxury among European aristocrats. In the 19th century, industrial innovations transformed cocoa consumption. In 1828, Dutch chemist Coenraad van Houten patented the cocoa press, which extracted cocoa butter from beans, leaving a dry powder that could be easily mixed with milk or water, paving the way for the invention of solid eating chocolate.</p>"
+    },
+    {
+      "passage_number": 2,
+      "title": "How Birds Navigate during Migration",
+      "sub_title": "Analyzing the sensory mechanisms migratory birds use to travel thousands of miles across continents with absolute precision.",
+      "content_html": "<p><strong>Paragraph A</strong><br/>Every autumn, millions of birds embark on epic migrations, traveling thousands of miles across vast oceans, deserts, and mountain ranges to reach warmer wintering grounds. In spring, they return north, often arriving at the exact same nesting spot they used the previous year. This extraordinary navigation feat has fascinated naturalists for centuries. How do birds orient themselves across featureless landscapes? Recent biological research reveals that birds do not rely on a single compass, but combine multiple sensory inputs to navigate.</p><p><strong>Paragraph B</strong><br/>The most basic navigational aid is visual guidance using landmarks. Many bird species follow geographical features, such as coastlines, river valleys, and mountain ranges, during their journeys. These features, combined with memory from previous trips, form a basic mental map. However, this method has limitations; birds can still navigate successfully over open oceans or at night when landmarks are invisible, indicating that more sophisticated sensory systems are at work.</p><p><strong>Paragraph C</strong><br/>For daytime travelers, the sun is a primary compass. By tracking the sun''s position, birds can maintain a straight heading. However, because the sun moves across the sky from east to west throughout the day, birds must adjust their heading constantly. They do this by relying on their internal biological clock, or circadian rhythm. Studies have shown that if a bird''s biological clock is artificially shifted by changing light cycles in a laboratory, they will misinterpret the sun''s position and fly in the wrong direction when released.</p><p><strong>Paragraph D</strong><br/>Nighttime migrants, such as warblers and thrushes, use the stars for navigation. In the mid-20th century, researcher Stephen Emlen demonstrated this by placing migratory birds inside a planetarium. When he projected star patterns onto the ceiling, the birds attempted to fly in directions corresponding to their normal migratory path. When he rotated the star patterns, the birds adjusted their flight directions accordingly. Emlen discovered that young birds learn the patterns of constellations by observing how they rotate around the North Star, building a stellar compass before their first migration.</p><p><strong>Paragraph E</strong><br/>The most mysterious sensory system is magnetoreception—the ability to detect the Earth''s magnetic field. This magnetic compass allows birds to determine their direction even under thick cloud cover or in total darkness. Biologists have identified two distinct magnetoreception mechanisms. The first is light-dependent, relying on proteins called cryptochromes in the bird''s eye that react to magnetic forces, allowing them to literally 'see' the magnetic field. The second is iron-based, using microscopic particles of magnetite in the beak to detect magnetic intensity.</p><p><strong>Paragraph F</strong><br/>Despite our growing understanding of these individual compasses, the most remarkable aspect of avian migration remains the integration of these systems. Birds calibrate their magnetic compass using the sunset, double-check their stellar compass using landmarks, and adjust for crosswinds using visual cues. As human developments expand—introducing light pollution that disorients night flyers and wind turbines that disrupt flight paths—understanding and preserving these delicate avian pathways has become a major focus for global conservationists.</p>"
+    },
+    {
+      "passage_number": 3,
+      "title": "The Economics of Carbon Pricing",
+      "sub_title": "Analyzing the theories behind carbon taxes and cap-and-trade systems as tools to reduce global greenhouse gas emissions.",
+      "content_html": "<p><strong>Paragraph A</strong><br/>Climate change is widely recognized by economists as the greatest market failure in human history. In a standard market transaction, the price of a good reflects its production costs. However, burning fossil fuels releases carbon dioxide, which causes long-term damage to the environment and human health—costs that are not borne by the fuel producers or consumers. In economic terms, these damages are 'negative externalities'. Because these external costs are ignored, carbon-emitting energy is artificially cheap, leading to excessive consumption and global warming.</p><p><strong>Paragraph B</strong><br/>To correct this market failure, economists advocate for 'carbon pricing'—policies that assign a direct cost to carbon emissions, forcing polluters to pay for the environmental damage they cause. This economic approach is based on the 'polluter pays principle'. By making carbon-emitting activities more expensive, carbon pricing creates a powerful financial incentive for companies and individuals to reduce energy consumption, improve energy efficiency, and switch to cleaner, low-carbon alternatives, such as solar and wind power.</p><p><strong>Paragraph C</strong><br/>There are two primary mechanisms for implementing carbon pricing: a carbon tax and a cap-and-trade system (also known as emissions trading). A carbon tax is a direct fee set by the government on each ton of carbon dioxide emitted. The primary advantage of a carbon tax is price certainty; businesses know exactly how much they must pay per ton of emissions, allowing them to make long-term financial plans. However, the government cannot guarantee the exact volume of emissions reduction, as companies may choose to pay the tax rather than reduce emissions.</p><p><strong>Paragraph D</strong><br/>In contrast, a cap-and-trade system sets a strict limit (or cap) on the total volume of greenhouse gases that can be emitted within a country or region. The government divides this total cap into individual emission permits, distributing or auctioning them to companies. If a company reduces its emissions below its allocated permits, it can sell (trade) its excess permits to other companies that are struggling to meet their targets. The main advantage of cap-and-trade is environmental certainty; the cap guarantees that emissions will not exceed the designated limit. However, the price of permits fluctuates based on market supply and demand, creating financial uncertainty for businesses.</p><p><strong>Paragraph E</strong><br/>Both systems generate significant revenues, presenting governments with choices on how to allocate these funds. Some policymakers advocate using revenues to fund green infrastructure, subsidies for electric vehicles, or research into clean technologies. Others support 'revenue-neutral' policies, where carbon revenues are returned directly to citizens as dividend checks or used to reduce income taxes. This revenue-neutral approach helps offset the impact of rising energy costs on low-income households, making carbon pricing policies more politically acceptable to the general public.</p><p><strong>Paragraph F</strong><br/>Despite strong support from economists, carbon pricing policies face intense political opposition. Critics argue that carbon prices function as hidden energy taxes that increase the cost of gasoline, electricity, and manufactured goods, harming economic competitiveness and fueling inflation. Furthermore, businesses worry about 'carbon leakage'—the risk that high local carbon prices will force companies to relocate their factories to countries with weaker environmental regulations. To prevent leakage, some regions are introducing carbon border adjustment tariffs, taxing imports from carbon-polluting regions.</p>"
+    }
+  ],
+  "questions": [
+    {
+      "passage_number": 1,
+      "question_number": 1,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "The genus name of the cocoa tree translates in Greek to [blank]."
+      },
+      "correct_answers": ["food of the gods"],
+      "explanation": "Paragraph 1 notes that Theobroma translates literally to 'food of the gods'.",
+      "citation_excerpt": "The genus name Theobroma literally translates to 'food of the gods' in Greek"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 2,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "West Africa currently produces the majority of the global [blank] of cocoa."
+      },
+      "correct_answers": ["commercial supply", "supply"],
+      "explanation": "Paragraph 1 states West Africa produces the majority of the commercial supply.",
+      "citation_excerpt": "West Africa, which produces the majority of the world's commercial supply"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 3,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Olmec pottery jars carried traces of [blank], proving they used cocoa."
+      },
+      "correct_answers": ["theobromine"],
+      "explanation": "Paragraph 2 explains chemical tests of Olmec pottery jars revealed traces of theobromine.",
+      "citation_excerpt": "pottery jars reveals traces of theobromine, a stimulant compound unique"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 4,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Ancient Mesoamericans consumed cocoa as a frothy, [blank] drink mixed with spices."
+      },
+      "correct_answers": ["bitter"],
+      "explanation": "Paragraph 2 notes they drank cocoa as a bitter, frothy beverage.",
+      "citation_excerpt": "consumed cocoa as a bitter, frothy beverage mixed with water"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 5,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "In Aztec society, cocoa beans were so valuable they were used as [blank]."
+      },
+      "correct_answers": ["currency"],
+      "explanation": "Paragraph 3 notes cocoa beans were valuable and functioned as currency.",
+      "citation_excerpt": "cocoa beans were so valuable that they functioned as currency."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 6,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Coenraad van Houten patented the [blank] in 1828 to extract cocoa butter."
+      },
+      "correct_answers": ["cocoa press"],
+      "explanation": "Paragraph 4 explains Coenraad van Houten patented the cocoa press.",
+      "citation_excerpt": "Coenraad van Houten patented the cocoa press, which extracted cocoa butter"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 7,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "The Olmecs left detailed written journals describing how to plant cocoa trees."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 2 states that no written records survive from the Olmecs.",
+      "citation_excerpt": "The earliest known users of cocoa were the Olmecs of southern Mexico around 1500 BCE. Although no written records survive"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 8,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Aztec commoners drank cocoa daily with their meals."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 3 notes that commoners were strictly forbidden from consuming the drink.",
+      "citation_excerpt": "Commoners were forbidden from consuming it."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 9,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Spanish explorers immediately loved the bitter taste of unsweetened cocoa."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 4 states that the drink initially faced skepticism due to its bitter taste, and cooks began mixing it with sugar.",
+      "citation_excerpt": "where it initially faced skepticism. Because of its bitter taste, Spanish cooks began mixing the hot liquid with sugar"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 10,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "The Venetian government banned cocoa in Europe during the 17th century."
+      },
+      "correct_answers": ["NOT GIVEN"],
+      "explanation": "The text states cocoa became a luxury among European aristocrats, but does not contain information about a Venetian ban.",
+      "citation_excerpt": ""
+    },
+    {
+      "passage_number": 1,
+      "question_number": 11,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Montezuma II served cocoa in gold cups to Hernán Cortés."
+      },
+      "correct_answers": ["NOT GIVEN"],
+      "explanation": "The text states Cortés observed Montezuma II drinking dozens of golden cups of cocoa daily, but does not state if Montezuma served it to Cortés.",
+      "citation_excerpt": ""
+    },
+    {
+      "passage_number": 1,
+      "question_number": 12,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "The cocoa press extracted cocoa butter from beans."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph 4 confirms the cocoa press extracted cocoa butter from the beans.",
+      "citation_excerpt": "cocoa press, which extracted cocoa butter from beans, leaving a dry powder"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 13,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Cocoa trees grow naturally in cold, mountainous climates."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 1 notes that the cacao tree is a tropical evergreen native to rainforest basins.",
+      "citation_excerpt": "Theobroma cacao tree, a tropical evergreen native to the deep rain forests of the Amazon"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 14,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Avian migration is guided by a variety of senses. During the day, birds rely on a [blank] adjusted by their biological clock. At night, birds like warblers navigate using a [blank] learned by observing constellation rotations."
+      },
+      "correct_answers": ["sun compass", "stellar compass"],
+      "explanation": "Paragraph C notes using the sun as a compass (sun compass), while Paragraph D details night navigation using a stellar compass.",
+      "citation_excerpt": "sun is a primary compass... stellar compass before their first migration."
+    },
+    {
+      "passage_number": 2,
+      "question_number": 15,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "The most complex system is [blank], which allows them to perceive the Earth''s magnetic field. This is accomplished either via [blank] in the eye or iron-based particles in the beak."
+      },
+      "correct_answers": ["magnetoreception", "cryptochromes"],
+      "explanation": "Paragraph E outlines magnetoreception, which relies on cryptochromes in the eye or magnetite in the beak.",
+      "citation_excerpt": "system is magnetoreception—the ability to detect... relying on proteins called cryptochromes in the bird's eye"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 16,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Unfortunately, modern hazards like [blank] disorient nocturnal migrants."
+      },
+      "correct_answers": ["light pollution"],
+      "explanation": "Paragraph F notes that light pollution disorients night flyers.",
+      "citation_excerpt": "human developments expand—introducing light pollution that disorients night flyers"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 17,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "How Stephen Emlen studied night migrants inside a planetarium."
+      },
+      "correct_answers": ["D"],
+      "explanation": "Paragraph D outlines Stephen Emlen's studies placing birds in a planetarium with projected star patterns.",
+      "citation_excerpt": "researcher Stephen Emlen demonstrated this by placing migratory birds inside a planetarium. When he projected star patterns"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 18,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "An explanation of cryptochromes and iron-based magnetite sensors."
+      },
+      "correct_answers": ["E"],
+      "explanation": "Paragraph E defines magnetoreception mechanisms including cryptochromes and magnetite.",
+      "citation_excerpt": "first is light-dependent, relying on proteins called cryptochromes... second is iron-based, using microscopic particles of magnetite"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 19,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "The way birds adjust headings using their internal biological clock."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph C explains how birds adjust headings using their biological clock (circ circadian rhythm).",
+      "citation_excerpt": "adjust their heading constantly. They do this by relying on their internal biological clock, or circadian rhythm."
+    },
+    {
+      "passage_number": 2,
+      "question_number": 20,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "The visual use of coastlines and river valleys as map landmarks."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph B outlines how birds follow visual landmarks like coastlines and river valleys.",
+      "citation_excerpt": "visual guidance using landmarks. Many bird species follow geographical features, such as coastlines, river valleys"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 21,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "Details about how human wind turbines disrupt avian migration paths."
+      },
+      "correct_answers": ["F"],
+      "explanation": "Paragraph F notes human disruptions like light pollution and wind turbines.",
+      "citation_excerpt": "developments expand—introducing light pollution... and wind turbines that disrupt flight paths"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 22,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "The annual seasonal migration patterns return of birds to nesting spots."
+      },
+      "correct_answers": ["A"],
+      "explanation": "Paragraph A states birds migrate south in autumn and return to the exact same spots in spring.",
+      "citation_excerpt": "Every autumn, millions of birds embark on epic migrations... In spring, they return north, often arriving at the exact same nesting spot"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 23,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "How birds calibrate their magnetic compass using the sunset."
+      },
+      "correct_answers": ["F"],
+      "explanation": "Paragraph F explains how systems are integrated, including calibrating magnetic directions using sunset.",
+      "citation_excerpt": "remarkable aspect of avian migration remains the integration of these systems. Birds calibrate their magnetic compass using the sunset"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 24,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "According to economists, climate change is a classic example of",
+        "options": [
+          "A. standard market transaction.",
+          "B. a negative externality or market failure.",
+          "C. revenue neutrality.",
+          "D. border adjustment tariff."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph A outlines climate change as a negative externality and the greatest market failure in history.",
+      "citation_excerpt": "greatest market failure in human history... damages are 'negative externalities'."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 25,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Carbon pricing policies are designed based on the",
+        "options": [
+          "A. corporate competitiveness act.",
+          "B. price certainty law.",
+          "C. polluter pays principle.",
+          "D. border adjustment code."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph B states carbon pricing is based on the polluter pays principle.",
+      "citation_excerpt": "This economic approach is based on the 'polluter pays principle'."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 26,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "The main benefit of a carbon tax over cap-and-trade is",
+        "options": [
+          "A. absolute environmental guarantee.",
+          "B. price certainty for businesses.",
+          "C. elimination of tax audits.",
+          "D. lower local energy rates."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph C explains that a carbon tax provides price certainty, unlike cap-and-trade.",
+      "citation_excerpt": "primary advantage of a carbon tax is price certainty; businesses know exactly how much they must pay"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 27,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Under a cap-and-trade system, if a company emits less than its limit, it can",
+        "options": [
+          "A. request cash from the government.",
+          "B. sell excess permits to other companies.",
+          "C. cancel its tax filing requirement.",
+          "D. increase its carbon footprint next year."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph D states that companies that emit less than their limit can trade (sell) their excess permits.",
+      "citation_excerpt": "If a company reduces its emissions below its allocated permits, it can sell (trade) its excess permits"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 28,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "A revenue-neutral carbon fee program returns funds directly to",
+        "options": [
+          "A. oil drilling companies.",
+          "B. foreign environmental funds.",
+          "C. citizens as dividend checks.",
+          "D. local city planners."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph E states revenue-neutral funds are returned to citizens as dividend checks or income tax cuts.",
+      "citation_excerpt": "revenue-neutral' policies, where carbon revenues are returned directly to citizens as dividend checks"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 29,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph A",
+        "headings": [
+          "i. Assigning costs through the polluter-pays model",
+          "ii. Tax certainty versus quantity uncertainty",
+          "iii. Negative externalities and market failure",
+          "iv. Operating mechanisms of cap-and-trade networks",
+          "v. Allocating revenues: green subsidies or dividends",
+          "vi. Political pushback, leakage risks, and tariffs"
+        ]
+      },
+      "correct_answers": ["iii"],
+      "explanation": "Paragraph A details negative externalities and market failure under standard fossil fuel models.",
+      "citation_excerpt": "greatest market failure in human history... negative externalities."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 30,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph B",
+        "headings": [
+          "i. Assigning costs through the polluter-pays model",
+          "ii. Tax certainty versus quantity uncertainty",
+          "iii. Negative externalities and market failure",
+          "iv. Operating mechanisms of cap-and-trade networks",
+          "v. Allocating revenues: green subsidies or dividends",
+          "vi. Political pushback, leakage risks, and tariffs"
+        ]
+      },
+      "correct_answers": ["i"],
+      "explanation": "Paragraph B covers carbon pricing and the polluter pays principle.",
+      "citation_excerpt": "carbon pricing... polluter pays principle"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 31,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph C",
+        "headings": [
+          "i. Assigning costs through the polluter-pays model",
+          "ii. Tax certainty versus quantity uncertainty",
+          "iii. Negative externalities and market failure",
+          "iv. Operating mechanisms of cap-and-trade networks",
+          "v. Allocating revenues: green subsidies or dividends",
+          "vi. Political pushback, leakage risks, and tariffs"
+        ]
+      },
+      "correct_answers": ["ii"],
+      "explanation": "Paragraph C outlines how carbon taxes provide price certainty but lack quantity guarantees.",
+      "citation_excerpt": "carbon tax... advantage... price certainty... cannot guarantee the exact volume"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 32,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph D",
+        "headings": [
+          "i. Assigning costs through the polluter-pays model",
+          "ii. Tax certainty versus quantity uncertainty",
+          "iii. Negative externalities and market failure",
+          "iv. Operating mechanisms of cap-and-trade networks",
+          "v. Allocating revenues: green subsidies or dividends",
+          "vi. Political pushback, leakage risks, and tariffs"
+        ]
+      },
+      "correct_answers": ["iv"],
+      "explanation": "Paragraph D explains cap-and-trade systems, permit allocations, and trading mechanics.",
+      "citation_excerpt": "cap-and-trade... allocated permits... sell (trade) its excess permits"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 33,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph E",
+        "headings": [
+          "i. Assigning costs through the polluter-pays model",
+          "ii. Tax certainty versus quantity uncertainty",
+          "iii. Negative externalities and market failure",
+          "iv. Operating mechanisms of cap-and-trade networks",
+          "v. Allocating revenues: green subsidies or dividends",
+          "vi. Political pushback, leakage risks, and tariffs"
+        ]
+      },
+      "correct_answers": ["v"],
+      "explanation": "Paragraph E outlines allocating revenues to green subsidies or revenue-neutral dividends.",
+      "citation_excerpt": "allocate these funds... green infrastructure... returned directly to citizens as dividend checks"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 34,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph F",
+        "headings": [
+          "i. Assigning costs through the polluter-pays model",
+          "ii. Tax certainty versus quantity uncertainty",
+          "iii. Negative externalities and market failure",
+          "iv. Operating mechanisms of cap-and-trade networks",
+          "v. Allocating revenues: green subsidies or dividends",
+          "vi. Political pushback, leakage risks, and tariffs"
+        ]
+      },
+      "correct_answers": ["vi"],
+      "explanation": "Paragraph F outlines political complaints, inflation risks, carbon leakage, and border adjustment tariffs.",
+      "citation_excerpt": "political opposition... carbon leakage... carbon border adjustment tariffs"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 35,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What term describes the environmental damages not accounted for in fuel prices?"
+      },
+      "correct_answers": ["negative externalities", "externalities"],
+      "explanation": "Paragraph A states these damages are known as negative externalities.",
+      "citation_excerpt": "damages are 'negative externalities'."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 36,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What principle dictates that carbon polluters should cover cleanup and damage costs?"
+      },
+      "correct_answers": ["polluter pays", "polluter pays principle"],
+      "explanation": "Paragraph B states carbon pricing policies are based on the polluter pays principle.",
+      "citation_excerpt": "economic approach is based on the 'polluter pays principle'."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 37,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What risk describes companies moving factories to avoid high domestic carbon prices?"
+      },
+      "correct_answers": ["carbon leakage", "leakage"],
+      "explanation": "Paragraph F notes businesses worry about carbon leakage to weaker regulatory zones.",
+      "citation_excerpt": "worry about 'carbon leakage'—the risk that high local carbon prices will force companies to relocate"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 38,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What tax is applied to imports from high-polluting nations to keep markets fair?"
+      },
+      "correct_answers": ["border tariffs", "adjustment tariffs", "carbon border adjustment tariffs", "tariffs"],
+      "explanation": "Paragraph F notes regions are introducing carbon border adjustment tariffs to tax imports.",
+      "citation_excerpt": "introducing carbon border adjustment tariffs, taxing imports from carbon-polluting regions."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 39,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What is the primary drawback of cap-and-trade systems for local businesses?"
+      },
+      "correct_answers": ["price fluctuation", "price uncertainty", "financial uncertainty"],
+      "explanation": "Paragraph D states the price of permits fluctuates, causing financial uncertainty.",
+      "citation_excerpt": "price of permits fluctuates based on market supply and demand, creating financial uncertainty"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 40,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What clean energy sources can businesses adopt to avoid carbon pricing costs?"
+      },
+      "correct_answers": ["solar and wind", "solar, wind power", "cleaner alternatives"],
+      "explanation": "Paragraph B suggests switching to low-carbon alternatives like solar and wind power.",
+      "citation_excerpt": "low-carbon alternatives, such as solar and wind power."
+    }
+  ]
+}

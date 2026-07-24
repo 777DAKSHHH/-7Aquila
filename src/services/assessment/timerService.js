@@ -4,154 +4,146 @@
  *
  * TIMER SERVICE
  *
- * Handles:
- * - Countdown timer
- * - Pause
- * - Resume
- * - Stop
- * - Reset
- * - Callbacks
- *
- * Used by:
- * Writing
- * Reading
- * Listening
- * Speaking (future)
+ * Single source of truth for CBT timers across modules.
+ * - Timestamp-based accuracy to prevent background tab drift.
+ * - Periodic database synchronization callbacks.
+ * - Warning threshold states (Normal, Warning, Critical, Expired).
  * ==========================================================
  */
 
 export class TimerService {
+  constructor({
+    duration = 1200,
+    remainingSeconds = null,
+    syncIntervalSeconds = 15,
+    onTick,
+    onSync,
+    onComplete,
+  }) {
+    this.duration = duration;
+    // Initial remaining time: use remainingSeconds if provided, else full duration
+    this.remaining =
+      typeof remainingSeconds === "number" && remainingSeconds >= 0
+        ? Math.min(remainingSeconds, duration)
+        : duration;
 
-    constructor({
+    this.syncIntervalSeconds = syncIntervalSeconds;
+    this.onTick = onTick;
+    this.onSync = onSync;
+    this.onComplete = onComplete;
 
-        duration,
+    this.interval = null;
+    this.running = false;
+    this.targetEndTime = null;
+    this.lastSyncedSeconds = this.remaining;
+  }
 
-        onTick,
+  start() {
+    if (this.running || this.remaining <= 0) return;
 
-        onComplete
+    this.running = true;
+    // Set absolute target end timestamp based on remaining seconds
+    this.targetEndTime = Date.now() + this.remaining * 1000;
 
-    }) {
+    this.interval = setInterval(() => {
+      // Calculate exact remaining time using current timestamp to eliminate drift
+      const now = Date.now();
+      const diffSeconds = Math.max(
+        0,
+        Math.round((this.targetEndTime - now) / 1000)
+      );
 
-        this.duration = duration;
+      this.remaining = diffSeconds;
+      this.onTick?.(this.remaining, this.getRemainingTime());
 
-        this.remaining = duration;
+      // Check periodic database sync threshold
+      if (
+        this.onSync &&
+        Math.abs(this.lastSyncedSeconds - this.remaining) >=
+          this.syncIntervalSeconds
+      ) {
+        this.lastSyncedSeconds = this.remaining;
+        this.onSync(this.remaining);
+      }
 
-        this.interval = null;
-
-        this.running = false;
-
-        this.onTick = onTick;
-
-        this.onComplete = onComplete;
-
-    }
-
-    start() {
-
-        if (this.running) return;
-
-        this.running = true;
-
-        this.interval = setInterval(() => {
-
-            this.remaining--;
-
-            this.onTick?.(this.remaining);
-
-            if (this.remaining <= 0) {
-
-                this.stop();
-
-                this.onComplete?.();
-
-            }
-
-        }, 1000);
-
-    }
-
-    pause() {
-
-        if (!this.running) return;
-
-        clearInterval(this.interval);
-
-        this.running = false;
-
-    }
-
-    resume() {
-
-        if (this.running) return;
-
-        this.start();
-
-    }
-
-    stop() {
-
-        clearInterval(this.interval);
-
-        this.running = false;
-
-    }
-
-    reset(seconds = this.duration) {
-
+      // Check completion
+      if (this.remaining <= 0) {
         this.stop();
+        if (this.onSync) {
+          this.onSync(0);
+        }
+        this.onComplete?.();
+      }
+    }, 1000);
+  }
 
-        this.remaining = seconds;
+  pause() {
+    if (!this.running) return;
 
+    clearInterval(this.interval);
+    this.interval = null;
+    this.running = false;
+  }
+
+  resume() {
+    if (this.running || this.remaining <= 0) return;
+    this.start();
+  }
+
+  stop() {
+    if (this.interval) {
+      clearInterval(this.interval);
+      this.interval = null;
     }
+    this.running = false;
+  }
 
-    addTime(seconds) {
+  reset(seconds = this.duration) {
+    this.stop();
+    this.remaining = seconds;
+    this.lastSyncedSeconds = seconds;
+  }
 
-        this.remaining += seconds;
+  getRemainingSeconds() {
+    return this.remaining;
+  }
 
-    }
+  getRemainingTime() {
+    const hrs = Math.floor(this.remaining / 3600);
+    const mins = Math.floor((this.remaining % 3600) / 60);
+    const secs = this.remaining % 60;
 
-    subtractTime(seconds) {
+    const formattedMins = String(mins).padStart(2, "0");
+    const formattedSecs = String(secs).padStart(2, "0");
 
-        this.remaining = Math.max(
+    const formatted =
+      hrs > 0
+        ? `${String(hrs).padStart(2, "0")}:${formattedMins}:${formattedSecs}`
+        : `${formattedMins}:${formattedSecs}`;
 
-            0,
+    return {
+      hrs,
+      mins,
+      secs,
+      formatted,
+    };
+  }
 
-            this.remaining - seconds
+  /**
+   * Warning Thresholds:
+   * - 'normal': > 5 min (300s)
+   * - 'warning': <= 5 min (300s) & > 1 min (60s)
+   * - 'critical': <= 1 min (60s) & > 0s
+   * - 'expired': 0s
+   */
+  getWarningState() {
+    if (this.remaining <= 0) return "expired";
+    if (this.remaining <= 60) return "critical";
+    if (this.remaining <= 300) return "warning";
+    return "normal";
+  }
 
-        );
-
-    }
-
-    getRemainingSeconds() {
-
-        return this.remaining;
-
-    }
-
-    getRemainingTime() {
-
-        const hrs = Math.floor(this.remaining / 3600);
-
-        const mins = Math.floor((this.remaining % 3600) / 60);
-
-        const secs = this.remaining % 60;
-
-        return {
-
-            hrs,
-
-            mins,
-
-            secs
-
-        };
-
-    }
-
-    isRunning() {
-
-        return this.running;
-
-    }
-
+  isRunning() {
+    return this.running;
+  }
 }

@@ -1,0 +1,580 @@
+{
+  "title": "IELTS Academic Reading Practice Test 3",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 60,
+  "passages": [
+    {
+      "passage_number": 1,
+      "title": "The Honeybee Colony",
+      "sub_title": "Exploring the complex social structure, division of labor, and sophisticated communication methods inside a wild honeybee hive.",
+      "content_html": "<p>Honeybees are among the most highly social insects in the world, living in highly organized colonies that can contain up to 60,000 individuals. Every honeybee inside the hive belongs to one of three distinct Castes: the queen, the workers, and the drones. Each caste has a unique physical structure and behaves in ways that support the survival of the entire colony. This highly coordinated system of social organization is known as eusociality.</p><p>The queen bee is the single most important member of the hive. Easily recognized by her long, slender body, the queen''s primary function is reproduction. She is the mother of almost all the bees in the colony. During her peak laying season in spring and summer, a healthy queen can lay up to 2,000 eggs a day. The queen also secretes chemical signals, called pheromones, that regulate the behavior and development of other bees inside the hive, preventing worker bees from laying their own eggs and keeping the colony united.</p><p>Worker bees are female bees whose reproductive organs are not fully developed. They make up the vast majority of the colony''s population and perform all the tasks necessary to maintain and defend the hive. Interestingly, a worker bee''s duties change as she ages. Young workers, called nurse bees, spend their first days cleaning cells and feeding the developing larvae. As they grow older, they transition to building wax honeycombs, guarding the hive entrance against predators, and regulating the hive''s temperature. In the final phase of their lives, worker bees become foragers, flying miles to gather nectar, pollen, and water.</p><p>Drones are the only male bees in the colony. They are larger and stouter than worker bees, with large eyes that cover most of their heads. Unlike worker bees, drones possess no stinger and do not gather food, build honeycomb, or clean cells. Their sole purpose is to mate with a young queen from a different colony during her nuptial flight. If a drone succeeds in mating, he dies immediately. In autumn, when food becomes scarce, worker bees expel the remaining drones from the hive to conserve honey reserves for winter.</p>"
+    },
+    {
+      "passage_number": 2,
+      "title": "The History and Science of Sound Recording",
+      "sub_title": "Trace the technological journey of audio captures from mechanical grooved cylinders to magnetic tape and digital formats.",
+      "content_html": "<p><strong>Paragraph A</strong><br/>Today, music is a ubiquitous part of daily life, instantly streamable on smartphones at the touch of a button. However, for most of human history, sound was transient. Once a musical performance ended, the sound vanished forever. The ability to capture and preserve acoustic waves is a relatively recent human achievement, beginning in the late 19th century. This technological journey has transformed not only how we consume art, but also how we archive history.</p><p><strong>Paragraph B</strong><br/>The era of sound recording began in 1877 when American inventor Thomas Edison introduced the phonograph. Edison''s device was purely mechanical. Sound waves spoken into a horn vibrated a thin diaphragm, which was attached to a stylus. As a hand crank rotated a cylinder wrapped in tinfoil, the vibrating stylus cut shallow grooves into the foil, recording the physical shape of the sound waves. To play back the sound, the process was reversed: the stylus followed the grooves, vibrating the diaphragm and producing weak acoustic waves amplified by the horn.</p><p><strong>Paragraph C</strong><br/>While the phonograph was a scientific marvel, it had major commercial limitations. Tinfoil cylinders were fragile, wore out quickly after a few playbacks, and could not be mass-produced. In 1887, Emile Berliner introduced the gramophone, which replaced cylinders with flat zinc discs. Berliner also developed a process to create metal stampers from a master recording, allowing printing shops to press thousands of duplicate shellac discs from a single master. This invention laid the foundation for the commercial record industry, establishing the flat disc as the standard audio format for the next century.</p><p><strong>Paragraph D</strong><br/>The mid-20th century introduced a major upgrade: electrical recording and magnetic tape. During the 1940s, researchers developed magnetic tape recorders, which converted acoustic signals into electrical currents that magnetized tiny particles of iron oxide on plastic tape. Magnetic tape allowed engineers to edit audio easily by cutting and splicing the tape, and it supported multi-track recording, enabling artists to record different instruments at different times and mix them together, which transformed musical production.</p><p><strong>Paragraph E</strong><br/>In the late 20th century, the analog era gave way to the digital revolution. In 1982, the Compact Disc (CD) was introduced. Instead of storing sound as physical grooves or magnetic fields, digital formats convert acoustic waves into binary code (ones and zeros). This binary code is stamped as microscopic pits onto a plastic disc and read by a laser beam. Because the laser does not touch the disc physically, digital recordings do not wear out over time, and they provide absolute silence during quiet passages, eliminating the background hiss typical of analog records.</p><p><strong>Paragraph F</strong><br/>Today, physical formats have largely been replaced by digital streaming and file compression algorithms, such as MP3. While early critics argued that digital compression removed some of the warmth and acoustic detail of analog tape, the convenience of storing millions of songs in pocket devices proved overwhelming. As audio technology continues to evolve, historians face new challenges in archiving digital files to ensure that the acoustic records of our era remain accessible to future generations.</p>"
+    },
+    {
+      "passage_number": 3,
+      "title": "The Economics of Behavioral Nudges",
+      "sub_title": "Analyzing how subtle changes in choice architecture can influence human behavior without restricting individual freedom, and its application to public policy.",
+      "content_html": "<p><strong>Paragraph A</strong><br/>Traditional economic models are built on the assumption that humans are 'rational actors' (often referred to by economists as Homo economicus). According to this view, individuals always make logical decisions that maximize their personal utility, evaluating costs and benefits with mathematical precision. However, the field of behavioral economics has demonstrated that human decision-making is heavily influenced by cognitive biases, emotions, and environmental cues. Rather than acting rationally, we frequently rely on mental shortcuts that lead to predictable errors in judgment.</p><p><strong>Paragraph B</strong><br/>To address these cognitive limitations, behavioral economists Richard Thaler and Cass Sunstein introduced the concept of the 'nudge'. A nudge is any aspect of choice architecture that alters people''s behavior in a predictable way without forbidding any options or significantly changing their economic incentives. Crucially, nudges are not mandates; putting fruit at eye level in a cafeteria is a nudge, but banning junk food is not. This philosophy, which seeks to influence choices while preserving individual freedom, is known as 'libertarian paternalism'.</p><p><strong>Paragraph C</strong><br/>The most powerful and widely applied behavioral nudge is the default option. Humans exhibit a strong status quo bias, meaning we tend to accept the pre-selected option because changing it requires cognitive effort. Governments have utilized this bias to solve social challenges, particularly in organ donation. In countries with 'opt-in' systems, where citizens must actively register to become donors, donation rates are typically low (often under 20 percent). Conversely, in 'opt-out' systems, where citizens are automatically registered as donors unless they actively request otherwise, consent rates frequently exceed 90 percent, saving thousands of lives without restricting individual choice.</p><p><strong>Paragraph D</strong><br/>Another significant nudge is the use of social norms. Humans are highly social creatures, and we look to the behavior of others to guide our own choices. In public policy, communicating what the majority of peers are doing can motivate conformity. For instance, tax authorities in several countries increased tax compliance simply by adding a sentence to reminder letters stating that nine out of ten citizens in their local area had already paid their taxes. Similarly, utility companies have successfully reduced energy consumption by showing households how their energy usage compares to that of their neighbors.</p><p><strong>Paragraph E</strong><br/>Nudges are also used to improve personal financial decisions, particularly retirement savings. Many employees intend to save for retirement but fail to do so because they procrastinate or focus on short-term expenditures. The 'Save More Tomorrow' program, designed by Thaler and Shlomo Benartzi, nudges employees to commit in advance to dedicating a portion of their future salary increases to their retirement accounts. Because the increased savings rate is linked to future raises, employees do not perceive it as a reduction in their current take-home pay, helping millions increase their retirement reserves.</p><p><strong>Paragraph F</strong><br/>Despite their success, behavioral nudges are not without critics. Some philosophers argue that nudges are manipulative because they bypass conscious reasoning and exploit cognitive biases to influence behavior. Others raise concerns about the potential for governments to abuse this power, directing citizens toward goals that may not be in their best interests. As behavioral science becomes an established tool of public administration, establishing ethical guidelines for the use of nudges remains a critical challenge for democratic societies.</p>"
+    }
+  ],
+  "questions": [
+    {
+      "passage_number": 1,
+      "question_number": 1,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Honeybee hives can hold more than 100,000 bees."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 1 states that colonies can contain up to 60,000 individuals, not more than 100,000.",
+      "citation_excerpt": "living in highly organized colonies that can contain up to 60,000 individuals."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 2,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Eusociality is a term used to describe honeybee social structures."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph 1 confirms this coordinated system of social organization is known as eusociality.",
+      "citation_excerpt": "This highly coordinated system of social organization is known as eusociality."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 3,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "The queen bee lays eggs primarily during winter months."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 2 states that she lays eggs during her peak season in spring and summer.",
+      "citation_excerpt": "During her peak laying season in spring and summer, a healthy queen can lay up to 2,000 eggs a day."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 4,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "The queen's pheromones prevent workers from reproducing."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph 2 notes that queen pheromones prevent worker bees from laying their own eggs.",
+      "citation_excerpt": "pheromones, that regulate the behavior and development... preventing worker bees from laying their own eggs"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 5,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Worker bees perform the same jobs throughout their entire adult life."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 3 explains that a worker bee's duties change as she ages.",
+      "citation_excerpt": "Interestingly, a worker bee's duties change as she ages. Young workers... nurse bees... As they grow older, they transition"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 6,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Drones are male bees that help clean cells."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 4 notes that drones do not gather food, build honeycomb, or clean cells.",
+      "citation_excerpt": "drones possess no stinger and do not gather food, build honeycomb, or clean cells."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 7,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Worker bees drive drones out of the hive in autumn."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph 4 explains that workers expel drones in autumn to conserve winter honey.",
+      "citation_excerpt": "In autumn, when food becomes scarce, worker bees expel the remaining drones from the hive"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Inside the hive, bees are divided into three distinct [blank]."
+      },
+      "correct_answers": ["Castes"],
+      "explanation": "Paragraph 1 states that honeybees belong to three distinct Castes.",
+      "citation_excerpt": "belongs to one of three distinct Castes: the queen, the workers, and the drones."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "The queen releases chemical signs called [blank] to control the hive."
+      },
+      "correct_answers": ["pheromones"],
+      "explanation": "Paragraph 2 notes the queen secretes chemical signals called pheromones.",
+      "citation_excerpt": "queen also secretes chemical signals, called pheromones, that regulate"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Young workers that clean and feed larvae are called [blank]."
+      },
+      "correct_answers": ["nurse bees"],
+      "explanation": "Paragraph 3 notes that young workers are called nurse bees.",
+      "citation_excerpt": "Young workers, called nurse bees, spend their first days cleaning"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 11,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Old workers leave the hive as [blank] to gather food."
+      },
+      "correct_answers": ["foragers"],
+      "explanation": "Paragraph 3 explains that in their final phase, workers become foragers.",
+      "citation_excerpt": "worker bees become foragers, flying miles to gather nectar"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 12,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Drones leave the hive to find a queen for her [blank]."
+      },
+      "correct_answers": ["nuptial flight"],
+      "explanation": "Paragraph 4 explains that drones mate during the queen's nuptial flight.",
+      "citation_excerpt": "mate with a young queen from a different colony during her nuptial flight."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 13,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Drones are expelled from the hive in autumn to save [blank]."
+      },
+      "correct_answers": ["honey reserves", "honey"],
+      "explanation": "Paragraph 4 notes that drones are expelled to conserve honey reserves.",
+      "citation_excerpt": "expel the remaining drones from the hive to conserve honey reserves for winter."
+    },
+    {
+      "passage_number": 2,
+      "question_number": 14,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "A description of the binary recording system using microscopic pits."
+      },
+      "correct_answers": ["E"],
+      "explanation": "Paragraph E outlines digital recording converting sound to binary code stamped as microscopic pits.",
+      "citation_excerpt": "convert acoustic waves into binary code (ones and zeros). This binary code is stamped as microscopic pits"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 15,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "The challenges historians face in archiving contemporary audio formats."
+      },
+      "correct_answers": ["F"],
+      "explanation": "Paragraph F notes the archiving challenges historians face with digital files.",
+      "citation_excerpt": "historians face new challenges in archiving digital files to ensure that the acoustic records of our era remain accessible"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 16,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "An explanation of how magnetic tape conversion magnetized iron oxide."
+      },
+      "correct_answers": ["D"],
+      "explanation": "Paragraph D explains that tape recorders converted signals into currents that magnetized iron oxide particles.",
+      "citation_excerpt": "magnetic tape recorders, which converted acoustic signals into electrical currents that magnetized tiny particles of iron oxide"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 17,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "An outline of the transient nature of music before sound capture technology."
+      },
+      "correct_answers": ["A"],
+      "explanation": "Paragraph A states that before late 19th-century capture, sounds were transient and vanished.",
+      "citation_excerpt": "for most of human history, sound was transient. Once a musical performance ended, the sound vanished forever."
+    },
+    {
+      "passage_number": 2,
+      "question_number": 18,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "Details about Thomas Edison's mechanical phonograph recording stylus."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph B outlines Edison's mechanical phonograph stylus cutting grooves in foil.",
+      "citation_excerpt": "Thomas Edison introduced the phonograph... mechanical... vibrating stylus cut shallow grooves into the foil"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 19,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "Commercial benefits of using flat discs over fragile cylinders."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph C compares Berliner's flat record discs to fragile cylinders and notes their duplication benefits.",
+      "citation_excerpt": "Tinfoil cylinders were fragile, wore out quickly... Berliner introduced the gramophone, which replaced cylinders with flat zinc discs."
+    },
+    {
+      "passage_number": 2,
+      "question_number": 20,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Edison created a mechanical sound capturing device called a [blank]. It used a stylus to carve grooves into [blank] wrapping."
+      },
+      "correct_answers": ["phonograph", "tinfoil"],
+      "explanation": "Paragraph B explains that Edison's phonograph stylus cut grooves into foil.",
+      "citation_excerpt": "Edison introduced the phonograph... stylus cut shallow grooves into the foil, recording the physical shape"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 21,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Berliner improved this by replacing cylinders with zinc [blank], allowing mass duplication."
+      },
+      "correct_answers": ["discs", "flat discs", "zinc discs"],
+      "explanation": "Paragraph C explains Berliner introduced flat zinc discs.",
+      "citation_excerpt": "gramophone, which replaced cylinders with flat zinc discs."
+    },
+    {
+      "passage_number": 2,
+      "question_number": 22,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Later, [blank] allowed audio splicing and multi-track mixing."
+      },
+      "correct_answers": ["magnetic tape", "tape"],
+      "explanation": "Paragraph D states magnetic tape allowed easy editing via splicing and mixing.",
+      "citation_excerpt": "Magnetic tape allowed engineers to edit audio easily by cutting and splicing... supported multi-track"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 23,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "In the digital era, laser beams read code stamped onto a [blank] without wear."
+      },
+      "correct_answers": ["plastic disc", "CD", "Compact Disc"],
+      "explanation": "Paragraph E explains digital code is stamped on plastic discs and read by lasers.",
+      "citation_excerpt": "binary code is stamped as microscopic pits onto a plastic disc and read by a laser beam."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 24,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph A",
+        "headings": [
+          "i. Defining nudges and libertarian paternalism",
+          "ii. Psychological critiques of manipulative policies",
+          "iii. The limits of the rational actor model",
+          "iv. Harnessing defaults for organ donation",
+          "v. Leveraging social compliance through local norms",
+          "vi. Timing commits for pension savings"
+        ]
+      },
+      "correct_answers": ["iii"],
+      "explanation": "Paragraph A details the limits of the 'rational actor' model, pointing out how cognitive biases distort choices.",
+      "citation_excerpt": "Traditional economic models are built on the assumption that humans are 'rational actors'... behavioral economics has demonstrated that human decision-making is heavily influenced"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 25,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph B",
+        "headings": [
+          "i. Defining nudges and libertarian paternalism",
+          "ii. Psychological critiques of manipulative policies",
+          "iii. The limits of the rational actor model",
+          "iv. Harnessing defaults for organ donation",
+          "v. Leveraging social compliance through local norms",
+          "vi. Timing commits for pension savings"
+        ]
+      },
+      "correct_answers": ["i"],
+      "explanation": "Paragraph B introduces Thaler and Sunstein's nudge concept and defines libertarian paternalism.",
+      "citation_excerpt": "introduced the concept of the 'nudge'... influence choices while preserving individual freedom, is known as 'libertarian paternalism'."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 26,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph C",
+        "headings": [
+          "i. Defining nudges and libertarian paternalism",
+          "ii. Psychological critiques of manipulative policies",
+          "iii. The limits of the rational actor model",
+          "iv. Harnessing defaults for organ donation",
+          "v. Leveraging social compliance through local norms",
+          "vi. Timing commits for pension savings"
+        ]
+      },
+      "correct_answers": ["iv"],
+      "explanation": "Paragraph C explains how default options are used in organ donation rates.",
+      "citation_excerpt": "most powerful... nudge is the default option... solve social challenges, particularly in organ donation."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 27,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph D",
+        "headings": [
+          "i. Defining nudges and libertarian paternalism",
+          "ii. Psychological critiques of manipulative policies",
+          "iii. The limits of the rational actor model",
+          "iv. Harnessing defaults for organ donation",
+          "v. Leveraging social compliance through local norms",
+          "vi. Timing commits for pension savings"
+        ]
+      },
+      "correct_answers": ["v"],
+      "explanation": "Paragraph D outlines the social norm nudge, using local peer statistics to drive compliance.",
+      "citation_excerpt": "use of social norms. Humans are highly social... tax compliance simply by adding a sentence... paid their taxes."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 28,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph E",
+        "headings": [
+          "i. Defining nudges and libertarian paternalism",
+          "ii. Psychological critiques of manipulative policies",
+          "iii. The limits of the rational actor model",
+          "iv. Harnessing defaults for organ donation",
+          "v. Leveraging social compliance through local norms",
+          "vi. Timing commits for pension savings"
+        ]
+      },
+      "correct_answers": ["vi"],
+      "explanation": "Paragraph E outlines saving retirement funds early through the Save More Tomorrow program.",
+      "citation_excerpt": "improve personal financial decisions, particularly retirement savings... commit in advance to dedicating a portion of their future salary"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 29,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph F",
+        "headings": [
+          "i. Defining nudges and libertarian paternalism",
+          "ii. Psychological critiques of manipulative policies",
+          "iii. The limits of the rational actor model",
+          "iv. Harnessing defaults for organ donation",
+          "v. Leveraging social compliance through local norms",
+          "vi. Timing commits for pension savings"
+        ]
+      },
+      "correct_answers": ["ii"],
+      "explanation": "Paragraph F covers ethical criticisms of nudges, including claims of manipulation.",
+      "citation_excerpt": "behavioral nudges are not without critics. Some philosophers argue that nudges are manipulative"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 30,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Traditional economic models describe humans as",
+        "options": [
+          "A. cognitive outliers.",
+          "B. emotional buyers.",
+          "C. rational actors.",
+          "D. biased decision makers."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph A states traditional economic models assume humans are rational actors.",
+      "citation_excerpt": "Traditional economic models are built on the assumption that humans are 'rational actors'"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 31,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Placing fruit at eye level in a school cafeteria is an example of a",
+        "options": [
+          "A. dietary restriction.",
+          "B. mandate.",
+          "C. nudge.",
+          "D. public tax."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph B defines nudges and uses placing fruit at eye level as an example.",
+      "citation_excerpt": "nudges are not mandates; putting fruit at eye level in a cafeteria is a nudge"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 32,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Organ donation rates are generally highest in nations using",
+        "options": [
+          "A. opt-in systems.",
+          "B. opt-out systems.",
+          "C. donation campaigns.",
+          "D. medical taxes."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph C notes countries with opt-out registration systems see consent rates exceed 90 percent.",
+      "citation_excerpt": "in 'opt-out' systems, where citizens are automatically registered as donors... consent rates frequently exceed 90 percent"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 33,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "The Save More Tomorrow program nudges employees to save for retirement using",
+        "options": [
+          "A. immediate pay cuts.",
+          "B. advance raise commitments.",
+          "C. tax penalties.",
+          "D. mandatory matching rules."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph E states employees commit in advance to dedicate future salary increases to savings.",
+      "citation_excerpt": "employees to commit in advance to dedicating a portion of their future salary increases"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 34,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Mental shortcuts can cause people to make systematic mistakes in evaluation."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "Paragraph A states humans rely on mental shortcuts that lead to predictable errors.",
+      "citation_excerpt": "we frequently rely on mental shortcuts that lead to predictable errors in judgment."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 35,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Richard Thaler is a philosopher who opposed the idea of libertarian paternalism."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "Thaler is a behavioral economist who introduced nudges and libertarian paternalism, not an opponent.",
+      "citation_excerpt": "behavioral economists Richard Thaler and Cass Sunstein introduced... libertarian paternalism."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 36,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Every philosopher agrees that nudges represent an ethical improvement in public policy."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "Paragraph F notes that some philosophers critique nudges as manipulative.",
+      "citation_excerpt": "behavioral nudges are not without critics. Some philosophers argue that nudges are manipulative"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 37,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What bias describes our tendency to accept pre-selected options to save effort?"
+      },
+      "correct_answers": ["status quo", "status quo bias"],
+      "explanation": "Paragraph C notes that status quo bias causes humans to accept default options.",
+      "citation_excerpt": "Humans exhibit a strong status quo bias, meaning we tend to accept the pre-selected"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 38,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What mechanism did tax authorities add to reminder notices to improve compliance?"
+      },
+      "correct_answers": ["social norms", "social norm"],
+      "explanation": "Paragraph D states tax authorities utilized social norms to guide compliant choices.",
+      "citation_excerpt": "Another significant nudge is the use of social norms... adding a sentence to reminder letters"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 39,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "Who designed the retirement program named Save More Tomorrow?"
+      },
+      "correct_answers": ["Thaler, Benartzi", "Thaler and Benartzi"],
+      "explanation": "Paragraph E lists the designers of the program as Richard Thaler and Shlomo Benartzi.",
+      "citation_excerpt": "Save More Tomorrow' program, designed by Thaler and Shlomo Benartzi"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 40,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What do critics worry governments might do with behavioral nudges?"
+      },
+      "correct_answers": ["abuse power", "abuse", "manipulate citizens"],
+      "explanation": "Paragraph F notes that critics raise concerns about the potential for governments to abuse this power.",
+      "citation_excerpt": "concerns about the potential for governments to abuse this power, directing citizens toward goals"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "title": "Practice Passage 5: The Emergence of the Sharing Economy",
+  "test_type": "academic",
+  "difficulty": "hard",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Emergence of the Sharing Economy",
+    "sub_title": "Analyzing the shift from individual ownership to shared access, its socio-economic drivers, and the regulatory challenges it presents.",
+    "content_html": "<p>In recent years, a major shift has occurred in how consumers access goods and services. Traditionally, the capitalist model of consumerism emphasized private ownership: buying cars, tools, houses, and equipment that remained idle for the majority of their lifespans. Today, however, peer-to-peer technology platforms have enabled the rapid growth of the 'sharing economy' (also known as the collaborative consumption model). Under this economic paradigm, individuals can rent underutilized assets directly from one another, coordinated through centralized mobile applications. The core philosophy of this model is that access to a resource is more valuable than outright ownership.</p><p>Several key factors have driven the rapid growth of this model. The most significant is the widespread adoption of smartphones and real-time GPS tracking, which allow transaction networks to match supply and demand instantly. Additionally, the global financial crisis of 2008 left many consumers looking for ways to reduce expenditure while supplementing their incomes. The sharing economy offered a convenient solution, allowing individuals to monetize assets they already owned, such as empty rooms, parking spaces, or vehicles. For passengers and travelers, these services provided cheaper, more flexible alternatives to traditional taxis and hotels.</p><p>Environmental concerns have also contributed to the appeal of collaborative consumption. Proponents argue that sharing assets reduces the need to manufacture new products, conserving raw materials and reducing greenhouse gas emissions. For instance, car-sharing services can lower the total number of vehicles on the road, reducing traffic congestion and urban parking demands. However, critics point out that this environmental benefit is not always realized. Studies have shown that cheap ride-hailing services sometimes draw passengers away from public transport networks rather than reducing private car ownership, leading to a net increase in traffic and emissions in some cities.</p><p>Furthermore, the sharing economy has introduced significant social challenges, particularly regarding the rights and security of workers. Unlike traditional employment, where companies provide benefits, sick leave, and minimum wage guarantees, sharing economy platforms classify service providers as 'independent contractors'. This classification creates the 'gig economy', where workers bear all the operating risks and expenses, such as vehicle maintenance and insurance, with no long-term job security. While some workers enjoy the flexibility of choosing their own hours, others find themselves working long hours for low pay, leading to intense debates about labor exploitation and the need for new labor laws.</p><p>Regulatory frameworks have struggled to keep pace with these rapid changes. Established industries, such as licensed taxi networks and hotel associations, have lobbied governments aggressively to enforce strict regulations on sharing platforms, accusing them of unfair competition. Cities worldwide have responded in various ways, with some banning short-term rentals and ride-hailing services completely, while others have introduced new taxes and license requirements. As these platforms grow, finding a balance between encouraging business innovation and protecting public interest remains a major challenge for policymakers around the globe.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose THREE letters, A–G.",
+      "question_data": {
+        "text": "The writer mentions which of the following as primary drivers of the sharing economy? Select THREE options.",
+        "options": [
+          "A. The global financial crisis of 2008.",
+          "B. Widespread adoption of smartphone technology.",
+          "C. Government subsidies for eco-friendly platforms.",
+          "D. A shift towards valuing access over ownership.",
+          "E. The decline of public transport networks.",
+          "F. An increase in traditional corporate employment.",
+          "G. Trade unions demanding labor changes."
+        ]
+      },
+      "correct_answers": ["A", "B", "D"],
+      "explanation": "The text explicitly states: 1. the 2008 financial crisis driven need for income, 2. smartphones/GPS technology matching supply and demand, and 3. the shift towards valuing access over ownership.",
+      "citation_excerpt": "The core philosophy of this model is that access to a resource is more valuable than outright ownership... The most significant is the widespread adoption of smartphones... Additionally, the global financial crisis of 2008 left many consumers looking for ways"
+    },
+    {
+      "question_number": 2,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete each sentence using NO MORE THAN TWO WORDS from the passage.",
+      "question_data": {
+        "text": "Traditional capitalist consumerism focused on the concept of [blank] rather than shared resources."
+      },
+      "correct_answers": ["private ownership"],
+      "explanation": "The first paragraph states that the traditional capitalist model of consumerism emphasized private ownership.",
+      "citation_excerpt": "Traditionally, the capitalist model of consumerism emphasized private ownership"
+    },
+    {
+      "question_number": 3,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete each sentence using NO MORE THAN TWO WORDS from the passage.",
+      "question_data": {
+        "text": "Rather than employ workers directly, sharing platforms label them as [blank]."
+      },
+      "correct_answers": ["independent contractors"],
+      "explanation": "The fourth paragraph states that sharing economy platforms classify service providers as 'independent contractors'.",
+      "citation_excerpt": "sharing economy platforms classify service providers as 'independent contractors'."
+    },
+    {
+      "question_number": 4,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete each sentence using NO MORE THAN TWO WORDS from the passage.",
+      "question_data": {
+        "text": "In the gig economy, workers must pay for their own [blank], including insurance."
+      },
+      "correct_answers": ["operating risks", "expenses", "operating expenses"],
+      "explanation": "The text lists expenses that workers must bear, such as vehicle maintenance and insurance, which are characterized as operating risks/expenses.",
+      "citation_excerpt": "workers bear all the operating risks and expenses, such as vehicle maintenance and insurance"
+    },
+    {
+      "question_number": 5,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete each sentence using NO MORE THAN TWO WORDS from the passage.",
+      "question_data": {
+        "text": "Traditional hotels and taxi networks claim sharing apps engage in [blank]."
+      },
+      "correct_answers": ["unfair competition"],
+      "explanation": "The final paragraph notes that traditional sectors accused sharing platforms of unfair competition.",
+      "citation_excerpt": "accusing them of unfair competition."
+    },
+    {
+      "question_number": 6,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Underutilized items like tools or cars remain unused for the majority of their lifespans under private ownership."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "The first paragraph notes that under private ownership, items remained idle for the majority of their lifespans.",
+      "citation_excerpt": "buying cars, tools, houses, and equipment that remained idle for the majority of their lifespans."
+    },
+    {
+      "question_number": 7,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Car-sharing systems have succeeded in significantly reducing traffic congestion in every city."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "The third paragraph notes that studies show ride-hailing services draw passengers away from public transport, actually leading to an increase in traffic in some cities.",
+      "citation_excerpt": "sometimes draw passengers away from public transport networks... leading to a net increase in traffic and emissions in some cities."
+    },
+    {
+      "question_number": 8,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Gig economy platforms offer sick leave and minimum wage guarantees to contractors."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "The fourth paragraph states that unlike traditional employment, platforms do not offer benefits like sick leave and minimum wage guarantees.",
+      "citation_excerpt": "Unlike traditional employment, where companies provide benefits, sick leave, and minimum wage guarantees, sharing economy platforms classify service..."
+    },
+    {
+      "question_number": 9,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Some cities have banned ride-hailing and short-term rentals due to corporate lobbying."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "The final paragraph notes established industries lobbied aggressively, and cities responded by banning services entirely.",
+      "citation_excerpt": "licensed taxi networks and hotel associations, have lobbied governments aggressively... Cities worldwide have responded in various ways, with some banning"
+    },
+    {
+      "question_number": 10,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Government laws are catching up very quickly to regulate the gig economy."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "The text states that regulatory frameworks have struggled to keep pace with the changes.",
+      "citation_excerpt": "Regulatory frameworks have struggled to keep pace with these rapid changes."
+    }
+  ]
+}

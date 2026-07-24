@@ -1,0 +1,187 @@
+{
+  "title": "Practice Passage 6: The Role of Epigenetics in Genetics",
+  "test_type": "academic",
+  "difficulty": "hard",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Role of Epigenetics in Genetics",
+    "sub_title": "Understanding how environmental factors can alter gene expression without changing the primary DNA sequence.",
+    "content_html": "<p>For decades, the dominant paradigm in biology was that our genes determine our physical traits and health outcomes. According to this deterministic view, the DNA sequence we inherit from our parents is a fixed blueprint, and our biological destiny is largely pre-determined. However, the emerging field of epigenetics has challenged this traditional view. Epigenetics, which literally translates to 'above genetics', is the study of cellular and physiological trait variations that are not caused by changes in the underlying DNA sequence. Instead, it focuses on how environmental factors, such as diet, stress, and toxins, can modify gene expression, turning genes on or off like light switches.</p><p>To understand epigenetics, it is helpful to look at the structure of DNA inside the cell. If stretched out, the DNA in a single human cell would be about two metres long. To fit inside the microscopic nucleus, DNA is tightly wound around packaging proteins called histones. This DNA-protein complex is known as chromatin. Chemical tags attached to either the DNA itself or to the histones determine how tightly the DNA is wound. When DNA is wrapped tightly around histones, the molecular machinery of the cell cannot access it, meaning the gene is effectively silenced. Conversely, when the chromatin structure is relaxed, the genes are exposed and can be read by the cell to produce proteins.</p><p>The two most thoroughly studied epigenetic mechanisms are DNA methylation and histone modification. DNA methylation involves the attachment of small chemical tags, called methyl groups, directly to the DNA molecule, usually silencing the gene. Histone modification, on the other hand, involves the addition of chemical tags (such as acetyl groups) to histones, which can either tighten or loosen the chromatin structure. These chemical tags are collectively referred to as the 'epigenome'. While the genome remains identical across all cells in an individual's body, the epigenome varies widely between different cell types, allowing a skin cell to function differently from a brain cell despite carrying the exact same DNA.</p><p>Epigenetic changes are not only vital for normal development, but they also play a significant role in disease. For example, in many cancers, the normal pattern of DNA methylation is disrupted. Genes that would normally prevent cancer cells from growing (tumor suppressor genes) are often hypermethylated, meaning they are permanently turned off. Conversely, genes that promote cell growth (oncogenes) may be hypomethylated, causing them to become overactive. Researchers are now developing epigenetic therapies that aim to remove these abnormal chemical tags, effectively turning cancer-fighting genes back on.</p><p>Perhaps the most controversial aspect of epigenetics is the discovery that some epigenetic marks can be inherited across generations. Historically, it was believed that when an egg and sperm fuse, all epigenetic tags are erased, resetting the embryo to a clean slate. However, studies on plants, rodents, and even humans suggest that some epigenetic modifications survive this resetting process. A famous study of the Dutch Hunger Winter of 1944–1945 showed that children conceived during the famine had unique epigenetic tags that altered their metabolism, making them more prone to obesity and cardiovascular disease in adulthood. Surprisingly, some of these traits were also observed in their children, suggesting that the starvation of grandparents can leave a biological mark on grandchildren.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "The traditional view of genetics held that our biological traits are",
+        "options": [
+          "A. altered constantly by our dietary choices.",
+          "B. determined solely by the inherited DNA sequence.",
+          "C. affected by the number of histones in our cells.",
+          "D. reset completely in every new generation."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "The first paragraph explains that the traditional, deterministic view held that our traits and health are pre-determined by the fixed DNA blueprint we inherit.",
+      "citation_excerpt": "According to this deterministic view, the DNA sequence we inherit from our parents is a fixed blueprint, and our biological destiny is largely pre-determined."
+    },
+    {
+      "question_number": 2,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "What does the term 'epigenetics' translate to literally?",
+        "options": [
+          "A. Beneath genetics.",
+          "B. Above genetics.",
+          "C. Altered genes.",
+          "D. Environmental science."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "The first paragraph notes that epigenetics literally translates to 'above genetics'.",
+      "citation_excerpt": "Epigenetics, which literally translates to 'above genetics'"
+    },
+    {
+      "question_number": 3,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Which statement describes chromatin when a gene is silenced?",
+        "options": [
+          "A. The DNA is loosely wrapped around the histones.",
+          "B. The histones are removed from the cell nucleus.",
+          "C. The DNA is tightly wound around packaging proteins.",
+          "D. The DNA molecules are broken into smaller segments."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "The second paragraph explains that when DNA is wrapped tightly around histones (the complex called chromatin), cellular machinery cannot access it, silencing the gene.",
+      "citation_excerpt": "This DNA-protein complex is known as chromatin. Chemical tags attached to either the DNA itself or to the histones determine how tightly the DNA is wound. When DNA is wrapped tightly around histones... the gene is effectively silenced."
+    },
+    {
+      "question_number": 4,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "DNA methylation usually occurs when methyl groups",
+        "options": [
+          "A. loosen the chromatin structures.",
+          "B. attach directly to the DNA molecule.",
+          "C. replicate the underlying genome.",
+          "D. alter the function of brain cells."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "The third paragraph defines DNA methylation as the attachment of small chemical tags directly to the DNA molecule.",
+      "citation_excerpt": "DNA methylation involves the attachment of small chemical tags, called methyl groups, directly to the DNA molecule"
+    },
+    {
+      "question_number": 5,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "In many cancers, tumor suppressor genes become hypermethylated, which means they are",
+        "options": [
+          "A. destroyed by the immune system.",
+          "B. permanently turned off.",
+          "C. duplicated inside oncogenes.",
+          "D. converted into healthy skin cells."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "The fourth paragraph explains that tumor suppressor genes in many cancers are hypermethylated, meaning they are permanently turned off.",
+      "citation_excerpt": "Genes that would normally prevent cancer cells from growing (tumor suppressor genes) are often hypermethylated, meaning they are permanently turned off."
+    },
+    {
+      "question_number": 6,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "The genome varies widely between different cell types in the same individual."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "The third paragraph notes that the genome remains identical across all cells in an individual's body, while the epigenome varies.",
+      "citation_excerpt": "While the genome remains identical across all cells in an individual's body, the epigenome varies widely between different cell types"
+    },
+    {
+      "question_number": 7,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "Histone modification is the only mechanism of epigenetic change."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "The third paragraph states that the two most thoroughly studied mechanisms are DNA methylation AND histone modification.",
+      "citation_excerpt": "The two most thoroughly studied epigenetic mechanisms are DNA methylation and histone modification."
+    },
+    {
+      "question_number": 8,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "Epigenetic therapies are currently widely available in hospitals worldwide."
+      },
+      "correct_answers": ["NOT GIVEN"],
+      "explanation": "The fourth paragraph mentions that researchers are developing epigenetic therapies, but does not provide any information about their widespread clinical availability in hospitals worldwide.",
+      "citation_excerpt": ""
+    },
+    {
+      "question_number": 9,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "The Dutch Hunger Winter study demonstrated that grandchildren can be affected by their grandparents' starvation."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "The final paragraph mentions that traits from the famine were observed in the children's children, suggesting starvation of grandparents leaves a mark on grandchildren.",
+      "citation_excerpt": "Surprisingly, some of these traits were also observed in their children, suggesting that the starvation of grandparents can leave a biological mark on grandchildren."
+    },
+    {
+      "question_number": 10,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "Biologists have always believed that epigenetic tags can survive the embryo fertilization process."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "The passage notes that historically, it was believed that all epigenetic tags are erased, and the inheritance of these tags is a controversial discovery that challenged this view.",
+      "citation_excerpt": "Historically, it was believed that when an egg and sperm fuse, all epigenetic tags are erased, resetting the embryo to a clean slate. However, studies... suggest that some... survive"
+    },
+    {
+      "question_number": 11,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN THREE WORDS.",
+      "question_data": {
+        "text": "What name is given to the complex formed by DNA wrapping around histones?"
+      },
+      "correct_answers": ["chromatin"],
+      "explanation": "The second paragraph states that the DNA-protein complex is known as chromatin.",
+      "citation_excerpt": "This DNA-protein complex is known as chromatin."
+    },
+    {
+      "question_number": 12,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN THREE WORDS.",
+      "question_data": {
+        "text": "Which chemical tags attach directly to the DNA molecule during methylation?"
+      },
+      "correct_answers": ["methyl groups"],
+      "explanation": "The third paragraph describes DNA methylation as involving the attachment of methyl groups directly to the DNA.",
+      "citation_excerpt": "DNA methylation involves the attachment of small chemical tags, called methyl groups, directly to the DNA"
+    },
+    {
+      "question_number": 13,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN THREE WORDS.",
+      "question_data": {
+        "text": "What historical event in 1944-1945 provided evidence of transgenerational epigenetic inheritance in humans?"
+      },
+      "correct_answers": ["Dutch Hunger Winter", "the Dutch Hunger Winter"],
+      "explanation": "The final paragraph notes that a famous study of the Dutch Hunger Winter showed epigenetic marks passed across generations.",
+      "citation_excerpt": "A famous study of the Dutch Hunger Winter of 1944–1945 showed that children"
+    }
+  ]
+}

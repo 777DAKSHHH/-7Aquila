@@ -1,0 +1,580 @@
+{
+  "title": "IELTS Academic Reading Practice Test 1",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 60,
+  "passages": [
+    {
+      "passage_number": 1,
+      "title": "The Agricultural Origins of Early Civilizations",
+      "sub_title": "How the domestication of wild plants and animals transitioned humans from nomadic bands to complex societies.",
+      "content_html": "<p>For roughly 99 percent of human history, our ancestors lived as nomadic hunter-gatherers. They wandered in small bands, following seasonal migrations of animals and harvesting wild fruits, nuts, and roots. This lifestyle restricted population growth, as the natural environment could only support a limited number of people per square mile. However, around 10,000 years ago, a profound transformation occurred in a region of the Middle East known as the Fertile Crescent. Humans began to domesticate wild plants and animals, initiating the Agricultural Revolution, also known as the Neolithic Transition.</p><p>The transition was not sudden. Rather, it was a gradual process that spanned centuries. Early gatherers likely observed that wild seeds dropped onto disturbed soils grew into plants the following year. Over generations, they began actively selecting seeds from the largest and healthiest wild cereals, such as emmer wheat and barley, sowing them in designated plots. Simultaneously, they began taming wild goats, sheep, and pigs, protecting them from predators in exchange for milk, wool, and meat. This system of selective breeding slowly modified the genetics of these species, making them more dependent on humans but far more productive.</p><p>Agriculture brought about a fundamental shift in human settlement patterns. Unlike foraging, which required constant migration, farming demanded that people remain in one place to plant, tend, and harvest crops. Consequently, the first permanent villages emerged. For the first time, agricultural societies could produce a surplus of food—more than was necessary for immediate survival. This surplus allowed populations to expand rapidly, and it freed some individuals from the daily struggle of food procurement, enabling them to specialize in other crafts such as pottery, metallurgy, and weaving.</p><p>This specialization of labor laid the foundation for social hierarchies and complex political organizations. As villages grew into towns and eventually cities, public works, such as irrigation canals and defensive walls, required coordinated leadership. A ruling class of kings, priests, and administrators emerged to manage these projects, resolve disputes, and collect taxes in the form of grain. To keep track of these tax payments and trade transactions, early administrators developed the first writing systems, such as cuneiform in Mesopotamia, marking the dawn of recorded history.</p>"
+    },
+    {
+      "passage_number": 2,
+      "title": "The Rise of Urban Heat Islands",
+      "sub_title": "Analyzing why cities experience significantly higher temperatures than their surrounding rural environments, and the mitigation strategies available to urban planners.",
+      "content_html": "<p><strong>Paragraph A</strong><br/>As global populations increasingly migrate to urban centers, cities are growing larger and more densely packed. However, this growth has altered the local climate of urban areas, leading to a phenomenon known as the Urban Heat Island (UHI) effect. Under this effect, metropolitan areas experience temperatures that are significantly higher—sometimes up to 10 degrees Celsius warmer—than nearby rural or suburban landscapes. This temperature difference is usually most pronounced at night, when the heat absorbed by city structures during the day is released back into the air.</p><p><strong>Paragraph B</strong><br/>Several structural and material factors contribute to the UHI effect. The most prominent is the replacement of natural vegetation with impervious artificial surfaces. In rural environments, plants and trees cool the air through a process called evapotranspiration, in which water is absorbed by roots and released as vapor from leaves. In cities, pavements, roads, and rooftops made of asphalt and concrete prevent water infiltration and reflect less solar radiation. Instead, these dark materials absorb solar energy during the day and slowly radiate it as heat, warming the urban boundary layer.</p><p><strong>Paragraph C</strong><br/>City geometry also plays a major role in trapping heat. Tall buildings constructed close together create 'urban canyons'. These narrow configurations block wind flow, preventing cool breezes from circulating and flushing out hot air. Additionally, multiple reflections of solar radiation between building walls further increase heat absorption. This geometric trapping, combined with the lack of open green spaces, prevents cities from cooling down efficiently after sunset.</p><p><strong>Paragraph D</strong><br/>Another significant source of urban warmth is 'anthropogenic heat'—heat generated by human activities. Air conditioning systems, vehicle engines, factory operations, and electrical appliances all release heat directly into the environment. Paradoxically, as temperatures rise, residents increase their use of air conditioning, which in turn expels more hot air onto the streets, creating a positive feedback loop that worsens the urban climate.</p><p><strong>Paragraph E</strong><br/>The consequences of the UHI effect extend beyond discomfort. High temperatures increase energy demands for cooling, straining power grids and raising greenhouse gas emissions from fossil-fuel power plants. UHI also accelerates the formation of ground-level ozone, a harmful pollutant created when vehicle emissions react with sunlight at high temperatures. During heatwaves, UHIs significantly increase the risk of heat exhaustion and heatstroke, particularly among vulnerable populations such as the elderly and low-income communities lacking access to air conditioning.</p><p><strong>Paragraph F</strong><br/>Urban planners are actively developing strategies to mitigate the UHI effect. One approach is the installation of 'cool roofs' coated with highly reflective materials that reflect solar radiation back into space. Another is the creation of 'green roofs' covered with vegetation, which provide natural cooling through shading and evapotranspiration. Expanding urban forests by planting trees along streets and parking lots, and building parks can create cool oases in concrete landscapes, making cities more resilient to climate change.</p>"
+    },
+    {
+      "passage_number": 3,
+      "title": "The Neurobiology of Memory Consolidation",
+      "sub_title": "How the brain converts short-term memories into stable, long-term representations, and the vital role of sleep in this cognitive process.",
+      "content_html": "<p><strong>Paragraph A</strong><br/>Memory is essential for human identity, allowing us to learn from experience, navigate the present, and plan for the future. However, memories are not written instantly onto the brain like data onto a hard drive. When we experience something new, the information is initially stored in a highly fragile state, easily disrupted by new inputs or physical trauma. For these experiences to become permanent parts of our cognitive repertoire, they must undergo a complex biological stabilization process known as memory consolidation.</p><p><strong>Paragraph B</strong><br/>Memory consolidation operates at two distinct levels: synaptic and systemic. Synaptic consolidation occurs within minutes to hours following learning. It involves local changes in the strength of connections between neurons (synapses) in specific brain areas. When we learn, signals pass repeatedly between neurons, triggering chemical changes that strengthen their connection—a phenomenon known as long-term potentiation. This strengthening requires the synthesis of new proteins to rebuild and stabilize the synaptic structure, creating the basic physical trace of a memory, known as an engram.</p><p><strong>Paragraph C</strong><br/>Systemic consolidation, in contrast, is a much slower process that unfolds over weeks, months, or even years. It involves a major reorganization of memory representations across different brain systems. The primary brain structure involved in the initial encoding of conscious memories is the hippocampus, a seahorse-shaped region located deep within the temporal lobe. While the hippocampus can form memories quickly, its storage capacity is limited, and it is prone to overwrite. Systemic consolidation slowly transfers these temporary hippocampal representations to the neocortex, the outer layer of the brain, which serves as a permanent, high-capacity storage system.</p><p><strong>Paragraph D</strong><br/>According to the standard model of systems consolidation, the hippocampus acts as a temporary index. When we recall a recent memory, the hippocampus is activated to retrieve and bind the different sensory details stored in the neocortex. Over time, as we repeatedly recall the memory or sleep, direct connections form between the different cortical regions. Eventually, these cortical connections become strong enough to retrieve the memory independently, and the hippocampus is no longer required for its recall, explaining why patients with hippocampal damage can recall childhood memories but cannot form new long-term ones.</p><p><strong>Paragraph E</strong><br/>In recent years, researchers have discovered that sleep plays a vital role in systems consolidation. During non-rapid eye movement (NREM) sleep, the brain exhibits slow, synchronized electrical waves. During these periods, the brain essentially 'replays' the patterns of neural activity that occurred during learning, but at a much faster speed. This replay is believed to act as a training signal, sending information from the hippocampus to the neocortex and stimulating the neural plasticity needed to form permanent cortical connections.</p><p><strong>Paragraph F</strong><br/>Conversely, sleep deprivation severely impairs memory consolidation. Studies have shown that sleep-deprived subjects perform significantly worse on memory recall tests than those who slept normally following learning. Without adequate sleep, the brain cannot replay memories, leaving them in their fragile, hippocampal state where they are gradually overwritten by new experiences. As modern society becomes increasingly sleep-deprived, understanding the biological link between sleep and memory has become more important than ever for education, cognitive health, and aging.</p>"
+    }
+  ],
+  "questions": [
+    {
+      "passage_number": 1,
+      "question_number": 1,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "For the majority of human history, humans lived in stationary communities."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 1 states that for 99% of human history, our ancestors lived as nomadic hunter-gatherers, wandering in small bands rather than living in stationary communities.",
+      "citation_excerpt": "For roughly 99 percent of human history, our ancestors lived as nomadic hunter-gatherers. They wandered in small bands"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 2,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "The Agricultural Revolution began approximately 10,000 years ago."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph 1 confirms that around 10,000 years ago, a profound transformation occurred, initiating the Agricultural Revolution.",
+      "citation_excerpt": "around 10,000 years ago, a profound transformation occurred in a region of the Middle East known as the Fertile Crescent. Humans began to domesticate wild plants and animals, initiating the Agricultural Revolution"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 3,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Early gatherers selected seeds randomly without observing their growth."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 2 explains that they observed seeds growing on disturbed soils and actively selected the largest and healthiest wild cereals, which is the opposite of random selection.",
+      "citation_excerpt": "Early gatherers likely observed that wild seeds dropped onto disturbed soils grew into plants the following year. Over generations, they began actively selecting seeds from the largest and healthiest wild cereals"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 4,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Goats and sheep were tamed to help protect farms from larger wild predators."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "The passage says humans protected the animals from predators in exchange for resources (milk, wool, meat), not that the animals were tamed to protect the farms.",
+      "citation_excerpt": "Simultaneously, they began taming wild goats, sheep, and pigs, protecting them from predators in exchange for milk, wool, and meat."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 5,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Selective breeding changed the genetics of domesticated species."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph 2 notes that this system of selective breeding slowly modified the genetics of these species.",
+      "citation_excerpt": "This system of selective breeding slowly modified the genetics of these species, making them more dependent on humans but far more productive."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 6,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Farming societies produced a food surplus immediately in their first year of planting."
+      },
+      "correct_answers": ["NOT GIVEN"],
+      "explanation": "The passage states that agricultural societies could produce a surplus of food which allowed population growth, but it does not specify whether this surplus occurred immediately in their very first year of planting.",
+      "citation_excerpt": ""
+    },
+    {
+      "passage_number": 1,
+      "question_number": 7,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "The earliest writing systems were created to keep records of financial transactions and tax collections."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph 4 explains that early administrators developed writing systems to keep track of tax payments and trade transactions.",
+      "citation_excerpt": "To keep track of these tax payments and trade transactions, early administrators developed the first writing systems"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Nomadic bands moved regularly, following seasonal [blank] of wild animals."
+      },
+      "correct_answers": ["migrations"],
+      "explanation": "Paragraph 1 states that hunter-gatherers followed seasonal migrations of wild animals.",
+      "citation_excerpt": "following seasonal migrations of animals and harvesting wild fruits, nuts, and roots."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "The Agricultural Revolution is also referred to as the [blank] by historians."
+      },
+      "correct_answers": ["Neolithic Transition"],
+      "explanation": "Paragraph 1 defines the Agricultural Revolution as the Neolithic Transition.",
+      "citation_excerpt": "initiating the Agricultural Revolution, also known as the Neolithic Transition."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Early farmers grew cereals, specifically emmer wheat and [blank]."
+      },
+      "correct_answers": ["barley"],
+      "explanation": "Paragraph 2 notes they selected seeds of wild cereals, listing emmer wheat and barley.",
+      "citation_excerpt": "largest and healthiest wild cereals, such as emmer wheat and barley"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 11,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Food surpluses freed up some villagers, allowing them to [blank] in other crafts."
+      },
+      "correct_answers": ["specialize"],
+      "explanation": "Paragraph 3 notes that food surplus freed some individuals, enabling them to specialize in other crafts.",
+      "citation_excerpt": "freed some individuals from the daily struggle of food procurement, enabling them to specialize in other crafts"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 12,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "The management of public works necessitated coordinated [blank]."
+      },
+      "correct_answers": ["leadership"],
+      "explanation": "Paragraph 4 explains that public works like irrigation canals required coordinated leadership.",
+      "citation_excerpt": "public works, such as irrigation canals and defensive walls, required coordinated leadership."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 13,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Mesopotamian administrators used a script called [blank] to register payments."
+      },
+      "correct_answers": ["cuneiform"],
+      "explanation": "Paragraph 4 references cuneiform as the writing system developed in Mesopotamia.",
+      "citation_excerpt": "early administrators developed the first writing systems, such as cuneiform in Mesopotamia"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 14,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "A description of the natural cooling process of evapotranspiration."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph B describes evapotranspiration as water absorbed by roots and released as vapor from leaves.",
+      "citation_excerpt": "plants and trees cool the air through a process called evapotranspiration, in which water is absorbed by roots and released as vapor from leaves."
+    },
+    {
+      "passage_number": 2,
+      "question_number": 15,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "Details about human health risks posed by rising city temperatures."
+      },
+      "correct_answers": ["E"],
+      "explanation": "Paragraph E mentions the risks of heat exhaustion and heatstroke during heatwaves in UHIs.",
+      "citation_excerpt": "During heatwaves, UHIs significantly increase the risk of heat exhaustion and heatstroke"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 16,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "An explanation of how narrow building configurations prevent cool air movement."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph C describes how tall buildings close together form 'urban canyons' that block wind flow.",
+      "citation_excerpt": "Tall buildings constructed close together create 'urban canyons'. These narrow configurations block wind flow, preventing cool breezes"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 17,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "An outline of strategies like cool and green roofs designed by planners."
+      },
+      "correct_answers": ["F"],
+      "explanation": "Paragraph F outlines mitigation strategies, specifically mentioning cool roofs and green roofs.",
+      "citation_excerpt": "One approach is the installation of 'cool roofs'... Another is the creation of 'green roofs'"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 18,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "Information on the temperature differences between cities and countryside at night."
+      },
+      "correct_answers": ["A"],
+      "explanation": "Paragraph A states that UHIs are most pronounced at night, highlighting the temperature gap between cities and rural areas.",
+      "citation_excerpt": "temperatures that are significantly higher... than nearby rural or suburban landscapes. This temperature difference is usually most pronounced at night"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 19,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "A description of the feedback loop created by using air conditioning."
+      },
+      "correct_answers": ["D"],
+      "explanation": "Paragraph D discusses how air conditioning releases hot air, worsening the climate and triggering more usage.",
+      "citation_excerpt": "as temperatures rise, residents increase their use of air conditioning, which in turn expels more hot air... creating a positive feedback loop"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 20,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "The Urban Heat Island effect is caused by a variety of factors. Natural vegetation is replaced by [blank] like asphalt and concrete. These dark surfaces reflect less [blank] and instead absorb it, gradually radiating it back into the atmosphere."
+      },
+      "correct_answers": ["artificial surfaces", "solar radiation"],
+      "explanation": "Paragraph B mentions replacing vegetation with impervious artificial surfaces (concrete, asphalt) that reflect less solar radiation.",
+      "citation_excerpt": "replacement of natural vegetation with impervious artificial surfaces... concrete prevent water infiltration and reflect less solar radiation. Instead, these dark materials absorb"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 21,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Additionally, close buildings create [blank] that trap heat and restrict [blank]."
+      },
+      "correct_answers": ["urban canyons", "wind flow"],
+      "explanation": "Paragraph C notes that tall buildings close together create urban canyons that block wind flow.",
+      "citation_excerpt": "Tall buildings constructed close together create 'urban canyons'. These narrow configurations block wind flow"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 22,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Human activities, or [blank], also play a role. Rising city heat triggers the use of [blank], causing more warm air to be expelled into streets."
+      },
+      "correct_answers": ["anthropogenic heat", "air conditioning"],
+      "explanation": "Paragraph D defines human-generated heat as anthropogenic heat and explains the feedback loop with air conditioning.",
+      "citation_excerpt": "warmth is 'anthropogenic heat'—heat generated by human activities... residents increase their use of air conditioning, which in turn expels"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 23,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Furthermore, high temperatures increase greenhouse gases and lead to the creation of [blank]."
+      },
+      "correct_answers": ["ground-level ozone", "ozone"],
+      "explanation": "Paragraph E explains that high temperatures accelerate the formation of ground-level ozone.",
+      "citation_excerpt": "UHI also accelerates the formation of ground-level ozone"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 24,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph A",
+        "headings": [
+          "i. Structural levels of memory storage",
+          "ii. Reorganization of engrams across systems",
+          "iii. The initial, delicate state of new memories",
+          "iv. The standard model and the index function",
+          "v. Nighttime neural replay as a training signal",
+          "vi. Cognitive outcomes of sleep deprivation"
+        ]
+      },
+      "correct_answers": ["iii"],
+      "explanation": "Paragraph A introduces memories as initially stored in a highly fragile state before stabilization.",
+      "citation_excerpt": "initial encoding... initially stored in a highly fragile state, easily disrupted by new inputs"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 25,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph B",
+        "headings": [
+          "i. Structural levels of memory storage",
+          "ii. Reorganization of engrams across systems",
+          "iii. The initial, delicate state of new memories",
+          "iv. The standard model and the index function",
+          "v. Nighttime neural replay as a training signal",
+          "vi. Cognitive outcomes of sleep deprivation"
+        ]
+      },
+      "correct_answers": ["i"],
+      "explanation": "Paragraph B details the synaptic level of consolidation, involving long-term potentiation and protein synthesis to stabilize connections.",
+      "citation_excerpt": "Memory consolidation operates at two distinct levels: synaptic and systemic. Synaptic consolidation... strength of connections between neurons (synapses)"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 26,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph C",
+        "headings": [
+          "i. Structural levels of memory storage",
+          "ii. Reorganization of engrams across systems",
+          "iii. The initial, delicate state of new memories",
+          "iv. The standard model and the index function",
+          "v. Nighttime neural replay as a training signal",
+          "vi. Cognitive outcomes of sleep deprivation"
+        ]
+      },
+      "correct_answers": ["ii"],
+      "explanation": "Paragraph C describes systemic consolidation, which slowly reorganizes and transfers representations from the hippocampus to the neocortex.",
+      "citation_excerpt": "Systemic consolidation... involves a major reorganization of memory representations across different brain systems. Systemic consolidation slowly transfers these temporary hippocampal representations to the neocortex"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 27,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph D",
+        "headings": [
+          "i. Structural levels of memory storage",
+          "ii. Reorganization of engrams across systems",
+          "iii. The initial, delicate state of new memories",
+          "iv. The standard model and the index function",
+          "v. Nighttime neural replay as a training signal",
+          "vi. Cognitive outcomes of sleep deprivation"
+        ]
+      },
+      "correct_answers": ["iv"],
+      "explanation": "Paragraph D explains the standard model of systems consolidation, where the hippocampus functions as an index.",
+      "citation_excerpt": "According to the standard model of systems consolidation, the hippocampus acts as a temporary index."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 28,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph E",
+        "headings": [
+          "i. Structural levels of memory storage",
+          "ii. Reorganization of engrams across systems",
+          "iii. The initial, delicate state of new memories",
+          "iv. The standard model and the index function",
+          "v. Nighttime neural replay as a training signal",
+          "vi. Cognitive outcomes of sleep deprivation"
+        ]
+      },
+      "correct_answers": ["v"],
+      "explanation": "Paragraph E outlines how the brain replays neural patterns during NREM sleep to stimulate neocortical connections.",
+      "citation_excerpt": "During these periods, the brain essentially 'replays' the patterns of neural activity... replay is believed to act as a training signal"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 29,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph F",
+        "headings": [
+          "i. Structural levels of memory storage",
+          "ii. Reorganization of engrams across systems",
+          "iii. The initial, delicate state of new memories",
+          "iv. The standard model and the index function",
+          "v. Nighttime neural replay as a training signal",
+          "vi. Cognitive outcomes of sleep deprivation"
+        ]
+      },
+      "correct_answers": ["vi"],
+      "explanation": "Paragraph F outlines the negative cognitive effects of sleep deprivation, such as impaired memory consolidation.",
+      "citation_excerpt": "Conversely, sleep deprivation severely impairs memory consolidation."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 30,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Immediately after we learn something new, the memory is",
+        "options": [
+          "A. permanently written onto our neocortex.",
+          "B. fragile and easily interrupted.",
+          "C. immune to physical trauma.",
+          "D. stored without any chemical changes."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph A states that newly formed memories are initially in a highly fragile state, easily disrupted.",
+      "citation_excerpt": "When we experience something new, the information is initially stored in a highly fragile state, easily disrupted"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 31,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Synaptic consolidation requires the creation of new",
+        "options": [
+          "A. proteins.",
+          "B. temporal lobes.",
+          "C. sensory systems.",
+          "D. glial nodes."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Paragraph B states that synaptic consolidation requires the synthesis of new proteins.",
+      "citation_excerpt": "This strengthening requires the synthesis of new proteins to rebuild and stabilize"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 32,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "The seahorse-shaped region responsible for initial encoding is the",
+        "options": [
+          "A. neocortex.",
+          "B. synapse.",
+          "C. hippocampus.",
+          "D. temporal engram."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph C describes the seahorse-shaped hippocampus located deep within the temporal lobe.",
+      "citation_excerpt": "initial encoding of conscious memories is the hippocampus, a seahorse-shaped region"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 33,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "According to the standard model, the hippocampus acts as a temporary",
+        "options": [
+          "A. sensory mirror.",
+          "B. cognitive index.",
+          "C. neocortex blocker.",
+          "D. protein storage."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph D states that the hippocampus acts as a temporary index.",
+      "citation_excerpt": "According to the standard model of systems consolidation, the hippocampus acts as a temporary index."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 34,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Patients with hippocampal damage can usually form new long-term memories."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "The text explains that patients with hippocampal damage cannot form new long-term memories.",
+      "citation_excerpt": "patients with hippocampal damage can recall childhood memories but cannot form new long-term ones."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 35,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "During NREM sleep, the brain replays learning events at a slower rate than when awake."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "The text states the neural replay during sleep occurs at a much faster speed, not slower.",
+      "citation_excerpt": "the brain essentially 'replays' the patterns of neural activity... but at a much faster speed."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 36,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Adequate sleep prevents memories from being easily overwritten."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "Paragraph F notes that without sleep, memories remain fragile and are gradually overwritten.",
+      "citation_excerpt": "Without adequate sleep, the brain cannot replay memories, leaving them in their fragile, hippocampal state where they are gradually overwritten"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 37,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What physical trace of a memory is stabilized at the synaptic level?"
+      },
+      "correct_answers": ["engram", "an engram"],
+      "explanation": "Paragraph B mentions creating the basic physical trace of a memory, known as an engram.",
+      "citation_excerpt": "rebuild and stabilize the synaptic structure, creating the basic physical trace of a memory, known as an engram."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 38,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What brain layer serves as the permanent, high-capacity storage system?"
+      },
+      "correct_answers": ["neocortex", "the neocortex"],
+      "explanation": "Paragraph C identifies the neocortex as the permanent, high-capacity storage system.",
+      "citation_excerpt": "transfers these temporary hippocampal representations to the neocortex, the outer layer of the brain, which serves as a permanent, high-capacity storage system."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 39,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "Which sleep phase features slow, synchronized waves that facilitate memory replay?"
+      },
+      "correct_answers": ["NREM", "NREM sleep", "non-rapid eye movement", "non-rapid eye movement sleep"],
+      "explanation": "Paragraph E mentions slow, synchronized waves occurring during non-rapid eye movement (NREM) sleep.",
+      "citation_excerpt": "During non-rapid eye movement (NREM) sleep, the brain exhibits slow, synchronized electrical waves."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 40,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What does sleep deprivation prevent the brain from doing, leaving memories unstable?"
+      },
+      "correct_answers": ["replaying memories", "replay", "replaying"],
+      "explanation": "Paragraph F notes that without sleep, the brain cannot replay memories, causing them to remain fragile.",
+      "citation_excerpt": "Without adequate sleep, the brain cannot replay memories, leaving them in their fragile"
+    }
+  ]
+}

@@ -50,7 +50,30 @@ export const APP_ROUTES = {
     READING:
         "/assessment/reading",
 
-    LISTENING:
-        "/assessment/listening"
+    READING_SELECTION:
+        "/assessment/reading/task-selection",
 
+    READING_TEST:
+        "/assessment/reading/test/:sessionId",
+
+    READING_RESULTS:
+        "/assessment/reading/results/:sessionId",
+
+    READING_HISTORY:
+        "/assessment/reading/history",
+
+    LISTENING:
+        "/assessment/listening",
+
+    LISTENING_SELECTION:
+        "/assessment/listening/task-selection",
+
+    LISTENING_TEST:
+        "/assessment/listening/test/:sessionId",
+
+    LISTENING_RESULTS:
+        "/assessment/listening/results/:sessionId",
+
+    LISTENING_HISTORY:
+        "/assessment/listening/history"
 };

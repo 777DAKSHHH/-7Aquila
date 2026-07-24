@@ -94,10 +94,13 @@ const RecentActivityPanel = ({ activities = [], onReviewActivity }) => {
                     <span>✓ Reviewed</span>
                   </div>
                 ) : activity?.actionRequired && (
-                  <Button variant="outline" size="xs" iconName="ArrowRight">
-                    <Link to={`/student-audio-review/${activity.id}`} className="after:absolute after:inset-0">
-                      Review
-                    </Link>
+                  <Button
+                    variant="outline"
+                    size="xs"
+                    iconName="ArrowRight"
+                    onClick={() => onReviewActivity ? onReviewActivity(activity.id) : (window.location.href = `/student-audio-review/${activity.id}`)}
+                  >
+                    Review
                   </Button>
                 )}
               </div>

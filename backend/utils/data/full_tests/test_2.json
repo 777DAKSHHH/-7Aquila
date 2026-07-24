@@ -1,0 +1,580 @@
+{
+  "title": "IELTS Academic Reading Practice Test 2",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 60,
+  "passages": [
+    {
+      "passage_number": 1,
+      "title": "The History and Impact of Mapmaking",
+      "sub_title": "Exploring the development of cartography from primitive cave drawings to mathematical projections and satellite systems.",
+      "content_html": "<p>Maps have been used by humans for thousands of years to represent and navigate their geographic surroundings. The earliest known maps were not drawn on paper, but carved into cave walls or clay tablets. These ancient maps were largely symbolic, depicting local hunting grounds, constellations, and migration routes. As civilizations expanded, mapmaking became a vital tool for military campaigns, political boundaries, and maritime trade. Today, this science, known as cartography, combines art, mathematics, and technology to model the Earth''s surface.</p><p>A major milestone in cartography occurred during the Classical Era in ancient Greece. Mathematicians and geographers began applying geometry to describe the world. Eratosthenes, a scholar working in the library of Alexandria in the third century BCE, calculated the circumference of the Earth with remarkable accuracy using simple geometric principles. He was also the first to establish a grid system of latitude and longitude. Later, Claudius Ptolemy compiled a comprehensive guide to geography that introduced coordinate grids and map projections, which laid the foundation for modern geographic coordinates.</p><p>During the Age of Discovery in the 15th and 16th centuries, the demand for accurate maps increased dramatically as European explorers set sail across unknown oceans. Navigators needed maps that could help them plot straight courses across flat grids. In 1569, a Flemish cartographer named Gerardus Mercator introduced a map projection that solved this problem. The Mercator projection represented lines of constant compass direction as straight paths, making it indispensable for marine navigation. However, this projection introduced significant size distortion, making landmasses near the poles appear much larger than they are in reality.</p><p>In the modern era, technology has completely transformed cartography. Aerial photography in the early 20th century allowed cartographers to map terrain from airplanes. Today, the Global Positioning System (GPS), which relies on a network of satellites orbiting the Earth, provides instant, highly accurate location data. This data is integrated into Geographic Information Systems (GIS), database programs that allow users to overlay maps with layers of data regarding population density, traffic patterns, and environmental changes, making maps interactive tools for modern planning.</p>"
+    },
+    {
+      "passage_number": 2,
+      "title": "Bioluminescence in Deep-Sea Organisms",
+      "sub_title": "How creatures living in the absolute darkness of the ocean generate their own light for survival, communication, and predation.",
+      "content_html": "<p><strong>Paragraph A</strong><br/>The deep ocean is one of the most hostile environments on Earth. Below a depth of 200 metres, sunlight rapidly fades, and by 1,000 metres, the ocean enters a zone of perpetual darkness, known as the bathypelagic zone. In this cold, high-pressure world, food is extremely scarce. Yet, despite these challenges, the deep sea is home to a rich variety of creatures. To survive in the dark, the majority of deep-sea organisms have developed the unique ability to produce their own light, a biological phenomenon known as bioluminescence.</p><p><strong>Paragraph B</strong><br/>Bioluminescence is a chemical reaction that converts chemical energy directly into light energy. Unlike light bulbs, which release significant amounts of heat, bioluminescence is a 'cold light' reaction, producing almost no heat. The reaction relies on two primary substances: a light-emitting molecule called luciferin, and an enzyme called luciferase. When oxygen reacts with luciferin in the presence of luciferase, it releases light. Some organisms produce these chemicals themselves, while others host symbiotic bioluminescent bacteria in specialized light organs, relying on the bacteria to generate light in exchange for nutrients.</p><p><strong>Paragraph C</strong><br/>Deep-sea creatures use bioluminescence for three primary survival functions: predation, defense, and communication. In terms of predation, the most famous example is the anglerfish. Female anglerfish possess a long filament growing from their heads, tipped with a glowing bulb. In the darkness, this glowing lure attracts curious smaller fish. When the prey swims close, the anglerfish quickly snaps its large jaws. Other predators use glowing patterns on their bellies to illuminate the water column and search for prey.</p><p><strong>Paragraph D</strong><br/>Bioluminescence is equally important for defense. Some species of shrimp and squid release clouds of glowing, bioluminescent fluid when threatened by a predator. This glowing cloud acts as a decoy, blinding and distracting the predator while the animal escapes into the surrounding darkness. Other organisms use a technique called counterillumination, emitting light from their bellies that matches the intensity of light filtering down from the ocean surface, making them invisible to predators looking upward from below.</p><p><strong>Paragraph E</strong><br/>Communication is the third function of biological light. In the vast, empty spaces of the deep ocean, finding a mate can be extremely difficult. Many species of deep-sea fish and jellyfish use unique flashing patterns or colors to signal their species identity and attract mates. Because different species emit different wavelengths of light—typically blue and green, which travel furthest through seawater—these signals allow creatures to locate and identify each other without attracting unwanted attention from predators.</p><p><strong>Paragraph F</strong><br/>Understanding deep-sea bioluminescence has also led to significant advances in biotechnology and medicine. Scientists have successfully isolated the genes responsible for producing luciferin and luciferase, using them as 'reporter genes' to track the spread of diseases or monitor the activity of cells inside living organisms. By inserting these genes into target cells, researchers can make them glow, allowing them to trace complex biological pathways under a microscope and develop new medical therapies.</p>"
+    },
+    {
+      "passage_number": 3,
+      "title": "The Rise and Fall of the Silk Road",
+      "sub_title": "Analyzing the history of the ancient trade network that connected East Asia with the Mediterranean, facilitating cultural, scientific, and economic exchanges.",
+      "content_html": "<p><strong>Paragraph A</strong><br/>The Silk Road was not a single, continuous highway, but a vast network of overland and maritime trade routes that connected East Asia with the Mediterranean basin for over a thousand years. Spanning more than 6,000 kilometres, this commercial network crossed deserts, mountain ranges, and empires. The origin of the Silk Road is historically linked to the Han Dynasty in China, which established trade routes to Central Asia in the second century BCE. While trade in physical goods was the primary driver of this network, the Silk Road functioned most significantly as a channel for cultural, technological, and scientific exchange between civilizations.</p><p><strong>Paragraph B</strong><br/>The most famous commodity traded along these routes was silk, a highly coveted luxury fabric produced exclusively in China. For centuries, the Chinese government guarded the secret of sericulture—the breeding of silkworms and weaving of silk—with extreme secrecy. Suggling silkworm eggs out of China was a crime punishable by death. Because of its rarity, lightness, and beautiful texture, silk became a symbol of high status in Rome and other Western capitals, often traded for its weight in gold. In addition to silk, caravans transported spices, paper, porcelain, jade, and glassware across the continents.</p><p><strong>Paragraph C</strong><br/>However, the Silk Road was far more than an economic channel; it was a major pathway for the spread of world religions. Buddhism traveled along trade routes from India to China and Japan, transforming East Asian culture. Nestorian Christianity, Islam, and Zoroastrianism also spread westward and eastward, carried by merchants, pilgrims, and missionaries. Towns situated along the routes, such as Samarkand and Dunhuang, evolved into multicultural hubs where religious ideas, architectural styles, and philosophical debates flourished in a pluralistic environment.</p><p><strong>Paragraph D</strong><br/>Scientific and technological transfers along the Silk Road were equally revolutionary. The Chinese inventions of papermaking, printing, gunpowder, and the magnetic compass traveled westward, eventually reaching Europe where they helped trigger the Renaissance and the Age of Discovery. In return, Western medical knowledge, astronomy, and mathematics traveled eastward, enriching Islamic and East Asian sciences. This reciprocal transfer of knowledge accelerated human progress across the Old World.</p><p><strong>Paragraph E</strong><br/>The decline of the Silk Road began in the 14th and 15th centuries due to a combination of political and economic shifts. The collapse of the Mongol Empire, which had previously secured trade routes across Eurasia, led to increased instability and danger for caravans. More significantly, the rise of the Ottoman Empire, which controlled the overland passages to Europe, resulted in heavy taxes and trade restrictions. These obstacles forced European kingdoms to search for alternative paths to Asian spice markets, leading to the development of maritime trade routes around the tip of Africa and the discovery of the Americas.</p><p><strong>Paragraph F</strong><br/>Although the physical routes fell into disuse, the legacy of the Silk Road remains a powerful symbol of global connectivity. Today, modern infrastructure projects, such as China''s Belt and Road Initiative, draw explicit inspiration from the ancient trade network. They aim to construct new railways, ports, and highways to link Asia and Europe once again, proving that the ancient impulse for global exchange remains a central force in shaping human history.</p>"
+    }
+  ],
+  "questions": [
+    {
+      "passage_number": 1,
+      "question_number": 1,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "The earliest maps were drawn on paper sheets."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 1 states that the earliest maps were carved into cave walls or clay tablets, not drawn on paper.",
+      "citation_excerpt": "The earliest known maps were not drawn on paper, but carved into cave walls or clay tablets."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 2,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Eratosthenes calculated the circumference of the Earth using advanced calculus."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 2 states that Eratosthenes calculated the circumference using simple geometric principles, not advanced calculus.",
+      "citation_excerpt": "calculated the circumference of the Earth with remarkable accuracy using simple geometric principles."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 3,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Eratosthenes was the first scholar to establish a latitude and longitude grid system."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph 2 confirms Eratosthenes was the first to establish a grid system of latitude and longitude.",
+      "citation_excerpt": "He was also the first to establish a grid system of latitude and longitude."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 4,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Claudius Ptolemy's guide introduced coordinate grids."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph 2 notes that Ptolemy compiled a guide to geography that introduced coordinate grids.",
+      "citation_excerpt": "Claudius Ptolemy compiled a comprehensive guide to geography that introduced coordinate grids"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 5,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Gerardus Mercator was born in Germany."
+      },
+      "correct_answers": ["NOT GIVEN"],
+      "explanation": "The passage states that Gerardus Mercator was a Flemish cartographer, but does not provide any information about his country of birth.",
+      "citation_excerpt": ""
+    },
+    {
+      "passage_number": 1,
+      "question_number": 6,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "The Mercator projection represents compass lines as curved paths."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 3 explains that the Mercator projection represented lines of constant compass direction as straight paths, not curved paths.",
+      "citation_excerpt": "The Mercator projection represented lines of constant compass direction as straight paths"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 7,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Landmasses near the equator appear much larger in the Mercator projection."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "The text states that the Mercator projection makes landmasses near the poles (not the equator) appear much larger.",
+      "citation_excerpt": "introduced significant size distortion, making landmasses near the poles appear much larger"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "The scientific study of making maps is referred to as [blank]."
+      },
+      "correct_answers": ["cartography"],
+      "explanation": "The final sentence of Paragraph 1 defines mapmaking as cartography.",
+      "citation_excerpt": "Today, this science, known as cartography, combines art"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Ancient Greek scholars applied the principles of [blank] to cartography."
+      },
+      "correct_answers": ["geometry"],
+      "explanation": "Paragraph 2 explains that Greek mathematicians and geographers applied geometry to describe the world.",
+      "citation_excerpt": "Mathematicians and geographers began applying geometry to describe the world."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Eratosthenes worked as a scholar in the library of [blank]."
+      },
+      "correct_answers": ["Alexandria"],
+      "explanation": "Paragraph 2 states that Eratosthenes was a scholar working in the library of Alexandria.",
+      "citation_excerpt": "scholar working in the library of Alexandria in the third century"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 11,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Navigators needed flat maps to plot [blank] across oceans."
+      },
+      "correct_answers": ["straight courses", "courses"],
+      "explanation": "Paragraph 3 notes that explorers needed maps that could help them plot straight courses.",
+      "citation_excerpt": "Navigators needed maps that could help them plot straight courses across flat grids."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 12,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "The 20th century saw the introduction of [blank] to map terrain from airplanes."
+      },
+      "correct_answers": ["aerial photography"],
+      "explanation": "Paragraph 4 explains that aerial photography allowed cartographers to map terrain from airplanes.",
+      "citation_excerpt": "Aerial photography in the early 20th century allowed cartographers to map terrain from airplanes."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 13,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Modern planners use [blank] systems to overlay interactive map data."
+      },
+      "correct_answers": ["GIS", "Geographic Information", "Geographic Information Systems"],
+      "explanation": "Paragraph 4 refers to Geographic Information Systems (GIS) as database programs to overlay map data.",
+      "citation_excerpt": "integrated into Geographic Information Systems (GIS), database programs that allow users to overlay maps"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 14,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "A description of the chemical reaction that creates a 'cold light'."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph B explains that bioluminescence is a chemical reaction that creates cold light without heat.",
+      "citation_excerpt": "Bioluminescence is a chemical reaction that converts chemical energy... 'cold light' reaction, producing almost no heat."
+    },
+    {
+      "passage_number": 2,
+      "question_number": 15,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "An explanation of how bioluminescent genes are used in biotechnological research."
+      },
+      "correct_answers": ["F"],
+      "explanation": "Paragraph F notes that scientists have isolated bioluminescent genes to track diseases and trace pathways.",
+      "citation_excerpt": "led to significant advances in biotechnology and medicine... isolated the genes... using them as 'reporter genes' to track the spread of diseases"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 16,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "A description of counterillumination used for camouflage."
+      },
+      "correct_answers": ["D"],
+      "explanation": "Paragraph D outlines the use of counterillumination, emitting light from bellies to blend with surface light.",
+      "citation_excerpt": "Other organisms use a technique called counterillumination, emitting light from their bellies that matches the intensity of light filtering down"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 17,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "An outline of the bathypelagic zone where sunlight is absent."
+      },
+      "correct_answers": ["A"],
+      "explanation": "Paragraph A states that below 1,000 metres the ocean enters a zone of perpetual darkness, the bathypelagic zone.",
+      "citation_excerpt": "by 1,000 metres, the ocean enters a zone of perpetual darkness, known as the bathypelagic zone."
+    },
+    {
+      "passage_number": 2,
+      "question_number": 18,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "Information on the prey-capture mechanism of the female anglerfish."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph C describes the female anglerfish using a glowing head filament to lure prey in the darkness.",
+      "citation_excerpt": "predation, the most famous example is the anglerfish. Female anglerfish possess a long filament growing from their heads, tipped with a glowing bulb."
+    },
+    {
+      "passage_number": 2,
+      "question_number": 19,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "An explanation of how different light wavelengths help creatures find mates."
+      },
+      "correct_answers": ["E"],
+      "explanation": "Paragraph E explains how flashing signals and specific wavelengths (blue and green) allow deep-sea species to identify each other and mate.",
+      "citation_excerpt": "fish and jellyfish use unique flashing patterns or colors to signal their species identity and attract mates. Because different species emit different wavelengths"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 20,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Bioluminescence is a chemical process that produces cold light. This reaction requires [blank], a light-producing molecule, and [blank], an enzyme. These elements react with oxygen to emit light."
+      },
+      "correct_answers": ["luciferin", "luciferase"],
+      "explanation": "Paragraph B states the reaction relies on luciferin and luciferase.",
+      "citation_excerpt": "relies on two primary substances: a light-emitting molecule called luciferin, and an enzyme called luciferase. When oxygen reacts with luciferin"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 21,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "While some deep-sea creatures generate their own chemicals, others host [blank] inside light organs."
+      },
+      "correct_answers": ["symbiotic bacteria", "bioluminescent bacteria", "bacteria"],
+      "explanation": "Paragraph B mentions hosting symbiotic bioluminescent bacteria in specialized light organs.",
+      "citation_excerpt": "others host symbiotic bioluminescent bacteria in specialized light organs"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 22,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "This light serves to attract prey, signal mates, or escape threats. For instance, threatened squid emit a cloud of [blank] as a decoy."
+      },
+      "correct_answers": ["bioluminescent fluid", "glowing fluid", "fluid"],
+      "explanation": "Paragraph D states threatened shrimp and squid release clouds of glowing, bioluminescent fluid.",
+      "citation_excerpt": "shrimp and squid release clouds of glowing, bioluminescent fluid when threatened"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 23,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "In medicine, isolated genes serve as [blank] to visualize biological cellular pathways."
+      },
+      "correct_answers": ["reporter genes"],
+      "explanation": "Paragraph F notes isolated genes are used as 'reporter genes' to track cell activity.",
+      "citation_excerpt": "using them as 'reporter genes' to track the spread of diseases or monitor the activity of cells"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 24,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph A",
+        "headings": [
+          "i. Trade of the prized luxury fabric",
+          "ii. Cultural and philosophical integration hubs",
+          "iii. The physical scale and primary role of the network",
+          "iv. Transfer of scientific and academic skills",
+          "v. The impact of political collapse and empire rise",
+          "vi. Modern attempts to reconstruct trade corridors"
+        ]
+      },
+      "correct_answers": ["iii"],
+      "explanation": "Paragraph A introduces the scale of the routes (6,000 km) and the primary function as a channel for exchange.",
+      "citation_excerpt": "network of overland and maritime trade routes... Spanning more than 6,000 kilometres... functioned most significantly as a channel for cultural"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 25,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph B",
+        "headings": [
+          "i. Trade of the prized luxury fabric",
+          "ii. Cultural and philosophical integration hubs",
+          "iii. The physical scale and primary role of the network",
+          "iv. Transfer of scientific and academic skills",
+          "v. The impact of political collapse and empire rise",
+          "vi. Modern attempts to reconstruct trade corridors"
+        ]
+      },
+      "correct_answers": ["i"],
+      "explanation": "Paragraph B focuses on the trade of silk, the luxury fabric produced in secrecy by the Chinese government.",
+      "citation_excerpt": "The most famous commodity traded along these routes was silk, a highly coveted luxury fabric produced exclusively in China."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 26,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph C",
+        "headings": [
+          "i. Trade of the prized luxury fabric",
+          "ii. Cultural and philosophical integration hubs",
+          "iii. The physical scale and primary role of the network",
+          "iv. Transfer of scientific and academic skills",
+          "v. The impact of political collapse and empire rise",
+          "vi. Modern attempts to reconstruct trade corridors"
+        ]
+      },
+      "correct_answers": ["ii"],
+      "explanation": "Paragraph C discusses the spread of religions and how towns evolved into multicultural, pluralistic hubs.",
+      "citation_excerpt": "pathway for the spread of world religions... Samarkand and Dunhuang, evolved into multicultural hubs where religious ideas"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 27,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph D",
+        "headings": [
+          "i. Trade of the prized luxury fabric",
+          "ii. Cultural and philosophical integration hubs",
+          "iii. The physical scale and primary role of the network",
+          "iv. Transfer of scientific and academic skills",
+          "v. The impact of political collapse and empire rise",
+          "vi. Modern attempts to reconstruct trade corridors"
+        ]
+      },
+      "correct_answers": ["iv"],
+      "explanation": "Paragraph D discusses scientific transfers (compass, printing, papermaking, gunpowder, medical knowledge).",
+      "citation_excerpt": "Scientific and technological transfers along the Silk Road were equally revolutionary. The Chinese inventions... reciprocal transfer of knowledge"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 28,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph E",
+        "headings": [
+          "i. Trade of the prized luxury fabric",
+          "ii. Cultural and philosophical integration hubs",
+          "iii. The physical scale and primary role of the network",
+          "iv. Transfer of scientific and academic skills",
+          "v. The impact of political collapse and empire rise",
+          "vi. Modern attempts to reconstruct trade corridors"
+        ]
+      },
+      "correct_answers": ["v"],
+      "explanation": "Paragraph E outlines the decline factors, including the collapse of the Mongol Empire and the rise of the Ottoman Empire.",
+      "citation_excerpt": "The decline of the Silk Road began... collapse of the Mongol Empire... rise of the Ottoman Empire"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 29,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph F",
+        "headings": [
+          "i. Trade of the prized luxury fabric",
+          "ii. Cultural and philosophical integration hubs",
+          "iii. The physical scale and primary role of the network",
+          "iv. Transfer of scientific and academic skills",
+          "v. The impact of political collapse and empire rise",
+          "vi. Modern attempts to reconstruct trade corridors"
+        ]
+      },
+      "correct_answers": ["vi"],
+      "explanation": "Paragraph F describes modern infrastructure plans like the Belt and Road Initiative that replicate the ancient Silk Road.",
+      "citation_excerpt": "legacy of the Silk Road remains a powerful symbol... Belt and Road Initiative, draw explicit inspiration"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 30,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "The establishment of trade routes along the Silk Road is historically linked to",
+        "options": [
+          "A. the Roman Empire.",
+          "B. the Han Dynasty in China.",
+          "C. the Ottoman conquest.",
+          "D. the rise of Nestorian Christianity."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph A links the origin of the Silk Road historically to the Han Dynasty.",
+      "citation_excerpt": "historically linked to the Han Dynasty in China, which established trade routes"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 31,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "The Chinese government protected the secrets of sericulture because silk was",
+        "options": [
+          "A. believed to cure common Western illnesses.",
+          "B. used only to pay taxes to the Emperor.",
+          "C. a key status symbol traded for gold.",
+          "D. difficult to clean under normal conditions."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph B states silk was coveted and became a symbol of status, often traded for its weight in gold.",
+      "citation_excerpt": "silk became a symbol of high status in Rome and other Western capitals, often traded for its weight in gold."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 32,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Which of the following inventions did NOT travel from China to the West along the Silk Road?",
+        "options": [
+          "A. Cuneiform writing.",
+          "B. Gunpowder.",
+          "C. Printing.",
+          "D. The magnetic compass."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Paragraph D lists Chinese inventions that traveled West, including papermaking, printing, gunpowder, and compass. Cuneiform writing is Mesopotamian, not Chinese, and is not mentioned.",
+      "citation_excerpt": "inventions of papermaking, printing, gunpowder, and the magnetic compass traveled westward"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 33,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Overland trade routes became dangerous in the 14th century following the",
+        "options": [
+          "A. discovery of the Americas.",
+          "B. opening of routes around Africa.",
+          "C. collapse of the Mongol Empire.",
+          "D. fall of the Han Dynasty."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph E explains that the collapse of the Mongol Empire led to instability and danger for caravans.",
+      "citation_excerpt": "collapse of the Mongol Empire, which had previously secured trade routes across Eurasia, led to increased instability and danger"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 34,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Suggling silkworms out of China carried a sentence of life imprisonment."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "Paragraph B states that smuggling silkworm eggs was a crime punishable by death, not life imprisonment.",
+      "citation_excerpt": "Suggling silkworm eggs out of China was a crime punishable by death."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 35,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Buddhism was the only religion to spread along the Silk Road trade network."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "Paragraph C notes that other major world religions like Nestorian Christianity, Islam, and Zoroastrianism also spread.",
+      "citation_excerpt": "Nestorian Christianity, Islam, and Zoroastrianism also spread westward and eastward"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 36,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The Ottoman Empire levied heavy taxes on overland trade pathways."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "Paragraph E states that the rise of the Ottoman Empire resulted in heavy taxes and restrictions on overland routes.",
+      "citation_excerpt": "rise of the Ottoman Empire, which controlled the overland passages to Europe, resulted in heavy taxes and trade restrictions."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 37,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What Chinese practice involving silkworms was kept highly secret?"
+      },
+      "correct_answers": ["sericulture"],
+      "explanation": "Paragraph B states the Chinese government guarded the secret of sericulture.",
+      "citation_excerpt": "guarded the secret of sericulture—the breeding of silkworms and weaving of silk"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 38,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "Which city served as a multicultural hub along the trade routes?"
+      },
+      "correct_answers": ["Samarkand", "Dunhuang"],
+      "explanation": "Paragraph C mentions Samarkand and Dunhuang as multicultural hubs.",
+      "citation_excerpt": "Towns situated along the routes, such as Samarkand and Dunhuang, evolved into multicultural hubs"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 39,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What empire arose to control and block European overland routes to Asia?"
+      },
+      "correct_answers": ["Ottoman", "the Ottoman Empire", "Ottoman Empire"],
+      "explanation": "Paragraph E notes the rise of the Ottoman Empire, which controlled the overland passages to Europe.",
+      "citation_excerpt": "rise of the Ottoman Empire, which controlled the overland passages to Europe"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 40,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What modern infrastructure program draws inspiration from the Silk Road legacy?"
+      },
+      "correct_answers": ["Belt and Road", "Belt and Road Initiative"],
+      "explanation": "The final paragraph mentions China's Belt and Road Initiative drawing inspiration from the Silk Road.",
+      "citation_excerpt": "Belt and Road Initiative, draw explicit inspiration from the ancient trade network."
+    }
+  ]
+}

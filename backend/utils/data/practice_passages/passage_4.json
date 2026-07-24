@@ -1,0 +1,124 @@
+{
+  "title": "Practice Passage 4: The Secrets of the Indus Valley Civilization",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Secrets of the Indus Valley Civilization",
+    "sub_title": "Exploring the sophisticated urban planning, engineering marvels, and mysterious script of one of the ancient world's greatest societies.",
+    "content_html": "<p><strong>Paragraph A</strong><br/>Flourishing around 2500 BCE in what is now modern-day Pakistan and northwest India, the Indus Valley Civilization was one of the three earliest urban societies in the world, alongside Mesopotamia and Ancient Egypt. At its peak, this ancient culture spanned a vast geographical area, encompassing over a million square kilometres and supporting a population estimated at over five million people. Despite its size and influence, the Indus Valley remained completely forgotten by history until the early 1920s, when archaeologists began excavating the ruins of Harappa and Mohenjo-daro.</p><p><strong>Paragraph B</strong><br/>What surprised early excavators most was the incredible sophistication of Indus Valley city planning. Unlike the chaotic, organic growth characteristic of cities in Mesopotamia, Harappa and Mohenjo-daro were laid out in a precise, grid-like pattern. Streets were wide and straight, intersecting at perfect right angles. Buildings were constructed using standardized, oven-baked bricks that were remarkably uniform in dimensions, a level of quality control unseen in other ancient civilizations. Most cities were divided into two main zones: a raised 'citadel' containing public buildings and baths, and a 'lower town' dedicated to residential housing and workshops.</p><p><strong>Paragraph C</strong><br/>In addition to urban layout, the Indus people developed advanced hydraulic engineering that was far ahead of its time. Almost every house in Mohenjo-daro was equipped with a private bathing area and a toilet connected to a centralized sewage system. Wastewater from houses emptied into covered brick drains running along the streets, which were fitted with regular inspection manholes for cleaning. Water supply was secured by hundreds of brick-lined wells situated throughout the cities. The most famous hydraulic structure is the 'Great Bath' of Mohenjo-daro, a large, watertight public pool lined with bitumen, believed to have been used for religious purification ceremonies.</p><p><strong>Paragraph D</strong><br/>Trade was a central pillar of the Indus economy. Archaeologists have discovered standardized stone weights and measures that indicate a highly regulated commercial market. The Indus merchants traded valuable goods, including lapis lazuli, carnelian, copper, and textiles, over immense distances. Seal stamps carved with animal figures and script have been found in ruins as far away as Mesopotamia, proving that maritime trade routes connected the Indus River and the Persian Gulf. This trade network allowed the civilization to accumulate wealth and support a prosperous urban middle class.</p><p><strong>Paragraph E</strong><br/>However, one of the greatest mysteries of the Indus Valley Civilization remains its writing system. Thousands of seals, tablets, and pottery fragments have been excavated carrying a script composed of roughly 400 unique signs. Unlike Egyptian hieroglyphs or Mesopotamian cuneiform, this script has never been deciphered. Part of the difficulty lies in the brevity of the inscriptions, which rarely exceed five or six symbols, and the absence of any bilingual texts like the Rosetta Stone. Until the Indus script is decoded, many aspects of their political structure, laws, and religious beliefs will remain hidden.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "matching_info",
+      "instruction_text": "Which paragraph contains the following information? Write the correct letter, A–E.",
+      "question_data": {
+        "text": "A description of the two distinct zones that made up most Indus Valley cities."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph B explains that Indus cities were split into two zones: the citadel and the lower town.",
+      "citation_excerpt": "Most cities were divided into two main zones: a raised 'citadel' containing public buildings and baths, and a 'lower town' dedicated to residential housing"
+    },
+    {
+      "question_number": 2,
+      "question_type": "matching_info",
+      "instruction_text": "Which paragraph contains the following information? Write the correct letter, A–E.",
+      "question_data": {
+        "text": "Details of the geographic expansion and approximate population of the society."
+      },
+      "correct_answers": ["A"],
+      "explanation": "Paragraph A states the geographic area (over a million square kilometres) and the population (over five million people).",
+      "citation_excerpt": "spanned a vast geographical area, encompassing over a million square kilometres and supporting a population estimated at over five million people."
+    },
+    {
+      "question_number": 3,
+      "question_type": "matching_info",
+      "instruction_text": "Which paragraph contains the following information? Write the correct letter, A–E.",
+      "question_data": {
+        "text": "An explanation of why the ancient script remains undeciphered."
+      },
+      "correct_answers": ["E"],
+      "explanation": "Paragraph E discusses the brief inscriptions, the lack of bilingual Rosetta-like stones, and why the script cannot be read.",
+      "citation_excerpt": "Part of the difficulty lies in the brevity of the inscriptions, which rarely exceed five or six symbols, and the absence of any bilingual texts like the Rosetta Stone."
+    },
+    {
+      "question_number": 4,
+      "question_type": "matching_info",
+      "instruction_text": "Which paragraph contains the following information? Write the correct letter, A–E.",
+      "question_data": {
+        "text": "A description of the sophisticated municipal drainage and sanitation systems."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph C describes private toilets, brick drains along streets, and centralized sewage systems.",
+      "citation_excerpt": "Wastewater from houses emptied into covered brick drains running along the streets, which were fitted with regular inspection manholes for cleaning."
+    },
+    {
+      "question_number": 5,
+      "question_type": "matching_info",
+      "instruction_text": "Which paragraph contains the following information? Write the correct letter, A–E.",
+      "question_data": {
+        "text": "Evidence of commercial exchange between the Indus people and distant civilizations."
+      },
+      "correct_answers": ["D"],
+      "explanation": "Paragraph D explains that Indus merchant seal stamps have been excavated as far away as Mesopotamia.",
+      "citation_excerpt": "Seal stamps carved with animal figures and script have been found in ruins as far away as Mesopotamia"
+    },
+    {
+      "question_number": 6,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Indus Valley Architectural features table:<br/>- Standardized materials used: [blank] bricks.<br/>- City division zones: Raised Citadel (public baths) and Lower Town (housing).<br/>- Drainage inspection access: Covered street drains fitted with inspection [blank].<br/>- Religious pool liner: Watertight bitumen used on the [blank] at Mohenjo-daro."
+      },
+      "correct_answers": ["oven-baked", "manholes", "Great Bath"],
+      "explanation": "The text describes: 1. oven-baked bricks, 2. inspection manholes for street drains, 3. bitumen waterproofing the Great Bath.",
+      "citation_excerpt": "constructed using standardized, oven-baked bricks... drains... were fitted with regular inspection manholes... Great Bath of Mohenjo-daro, a large, watertight public pool lined with bitumen"
+    },
+    {
+      "question_number": 7,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Commercial exchanges and weights:<br/>- Trade control: Standardized stone [blank] and measures.<br/>- Long-distance goods: lapis lazuli, [blank], copper, and textiles.<br/>- Export proof: Indus seals found in [blank]."
+      },
+      "correct_answers": ["weights", "carnelian", "Mesopotamia"],
+      "explanation": "The text outlines commercial regulation using stone weights, lists carnelian among trade goods, and notes seals were found in Mesopotamia.",
+      "citation_excerpt": "standardized stone weights and measures... traded valuable goods, including lapis lazuli, carnelian, copper, and textiles... found in ruins as far away as Mesopotamia"
+    },
+    {
+      "question_number": 8,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN THREE WORDS.",
+      "question_data": {
+        "text": "In what decade were the cities of Harappa and Mohenjo-daro first excavated?"
+      },
+      "correct_answers": ["1920s", "the 1920s", "early 1920s"],
+      "explanation": "The passage notes that the civilization was forgotten until excavation began in the early 1920s.",
+      "citation_excerpt": "forgotten by history until the early 1920s, when archaeologists began excavating the ruins of Harappa"
+    },
+    {
+      "question_number": 9,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN THREE WORDS.",
+      "question_data": {
+        "text": "What shape pattern was used to lay out Indus streets?"
+      },
+      "correct_answers": ["grid", "grid-like", "precise grid-like"],
+      "explanation": "The text states that Harappa and Mohenjo-daro were laid out in a precise, grid-like pattern.",
+      "citation_excerpt": "laid out in a precise, grid-like pattern. Streets were wide and straight"
+    },
+    {
+      "question_number": 10,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN THREE WORDS.",
+      "question_data": {
+        "text": "How many unique signs or symbols are estimated to exist in the Indus writing script?"
+      },
+      "correct_answers": ["400", "roughly 400", "about 400"],
+      "explanation": "Paragraph E states that the script is composed of roughly 400 unique signs.",
+      "citation_excerpt": "carrying a script composed of roughly 400 unique signs."
+    }
+  ]
+}

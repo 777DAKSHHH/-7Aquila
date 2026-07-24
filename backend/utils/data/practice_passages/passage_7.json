@@ -1,0 +1,197 @@
+{
+  "title": "Practice Passage 7: The Search for Biosignatures on Exoplanets",
+  "test_type": "academic",
+  "difficulty": "hard",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Search for Biosignatures on Exoplanets",
+    "sub_title": "Analyzing how astronomers study exoplanetary atmospheres to identify chemical markers indicating alien life.",
+    "content_html": "<p><strong>Section A</strong><br/>For centuries, the question of whether we are alone in the universe was the domain of philosophy and science fiction. However, over the past three decades, the field of astrobiology has transitioned into a rigorous observational science. The catalyst for this shift was the discovery of the first exoplanets—planets orbiting stars outside our solar system—in the early 1990s. Today, astronomers have confirmed the existence of thousands of exoplanets, ranging from massive gas giants to rocky worlds similar in size to Earth. The primary goal of modern astronomy has now shifted from merely finding these planets to determining whether any of them host life.</p><p><strong>Section B</strong><br/>Since traveling to even the nearest exoplanet would take tens of thousands of years with current technology, astronomers must study them from immense distances. They do this by looking for 'biosignatures'—substances or phenomena that provide scientific evidence of past or present life. In the context of exoplanets, the most practical biosignatures are gases in the planet's atmosphere that can be detected using spectroscopy. When a planet passes in front of its host star, starlight filters through the atmosphere. By analyzing which wavelengths of light are absorbed by the gases, astronomers can identify the chemical composition of the atmosphere.</p><p><strong>Section C</strong><br/>The search for atmospheric biosignatures focuses largely on finding chemical combinations that would not exist in equilibrium. On a dead planet, atmospheric gases reach a stable chemical state governed by geology and photochemistry. However, life disrupts this balance. The most famous example is the co-existence of oxygen and methane. Methane reacts quickly with oxygen to produce carbon dioxide and water. Therefore, if both oxygen and methane are found in large quantities in a planet's atmosphere, it suggests that both gases are being constantly replenished by active sources. On Earth, this replenishment is driven by photosynthesis (producing oxygen) and biological decay or digestion (producing methane).</p><p><strong>Section D</strong><br/>However, identifying a potential biosignature is only the first step; astronomers must also rule out 'false positives'—abiotic processes that can mimic the chemical markers of life. For instance, oxygen can be produced without life if intense ultraviolet light breaks apart water vapor molecules in a planet's upper atmosphere, causing the lighter hydrogen to escape into space and leaving oxygen behind. Similarly, methane can be released through volcanic activity or chemical reactions in the planet's crust. To confirm a biosignature is biological, astronomers must evaluate the planet's overall environmental context, including its distance from the star and the star's activity level.</p><p><strong>Section E</strong><br/>The search for alien life is entering an exciting new era with the launch of next-generation observatories. The James Webb Space Telescope (JWST), launched in late 2021, is already capturing high-resolution transmission spectra of exoplanet atmospheres. In the near future, ground-based mega-telescopes, such as the Extremely Large Telescope (ELT) in Chile, will provide even greater capabilities. These advanced instruments will allow astronomers to analyze the atmospheres of Earth-sized planets situated within the 'habitable zone'—the orbital region where temperatures are mild enough to support liquid water. If life exists elsewhere in our galactic neighborhood, these telescopes may find the first evidence of it within our lifetimes.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Sections A–E from the list of headings below.",
+      "question_data": {
+        "section": "Section A",
+        "headings": [
+          "i. Distinguishing biological markers from geological ones",
+          "ii. The transition of astrobiology into an observational science",
+          "iii. Future instruments and the habitable zone",
+          "iv. The challenge of long-distance interstellar travel",
+          "v. How starlight reveals atmospheric chemicals",
+          "vi. Finding chemical imbalances indicating life"
+        ]
+      },
+      "correct_answers": ["ii"],
+      "explanation": "Section A outlines how astrobiology shifted from philosophy to an observational science due to the discovery of exoplanets since the 1990s.",
+      "citation_excerpt": "the field of astrobiology has transitioned into a rigorous observational science. The catalyst for this shift was the discovery of the first exoplanets"
+    },
+    {
+      "question_number": 2,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Sections A–E from the list of headings below.",
+      "question_data": {
+        "section": "Section B",
+        "headings": [
+          "i. Distinguishing biological markers from geological ones",
+          "ii. The transition of astrobiology into an observational science",
+          "iii. Future instruments and the habitable zone",
+          "iv. The challenge of long-distance interstellar travel",
+          "v. How starlight reveals atmospheric chemicals",
+          "vi. Finding chemical imbalances indicating life"
+        ]
+      },
+      "correct_answers": ["v"],
+      "explanation": "Section B describes spectroscopy, showing how starlight filtering through an exoplanet's atmosphere reveals its chemical makeup from afar.",
+      "citation_excerpt": "When a planet passes in front of its host star, starlight filters through the atmosphere. By analyzing which wavelengths of light are absorbed... can identify the chemical composition"
+    },
+    {
+      "question_number": 3,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Sections A–E from the list of headings below.",
+      "question_data": {
+        "section": "Section C",
+        "headings": [
+          "i. Distinguishing biological markers from geological ones",
+          "ii. The transition of astrobiology into an observational science",
+          "iii. Future instruments and the habitable zone",
+          "iv. The challenge of long-distance interstellar travel",
+          "v. How starlight reveals atmospheric chemicals",
+          "vi. Finding chemical imbalances indicating life"
+        ]
+      },
+      "correct_answers": ["vi"],
+      "explanation": "Section C focuses on looking for gases out of equilibrium (chemical imbalance), particularly the coexistence of oxygen and methane, which indicates life.",
+      "citation_excerpt": "The search for atmospheric biosignatures focuses largely on finding chemical combinations that would not exist in equilibrium... oxygen and methane."
+    },
+    {
+      "question_number": 4,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Sections A–E from the list of headings below.",
+      "question_data": {
+        "section": "Section D",
+        "headings": [
+          "i. Distinguishing biological markers from geological ones",
+          "ii. The transition of astrobiology into an observational science",
+          "iii. Future instruments and the habitable zone",
+          "iv. The challenge of long-distance interstellar travel",
+          "v. How starlight reveals atmospheric chemicals",
+          "vi. Finding chemical imbalances indicating life"
+        ]
+      },
+      "correct_answers": ["i"],
+      "explanation": "Section D discusses the risk of false positives, showing how abiotic processes like volcanism or solar radiation can mimic biosignatures.",
+      "citation_excerpt": "astronomers must also rule out 'false positives'—abiotic processes that can mimic the chemical markers of life."
+    },
+    {
+      "question_number": 5,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Sections A–E from the list of headings below.",
+      "question_data": {
+        "section": "Section E",
+        "headings": [
+          "i. Distinguishing biological markers from geological ones",
+          "ii. The transition of astrobiology into an observational science",
+          "iii. Future instruments and the habitable zone",
+          "iv. The challenge of long-distance interstellar travel",
+          "v. How starlight reveals atmospheric chemicals",
+          "vi. Finding chemical imbalances indicating life"
+        ]
+      },
+      "correct_answers": ["iii"],
+      "explanation": "Section E discusses next-generation observatories like JWST and ELT and their ability to study planets in the habitable zone.",
+      "citation_excerpt": "The search for alien life is entering an exciting new era with the launch of next-generation observatories... analyze the atmospheres of Earth-sized planets situated within the 'habitable zone'"
+    },
+    {
+      "question_number": 6,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below using words from the text. Use NO MORE THAN TWO WORDS for each answer.",
+      "question_data": {
+        "text": "Rather than traveling to exoplanets directly, astronomers use [blank] to study planetary atmospheres. By looking for [blank] like oxygen and methane in disequilibrium, they seek to find evidence of active biology."
+      },
+      "correct_answers": ["spectroscopy", "biosignatures"],
+      "explanation": "The text explains that spectroscopy allows astronomers to study atmospheres, looking for biosignatures like oxygen and methane.",
+      "citation_excerpt": "study them from immense distances... biosignatures... detected using spectroscopy. When a planet passes"
+    },
+    {
+      "question_number": 7,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below using words from the text. Use NO MORE THAN TWO WORDS for each answer.",
+      "question_data": {
+        "text": "However, geological processes like [blank] can release methane, leading to false positive readings."
+      },
+      "correct_answers": ["volcanic activity"],
+      "explanation": "The text says methane can be released by geological false positive processes like volcanic activity.",
+      "citation_excerpt": "methane can be released through volcanic activity or chemical reactions in the planet's crust."
+    },
+    {
+      "question_number": 8,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below using words from the text. Use NO MORE THAN TWO WORDS for each answer.",
+      "question_data": {
+        "text": "New observatories, including the [blank] and the ELT, will scan exoplanets situated in the [blank] where liquid water can exist."
+      },
+      "correct_answers": ["James Webb", "habitable zone"],
+      "explanation": "The text discusses the James Webb Space Telescope (JWST) and ELT scanning planets in the habitable zone.",
+      "citation_excerpt": "James Webb Space Telescope (JWST)... Extremely Large Telescope (ELT)... atmospheres of Earth-sized planets situated within the 'habitable zone'"
+    },
+    {
+      "question_number": 9,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Philosophical speculation about alien life stopped completely after the 1990s."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "The text says that astrobiology transitioned into a rigorous science, but it does not claim that philosophical speculation stopped completely.",
+      "citation_excerpt": "For centuries, the question of whether we are alone in the universe was the domain of philosophy... astrobiology has transitioned into a rigorous observational science."
+    },
+    {
+      "question_number": 10,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Wavelengths of starlight are absorbed differently depending on the gases in a planet's atmosphere."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "The text states that by analyzing which wavelengths are absorbed, astronomers can identify atmospheric chemical composition.",
+      "citation_excerpt": "By analyzing which wavelengths of light are absorbed by the gases, astronomers can identify the chemical composition"
+    },
+    {
+      "question_number": 11,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Oxygen and methane react with each other rapidly under normal atmospheric conditions."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "The text confirms that methane reacts quickly with oxygen to produce carbon dioxide and water.",
+      "citation_excerpt": "Methane reacts quickly with oxygen to produce carbon dioxide and water."
+    },
+    {
+      "question_number": 12,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Oxygen can only be created by living things."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "The text notes that oxygen can be produced abiotically (without life) when ultraviolet light breaks water vapor apart.",
+      "citation_excerpt": "oxygen can be produced without life if intense ultraviolet light breaks apart water vapor molecules"
+    },
+    {
+      "question_number": 13,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The Extremely Large Telescope is built in the habitable zone of the solar system."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "The Extremely Large Telescope is a ground-based telescope located in Chile, Earth, not built in a separate outer orbit habitable zone.",
+      "citation_excerpt": "ground-based mega-telescopes, such as the Extremely Large Telescope (ELT) in Chile"
+    }
+  ]
+}

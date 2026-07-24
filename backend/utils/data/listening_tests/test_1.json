@@ -1,0 +1,634 @@
+{
+  "title": "Cambridge IELTS 20 Listening Test 1",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Part 1: Restaurant Recommendations",
+      "audio_url": "/uploads/audio/c20_t1_p1.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer."
+    },
+    {
+      "section_number": 2,
+      "title": "Part 2: Pottery Workshop with Heather McCallum",
+      "audio_url": "/uploads/audio/c20_t1_p2.mp3",
+      "instruction_text": "Questions 11–16: Choose the correct letter, A, B or C. Questions 17–20: Choose TWO letters, A–E."
+    },
+    {
+      "section_number": 3,
+      "title": "Part 3: Discussion on Loneliness Research",
+      "audio_url": "/uploads/audio/c20_t1_p3.mp3",
+      "instruction_text": "Questions 21–26: Choose TWO letters, A–E. Questions 27–30: Choose the correct letter, A, B or C."
+    },
+    {
+      "section_number": 4,
+      "title": "Part 4: Reclaiming Urban Rivers",
+      "audio_url": "/uploads/audio/c20_t1_p4.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer."
+    }
+  ],
+  "questions": [
+    {
+      "section_number": 1,
+      "question_number": 1,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "The Junction: recommended for people who are keen on [blank]"
+      },
+      "correct_answers": ["fish"],
+      "explanation": "The speaker notes that The Junction is particularly good if you are keen on fish dishes.",
+      "citation_excerpt": "The Junction: recommended for people who are keen on fish"
+    },
+    {
+      "section_number": 1,
+      "question_number": 2,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "The Junction: the [blank] is a good area to have a drink."
+      },
+      "correct_answers": ["roof"],
+      "explanation": "The speaker advises that they have a nice rooftop area which is highly recommended for drinks.",
+      "citation_excerpt": "the roof is a good area to have a drink"
+    },
+    {
+      "section_number": 1,
+      "question_number": 3,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Paloma: serves [blank] food, which is ideal for sharing."
+      },
+      "correct_answers": ["Spanish"],
+      "explanation": "Paloma is described as serving Spanish food that is great for group sharing.",
+      "citation_excerpt": "serves Spanish food, which is ideal for sharing"
+    },
+    {
+      "section_number": 1,
+      "question_number": 4,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Paloma: there is a limited selection of [blank] options."
+      },
+      "correct_answers": ["vegetarian"],
+      "explanation": "The speaker mentions that the restaurant has a limited number of vegetarian dishes.",
+      "citation_excerpt": "there is a limited selection of vegetarian options"
+    },
+    {
+      "section_number": 1,
+      "question_number": 5,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "The third restaurant recommended is named The [blank]"
+      },
+      "correct_answers": ["Audley"],
+      "explanation": "The friend recommends The Audley as the third choice.",
+      "citation_excerpt": "The third restaurant recommended is named The Audley"
+    },
+    {
+      "section_number": 1,
+      "question_number": 6,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "The Audley: located on the top floor of a [blank]"
+      },
+      "correct_answers": ["hotel"],
+      "explanation": "The speaker explains that The Audley is situated on the top floor of a local hotel.",
+      "citation_excerpt": "located on the top floor of a hotel"
+    },
+    {
+      "section_number": 1,
+      "question_number": 7,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "The Audley: the [blank] in the press have been very good."
+      },
+      "correct_answers": ["reviews"],
+      "explanation": "The speaker highlights that the restaurant reviews in newspapers have been extremely positive.",
+      "citation_excerpt": "the reviews in the press have been very good"
+    },
+    {
+      "section_number": 1,
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "The Audley: focuses on using [blank] ingredients."
+      },
+      "correct_answers": ["local"],
+      "explanation": "The chef at The Audley uses local produce and ingredients.",
+      "citation_excerpt": "focuses on using local ingredients"
+    },
+    {
+      "section_number": 1,
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "The Audley: the set lunch costs £[blank] per person."
+      },
+      "correct_answers": ["30", "thirty"],
+      "explanation": "The set lunch is priced at £30 per person.",
+      "citation_excerpt": "the set lunch costs £30 per person"
+    },
+    {
+      "section_number": 1,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "The Audley: portions are described as being of [blank] size."
+      },
+      "correct_answers": ["average"],
+      "explanation": "The speaker tells the caller that the portions are average-sized, not too big or small.",
+      "citation_excerpt": "portions are described as being of average size"
+    },
+    {
+      "section_number": 2,
+      "question_number": 11,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Heather says pottery differs from other art forms because",
+        "options": [
+          "A. it lasts longer in the ground.",
+          "B. it is practised by more people.",
+          "C. it can be repaired more easily."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Heather notes that pottery survives for thousands of years in the earth, whereas other art forms decompose.",
+      "citation_excerpt": "it lasts longer in the ground"
+    },
+    {
+      "section_number": 2,
+      "question_number": 12,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Archaeologists sometimes identify the use of ancient pottery from",
+        "options": [
+          "A. the clay it was made with.",
+          "B. the marks that are on it.",
+          "C. the basic shape of it."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Archaeologists inspect tool markings and surface impressions on the pottery fragments.",
+      "citation_excerpt": "the marks that are on it"
+    },
+    {
+      "section_number": 2,
+      "question_number": 13,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Heather McCallum says people join her pottery class because they want to",
+        "options": [
+          "A. meet others with similar interests.",
+          "B. learn a skill to sell items.",
+          "C. make something that will outlive them."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Heather explains that a primary motivation for class members is creating an object that endures beyond their lifetime.",
+      "citation_excerpt": "make something that will outlive them"
+    },
+    {
+      "section_number": 2,
+      "question_number": 14,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What Heather values most about pottery is",
+        "options": [
+          "A. its calming effect.",
+          "B. the physical effort involved.",
+          "C. the unpredictability of the kiln firing."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Heather describes the therapeutic and soothing effect of clay work as her most valued aspect of the craft.",
+      "citation_excerpt": "its calming effect"
+    },
+    {
+      "section_number": 2,
+      "question_number": 15,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Most visitors to Edelman Pottery",
+        "options": [
+          "A. are experienced potters.",
+          "B. have never made a pot before.",
+          "C. come to buy ready-made items."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "The talk reveals that the majority of guests are complete beginners who have never handled clay.",
+      "citation_excerpt": "have never made a pot before"
+    },
+    {
+      "section_number": 2,
+      "question_number": 16,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Before starting to work with clay, visitors must",
+        "options": [
+          "A. wash their hands.",
+          "B. put on safety glasses.",
+          "C. take off their jewellery."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Heather reminds everyone to remove watches, rings, and necklaces before starting.",
+      "citation_excerpt": "take off their jewellery"
+    },
+    {
+      "section_number": 2,
+      "question_number": 17,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO things does Heather say about selecting clay?",
+        "options": [
+          "A. Different types require different kiln temperatures.",
+          "B. Red clay is the easiest to work with.",
+          "C. Local clay is usually too sandy.",
+          "D. Stoneware clay is ideal for beginners.",
+          "E. The choice depends on the final function of the pot."
+        ]
+      },
+      "correct_answers": ["A", "E"],
+      "explanation": "Heather states that firing temperature depends on clay composition, and selecting the right body is based on whether it is for cooking or display.",
+      "citation_excerpt": "A, E"
+    },
+    {
+      "section_number": 2,
+      "question_number": 18,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO things does Heather say about selecting clay? (Answer 2)",
+        "options": [
+          "A. Different types require different kiln temperatures.",
+          "B. Red clay is the easiest to work with.",
+          "C. Local clay is usually too sandy.",
+          "D. Stoneware clay is ideal for beginners.",
+          "E. The choice depends on the final function of the pot."
+        ]
+      },
+      "correct_answers": ["A", "E"],
+      "explanation": "Heather states that firing temperature depends on clay composition, and selecting the right body is based on whether it is for cooking or display.",
+      "citation_excerpt": "A, E"
+    },
+    {
+      "section_number": 2,
+      "question_number": 19,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO items of equipment are discussed as essential for class safety?",
+        "options": [
+          "A. Protective aprons.",
+          "B. Specialized tool sets.",
+          "C. Heat-resistant gloves.",
+          "D. Dust extraction masks.",
+          "E. Heavy-duty kilns."
+        ]
+      },
+      "correct_answers": ["C", "E"],
+      "explanation": "Heat-resistant gloves and properly enclosed kilns are identified as crucial safety items.",
+      "citation_excerpt": "C, E"
+    },
+    {
+      "section_number": 2,
+      "question_number": 20,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO items of equipment are discussed as essential for class safety? (Answer 2)",
+        "options": [
+          "A. Protective aprons.",
+          "B. Specialized tool sets.",
+          "C. Heat-resistant gloves.",
+          "D. Dust extraction masks.",
+          "E. Heavy-duty kilns."
+        ]
+      },
+      "correct_answers": ["C", "E"],
+      "explanation": "Heat-resistant gloves and properly enclosed kilns are identified as crucial safety items.",
+      "citation_excerpt": "C, E"
+    },
+    {
+      "section_number": 3,
+      "question_number": 21,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO factors do the students both believe are responsible for the increase in loneliness?",
+        "options": [
+          "A. Social media",
+          "B. Smaller nuclear families",
+          "C. Urban design",
+          "D. Longer lifespans",
+          "E. A mobile workforce"
+        ]
+      },
+      "correct_answers": ["C", "E"],
+      "explanation": "The students agree that high-rise apartments (urban design) and relocating frequently for jobs (mobile workforce) are the main drivers.",
+      "citation_excerpt": "C, E"
+    },
+    {
+      "section_number": 3,
+      "question_number": 22,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO factors do the students both believe are responsible for the increase in loneliness? (Answer 2)",
+        "options": [
+          "A. Social media",
+          "B. Smaller nuclear families",
+          "C. Urban design",
+          "D. Longer lifespans",
+          "E. A mobile workforce"
+        ]
+      },
+      "correct_answers": ["C", "E"],
+      "explanation": "The students agree that high-rise apartments (urban design) and relocating frequently for jobs (mobile workforce) are the main drivers.",
+      "citation_excerpt": "C, E"
+    },
+    {
+      "section_number": 3,
+      "question_number": 23,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO health risks associated with loneliness do the students agree are based on solid evidence?",
+        "options": [
+          "A. A weakened immune system",
+          "B. Dementia",
+          "C. Cancer",
+          "D. Obesity",
+          "E. Cardiovascular disease"
+        ]
+      },
+      "correct_answers": ["A", "C"],
+      "explanation": "The students state that medical records show clear causal links between loneliness and a weakened immune system or cancer progression.",
+      "citation_excerpt": "A, C"
+    },
+    {
+      "section_number": 3,
+      "question_number": 24,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO health risks associated with loneliness do the students agree are based on solid evidence? (Answer 2)",
+        "options": [
+          "A. A weakened immune system",
+          "B. Dementia",
+          "C. Cancer",
+          "D. Obesity",
+          "E. Cardiovascular disease"
+        ]
+      },
+      "correct_answers": ["A", "C"],
+      "explanation": "The students state that medical records show clear causal links between loneliness and a weakened immune system or cancer progression.",
+      "citation_excerpt": "A, C"
+    },
+    {
+      "section_number": 3,
+      "question_number": 25,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO opinions do both students express about the evolutionary theory of loneliness?",
+        "options": [
+          "A. It has little practical relevance.",
+          "B. It needs further investigation.",
+          "C. It is misleading.",
+          "D. It should be more widely accepted.",
+          "E. It is difficult to understand."
+        ]
+      },
+      "correct_answers": ["A", "B"],
+      "explanation": "The students share the view that evolution-based models have little practical clinical application and require more empirical tests.",
+      "citation_excerpt": "A, B"
+    },
+    {
+      "section_number": 3,
+      "question_number": 26,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO opinions do both students express about the evolutionary theory of loneliness? (Answer 2)",
+        "options": [
+          "A. It has little practical relevance.",
+          "B. It needs further investigation.",
+          "C. It is misleading.",
+          "D. It should be more widely accepted.",
+          "E. It is difficult to understand."
+        ]
+      },
+      "correct_answers": ["A", "B"],
+      "explanation": "The students share the view that evolution-based models have little practical clinical application and require more empirical tests.",
+      "citation_excerpt": "A, B"
+    },
+    {
+      "section_number": 3,
+      "question_number": 27,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "When comparing loneliness to depression, the students agree that",
+        "options": [
+          "A. they doubt there will ever be a medical cure for loneliness.",
+          "B. depression is easier to identify in patients.",
+          "C. both should be treated using the same therapeutic techniques."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "The students conclude that since loneliness is a subjective state rather than a clinical illness, a single medical cure is unlikely.",
+      "citation_excerpt": "they doubt there will ever be a medical cure for loneliness"
+    },
+    {
+      "section_number": 3,
+      "question_number": 28,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Why do the students start their presentation with an example from their own experience?",
+        "options": [
+          "A. To show how they overcame loneliness.",
+          "B. To highlight a situation most students will recognize.",
+          "C. To prove they have personal authority on the subject."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "They use university relocation as a common shared experience to instantly engage the student audience.",
+      "citation_excerpt": "To highlight a situation most students will recognize"
+    },
+    {
+      "section_number": 3,
+      "question_number": 29,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What do the students agree about current strategies for dealing with loneliness?",
+        "options": [
+          "A. Talking to strangers has proven to be highly effective.",
+          "B. Government initiatives have been a waste of money.",
+          "C. People should be encouraged to spend more time online."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "They discuss how minor daily social interactions with strangers can significantly boost mood.",
+      "citation_excerpt": "Talking to strangers has proven to be highly effective"
+    },
+    {
+      "section_number": 3,
+      "question_number": 30,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "The students agree that 'solitude' is sometimes misunderstood because",
+        "options": [
+          "A. people assume it is always a negative state.",
+          "B. it is actually a symptom of mental illness.",
+          "C. it is confused with the feeling of being lonely."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "The students explain that solitude is being physically alone by choice, which differs entirely from the distressing feeling of loneliness.",
+      "citation_excerpt": "it is confused with the feeling of being lonely"
+    },
+    {
+      "section_number": 4,
+      "question_number": 31,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Historical Context: River pollution increased rapidly as [blank] were built nearby."
+      },
+      "correct_answers": ["factories"],
+      "explanation": "The lecture explains that early industrialization led to factories releasing waste directly into urban rivers.",
+      "citation_excerpt": "Historical Context: River pollution increased rapidly as factories were built nearby"
+    },
+    {
+      "section_number": 4,
+      "question_number": 32,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Historical Context: In 1957, the River Thames was declared biologically [blank]."
+      },
+      "correct_answers": ["dead"],
+      "explanation": "Due to extreme industrial and sewage pollution, the Thames was officially declared biologically dead in 1957.",
+      "citation_excerpt": "In 1957, the River Thames was declared biologically dead"
+    },
+    {
+      "section_number": 4,
+      "question_number": 33,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Signs of Recovery: The return of wildlife was marked by a [blank] swimming up the river."
+      },
+      "correct_answers": ["whale"],
+      "explanation": "A highly publicized event of a whale swimming up the river highlighted the cleaner state of the waterway.",
+      "citation_excerpt": "The return of wildlife was marked by a whale swimming up the river"
+    },
+    {
+      "section_number": 4,
+      "question_number": 34,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Redevelopment: Old industrial docks were replaced by luxury [blank]."
+      },
+      "correct_answers": ["apartments"],
+      "explanation": "The speaker mentions that warehouses and docks made way for modern riverside apartments.",
+      "citation_excerpt": "Old industrial docks were replaced by luxury apartments"
+    },
+    {
+      "section_number": 4,
+      "question_number": 35,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Redevelopment: A new linear [blank] was created along the old canal path."
+      },
+      "correct_answers": ["park"],
+      "explanation": "The city converted old canal towpaths into a linear park for residents.",
+      "citation_excerpt": "A new linear park was created along the old canal path"
+    },
+    {
+      "section_number": 4,
+      "question_number": 36,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Redevelopment: Empty warehouses were converted into community [blank] spaces."
+      },
+      "correct_answers": ["art"],
+      "explanation": "Empty warehouses along the canal were transformed into art galleries and creative spaces.",
+      "citation_excerpt": "Empty warehouses were converted into community art spaces"
+    },
+    {
+      "section_number": 4,
+      "question_number": 37,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Global Examples: In Paris, river banks are transformed into sandy [blank] in summer."
+      },
+      "correct_answers": ["beaches"],
+      "explanation": "Paris creates temporary sandy beaches along the Seine River for summer recreation.",
+      "citation_excerpt": "In Paris, river banks are transformed into sandy beaches in summer"
+    },
+    {
+      "section_number": 4,
+      "question_number": 38,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Future Transport: Water transport using [blank] services is growing in popularity."
+      },
+      "correct_answers": ["ferry"],
+      "explanation": "Passenger ferry services on urban rivers are expanding as a cleaner commute option.",
+      "citation_excerpt": "Future Transport: Water transport using ferry services is growing in popularity"
+    },
+    {
+      "section_number": 4,
+      "question_number": 39,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Future Transport: From river docks, parcels are distributed using cargo [blank]."
+      },
+      "correct_answers": ["bikes"],
+      "explanation": "To reduce street traffic, cargo bikes are used to carry parcels from docks to final destinations.",
+      "citation_excerpt": "parcels are distributed using cargo bikes"
+    },
+    {
+      "section_number": 4,
+      "question_number": 40,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Future Transport: The final stage of parcel deliveries might be carried out by [blank]."
+      },
+      "correct_answers": ["drone"],
+      "explanation": "The lecture concludes with a vision of drones handling last-mile deliveries from regional hubs.",
+      "citation_excerpt": "deliveries might be carried out by drone"
+    }
+  ]
+}

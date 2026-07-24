@@ -1,0 +1,187 @@
+{
+  "title": "Practice Passage 2: The Evolution of the Printing Press",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Evolution of the Printing Press",
+    "sub_title": "How Johannes Gutenberg’s mechanical moveable type revolutionised human communication and paved the way for the modern world.",
+    "content_html": "<p>For centuries, the transmission of human knowledge relied on the painstaking work of scribes. Books were copied by hand, a process that could take months or even years for a single manuscript. Consequently, books were rare and expensive luxury items, accessible only to the wealthy elite, royalty, and religious institutions. This monopoly on information restricted literacy and kept the majority of the population in ignorance. However, in the mid-15th century, a German goldsmith named Johannes Gutenberg introduced an invention that would change the course of history: the mechanical moveable type printing press.</p><p>Gutenberg was not the first to experiment with printing. In China and Korea, block printing and moveable type made of clay or metal had been invented centuries earlier. However, these Asian printing techniques did not spread widely to Europe, partly due to the vast differences in writing systems. The Chinese language, with thousands of distinct characters, made moveable type extremely complex to organise. In contrast, European languages relied on a simple alphabet of less than thirty letters, making moveable type a far more practical option.</p><p>Gutenberg’s breakthrough was not a single invention, but a combination of several innovative technologies. He created a unique metal alloy made of lead, tin, and antimony that melted at a low temperature but cooled into a durable letterform. He also formulated an oil-based ink that adhered to metal type much better than water-based inks. Most importantly, he adapted a wooden screw press, which was traditionally used for pressing wine and olives, to apply uniform pressure onto paper. Together, these elements formed a highly efficient printing system.</p><p>The impact of Gutenberg's press was immediate and profound. His most famous early publication, the Gutenberg Bible, printed around 1455, demonstrated the high quality and aesthetic beauty that mechanical printing could achieve. Within a few decades, printing presses spread rapidly across Europe. By 1500, hundreds of printing shops were operating in major European cities, producing millions of books. This sudden explosion of printed material is referred to by historians as the 'Printing Revolution'.</p><p>The social consequences of this revolution were far-reaching. As books became cheaper and more abundant, literacy rates began to rise among the merchant and middle classes. Information was no longer locked away in monasteries. Scientific theories, political treatises, and classical literature could be printed and distributed to thousands of readers simultaneously. This rapid flow of ideas helped fuel the Renaissance, the Scientific Revolution, and the Protestant Reformation, which challenged the absolute authority of religious institutions.</p><p>Critics at the time, however, were not entirely supportive of the new technology. Some religious authorities feared that the widespread availability of books would lead to the spread of heretical ideas and undermine social order. Others argued that mechanical printing lacked the beauty and spiritual value of hand-written manuscripts. Scribes, whose livelihoods were threatened by the press, actively protested against the new shops. Despite this opposition, the demand for printed books continued to grow rapidly.</p><p>In the centuries following Gutenberg’s invention, the basic design of the printing press remained remarkably stable. It was not until the Industrial Revolution in the 19th century that steam-powered presses replaced the manual screw press, increasing production speeds from a few hundred pages a day to thousands of pages an hour. Today, digital printing and the internet have further transformed communication, but the foundation of our modern information society remains directly linked to Gutenberg's mechanical innovation.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Before the invention of the printing press, books were",
+        "options": [
+          "A. mass-produced by religious groups.",
+          "B. affordable only to the merchant classes.",
+          "C. copied slowly by hand by scribes.",
+          "D. rarely stored in European monasteries."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "The first paragraph states that books were copied by hand, a process taking months or years, which made them rare and expensive.",
+      "citation_excerpt": "Books were copied by hand, a process that could take months or even years for a single manuscript."
+    },
+    {
+      "question_number": 2,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Why did moveable type printing fail to spread widely in China?",
+        "options": [
+          "A. The Chinese script was too complex for practical moveable type.",
+          "B. European alphabets were too difficult for Chinese printers to adopt.",
+          "C. The technology was kept secret by the imperial government.",
+          "D. Metal alloys were not available in East Asia."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "The second paragraph explains that the Chinese language, with thousands of characters, made moveable type complex to organize, unlike the simple European alphabet.",
+      "citation_excerpt": "The Chinese language, with thousands of distinct characters, made moveable type extremely complex to organise."
+    },
+    {
+      "question_number": 3,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Which device did Gutenberg adapt to construct his printing press?",
+        "options": [
+          "A. A metal forge for making gold jewelry.",
+          "B. A wooden screw press used in farming.",
+          "C. A water pump from a local mine.",
+          "D. A textile loom for weaving cloth."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "The third paragraph notes Gutenberg adapted a wooden screw press traditionally used for pressing wine and olives.",
+      "citation_excerpt": "he adapted a wooden screw press, which was traditionally used for pressing wine and olives, to apply uniform pressure onto paper."
+    },
+    {
+      "question_number": 4,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "The Gutenberg Bible is significant because it",
+        "options": [
+          "A. was the first book written in German.",
+          "B. was banned by religious institutions.",
+          "C. showed the high standard of mechanical printing.",
+          "D. was distributed to every household in Europe."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "The fourth paragraph states that the Gutenberg Bible demonstrated the high quality and aesthetic beauty that mechanical printing could achieve.",
+      "citation_excerpt": "the Gutenberg Bible, printed around 1455, demonstrated the high quality and aesthetic beauty that mechanical printing could achieve."
+    },
+    {
+      "question_number": 5,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "The rapid dissemination of printed ideas directly contributed to",
+        "options": [
+          "A. the creation of the merchant guilds.",
+          "B. the fall of the European universities.",
+          "C. historical movements like the Scientific Revolution.",
+          "D. a decline in literacy rates."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "The fifth paragraph says the rapid flow of ideas helped fuel major movements, listing the Scientific Revolution alongside others.",
+      "citation_excerpt": "This rapid flow of ideas helped fuel the Renaissance, the Scientific Revolution, and the Protestant Reformation"
+    },
+    {
+      "question_number": 6,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "Johannes Gutenberg was the first person in history to print using moveable type."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "The second paragraph explicitly states that block printing and moveable type had been invented in China and Korea centuries earlier.",
+      "citation_excerpt": "In China and Korea, block printing and moveable type made of clay or metal had been invented centuries earlier."
+    },
+    {
+      "question_number": 7,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "Gutenberg's ink formula was based on water."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "The third paragraph notes Gutenberg formulated an oil-based ink that adhered better to metal type than water-based ink.",
+      "citation_excerpt": "He also formulated an oil-based ink that adhered to metal type much better than water-based inks."
+    },
+    {
+      "question_number": 8,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "Most religious authorities welcomed Gutenberg's invention immediately."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "The sixth paragraph mentions that some religious authorities feared the spread of heretical ideas and protested against it.",
+      "citation_excerpt": "Some religious authorities feared that the widespread availability of books would lead to the spread of heretical ideas and undermine social order."
+    },
+    {
+      "question_number": 9,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "Gutenberg became extremely wealthy from the sales of his Bible."
+      },
+      "correct_answers": ["NOT GIVEN"],
+      "explanation": "The passage mentions the Gutenberg Bible and its quality, but does not provide any information about Gutenberg's personal wealth or financial returns from it.",
+      "citation_excerpt": ""
+    },
+    {
+      "question_number": 10,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "Steam power was used to operate printing presses starting in the 19th century."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "The seventh paragraph confirms that steam-powered presses replaced manual ones in the 19th century.",
+      "citation_excerpt": "It was not until the Industrial Revolution in the 19th century that steam-powered presses replaced the manual screw press"
+    },
+    {
+      "question_number": 11,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN THREE WORDS.",
+      "question_data": {
+        "text": "Who occupied their time hand-copying manuscripts before Gutenberg's invention?"
+      },
+      "correct_answers": ["scribes"],
+      "explanation": "The first paragraph mentions that books relied on the painstaking work of scribes copying manuscripts by hand.",
+      "citation_excerpt": "transmission of human knowledge relied on the painstaking work of scribes. Books were copied by hand"
+    },
+    {
+      "question_number": 12,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN THREE WORDS.",
+      "question_data": {
+        "text": "What metal elements did Gutenberg combine to construct his letters?"
+      },
+      "correct_answers": ["lead, tin, antimony", "lead, tin, and antimony"],
+      "explanation": "The third paragraph lists the metal alloy components as lead, tin, and antimony.",
+      "citation_excerpt": "He created a unique metal alloy made of lead, tin, and antimony"
+    },
+    {
+      "question_number": 13,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN THREE WORDS.",
+      "question_data": {
+        "text": "Which class of people saw an increase in literacy rates due to cheaper books?"
+      },
+      "correct_answers": ["merchant and middle", "merchant, middle classes"],
+      "explanation": "The fifth paragraph says that literacy rates began to rise among the merchant and middle classes.",
+      "citation_excerpt": "literacy rates began to rise among the merchant and middle classes."
+    }
+  ]
+}

@@ -2,7 +2,15 @@ import React from 'react';
 import Icon from '../../../components/AppIcon';
 
 const ProgressSummaryPanel = ({ stats }) => {
-  const { recentScore, totalTests, averageScore, improvementTrend, lastTestDate } = stats;
+  const {
+    recentScore,
+    totalTests,
+    aiEvaluatedCount = 0,
+    facultyReviewedCount = 0,
+    averageScore,
+    improvementTrend,
+    lastTestDate
+  } = stats;
 
   const getTrendIcon = () => {
     if (improvementTrend > 0) return { name: 'TrendingUp', color: 'var(--color-success)' };
@@ -41,7 +49,17 @@ const ProgressSummaryPanel = ({ stats }) => {
             <span className="text-sm font-caption text-muted-foreground">Total Tests</span>
           </div>
           <p className="text-2xl md:text-3xl font-semibold mono text-foreground">{totalTests}</p>
-          <p className="text-xs text-muted-foreground font-caption mt-1">Completed</p>
+          <div className="flex items-center gap-2 text-xs font-caption mt-1.5 flex-wrap">
+            <span className="text-muted-foreground font-medium flex items-center gap-1">
+              <Icon name="Brain" size={12} className="text-primary" />
+              <span>{aiEvaluatedCount} AI</span>
+            </span>
+            <span className="text-muted-foreground">•</span>
+            <span className="text-success font-medium flex items-center gap-1">
+              <Icon name="UserCheck" size={12} className="text-success" />
+              <span>{facultyReviewedCount} Faculty</span>
+            </span>
+          </div>
         </div>
 
         <div className="bg-muted/30 rounded-lg p-4">

@@ -1,0 +1,580 @@
+{
+  "title": "IELTS Academic Reading Practice Test 5",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 60,
+  "passages": [
+    {
+      "passage_number": 1,
+      "title": "The Domestication of the Dog",
+      "sub_title": "Exploring the evolutionary origins of Canis lupus familiaris and how wolves transitioned into human companions.",
+      "content_html": "<p>The domestic dog (Canis lupus familiaris) is the oldest domesticated animal species in the world, with a partnership with humans that predates the dawn of agriculture. While the exact timing and geographic origins of domestication remain subjects of scientific debate, genetic studies suggest that all modern dogs are descendants of an extinct species of late Pleistocene wolf. This evolutionary transition occurred between 15,000 and 30,000 years ago, when hunter-gatherer bands and wolves began interacting in ways that proved mutually beneficial.</p><p>The process of domestication was likely initiated by the wolves themselves. Bold, less aggressive wolves may have scavenged for food leftovers around human campsites. Over generations, these animals became accustomed to human presence, slowly separating themselves from the wild gene pool. Humans recognized the value of these early companions, who could warn of approaching predators, assist in hunting wild game, and provide warmth on cold nights. This process, known as self-domestication, relied on a positive feedback loop of shared survival benefits.</p><p>As these wolves integrated into human bands, selective pressure shifted their physical and behavioral traits. Humans actively selected animals that were docile, responsive to vocal commands, and capable of reading human gestures. Over time, these selected wolves developed smaller skulls, shorter snouts, and floppy ears—physical markers common in many domesticated species, known as domestication syndrome. Their brains also shrank, particularly the regions responsible for processing fear and aggression, making them suitable for close community life.</p><p>Today, dogs have diversified into hundreds of distinct breeds, ranging from tiny toy varieties to massive working dogs. This immense diversity is a testament to the power of artificial selection. Despite their physical differences, all domestic dogs belong to the same species and retain many core instincts inherited from their wolf ancestors, such as pack behavior and acute scent detection, making them highly integrated members of modern human societies.</p>"
+    },
+    {
+      "passage_number": 2,
+      "title": "The Physics and History of Bridges",
+      "sub_title": "Analyzing the engineering concepts behind arch, suspension, and truss designs, and their development across human history.",
+      "content_html": "<p><strong>Paragraph A</strong><br/>Bridges are among the most essential structures in civil engineering, designed to carry transportation pathways across physical obstacles such as rivers, valleys, or roads. The basic purpose of any bridge is simple: to support weight and transfer forces safely to the ground. However, the physics involved in designing these structures is incredibly complex, requiring engineers to balance two primary forces: tension (pulling forces) and compression (pushing forces). Throughout history, builders have developed different designs to solve these physical challenges.</p><p><strong>Paragraph B</strong><br/>The earliest major bridge designs were stone arch bridges, perfected by the engineers of Ancient Rome. The physics of an arch bridge relies entirely on compression. Weight on the bridge is pushed outward along the curve of the arch toward stone supports, called abutments, at either end. Because stone is extremely strong under compression, arch bridges are highly durable. Many Roman structures built over 2,000 years ago are still standing and carrying traffic today, proving the durability of this design.</p><p><strong>Paragraph C</strong><br/>During the Industrial Revolution in the 19th century, the introduction of iron and steel allowed engineers to build longer, stronger structures. This led to the development of the truss bridge. A truss bridge uses a network of straight steel beams arranged in a series of triangles. Because triangles cannot be easily deformed under stress, this geometric shape is highly efficient at distributing weight. In a truss bridge, some beams experience tension while others experience compression, allowing the structure to span long distances using relatively lightweight materials.</p><p><strong>Paragraph D</strong><br/>For spanning massive distances, such as wide bays or rivers, the suspension bridge is the design of choice. In a suspension bridge, the roadway is suspended from thick steel cables hung between tall vertical towers. The physics of this design relies primarily on tension. The weight of the roadway pulls down on the cables, which transfer this tension force to massive concrete anchors embedded deep in the ground at either end. The Golden Gate Bridge in San Francisco is a classic example of this elegant and flexible design.</p><p><strong>Paragraph E</strong><br/>Designing modern bridges requires careful consideration of environmental forces, such as wind and earthquakes. A famous engineering disaster occurred in 1940, when the Tacoma Narrows Bridge in Washington collapsed due to strong winds. The bridge was built with a flexible design that began to twist and wave in the wind, a physical phenomenon known as aeroelastic flutter. The twisting grew so violent that the steel and concrete structure snapped. This disaster forced engineers to redesign bridges to include open trusses that allow wind to pass through harmlessly.</p><p><strong>Paragraph F</strong><br/>Today, bridge design is entering a new era with the use of advanced composite materials and computer-aided design (CAD). Engineers can simulate how a bridge will respond to extreme weather, heavy traffic, and age before construction even begins. Newer designs, such as cable-stayed bridges, combine elements of suspension and truss structures, creating striking landmarks that are both functionally efficient and aesthetically beautiful, continuing the long history of human structural innovation.</p>"
+    },
+    {
+      "passage_number": 3,
+      "title": "The Rise of Virtual Reality",
+      "sub_title": "Trace the technological development of immersive environments, the cognitive psychology of presence, and their applications beyond gaming.",
+      "content_html": "<p><strong>Paragraph A</strong><br/>Virtual Reality (VR) is often discussed as a recent technology, but its conceptual roots extend back to the mid-20th century. In the 1950s, cinematographer Morton Heilig developed the Sensorama, a mechanical booth that stimulated multiple senses with stereoscopic 3D images, wind, smell, and vibrations. However, it was not until the development of modern microprocessors and high-resolution displays in the 21st century that VR became a practical consumer technology. Today, VR systems use head-mounted displays (HMDs) to isolate users from their physical surroundings, replacing them with interactive, computer-generated environments.</p><p><strong>Paragraph B</strong><br/>The key goal of any VR system is to create a psychological state known as 'presence'—the subjective sensation of being physically located inside the virtual environment rather than the physical room. Presence is not achieved simply by displaying high-quality graphics; it relies on complex cognitive psychology. The brain builds its model of reality based on sensory feedback loops. When a user turns their head, the VR display must update the image within milliseconds. If there is a noticeable delay, or latency, the feedback loop is broken, causing the illusion of presence to collapse and often triggering motion sickness.</p><p><strong>Paragraph C</strong><br/>To enhance presence, modern VR developers focus on spatial audio and haptic feedback. Spatial audio replicates how sound waves bounce off walls and travel to our ears in the real world, allowing users to determine the exact direction and distance of virtual sounds. Haptic feedback involves using vibrating controllers or specialized gloves to simulate the physical sensation of touch, allowing users to feel the weight, texture, or resistance of virtual objects. Together, these technologies deepen the sensory illusion of the virtual environment.</p><p><strong>Paragraph D</strong><br/>While gaming remains the largest market for VR, the technology is increasingly adopted in other fields, particularly medicine and surgery. Medical schools use VR to train surgeons in complex procedures before they operate on actual patients. In a virtual operating room, students can practice making incisions, inserting tools, and managing complications without risk to human life. Studies have shown that surgeons trained in VR make significantly fewer errors and complete procedures faster than those trained using traditional methods.</p><p><strong>Paragraph E</strong><br/>VR is also proving to be a powerful tool in cognitive therapy and rehabilitation. Psychologists use VR for exposure therapy, placing patients with phobias or Post-Traumatic Stress Disorder (PTSD) in controlled virtual scenarios to help them process fear in a safe space. For instance, a patient with a fear of heights can climb a virtual ladder while standing safely on the ground in a therapist''s office. This gradual exposure allows the brain to rebuild neural pathways, reducing anxiety reactions in the real world.</p><p><strong>Paragraph F</strong><br/>Despite these advances, VR faces significant hardware and social challenges. Current HMDs are often heavy, expensive, and require connection to powerful computers. Long-term health effects of wearing VR headsets, particularly on children''s eye development and spatial coordination, remain under-studied. Additionally, as virtual worlds grow more realistic and social, issues regarding digital isolation, privacy, and harassment in virtual spaces present new regulatory challenges for developers and governments alike.</p>"
+    }
+  ],
+  "questions": [
+    {
+      "passage_number": 1,
+      "question_number": 1,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "The domestic dog was domesticated after the invention of farming."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 1 states that the domestication of dogs predates the dawn of agriculture (farming).",
+      "citation_excerpt": "domestic dog (Canis lupus familiaris) is the oldest domesticated animal species in the world, with a partnership with humans that predates the dawn of agriculture."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 2,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Modern dogs are descendants of a wolf species that is now extinct."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph 1 confirms genetic studies show modern dogs descend from an extinct species of Pleistocence wolf.",
+      "citation_excerpt": "genetic studies suggest that all modern dogs are descendants of an extinct species of late Pleistocene wolf."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 3,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "The domestication process began roughly 50,000 years ago."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 1 states this transition occurred between 15,000 and 30,000 years ago.",
+      "citation_excerpt": "This evolutionary transition occurred between 15,000 and 30,000 years ago"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 4,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Wolves likely initiated domestication by seeking food scrapings around humans."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph 2 states wolves initiated the process by scavenging for leftovers around campsites.",
+      "citation_excerpt": "process of domestication was likely initiated by the wolves themselves. Bold, less aggressive wolves may have scavenged for food leftovers"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 5,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Domestication syndrome refers only to behavioral changes in animals."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 3 outlines physical changes like smaller skulls, shorter snouts, and floppy ears as components of domestication syndrome.",
+      "citation_excerpt": "developed smaller skulls, shorter snouts, and floppy ears—physical markers common in many domesticated species, known as domestication syndrome."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 6,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Domestication led to an increase in the size of the wolf brain."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph 3 notes that their brains shrank during domestication.",
+      "citation_excerpt": "Their brains also shrank, particularly the regions responsible for processing fear and aggression"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 7,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Ancient Romans were the first to write books about dog breeding."
+      },
+      "correct_answers": ["NOT GIVEN"],
+      "explanation": "The text states that dogs have diversified into many breeds, but does not provide any information about Roman books on breeding.",
+      "citation_excerpt": ""
+    },
+    {
+      "passage_number": 1,
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Modern dogs are genetic descendants of the late [blank] wolf."
+      },
+      "correct_answers": ["Pleistocene"],
+      "explanation": "Paragraph 1 notes genetic origins lead back to the late Pleistocene wolf.",
+      "citation_excerpt": "descendants of an extinct species of late Pleistocene wolf."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Wolves approaching human campsites to search for food is an instance of [blank]."
+      },
+      "correct_answers": ["self-domestication"],
+      "explanation": "Paragraph 2 refers to this mutual wolf-led process as self-domestication.",
+      "citation_excerpt": "This process, known as self-domestication, relied on a positive"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Docile traits and physical markers like floppy ears are named [blank]."
+      },
+      "correct_answers": ["domestication syndrome"],
+      "explanation": "Paragraph 3 states floppy ears and other physical markers make up domestication syndrome.",
+      "citation_excerpt": "floppy ears—physical markers common in many domesticated species, known as domestication syndrome."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 11,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "The shrinkage of wolf brains affected zones processing fear and [blank]."
+      },
+      "correct_answers": ["aggression"],
+      "explanation": "Paragraph 3 notes brain shrinkage in areas processing fear and aggression.",
+      "citation_excerpt": "brain regions responsible for processing fear and aggression, making them suitable"
+    },
+    {
+      "passage_number": 1,
+      "question_number": 12,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "The diversity of modern breeds showcases the impact of [blank] selection."
+      },
+      "correct_answers": ["artificial"],
+      "explanation": "Paragraph 4 explains breed diversification is due to artificial selection.",
+      "citation_excerpt": "immense diversity is a testament to the power of artificial selection."
+    },
+    {
+      "passage_number": 1,
+      "question_number": 13,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Despite physical traits, dogs belong to one species and maintain instincts like [blank]."
+      },
+      "correct_answers": ["pack behavior"],
+      "explanation": "Paragraph 4 states that domestic dogs belong to one species and keep wolf instincts like pack behavior.",
+      "citation_excerpt": "belong to the same species and retain many core instincts inherited from their wolf ancestors, such as pack behavior"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 14,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "A description of the physical failure of the Tacoma Narrows Bridge."
+      },
+      "correct_answers": ["E"],
+      "explanation": "Paragraph E outlines the aeroelastic flutter disaster of the Tacoma Narrows Bridge.",
+      "citation_excerpt": "Tacoma Narrows Bridge in Washington collapsed due to strong winds... twisting grew so violent that the steel and concrete structure snapped."
+    },
+    {
+      "passage_number": 2,
+      "question_number": 15,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "How modern CAD software and simulations assist engineers today."
+      },
+      "correct_answers": ["F"],
+      "explanation": "Paragraph F notes how modern bridge design uses composite materials and CAD simulation software.",
+      "citation_excerpt": "bridge design is entering a new era with the use of advanced composite materials and computer-aided design (CAD). Engineers can simulate how a bridge will respond"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 16,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "An explanation of how a suspension bridge uses tension anchors."
+      },
+      "correct_answers": ["D"],
+      "explanation": "Paragraph D explains how a suspension bridge works using roadway tension transferred to deep anchors.",
+      "citation_excerpt": "physics of this design relies primarily on tension. The weight of the roadway pulls down on the cables, which transfer this tension force to massive concrete anchors"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 17,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "The primary tension and compression forces balanced by structural designs."
+      },
+      "correct_answers": ["A"],
+      "explanation": "Paragraph A introduces tension and compression as the two main forces balanced in bridge construction.",
+      "citation_excerpt": "requiring engineers to balance two primary forces: tension (pulling forces) and compression (pushing forces)."
+    },
+    {
+      "passage_number": 2,
+      "question_number": 18,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "Details about Roman stone arches and their supporting abutments."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph B outlines Roman stone arch bridges that push weight outward to end supports called abutments.",
+      "citation_excerpt": "stone arch bridges, perfected by the engineers of Ancient Rome... pushed outward along the curve of the arch toward stone supports, called abutments"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 19,
+      "question_type": "matching_info",
+      "instruction_text": "Reading Passage 2 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F.",
+      "question_data": {
+        "text": "How triangular steel configurations distribute weight in a truss bridge."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph C describes truss bridges using steel beams in triangles to distribute stress and weight.",
+      "citation_excerpt": "truss bridge. A truss bridge uses a network of straight steel beams arranged in a series of triangles. Because triangles cannot be easily deformed"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 20,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Bridges transfer physical weights safely. Roman engineers built [blank] bridges that distribute load via compression outward to end [blank]."
+      },
+      "correct_answers": ["arch", "abutments"],
+      "explanation": "Paragraph B outlines Roman arch bridges pushing weight outward to supports called abutments.",
+      "citation_excerpt": "stone arch bridges, perfected by the engineers of Ancient Rome... arch toward stone supports, called abutments"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 21,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "During the 19th-century Industrial Revolution, [blank] bridges were introduced, utilizing steel triangles to carry stress."
+      },
+      "correct_answers": ["truss"],
+      "explanation": "Paragraph C notes iron and steel enabled the development of the truss bridge.",
+      "citation_excerpt": "development of the truss bridge. A truss bridge uses a network of straight steel beams"
+    },
+    {
+      "passage_number": 2,
+      "question_number": 22,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "For long distances, [blank] bridges hang the road from cables, relying on tension and deep anchors."
+      },
+      "correct_answers": ["suspension"],
+      "explanation": "Paragraph D states suspension bridges are used for massive distances.",
+      "citation_excerpt": "spanning massive distances... the suspension bridge is the design of choice."
+    },
+    {
+      "passage_number": 2,
+      "question_number": 23,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Environmental disasters like the Tacoma Narrows collapse led engineers to study wind flutter and integrate [blank] into design templates."
+      },
+      "correct_answers": ["open trusses", "trusses"],
+      "explanation": "Paragraph E states the collapse forced engineers to include open trusses to let wind blow through.",
+      "citation_excerpt": "forced engineers to redesign bridges to include open trusses that allow wind to pass"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 24,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph A",
+        "headings": [
+          "i. Cognitive presence and display latency",
+          "ii. Spatial sound and haptic tactile feedback",
+          "iii. Mid-century sensory booths and modern HMDs",
+          "iv. Virtual operating simulations for medical training",
+          "v. Exposure therapy in anxiety treatment",
+          "vi. Hardware limits and virtual safety concerns"
+        ]
+      },
+      "correct_answers": ["iii"],
+      "explanation": "Paragraph A traces VR roots from the 1950s Sensorama booth to modern head-mounted displays (HMDs).",
+      "citation_excerpt": "conceptual roots extend back to... 1950s... Sensorama... modern microprocessors... head-mounted displays (HMDs)"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 25,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph B",
+        "headings": [
+          "i. Cognitive presence and display latency",
+          "ii. Spatial sound and haptic tactile feedback",
+          "iii. Mid-century sensory booths and modern HMDs",
+          "iv. Virtual operating simulations for medical training",
+          "v. Exposure therapy in anxiety treatment",
+          "vi. Hardware limits and virtual safety concerns"
+        ]
+      },
+      "correct_answers": ["i"],
+      "explanation": "Paragraph B covers the psychological state of presence and how display latency can break the feedback loop.",
+      "citation_excerpt": "psychological state known as 'presence'... brain builds its model... display must update... latency"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 26,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph C",
+        "headings": [
+          "i. Cognitive presence and display latency",
+          "ii. Spatial sound and haptic tactile feedback",
+          "iii. Mid-century sensory booths and modern HMDs",
+          "iv. Virtual operating simulations for medical training",
+          "v. Exposure therapy in anxiety treatment",
+          "vi. Hardware limits and virtual safety concerns"
+        ]
+      },
+      "correct_answers": ["ii"],
+      "explanation": "Paragraph C details the sensory enhancements of spatial audio and haptic feedback to simulate touch.",
+      "citation_excerpt": "focus on spatial audio and haptic feedback. Spatial audio... Haptic feedback... simulate the physical sensation of touch"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 27,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph D",
+        "headings": [
+          "i. Cognitive presence and display latency",
+          "ii. Spatial sound and haptic tactile feedback",
+          "iii. Mid-century sensory booths and modern HMDs",
+          "iv. Virtual operating simulations for medical training",
+          "v. Exposure therapy in anxiety treatment",
+          "vi. Hardware limits and virtual safety concerns"
+        ]
+      },
+      "correct_answers": ["iv"],
+      "explanation": "Paragraph D outlines the adoption of VR in medical schools for surgical simulations.",
+      "citation_excerpt": "increasingly adopted in other fields, particularly medicine and surgery... train surgeons in complex procedures"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 28,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph E",
+        "headings": [
+          "i. Cognitive presence and display latency",
+          "ii. Spatial sound and haptic tactile feedback",
+          "iii. Mid-century sensory booths and modern HMDs",
+          "iv. Virtual operating simulations for medical training",
+          "v. Exposure therapy in anxiety treatment",
+          "vi. Hardware limits and virtual safety concerns"
+        ]
+      },
+      "correct_answers": ["v"],
+      "explanation": "Paragraph E outlines how psychologists use VR exposure therapy to treat phobias and PTSD.",
+      "citation_excerpt": "powerful tool in cognitive therapy and rehabilitation. Psychologists use VR for exposure therapy"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 29,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Paragraphs A–F from the list of headings below.",
+      "question_data": {
+        "section": "Paragraph F",
+        "headings": [
+          "i. Cognitive presence and display latency",
+          "ii. Spatial sound and haptic tactile feedback",
+          "iii. Mid-century sensory booths and modern HMDs",
+          "iv. Virtual operating simulations for medical training",
+          "v. Exposure therapy in anxiety treatment",
+          "vi. Hardware limits and virtual safety concerns"
+        ]
+      },
+      "correct_answers": ["vi"],
+      "explanation": "Paragraph F discusses hardware constraints, social isolation, and safety regulations.",
+      "citation_excerpt": "faces significant hardware and social challenges... digital isolation, privacy, and harassment"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 30,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "The mechanical booth developed by Morton Heilig was called the",
+        "options": [
+          "A. Head-Mounted Display.",
+          "B. Sensorama.",
+          "C. Microprocessor.",
+          "D. Haptic Glove."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph A states Morton Heilig developed the Sensorama in the 1950s.",
+      "citation_excerpt": "cinematographer Morton Heilig developed the Sensorama"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 31,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "The psychological feeling of being in a virtual world instead of the real room is",
+        "options": [
+          "A. latency.",
+          "B. stereoscopy.",
+          "C. presence.",
+          "D. exposure."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph B defines this subjective feeling as presence.",
+      "citation_excerpt": "psychological state known as 'presence'—the subjective sensation of being physically located inside the virtual environment"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 32,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "A noticeable latency or delay in VR tracking can break presence and cause",
+        "options": [
+          "A. immediate blindness.",
+          "B. spatial audio decay.",
+          "C. motion sickness.",
+          "D. rapid muscle spasms."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph B states a delay (latency) breaks presence and triggers motion sickness.",
+      "citation_excerpt": "broken, causing the illusion of presence to collapse and often triggering motion sickness."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 33,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Haptic feedback provides users with simulated sensations of",
+        "options": [
+          "A. distance and echo.",
+          "B. physical touch.",
+          "C. virtual sight.",
+          "D. wind and smell."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph C outlines haptic feedback simulating the sensation of touch.",
+      "citation_excerpt": "Haptic feedback involves using vibrating controllers... to simulate the physical sensation of touch"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 34,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Surgeons trained in VR display higher surgical error rates than those trained traditionally."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "Paragraph D states that VR-trained surgeons make significantly fewer errors.",
+      "citation_excerpt": "surgeons trained in VR make significantly fewer errors and complete procedures faster"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 35,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Exposure therapy uses virtual models to safely confront real-world fears."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "Paragraph E states that exposure therapy places patients in safe virtual scenarios to process fear.",
+      "citation_excerpt": "exposure therapy, placing patients with phobias or Post-Traumatic Stress Disorder (PTSD) in controlled virtual scenarios to help them process fear"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 36,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The long-term effects of headset screens on children''s eyes have been extensively studied."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "Paragraph F notes that these long-term effects remain under-studied, not extensively studied.",
+      "citation_excerpt": "Long-term health effects of wearing VR headsets... remain under-studied."
+    },
+    {
+      "passage_number": 3,
+      "question_number": 37,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What device worn on the head isolates a VR user from their room?"
+      },
+      "correct_answers": ["HMD", "HMDs", "head-mounted display", "head-mounted displays"],
+      "explanation": "Paragraph A states VR systems use head-mounted displays (HMDs) to isolate users.",
+      "citation_excerpt": "VR systems use head-mounted displays (HMDs) to isolate users"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 38,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What audio technology allows users to detect sound source directions?"
+      },
+      "correct_answers": ["spatial audio"],
+      "explanation": "Paragraph C notes spatial audio allows users to determine sound direction.",
+      "citation_excerpt": "spatial audio... allowing users to determine the exact direction and distance"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 39,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What cognitive phobia treatment allows patients to practice climbing heights?"
+      },
+      "correct_answers": ["exposure therapy", "therapy"],
+      "explanation": "Paragraph E defines this phobia and PTSD treatment as exposure therapy.",
+      "citation_excerpt": "VR for exposure therapy, placing patients with phobias... fear of heights can climb"
+    },
+    {
+      "passage_number": 3,
+      "question_number": 40,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN TWO WORDS.",
+      "question_data": {
+        "text": "What hardware limitation describes the excessive weight of current headsets?"
+      },
+      "correct_answers": ["heavy HMDs", "HMD weight", "headsets", "weight"],
+      "explanation": "Paragraph F notes that current head-mounted displays are heavy and expensive.",
+      "citation_excerpt": "Current HMDs are often heavy, expensive, and require connection"
+    }
+  ]
+}

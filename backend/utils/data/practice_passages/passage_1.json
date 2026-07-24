@@ -1,0 +1,157 @@
+{
+  "title": "Practice Passage 1: The Return of Urban Wetlands",
+  "test_type": "academic",
+  "difficulty": "easy",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Return of Urban Wetlands",
+    "sub_title": "How restored water ecosystems are cleaning water, reducing flood risks, and reviving communities.",
+    "content_html": "<p>For many years, wetlands were viewed as empty areas that served little purpose. As cities expanded, these marshes, ponds, and shallow lakes were often drained to create space for roads, housing, and factories. However, scientists now recognise that wetlands are among the most valuable ecosystems on Earth. Around the world, governments and environmental organisations are investing in projects to restore urban wetlands because of the many benefits they provide to both nature and people.</p><p>A wetland is an area of land where water covers the soil for part or all of the year. Some wetlands remain flooded throughout every season, while others become wet only after heavy rainfall or during particular months. Although wetlands differ in size and appearance, they all support plants and animals that have adapted to living in these watery environments. Reeds, grasses, frogs, fish, insects, and water birds are commonly found there.</p><p>One of the most important roles of wetlands is improving water quality. Rainwater often washes dirt, chemicals, and small pieces of waste from streets into nearby rivers. Before reaching larger waterways, this water may pass through wetlands. The plants growing there slow the movement of water, allowing mud and other particles to settle naturally. At the same time, microorganisms living in the wet soil break down many harmful substances. As a result, cleaner water eventually flows into rivers, lakes, or the sea.</p><p>Wetlands also play an important part in reducing floods. During periods of heavy rain, large amounts of water can quickly collect in cities because roads, pavements, and buildings prevent the ground from absorbing it. Wetlands act like giant natural sponges by temporarily storing excess water. Instead of flooding nearby neighbourhoods immediately, the water is released gradually over time. This natural process reduces pressure on drainage systems and lowers the risk of severe flooding.</p><p>Another significant benefit is the support wetlands provide for wildlife. Even small wetlands located within busy cities can become homes for many different species. Birds may stop there during long migrations, insects find breeding areas among the plants, and fish use shallow water as a safe place to grow. In some cities, rare animals have returned after wetlands were restored, surprising both scientists and local residents.</p><p>Beyond their environmental value, wetlands improve people's daily lives. Many restored wetlands include walking paths, viewing platforms, and educational centres where visitors can learn about local ecosystems. Schools often organise field trips to these areas because students can observe wildlife directly rather than simply reading about it in textbooks. Families also use these parks for exercise, photography, or quiet relaxation away from crowded streets.</p><p>Urban wetlands may even help reduce the effects of climate change. Wetland plants absorb carbon dioxide from the atmosphere during photosynthesis. Part of this carbon becomes stored in the soil beneath the water, where it can remain for many years. Although forests usually receive greater attention for storing carbon, scientists have discovered that healthy wetlands can also make an important contribution.</p><p>Restoring wetlands is not always simple. Some polluted sites require years of cleaning before plants and animals can safely return. Engineers sometimes need to redesign rivers or remove concrete channels that were built decades earlier. Local communities may also need convincing that restoring a wetland is more beneficial than using the land for construction projects. Despite these challenges, many restoration programmes have proved highly successful.</p><p>For example, several cities in Europe and Asia have transformed abandoned industrial land into thriving wetland parks. Within only a few years, water quality improved, bird populations increased, and nearby residents reported enjoying the new green spaces. These projects demonstrate that environmental protection and urban development do not always have to compete. With careful planning, cities can become healthier places for both people and wildlife.</p><p>Experts believe that the future of urban wetlands depends largely on public awareness. When local communities understand the importance of these ecosystems, they are more likely to support conservation projects and avoid activities that cause pollution. As climate change continues to create new environmental challenges, wetlands are expected to become an increasingly valuable part of sustainable cities around the world.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "Wetlands were once considered unsuitable for urban development."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "The passage explains that wetlands were drained to create space for urban projects (roads, housing, factories), which contradicts the statement that they were considered unsuitable.",
+      "citation_excerpt": "As cities expanded, these marshes, ponds, and shallow lakes were often drained to create space for roads, housing, and factories."
+    },
+    {
+      "question_number": 2,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "All wetlands remain covered by water throughout the entire year."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "The passage explicitly mentions that while some wetlands remain flooded throughout every season, others become wet only after rainfall or during particular months.",
+      "citation_excerpt": "Some wetlands remain flooded throughout every season, while others become wet only after heavy rainfall or during particular months."
+    },
+    {
+      "question_number": 3,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "Wetland plants help remove some pollutants from rainwater."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "The passage notes that the plants slow water movement so mud settles, and soil microorganisms break down harmful substances, cleaning the street runoff.",
+      "citation_excerpt": "The plants growing there slow the movement of water, allowing mud and other particles to settle naturally. At the same time, microorganisms living in the wet soil break down many harmful substances."
+    },
+    {
+      "question_number": 4,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "Urban wetlands completely eliminate flooding during heavy rainfall."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "The passage states wetlands act like sponges to reduce and gradually release excess water, which 'lowers the risk' of severe flooding, rather than completely eliminating it.",
+      "citation_excerpt": "This natural process reduces pressure on drainage systems and lowers the risk of severe flooding."
+    },
+    {
+      "question_number": 5,
+      "question_type": "tfng",
+      "instruction_text": "Write TRUE if the statement agrees with the passage, FALSE if the statement contradicts the passage, NOT GIVEN if there is no information.",
+      "question_data": {
+        "text": "Scientists were surprised when certain rare animals returned to restored wetlands."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "The text states that rare animals returned after restoration, surprising both scientists and local residents.",
+      "citation_excerpt": "In some cities, rare animals have returned after wetlands were restored, surprising both scientists and local residents."
+    },
+    {
+      "question_number": 6,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete each sentence using NO MORE THAN TWO WORDS from the passage.",
+      "question_data": {
+        "text": "Roads and buildings reduce the ground's ability to [blank] water."
+      },
+      "correct_answers": ["absorb"],
+      "explanation": "The passage explains that paved areas prevent the ground from absorbing rainwater, contributing to rapid city runoff.",
+      "citation_excerpt": "large amounts of water can quickly collect in cities because roads, pavements, and buildings prevent the ground from absorbing it."
+    },
+    {
+      "question_number": 7,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete each sentence using NO MORE THAN TWO WORDS from the passage.",
+      "question_data": {
+        "text": "Wetlands temporarily store [blank] during periods of heavy rainfall."
+      },
+      "correct_answers": ["excess water"],
+      "explanation": "The passage explains that wetlands act like sponges by temporarily storing excess water.",
+      "citation_excerpt": "Wetlands act like giant natural sponges by temporarily storing excess water."
+    },
+    {
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete each sentence using NO MORE THAN TWO WORDS from the passage.",
+      "question_data": {
+        "text": "Many schools arrange [blank] so students can observe wildlife."
+      },
+      "correct_answers": ["field trips"],
+      "explanation": "The passage states schools organise field trips so students can directly observe local ecosystems and wildlife.",
+      "citation_excerpt": "Schools often organise field trips to these areas because students can observe wildlife directly"
+    },
+    {
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete each sentence using NO MORE THAN TWO WORDS from the passage.",
+      "question_data": {
+        "text": "Some carbon remains stored beneath wetland water in the [blank]."
+      },
+      "correct_answers": ["soil"],
+      "explanation": "According to the passage, the carbon absorbed by wetland plants is stored in the soil beneath the water.",
+      "citation_excerpt": "Part of this carbon becomes stored in the soil beneath the water, where it can remain for many years."
+    },
+    {
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete each sentence using NO MORE THAN TWO WORDS from the passage.",
+      "question_data": {
+        "text": "Some polluted wetlands require years of [blank] before restoration can succeed."
+      },
+      "correct_answers": ["cleaning"],
+      "explanation": "The text explains that restoring wetlands can be difficult and some polluted sites require years of cleaning.",
+      "citation_excerpt": "Some polluted sites require years of cleaning before plants and animals can safely return."
+    },
+    {
+      "question_number": 11,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN THREE WORDS.",
+      "question_data": {
+        "text": "What type of land has been converted into wetland parks in several cities?"
+      },
+      "correct_answers": ["abandoned industrial land"],
+      "explanation": "The passage mentions that several cities in Europe and Asia have transformed abandoned industrial land into wetland parks.",
+      "citation_excerpt": "several cities in Europe and Asia have transformed abandoned industrial land into thriving wetland parks."
+    },
+    {
+      "question_number": 12,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN THREE WORDS.",
+      "question_data": {
+        "text": "According to the passage, what has become healthier alongside wildlife because of wetland restoration?"
+      },
+      "correct_answers": ["cities"],
+      "explanation": "The passage states that through careful planning, cities can become healthier places for both people and wildlife.",
+      "citation_excerpt": "These projects demonstrate that environmental protection and urban development do not always have to compete. With careful planning, cities can become healthier places for both people and wildlife."
+    },
+    {
+      "question_number": 13,
+      "question_type": "short_answer",
+      "instruction_text": "Answer using NO MORE THAN THREE WORDS.",
+      "question_data": {
+        "text": "What do experts believe is essential for the future protection of urban wetlands?"
+      },
+      "correct_answers": ["public awareness"],
+      "explanation": "The final paragraph says experts believe that the future of urban wetlands depends largely on public awareness.",
+      "citation_excerpt": "Experts believe that the future of urban wetlands depends largely on public awareness."
+    }
+  ]
+}

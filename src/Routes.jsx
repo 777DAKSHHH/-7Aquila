@@ -24,6 +24,18 @@ import WritingTask2 from "./pages/assessment/writing/task2";
 import WritingHistory from "./pages/assessment/writing/history";
 import WritingResults from "./pages/assessment/writing/results";
 
+import ReadingDashboard from "./pages/assessment/reading";
+import ReadingTaskSelection from "./pages/assessment/reading/task-selection";
+import ReadingCbtTest from "./pages/assessment/reading/cbt";
+import ReadingResults from "./pages/assessment/reading/results";
+import ReadingHistory from "./pages/assessment/reading/history";
+
+import ListeningDashboard from "./pages/assessment/listening";
+import ListeningTaskSelection from "./pages/assessment/listening/task-selection";
+import ListeningCbtTest from "./pages/assessment/listening/cbt";
+import ListeningResults from "./pages/assessment/listening/results";
+import ListeningHistory from "./pages/assessment/listening/history";
+
 const Routes = () => {
   const [gateOpen, setGateOpen] = useState(false);
 
@@ -82,6 +94,56 @@ const Routes = () => {
                 <Route
                   path={APP_ROUTES.WRITING_RESULTS}
                   element={<WritingResults />}
+                />
+
+                <Route
+                  path={APP_ROUTES.READING}
+                  element={<ReadingDashboard />}
+                />
+
+                <Route
+                  path={APP_ROUTES.READING_SELECTION}
+                  element={<ReadingTaskSelection />}
+                />
+
+                <Route
+                  path={APP_ROUTES.READING_TEST}
+                  element={<ReadingCbtTest />}
+                />
+
+                <Route
+                  path={APP_ROUTES.READING_RESULTS}
+                  element={<ReadingResults />}
+                />
+
+                <Route
+                  path={APP_ROUTES.READING_HISTORY}
+                  element={<ReadingHistory />}
+                />
+
+                <Route
+                  path={APP_ROUTES.LISTENING}
+                  element={<ListeningDashboard />}
+                />
+
+                <Route
+                  path={APP_ROUTES.LISTENING_SELECTION}
+                  element={<ListeningTaskSelection />}
+                />
+
+                <Route
+                  path={APP_ROUTES.LISTENING_TEST}
+                  element={<ListeningCbtTest />}
+                />
+
+                <Route
+                  path={APP_ROUTES.LISTENING_RESULTS}
+                  element={<ListeningResults />}
+                />
+
+                <Route
+                  path={APP_ROUTES.LISTENING_HISTORY}
+                  element={<ListeningHistory />}
                 />
 
               </Route>

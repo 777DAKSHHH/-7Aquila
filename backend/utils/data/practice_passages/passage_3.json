@@ -1,0 +1,197 @@
+{
+  "title": "Practice Passage 3: The Psychology of Decision Fatigue",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Psychology of Decision Fatigue",
+    "sub_title": "How the mental energy required to make choices deteriorates over time, and its implications for daily life.",
+    "content_html": "<p><strong>Section A</strong><br/>Every day, the average adult makes thousands of choices. These range from trivial matters, such as what clothes to wear or what food to eat, to significant life decisions, such as financial investments or career directions. Although we often assume that our capacity to make logical decisions is infinite, psychological research suggests otherwise. Making choices, regardless of how minor they are, consumes mental energy. Over time, this constant drain on our executive functioning leads to a psychological state known as 'decision fatigue', where our ability to make reasoned decisions deteriorates significantly.</p><p><strong>Section B</strong><br/>The concept of decision fatigue was pioneered by social psychologist Roy F. Baumeister, who linked it to his theory of ego depletion. Baumeister argued that willpower and self-control behave like muscles: they have limited strength and can become exhausted through repeated use. When we make decisions, we draw from the same reserve of cognitive energy used to regulate our emotions and resist temptations. Once this reservoir is depleted, our brain searches for energy-saving shortcuts, which typically manifests in two ways: either making rash, impulsive choices without fully considering the consequences, or avoiding decisions altogether through procrastination or status quo bias.</p><p><strong>Section C</strong><br/>The effects of decision fatigue are not restricted to personal life; they have serious consequences in professional and legal settings. A famous study conducted by researchers in Israel analyzed over 1,100 parole decisions made by judges over a ten-month period. The study found that judges were far more likely to grant parole at the beginning of the day or immediately after a food break. As the session progressed and decision fatigue set in, the judges became increasingly tired. To save mental energy, they defaulted to the safest choice: denying parole. By the end of a long session, the parole rate dropped to almost zero, illustrating how fatigue can undermine objective judgment.</p><p><strong>Section D</strong><br/>Retailers and marketers have long been aware of decision fatigue and actively exploit it to influence consumer behavior. Supermarkets, for instance, are designed to trigger choices at every turn. By the time a shopper reaches the checkout counter, they have made dozens of decisions regarding prices, brands, and ingredients. At this point of high exhaustion, supermarkets place impulse items, such as chocolate bars and magazines, right at the cash register. Fatigued shoppers are significantly more likely to yield to these temptations because their self-control reserves have been worn down by the shopping trip.</p><p><strong>Section E</strong><br/>Fortunately, psychologists have identified strategies to mitigate the effects of decision fatigue. The most effective method is to reduce the number of minor decisions we make throughout the day. High-achievers, such as former US President Barack Obama or Apple co-founder Steve Jobs, famously simplified their wardrobes to identical suits or turtlenecks to eliminate the daily choice of what to wear. Additionally, planning decisions in advance, establishing daily routines, and tackling complex cognitive tasks early in the morning when mental reserves are full can preserve executive function, leading to wiser choices overall.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Sections A–E from the list of headings below.",
+      "question_data": {
+        "section": "Section A",
+        "headings": [
+          "i. Exploitation by retailers",
+          "ii. The limits of human decision-making",
+          "iii. Professional implications of mental drain",
+          "iv. Methods to prevent cognitive exhaustion",
+          "v. The muscular theory of willpower",
+          "vi. Trivial decisions versus complex ones"
+        ]
+      },
+      "correct_answers": ["ii"],
+      "explanation": "Section A introduces the concept of decision fatigue and explains that our capacity to make choices is not infinite but degrades over time.",
+      "citation_excerpt": "Although we often assume that our capacity to make logical decisions is infinite, psychological research suggests otherwise... leads to a psychological state known as 'decision fatigue'"
+    },
+    {
+      "question_number": 2,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Sections A–E from the list of headings below.",
+      "question_data": {
+        "section": "Section B",
+        "headings": [
+          "i. Exploitation by retailers",
+          "ii. The limits of human decision-making",
+          "iii. Professional implications of mental drain",
+          "iv. Methods to prevent cognitive exhaustion",
+          "v. The muscular theory of willpower",
+          "vi. Trivial decisions versus complex ones"
+        ]
+      },
+      "correct_answers": ["v"],
+      "explanation": "Section B discusses Baumeister's theory of ego depletion, comparing willpower to a muscle that becomes exhausted with repeated use.",
+      "citation_excerpt": "Baumeister argued that willpower and self-control behave like muscles: they have limited strength and can become exhausted through repeated use."
+    },
+    {
+      "question_number": 3,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Sections A–E from the list of headings below.",
+      "question_data": {
+        "section": "Section C",
+        "headings": [
+          "i. Exploitation by retailers",
+          "ii. The limits of human decision-making",
+          "iii. Professional implications of mental drain",
+          "iv. Methods to prevent cognitive exhaustion",
+          "v. The muscular theory of willpower",
+          "vi. Trivial decisions versus complex ones"
+        ]
+      },
+      "correct_answers": ["iii"],
+      "explanation": "Section C details the consequences of decision fatigue in professional fields, using a study of judges and parole decisions as evidence.",
+      "citation_excerpt": "The effects of decision fatigue are not restricted to personal life; they have serious consequences in professional and legal settings."
+    },
+    {
+      "question_number": 4,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Sections A–E from the list of headings below.",
+      "question_data": {
+        "section": "Section D",
+        "headings": [
+          "i. Exploitation by retailers",
+          "ii. The limits of human decision-making",
+          "iii. Professional implications of mental drain",
+          "iv. Methods to prevent cognitive exhaustion",
+          "v. The muscular theory of willpower",
+          "vi. Trivial decisions versus complex ones"
+        ]
+      },
+      "correct_answers": ["i"],
+      "explanation": "Section D describes how retailers and supermarkets arrange shops and cash registers to exploit shoppers' decision fatigue.",
+      "citation_excerpt": "Retailers and marketers have long been aware of decision fatigue and actively exploit it to influence consumer behavior."
+    },
+    {
+      "question_number": 5,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for Sections A–E from the list of headings below.",
+      "question_data": {
+        "section": "Section E",
+        "headings": [
+          "i. Exploitation by retailers",
+          "ii. The limits of human decision-making",
+          "iii. Professional implications of mental drain",
+          "iv. Methods to prevent cognitive exhaustion",
+          "v. The muscular theory of willpower",
+          "vi. Trivial decisions versus complex ones"
+        ]
+      },
+      "correct_answers": ["iv"],
+      "explanation": "Section E lists various strategies to combat decision fatigue, such as simplifying choices and making plans in advance.",
+      "citation_excerpt": "Fortunately, psychologists have identified strategies to mitigate the effects of decision fatigue."
+    },
+    {
+      "question_number": 6,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below using words from the text. Use NO MORE THAN TWO WORDS for each answer.",
+      "question_data": {
+        "text": "The psychological theory of [blank] proposes that willpower operates like a muscle. When this energy source is spent, individuals often experience decision fatigue. As a result, they may make [blank] choices or choose to put off making choices altogether."
+      },
+      "correct_answers": ["ego depletion", "impulsive"],
+      "explanation": "The text says Baumeister linked decision fatigue to ego depletion and argued that when exhausted, brains choose shortcuts like impulsive choices.",
+      "citation_excerpt": "Baumeister, who linked it to his theory of ego depletion... either making rash, impulsive choices... or avoiding decisions altogether"
+    },
+    {
+      "question_number": 7,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below using words from the text. Use NO MORE THAN TWO WORDS for each answer.",
+      "question_data": {
+        "text": "A study on judges showed that parole was much more likely to be granted following a [blank] or at the start of a session. Otherwise, judges typically chose to [blank] parole as an energy-saving default."
+      },
+      "correct_answers": ["food break", "deny"],
+      "explanation": "The study found judges granted parole at the start of sessions or after a food break, but otherwise defaulted to denying parole.",
+      "citation_excerpt": "judges were far more likely to grant parole at the beginning of the day or immediately after a food break... defaulted to the safest choice: denying parole."
+    },
+    {
+      "question_number": 8,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below using words from the text. Use NO MORE THAN TWO WORDS for each answer.",
+      "question_data": {
+        "text": "To prevent exhaustion, famous figures like Barack Obama chose to simplify their [blank]."
+      },
+      "correct_answers": ["wardrobes"],
+      "explanation": "The text states that Barack Obama and Steve Jobs simplified their wardrobes to eliminate minor daily clothing choices.",
+      "citation_excerpt": "Steve Jobs, famously simplified their wardrobes to identical suits or turtlenecks"
+    },
+    {
+      "question_number": 9,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Making simple, daily choices does not consume any significant cognitive energy."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "The passage says that making choices, regardless of how minor they are, consumes mental energy.",
+      "citation_excerpt": "Making choices, regardless of how minor they are, consumes mental energy."
+    },
+    {
+      "question_number": 10,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The study on parole decisions analysed more than a thousand judicial outcomes."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "The text notes the study analysed over 1,100 parole decisions.",
+      "citation_excerpt": "analyzed over 1,100 parole decisions made by judges"
+    },
+    {
+      "question_number": 11,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Shoppers usually buy healthier items at the supermarket checkout than inside the aisles."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "The passage says fatigued shoppers at checkout are highly likely to yield to temptations like chocolate bars, which are not healthy items.",
+      "citation_excerpt": "supermarkets place impulse items, such as chocolate bars and magazines, right at the cash register. Fatigued shoppers are significantly more likely to yield"
+    },
+    {
+      "question_number": 12,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": " Steve Jobs chose his outfit to make a fashion statement."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "The passage states Steve Jobs simplified his wardrobe to eliminate the daily choice of what to wear, not as a fashion statement.",
+      "citation_excerpt": "Steve Jobs, famously simplified their wardrobes to identical suits or turtlenecks to eliminate the daily choice of what to wear."
+    },
+    {
+      "question_number": 13,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the claims of the writer in the passage? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "Making plans beforehand is recommended to conserve willpower."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "The text recommends planning decisions in advance to preserve executive function.",
+      "citation_excerpt": "planning decisions in advance, establishing daily routines, and tackling complex cognitive tasks early... can preserve executive function"
+    }
+  ]
+}

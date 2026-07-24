@@ -9,6 +9,8 @@ import speakingRoutes from "./routes/speaking.routes.js";
 import questionsRoutes from "./routes/questions.routes.js";
 import testSetsRoutes from "./routes/testSets.routes.js";
 import authRoutes from "./routes/auth.routes.js";
+import readingRoutes from "./routes/reading.routes.js";
+import listeningRoutes from "./routes/listening.routes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -38,6 +40,8 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/speaking", speakingRoutes);
 app.use("/api/questions", questionsRoutes);
 app.use("/api/test-sets", testSetsRoutes);
+app.use("/api/reading", readingRoutes);
+app.use("/api/listening", listeningRoutes);
 app.use("/api", authRoutes);
 
 app.get("/", (req, res) => {

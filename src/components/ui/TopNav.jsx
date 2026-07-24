@@ -25,13 +25,19 @@ const TopNav = ({ userRole = 'student' }) => {
 
   const studentNavItems = [
     { label: 'Dashboard', path: '/test-selection-dashboard', icon: 'LayoutDashboard' },
-    { label: 'Practice', path: '/speaking-test-interface', icon: 'Mic' },
+    { label: 'Speaking', path: '/speaking-test-interface', icon: 'Mic' },
+    { label: 'Writing', path: '/assessment/writing', icon: 'FileText' },
+    { label: 'Reading', path: '/assessment/reading', icon: 'BookOpen' },
+    { label: 'Listening', path: '/assessment/listening', icon: 'Headphones' },
     { label: 'History', path: '/practice-history', icon: 'History' },
   ];
 
   const facultyNavItems = [
     { label: 'Dashboard', path: '/test-selection-dashboard', icon: 'LayoutDashboard' },
-    { label: 'Practice', path: '/speaking-test-interface', icon: 'Mic' },
+    { label: 'Speaking', path: '/speaking-test-interface', icon: 'Mic' },
+    { label: 'Writing', path: '/assessment/writing', icon: 'FileText' },
+    { label: 'Reading', path: '/assessment/reading', icon: 'BookOpen' },
+    { label: 'Listening', path: '/assessment/listening', icon: 'Headphones' },
     { label: 'History', path: '/practice-history', icon: 'History' },
     { label: 'Faculty Dashboard', path: '/faculty-dashboard', icon: 'Users' },
     { label: 'Student Review', path: '/student-audio-review', icon: 'FileAudio' },
@@ -66,7 +72,7 @@ const TopNav = ({ userRole = 'student' }) => {
               to="/test-selection-dashboard"
               className="text-xl font-heading font-semibold text-foreground hover:text-primary transition-colors duration-base hidden sm:block"
             >
-              IELTS Speaking Practice
+              IELTS Practice Platform
             </Link>
           </div>
 

@@ -59,26 +59,47 @@ const TestSelectionDashboard = () => {
         setFilteredTests(fetchedTests);
 
         // Fetch User Stats from Supabase
-        // Requirement: Fetch all evaluated sessions for the user
+        // Requirement: Fetch evaluated & reviewed sessions for the user
         const { data: sessionsData, error: sessionsError } = await supabase
           .from("speaking_sessions")
           .select("*")
           .eq("student_id", user.id)
-          .eq("status", "evaluated")
+          .in("status", ["evaluated", "reviewed"])
           .order("completed_at", { ascending: false });
 
         if (!sessionsError && sessionsData) {
           const totalTests = sessionsData.length;
-          const totalScore = sessionsData.reduce((sum, s) => sum + (s.ai_band_score || 0), 0);
+
+          // Helper to get effective band score (Faculty override if available, else AI score)
+          const getSessionScore = (s) => {
+            const isReviewed = s.teacher_band_score !== null && s.teacher_band_score !== undefined;
+            return (isReviewed ? s.teacher_band_score : s.ai_band_score) || 0;
+          };
+
+          const facultyReviewedCount = sessionsData.filter(
+            (s) => s.teacher_band_score !== null && s.teacher_band_score !== undefined
+          ).length;
+          const aiEvaluatedCount = totalTests - facultyReviewedCount;
+
+          const totalScore = sessionsData.reduce((sum, s) => sum + getSessionScore(s), 0);
           const averageScore = totalTests > 0 ? (totalScore / totalTests).toFixed(1) : 0;
-          const recentScore = totalTests > 0 ? (sessionsData[0].ai_band_score || 0) : 0;
+          const recentScore = totalTests > 0 ? getSessionScore(sessionsData[0]) : 0;
           const lastTestDate = totalTests > 0 ? new Date(sessionsData[0].completed_at).toLocaleDateString() : 'N/A';
 
           let improvementTrend = 0;
           if (totalTests >= 2) {
-            improvementTrend = (sessionsData[0].ai_band_score || 0) - (sessionsData[1].ai_band_score || 0);
+            improvementTrend = parseFloat((getSessionScore(sessionsData[0]) - getSessionScore(sessionsData[1])).toFixed(1));
           }
-          setUserStats({ totalTests, averageScore, recentScore, lastTestDate, improvementTrend });
+
+          setUserStats({
+            totalTests,
+            aiEvaluatedCount,
+            facultyReviewedCount,
+            averageScore,
+            recentScore,
+            lastTestDate,
+            improvementTrend,
+          });
         } else {
           console.warn("User stats fetch issue:", sessionsError);
         }
