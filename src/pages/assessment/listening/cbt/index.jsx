@@ -170,6 +170,7 @@ const ListeningCbtTest = () => {
   const prevAudioUrlRef = useRef("");
 
   useEffect(() => {
+    const activeSection = sections[activeSectionIdx];
     const currentAudioUrl = activeSection ? activeSection.audio_url : "";
     if (currentAudioUrl !== prevAudioUrlRef.current) {
       // Audio URL has changed, reset player
@@ -181,7 +182,7 @@ const ListeningCbtTest = () => {
       }
       prevAudioUrlRef.current = currentAudioUrl;
     }
-  }, [activeSectionIdx, activeSection]);
+  }, [activeSectionIdx, sections]);
 
   // Format time (seconds to MM:SS)
   const formatTime = (timeInSecs) => {
