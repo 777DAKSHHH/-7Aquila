@@ -230,10 +230,10 @@ const FacultyDashboard = () => {
   const fetchRecentActivities = async () => {
     try {
       const [speakingRes, writingRes, readingRes, listeningRes] = await Promise.all([
-        supabase.from("speaking_sessions").select("id, completed_at, status, profiles(full_name)").order("completed_at", { ascending: false }).limit(10),
-        supabase.from("writing_sessions").select("id, completed_at, status, profiles(full_name)").order("completed_at", { ascending: false }).limit(10),
-        supabase.from("reading_sessions").select("id, completed_at, status, profiles(full_name)").order("completed_at", { ascending: false }).limit(10),
-        supabase.from("listening_sessions").select("id, completed_at, status, profiles(full_name)").order("completed_at", { ascending: false }).limit(10)
+        supabase.from("speaking_sessions").select("id, completed_at, status, profiles(full_name)").order("completed_at", { ascending: false }).limit(40),
+        supabase.from("writing_sessions").select("id, completed_at, status, profiles(full_name)").order("completed_at", { ascending: false }).limit(40),
+        supabase.from("reading_sessions").select("id, completed_at, status, profiles(full_name)").order("completed_at", { ascending: false }).limit(40),
+        supabase.from("listening_sessions").select("id, completed_at, status, profiles(full_name)").order("completed_at", { ascending: false }).limit(40)
       ]);
 
       const allActs = [];
@@ -244,10 +244,10 @@ const FacultyDashboard = () => {
           allActs.push({
             id: s.id,
             studentName: s.profiles?.full_name || "Unknown Student",
-            description: "Completed a speaking attempt.",
+            description: "took the Speaking CBT module test",
             timestamp: new Date(s.completed_at),
             type: s.status === "completed" ? "feedback_pending" : "new_attempt",
-            actionRequired: s.status === "completed" || s.status === "evaluated",
+            actionRequired: true,
             module: "speaking"
           });
         });
@@ -259,10 +259,10 @@ const FacultyDashboard = () => {
           allActs.push({
             id: w.id,
             studentName: w.profiles?.full_name || "Unknown Student",
-            description: "Submitted a writing task.",
+            description: "took the Writing CBT module test",
             timestamp: new Date(w.completed_at),
             type: w.status === "submitted" ? "feedback_pending" : "new_attempt",
-            actionRequired: w.status === "submitted" || w.status === "evaluated",
+            actionRequired: true,
             module: "writing"
           });
         });
@@ -274,10 +274,10 @@ const FacultyDashboard = () => {
           allActs.push({
             id: r.id,
             studentName: r.profiles?.full_name || "Unknown Student",
-            description: "Completed a reading exam.",
+            description: "took the Reading CBT module test",
             timestamp: new Date(r.completed_at),
             type: "new_attempt",
-            actionRequired: false,
+            actionRequired: true,
             module: "reading"
           });
         });
@@ -289,10 +289,10 @@ const FacultyDashboard = () => {
           allActs.push({
             id: l.id,
             studentName: l.profiles?.full_name || "Unknown Student",
-            description: "Completed a listening exam.",
+            description: "took the Listening CBT module test",
             timestamp: new Date(l.completed_at),
             type: "new_attempt",
-            actionRequired: false,
+            actionRequired: true,
             module: "listening"
           });
         });
@@ -300,7 +300,7 @@ const FacultyDashboard = () => {
 
       const sortedActs = allActs
         .sort((a, b) => b.timestamp - a.timestamp)
-        .slice(0, 25)
+        .slice(0, 50)
         .map(a => ({
           ...a,
           timestamp: a.timestamp.toLocaleString()
@@ -691,15 +691,7 @@ const FacultyDashboard = () => {
               </div>
             </div>
 
-            {/* Student Password Info (For faculty assistance) */}
-            {profileModalData.student.visible_password && (
-              <div className="bg-indigo-500/5 border border-indigo-500/10 rounded-xl p-3 flex items-center justify-between text-xs">
-                <span className="text-indigo-600 font-medium font-caption">Student Login Password:</span>
-                <span className="font-mono font-bold text-foreground bg-indigo-500/10 px-2 py-0.5 rounded border border-indigo-500/10">
-                  {profileModalData.student.visible_password}
-                </span>
-              </div>
-            )}
+
 
             {/* Dynamic Multi-Module Analytics Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

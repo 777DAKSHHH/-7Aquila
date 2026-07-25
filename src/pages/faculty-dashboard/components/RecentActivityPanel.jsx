@@ -6,7 +6,7 @@ import Button from '../../../components/ui/Button';
 const RecentActivityPanel = ({ activities = [], onReviewActivity }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const displayedActivities = isExpanded ? activities.slice(0, 35) : activities.slice(0, 5);
+  const displayedActivities = isExpanded ? activities.slice(0, 50) : activities.slice(0, 5);
 
   const getActivityIcon = (type) => {
     switch (type) {
@@ -47,7 +47,7 @@ const RecentActivityPanel = ({ activities = [], onReviewActivity }) => {
               iconPosition="right"
               onClick={() => setIsExpanded(!isExpanded)}
             >
-              {isExpanded ? "Show Less" : `View All (${Math.min(activities.length, 35)})`}
+              {isExpanded ? "Show Less" : `View All (${Math.min(activities.length, 50)})`}
             </Button>
           )}
           <Link to="/practice-history">
@@ -84,9 +84,11 @@ const RecentActivityPanel = ({ activities = [], onReviewActivity }) => {
                   />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-foreground">{activity?.studentName}</p>
-                  <p className="text-sm text-muted-foreground font-caption">{activity?.description}</p>
-                  <p className="text-xs text-muted-foreground font-caption mt-1">{activity?.timestamp}</p>
+                  <p className="text-xs text-foreground/90 font-medium leading-relaxed">
+                    <span className="font-bold text-foreground">{activity?.studentName}</span>{" "}
+                    {activity?.description}
+                  </p>
+                  <p className="text-[10px] text-muted-foreground font-mono mt-0.5">{activity?.timestamp}</p>
                 </div>
                 {reviewed ? (
                   <div className="flex items-center gap-1.5 text-xs font-medium text-success bg-success/10 px-2 py-1 rounded-full">
@@ -98,7 +100,7 @@ const RecentActivityPanel = ({ activities = [], onReviewActivity }) => {
                     variant="outline"
                     size="xs"
                     iconName="ArrowRight"
-                    onClick={() => onReviewActivity ? onReviewActivity(activity.id) : (window.location.href = `/student-audio-review/${activity.id}`)}
+                    onClick={() => onReviewActivity ? onReviewActivity(activity.id, activity.module) : (window.location.href = `/student-audio-review/${activity.id}`)}
                   >
                     Review
                   </Button>

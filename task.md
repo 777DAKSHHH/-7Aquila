@@ -1,0 +1,9 @@
+- [x] Create `src/pages/student-writing-review/index.jsx` (Writing Review Portal)
+- [x] Register route in `src/Routes.jsx`
+- [x] Update `src/pages/faculty-dashboard/index.jsx` with module switcher, dynamic fetches/metrics, and Student Profile Modal
+- [x] Update `src/pages/faculty-dashboard/components/StudentListTable.jsx` to render columns dynamically
+- [x] Update `src/pages/faculty-dashboard/components/StudentListCards.jsx` for mobile layouts
+- [x] Fix student settings profile avatar upload (bypassing storage RLS policy errors)
+- [x] Enlarge activities panel to 30+ items, show single-sentence CBT descriptions, enable module-aware review callbacks
+- [x] Hide passwords in Student Profile Modal card
+- [x] Run production build and verify correctness
