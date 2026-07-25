@@ -54,27 +54,23 @@ export const ProfileSettings = ({ user, settings, updateSettings }) => {
 
       if (profileError) throw profileError;
 
-      // 2. If a new avatar is selected, upload it
+      // 2. If a new avatar is selected, upload it via backend to bypass storage RLS checks
       if (avatarFile) {
-        const fileExt = avatarFile.name.split('.').pop();
-        const filePath = `${user.id}.${fileExt}`;
+        const formData = new FormData();
+        formData.append("avatar", avatarFile);
+        formData.append("userId", user.id);
 
-        // Upload to Supabase Storage in the 'avatars' bucket
-        const { error: uploadError } = await supabase.storage
-          .from('avatars')
-          .upload(filePath, avatarFile, {
-            cacheControl: '3600',
-            upsert: true,
-          });
+        const response = await fetch(`${API_BASE_URL}/api/settings/avatar`, {
+          method: "POST",
+          body: formData
+        });
 
-        if (uploadError) throw uploadError;
+        const result = await response.json();
+        if (!result.success) {
+          throw new Error(result.message || "Failed to upload avatar.");
+        }
 
-        // Get the public URL for the newly uploaded file and add a timestamp to bust the cache
-        const { data: { publicUrl } } = supabase.storage
-          .from('avatars')
-          .getPublicUrl(filePath);
-        
-        settingsUpdates.profile_picture_url = `${publicUrl}?t=${new Date().getTime()}`;
+        settingsUpdates.profile_picture_url = result.profilePictureUrl;
       }
 
       // 3. Save Settings to 'user_settings' table

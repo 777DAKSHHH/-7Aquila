@@ -11,6 +11,7 @@ import testSetsRoutes from "./routes/testSets.routes.js";
 import authRoutes from "./routes/auth.routes.js";
 import readingRoutes from "./routes/reading.routes.js";
 import listeningRoutes from "./routes/listening.routes.js";
+import settingsRoutes from "./routes/settings.routes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -42,6 +43,7 @@ app.use("/api/questions", questionsRoutes);
 app.use("/api/test-sets", testSetsRoutes);
 app.use("/api/reading", readingRoutes);
 app.use("/api/listening", listeningRoutes);
+app.use("/api/settings", settingsRoutes);
 app.use("/api", authRoutes);
 
 import { supabase } from "./config/supabaseClient.js";

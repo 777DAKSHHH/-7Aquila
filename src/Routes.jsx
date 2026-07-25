@@ -7,6 +7,7 @@ import FacultyDashboard from './pages/faculty-dashboard';
 import SpeakingTestInterface from './pages/speaking-test-interface';
 import AIFeedbackResults from './pages/ai-feedback-results';
 import StudentAudioReview from './pages/student-audio-review';
+import StudentWritingReview from './pages/student-writing-review';
 import PracticeHistory from './pages/practice-history';
 import TestSelectionDashboard from './pages/test-selection-dashboard';
 import LoginPage from "./pages/login/index.jsx";
@@ -61,6 +62,7 @@ const Routes = () => {
               <Route path="/speaking-test-interface" element={<SpeakingTestInterface />} />
               <Route path="/ai-feedback-results/:sessionId" element={<AIFeedbackResults />} />
               <Route path="/student-audio-review/:sessionId" element={<StudentAudioReview />} />
+              <Route path="/student-writing-review/:sessionId" element={<StudentWritingReview />} />
               <Route path="/practice-history" element={<PracticeHistory />} />
               <Route path="/test-selection-dashboard" element={<TestSelectionDashboard />} />
               <Route path="/settings" element={<Settings />} />
