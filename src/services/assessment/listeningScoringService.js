@@ -29,7 +29,6 @@ export const normalizeAnswer = (answer) => {
 
 /**
  * Evaluates a user answer against the array of correct answers.
- * Returns true if the normalized user answer matches any normalized correct answer.
  */
 export const checkAnswer = (userAnswer, correctAnswers) => {
   if (!correctAnswers || !Array.isArray(correctAnswers) || correctAnswers.length === 0) {
@@ -51,7 +50,6 @@ export const checkAnswer = (userAnswer, correctAnswers) => {
 
 /**
  * Maps Raw Listening Score (0-40) to IELTS Band Score (1.0 - 9.0)
- * Note: IELTS Listening raw-to-band mapping is identical for Academic and General.
  */
 export const calculateListeningBand = (rawScore) => {
   const score = Math.max(0, Math.min(40, Math.round(rawScore)));
@@ -90,20 +88,118 @@ export const scoreListeningSession = (userAnswers = {}, questions = []) => {
 
   let rawScore = 0;
   const questionResults = [];
+  const evaluatedQuestions = {};
 
   const sortedQuestions = [...questions].sort((a, b) => a.question_number - b.question_number);
 
+  // Group questions by section and shared correct_answers list (only if it has length > 1)
+  const groupedQuestionsMap = {};
+  const ungroupedQuestions = [];
+
   for (const q of sortedQuestions) {
+    if (q.correct_answers && Array.isArray(q.correct_answers) && q.correct_answers.length > 1) {
+      const sortedKeys = [...q.correct_answers].map(a => String(a).toLowerCase().trim()).sort();
+      const groupKey = `${q.section_id}_${JSON.stringify(sortedKeys)}`;
+      
+      if (!groupedQuestionsMap[groupKey]) {
+        groupedQuestionsMap[groupKey] = [];
+      }
+      groupedQuestionsMap[groupKey].push(q);
+    } else {
+      ungroupedQuestions.push(q);
+    }
+  }
+
+  // 1. Process Grouped Questions (MCQs that can be in either order)
+  for (const groupKey in groupedQuestionsMap) {
+    const groupQs = groupedQuestionsMap[groupKey];
+    const N = groupQs.length;
+    
+    // Correct answers set (normalized)
+    const firstQ = groupQs[0];
+    const correctSet = new Set(
+      firstQ.correct_answers.map(a => String(a).trim().toLowerCase())
+    );
+
+    // Collect all unique user selections for this group
+    const userSelections = new Set();
+    groupQs.forEach(q => {
+      const qNumStr = String(q.question_number);
+      const ans = userAnswers[qNumStr];
+      if (ans) {
+        if (Array.isArray(ans)) {
+          ans.forEach(val => {
+            if (val) userSelections.add(String(val).trim().toLowerCase());
+          });
+        } else {
+          const parts = String(ans).split(",");
+          parts.forEach(part => {
+            if (part) userSelections.add(part.trim().toLowerCase());
+          });
+        }
+      }
+    });
+
+    // Calculate how many correct selections matches
+    let matches = 0;
+    userSelections.forEach(sel => {
+      if (correctSet.has(sel)) {
+        matches++;
+      }
+    });
+
+    const scoreForGroup = Math.min(N, matches);
+    rawScore += scoreForGroup;
+
+    // Distribute correct/incorrect marks (first scoreForGroup questions marked true)
+    for (let i = 0; i < N; i++) {
+      const q = groupQs[i];
+      const qNumStr = String(q.question_number);
+      const isCorrect = i < scoreForGroup;
+      
+      evaluatedQuestions[q.id] = {
+        questionId: q.id,
+        questionNumber: q.question_number,
+        questionType: q.question_type,
+        userAnswer: userAnswers[qNumStr] || null,
+        correctAnswers: q.correct_answers,
+        isCorrect,
+        explanation: q.explanation || null
+      };
+    }
+  }
+
+  // 2. Process Ungrouped Questions
+  for (const q of ungroupedQuestions) {
     const qNumStr = String(q.question_number);
     const userAnswer = userAnswers[qNumStr];
     
-    const isCorrect = checkAnswer(userAnswer, q.correct_answers);
-    
+    let isCorrect = false;
+    if (q.correct_answers && q.correct_answers.length > 0) {
+      const normalizedUserList = [];
+      if (Array.isArray(userAnswer)) {
+        userAnswer.forEach(val => {
+          if (val) normalizedUserList.push(String(val).trim().toLowerCase());
+        });
+      } else if (userAnswer) {
+        const parts = String(userAnswer).split(",");
+        parts.forEach(part => {
+          if (part) normalizedUserList.push(part.trim().toLowerCase());
+        });
+      }
+
+      const normalizedCorrect = q.correct_answers.map(a => String(a).trim().toLowerCase());
+      
+      if (normalizedUserList.length > 0) {
+        isCorrect = normalizedUserList.some(val => normalizedCorrect.includes(val));
+      }
+    }
+
     if (isCorrect) {
       rawScore += 1;
     }
 
-    questionResults.push({
+    evaluatedQuestions[q.id] = {
       questionId: q.id,
       questionNumber: q.question_number,
       questionType: q.question_type,
@@ -111,7 +207,12 @@ export const scoreListeningSession = (userAnswers = {}, questions = []) => {
       correctAnswers: q.correct_answers,
       isCorrect,
       explanation: q.explanation || null
-    });
+    };
+  }
+
+  // Populate results array in sorted order
+  for (const q of sortedQuestions) {
+    questionResults.push(evaluatedQuestions[q.id]);
   }
 
   const bandScore = calculateListeningBand(rawScore);

@@ -6,4 +6,9 @@
 - [x] Fix student settings profile avatar upload (bypassing storage RLS policy errors)
 - [x] Enlarge activities panel to 30+ items, show single-sentence CBT descriptions, enable module-aware review callbacks
 - [x] Hide passwords in Student Profile Modal card
+- [x] Overhaul MCQ scoring logic for Reading/Listening to support grouped, order-insensitive options
+- [x] Regrade specified student attempts in the database
+- [x] Introduce 2-minute extra review time phase when listening audio finishes
+- [x] Fix Recent Activities relationship query cache error
+- [x] Port grouped MCQ scoring updates to client scoring engines (listeningScoringService/readingScoringService) for results screen display accuracy
 - [x] Run production build and verify correctness

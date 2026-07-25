@@ -229,74 +229,64 @@ const FacultyDashboard = () => {
 
   const fetchRecentActivities = async () => {
     try {
+      // 1. Fetch sessions in parallel (without nested profiles join to avoid relationship errors)
       const [speakingRes, writingRes, readingRes, listeningRes] = await Promise.all([
-        supabase.from("speaking_sessions").select("id, completed_at, status, profiles(full_name)").order("completed_at", { ascending: false }).limit(40),
-        supabase.from("writing_sessions").select("id, completed_at, status, profiles(full_name)").order("completed_at", { ascending: false }).limit(40),
-        supabase.from("reading_sessions").select("id, completed_at, status, profiles(full_name)").order("completed_at", { ascending: false }).limit(40),
-        supabase.from("listening_sessions").select("id, completed_at, status, profiles(full_name)").order("completed_at", { ascending: false }).limit(40)
+        supabase.from("speaking_sessions").select("id, completed_at, status, student_id").order("completed_at", { ascending: false }).limit(40),
+        supabase.from("writing_sessions").select("id, completed_at, status, student_id").order("completed_at", { ascending: false }).limit(40),
+        supabase.from("reading_sessions").select("id, completed_at, status, student_id").order("completed_at", { ascending: false }).limit(40),
+        supabase.from("listening_sessions").select("id, completed_at, status, student_id").order("completed_at", { ascending: false }).limit(40)
       ]);
 
-      const allActs = [];
+      const rawActs = [];
+      const studentIds = new Set();
 
-      if (speakingRes.data) {
-        speakingRes.data.forEach(s => {
+      const collectSessions = (resData, moduleName, description, typeGetter) => {
+        if (!resData) return;
+        resData.forEach(s => {
           if (!s.completed_at) return;
-          allActs.push({
+          studentIds.add(s.student_id);
+          rawActs.push({
             id: s.id,
-            studentName: s.profiles?.full_name || "Unknown Student",
-            description: "took the Speaking CBT module test",
-            timestamp: new Date(s.completed_at),
-            type: s.status === "completed" ? "feedback_pending" : "new_attempt",
-            actionRequired: true,
-            module: "speaking"
+            studentId: s.student_id,
+            completedAt: s.completed_at,
+            status: s.status,
+            description,
+            module: moduleName,
+            type: typeGetter(s)
           });
         });
+      };
+
+      collectSessions(speakingRes.data, "speaking", "took the Speaking CBT module test", s => s.status === "completed" ? "feedback_pending" : "new_attempt");
+      collectSessions(writingRes.data, "writing", "took the Writing CBT module test", s => s.status === "submitted" ? "feedback_pending" : "new_attempt");
+      collectSessions(readingRes.data, "reading", "took the Reading CBT module test", s => "new_attempt");
+      collectSessions(listeningRes.data, "listening", "took the Listening CBT module test", s => "new_attempt");
+
+      // 2. Fetch profiles for all unique studentIds in a single query
+      const profileMap = {};
+      if (studentIds.size > 0) {
+        const { data: profiles, error: pErr } = await supabase
+          .from("profiles")
+          .select("id, full_name")
+          .in("id", Array.from(studentIds));
+
+        if (!pErr && profiles) {
+          profiles.forEach(p => {
+            profileMap[p.id] = p.full_name;
+          });
+        }
       }
 
-      if (writingRes.data) {
-        writingRes.data.forEach(w => {
-          if (!w.completed_at) return;
-          allActs.push({
-            id: w.id,
-            studentName: w.profiles?.full_name || "Unknown Student",
-            description: "took the Writing CBT module test",
-            timestamp: new Date(w.completed_at),
-            type: w.status === "submitted" ? "feedback_pending" : "new_attempt",
-            actionRequired: true,
-            module: "writing"
-          });
-        });
-      }
-
-      if (readingRes.data) {
-        readingRes.data.forEach(r => {
-          if (!r.completed_at) return;
-          allActs.push({
-            id: r.id,
-            studentName: r.profiles?.full_name || "Unknown Student",
-            description: "took the Reading CBT module test",
-            timestamp: new Date(r.completed_at),
-            type: "new_attempt",
-            actionRequired: true,
-            module: "reading"
-          });
-        });
-      }
-
-      if (listeningRes.data) {
-        listeningRes.data.forEach(l => {
-          if (!l.completed_at) return;
-          allActs.push({
-            id: l.id,
-            studentName: l.profiles?.full_name || "Unknown Student",
-            description: "took the Listening CBT module test",
-            timestamp: new Date(l.completed_at),
-            type: "new_attempt",
-            actionRequired: true,
-            module: "listening"
-          });
-        });
-      }
+      // 3. Map studentName and sort by timestamp
+      const allActs = rawActs.map(act => ({
+        id: act.id,
+        studentName: profileMap[act.studentId] || "Unknown Student",
+        description: act.description,
+        timestamp: new Date(act.completedAt),
+        type: act.type,
+        actionRequired: true,
+        module: act.module
+      }));
 
       const sortedActs = allActs
         .sort((a, b) => b.timestamp - a.timestamp)

@@ -46,6 +46,8 @@ const ListeningCbtTest = () => {
   const [audioVolume, setAudioVolume] = useState(0.8);
   const [isMuted, setIsMuted] = useState(false);
   const [playbackSpeed, setPlaybackSpeed] = useState(1.0);
+  const [audioFinished, setAudioFinished] = useState(false);
+  const [extraTimeActive, setExtraTimeActive] = useState(false);
 
   // Refs for tracking timer, draft, and audio
   const timerRef = useRef(null);
@@ -214,6 +216,14 @@ const ListeningCbtTest = () => {
     if (audioRef.current) {
       setAudioDuration(audioRef.current.duration);
     }
+  };
+
+  const handleAudioFinished = () => {
+    setIsPlaying(false);
+    if (audioFinished) return;
+    setAudioFinished(true);
+    setExtraTimeActive(true);
+    setSecondsRemaining(120); // 2 minutes extra time
   };
 
   const handleAudioProgressSeek = (e) => {
@@ -490,8 +500,16 @@ const ListeningCbtTest = () => {
           src={activeSection ? getAudioUrl(activeSection.audio_url) : ""}
           onTimeUpdate={handleAudioTimeUpdate}
           onLoadedMetadata={handleAudioLoadedMetadata}
-          onEnded={() => setIsPlaying(false)}
+          onEnded={handleAudioFinished}
         />
+
+        {/* Extra transfer time warning banner */}
+        {extraTimeActive && (
+          <div className="bg-amber-500/10 border border-amber-500/20 text-amber-600 rounded-xl p-4 flex items-center gap-3 animate-pulse text-xs font-semibold select-none">
+            <AppIcon name="AlertTriangle" size={18} className="text-amber-500 flex-shrink-0" />
+            <span>Listening audio completed! You have 2 minutes of extra time to review and check your answers.</span>
+          </div>
+        )}
 
         {/* Premium Sticky Audio Controller Panel */}
         {activeSection && (
