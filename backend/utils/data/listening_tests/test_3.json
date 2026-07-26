@@ -1,0 +1,570 @@
+{
+  "title": "Cambridge IELTS 20 Listening Test 3",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Part 1: Renting Furniture",
+      "audio_url": "/uploads/audio/CB-20.3.mp3",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer."
+    },
+    {
+      "section_number": 2,
+      "title": "Part 2: Bidcaster Archaeological Dig Tour",
+      "audio_url": "/uploads/audio/CB-20.3.mp3",
+      "instruction_text": "Questions 11–16: Choose the correct letter, A, B or C. Questions 17–20: Label the map below. Drag/Choose the correct letter, A–G."
+    },
+    {
+      "section_number": 3,
+      "title": "Part 3: Discussion on Theatre Programmes Project",
+      "audio_url": "/uploads/audio/CB-20.3.mp3",
+      "instruction_text": "Questions 21–26: Choose the correct letter, A, B or C. Questions 27–30: Choose the correct letter, A–F next to the shows."
+    },
+    {
+      "section_number": 4,
+      "title": "Part 4: Inclusive Design",
+      "audio_url": "/uploads/audio/CB-20.3.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer."
+    }
+  ],
+  "questions": [
+    {
+      "section_number": 1,
+      "question_number": 1,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Peak Rentals: Prices range from $105 to $[blank] per room per month"
+      },
+      "correct_answers": ["239", "two hundred thirty-nine", "two hundred and thirty-nine"],
+      "explanation": "Transcript: 'It says the monthly price per room starts at $105 and goes up to $239.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 2,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Peak Rentals: The furniture is very [blank] Delivers in 1-2 days"
+      },
+      "correct_answers": ["modern"],
+      "explanation": "Transcript: 'People have mentioned that the furniture from Peak Rentals is more modern than any of the other companies.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 3,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Peak Rentals: Special offer: Free [blank] with every living room set"
+      },
+      "correct_answers": ["lamp"],
+      "explanation": "Transcript: 'If you rent living room furniture... You'll also get a lamp at no extra cost.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 4,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "[blank] and Oliver: Mid-range prices"
+      },
+      "correct_answers": ["Aaron"],
+      "explanation": "Transcript: 'Shelley: ... Who? House Owner: Aaron. A R O N.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 5,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Aaron and Oliver: 12% monthly fee for [blank]"
+      },
+      "correct_answers": ["damage"],
+      "explanation": "Transcript: 'if you chose them, you need to be aware that they charge an extra 12% every month in case of damage.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 6,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Larch Furniture: Offers cheapest prices for renting furniture and [blank] items"
+      },
+      "correct_answers": ["electronic"],
+      "explanation": "Transcript: 'It's quite new and it has the lowest prices in town. That's for both furniture and also electronic equipment.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 7,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Larch Furniture: Must have own [blank]"
+      },
+      "correct_answers": ["insurance"],
+      "explanation": "Transcript: 'First of all, you have to take out insurance on the furniture, and you need to organize that yourself.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "[blank] Rentals: See their app for the most up-to-date prices"
+      },
+      "correct_answers": ["space", "Space"],
+      "explanation": "Transcript: 'It's called Space Rentals... so it's best to use their app to find out what it would cost you to use them.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Space Rentals: Allowed [blank] within 7 days of delivery"
+      },
+      "correct_answers": ["exchanges", "exchange"],
+      "explanation": "Transcript: 'if you don't like the furniture once it's delivered, you can request exchanges as long as you do that within a week of receiving it.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Space Rentals: contract length is [blank] months"
+      },
+      "correct_answers": ["6", "six"],
+      "explanation": "Transcript: 'Also, you can't take out a contract for less than 6 months...'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 11,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Who was responsible for starting the community project?",
+        "options": [
+          "A. the castle owners",
+          "B. a national charity",
+          "C. the local council"
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'but I was asked to join the project by NHA, a charity which sets up projects like this up and down the country.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 12,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "How was the gold coin found?",
+        "options": [
+          "A. Heavy rain had removed some of the soil.",
+          "B. The ground was dug up by wild rabbits.",
+          "C. A person with a metal detector searched the area."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'Here, a walker found it on the ground after a rainstorm washed away some of the earth and sand.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 13,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What led the archaeologists to believe there was an ancient village on this site?",
+        "options": [
+          "A. the lucky discovery of old records",
+          "B. the bases of several structures visible in the grass",
+          "C. the unusual stones found near the castle"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'Just by chance, the team found some old maps and documents in our library, which showed 500-year-old drawings of ruined buildings...'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 14,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What are the team still hoping to find?",
+        "options": [
+          "A. everyday pottery",
+          "B. animal bones",
+          "C. pieces of jewellery"
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'Normally, you'd expect to find brooches and other jewelry, but we're still waiting to uncover any such items.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 15,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What was found on the other side of the river to the castle?",
+        "options": [
+          "A. the remains of a large palace",
+          "B. the outline of fields",
+          "C. a number of small huts"
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'Besides the discovery of the village, we've also found evidence of human activity on the other side of the river. No other houses or huts so far, but we can see the borders of an ancient field system.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 16,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What do the team plan to do after work ends this summer?",
+        "options": [
+          "A. prepare a display for a museum",
+          "B. take part in a television programme",
+          "C. start to organise school visits"
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'In the meantime, we're putting on a series of guided tours for school groups this autumn.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 17,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–G next to Questions 17–20.",
+      "question_data": {
+        "text": "bridge foundations",
+        "options": ["A", "B", "C", "D", "E", "F", "G"]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'To reach the bridge, take the main path ahead of you. Go straight on and keep going till the path bends to the left. You'll see a smaller track leading off to the right. Follow that to take you to the river...'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 18,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–G next to Questions 17–20.",
+      "question_data": {
+        "text": "rubbish pit",
+        "options": ["A", "B", "C", "D", "E", "F", "G"]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'You might be interested to see the rubbish pit. This is very near the castle walls in the northwest corner of the site.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 19,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–G next to Questions 17–20.",
+      "question_data": {
+        "text": "meeting hall",
+        "options": ["A", "B", "C", "D", "E", "F", "G"]
+      },
+      "correct_answers": ["G"],
+      "explanation": "Transcript: 'One area we excavated... meeting hall. We knew it was an important building because it had two rows of post holes... It's the largest structure in a central area of the site next to the current excavation area.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 20,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–G next to Questions 17–20.",
+      "question_data": {
+        "text": "fish pond",
+        "options": ["A", "B", "C", "D", "E", "F", "G"]
+      },
+      "correct_answers": ["E"],
+      "explanation": "Transcript: 'Last year, we discovered a fish pond... from here, you turn right at the first information board you come to and follow the path into the trees. Before you come out of the trees, you'll see it on your right.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 21,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Finn was pleased to discover that their topic",
+        "options": [
+          "A. was not familiar to their module leader.",
+          "B. had not been chosen by other students.",
+          "C. did not prove to be difficult to research."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'Finn: Even though I struggled to find many useful websites, I'm glad we picked this subject. No one else on the course is doing the same as us.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 22,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Maya says a mistaken belief about theatre programmes is that",
+        "options": [
+          "A. theatres pay companies to produce them.",
+          "B. few theatre-goers buy them nowadays.",
+          "C. they contain far more adverts than previously."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'Contrary to what many people think, theaters don't hire people to do the programs. In fact, companies buy the rights to publish programs on the theater's behalf...'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 23,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Finn was surprised that, in early British theatre, programmes",
+        "options": [
+          "A. were difficult for audiences to obtain.",
+          "B. were given out free of charge.",
+          "C. were seen as a kind of contract."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'If the program named a famous actor, that's who the public expected to perform. And if that didn't happen, people accused the theater of breaking their agreement with the audience. They would demand refunds...'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 24,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Maya feels their project should include an explanation of why companies of actors",
+        "options": [
+          "A. promoted their own plays.",
+          "B. performed plays outdoors.",
+          "C. had to tour with their plays."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'When a company of actors arrived in a town, they'd parade around the streets in their costumes, beating drums and announcing their upcoming performances.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 25,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Finn and Maya both think that, compared to nineteenth-century programmes, those from the eighteenth century",
+        "options": [
+          "A. were more original.",
+          "B. were more colourful.",
+          "C. were more informative."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'But personally, I think 18th century programs were superior because they told the theatergoers so many things, including about the actors... Finn: And about the writer, the plot, and sometimes the history of the play.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 26,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Maya doesn't fully understand why, in the twentieth century,",
+        "options": [
+          "A. very few theatre programmes were printed in the USA.",
+          "B. British theatre programmes failed to develop for so long.",
+          "C. theatre programmes in Britain copied fashions from the USA."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'What I don't really get is that after the war, they didn't go back to being more than one sheet or change in any way for over 25 years.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 27,
+      "question_type": "matching",
+      "instruction_text": "Choose FOUR answers from the box and write the correct letter, A-F, next to the shows.",
+      "question_data": {
+        "text": "Ruy Blas",
+        "options": [
+          "A. Its origin is somewhat controversial.",
+          "B. It is historically significant for a country.",
+          "C. It was effective at attracting audiences.",
+          "D. It is included in a recent project.",
+          "E. It contains insights into the show.",
+          "F. It resembles an artwork."
+        ]
+      },
+      "correct_answers": ["F"],
+      "explanation": "Transcript: 'Maya: ... Ruie Blass. Never heard of that, but the program looks very decorative. Good enough to put in a frame on the wall. The images are just beautiful.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 28,
+      "question_type": "matching",
+      "instruction_text": "Choose FOUR answers from the box and write the correct letter, A-F, next to the shows.",
+      "question_data": {
+        "text": "Man of La Mancha",
+        "options": [
+          "A. Its origin is somewhat controversial.",
+          "B. It is historically significant for a country.",
+          "C. It was effective at attracting audiences.",
+          "D. It is included in a recent project.",
+          "E. It contains insights into the show.",
+          "F. It resembles an artwork."
+        ]
+      },
+      "correct_answers": ["E"],
+      "explanation": "Transcript: 'Finn: I've got some pages from a program for Of Lancha... because it contains articles written by members of the theater company, so we can learn how the production was created and the thoughts and feelings of the cast.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 29,
+      "question_type": "matching",
+      "instruction_text": "Choose FOUR answers from the box and write the correct letter, A-F, next to the shows.",
+      "question_data": {
+        "text": "The Tragedy of Jane Shore",
+        "options": [
+          "A. Its origin is somewhat controversial.",
+          "B. It is historically significant for a country.",
+          "C. It was effective at attracting audiences.",
+          "D. It is included in a recent project.",
+          "E. It contains insights into the show.",
+          "F. It resembles an artwork."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'Maya: ... tragedy of Jane Shaw, and it's said to be the earliest surviving document to have been printed on Australia's first printing press.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 30,
+      "question_type": "matching",
+      "instruction_text": "Choose FOUR answers from the box and write the correct letter, A-F, next to the shows.",
+      "question_data": {
+        "text": "The Sailors' Festival",
+        "options": [
+          "A. Its origin is somewhat controversial.",
+          "B. It is historically significant for a country.",
+          "C. It was effective at attracting audiences.",
+          "D. It is included in a recent project.",
+          "E. It contains insights into the show.",
+          "F. It resembles an artwork."
+        ]
+      },
+      "correct_answers": ["D"],
+      "explanation": "Transcript: 'Finn: Another program... Sailors Festival. It comes from the British Library's digitized collection of programs that was started a few years ago.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 31,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Definition: Designing products that can be accessed by a diverse range of people without the need for any [blank]"
+      },
+      "correct_answers": ["adaptation"],
+      "explanation": "Transcript: 'It means making sure products are accessible so that as many different types of people as possible can use them without any type of adaptation having to be made...'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 32,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Definition: Not the same as universal design: that is design for everyone, including catering for people with [blank] problems."
+      },
+      "correct_answers": ["cognitive"],
+      "explanation": "Transcript: 'Universal design aims to make products that work for everyone and that includes considering the needs of people who have cognitive difficulties...'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 33,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Examples of inclusive design: [blank] which are adjustable, avoiding back or neck problems"
+      },
+      "correct_answers": ["desks", "desk"],
+      "explanation": "Transcript: 'In workplaces, it is common to see desks which can be adjusted to suit people of different heights...'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 34,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Examples of inclusive design: [blank] in public toilets which are easier to use"
+      },
+      "correct_answers": ["taps", "tap"],
+      "explanation": "Transcript: 'You'll find another example in the public toilets of countless hotels, airports, and offices. Taps that you activate by sensor require no pressing or twisting...'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 35,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "To assist the elderly: designers avoid using [blank] in interfaces"
+      },
+      "correct_answers": ["blue"],
+      "explanation": "Transcript: 'distinguishing between similar colors, in particular shades of blue, which is why software designers rarely create interfaces with this color.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 36,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "To assist the elderly: people can make commands using a mouse, keyboard or their [blank]"
+      },
+      "correct_answers": ["voice"],
+      "explanation": "Transcript: 'This can also affect their ability to use a mouse or keyboard. So, voice access is now a routine way...'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 37,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Impact of non-inclusive designs: Safety: Seatbelts are especially problematic for [blank] women."
+      },
+      "correct_answers": ["pregnant"],
+      "explanation": "Transcript: 'This has safety implications for all women, particularly those who are pregnant...'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 38,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Impact of non-inclusive designs: Safety: PPE Jackets are often unsuitable because of the size of women's [blank]"
+      },
+      "correct_answers": ["shoulders"],
+      "explanation": "Transcript: 'The problem with this is that women can be tall and still have much smaller shoulders than the average man.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 39,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Impact of non-inclusive designs: Safety: PPE for female [blank] officers dealing with emergencies is the worst."
+      },
+      "correct_answers": ["police"],
+      "explanation": "Transcript: 'The report found that 95% of women said that their PPE often hampered their work and that this problem was worst in the emergency services, particularly the police.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 40,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Impact of non-inclusive designs: Comfort in the workplace: The [blank] in offices is often too low for women."
+      },
+      "correct_answers": ["temperature"],
+      "explanation": "Transcript: 'There is a standard setting for air conditioning to be at a temperature of 21° designed to suit men...'"
+    }
+  ]
+}

@@ -466,7 +466,7 @@ const ListeningResults = () => {
                             <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 space-y-2 select-text">
                               <span className="text-xs font-bold text-primary flex items-center gap-1.5">
                                 <AppIcon name="MessageSquare" size={14} />
-                                Explanation & Transcript Citation
+                                Audio Script Transcript
                               </span>
                               <p className="text-xs text-muted-foreground leading-relaxed">
                                 {gradedRes.explanation || q.explanation}

@@ -1,0 +1,620 @@
+{
+  "title": "Cambridge IELTS 20 Listening Test 4",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Part 1: Advice on Family Visit",
+      "audio_url": "/uploads/audio/CB-20.4.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer."
+    },
+    {
+      "section_number": 2,
+      "title": "Part 2: Football Stadium Visit with Children",
+      "audio_url": "/uploads/audio/CB-20.4.mp3",
+      "instruction_text": "Questions 11–12: Choose TWO letters, A–E. Questions 13–14: Choose TWO letters, A–E. Questions 15–20: Choose SIX answers from the box."
+    },
+    {
+      "section_number": 3,
+      "title": "Part 3: Discussion on Teaching Handwriting to Children",
+      "audio_url": "/uploads/audio/CB-20.4.mp3",
+      "instruction_text": "Questions 21–22: Choose TWO letters, A–E. Questions 23–24: Choose TWO letters, A–E. Questions 25–30: Choose the correct letter, A, B or C."
+    },
+    {
+      "section_number": 4,
+      "title": "Part 4: Research in the Chembe Bird Sanctuary",
+      "audio_url": "/uploads/audio/CB-20.4.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer."
+    }
+  ],
+  "questions": [
+    {
+      "section_number": 1,
+      "question_number": 1,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Accommodation: [blank] Hotel on George Street"
+      },
+      "correct_answers": ["Kings", "King's"],
+      "explanation": "Transcript: 'I always recommend people stay at the King's Hotel... It's actually on George Street.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 2,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Accommodation: cost of family room per night: £[blank] (approx.)"
+      },
+      "correct_answers": ["125", "one hundred twenty-five", "one hundred and twenty-five"],
+      "explanation": "Transcript: 'If you book a family room, it's about £125 per night.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 3,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Recommended trips: a [blank] tour of the city centre (starts in Carlton Square)"
+      },
+      "correct_answers": ["walking"],
+      "explanation": "Transcript: 'I think it's better to do a walking tour. It gives you a much better feel for the city. There's one that starts from Colton Square.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 4,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Recommended trips: a trip by [blank] to the old fort"
+      },
+      "correct_answers": ["boat"],
+      "explanation": "Transcript: 'If the weather's nice, one thing you could do is visit the old fort, but you could get there by boat.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 5,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Science Museum: best day to visit: [blank]"
+      },
+      "correct_answers": ["Tuesday"],
+      "explanation": "Transcript: 'Tuesday would be best, I think. And it won't be so crowded then. Saturdays are terrible.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 6,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Science Museum: see the exhibition about [blank], which opens soon"
+      },
+      "correct_answers": ["space"],
+      "explanation": "Transcript: 'There's another one starting soon on space, which looks really good, too.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 7,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Food: Clacton Market: good for [blank] food"
+      },
+      "correct_answers": ["vegetarian"],
+      "explanation": "Transcript: 'Well, I really like all the food stalls at Clton Market. My cousin's vegetarian. I know it's one of the best places for that kind of food.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Food: Clacton Market: need to have lunch before [blank] p.m."
+      },
+      "correct_answers": ["2.30", "two thirty", "two-thirty"],
+      "explanation": "Transcript: 'You need to get there quite early, though. At the weekend, most of the stores stop serving lunch at 2:30.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Theatre tickets: save up to [blank]% on ticket prices at bargaintickets.com"
+      },
+      "correct_answers": ["75", "seventy-five"],
+      "explanation": "Transcript: 'you can get some good deals if you book online with bargainant tickets.com... On some seats, there's a 75% discount.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Free activities: climb Telegraph Hill to see a view of the [blank]"
+      },
+      "correct_answers": ["port"],
+      "explanation": "Transcript: 'climb Telegraph Hill. You'll be able to look right down on the port.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 11,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Which TWO things does the speaker say about visiting the football stadium with children? Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Options mapping (Q11-12 pairs):",
+        "options": [
+          "A. Children can get their photo taken with a football player.",
+          "B. There is a competition for children today.",
+          "C. Parents must stay with their children at all times.",
+          "D. Children will need sunhats and drinks.",
+          "E. The cafe has a special offer on meals for children."
+        ]
+      },
+      "correct_answers": ["B", "C"],
+      "explanation": "Transcript: 'Please don't let your children wander off on their own, even for a minute... (C) and Also in the cafe, children are invited to do a football themed drawing. We'll pick the best one at the end... (B)'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 12,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Which TWO things does the speaker say about visiting the football stadium with children? Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Options mapping (Q11-12 pairs):",
+        "options": [
+          "A. Children can get their photo taken with a football player.",
+          "B. There is a competition for children today.",
+          "C. Parents must stay with their children at all times.",
+          "D. Children will need sunhats and drinks.",
+          "E. The cafe has a special offer on meals for children."
+        ]
+      },
+      "correct_answers": ["B", "C"],
+      "explanation": "Transcript: 'Please don't let your children wander off on their own, even for a minute... (C) and Also in the cafe, children are invited to do a football themed drawing. We'll pick the best one at the end... (B)'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 13,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Which TWO features of the stadium tour are new this year? Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Options mapping (Q13-14 pairs):",
+        "options": [
+          "A. VIP tour",
+          "B. 360 cinema experience",
+          "C. audio guide",
+          "D. dressing room tour",
+          "E. tours in other languages"
+        ]
+      },
+      "correct_answers": ["A", "C"],
+      "explanation": "Transcript: 'if you'd prefer your visit to be self-guided, please collect headphones from the reception, and then you can listen... We've only just introduced this feature... (C) and We've only just started offering these [VIP tours] and they can be booked online. (A)'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 14,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Which TWO features of the stadium tour are new this year? Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Options mapping (Q13-14 pairs):",
+        "options": [
+          "A. VIP tour",
+          "B. 360 cinema experience",
+          "C. audio guide",
+          "D. dressing room tour",
+          "E. tours in other languages"
+        ]
+      },
+      "correct_answers": ["A", "C"],
+      "explanation": "Transcript: 'if you'd prefer your visit to be self-guided, please collect headphones from the reception, and then you can listen... We've only just introduced this feature... (C) and We've only just started offering these [VIP tours] and they can be booked online. (A)'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 15,
+      "question_type": "matching",
+      "instruction_text": "Which event in the history of football in the UK took place in each of the following years? Choose SIX answers from the box.",
+      "question_data": {
+        "text": "1870",
+        "options": [
+          "A. The introduction of pay for the players",
+          "B. a change to the design of the goal",
+          "C. the first use of lights for matches",
+          "D. the Introduction of goalkeepers",
+          "E. the first International match",
+          "F. two changes to the rules of the game",
+          "G. the introduction of a fee for spectators",
+          "H. an agreement on the length of a game"
+        ]
+      },
+      "correct_answers": ["D"],
+      "explanation": "Transcript: '1870 was also the year that football teams started to include a player whose role it was to guard the goal.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 16,
+      "question_type": "matching",
+      "instruction_text": "Which event in the history of football in the UK took place in each of the following years? Choose SIX answers from the box.",
+      "question_data": {
+        "text": "1874",
+        "options": [
+          "A. The introduction of pay for the players",
+          "B. a change to the design of the goal",
+          "C. the first use of lights for matches",
+          "D. the Introduction of goalkeepers",
+          "E. the first International match",
+          "F. two changes to the rules of the game",
+          "G. the introduction of a fee for spectators",
+          "H. an agreement on the length of a game"
+        ]
+      },
+      "correct_answers": ["F"],
+      "explanation": "Transcript: 'in 1874, referees were allowed to send players off... And also in that year, teams started having to swap ends...'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 17,
+      "question_type": "matching",
+      "instruction_text": "Which event in the history of football in the UK took place in each of the following years? Choose SIX answers from the box.",
+      "question_data": {
+        "text": "1875",
+        "options": [
+          "A. The introduction of pay for the players",
+          "B. a change to the design of the goal",
+          "C. the first use of lights for matches",
+          "D. the Introduction of goalkeepers",
+          "E. the first International match",
+          "F. two changes to the rules of the game",
+          "G. the introduction of a fee for spectators",
+          "H. an agreement on the length of a game"
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'In 1875, that tape was replaced with the solid crossbar that be familiar with today.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 18,
+      "question_type": "matching",
+      "instruction_text": "Which event in the history of football in the UK took place in each of the following years? Choose SIX answers from the box.",
+      "question_data": {
+        "text": "1877",
+        "options": [
+          "A. The introduction of pay for the players",
+          "B. a change to the design of the goal",
+          "C. the first use of lights for matches",
+          "D. the Introduction of goalkeepers",
+          "E. the first International match",
+          "F. two changes to the rules of the game",
+          "G. the introduction of a fee for spectators",
+          "H. an agreement on the length of a game"
+        ]
+      },
+      "correct_answers": ["H"],
+      "explanation": "Transcript: '1877 saw... all the clubs decided to set a limit of 90 minutes for each match.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 19,
+      "question_type": "matching",
+      "instruction_text": "Which event in the history of football in the UK took place in each of the following years? Choose SIX answers from the box.",
+      "question_data": {
+        "text": "1878",
+        "options": [
+          "A. The introduction of pay for the players",
+          "B. a change to the design of the goal",
+          "C. the first use of lights for matches",
+          "D. the Introduction of goalkeepers",
+          "E. the first International match",
+          "F. two changes to the rules of the game",
+          "G. the introduction of a fee for spectators",
+          "H. an agreement on the length of a game"
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'By 1878... referees started using whistles and electric lamps were installed on certain pitches.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 20,
+      "question_type": "matching",
+      "instruction_text": "Which event in the history of football in the UK took place in each of the following years? Choose SIX answers from the box.",
+      "question_data": {
+        "text": "1880",
+        "options": [
+          "A. The introduction of pay for the players",
+          "B. a change to the design of the goal",
+          "C. the first use of lights for matches",
+          "D. the Introduction of goalkeepers",
+          "E. the first International match",
+          "F. two changes to the rules of the game",
+          "G. the introduction of a fee for spectators",
+          "H. an agreement on the length of a game"
+        ]
+      },
+      "correct_answers": ["G"],
+      "explanation": "Transcript: 'In 1880, clubs began to charge fans for admission to games...'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 21,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Which TWO benefits for children of learning to write did both students find surprising? Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Options mapping (Q21-22 pairs):",
+        "options": [
+          "A. improved fine motor skills",
+          "B. improved memory",
+          "C. improved concentration",
+          "D. improved imagination",
+          "E. improved spatial awareness"
+        ]
+      },
+      "correct_answers": ["C", "E"],
+      "explanation": "Transcript: 'What's less obvious is how it helps develop their concentration. They have to sit still and focus... (C) and I'd never associated spatial awareness with handwriting either... good spatial awareness is essential... (E)'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 22,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Which TWO benefits for children of learning to write did both students find surprising? Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Options mapping (Q21-22 pairs):",
+        "options": [
+          "A. improved fine motor skills",
+          "B. improved memory",
+          "C. improved concentration",
+          "D. improved imagination",
+          "E. improved spatial awareness"
+        ]
+      },
+      "correct_answers": ["C", "E"],
+      "explanation": "Transcript: 'What's less obvious is how it helps develop their concentration. They have to sit still and focus... (C) and I'd never associated spatial awareness with handwriting either... good spatial awareness is essential... (E)'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 23,
+      "question_type": "mcq_multiple",
+      "instruction_text": "For children with dyspraxia, which TWO problems with handwriting do the students think are easiest to correct? Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Options mapping (Q23-24 pairs):",
+        "options": [
+          "A. not spacing letters correctly",
+          "B. not writing in a straight line",
+          "C. applying too much pressure when writing",
+          "D. confusing letter shapes",
+          "E. writing very slowly"
+        ]
+      },
+      "correct_answers": ["A", "C"],
+      "explanation": "Transcript: 'I like the idea of using one of those pens that lights up if you press too hard. That seems like a really simple solution (C) and One quite simple thing you can do is to use grid paper so they write each letter in a box and that trains them to space the letters correctly (A)'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 24,
+      "question_type": "mcq_multiple",
+      "instruction_text": "For children with dyspraxia, which TWO problems with handwriting do the students think are easiest to correct? Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Options mapping (Q23-24 pairs):",
+        "options": [
+          "A. not spacing letters correctly",
+          "B. not writing in a straight line",
+          "C. applying too much pressure when writing",
+          "D. confusing letter shapes",
+          "E. writing very slowly"
+        ]
+      },
+      "correct_answers": ["A", "C"],
+      "explanation": "Transcript: 'I like the idea of using one of those pens that lights up if you press too hard. That seems like a really simple solution (C) and One quite simple thing you can do is to use grid paper so they write each letter in a box and that trains them to space the letters correctly (A)'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 25,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What does the woman say about using laptops to teach writing to children with dyslexia?",
+        "options": [
+          "A. Children often lack motivation to learn that way.",
+          "B. Children become fluent relatively quickly.",
+          "C. Children react more positively if they make a mistake."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'On a keyboard, they can be more willing to have a go. But I read that developing fluency isn't any faster.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 26,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "When discussing whether to teach cursive or print writing, the woman thinks that",
+        "options": [
+          "A. cursive writing disadvantages a certain group of children.",
+          "B. print writing is associated with lower academic performance.",
+          "C. most teachers in the UK prefer a traditional approach to handwriting."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'cursive is more difficult to learn, especially for children with learning difficulties who find joining up letters is really challenging.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 27,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "According to the students, what impact does poor handwriting have on exam performance?",
+        "options": [
+          "A. There is evidence to suggest grades are affected by poor handwriting.",
+          "B. Neat handwriting is less important now than it used to be.",
+          "C. Candidates write more slowly and produce shorter answers."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'Marks are definitely affected if examiners can't read the script.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 28,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What prediction does the man make about the future of handwriting?",
+        "options": [
+          "A. Touch typing will be taught before writing by hand.",
+          "B. Children will continue to learn to write by hand.",
+          "C. People will dislike handwriting on digital devices."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'Anyway, teachers understand the value of handwriting. It's a basic life skill.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 29,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "The woman is concerned that relying on digital devices has made it difficult for her to",
+        "options": [
+          "A. take detailed notes.",
+          "B. spell and punctuate.",
+          "C. read old documents."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'but my mom is shocked by my awful spelling and the fact that my punctuation is really inconsistent.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 30,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "How do the students feel about their own handwriting?",
+        "options": [
+          "A. concerned they are unable to write quickly",
+          "B. embarrassed by comments made about it",
+          "C. regretful that they have lost the habit"
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'Personally, I miss writing by hand. I hardly ever write anything now... It's a shame. Student 2: I know. I feel the same way.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 31,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "The importance of birds of prey to local communities: They destroy [blank] and other rodents."
+      },
+      "correct_answers": ["rats", "rat"],
+      "explanation": "Transcript: 'a lot of damage can be caused to farmers crops by rodents such as rats, which would consume the crops...'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 32,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "The importance of birds of prey to local communities: They help to prevent farmers from being bitten by [blank]."
+      },
+      "correct_answers": ["snakes", "snake"],
+      "explanation": "Transcript: 'For example, a major danger to rural workers is snakes whose bite may be dangerous or even fatal.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 33,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "The importance of birds of prey to local communities: They now support the economy by encouraging [blank] in the area."
+      },
+      "correct_answers": ["tourism", "tourists"],
+      "explanation": "Transcript: 'after a relatively slow start, tourism has become an important source of revenue for them.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 34,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Falling numbers of birds of prey: The birds may be accidentally killed: By [blank] when they are hunting or sleeping."
+      },
+      "correct_answers": ["traffic", "cars", "vehicles"],
+      "explanation": "Transcript: 'Fatalities occur when birds are light on roads to catch and eat their prey and are hit by fastmoving traffic.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 35,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Falling numbers of birds of prey: The birds may be accidentally killed: by electrocution from contact with power lines, especially at times when there is a lot of [blank]."
+      },
+      "correct_answers": ["rain", "raining", "rainfall"],
+      "explanation": "Transcript: 'Accidental deaths may also occur if these birds fly close to high voltage power lines... This is a particular danger in the heavy rain which can occur...'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 36,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Falling numbers of birds of prey: Local farmers may illegally shoot them or [blank] them."
+      },
+      "correct_answers": ["poison"],
+      "explanation": "Transcript: 'And so farmers may shoot these birds, which is illegal but understandable. Or they may poison the birds...'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 37,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Ways of protecting chickens from birds of prey: providing a [blank] for chickens (expensive)"
+      },
+      "correct_answers": ["building", "shelter", "house"],
+      "explanation": "Transcript: 'Another possibility would be to prevent the chickens from going outside at all and to keep them safe from predators inside a building, but this would cost...'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 38,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Ways of protecting chickens from birds of prey: frightening birds of prey by: keeping a [blank]"
+      },
+      "correct_answers": ["dog"],
+      "explanation": "Transcript: 'Most of the farmers had at least one dog and said this was a big help at scaring away the predators.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 39,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Ways of protecting chickens from birds of prey: frightening birds of prey by: making a [blank] e.g. with metal objects"
+      },
+      "correct_answers": ["noise", "sound"],
+      "explanation": "Transcript: 'to hit pans with a metal spoon so that the resulting noise would succeed in driving away birds...'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 40,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Ways of protecting chickens from birds of prey: A [blank] of methods is usually most effective."
+      },
+      "correct_answers": ["combination", "mix"],
+      "explanation": "Transcript: 'rather than just using one method, they were forced to use a combination for them to have any effect.'"
+    }
+  ]
+}

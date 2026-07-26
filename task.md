@@ -11,4 +11,6 @@
 - [x] Introduce 2-minute extra review time phase when listening audio finishes
 - [x] Fix Recent Activities relationship query cache error
 - [x] Port grouped MCQ scoring updates to client scoring engines (listeningScoringService/readingScoringService) for results screen display accuracy
+- [x] Add Cambridge 20 Listening Test 2, 3, and 4 to the database
+- [x] Show question-specific accurate audio script transcripts in results review
 - [x] Run production build and verify correctness

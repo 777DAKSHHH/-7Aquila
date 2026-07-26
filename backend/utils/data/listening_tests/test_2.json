@@ -1,0 +1,630 @@
+{
+  "title": "Cambridge IELTS 20 Listening Test 2",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Part 1: Support for Carers",
+      "audio_url": "/uploads/audio/CB-20.2.mp3",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer."
+    },
+    {
+      "section_number": 2,
+      "title": "Part 2: Elmley Volunteer Scheme & Festivals",
+      "audio_url": "/uploads/audio/CB-20.2.mp3",
+      "instruction_text": "Questions 11–16: Choose SIX answers from the box. Questions 17–20: Choose the correct letter, A, B or C."
+    },
+    {
+      "section_number": 3,
+      "title": "Part 3: Discussion on Human Geography Assignment",
+      "audio_url": "/uploads/audio/CB-20.2.mp3",
+      "instruction_text": "Questions 21–25: Choose FIVE answers from the box. Questions 26–30: Choose the correct letter, A, B or C."
+    },
+    {
+      "section_number": 4,
+      "title": "Part 4: Developing Food Trends",
+      "audio_url": "/uploads/audio/CB-20.2.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer."
+    }
+  ],
+  "questions": [
+    {
+      "section_number": 1,
+      "question_number": 1,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "This can give the carer: time for other responsibilities and a [blank] from their caring duties"
+      },
+      "correct_answers": ["break"],
+      "explanation": "Transcript: 'they realize that carers sometimes need time for all the other responsibilities they have, apart from the person they're caring for and also that they sometimes need a break.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 2,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Assessment of mother's needs: how much [blank] the caring involves"
+      },
+      "correct_answers": ["time"],
+      "explanation": "Transcript: 'they'd want to know the amount of time you spend looking after your mother every day.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 3,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "What types of tasks are involved: help with dressing and helping her have a [blank]"
+      },
+      "correct_answers": ["shower"],
+      "explanation": "Transcript: 'And also, I help her get into the shower in the morning.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 4,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "What types of tasks are involved: shopping, helping with meals, and dealing with [blank]"
+      },
+      "correct_answers": ["money"],
+      "explanation": "Transcript: 'They'll probably ask you if you do the shopping for her and help her at meal times and whether she can cope using money.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 5,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Aspects of caring that are difficult: loss of [blank]"
+      },
+      "correct_answers": ["memory"],
+      "explanation": "Transcript: 'So recently I've noticed she's started to have quite bad problems with her memory.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 6,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Aspects of caring that are difficult: [blank] her"
+      },
+      "correct_answers": ["lifting"],
+      "explanation": "Transcript: 'And are there any physical difficulties you have caring for her? Lifting her, for example.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 7,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Aspects of caring that are difficult: preventing a [blank]"
+      },
+      "correct_answers": ["fall"],
+      "explanation": "Transcript: 'They can give you advice about that and also about how to avoid the possibility of your mom having a fall.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Types of support: transport costs, e.g. cost of a [blank]"
+      },
+      "correct_answers": ["taxi"],
+      "explanation": "Transcript: 'So, they might help you with transport costs, like if you have to get a taxi to take your mother for an appointment, for example.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Types of support: car-related costs, e.g. fuel and [blank]"
+      },
+      "correct_answers": ["insurance"],
+      "explanation": "Transcript: 'And you can claim for the insurance, too.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Types of support: help with housework and help to reduce [blank]"
+      },
+      "correct_answers": ["stress"],
+      "explanation": "Transcript: 'And it seems to me you're under quite a bit of stress... Well, tell the council because they may be able to give you some advice on how to minimize it.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 11,
+      "question_type": "matching",
+      "instruction_text": "What is the role of the volunteers in each of the following activities? Choose SIX answers from the box.",
+      "question_data": {
+        "text": "walking around the town centre",
+        "options": [
+          "A. providing entertainment",
+          "B. providing publicity about a council service",
+          "C. contacting local businesses",
+          "D. giving advice to visitors",
+          "E. collecting feedback on events",
+          "F. selling tickets",
+          "G. introducing guest speakers at an event",
+          "H. encouraging cooperation between local organisations",
+          "I. helping people find their seats"
+        ]
+      },
+      "correct_answers": ["D"],
+      "explanation": "Transcript: 'One is to walk around on the town center streets wearing our volunteer t-shirt. Tourists often ask how to get to a particular shop and they might also be grateful for recommendations about what to visit.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 12,
+      "question_type": "matching",
+      "instruction_text": "What is the role of the volunteers in each of the following activities? Choose SIX answers from the box.",
+      "question_data": {
+        "text": "helping at concerts",
+        "options": [
+          "A. providing entertainment",
+          "B. providing publicity about a council service",
+          "C. contacting local businesses",
+          "D. giving advice to visitors",
+          "E. collecting feedback on events",
+          "F. selling tickets",
+          "G. introducing guest speakers at an event",
+          "H. encouraging cooperation between local organisations",
+          "I. helping people find their seats"
+        ]
+      },
+      "correct_answers": ["I"],
+      "explanation": "Transcript: 'The town holds a large number of concerts each year and part of the volunteers role is to get everyone in the audience to the right place as smoothly as possible...'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 13,
+      "question_type": "matching",
+      "instruction_text": "What is the role of the volunteers in each of the following activities? Choose SIX answers from the box.",
+      "question_data": {
+        "text": "getting involved with community groups",
+        "options": [
+          "A. providing entertainment",
+          "B. providing publicity about a council service",
+          "C. contacting local businesses",
+          "D. giving advice to visitors",
+          "E. collecting feedback on events",
+          "F. selling tickets",
+          "G. introducing guest speakers at an event",
+          "H. encouraging cooperation between local organisations",
+          "I. helping people find their seats"
+        ]
+      },
+      "correct_answers": ["H"],
+      "explanation": "Transcript: 'Volunteers may get involved with community groups... Here the volunteers talk about how groups can help each other. For instance, a writing group might want to travel... but may not know that another club has a coach...'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 14,
+      "question_type": "matching",
+      "instruction_text": "What is the role of the volunteers in each of the following activities? Choose SIX answers from the box.",
+      "question_data": {
+        "text": "helping with a magazine",
+        "options": [
+          "A. providing entertainment",
+          "B. providing publicity about a council service",
+          "C. contacting local businesses",
+          "D. giving advice to visitors",
+          "E. collecting feedback on events",
+          "F. selling tickets",
+          "G. introducing guest speakers at an event",
+          "H. encouraging cooperation between local organisations",
+          "I. helping people find their seats"
+        ]
+      },
+      "correct_answers": ["E"],
+      "explanation": "Transcript: 'We depend on volunteers though to find out what people think of events they've attended and any suggestions they have for the future. The volunteers then send a summary to the editors.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 15,
+      "question_type": "matching",
+      "instruction_text": "What is the role of the volunteers in each of the following activities? Choose SIX answers from the box.",
+      "question_data": {
+        "text": "participating at lunches for retired people",
+        "options": [
+          "A. providing entertainment",
+          "B. providing publicity about a council service",
+          "C. contacting local businesses",
+          "D. giving advice to visitors",
+          "E. collecting feedback on events",
+          "F. selling tickets",
+          "G. introducing guest speakers at an event",
+          "H. encouraging cooperation between local organisations",
+          "I. helping people find their seats"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'Every year the council arranges lunch for all the members... some volunteers put on a show, usually around half an hour of songs and short plays.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 16,
+      "question_type": "matching",
+      "instruction_text": "What is the role of the volunteers in each of the following activities? Choose SIX answers from the box.",
+      "question_data": {
+        "text": "helping with the website",
+        "options": [
+          "A. providing entertainment",
+          "B. providing publicity about a council service",
+          "C. contacting local businesses",
+          "D. giving advice to visitors",
+          "E. collecting feedback on events",
+          "F. selling tickets",
+          "G. introducing guest speakers at an event",
+          "H. encouraging cooperation between local organisations",
+          "I. helping people find their seats"
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'The town council has a website, of course, and volunteers are asked to help by making sure residents know about it.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 17,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Which event requires the largest number of volunteers?",
+        "options": [
+          "A. the music festival",
+          "B. the science festival",
+          "C. the book festival"
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'The book festival lasts three days and uses several venues... More are needed for the music festival because that lasts a whole week and even more help is required for the science festival...'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 18,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What is the most important requirement for volunteers at the festivals?",
+        "options": [
+          "A. interpersonal skills",
+          "B. personal interest in the event",
+          "C. flexibility"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'What's essential though is being able to get on well with other people and also to deal with someone who's behaving badly...'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 19,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "New volunteers will start working in the week beginning",
+        "options": [
+          "A. 2 September.",
+          "B. 9 September.",
+          "C. 23 September."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'Our plan is to get your work in in September after a week's training starting on the 2nd. So, we'll be timetabling you for duties the following week from the 9th onward.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 20,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What is the next annual event for volunteers?",
+        "options": [
+          "A. a boat trip",
+          "B. a barbecue",
+          "C. a party"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'In recent years, we've had a party in the town hall and last year a barbecue in Chamber Park. Our forthcoming event is a trip along the canal...'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 21,
+      "question_type": "matching",
+      "instruction_text": "What is Rosie and Colin's opinion about each of the following aspects of human geography? Choose FIVE answers from the box.",
+      "question_data": {
+        "text": "Population",
+        "options": [
+          "A. The information given about this was too vague.",
+          "B. This may not be relevant to their course.",
+          "C. This will involve only a small number of statistics.",
+          "D. It will be easy to find facts about this.",
+          "E. The facts about this may not be reliable.",
+          "F. No useful research has been done on this.",
+          "G. The information provided about this was interesting."
+        ]
+      },
+      "correct_answers": ["D"],
+      "explanation": "Transcript: 'Rosie: Okay. So, one aspect is population. That would be all about population density and migration and so on. Lots of facts and statistics. Maybe a bit boring.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 22,
+      "question_type": "matching",
+      "instruction_text": "What is Rosie and Colin's opinion about each of the following aspects of human geography? Choose FIVE answers from the box.",
+      "question_data": {
+        "text": "Health",
+        "options": [
+          "A. The information given about this was too vague.",
+          "B. This may not be relevant to their course.",
+          "C. This will involve only a small number of statistics.",
+          "D. It will be easy to find facts about this.",
+          "E. The facts about this may not be reliable.",
+          "F. No useful research has been done on this.",
+          "G. The information provided about this was interesting."
+        ]
+      },
+      "correct_answers": ["G"],
+      "explanation": "Transcript: 'Rosie: What about health? I read a study about how urban living affects well-being. Colin: That information was really interesting.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 23,
+      "question_type": "matching",
+      "instruction_text": "What is Rosie and Colin's opinion about each of the following aspects of human geography? Choose FIVE answers from the box.",
+      "question_data": {
+        "text": "Economies",
+        "options": [
+          "A. The information given about this was too vague.",
+          "B. This may not be relevant to their course.",
+          "C. This will involve only a small number of statistics.",
+          "D. It will be easy to find facts about this.",
+          "E. The facts about this may not be reliable.",
+          "F. No useful research has been done on this.",
+          "G. The information provided about this was interesting."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'Colin: Shall we look at economies? Rosie: I don't think that's relevant to our human geography module.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 24,
+      "question_type": "matching",
+      "instruction_text": "What is Rosie and Colin's opinion about each of the following aspects of human geography? Choose FIVE answers from the box.",
+      "question_data": {
+        "text": "Culture",
+        "options": [
+          "A. The information given about this was too vague.",
+          "B. This may not be relevant to their course.",
+          "C. This will involve only a small number of statistics.",
+          "D. It will be easy to find facts about this.",
+          "E. The facts about this may not be reliable.",
+          "F. No useful research has been done on this.",
+          "G. The information provided about this was interesting."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'Rosie: We had that lecture about culture and geography last week. I didn't get much out of that. It was also general and the lecturer didn't give any useful examples. Colin: Yeah, I hardly took any notes. It didn't seem worth it.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 25,
+      "question_type": "matching",
+      "instruction_text": "What is Rosie and Colin's opinion about each of the following aspects of human geography? Choose FIVE answers from the box.",
+      "question_data": {
+        "text": "Poverty",
+        "options": [
+          "A. The information given about this was too vague.",
+          "B. This may not be relevant to their course.",
+          "C. This will involve only a small number of statistics.",
+          "D. It will be easy to find facts about this.",
+          "E. The facts about this may not be reliable.",
+          "F. No useful research has been done on this.",
+          "G. The information provided about this was interesting."
+        ]
+      },
+      "correct_answers": ["E"],
+      "explanation": "Transcript: 'Rosie: The trouble is Dr. Lee was saying that you have to be careful with some of the figures relating to poverty. They're sometimes deliberately manipulated.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 26,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Rosie says that in her own city the main problem is",
+        "options": [
+          "A. crime.",
+          "B. housing.",
+          "C. unemployment."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'Rosie: Yes, but where I come from, that's linked to another more serious issue, which is that a lot of people don't have jobs.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 27,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What recent additions to the outskirts of their cities are both students happy about?",
+        "options": [
+          "A. conference centres",
+          "B. sports centres",
+          "C. retail centres"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'Colin: the outskirts are ideal for buildings that need a lot of space, like for conferences. They've opened a couple of big ones. Rosie: Yes, we've got some, too.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 28,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "The students agree that developing disused industrial sites may",
+        "options": [
+          "A. have unexpected costs.",
+          "B. damage the urban environment.",
+          "C. destroy valuable historical buildings."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'Colin: ... they often used quite dangerous materials... whole site has to be made safe. Rosie: That can't be cheap. And I bet it's often not budgeted for. Colin: You're right.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 29,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "The students will mention Masdar City as an example of an attempt to achieve",
+        "options": [
+          "A. daily collections for waste recycling.",
+          "B. sustainable energy use.",
+          "C. free transport for everyone."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'Rosie: Have you read about Masdar City...? Colin: Yes. It was designed to be a green city... set out to depend entirely on renewable energy.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 30,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "When discussing the Eco town of Greenhill Abbots, Colin is uncertain about",
+        "options": [
+          "A. what its objectives were.",
+          "B. why there was opposition to it.",
+          "C. how much of it has actually been built."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'Rosie: ... I'm not sure how far they've got with it... Colin: Right.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 31,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Developing food trends: The growth in interest in food fashions started with [blank] of food being shared on social media."
+      },
+      "correct_answers": ["photos", "photographs", "pictures"],
+      "explanation": "Transcript: 'Interest in food fashions has risen rapidly since the birth of the smartphone when people first began taking photos of their food and instantly sharing them with their friends.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 32,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Developing food trends: Sales of [blank] food brands have grown this way."
+      },
+      "correct_answers": ["vegan"],
+      "explanation": "Transcript: 'Companies which sell vegan produce were pioneers in being able to increase sales really quickly in this way.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 33,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Developing food trends: Famous [blank] re influential."
+      },
+      "correct_answers": ["chefs", "cooks"],
+      "explanation": "Transcript: 'particularly interested in what well-known chefs are putting on their menus.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 34,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Marketing campaigns: The avocado: [blank] were invited to visit growers in South Africa."
+      },
+      "correct_answers": ["journalists", "reporters"],
+      "explanation": "Transcript: 'They paid for a group of journalists to travel out to South Africa to meet avocado farmers.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 35,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Marketing campaigns: The avocado: Advertising focused on its [blank] benefits."
+      },
+      "correct_answers": ["health"],
+      "explanation": "Transcript: 'Advertisements were designed to promote the avocado as a superfood rich in nutrients and therefore beneficial for health.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 36,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Marketing campaigns: Oat milk: Promotion in the USA through [blank] shops reduced the need for advertising."
+      },
+      "correct_answers": ["coffee"],
+      "explanation": "Transcript: 'In the USA, the brand decided against a big retail launch in favor of getting the product into coffee chains, which removed the need for a big advertising budget.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 37,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Marketing campaigns: Oat milk: It appealed to consumers who are concerned about the [blank]"
+      },
+      "correct_answers": ["environment"],
+      "explanation": "Transcript: 'Many consumers prefer it because it has less of an impact on the environment.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 38,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Marketing campaigns: Norwegian skrei: has helped strengthen the [blank] of Norwegian seafood."
+      },
+      "correct_answers": ["reputation"],
+      "explanation": "Transcript: 'The demand for skrei has been used by a food marketing agency to build the reputation of Norway's fisheries in general.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 39,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Ethical concerns: Quinoa: Its success led to an increase in its [blank]"
+      },
+      "correct_answers": ["price", "cost"],
+      "explanation": "Transcript: 'And when demand peaked some years ago, the price soared...'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 40,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Ethical concerns: Quinoa: Overuse of resources resulted in poor quality [blank]"
+      },
+      "correct_answers": ["soil"],
+      "explanation": "Transcript: 'One issue has been that the fertility of the soil decreased dramatically...'"
+    }
+  ]
+}
