@@ -33,6 +33,7 @@ const ListeningCbtTest = () => {
   const [textSize, setTextSize] = useState("medium"); // small, medium, large
 
   // Timer & Autosave states
+  const [timerState, setTimerState] = useState("LOADING"); // LOADING, LISTENING_PLAYING, REVIEW_TIME, AUTO_SUBMIT
   const [secondsRemaining, setSecondsRemaining] = useState(1800); // 30 mins standard for Listening
   const [timeSpentSeconds, setTimeSpentSeconds] = useState(0);
   const [autosaveStatus, setAutosaveStatus] = useState("saved"); // saved, saving, error
@@ -103,7 +104,30 @@ const ListeningCbtTest = () => {
 
         const duration = (testRes.data.test.duration_minutes || 30) * 60;
         const remaining = Math.max(0, duration - (sessionData.time_spent_seconds || 0));
-        setSecondsRemaining(remaining);
+
+        const reviewStartTimeKey = `listening_review_start_${sessionId}`;
+        const reviewStartTime = localStorage.getItem(reviewStartTimeKey);
+
+        if (reviewStartTime || sessionData.status === "review") {
+          const reviewStartTimestamp = reviewStartTime ? Number(reviewStartTime) : Date.now();
+          if (!reviewStartTime) {
+            localStorage.setItem(reviewStartTimeKey, String(reviewStartTimestamp));
+          }
+          const elapsed = Math.floor((Date.now() - reviewStartTimestamp) / 1000);
+          if (elapsed < 120) {
+            setSecondsRemaining(120 - elapsed);
+            setTimerState("REVIEW_TIME");
+            setAudioFinished(true);
+            setExtraTimeActive(true);
+          } else {
+            setSecondsRemaining(0);
+            setTimerState("AUTO_SUBMIT");
+            handleAutoSubmit();
+          }
+        } else {
+          setSecondsRemaining(remaining);
+          setTimerState("LISTENING_PLAYING");
+        }
       } catch (err) {
         setError(err.message);
       } finally {
@@ -114,27 +138,36 @@ const ListeningCbtTest = () => {
     loadTestData();
   }, [sessionId, navigate]);
 
-  // Timer loop
+  // Unified Timer State Machine Loop
   useEffect(() => {
-    if (loading || error || !session) return;
+    if (loading || error || !session || timerState === "LOADING" || timerState === "AUTO_SUBMIT") return;
 
     timerRef.current = setInterval(() => {
       setSecondsRemaining((prev) => {
         if (prev <= 1) {
           clearInterval(timerRef.current);
-          handleAutoSubmit();
+          if (timerState === "LISTENING_PLAYING") {
+            handleEnterReviewPhase();
+            return 120;
+          } else if (timerState === "REVIEW_TIME") {
+            setTimerState("AUTO_SUBMIT");
+            handleAutoSubmit();
+            return 0;
+          }
           return 0;
         }
         return prev - 1;
       });
 
-      setTimeSpentSeconds((prev) => prev + 1);
+      if (timerState === "LISTENING_PLAYING") {
+        setTimeSpentSeconds((prev) => prev + 1);
+      }
     }, 1000);
 
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [loading, error, session]);
+  }, [loading, error, session, timerState]);
 
   // Autosave interval
   useEffect(() => {
@@ -149,13 +182,14 @@ const ListeningCbtTest = () => {
     };
   }, [loading, error, session]);
 
-  const triggerAutosave = async () => {
+  const triggerAutosave = async (options = {}) => {
     setAutosaveStatus("saving");
     try {
       const res = await ListeningService.saveListeningDraft(sessionId, {
         userAnswers: answersRef.current,
         flaggedQuestions: flaggedRef.current,
-        timeSpentSeconds: timeSpentRef.current
+        timeSpentSeconds: timeSpentRef.current,
+        status: options.status || (timerState === "REVIEW_TIME" ? "review" : "in_progress")
       });
       if (res.success) {
         setAutosaveStatus("saved");
@@ -218,12 +252,33 @@ const ListeningCbtTest = () => {
     }
   };
 
-  const handleAudioFinished = () => {
-    setIsPlaying(false);
-    if (audioFinished) return;
+  const handleEnterReviewPhase = () => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    
+    // Stop audio
+    if (audioRef.current) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    }
+
+    const reviewStartTimeKey = `listening_review_start_${sessionId}`;
+    if (!localStorage.getItem(reviewStartTimeKey)) {
+      localStorage.setItem(reviewStartTimeKey, String(Date.now()));
+    }
+
     setAudioFinished(true);
     setExtraTimeActive(true);
-    setSecondsRemaining(120); // 2 minutes extra time
+    setSecondsRemaining(120); // 2 minutes review time
+    setTimerState("REVIEW_TIME");
+    
+    // Save draft status as "review"
+    triggerAutosave({ status: "review" });
+  };
+
+  const handleAudioFinished = () => {
+    if (timerState === "LISTENING_PLAYING") {
+      handleEnterReviewPhase();
+    }
   };
 
   const handleAudioProgressSeek = (e) => {
@@ -300,6 +355,9 @@ const ListeningCbtTest = () => {
     if (autosaveIntervalRef.current) clearInterval(autosaveIntervalRef.current);
     if (audioRef.current) audioRef.current.pause();
 
+    const reviewStartTimeKey = `listening_review_start_${sessionId}`;
+    localStorage.removeItem(reviewStartTimeKey);
+
     try {
       const res = await ListeningService.submitListeningSession(sessionId, {
         userAnswers,
@@ -321,6 +379,13 @@ const ListeningCbtTest = () => {
 
   const handleAutoSubmit = async () => {
     setIsSubmitting(true);
+    if (timerRef.current) clearInterval(timerRef.current);
+    if (autosaveIntervalRef.current) clearInterval(autosaveIntervalRef.current);
+    if (audioRef.current) audioRef.current.pause();
+
+    const reviewStartTimeKey = `listening_review_start_${sessionId}`;
+    localStorage.removeItem(reviewStartTimeKey);
+
     try {
       await ListeningService.submitListeningSession(sessionId, {
         userAnswers: answersRef.current,

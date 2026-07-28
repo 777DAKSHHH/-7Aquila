@@ -124,10 +124,10 @@
       "question_type": "sentence_completion",
       "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
       "question_data": {
-        "text": "Space Rentals: Allowed [blank] within 7 days of delivery"
+        "text": "Space Rentals: See the [blank] for the most up-to-date prices"
       },
-      "correct_answers": ["exchanges", "exchange"],
-      "explanation": "Transcript: 'if you don't like the furniture once it's delivered, you can request exchanges as long as you do that within a week of receiving it.'"
+      "correct_answers": ["app"],
+      "explanation": "Transcript: 'so it's best to use their app to find out what it would cost you to use them.'"
     },
     {
       "section_number": 1,
@@ -135,10 +135,10 @@
       "question_type": "sentence_completion",
       "instruction_text": "Complete the table below. Write ONE WORD AND/OR A NUMBER for each answer.",
       "question_data": {
-        "text": "Space Rentals: contract length is [blank] months"
+        "text": "Space Rentals: [blank] are allowed within 7 days of delivery"
       },
-      "correct_answers": ["6", "six"],
-      "explanation": "Transcript: 'Also, you can't take out a contract for less than 6 months...'"
+      "correct_answers": ["exchanges", "exchange"],
+      "explanation": "Transcript: 'if you don't like the furniture once it's delivered, you can request exchanges as long as you do that within a week of receiving it.'"
     },
     {
       "section_number": 2,
@@ -243,6 +243,7 @@
       "instruction_text": "Label the map below. Choose the correct letter, A–G next to Questions 17–20.",
       "question_data": {
         "text": "bridge foundations",
+        "image_url": "/assets/images/c20_t3_p2.png",
         "options": ["A", "B", "C", "D", "E", "F", "G"]
       },
       "correct_answers": ["B"],

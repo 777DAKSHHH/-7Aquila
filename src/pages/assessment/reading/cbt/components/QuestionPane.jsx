@@ -115,18 +115,45 @@ const QuestionPane = ({ questions = [], userAnswers = {}, onAnswerChange }) => {
       </header>
 
       <div className="space-y-10">
-        {groupedQuestions.map((group, groupIdx) => (
-          <section key={groupIdx} className="space-y-6">
-            {/* Instruction block matching standard IELTS CBT formatting */}
-            <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 text-sm text-foreground/90 font-medium leading-relaxed">
-              {group.instruction}
-            </div>
+        {groupedQuestions.map((group, groupIdx) => {
+          // Detect if the group has shared matching options (excluding radio/checkbox MCQs and heading selectors)
+          const matchingQuestion = group.questions.find(q => 
+            q.question_data?.options && 
+            Array.isArray(q.question_data.options) && 
+            q.question_type !== "mcq_single" && 
+            q.question_type !== "mcq_multiple" &&
+            q.question_type !== "matching_headings"
+          );
+          const sharedOptions = matchingQuestion?.question_data?.options;
 
-            <div className="space-y-4">
-              {group.questions.map((q) => renderQuestion(q))}
-            </div>
-          </section>
-        ))}
+          return (
+            <section key={groupIdx} className="space-y-6">
+              {/* Instruction block matching standard IELTS CBT formatting */}
+              <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 text-sm text-foreground/90 font-medium leading-relaxed">
+                {group.instruction}
+              </div>
+
+              {sharedOptions && sharedOptions.length > 0 && (
+                <div className="bg-card border border-border/80 rounded-xl p-4 shadow-sm space-y-3">
+                  <span className="text-[11px] font-mono text-muted-foreground uppercase tracking-wider block font-bold border-b border-border/50 pb-1">
+                    Options / Choices Box
+                  </span>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2.5">
+                    {sharedOptions.map((opt, idx) => (
+                      <div key={idx} className="text-sm font-medium text-foreground/80 leading-relaxed pl-2 border-l-2 border-primary/45 font-mono">
+                        {opt}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="space-y-4">
+                {group.questions.map((q) => renderQuestion(q))}
+              </div>
+            </section>
+          );
+        })}
       </div>
     </div>
   );

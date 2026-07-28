@@ -255,17 +255,62 @@ const ListeningQuestionPane = ({ questions = [], userAnswers = {}, onAnswerChang
 
   return (
     <div className="space-y-8 select-text">
-      {groupedQuestions.map((group, groupIdx) => (
-        <section key={groupIdx} className="space-y-6">
-          <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 text-sm text-foreground/90 font-medium leading-relaxed shadow-sm">
-            {group.instruction}
-          </div>
+      {groupedQuestions.map((group, groupIdx) => {
+        // Detect if the group has shared matching options (excluding radio/checkbox MCQs)
+        const matchingQuestion = group.questions.find(q => 
+          q.question_data?.options && 
+          Array.isArray(q.question_data.options) && 
+          q.question_type !== "mcq_single" && 
+          q.question_type !== "mcq_multiple" &&
+          q.question_type !== "matching_headings"
+        );
+        const sharedOptions = matchingQuestion?.question_data?.options;
 
-          <div className="space-y-4">
-            {group.questions.map((q) => renderQuestion(q))}
-          </div>
-        </section>
-      ))}
+        // Detect if any question in the group has a visual diagram / map image
+        const questionWithImage = group.questions.find(q => q.question_data?.image_url);
+        const imageUrl = questionWithImage?.question_data?.image_url;
+
+        return (
+          <section key={groupIdx} className="space-y-6">
+            <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 text-sm text-foreground/90 font-medium leading-relaxed shadow-sm">
+              {group.instruction}
+            </div>
+
+            {imageUrl && (
+              <div className="bg-card border border-border/80 rounded-2xl p-4 shadow-sm flex flex-col items-center justify-center gap-3">
+                <img 
+                  src={imageUrl} 
+                  alt="Test Diagram Map" 
+                  className="max-w-full max-h-96 object-contain rounded-lg border border-border/40"
+                  onError={(e) => {
+                    console.error(`Failed to load visual asset: ${imageUrl}`);
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+              </div>
+            )}
+
+            {sharedOptions && sharedOptions.length > 0 && (
+              <div className="bg-card border border-border/80 rounded-xl p-4 shadow-sm space-y-3">
+                <span className="text-[11px] font-mono text-muted-foreground uppercase tracking-wider block font-bold border-b border-border/50 pb-1">
+                  Options / Choices Box
+                </span>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2.5">
+                  {sharedOptions.map((opt, idx) => (
+                    <div key={idx} className="text-sm font-medium text-foreground/80 leading-relaxed pl-2 border-l-2 border-primary/45 font-mono">
+                      {opt}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div className="space-y-4">
+              {group.questions.map((q) => renderQuestion(q))}
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 };

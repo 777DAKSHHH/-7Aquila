@@ -181,13 +181,13 @@ export const getListeningSession = async (sessionId) => {
 /**
  * Autosave student answers draft progress
  */
-export const saveListeningDraft = async (sessionId, { userAnswers = {}, flaggedQuestions = [], timeSpentSeconds = 0 }) => {
+export const saveListeningDraft = async (sessionId, { userAnswers = {}, flaggedQuestions = [], timeSpentSeconds = 0, status = "in_progress" }) => {
   try {
     const payload = {
       user_answers: userAnswers,
       flagged_questions: flaggedQuestions,
       time_spent_seconds: timeSpentSeconds,
-      status: "in_progress",
+      status,
       updated_at: new Date().toISOString()
     };
 

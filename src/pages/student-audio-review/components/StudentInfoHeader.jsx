@@ -1,17 +1,24 @@
 import React from 'react';
 import Icon from '../../../components/AppIcon';
-import Image from '../../../components/AppImage';
+import { API_BASE_URL } from '../../../config/apiConfig';
 
 const StudentInfoHeader = ({ student, testDetails, aiScores }) => {
+  const DEFAULT_AVATAR_URL = `${API_BASE_URL}/uploads/speaking/eagle-spade-logo.png`;
+  const avatarUrl = student?.avatar || DEFAULT_AVATAR_URL;
+
   return (
     <div className="bg-card rounded-lg p-4 md:p-6 lg:p-8 shadow-sm border border-border">
       <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-6">
         <div className="flex items-center gap-4">
           <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden bg-primary/10 flex-shrink-0">
-            <Image
-              src={student?.avatar}
-              alt={student?.avatarAlt}
+            <img
+              src={avatarUrl}
+              alt={student?.avatarAlt || "Student Avatar"}
               className="w-full h-full object-cover"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = DEFAULT_AVATAR_URL;
+              }}
             />
           </div>
           <div>

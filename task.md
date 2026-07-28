@@ -13,4 +13,6 @@
 - [x] Port grouped MCQ scoring updates to client scoring engines (listeningScoringService/readingScoringService) for results screen display accuracy
 - [x] Add Cambridge 20 Listening Test 2, 3, and 4 to the database
 - [x] Show question-specific accurate audio script transcripts in results review
+- [x] Render matching choices options box in both Listening and Reading CBT interfaces
+- [x] Verify and align correct answers for Cambridge 20 Listening Test 3 and Test 4
 - [x] Run production build and verify correctness

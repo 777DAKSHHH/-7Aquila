@@ -25,21 +25,56 @@ export const normalizeAnswer = (answer) => {
 /**
  * Evaluates a user answer against the array of correct answers.
  */
+export const matchSingleAnswer = (userAns, correctAns) => {
+  if (userAns === null || userAns === undefined || correctAns === null || correctAns === undefined) return false;
+
+  const u = String(userAns).trim().toLowerCase();
+  const c = String(correctAns).trim().toLowerCase();
+
+  if (u === c) return true;
+
+  // Normalize by stripping punctuation and collapse whitespaces
+  const cleanU = u.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s+/g, " ").trim();
+  const cleanC = c.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s+/g, " ").trim();
+
+  if (cleanU === cleanC) return true;
+
+  // Escape special regex chars helper
+  const escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+  // Check if correct answer is a single letter or roman numeral prefix
+  // e.g. correct is "ii", user answer is "ii. the limits..."
+  const prefixRegex = new RegExp(`^${escapeRegExp(cleanC)}(?:[^a-z0-9]|$)`);
+  if (prefixRegex.test(cleanU)) {
+    return true;
+  }
+
+  // Check reverse prefix mapping (e.g. correct is "ii. the limits...", user typed "ii")
+  const revPrefixRegex = new RegExp(`^${escapeRegExp(cleanU)}(?:[^a-z0-9]|$)`);
+  if (revPrefixRegex.test(cleanC)) {
+    return true;
+  }
+
+  return false;
+};
+
+/**
+ * Evaluates a user answer against the array of correct answers.
+ */
 export const checkAnswer = (userAnswer, correctAnswers) => {
   if (!correctAnswers || !Array.isArray(correctAnswers) || correctAnswers.length === 0) {
     return false;
   }
 
-  const normalizedUser = normalizeAnswer(userAnswer);
-
-  if (Array.isArray(normalizedUser)) {
-    const normalizedCorrect = correctAnswers.map(a => normalizeAnswer(a));
-    if (normalizedUser.length !== normalizedCorrect.length) return false;
-    return normalizedUser.every(val => normalizedCorrect.includes(val));
+  if (Array.isArray(userAnswer)) {
+    if (userAnswer.length !== correctAnswers.length) return false;
+    return userAnswer.every(val => {
+      return correctAnswers.some(correct => matchSingleAnswer(val, correct));
+    });
   }
 
   return correctAnswers.some(correct => {
-    return normalizeAnswer(correct) === normalizedUser;
+    return matchSingleAnswer(userAnswer, correct);
   });
 };
 
@@ -138,7 +173,8 @@ export const scoreListeningSession = (userAnswers = {}, questions = []) => {
     // Calculate how many correct selections matches
     let matches = 0;
     userSelections.forEach(sel => {
-      if (correctSet.has(sel)) {
+      const isMatched = Array.from(correctSet).some(correctVal => matchSingleAnswer(sel, correctVal));
+      if (isMatched) {
         matches++;
       }
     });
@@ -174,19 +210,19 @@ export const scoreListeningSession = (userAnswers = {}, questions = []) => {
       const normalizedUserList = [];
       if (Array.isArray(userAnswer)) {
         userAnswer.forEach(val => {
-          if (val) normalizedUserList.push(String(val).trim().toLowerCase());
+          if (val) normalizedUserList.push(val);
         });
       } else if (userAnswer) {
         const parts = String(userAnswer).split(",");
         parts.forEach(part => {
-          if (part) normalizedUserList.push(part.trim().toLowerCase());
+          if (part) normalizedUserList.push(part);
         });
       }
 
-      const normalizedCorrect = q.correct_answers.map(a => String(a).trim().toLowerCase());
-      
       if (normalizedUserList.length > 0) {
-        isCorrect = normalizedUserList.some(val => normalizedCorrect.includes(val));
+        isCorrect = normalizedUserList.some(userVal => {
+          return q.correct_answers.some(correctVal => matchSingleAnswer(userVal, correctVal));
+        });
       }
     }
 

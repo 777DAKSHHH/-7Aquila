@@ -189,7 +189,7 @@ export const saveListeningDraft = async (req, res) => {
       user_answers: userAnswers || {},
       flagged_questions: flaggedQuestions || [],
       time_spent_seconds: timeSpentSeconds || 0,
-      status: "in_progress",
+      status: req.body.status || "in_progress",
       updated_at: new Date().toISOString()
     };
 

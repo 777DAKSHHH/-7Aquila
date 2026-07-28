@@ -112,6 +112,7 @@ const StudentAudioReview = () => {
   const [currentResponseIndex, setCurrentResponseIndex] = useState(0);
   const [aiData, setAiData] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
+  const [studentAvatar, setStudentAvatar] = useState(null);
 
   useEffect(() => {
     if (!sessionId) {
@@ -130,6 +131,18 @@ const StudentAudioReview = () => {
 
         if (sessionError) throw sessionError;
 
+        // Fetch user settings to retrieve student's avatar/profile picture
+        let avatarUrl = null;
+        if (session && session.student_id) {
+          const { data: settingsData } = await supabase
+            .from('user_settings')
+            .select('profile_picture_url')
+            .eq('user_id', session.student_id)
+            .maybeSingle();
+          avatarUrl = settingsData?.profile_picture_url || null;
+        }
+        setStudentAvatar(avatarUrl);
+
         // Fetch responses
         const { data: responseList, error: respError } = await supabase
           .from('speaking_responses')
@@ -138,7 +151,8 @@ const StudentAudioReview = () => {
             speaking_questions:question_id (
               id,
               question_text,
-              part
+              part,
+              topic
             )
           `)
           .eq('session_id', sessionId)
@@ -170,7 +184,8 @@ const StudentAudioReview = () => {
               ...r, 
               audioUrl,
               question_text: qObj?.question_text || "Question not available",
-              part: qObj?.part || null
+              part: qObj?.part || null,
+              topic: qObj?.topic || "IELTS Speaking Test"
             };
           })
         );
@@ -330,15 +345,21 @@ const StudentAudioReview = () => {
           <StudentInfoHeader
             student={{
               name: student.full_name || student.email?.split('@')[0],
-              studentId: student.id.substring(0, 8).toUpperCase(),
+              studentId: student.username || student.id.substring(0, 8).toUpperCase(),
               email: student.email,
-              avatar: student.avatar_url,
+              avatar: studentAvatar,
               avatarAlt: student.full_name
             }}
             testDetails={{
-              date: new Date(sessionData.created_at).toLocaleDateString(),
-              topic: responses[0]?.speaking_questions?.topic || "IELTS Speaking Test",
-              duration: "N/A", // Calculate total duration if needed
+              date: sessionData.completed_at || sessionData.created_at ? new Date(sessionData.completed_at || sessionData.created_at).toLocaleDateString() : "N/A",
+              topic: responses[0]?.topic || "IELTS Speaking Test",
+              duration: (() => {
+                const totalSeconds = responses.reduce((sum, r) => sum + (Number(r.audio_duration) || 0), 0);
+                if (totalSeconds <= 0) return "N/A";
+                const mins = Math.floor(totalSeconds / 60);
+                const secs = Math.round(totalSeconds % 60);
+                return `${mins}m ${secs}s`;
+              })(),
               testType: "Full Test"
             }}
             aiScores={aiData?.scores} />
