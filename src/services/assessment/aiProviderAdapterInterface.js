@@ -39,8 +39,8 @@ export const OpenAIProviderAdapter = {
     const userPrompt = evaluationPackage?.userPrompt || "";
 
     // Dev Fallback / Mock Response when API Key is missing in local environment
-    if (!apiKey) {
-      console.warn("[Rocket OpenAI Adapter] No API key found. Executing environment fallback mode.");
+    if (!apiKey || apiKey === "your-openai-api-key-here") {
+      console.warn("[Rocket OpenAI Adapter] No active API key found or placeholder used. Executing environment fallback mode.");
       await new Promise((resolve) => setTimeout(resolve, 1200));
 
       const mockRawContent = JSON.stringify({

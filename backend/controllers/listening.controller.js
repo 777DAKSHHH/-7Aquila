@@ -256,6 +256,7 @@ export const submitListeningSession = async (req, res) => {
         id,
         questions: listening_questions (
           id,
+          section_id,
           question_number,
           question_type,
           correct_answers,

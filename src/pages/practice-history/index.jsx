@@ -44,7 +44,8 @@ const PracticeHistory = () => {
                 id,
                 audio_duration,
                 speaking_questions (
-                  topic
+                  topic,
+                  difficulty
                 )
               )
             `)
@@ -94,7 +95,7 @@ const PracticeHistory = () => {
                 strengths,
                 improvements,
                 status: session.status,
-                difficulty: 'Medium'
+                difficulty: question?.difficulty || 'Medium'
               };
             });
           }

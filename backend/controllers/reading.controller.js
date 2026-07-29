@@ -261,6 +261,7 @@ export const submitReadingSession = async (req, res) => {
         id,
         questions: reading_questions (
           id,
+          passage_id,
           question_number,
           question_type,
           correct_answers,
