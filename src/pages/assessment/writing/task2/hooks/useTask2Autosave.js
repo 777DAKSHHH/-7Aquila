@@ -22,6 +22,12 @@ export const useTask2Autosave = ({ sessionId, answer, wordCount }) => {
 
   const autosaveRef = useRef(null);
   const isFirstRender = useRef(true);
+  const latestDataRef = useRef({ answer, wordCount });
+
+  // Sync latest answer and wordCount to ref on every update
+  useEffect(() => {
+    latestDataRef.current = { answer, wordCount };
+  }, [answer, wordCount]);
 
   // Initialize AutoSaveService instance
   useEffect(() => {
@@ -42,8 +48,8 @@ export const useTask2Autosave = ({ sessionId, answer, wordCount }) => {
 
     // Register tab visibility & unload handlers
     const getCurrentData = () => ({
-      task2_answer: answer,
-      task2_word_count: wordCount,
+      task2_answer: latestDataRef.current.answer,
+      task2_word_count: latestDataRef.current.wordCount,
     });
 
     const unbindVisibility = registerVisibilitySave(instance, getCurrentData);
@@ -79,24 +85,24 @@ export const useTask2Autosave = ({ sessionId, answer, wordCount }) => {
   const forceSave = useCallback(async () => {
     if (autosaveRef.current) {
       await autosaveRef.current.forceSave({
-        task2_answer: answer,
-        task2_word_count: wordCount,
+        task2_answer: latestDataRef.current.answer,
+        task2_word_count: latestDataRef.current.wordCount,
       });
     }
-  }, [answer, wordCount]);
+  }, []);
 
   // Manual retry action
   const manualRetry = useCallback(async () => {
     if (autosaveRef.current) {
       await autosaveRef.current.save(
         {
-          task2_answer: answer,
-          task2_word_count: wordCount,
+          task2_answer: latestDataRef.current.answer,
+          task2_word_count: latestDataRef.current.wordCount,
         },
         true
       );
     }
-  }, [answer, wordCount]);
+  }, []);
 
   return {
     autosaveState,

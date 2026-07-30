@@ -1,6 +1,8 @@
 export const isFacultyReviewed = (attempt) => {
   return (
-    attempt?.reviewed_at !== null && attempt?.reviewed_at !== undefined
+    (attempt?.reviewed_at !== null && attempt?.reviewed_at !== undefined) ||
+    (attempt?.teacher_band_score !== null && attempt?.teacher_band_score !== undefined) ||
+    attempt?.status === 'reviewed'
   );
 };
 

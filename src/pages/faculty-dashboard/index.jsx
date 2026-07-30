@@ -380,10 +380,18 @@ const FacultyDashboard = () => {
       })
       .subscribe();
 
+    // 6-second polling fallback to ensure mobile browsers stay synchronized even when WebSockets sleep
+    const pollInterval = setInterval(() => {
+      fetchDashboardData();
+      fetchRecentActivities();
+      fetchWaitingStudents();
+    }, 6000);
+
     return () => {
       window.removeEventListener('resize', handleResize);
       supabase.removeChannel(lobbyChannel);
       supabase.removeChannel(sessionsChannel);
+      clearInterval(pollInterval);
     };
   }, []);
 
@@ -473,22 +481,54 @@ const FacultyDashboard = () => {
   };
 
   const handleApprove = async (lobbyId) => {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) {
-      console.error("Faculty user not found, cannot approve.");
-      return;
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) {
+        alert("Session expired. Please sign in again.");
+        return;
+      }
+      
+      // Optimistically hide student from UI list
+      setWaitingStudents(prev => prev.filter(s => s.id !== lobbyId));
+
+      const { error } = await supabase
+        .from("lobby")
+        .update({ status: "approved", approved_by: user.id })
+        .eq("id", lobbyId);
+
+      if (error) {
+        console.error("Error approving student:", error);
+        alert(`Failed to approve: ${error.message}`);
+        // Re-fetch waiting list on failure to ensure correct state
+        const { data } = await supabase.from("lobby").select("*").eq("status", "waiting");
+        if (data) setWaitingStudents(data);
+      }
+    } catch (err) {
+      console.error("Approval flow error:", err);
+      alert("An unexpected error occurred while approving the student.");
     }
-    await supabase
-      .from("lobby")
-      .update({ status: "approved", approved_by: user.id })
-      .eq("id", lobbyId);
   };
 
   const handleReject = async (lobbyId) => {
-    await supabase
-      .from("lobby")
-      .update({ status: "rejected" })
-      .eq("id", lobbyId);
+    try {
+      // Optimistically hide student from UI list
+      setWaitingStudents(prev => prev.filter(s => s.id !== lobbyId));
+
+      const { error } = await supabase
+        .from("lobby")
+        .update({ status: "rejected" })
+        .eq("id", lobbyId);
+
+      if (error) {
+        console.error("Error rejecting student:", error);
+        alert(`Failed to reject: ${error.message}`);
+        const { data } = await supabase.from("lobby").select("*").eq("status", "waiting");
+        if (data) setWaitingStudents(data);
+      }
+    } catch (err) {
+      console.error("Rejection flow error:", err);
+      alert("An unexpected error occurred while rejecting the student.");
+    }
   };
 
   return (

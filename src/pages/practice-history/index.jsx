@@ -95,7 +95,14 @@ const PracticeHistory = () => {
                 strengths,
                 improvements,
                 status: session.status,
-                difficulty: question?.difficulty || 'Medium'
+                difficulty: question?.difficulty || 'Medium',
+                reviewed_at: session.reviewed_at,
+                teacher_band_score: session.teacher_band_score,
+                teacher_fluency_score: session.teacher_fluency_score,
+                teacher_lexical_score: session.teacher_lexical_score,
+                teacher_grammar_score: session.teacher_grammar_score,
+                teacher_pronunciation_score: session.teacher_pronunciation_score,
+                teacher_feedback: session.teacher_feedback,
               };
             });
           }
