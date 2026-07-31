@@ -1,0 +1,157 @@
+{
+  "title": "Practice Passage 17: The Development of Transcontinental Railroads",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Development of Transcontinental Railroads",
+    "sub_title": "Analyzing Union Pacific and Central Pacific route logistics, labor forces, mountain blasting, and economic impacts.",
+    "content_html": "<p><strong>Paragraph A</strong></p><p><strong>[A1]</strong> In the mid-19th century, the United States was divided by vast distances, making travel between the East and West coasts slow and dangerous. <strong>[A2]</strong> The journey by stagecoach took weeks, while sailing around South America took months. <strong>[A3]</strong> To unite the nation, Congress passed the Pacific Railway Act in 1862. <strong>[A4]</strong> This legislation authorized the construction of the first transcontinental railroad, a massive project that would link the Atlantic and Pacific oceans.</p><p><strong>Paragraph B</strong></p><p><strong>[B1]</strong> Two companies were selected to build the railroad, starting from opposite directions. <strong>[B2]</strong> The Union Pacific Railroad began construction in Omaha, Nebraska, building westward across the flat Great Plains. <strong>[B3]</strong> Meanwhile, the Central Pacific Railroad started in Sacramento, California, building eastward over the rugged Sierra Nevada mountains. <strong>[B4]</strong> The two lines would eventually meet in the middle, creating a single continuous track.</p><p><strong>Paragraph C</strong></p><p><strong>[C1]</strong> The Central Pacific Railroad faced immense physical barriers immediately. <strong>[C2]</strong> Workers had to blast tunnels through solid granite peaks using gunpowder and nitroglycerin. <strong>[C3]</strong> Because of the labor shortage in California, the company hired thousands of Chinese immigrants. <strong>[C4]</strong> These Chinese workers proved highly disciplined and completed the dangerous mountain construction under extreme winter conditions.</p><p><strong>Paragraph D</strong></p><p><strong>[D1]</strong> In contrast, the Union Pacific Railroad dealt with different challenges on the Great Plains. <strong>[D2]</strong> Although the flat terrain allowed faster track-laying, the company faced frequent conflicts with Native American tribes defending their territories. <strong>[D3]</strong> The Union Pacific workforce consisted mainly of Irish immigrants, Civil War veterans, and former slaves. <strong>[D4]</strong> They lived in mobile camps that moved along with the advancing tracks, earning the nickname \"Hell on Wheels.\"</p><p><strong>Paragraph E</strong></p><p><strong>[E1]</strong> Materials supply was a major logistical challenge for both companies. <strong>[E2]</strong> The Central Pacific had to ship all its iron rails, locomotives, and heavy machinery from the East Coast around South America to California, a voyage taking several months. <strong>[E3]</strong> The Union Pacific, although closer to supplies, had to transport wood for railroad ties over long distances, as the Great Plains had few trees. <strong>[E4]</strong> Managing these supply lines required careful scheduling and massive coordination.</p><p><strong>Paragraph F</strong></p><p><strong>[F1]</strong> The two tracks finally met on May 10, 1869, at Promontory Summit in Utah. <strong>[F2]</strong> To celebrate the completion, a symbolic golden spike was driven into the final tie. <strong>[F3]</strong> The news was transmitted instantly across the nation via telegraph, triggering widespread celebrations in major cities. <strong>[F4]</strong> The completed railroad reduced travel time across the continent from months to just under one week.</p><p><strong>Paragraph G</strong></p><p><strong>[G1]</strong> The transcontinental railroad had a profound impact on the nation's economy and society. <strong>[G2]</strong> It accelerated the settlement of the West, stimulated trade, and allowed businesses to ship goods nationwide. <strong>[G3]</strong> However, it also led to the rapid decline of Native American populations and the destruction of bison herds. <strong>[G4]</strong> Despite these negative consequences, the railroad remains one of the greatest engineering feats in history.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Central Pacific Railroad: Starting location: [blank]."
+      },
+      "correct_answers": ["Sacramento"],
+      "explanation": "Paragraph B states the Central Pacific started building from Sacramento, California.",
+      "citation_excerpt": "Central Pacific Railroad started in Sacramento, California, building eastward"
+    },
+    {
+      "question_number": 2,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Central Pacific Railroad: Terrain and obstacles: [blank] mountains."
+      },
+      "correct_answers": ["Sierra Nevada"],
+      "explanation": "Paragraph B notes Central Pacific built eastward over the Sierra Nevada mountains.",
+      "citation_excerpt": "Sacramento, California, building eastward over the rugged Sierra Nevada mountains."
+    },
+    {
+      "question_number": 3,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Central Pacific Railroad: Construction techniques: Blasted tunnels through solid [blank]."
+      },
+      "correct_answers": ["granite", "granite peaks"],
+      "explanation": "Paragraph C explains workers had to blast tunnels through granite peaks.",
+      "citation_excerpt": "blast tunnels through solid granite peaks using gunpowder"
+    },
+    {
+      "question_number": 4,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Central Pacific Railroad: Workforce: Mainly [blank]."
+      },
+      "correct_answers": ["Chinese", "Chinese immigrants"],
+      "explanation": "Paragraph C notes that because of labor shortages, the company hired thousands of Chinese immigrants.",
+      "citation_excerpt": "company hired thousands of Chinese immigrants. These Chinese workers proved"
+    },
+    {
+      "question_number": 5,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Central Pacific Railroad: Logistics: Shipped iron rails and locomotives around [blank] to California."
+      },
+      "correct_answers": ["South America"],
+      "explanation": "Paragraph E states materials had to be shipped from East Coast around South America to California.",
+      "citation_excerpt": "ship all its iron rails, locomotives, and heavy machinery from the East Coast around South America"
+    },
+    {
+      "question_number": 6,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Union Pacific Railroad: Starting location: [blank]."
+      },
+      "correct_answers": ["Omaha"],
+      "explanation": "Paragraph B states Union Pacific began construction in Omaha, Nebraska.",
+      "citation_excerpt": "Union Pacific Railroad began construction in Omaha, Nebraska, building westward"
+    },
+    {
+      "question_number": 7,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Union Pacific Railroad: Terrain and obstacles: Flat Great Plains; faced [blank] with Native Americans."
+      },
+      "correct_answers": ["conflicts", "frequent conflicts"],
+      "explanation": "Paragraph D states the Union Pacific faced frequent conflicts with Native American tribes.",
+      "citation_excerpt": "Great Plains... company faced frequent conflicts with Native American tribes"
+    },
+    {
+      "question_number": 8,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Union Pacific Railroad: Workforce: Irish immigrants, former slaves, and [blank]."
+      },
+      "correct_answers": ["Civil War veterans", "veterans"],
+      "explanation": "Paragraph D states Union Pacific's workforce was composed of Irish immigrants, Civil War veterans, and former slaves.",
+      "citation_excerpt": "Union Pacific workforce consisted mainly of Irish immigrants, Civil War veterans, and former slaves."
+    },
+    {
+      "question_number": 9,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Union Pacific Railroad: Logistics: Required transport of [blank] for railroad ties due to lack of local trees."
+      },
+      "correct_answers": ["wood"],
+      "explanation": "Paragraph E explains Union Pacific had to transport wood over long distances.",
+      "citation_excerpt": "transport wood for railroad ties over long distances, as the Great Plains had few trees."
+    },
+    {
+      "question_number": 10,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Railroad Union: Location of meeting point: [blank], Utah."
+      },
+      "correct_answers": ["Promontory Summit"],
+      "explanation": "Paragraph F states the two tracks met at Promontory Summit in Utah.",
+      "citation_excerpt": "finally met on May 10, 1869, at Promontory Summit in Utah."
+    },
+    {
+      "question_number": 11,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Railroad Union: Symbolic item used in celebration: [blank]."
+      },
+      "correct_answers": ["golden spike", "spike"],
+      "explanation": "Paragraph F states a symbolic golden spike was driven in to celebrate completion.",
+      "citation_excerpt": "To celebrate the completion, a symbolic golden spike was driven into the final tie."
+    },
+    {
+      "question_number": 12,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Railroad Union: Reporting method: [blank]."
+      },
+      "correct_answers": ["telegraph"],
+      "explanation": "Paragraph F states the news was transmitted instantly via telegraph.",
+      "citation_excerpt": "The news was transmitted instantly across the nation via telegraph"
+    },
+    {
+      "question_number": 13,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Railroad Union: Total travel time reduced to less than [blank]."
+      },
+      "correct_answers": ["one week", "a week"],
+      "explanation": "Paragraph F notes that the completed railroad reduced travel time to just under one week.",
+      "citation_excerpt": "reduced travel time across the continent from months to just under one week."
+    }
+  ]
+}

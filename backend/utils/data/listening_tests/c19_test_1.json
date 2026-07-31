@@ -1,0 +1,593 @@
+{
+  "title": "Cambridge IELTS 19 Listening Test 1",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Part 1: Hinchingbrooke Country Park",
+      "audio_url": "/uploads/audio/CB-19.1.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer."
+    },
+    {
+      "section_number": 2,
+      "title": "Part 2: Stanthorpe Twinning Association / Farley House Map",
+      "audio_url": "/uploads/audio/CB-19.1.mp3",
+      "instruction_text": "Questions 11–15: Choose the correct letter, A, B or C. Questions 16–20: Label the map below. Choose the correct letter, A–H."
+    },
+    {
+      "section_number": 3,
+      "title": "Part 3: Discussion on Bread Reuse Project & Food Labels",
+      "audio_url": "/uploads/audio/CB-19.1.mp3",
+      "instruction_text": "Questions 21–24: Choose TWO letters, A–E. Questions 25–30: Choose SIX answers from the box."
+    },
+    {
+      "section_number": 4,
+      "title": "Part 4: Céide Fields archaeological site",
+      "audio_url": "/uploads/audio/CB-19.1.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer."
+    }
+  ],
+  "questions": [
+    {
+      "section_number": 1,
+      "question_number": 1,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "The park area is [blank] hectares."
+      },
+      "correct_answers": ["69", "sixty-nine"],
+      "explanation": "The park covers an area of 69 hectares."
+    },
+    {
+      "section_number": 1,
+      "question_number": 2,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Wetland habitats include lakes, ponds and a [blank]."
+      },
+      "correct_answers": ["stream"],
+      "explanation": "The wetlands consist of lakes, ponds, and a stream."
+    },
+    {
+      "section_number": 1,
+      "question_number": 3,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Science: Children look at [blank] about plants, etc."
+      },
+      "correct_answers": ["data"],
+      "explanation": "During science visits, children study and record data about plants."
+    },
+    {
+      "section_number": 1,
+      "question_number": 4,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Geography: includes learning to use a [blank] and compass."
+      },
+      "correct_answers": ["map"],
+      "explanation": "Geography lessons teach students how to read a map and use a compass."
+    },
+    {
+      "section_number": 1,
+      "question_number": 5,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Leisure and tourism: mostly concentrates on the park’s [blank]."
+      },
+      "correct_answers": ["visitors"],
+      "explanation": "The leisure and tourism subject concentrates on studying the park's visitors."
+    },
+    {
+      "section_number": 1,
+      "question_number": 6,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Music: Children make [blank] with natural materials, and experiment with rhythm and speed."
+      },
+      "correct_answers": ["sounds"],
+      "explanation": "In music classes, children create sounds from natural materials."
+    },
+    {
+      "section_number": 1,
+      "question_number": 7,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "They give children a feeling of [blank] that they may not have elsewhere."
+      },
+      "correct_answers": ["freedom"],
+      "explanation": "Outdoor visits provide children with a sense of freedom."
+    },
+    {
+      "section_number": 1,
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Children learn new [blank] and gain self-confidence."
+      },
+      "correct_answers": ["skills"],
+      "explanation": "The benefits include learning new skills and developing confidence."
+    },
+    {
+      "section_number": 1,
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Cost per child: £ [blank]"
+      },
+      "correct_answers": ["4.95"],
+      "explanation": "The entrance cost per child is £4.95."
+    },
+    {
+      "section_number": 1,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Adults, such as [blank], free."
+      },
+      "correct_answers": ["leaders"],
+      "explanation": "Adult group leaders do not have to pay."
+    },
+    {
+      "section_number": 2,
+      "question_number": 11,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "During the visit to Malatte, in France, members especially enjoyed",
+        "options": [
+          "A. going to a theme park.",
+          "B. experiencing a river trip.",
+          "C. visiting a cheese factory."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "The speaker mentions that the members particularly enjoyed the river trip."
+    },
+    {
+      "section_number": 2,
+      "question_number": 12,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What will happen in Stanthorpe to mark the 25th anniversary of the Twinning Association?",
+        "options": [
+          "A. A tree will be planted.",
+          "B. A garden seat will be bought.",
+          "C. A footbridge will be built."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "To mark the 25th anniversary, the association will plant a tree."
+    },
+    {
+      "section_number": 2,
+      "question_number": 13,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Which event raised most funds this year?",
+        "options": [
+          "A. the film show",
+          "B. the pancake evening",
+          "C. the cookery demonstration"
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "The pancake evening was the event that brought in the most money."
+    },
+    {
+      "section_number": 2,
+      "question_number": 14,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "For the first evening with the French visitors host families are advised to",
+        "options": [
+          "A. take them for a walk round the town.",
+          "B. go to a local restaurant.",
+          "C. have a meal at home."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Host families are advised to have dinner at home on the first night to make them comfortable."
+    },
+    {
+      "section_number": 2,
+      "question_number": 15,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "On Saturday evening there will be the chance to",
+        "options": [
+          "A. listen to a concert.",
+          "B. watch a match.",
+          "C. take part in a competition."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "A concert will be held on Saturday evening for everyone to enjoy."
+    },
+    {
+      "section_number": 2,
+      "question_number": 16,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–H, next to Questions 16–20.",
+      "question_data": {
+        "text": "Farm shop",
+        "image_url": "/assets/images/c19_t1_p2.png",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H"]
+      },
+      "correct_answers": ["G"],
+      "explanation": "The farm shop is located next to the old stables at G."
+    },
+    {
+      "section_number": 2,
+      "question_number": 17,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–H, next to Questions 16–20.",
+      "question_data": {
+        "text": "Disabled entry",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H"]
+      },
+      "correct_answers": ["C"],
+      "explanation": "The disabled entry is at C, located at the side of the main house."
+    },
+    {
+      "section_number": 2,
+      "question_number": 18,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–H, next to Questions 16–20.",
+      "question_data": {
+        "text": "Adventure playground",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H"]
+      },
+      "correct_answers": ["B"],
+      "explanation": "The adventure playground is near the lake on the northwest path at B."
+    },
+    {
+      "section_number": 2,
+      "question_number": 19,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–H, next to Questions 16–20.",
+      "question_data": {
+        "text": "Kitchen gardens",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H"]
+      },
+      "correct_answers": ["D"],
+      "explanation": "The kitchen gardens are at D, positioned to the east of the main path."
+    },
+    {
+      "section_number": 2,
+      "question_number": 20,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–H, next to Questions 16–20.",
+      "question_data": {
+        "text": "The Temple of the Four Winds",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H"]
+      },
+      "correct_answers": ["A"],
+      "explanation": "The Temple of the Four Winds is at the far north end at A."
+    },
+    {
+      "section_number": 3,
+      "question_number": 21,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO things did Colin find most satisfying about his bread reuse project?",
+        "options": [
+          "A. receiving support from local restaurants",
+          "B. finding a good way to prevent waste",
+          "C. overcoming problems in a basic process",
+          "D. experimenting with designs and colours",
+          "E. learning how to apply 3-D printing"
+        ]
+      },
+      "correct_answers": ["B", "D"],
+      "explanation": "Colin enjoyed preventing bread waste and playing with different design shapes and natural colors."
+    },
+    {
+      "section_number": 3,
+      "question_number": 22,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO things did Colin find most satisfying about his bread reuse project?",
+        "options": [
+          "A. receiving support from local restaurants",
+          "B. finding a good way to prevent waste",
+          "C. overcoming problems in a basic process",
+          "D. experimenting with designs and colours",
+          "E. learning how to apply 3-D printing"
+        ]
+      },
+      "correct_answers": ["B", "D"],
+      "explanation": "Colin enjoyed preventing bread waste and playing with different design shapes and natural colors."
+    },
+    {
+      "section_number": 3,
+      "question_number": 23,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO ways do the students agree that touch-sensitive sensors for food labels could be developed in future?",
+        "options": [
+          "A. for use on medical products",
+          "B. to show that food is no longer fit to eat",
+          "C. for use with drinks as well as foods",
+          "D. to provide applications for blind people",
+          "E. to indicate the weight of certain foods"
+        ]
+      },
+      "correct_answers": ["B", "D"],
+      "explanation": "They agree the sensors are useful for visually impaired (blind) individuals and to show when food spoils."
+    },
+    {
+      "section_number": 3,
+      "question_number": 24,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO ways do the students agree that touch-sensitive sensors for food labels could be developed in future?",
+        "options": [
+          "A. for use on medical products",
+          "B. to show that food is no longer fit to eat",
+          "C. for use with drinks as well as foods",
+          "D. to provide applications for blind people",
+          "E. to indicate the weight of certain foods"
+        ]
+      },
+      "correct_answers": ["B", "D"],
+      "explanation": "They agree the sensors are useful for visually impaired (blind) individuals and to show when food spoils."
+    },
+    {
+      "section_number": 3,
+      "question_number": 25,
+      "question_type": "matching",
+      "instruction_text": "What is the students’ opinion about each of the following food trends? Choose SIX answers from the box and write the correct letter, A–H.",
+      "question_data": {
+        "text": "Use of local products",
+        "options": [
+          "A. This is only relevant to young people.",
+          "B. This may have disappointing results.",
+          "C. This already seems to be widespread.",
+          "D. Retailers should do more to encourage this.",
+          "E. More financial support is needed for this.",
+          "F. Most people know little about this.",
+          "G. There should be stricter regulations about this.",
+          "H. This could be dangerous."
+        ]
+      },
+      "correct_answers": ["D"],
+      "explanation": "They believe supermarkets and retailers should take more initiative to encourage buying local products."
+    },
+    {
+      "section_number": 3,
+      "question_number": 26,
+      "question_type": "matching",
+      "instruction_text": "What is the students’ opinion about each of the following food trends? Choose SIX answers from the box and write the correct letter, A–H.",
+      "question_data": {
+        "text": "Reduction in unnecessary packaging",
+        "options": [
+          "A. This is only relevant to young people.",
+          "B. This may have disappointing results.",
+          "C. This already seems to be widespread.",
+          "D. Retailers should do more to encourage this.",
+          "E. More financial support is needed for this.",
+          "F. Most people know little about this.",
+          "G. There should be stricter regulations about this.",
+          "H. This could be dangerous."
+        ]
+      },
+      "correct_answers": ["G"],
+      "explanation": "They feel that voluntary packaging reduction is not enough, and strict laws/regulations are needed."
+    },
+    {
+      "section_number": 3,
+      "question_number": 27,
+      "question_type": "matching",
+      "instruction_text": "What is the students’ opinion about each of the following food trends? Choose SIX answers from the box and write the correct letter, A–H.",
+      "question_data": {
+        "text": "Gluten-free and lactose-free food",
+        "options": [
+          "A. This is only relevant to young people.",
+          "B. This may have disappointing results.",
+          "C. This already seems to be widespread.",
+          "D. Retailers should do more to encourage this.",
+          "E. More financial support is needed for this.",
+          "F. Most people know little about this.",
+          "G. There should be stricter regulations about this.",
+          "H. This could be dangerous."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "They note that free-from diets and foods are already incredibly common and widespread in shops."
+    },
+    {
+      "section_number": 3,
+      "question_number": 28,
+      "question_type": "matching",
+      "instruction_text": "What is the students’ opinion about each of the following food trends? Choose SIX answers from the box and write the correct letter, A–H.",
+      "question_data": {
+        "text": "Use of branded products related to celebrity chefs",
+        "options": [
+          "A. This is only relevant to young people.",
+          "B. This may have disappointing results.",
+          "C. This already seems to be widespread.",
+          "D. Retailers should do more to encourage this.",
+          "E. More financial support is needed for this.",
+          "F. Most people know little about this.",
+          "G. There should be stricter regulations about this.",
+          "H. This could be dangerous."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "They believe that using celebrity endorsements often leads to subpar/disappointing product results."
+    },
+    {
+      "section_number": 3,
+      "question_number": 29,
+      "question_type": "matching",
+      "instruction_text": "What is the students’ opinion about each of the following food trends? Choose SIX answers from the box and write the correct letter, A–H.",
+      "question_data": {
+        "text": "Development of 'ghost kitchens' for takeaway food",
+        "options": [
+          "A. This is only relevant to young people.",
+          "B. This may have disappointing results.",
+          "C. This already seems to be widespread.",
+          "D. Retailers should do more to encourage this.",
+          "E. More financial support is needed for this.",
+          "F. Most people know little about this.",
+          "G. There should be stricter regulations about this.",
+          "H. This could be dangerous."
+        ]
+      },
+      "correct_answers": ["F"],
+      "explanation": "They state that the general public is mostly unaware of the rise of commercial ghost kitchens."
+    },
+    {
+      "section_number": 3,
+      "question_number": 30,
+      "question_type": "matching",
+      "instruction_text": "What is the students’ opinion about each of the following food trends? Choose SIX answers from the box and write the correct letter, A–H.",
+      "question_data": {
+        "text": "Use of mushrooms for common health concerns",
+        "options": [
+          "A. This is only relevant to young people.",
+          "B. This may have disappointing results.",
+          "C. This already seems to be widespread.",
+          "D. Retailers should do more to encourage this.",
+          "E. More financial support is needed for this.",
+          "F. Most people know little about this.",
+          "G. There should be stricter regulations about this.",
+          "H. This could be dangerous."
+        ]
+      },
+      "correct_answers": ["H"],
+      "explanation": "They suggest that consuming self-prescribed mushrooms without guidance could be dangerous."
+    },
+    {
+      "section_number": 4,
+      "question_number": 31,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "In the 1930s, a local teacher realised that stones beneath the bog surface were once [blank]."
+      },
+      "correct_answers": ["walls"],
+      "explanation": "Patrick Caulfield noticed that the layout of stones under the bog resembled ancient fields walls."
+    },
+    {
+      "section_number": 4,
+      "question_number": 32,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "His [blank] became an archaeologist and undertook an investigation of the site."
+      },
+      "correct_answers": ["son"],
+      "explanation": "His son, Seamus, became a professional archaeologist and led excavations."
+    },
+    {
+      "section_number": 4,
+      "question_number": 33,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "A traditional method used by local people to dig for [blank] was used to identify where stones were located."
+      },
+      "correct_answers": ["fuel"],
+      "explanation": "The team used traditional metal probes that locals used to search for bog wood for fuel."
+    },
+    {
+      "section_number": 4,
+      "question_number": 34,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Items are well preserved in the bog because of a lack of [blank]."
+      },
+      "correct_answers": ["oxygen"],
+      "explanation": "The acidic, waterlogged bog keeps out oxygen, preventing decay."
+    },
+    {
+      "section_number": 4,
+      "question_number": 35,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Houses were [blank] in shape and had a hole in the roof."
+      },
+      "correct_answers": ["rectangular"],
+      "explanation": "Excavations revealed houses built in a rectangular shape."
+    },
+    {
+      "section_number": 4,
+      "question_number": 36,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Pots were used for storage and to make [blank]."
+      },
+      "correct_answers": ["lamps"],
+      "explanation": "Pottery fragments show evidence of being used as small oil lamps."
+    },
+    {
+      "section_number": 4,
+      "question_number": 37,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Each field at Céide was large enough to support a big [blank]."
+      },
+      "correct_answers": ["family"],
+      "explanation": "Estimates suggest each enclosed field segment could support a single large family."
+    },
+    {
+      "section_number": 4,
+      "question_number": 38,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "The fields were probably used to restrict grazing – no evidence of structures to house animals during [blank]."
+      },
+      "correct_answers": ["winter"],
+      "explanation": "There are no barns or sheds indicating livestock was kept indoors during winter."
+    },
+    {
+      "section_number": 4,
+      "question_number": 39,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Reasons for decline: a decline in [blank] quality."
+      },
+      "correct_answers": ["soil"],
+      "explanation": "Over-farming and peat growth caused a decline in soil quality."
+    },
+    {
+      "section_number": 4,
+      "question_number": 40,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Reasons for decline: an increase in [blank]."
+      },
+      "correct_answers": ["rain", "rainfall"],
+      "explanation": "Climate shifts led to a significant increase in rain and peat development."
+    }
+  ]
+}

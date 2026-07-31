@@ -221,7 +221,8 @@ export const scoreReadingSession = (userAnswers = {}, questions = [], testType =
         correctAnswers: q.correct_answers,
         isCorrect,
         explanation: q.explanation || null,
-        citationExcerpt: q.citation_excerpt || null
+        citationExcerpt: q.citation_excerpt || null,
+        questionData: q.question_data || null
       };
     }
   }
@@ -264,7 +265,8 @@ export const scoreReadingSession = (userAnswers = {}, questions = [], testType =
       correctAnswers: q.correct_answers,
       isCorrect,
       explanation: q.explanation || null,
-      citationExcerpt: q.citation_excerpt || null
+      citationExcerpt: q.citation_excerpt || null,
+      questionData: q.question_data || null
     };
   }
 

@@ -1,0 +1,261 @@
+{
+  "title": "Practice Passage 10: Can Boredom Be Beneficial?",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "Can Boredom Be Beneficial?",
+    "sub_title": "Why escaping moments of mental inactivity with smartphones might be limiting our creative potential.",
+    "content_html": "<p><strong>Paragraph A</strong></p><p><strong>[A1]</strong> For many years, boredom has generally been viewed as an unpleasant emotional state that people should avoid whenever possible. <strong>[A2]</strong> Modern technology makes escaping boredom easier than ever before, with smartphones, streaming services, and social media providing constant entertainment. <strong>[A3]</strong> As a result, many people now spend very little time without some form of external stimulation. <strong>[A4]</strong> However, psychologists have recently begun to question whether the complete elimination of boredom is actually desirable.</p><p><strong>Paragraph B</strong></p><p><strong>[B1]</strong> According to several researchers, boredom is not simply the absence of activity. <strong>[B2]</strong> Instead, it is a psychological signal that encourages people to seek new goals, experiences, or solutions to existing problems. <strong>[B3]</strong> In this view, boredom functions in much the same way as hunger or thirst, reminding individuals that something requires attention. <strong>[B4]</strong> The writer believes this perspective provides a more balanced understanding of boredom than traditional assumptions.</p><p><strong>Paragraph C</strong></p><p><strong>[C1]</strong> Some experiments have suggested that people occasionally produce more creative ideas after completing repetitive or uninteresting tasks. <strong>[C2]</strong> One explanation is that the mind begins to wander when it is not fully occupied. <strong>[C3]</strong> During this period, unrelated ideas may become connected in unexpected ways. <strong>[C4]</strong> Nevertheless, the writer accepts that creativity depends on many factors and should not be attributed solely to boredom.</p><p><strong>Paragraph F</strong></p><p><strong>[F1]</strong> Technology companies are increasingly designing products to capture users' attention for as long as possible. <strong>[F2]</strong> Notifications, personalised recommendations, and endless scrolling all reduce opportunities for moments of mental inactivity. <strong>[F3]</strong> The writer is concerned that this constant stimulation may gradually reduce people's willingness to spend time thinking without distractions. <strong>[F4]</strong> However, this possibility remains the subject of ongoing research rather than established fact.</p><p><strong>Paragraph G</strong></p><p><strong>[G1]</strong> Ultimately, boredom should neither be feared nor celebrated without careful consideration. <strong>[G2]</strong> Like many psychological experiences, its effects depend on the individual and the surrounding circumstances. <strong>[G3]</strong> The writer concludes that learning to tolerate occasional boredom may become an increasingly valuable skill in a world filled with constant digital stimulation. <strong>[G4]</strong> Rather than searching for entertainment every moment, people may sometimes benefit from allowing their minds the opportunity to slow down.</p><p><strong>Paragraph D</strong></p><p><strong>[D1]</strong> Despite these possible benefits, boredom should not be romanticised. <strong>[D2]</strong> Long periods of boredom may reduce motivation and increase frustration, particularly when people feel unable to change their situation. <strong>[D3]</strong> The writer argues that the difference lies in duration and context. <strong>[D4]</strong> Brief periods of boredom may encourage reflection, whereas prolonged boredom often produces less positive outcomes.</p><p><strong>Paragraph E</strong></p><p><strong>[E1]</strong> Schools provide an interesting example of this debate. <strong>[E2]</strong> Some educators believe every lesson should keep students continuously engaged through activities and technology. <strong>[E3]</strong> Others suggest that occasional quiet moments allow students to process information more deeply. <strong>[E4]</strong> The writer considers the second approach worthy of greater attention, although more evidence is still required.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the views of the writer? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The writer believes boredom has traditionally been viewed negatively.",
+        "keywords": ["traditionally", "viewed negatively"],
+        "paragraph": "A",
+        "sentence_start": "A1",
+        "sentence_end": "A1",
+        "trap_type": "None",
+        "skill": "Identifying original consensus",
+        "difficulty": "Medium",
+        "common_mistake": "Failing to connect 'generally viewed as an unpleasant state' with a negative historical view."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "Paragraph A states that for many years, boredom has generally been viewed as an unpleasant emotional state that people should avoid, showing agreement with the statement.",
+      "citation_excerpt": "For many years, boredom has generally been viewed as an unpleasant emotional state that people should avoid whenever possible."
+    },
+    {
+      "question_number": 2,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the views of the writer? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The writer thinks modern technology has completely removed boredom from people's lives.",
+        "keywords": ["completely removed"],
+        "paragraph": "A",
+        "sentence_start": "A2",
+        "sentence_end": "A4",
+        "trap_type": "Absolute claim / Extreme wording",
+        "skill": "Differentiating feasibility from occurrence",
+        "difficulty": "Medium",
+        "common_mistake": "Assuming that technology making escape easier means boredom is completely absent."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "The text states technology makes escaping boredom 'easier than ever before', but never claims it has completely eliminated boredom, contradicting the absolute assertion.",
+      "citation_excerpt": "Modern technology makes escaping boredom easier than ever before, with smartphones, streaming services, and social media providing constant entertainment."
+    },
+    {
+      "question_number": 3,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the views of the writer? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The writer supports the idea that boredom can serve a useful psychological purpose.",
+        "keywords": ["useful psychological purpose"],
+        "paragraph": "B",
+        "sentence_start": "B2",
+        "sentence_end": "B4",
+        "trap_type": "None",
+        "skill": "Opinion validation",
+        "difficulty": "Medium",
+        "common_mistake": "Missing the writer's endorsement of the researchers' functional perspective."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "Paragraph B states the writer believes the perspective of boredom as a helpful reminder/signal provides a more balanced understanding.",
+      "citation_excerpt": "Instead, it is a psychological signal that encourages people to seek new goals, experiences, or solutions to existing problems... The writer believes this perspective provides a more balanced understanding of boredom"
+    },
+    {
+      "question_number": 4,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the views of the writer? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The writer believes boredom is the only cause of creativity.",
+        "keywords": ["only cause", "creativity"],
+        "paragraph": "C",
+        "sentence_start": "C4",
+        "sentence_end": "C4",
+        "trap_type": "Extreme wording / Exclusive wording",
+        "skill": "Identifying sole vs shared factors",
+        "difficulty": "Medium",
+        "common_mistake": "Overgeneralizing a partial link to mean it is the single exclusive cause."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "Paragraph C notes the writer accepts that creativity depends on many factors and should not be attributed solely to boredom, directly contradicting the statement.",
+      "citation_excerpt": "Nevertheless, the writer accepts that creativity depends on many factors and should not be attributed solely to boredom."
+    },
+    {
+      "question_number": 5,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the views of the writer? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The writer thinks all forms of boredom are harmful.",
+        "keywords": ["all forms", "harmful"],
+        "paragraph": "D",
+        "sentence_start": "D3",
+        "sentence_end": "D4",
+        "trap_type": "Absolute claim / Extreme wording",
+        "skill": "Qualitative distinction tracking",
+        "difficulty": "Medium",
+        "common_mistake": "Failing to trace the context distinction (brief vs prolonged) drawn by the writer."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "The writer distinguishes between brief and prolonged boredom, arguing brief periods can be helpful while prolonged ones are less positive, so not all boredom is harmful.",
+      "citation_excerpt": "The writer argues that the difference lies in duration and context. Brief periods of boredom may encourage reflection, whereas prolonged boredom often produces less positive outcomes."
+    },
+    {
+      "question_number": 6,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the views of the writer? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The writer believes short periods of boredom can sometimes be beneficial.",
+        "keywords": ["short periods", "beneficial"],
+        "paragraph": "D",
+        "sentence_start": "D4",
+        "sentence_end": "D4",
+        "trap_type": "None",
+        "skill": "Opinion validation",
+        "difficulty": "Medium",
+        "common_mistake": "Failing to connect 'brief periods encouraging reflection' with sometimes being beneficial."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "Paragraph D states the writer believes brief periods of boredom may encourage reflection, which represents a benefit.",
+      "citation_excerpt": "Brief periods of boredom may encourage reflection, whereas prolonged boredom often produces less positive outcomes."
+    },
+    {
+      "question_number": 7,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the views of the writer? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The writer supports the view that every school lesson should always be highly entertaining.",
+        "keywords": ["every lesson", "entertaining"],
+        "paragraph": "E",
+        "sentence_start": "E2",
+        "sentence_end": "E4",
+        "trap_type": "Absolute claim",
+        "skill": "Educational views analysis",
+        "difficulty": "Medium",
+        "common_mistake": "Conflating a description of one group's beliefs with the writer's personal recommendation."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "The writer explicitly states they consider the quiet-moments approach (as opposed to continuous technology/entertainment engagement) worthy of more attention.",
+      "citation_excerpt": "The writer considers the second approach worthy of greater attention, although more evidence is still required."
+    },
+    {
+      "question_number": 8,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the views of the writer? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The writer believes quiet thinking time deserves more attention in education.",
+        "keywords": ["quiet thinking", "education"],
+        "paragraph": "E",
+        "sentence_start": "E4",
+        "sentence_end": "E4",
+        "trap_type": "None",
+        "skill": "Recommendation tracking",
+        "difficulty": "Medium",
+        "common_mistake": "Missing the writer's endorsement of quiet moments to process information."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "Paragraph E states the writer considers the approach of using occasional quiet moments to process information deeply as worthy of greater attention.",
+      "citation_excerpt": "Others suggest that occasional quiet moments allow students to process information more deeply. The writer considers the second approach worthy of greater attention"
+    },
+    {
+      "question_number": 9,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the views of the writer? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The writer believes technology companies intentionally try to keep users engaged.",
+        "keywords": ["capture users' attention"],
+        "paragraph": "F",
+        "sentence_start": "F1",
+        "sentence_end": "F2",
+        "trap_type": "None",
+        "skill": "Fact vs Opinion",
+        "difficulty": "Medium",
+        "common_mistake": "Treating a claim of industry intent as external to the writer's shared views."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "Paragraph F notes that companies are designing products to capture users' attention for as long as possible, using endless scrolling and notifications.",
+      "citation_excerpt": "Technology companies are increasingly designing products to capture users' attention for as long as possible. Notifications, personalised recommendations, and endless scrolling all reduce opportunities..."
+    },
+    {
+      "question_number": 10,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the views of the writer? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The writer states that constant digital stimulation has already been proven to damage thinking ability.",
+        "keywords": ["already been proven", "damage"],
+        "paragraph": "F",
+        "sentence_start": "F3",
+        "sentence_end": "F4",
+        "trap_type": "Research vs Belief",
+        "skill": "Distinguishing fact vs ongoing research",
+        "difficulty": "Medium",
+        "common_mistake": "Confusing a writer's expressed concern with an established scientific proof."
+      },
+      "correct_answers": ["NO"],
+      "explanation": "Paragraph F notes that while the writer is concerned about this constant stimulation, this possibility remains the subject of ongoing research rather than established fact.",
+      "citation_excerpt": "The writer is concerned that this constant stimulation may gradually reduce... However, this possibility remains the subject of ongoing research rather than established fact."
+    },
+    {
+      "question_number": 11,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the views of the writer? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The writer believes people should never use smartphones during their free time.",
+        "keywords": ["never use"],
+        "paragraph": "Entire passage",
+        "sentence_start": "None",
+        "sentence_end": "None",
+        "trap_type": "Added information",
+        "skill": "Identifying opinion gaps",
+        "difficulty": "Medium",
+        "common_mistake": "Adding an assumed moral recommendation that is not expressed in the text."
+      },
+      "correct_answers": ["NOT GIVEN"],
+      "explanation": "The text discusses concerns about constant digital stimulation, but the writer never expresses the opinion that people should 'never' use smartphones.",
+      "citation_excerpt": ""
+    },
+    {
+      "question_number": 12,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the views of the writer? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The writer thinks the effects of boredom depend on individual circumstances.",
+        "keywords": ["depend on circumstances"],
+        "paragraph": "G",
+        "sentence_start": "G2",
+        "sentence_end": "G2",
+        "trap_type": "None",
+        "skill": "Detail recognition",
+        "difficulty": "Medium",
+        "common_mistake": "Failing to identify the dependency of effects on the individual and circumstances."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "Paragraph G states the writer's view that the effects of boredom depend on the individual and surrounding circumstances.",
+      "citation_excerpt": "Like many psychological experiences, its effects depend on the individual and the surrounding circumstances."
+    },
+    {
+      "question_number": 13,
+      "question_type": "ynng",
+      "instruction_text": "Do the following statements agree with the views of the writer? Write YES, NO, or NOT GIVEN.",
+      "question_data": {
+        "text": "The writer believes learning to tolerate occasional boredom is an increasingly valuable ability.",
+        "keywords": ["tolerate", "valuable skill"],
+        "paragraph": "G",
+        "sentence_start": "G3",
+        "sentence_end": "G3",
+        "trap_type": "None",
+        "skill": "Conclusion identification",
+        "difficulty": "Medium",
+        "common_mistake": "Overlooking the final recommendation/conclusion in the text."
+      },
+      "correct_answers": ["YES"],
+      "explanation": "Paragraph G states that the writer concludes learning to tolerate occasional boredom may become an increasingly valuable skill.",
+      "citation_excerpt": "The writer concludes that learning to tolerate occasional boredom may become an increasingly valuable skill in a world filled with constant digital stimulation."
+    }
+  ]
+}

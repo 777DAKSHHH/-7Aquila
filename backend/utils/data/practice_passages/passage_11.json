@@ -1,0 +1,332 @@
+{
+  "title": "Practice Passage 11: The Evolutionary Roots of Animal Play",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Evolutionary Roots of Animal Play",
+    "sub_title": "How rough-and-tumble games, chase behavior, and social play prepare young animals for survival in a hostile world.",
+    "content_html": "<p><strong>Paragraph A</strong></p><p><strong>[A1]</strong> Animal play has long puzzled evolutionary biologists. <strong>[A2]</strong> Unlike hunting, mating, or finding shelter, playing appears to consume energy and carry risks without offering any immediate benefits. <strong>[A3]</strong> Young animals can easily injure themselves or attract predators while chased by their peers. <strong>[A4]</strong> However, the widespread occurrence of play across many different species suggests that it serves an important evolutionary function.</p><p><strong>Paragraph B</strong></p><p><strong>[B1]</strong> Dr. Karen Miller has spent decades observing play behaviour in wild mammals, particularly young carnivores. <strong>[B2]</strong> She argues that play acts as a form of physical training, helping animals develop the strength and coordination needed for survival. <strong>[B3]</strong> By running, jumping, and wrestling, young animals build muscle and improve their cardiovascular fitness. <strong>[B4]</strong> Miller's research demonstrates that animals engaged in frequent play are more successful hunters as adults.</p><p><strong>Paragraph C</strong></p><p><strong>[C1]</strong> Taking a different approach, Professor John Davis focuses on the social aspects of play. <strong>[C2]</strong> He suggests that play helps animals learn social rules and build relationships within their groups. <strong>[C3]</strong> For species that live in complex social societies, understanding these relationships is crucial. <strong>[C4]</strong> Davis believes that play provides a safe environment for animals to practice communication and establish their social status without causing real conflict.</p><p><strong>Paragraph D</strong></p><p><strong>[D1]</strong> Another leading scientist, Dr. Sarah Jenkins, believes play is primarily about mental flexibility and problem-solving. <strong>[D2]</strong> During play, animals often experience unexpected situations, such as losing their balance or being surprised by a playmate. <strong>[D3]</strong> Jenkins argues that these experiences train the brain to respond to unpredictable challenges. <strong>[D4]</strong> Her experiments show that animals allowed to play show greater cognitive flexibility when faced with new tasks.</p><p><strong>Paragraph E</strong></p><p><strong>[E1]</strong> Although these theories differ, they are not necessarily mutually exclusive. <strong>[E2]</strong> Play may serve multiple functions that vary according to species and age. <strong>[E3]</strong> For instance, physical training may be most important for young predators, while social bonding may be vital for primates. <strong>[E4]</strong> Biologists are increasingly viewing play as a complex adaptation that supports physical, social, and mental development.</p><p><strong>Paragraph F</strong></p><p><strong>[F1]</strong> Despite recent progress, studying animal play remains challenging. <strong>[F2]</strong> It is often difficult to distinguish play from serious behaviours like fighting or courtship. <strong>[F3]</strong> Furthermore, researchers must avoid anthropomorphism—the tendency to attribute human emotions, such as joy or amusement, to animals. <strong>[F4]</strong> What looks like a game to a human observer may actually be a serious developmental activity for the animal.</p><p><strong>Paragraph G</strong></p><p><strong>[G1]</strong> Future research is expected to focus on the neurological foundations of play. <strong>[G2]</strong> Scientists hope to identify the brain structures and chemicals that regulate play behaviour. <strong>[G3]</strong> This could help explain why some animals play more than others and how play influences brain development over time. <strong>[G4]</strong> Understanding animal play may eventually provide new insights into human development and the importance of play in our own lives.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "matching_features",
+      "instruction_text": "Look at the following statements and the list of researchers below. Match each statement with the correct researcher, A, B, or C.",
+      "question_data": {
+        "text": "Play assists young animals in developing coordination and adult hunting skills.",
+        "options": [
+          "A. Dr. Karen Miller",
+          "B. Professor John Davis",
+          "C. Dr. Sarah Jenkins"
+        ],
+        "keywords": ["hunting skills", "physical training"],
+        "paragraph": "B",
+        "sentence_start": "B2",
+        "sentence_end": "B4",
+        "trap_type": "None",
+        "skill": "Feature matching by direct citation",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting the researcher who focuses on social coordination rather than physical adult hunting skills."
+      },
+      "correct_answers": ["A"],
+      "explanation": "Paragraph B states Dr. Karen Miller argues play is a form of physical training that makes animals more successful hunters as adults.",
+      "citation_excerpt": "Dr. Karen Miller has spent decades observing... play acts as a form of physical training, helping animals develop the strength and coordination... are more successful hunters as adults."
+    },
+    {
+      "question_number": 2,
+      "question_type": "matching_features",
+      "instruction_text": "Look at the following statements and the list of researchers below. Match each statement with the correct researcher, A, B, or C.",
+      "question_data": {
+        "text": "Play provides a secure method for practicing group hierarchy without serious fights.",
+        "options": [
+          "A. Dr. Karen Miller",
+          "B. Professor John Davis",
+          "C. Dr. Sarah Jenkins"
+        ],
+        "keywords": ["social status", "safe environment", "real conflict"],
+        "paragraph": "C",
+        "sentence_start": "C2",
+        "sentence_end": "C4",
+        "trap_type": "None",
+        "skill": "Synonym parsing",
+        "difficulty": "Intermediate",
+        "common_mistake": "Confusing cognitive flexibility under challenge with group hierarchy structures."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph C states Professor John Davis believes play provides a safe environment for animals to practice communication and establish social status without causing real conflict.",
+      "citation_excerpt": "Davis believes that play provides a safe environment for animals to practice communication and establish their social status without causing real conflict."
+    },
+    {
+      "question_number": 3,
+      "question_type": "matching_features",
+      "instruction_text": "Look at the following statements and the list of researchers below. Match each statement with the correct researcher, A, B, or C.",
+      "question_data": {
+        "text": "Play helps animals build up physical strength and cardiovascular fitness.",
+        "options": [
+          "A. Dr. Karen Miller",
+          "B. Professor John Davis",
+          "C. Dr. Sarah Jenkins"
+        ],
+        "keywords": ["physical strength", "cardiovascular"],
+        "paragraph": "B",
+        "sentence_start": "B2",
+        "sentence_end": "B3",
+        "trap_type": "None",
+        "skill": "Concept matching",
+        "difficulty": "Intermediate",
+        "common_mistake": "Failing to connect strength building and muscles to physical training."
+      },
+      "correct_answers": ["A"],
+      "explanation": "Paragraph B states Dr. Karen Miller argues that by running, jumping, and wrestling, young animals build muscle and improve fitness.",
+      "citation_excerpt": "By running, jumping, and wrestling, young animals build muscle and improve their cardiovascular fitness."
+    },
+    {
+      "question_number": 4,
+      "question_type": "matching_features",
+      "instruction_text": "Look at the following statements and the list of researchers below. Match each statement with the correct researcher, A, B, or C.",
+      "question_data": {
+        "text": "Unexpected play scenarios train the brain to cope with unpredictable obstacles.",
+        "options": [
+          "A. Dr. Karen Miller",
+          "B. Professor John Davis",
+          "C. Dr. Sarah Jenkins"
+        ],
+        "keywords": ["unexpected situations", "unpredictable challenges"],
+        "paragraph": "D",
+        "sentence_start": "D2",
+        "sentence_end": "D3",
+        "trap_type": "None",
+        "skill": "Direct quote synthesis",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting social structure practice instead of mental challenge tracking."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph D states Dr. Sarah Jenkins argues that unexpected situations during play train the brain to respond to unpredictable challenges.",
+      "citation_excerpt": "Jenkins argues that these experiences train the brain to respond to unpredictable challenges."
+    },
+    {
+      "question_number": 5,
+      "question_type": "matching_features",
+      "instruction_text": "Look at the following statements and the list of researchers below. Match each statement with the correct researcher, A, B, or C.",
+      "question_data": {
+        "text": "Animals given opportunity to play show superior performance on novel cognitive tasks.",
+        "options": [
+          "A. Dr. Karen Miller",
+          "B. Professor John Davis",
+          "C. Dr. Sarah Jenkins"
+        ],
+        "keywords": ["cognitive flexibility", "new tasks"],
+        "paragraph": "D",
+        "sentence_start": "D4",
+        "sentence_end": "D4",
+        "trap_type": "None",
+        "skill": "Synonym mapping",
+        "difficulty": "Intermediate",
+        "common_mistake": "Confusing social learning with cognitive task performance."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph D states Dr. Sarah Jenkins' experiments show that animals allowed to play show greater cognitive flexibility when faced with new tasks.",
+      "citation_excerpt": "Her experiments show that animals allowed to play show greater cognitive flexibility when faced with new tasks."
+    },
+    {
+      "question_number": 6,
+      "question_type": "matching_features",
+      "instruction_text": "Look at the following statements and the list of researchers below. Match each statement with the correct researcher, A, B, or C.",
+      "question_data": {
+        "text": "Play helps build critical bonds and relational skills in complex societies.",
+        "options": [
+          "A. Dr. Karen Miller",
+          "B. Professor John Davis",
+          "C. Dr. Sarah Jenkins"
+        ],
+        "keywords": ["social rules", "relationships"],
+        "paragraph": "C",
+        "sentence_start": "C1",
+        "sentence_end": "C3",
+        "trap_type": "None",
+        "skill": "Key theme synthesis",
+        "difficulty": "Intermediate",
+        "common_mistake": "Attributing physical agility to the group bonding researcher."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph C states Professor John Davis suggests play helps animals learn social rules and build relationships.",
+      "citation_excerpt": "Taking a different approach, Professor John Davis focuses on the social aspects of play. He suggests that play helps animals learn social rules and build relationships within their groups."
+    },
+    {
+      "question_number": 7,
+      "question_type": "matching_features",
+      "instruction_text": "Look at the following statements and the list of researchers below. Match each statement with the correct researcher, A, B, or C.",
+      "question_data": {
+        "text": "Play behaves as a physical preparation platform for carnivores during youth.",
+        "options": [
+          "A. Dr. Karen Miller",
+          "B. Professor John Davis",
+          "C. Dr. Sarah Jenkins"
+        ],
+        "keywords": ["young carnivores", "mammals"],
+        "paragraph": "B",
+        "sentence_start": "B1",
+        "sentence_end": "B2",
+        "trap_type": "None",
+        "skill": "Detail recognition",
+        "difficulty": "Intermediate",
+        "common_mistake": "Confusing the general group bonding with carnivore-specific research."
+      },
+      "correct_answers": ["A"],
+      "explanation": "Paragraph B states Dr. Karen Miller has spent decades observing play behaviour in wild mammals, particularly young carnivores, to show physical training benefits.",
+      "citation_excerpt": "Dr. Karen Miller has spent decades observing play behaviour in wild mammals, particularly young carnivores. She argues that play acts as a form of physical training..."
+    },
+    {
+      "question_number": 8,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Why does animal play puzzle evolutionary biologists?",
+        "options": [
+          "A. It consumes resources without offering immediate benefits.",
+          "B. Only very intelligent species engage in it.",
+          "C. It prevents animals from hunting effectively.",
+          "D. It is not observed in any bird species."
+        ],
+        "keywords": ["puzzle", "immediate benefits"],
+        "paragraph": "A",
+        "sentence_start": "A1",
+        "sentence_end": "A2",
+        "trap_type": "None",
+        "skill": "Core problem identification",
+        "difficulty": "Intermediate",
+        "common_mistake": "Assuming play prevents hunting, which is actually aided by it in adulthood."
+      },
+      "correct_answers": ["A"],
+      "explanation": "Paragraph A states play puzzles biologists because it consumes energy and carries risks without offering immediate benefits.",
+      "citation_excerpt": "Unlike hunting, mating, or finding shelter, playing appears to consume energy and carry risks without offering any immediate benefits."
+    },
+    {
+      "question_number": 9,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "What is Professor Davis's view regarding the function of play?",
+        "options": [
+          "A. It helps predators catch prey.",
+          "B. It allows animals to practice group communication safely.",
+          "C. It is designed to waste extra calories.",
+          "D. It replaces physical exercise entirely."
+        ],
+        "keywords": ["Davis", "communication"],
+        "paragraph": "C",
+        "sentence_start": "C4",
+        "sentence_end": "C4",
+        "trap_type": "None",
+        "skill": "Researcher view extraction",
+        "difficulty": "Intermediate",
+        "common_mistake": "Confusing Davis's social view with Miller's physical view."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph C states Davis believes play provides a safe environment for animals to practice communication and establish status.",
+      "citation_excerpt": "Davis believes that play provides a safe environment for animals to practice communication and establish their social status without causing real conflict."
+    },
+    {
+      "question_number": 10,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Which statement best describes the relationship between the three main theories discussed?",
+        "options": [
+          "A. They contradict each other entirely.",
+          "B. They may all be correct because play serves multiple roles.",
+          "C. Only Dr. Miller's theory has scientific support.",
+          "D. They are outdated and have been replaced by new models."
+        ],
+        "keywords": ["theories differ", "mutually exclusive"],
+        "paragraph": "E",
+        "sentence_start": "E1",
+        "sentence_end": "E2",
+        "trap_type": "Absolute statement",
+        "skill": "Synthesis of views",
+        "difficulty": "Intermediate",
+        "common_mistake": "Assuming they are mutually exclusive and contradict each other."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph E states that although these theories differ, they are not necessarily mutually exclusive, and play may serve multiple functions.",
+      "citation_excerpt": "Although these theories differ, they are not necessarily mutually exclusive. Play may serve multiple functions that vary according to species and age."
+    },
+    {
+      "question_number": 11,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Why must researchers study play without anthropomorphism?",
+        "options": [
+          "A. Human emotions are not related to animal actions.",
+          "B. Play is never enjoyable for animals.",
+          "C. To prevent attributing human feelings to serious animal behaviors.",
+          "D. Computers cannot calculate emotional statistics."
+        ],
+        "keywords": ["anthropomorphism", "human emotions"],
+        "paragraph": "F",
+        "sentence_start": "F3",
+        "sentence_end": "F4",
+        "trap_type": "Keyword match / Distractor",
+        "skill": "Term analysis",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting the answer stating play is never enjoyable, which is not claimed by the text."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph F defines anthropomorphism as the tendency to attribute human emotions to animals and notes serious activities can be misread.",
+      "citation_excerpt": "Furthermore, researchers must avoid anthropomorphism—the tendency to attribute human emotions, such as joy or amusement, to animals. What looks like a game to a human observer may actually be a serious developmental activity..."
+    },
+    {
+      "question_number": 12,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "What is the primary barrier to studying animal play in the wild?",
+        "options": [
+          "A. Animals refuse to play in front of humans.",
+          "B. The difficulty in distinguishing play from serious behavior.",
+          "C. It only occurs during heavy rainstorms.",
+          "D. There are no cameras capable of recording it."
+        ],
+        "keywords": ["distinguish", "fighting"],
+        "paragraph": "F",
+        "sentence_start": "F1",
+        "sentence_end": "F2",
+        "trap_type": "None",
+        "skill": "Constraint tracking",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting the statement that wild animals never play in front of observers."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph F states it is often difficult to distinguish play from serious behaviours like fighting or courtship.",
+      "citation_excerpt": "It is often difficult to distinguish play from serious behaviours like fighting or courtship."
+    },
+    {
+      "question_number": 13,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "What is the predicted focus of future play research?",
+        "options": [
+          "A. Testing new video game consoles for animals",
+          "B. Studying neurological and chemical foundations of play",
+          "C. Teaching monkeys how to speak human languages",
+          "D. Banning play in urban zoos"
+        ],
+        "keywords": ["future research", "neurological foundations"],
+        "paragraph": "G",
+        "sentence_start": "G1",
+        "sentence_end": "G2",
+        "trap_type": "None",
+        "skill": "Future prediction identification",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting a bizarre science-fiction option."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph G states future research is expected to focus on the neurological foundations of play.",
+      "citation_excerpt": "Future research is expected to focus on the neurological foundations of play. Scientists hope to identify the brain structures and chemicals..."
+    }
+  ]
+}

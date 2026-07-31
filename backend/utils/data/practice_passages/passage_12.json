@@ -1,0 +1,253 @@
+{
+  "title": "Practice Passage 12: The Architecture of Zero-Emission Buildings",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Architecture of Zero-Emission Buildings",
+    "sub_title": "Understanding active and passive solar design, thermal mass insulation, and ventilation in modern carbon-neutral structures.",
+    "content_html": "<p><strong>Paragraph A</strong></p><p><strong>[A1]</strong> Climate change has forced architects to reconsider how buildings are designed and constructed. <strong>[A2]</strong> The built environment is responsible for a large share of global energy use and carbon emissions. <strong>[A3]</strong> To address this issue, designers are focusing on zero-emission buildings. <strong>[A4]</strong> These structures are engineered to eliminate all net carbon emissions during operations, balancing their energy needs with clean renewable sources.</p><p><strong>Paragraph B</strong></p><p><strong>[B1]</strong> A primary strategy in zero-emission architecture is the distinction between active and passive solar designs. <strong>[B2]</strong> Active solar systems utilize mechanical pumps or fans to collect and distribute heat energy. <strong>[B3]</strong> While effective, these systems consume some electricity to run. <strong>[B4]</strong> In contrast, passive design strategies harness natural sunlight and wind without mechanical parts.</p><p><strong>Paragraph C</strong></p><p><strong>[C1]</strong> Passive solar heating relies on building orientation and structural materials. <strong>[C2]</strong> Architects position windows to capture maximum sunlight during winter months. <strong>[C3]</strong> Furthermore, materials with high thermal mass, such as heavy concrete or brick, store heat energy during the day. <strong>[C4]</strong> This stored energy is gradually released at night, helping regulate indoor temperatures without heaters.</p><p><strong>Paragraph D</strong></p><p><strong>[D1]</strong> Cooling is also managed through passive techniques. <strong>[D2]</strong> Natural ventilation uses window placement and thermal chimneys to pull fresh air into the building while releasing hot air. <strong>[D3]</strong> Shading devices, including external blinds and overhanging roofs, prevent excess sunlight from entering in summer. <strong>[D4]</strong> These techniques significantly reduce the need for mechanical air conditioning systems.</p><p><strong>Paragraph E</strong></p><p><strong>[E1]</strong> In highly insulated buildings, maintaining air quality is vital. <strong>[E2]</strong> Because walls are sealed tightly to prevent drafts, stale air can easily become trapped inside. <strong>[E3]</strong> Modern ventilation systems solve this problem by continuously exchanging indoor and outdoor air. <strong>[E4]</strong> These systems recover heat from outgoing air to warm incoming fresh air, maintaining indoor temperature efficiency.</p><p><strong>Paragraph F</strong></p><p><strong>[F1]</strong> While sustainable building practices are growing, financial barriers remain. <strong>[F2]</strong> High initial construction costs can discourage developers from building zero-emission housing. <strong>[F3]</strong> However, local planning incentives, such as tax rebates and speedier permits, have proven successful in encouraging green structures. <strong>[F4]</strong> Over time, reduced utility bills also offset initial development expenses.</p><p><strong>Paragraph G</strong></p><p><strong>[G1]</strong> The future of sustainable architecture lies in carbon-neutral materials. <strong>[G2]</strong> Production of materials like steel and cement currently produces substantial carbon pollution. <strong>[G3]</strong> Researchers are testing alternatives, including compressed timber and hemp-based concrete. <strong>[G4]</strong> Embracing these green materials is the next frontier in building truly zero-emission cities.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "matching_features",
+      "instruction_text": "Match each sentence beginning (1-6) with the correct ending, A–F.",
+      "question_data": {
+        "text": "Zero-emission buildings are designed to",
+        "options": [
+          "A. eliminate all net carbon emissions during operations.",
+          "B. utilize pumps or fans to distribute heat energy.",
+          "C. harness natural sunlight and wind without mechanical parts.",
+          "D. store heat energy and regulate indoor temperatures.",
+          "E. recover heat from outgoing air to maintain efficiency.",
+          "F. encourage developers to build green housing structures."
+        ],
+        "keywords": ["zero-emission", "operations"],
+        "paragraph": "A",
+        "sentence_start": "A4",
+        "sentence_end": "A4",
+        "trap_type": "None",
+        "skill": "Sentence completion matching",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting solar system distribution characteristics."
+      },
+      "correct_answers": ["A"],
+      "explanation": "Paragraph A states zero-emission buildings are engineered to eliminate all net carbon emissions during operations.",
+      "citation_excerpt": "These structures are engineered to eliminate all net carbon emissions during operations, balancing their energy needs..."
+    },
+    {
+      "question_number": 2,
+      "question_type": "matching_features",
+      "instruction_text": "Match each sentence beginning (1-6) with the correct ending, A–F.",
+      "question_data": {
+        "text": "Active solar systems",
+        "options": [
+          "A. eliminate all net carbon emissions during operations.",
+          "B. utilize pumps or fans to distribute heat energy.",
+          "C. harness natural sunlight and wind without mechanical parts.",
+          "D. store heat energy and regulate indoor temperatures.",
+          "E. recover heat from outgoing air to maintain efficiency.",
+          "F. encourage developers to build green housing structures."
+        ],
+        "keywords": ["active", "pumps", "fans"],
+        "paragraph": "B",
+        "sentence_start": "B2",
+        "sentence_end": "B2",
+        "trap_type": "None",
+        "skill": "Detail association",
+        "difficulty": "Intermediate",
+        "common_mistake": "Confusing active systems with passive strategies."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph B states active solar systems utilize mechanical pumps or fans to collect and distribute heat energy.",
+      "citation_excerpt": "Active solar systems utilize mechanical pumps or fans to collect and distribute heat energy."
+    },
+    {
+      "question_number": 3,
+      "question_type": "matching_features",
+      "instruction_text": "Match each sentence beginning (1-6) with the correct ending, A–F.",
+      "question_data": {
+        "text": "Passive design strategies",
+        "options": [
+          "A. eliminate all net carbon emissions during operations.",
+          "B. utilize pumps or fans to distribute heat energy.",
+          "C. harness natural sunlight and wind without mechanical parts.",
+          "D. store heat energy and regulate indoor temperatures.",
+          "E. recover heat from outgoing air to maintain efficiency.",
+          "F. encourage developers to build green housing structures."
+        ],
+        "keywords": ["passive", "sunlight", "wind"],
+        "paragraph": "B",
+        "sentence_start": "B4",
+        "sentence_end": "B4",
+        "trap_type": "None",
+        "skill": "Term defining match",
+        "difficulty": "Intermediate",
+        "common_mistake": "Conflating passive techniques with thermal mass storage materials."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph B explains that passive design strategies harness natural sunlight and wind without mechanical parts.",
+      "citation_excerpt": "In contrast, passive design strategies harness natural sunlight and wind without mechanical parts."
+    },
+    {
+      "question_number": 4,
+      "question_type": "matching_features",
+      "instruction_text": "Match each sentence beginning (1-6) with the correct ending, A–F.",
+      "question_data": {
+        "text": "Heavy materials like concrete",
+        "options": [
+          "A. eliminate all net carbon emissions during operations.",
+          "B. utilize pumps or fans to distribute heat energy.",
+          "C. harness natural sunlight and wind without mechanical parts.",
+          "D. store heat energy and regulate indoor temperatures.",
+          "E. recover heat from outgoing air to maintain efficiency.",
+          "F. encourage developers to build green housing structures."
+        ],
+        "keywords": ["concrete", "thermal mass", "regulate"],
+        "paragraph": "C",
+        "sentence_start": "C3",
+        "sentence_end": "C4",
+        "trap_type": "None",
+        "skill": "Cause and effect synthesis",
+        "difficulty": "Intermediate",
+        "common_mistake": "Assuming concrete blocks heat entirely rather than absorbing and storing it."
+      },
+      "correct_answers": ["D"],
+      "explanation": "Paragraph C states that high thermal mass materials like heavy concrete store heat energy and release it to regulate indoor temperatures.",
+      "citation_excerpt": "Furthermore, materials with high thermal mass, such as heavy concrete or brick, store heat energy during the day. This stored energy is gradually released at night, helping regulate indoor temperatures..."
+    },
+    {
+      "question_number": 5,
+      "question_type": "matching_features",
+      "instruction_text": "Match each sentence beginning (1-6) with the correct ending, A–F.",
+      "question_data": {
+        "text": "Modern ventilation systems",
+        "options": [
+          "A. eliminate all net carbon emissions during operations.",
+          "B. utilize pumps or fans to distribute heat energy.",
+          "C. harness natural sunlight and wind without mechanical parts.",
+          "D. store heat energy and regulate indoor temperatures.",
+          "E. recover heat from outgoing air to maintain efficiency.",
+          "F. encourage developers to build green housing structures."
+        ],
+        "keywords": ["ventilation", "recover heat"],
+        "paragraph": "E",
+        "sentence_start": "E3",
+        "sentence_end": "E4",
+        "trap_type": "None",
+        "skill": "Function definition match",
+        "difficulty": "Intermediate",
+        "common_mistake": "Confusing air exchange with passive natural chimneys."
+      },
+      "correct_answers": ["E"],
+      "explanation": "Paragraph E explains that modern ventilation systems exchange indoor/outdoor air and recover heat from outgoing air to maintain efficiency.",
+      "citation_excerpt": "These systems recover heat from outgoing air to warm incoming fresh air, maintaining indoor temperature efficiency."
+    },
+    {
+      "question_number": 6,
+      "question_type": "matching_features",
+      "instruction_text": "Match each sentence beginning (1-6) with the correct ending, A–F.",
+      "question_data": {
+        "text": "Local planning incentives",
+        "options": [
+          "A. eliminate all net carbon emissions during operations.",
+          "B. utilize pumps or fans to distribute heat energy.",
+          "C. harness natural sunlight and wind without mechanical parts.",
+          "D. store heat energy and regulate indoor temperatures.",
+          "E. recover heat from outgoing air to maintain efficiency.",
+          "F. encourage developers to build green housing structures."
+        ],
+        "keywords": ["incentives", "permits", "rebates"],
+        "paragraph": "F",
+        "sentence_start": "F3",
+        "sentence_end": "F3",
+        "trap_type": "None",
+        "skill": "Policy impact recognition",
+        "difficulty": "Intermediate",
+        "common_mistake": "Conflating local tax planning with broad carbon-neutral timber material research."
+      },
+      "correct_answers": ["F"],
+      "explanation": "Paragraph F notes that local planning incentives (such as tax rebates and speedier permits) encourage developers to build green structures.",
+      "citation_excerpt": "However, local planning incentives, such as tax rebates and speedier permits, have proven successful in encouraging green structures."
+    },
+    {
+      "question_number": 7,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Architects are rethinking construction practices due to climate change. Zero-emission buildings are designed to balance operations using [blank] energy."
+      },
+      "correct_answers": ["renewable", "clean renewable"],
+      "explanation": "Paragraph A states buildings balance operational carbon emissions with clean renewable energy sources.",
+      "citation_excerpt": "balancing their energy needs with clean renewable sources."
+    },
+    {
+      "question_number": 8,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Active systems use [blank] to circulate heat, which consumes electricity."
+      },
+      "correct_answers": ["pumps or fans", "mechanical pumps", "pumps"],
+      "explanation": "Paragraph B states active systems use pumps or fans to collect and distribute energy, which consumes power.",
+      "citation_excerpt": "Active solar systems utilize mechanical pumps or fans to collect and distribute heat energy. While effective, these systems consume some electricity..."
+    },
+    {
+      "question_number": 9,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "To capture winter sunlight, window placement and orientation is critical. Materials with [blank] store heat during the day and release it at night."
+      },
+      "correct_answers": ["thermal mass", "high thermal mass"],
+      "explanation": "Paragraph C notes that concrete or brick materials have high thermal mass, which stores heat during the day.",
+      "citation_excerpt": "Furthermore, materials with high thermal mass, such as heavy concrete or brick, store heat energy during the day."
+    },
+    {
+      "question_number": 10,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Passive cooling relies on window positioning and [blank] to vent hot air."
+      },
+      "correct_answers": ["thermal chimneys", "chimneys"],
+      "explanation": "Paragraph D states natural ventilation uses window placement and thermal chimneys to exhaust hot air.",
+      "citation_excerpt": "Natural ventilation uses window placement and thermal chimneys to pull fresh air into the building while releasing hot air."
+    },
+    {
+      "question_number": 11,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Sealed buildings can trap [blank], which modern ventilation exchanges continuously to preserve air quality."
+      },
+      "correct_answers": ["stale air"],
+      "explanation": "Paragraph E explains tightly sealed walls can trap stale air, which is then exchanged by ventilation systems.",
+      "citation_excerpt": "Because walls are sealed tightly to prevent drafts, stale air can easily become trapped inside. Modern ventilation systems solve this..."
+    },
+    {
+      "question_number": 12,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Financial issues like high [blank] limit zero-emission development."
+      },
+      "correct_answers": ["construction costs", "initial construction"],
+      "explanation": "Paragraph F notes that high initial construction costs discourage developers from building zero-emission housing.",
+      "citation_excerpt": "High initial construction costs can discourage developers from building zero-emission housing."
+    },
+    {
+      "question_number": 13,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "The next frontier is testing carbon-neutral alternatives like timber and hemp-based concrete to replace steel and [blank]."
+      },
+      "correct_answers": ["cement"],
+      "explanation": "Paragraph G states that steel and cement produce carbon pollution, and researchers are testing green alternatives.",
+      "citation_excerpt": "Production of materials like steel and cement currently produces substantial carbon pollution. Researchers are testing alternatives, including compressed timber and hemp-based concrete."
+    }
+  ]
+}

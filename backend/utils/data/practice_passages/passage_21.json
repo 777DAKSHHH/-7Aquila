@@ -1,0 +1,213 @@
+{
+  "title": "Practice Passage 21: The Mystery of Ancient Desert Trade Routes",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Mystery of Ancient Desert Trade Routes",
+    "sub_title": "Investigating oasis rest stops, cultural diffusion, satellite pathway scans, and remaining economic queries.",
+    "content_html": "<p><strong>Paragraph A</strong></p><p><strong>[A1]</strong> Modern deserts often appear empty and isolated, yet archaeological evidence suggests that many of them were once crossed by busy trade routes. <strong>[A2]</strong> These routes connected distant communities, allowing people to exchange goods, ideas, and technologies over hundreds or even thousands of kilometres. <strong>[A3]</strong> Although travelling across deserts was difficult, experienced traders learned to navigate using stars, seasonal landmarks, and knowledge passed from one generation to another. <strong>[A4]</strong> Without these routes, many early civilisations would have remained far more isolated.</p><p><strong>Paragraph B</strong></p><p><strong>[B1]</strong> Archaeologists have discovered that trade involved much more than valuable materials such as gold or precious stones. <strong>[B2]</strong> Everyday items including salt, textiles, pottery, and dried foods were transported regularly. <strong>[B3]</strong> In some regions, salt was considered so valuable that it was exchanged almost as frequently as precious metals. <strong>[B4]</strong> This finding has changed earlier assumptions about the economic priorities of ancient societies.</p><p><strong>Paragraph C</strong></p><p><strong>[C1]</strong> Water sources played a critical role in determining the location of trade routes. <strong>[C2]</strong> Natural springs and underground wells became stopping points where traders rested before continuing their journeys. <strong>[C3]</strong> Some settlements grew into permanent trading centres simply because they were located near reliable supplies of water. <strong>[C4]</strong> Archaeologists have found evidence that certain wells were maintained for centuries.</p><p><strong>Paragraph D</strong></p><p><strong>[D1]</strong> Excavations have revealed that cultural exchange often accompanied commercial activity. <strong>[D2]</strong> Languages, artistic styles, religious beliefs, and farming techniques spread alongside traded goods. <strong>[D3]</strong> Some pottery designs discovered hundreds of kilometres apart are remarkably similar, suggesting regular contact between distant communities. <strong>[D4]</strong> Researchers believe these similarities cannot be explained by coincidence alone.</p><p><strong>Paragraph E</strong></p><p><strong>[E1]</strong> Not every archaeological discovery supports the same interpretation of ancient trade. <strong>[E2]</strong> Some researchers argue that certain routes were used only during favourable seasons, while others believe they remained active throughout the year. <strong>[E3]</strong> Climate records are still being studied to better understand these patterns. <strong>[E4]</strong> As new evidence emerges, existing theories continue to evolve.</p><p><strong>Paragraph F</strong></p><p><strong>[F1]</strong> Recent technological advances have transformed archaeological investigations. <strong>[F2]</strong> Satellite imagery allows researchers to identify ancient pathways that are almost invisible from ground level. <strong>[F3]</strong> Ground-penetrating radar has also revealed buried structures near former trading centres. <strong>[F4]</strong> Nevertheless, archaeologists emphasise that fieldwork remains essential for confirming digital discoveries.</p><p><strong>Paragraph G</strong></p><p><strong>[G1]</strong> Today, many ancient trade routes have disappeared beneath shifting sands or expanding cities. <strong>[G2]</strong> Even so, the evidence that remains continues to reshape our understanding of how ancient societies communicated and cooperated. <strong>[G3]</strong> Rather than existing as isolated cultures, many civilisations formed part of extensive regional networks. <strong>[G4]</strong> The study of desert trade continues to reveal new connections between people who lived thousands of years ago.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "matching_info",
+      "instruction_text": "Which paragraph contains the following information? Write the correct letter, A–G.",
+      "question_data": {
+        "text": "A reference to modern technology helping researchers locate ancient features.",
+        "keywords": ["satellite imagery", "radar"],
+        "paragraph": "F",
+        "sentence_start": "F1",
+        "sentence_end": "F3",
+        "trap_type": "Keyword synonyms",
+        "skill": "Technological detail search",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting Paragraph G due to mention of disappearing features."
+      },
+      "correct_answers": ["F"],
+      "explanation": "Paragraph F states satellite imagery and radar are used by researchers to identify ancient pathways and buried structures.",
+      "citation_excerpt": "Satellite imagery allows researchers to identify ancient pathways... Ground-penetrating radar has also revealed..."
+    },
+    {
+      "question_number": 2,
+      "question_type": "matching_info",
+      "instruction_text": "Which paragraph contains the following information? Write the correct letter, A–G.",
+      "question_data": {
+        "text": "Evidence that ideas travelled as well as physical goods.",
+        "keywords": ["cultural exchange", "languages", "beliefs"],
+        "paragraph": "D",
+        "sentence_start": "D1",
+        "sentence_end": "D3",
+        "trap_type": "None",
+        "skill": "Concept parsing",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting Paragraph A because it lists trade products broadly."
+      },
+      "correct_answers": ["D"],
+      "explanation": "Paragraph D outlines that cultural exchange (languages, beliefs, styles) accompanied commercial activity.",
+      "citation_excerpt": "cultural exchange often accompanied commercial activity. Languages, artistic styles, religious beliefs..."
+    },
+    {
+      "question_number": 3,
+      "question_type": "matching_info",
+      "instruction_text": "Which paragraph contains the following information? Write the correct letter, A–G.",
+      "question_data": {
+        "text": "An example of a common product being highly valuable.",
+        "keywords": ["salt", "exchanged"],
+        "paragraph": "B",
+        "sentence_start": "B2",
+        "sentence_end": "B3",
+        "trap_type": "None",
+        "skill": "Product value identification",
+        "difficulty": "Intermediate",
+        "common_mistake": "Assuming gold and precious stones (B1) are the 'common' product referred to."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph B explains that salt was considered so valuable it was exchanged as often as precious metals.",
+      "citation_excerpt": "Everyday items including salt... salt was considered so valuable that it was exchanged almost as frequently..."
+    },
+    {
+      "question_number": 4,
+      "question_type": "matching_info",
+      "instruction_text": "Which paragraph contains the following information? Write the correct letter, A–G.",
+      "question_data": {
+        "text": "Information explaining why some settlements became permanent.",
+        "keywords": ["permanent trading", "water sources"],
+        "paragraph": "C",
+        "sentence_start": "C2",
+        "sentence_end": "C3",
+        "trap_type": "None",
+        "skill": "Socio-geographic link extraction",
+        "difficulty": "Intermediate",
+        "common_mistake": "Attributing permanence to pottery centers instead of water access."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph C notes some settlements grew into permanent trading centers because they were near water.",
+      "citation_excerpt": "Some settlements grew into permanent trading centres simply because they were located near reliable supplies of water."
+    },
+    {
+      "question_number": 5,
+      "question_type": "matching_info",
+      "instruction_text": "Which paragraph contains the following information? Write the correct letter, A–G.",
+      "question_data": {
+        "text": "A suggestion that previous beliefs have been reconsidered.",
+        "keywords": ["changed earlier assumptions"],
+        "paragraph": "B",
+        "sentence_start": "B4",
+        "sentence_end": "B4",
+        "trap_type": "None",
+        "skill": "Assumption drift tracking",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting Paragraph E due to evolving research models."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph B states new findings about salt value changed earlier assumptions about ancient economies.",
+      "citation_excerpt": "This finding has changed earlier assumptions about the economic priorities of ancient societies."
+    },
+    {
+      "question_number": 6,
+      "question_type": "matching_info",
+      "instruction_text": "Which paragraph contains the following information? Write the correct letter, A–G.",
+      "question_data": {
+        "text": "A mention that some archaeological questions remain unresolved.",
+        "keywords": ["still being studied", "climate records"],
+        "paragraph": "E",
+        "sentence_start": "E2",
+        "sentence_end": "E3",
+        "trap_type": "None",
+        "skill": "Unresolved debate tracking",
+        "difficulty": "Intermediate",
+        "common_mistake": "Assuming all routes are fully documented and understood."
+      },
+      "correct_answers": ["E"],
+      "explanation": "Paragraph E states climate records are still being studied to understand seasonal trade patterns, leaving questions unresolved.",
+      "citation_excerpt": "Climate records are still being studied to better understand these patterns."
+    },
+    {
+      "question_number": 7,
+      "question_type": "matching_info",
+      "instruction_text": "Which paragraph contains the following information? Write the correct letter, A–G.",
+      "question_data": {
+        "text": "An explanation of how travellers found their way across difficult landscapes.",
+        "keywords": ["navigate", "stars", "landmarks"],
+        "paragraph": "A",
+        "sentence_start": "A3",
+        "sentence_end": "A3",
+        "trap_type": "None",
+        "skill": "Navigation strategy identification",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting Paragraph F due to satellite path detection."
+      },
+      "correct_answers": ["A"],
+      "explanation": "Paragraph A explains that traders learned to navigate using stars, landmarks, and passed-down knowledge.",
+      "citation_excerpt": "experienced traders learned to navigate using stars, seasonal landmarks, and knowledge passed..."
+    },
+    {
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Ancient traders often navigated by observing the [blank]."
+      },
+      "correct_answers": ["stars"],
+      "explanation": "Paragraph A states traders navigated using stars, seasonal landmarks, and knowledge.",
+      "citation_excerpt": "traders learned to navigate using stars, seasonal landmarks"
+    },
+    {
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Salt was exchanged almost as frequently as [blank]."
+      },
+      "correct_answers": ["precious metals"],
+      "explanation": "Paragraph B states salt was exchanged almost as frequently as precious metals.",
+      "citation_excerpt": "exchanged almost as frequently as precious metals."
+    },
+    {
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Reliable [blank] determined where many trade routes developed."
+      },
+      "correct_answers": ["water", "supplies of water", "water sources"],
+      "explanation": "Paragraph C states water sources determined route locations.",
+      "citation_excerpt": "Water sources played a critical role in determining the location of trade routes."
+    },
+    {
+      "question_number": 11,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Researchers found pottery with very similar [blank] in distant places."
+      },
+      "correct_answers": ["designs", "pottery designs"],
+      "explanation": "Paragraph D states pottery designs found far apart are remarkably similar.",
+      "citation_excerpt": "Some pottery designs discovered hundreds of kilometres apart are remarkably similar"
+    },
+    {
+      "question_number": 12,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Satellite imagery helps identify ancient [blank]."
+      },
+      "correct_answers": ["pathways", "ancient pathways"],
+      "explanation": "Paragraph F states satellite imagery allows researchers to identify ancient pathways.",
+      "citation_excerpt": "Satellite imagery allows researchers to identify ancient pathways"
+    },
+    {
+      "question_number": 13,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Many ancient routes have disappeared beneath shifting [blank]."
+      },
+      "correct_answers": ["sands", "shifting sands"],
+      "explanation": "Paragraph G states trade routes have disappeared under shifting sands or cities.",
+      "citation_excerpt": "many ancient trade routes have disappeared beneath shifting sands"
+    }
+  ]
+}

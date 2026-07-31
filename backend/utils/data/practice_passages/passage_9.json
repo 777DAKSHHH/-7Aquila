@@ -1,0 +1,339 @@
+{
+  "title": "Practice Passage 9: When Clocks Changed the World",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "When Clocks Changed the World",
+    "sub_title": "How the pursuit of precision timekeeping paved the way for modern navigation, commerce, and industrial society.",
+    "content_html": "<p><strong>Paragraph A</strong></p><p><strong>[A1]</strong> Today, people rarely think about the importance of accurate timekeeping because clocks are found almost everywhere. <strong>[A2]</strong> Mobile phones, computers, watches, and even kitchen appliances display the time automatically. <strong>[A3]</strong> However, for most of human history, measuring time precisely was extremely difficult. <strong>[A4]</strong> Communities relied mainly on the position of the Sun, the movement of stars, or simple devices such as sundials and water clocks.</p><p><strong>Paragraph B</strong></p><p><strong>[B1]</strong> Early methods of timekeeping worked reasonably well under certain conditions. <strong>[B2]</strong> Sundials were useful during sunny weather but became useless at night or on cloudy days. <strong>[B3]</strong> Water clocks measured time by allowing water to flow slowly between containers, although the flow could change with temperature or damage to the equipment. <strong>[B4]</strong> These limitations encouraged inventors to search for more dependable methods.</p><p><strong>Paragraph C</strong></p><p><strong>[C1]</strong> During the Middle Ages, mechanical clocks appeared in parts of Europe. <strong>[C2]</strong> Unlike earlier devices, these clocks used gears and weights to produce regular movement. <strong>[C3]</strong> Although they were not perfectly accurate, they represented an important technological improvement. <strong>[C4]</strong> Many of the first mechanical clocks were installed in church towers so that entire communities could hear the bells marking each hour.</p><p><strong>Paragraph D</strong></p><p><strong>[D1]</strong> The demand for greater accuracy increased as international trade expanded. <strong>[D2]</strong> Merchants needed reliable schedules for transporting goods over long distances. <strong>[D3]</strong> Sailors also depended on accurate clocks because navigation at sea required precise measurements of time. <strong>[D4]</strong> Improvements in clockmaking therefore supported both commerce and exploration.</p><p><strong>Paragraph E</strong></p><p><strong>[E1]</strong> The Industrial Revolution created new reasons for accurate timekeeping. <strong>[E2]</strong> Factories required workers to begin and finish shifts at fixed times. <strong>[E3]</strong> Railway companies also needed standard timetables to reduce confusion and improve safety. <strong>[E4]</strong> Before national railway schedules existed, neighbouring towns sometimes used slightly different local times, making travel more complicated.</p><p><strong>Paragraph F</strong></p><p><strong>[F1]</strong> Modern technology has transformed timekeeping once again. <strong>[F2]</strong> Atomic clocks measure time using the natural behaviour of atoms and are far more accurate than traditional mechanical clocks. <strong>[F3]</strong> Their precision supports satellite navigation, international communications, and scientific research. <strong>[F4]</strong> Although most people never see an atomic clock, they benefit from its accuracy every day.</p><p><strong>Paragraph G</strong></p><p><strong>[G1]</strong> Historians argue that clocks have influenced society in ways that extend beyond technology. <strong>[G2]</strong> They changed how businesses operate, how transport systems are organised, and how individuals plan their daily routines. <strong>[G3]</strong> Rather than simply measuring time, clocks gradually changed the relationship between people and time itself. <strong>[G4]</strong> Their history demonstrates how a single invention can influence many different aspects of civilisation.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "What is the main purpose of Paragraph A?",
+        "options": [
+          "A. To explain how atomic clocks work",
+          "B. To introduce the historical importance of timekeeping",
+          "C. To compare different types of modern clocks",
+          "D. To describe how mobile phones display time"
+        ],
+        "keywords": ["importance", "history"],
+        "paragraph": "A",
+        "sentence_start": "A1",
+        "sentence_end": "A4",
+        "trap_type": "Keyword matching / Distractor",
+        "skill": "Main idea identification",
+        "difficulty": "Easy",
+        "common_mistake": "Selecting a minor detail (like mobile phones) instead of the main focus."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph A introduces the historical context and challenges of measuring time precisely throughout human history.",
+      "citation_excerpt": "Today, people rarely think about the importance of accurate timekeeping because clocks are found almost everywhere... However, for most of human history, measuring time precisely was extremely difficult."
+    },
+    {
+      "question_number": 2,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "According to the passage, why were sundials unreliable?",
+        "options": [
+          "A. They required expensive materials.",
+          "B. They were difficult to build.",
+          "C. They depended on weather conditions.",
+          "D. They measured only minutes."
+        ],
+        "keywords": ["sundials", "cloudy days"],
+        "paragraph": "B",
+        "sentence_start": "B2",
+        "sentence_end": "B2",
+        "trap_type": "None",
+        "skill": "Detail recognition",
+        "difficulty": "Easy",
+        "common_mistake": "Failing to trace the dependency of sundials on sunlight."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph B explains that sundials were useful during sunny weather but became useless at night or on cloudy days.",
+      "citation_excerpt": "Sundials were useful during sunny weather but became useless at night or on cloudy days."
+    },
+    {
+      "question_number": 3,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Why were early mechanical clocks placed in church towers?",
+        "options": [
+          "A. Churches were responsible for building them.",
+          "B. Communities could hear the hourly bells.",
+          "C. They required very high temperatures.",
+          "D. They were too large for houses."
+        ],
+        "keywords": ["church towers", "bells"],
+        "paragraph": "C",
+        "sentence_start": "C4",
+        "sentence_end": "C4",
+        "trap_type": "None",
+        "skill": "Cause and effect analysis",
+        "difficulty": "Easy",
+        "common_mistake": "Assuming administrative or physical size reasons not stated in the text."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph C states that they were installed in church towers so that entire communities could hear the bells marking each hour.",
+      "citation_excerpt": "Many of the first mechanical clocks were installed in church towers so that entire communities could hear the bells marking each hour."
+    },
+    {
+      "question_number": 4,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "What increased the demand for more accurate clocks?",
+        "options": [
+          "A. Population growth",
+          "B. International trade",
+          "C. Better roads",
+          "D. Agricultural development"
+        ],
+        "keywords": ["demand", "trade"],
+        "paragraph": "D",
+        "sentence_start": "D1",
+        "sentence_end": "D1",
+        "trap_type": "None",
+        "skill": "Factor correlation analysis",
+        "difficulty": "Easy",
+        "common_mistake": "Overlooking the link between expanding trade systems and clock accuracy."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph D directly links the demand for greater clock accuracy with the expansion of international trade.",
+      "citation_excerpt": "The demand for greater accuracy increased as international trade expanded."
+    },
+    {
+      "question_number": 5,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "According to the writer, sailors needed accurate clocks mainly because they",
+        "options": [
+          "A. repaired ships.",
+          "B. recorded weather.",
+          "C. navigated at sea.",
+          "D. measured ocean depth."
+        ],
+        "keywords": ["sailors", "navigation"],
+        "paragraph": "D",
+        "sentence_start": "D3",
+        "sentence_end": "D3",
+        "trap_type": "None",
+        "skill": "Detail recognition",
+        "difficulty": "Easy",
+        "common_mistake": "Failing to connect sailors and accurate clocks to maritime navigation."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph D states that sailors depended on accurate clocks because navigation at sea required precise measurements of time.",
+      "citation_excerpt": "Sailors also depended on accurate clocks because navigation at sea required precise measurements of time."
+    },
+    {
+      "question_number": 6,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Which development during the Industrial Revolution required standard timetables?",
+        "options": [
+          "A. Postal services",
+          "B. Hospitals",
+          "C. Railways",
+          "D. Schools"
+        ],
+        "keywords": ["railway", "timetables"],
+        "paragraph": "E",
+        "sentence_start": "E3",
+        "sentence_end": "E3",
+        "trap_type": "None",
+        "skill": "Concept matching",
+        "difficulty": "Easy",
+        "common_mistake": "Selecting other systems that also use schedules but were not explicitly mentioned for timetables."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph E states that railway companies needed standard timetables to reduce confusion and improve safety.",
+      "citation_excerpt": "Railway companies also needed standard timetables to reduce confusion and improve safety."
+    },
+    {
+      "question_number": 7,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Before railway timetables became standard, neighbouring towns",
+        "options": [
+          "A. refused to communicate.",
+          "B. used slightly different local times.",
+          "C. shared one national clock.",
+          "D. changed time every week."
+        ],
+        "keywords": ["neighbouring towns"],
+        "paragraph": "E",
+        "sentence_start": "E4",
+        "sentence_end": "E4",
+        "trap_type": "None",
+        "skill": "Detail recognition",
+        "difficulty": "Easy",
+        "common_mistake": "Assuming severe local isolation occurred instead of just time differences."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph E notes that neighbouring towns sometimes used slightly different local times before national railway schedules were set up.",
+      "citation_excerpt": "Before national railway schedules existed, neighbouring towns sometimes used slightly different local times, making travel more complicated."
+    },
+    {
+      "question_number": 8,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "What makes atomic clocks different from mechanical clocks?",
+        "options": [
+          "A. They are cheaper to produce.",
+          "B. They operate without electricity.",
+          "C. They measure time using atoms.",
+          "D. They are found in every home."
+        ],
+        "keywords": ["atomic clocks"],
+        "paragraph": "F",
+        "sentence_start": "F2",
+        "sentence_end": "F2",
+        "trap_type": "None",
+        "skill": "Comparison identification",
+        "difficulty": "Easy",
+        "common_mistake": "Failing to link the name of atomic clocks with their measurement method."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph F states that atomic clocks measure time using the natural behaviour of atoms.",
+      "citation_excerpt": "Atomic clocks measure time using the natural behaviour of atoms and are far more accurate than traditional mechanical clocks."
+    },
+    {
+      "question_number": 9,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Which activity is NOT mentioned as benefiting from atomic clocks?",
+        "options": [
+          "A. Scientific research",
+          "B. Satellite navigation",
+          "C. International communication",
+          "D. Medical surgery"
+        ],
+        "keywords": ["benefits"],
+        "paragraph": "F",
+        "sentence_start": "F3",
+        "sentence_end": "F3",
+        "trap_type": "Negative constraint",
+        "skill": "Exclusion search",
+        "difficulty": "Easy",
+        "common_mistake": "Selecting an activity that is listed as a benefit (like navigation) instead of the unlisted one."
+      },
+      "correct_answers": ["D"],
+      "explanation": "Paragraph F lists satellite navigation, international communications, and scientific research as benefits, but does not mention medical surgery.",
+      "citation_excerpt": "Their precision supports satellite navigation, international communications, and scientific research."
+    },
+    {
+      "question_number": 10,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "What is the writer's overall view of clocks?",
+        "options": [
+          "A. Their importance has decreased.",
+          "B. They have influenced society in many ways.",
+          "C. They are mainly useful for scientists.",
+          "D. Mechanical clocks remain the most accurate."
+        ],
+        "keywords": ["influenced society"],
+        "paragraph": "G",
+        "sentence_start": "G1",
+        "sentence_end": "G4",
+        "trap_type": "Overly narrow option",
+        "skill": "Global view identification",
+        "difficulty": "Easy",
+        "common_mistake": "Selecting a option that describes only a minor detail instead of a broad summary."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph G states that clocks have influenced society in ways that extend beyond technology, affecting daily planning, routines, and civilization as a whole.",
+      "citation_excerpt": "Historians argue that clocks have influenced society in ways that extend beyond technology... Their history demonstrates how a single invention can influence many different aspects of civilisation."
+    },
+    {
+      "question_number": 11,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Which statement best describes the organisation of the passage?",
+        "options": [
+          "A. It presents a problem followed by one solution.",
+          "B. It follows the historical development of timekeeping.",
+          "C. It compares two scientific theories.",
+          "D. It explains the operation of one machine."
+        ],
+        "keywords": ["organisation"],
+        "paragraph": "Entire passage",
+        "sentence_start": "None",
+        "sentence_end": "None",
+        "trap_type": "None",
+        "skill": "Structure analysis",
+        "difficulty": "Easy",
+        "common_mistake": "Focusing on a single paragraph's structure (e.g. atomic clock details) rather than the overall text flow."
+      },
+      "correct_answers": ["B"],
+      "explanation": "The text traces timekeeping chronologically, from early sundials and water clocks, to Middle Age mechanical clocks, Industrial Revolution improvements, and atomic clocks.",
+      "citation_excerpt": ""
+    },
+    {
+      "question_number": 12,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "The writer suggests that accurate timekeeping became increasingly important because",
+        "options": [
+          "A. people preferred expensive technology.",
+          "B. society became more organised.",
+          "C. churches demanded better clocks.",
+          "D. the Earth's rotation changed."
+        ],
+        "keywords": ["organised"],
+        "paragraph": "D, E, G",
+        "sentence_start": "None",
+        "sentence_end": "None",
+        "trap_type": "Distractor from another paragraph",
+        "skill": "Inference / Synthesis",
+        "difficulty": "Easy",
+        "common_mistake": "Confusing a historical association (churches housing early clocks) with the root cause of the demand."
+      },
+      "correct_answers": ["B"],
+      "explanation": "The text details how expanding trade, factory schedules, and railway safety (all elements of an increasingly complex and organized society) drove the need for accurate time.",
+      "citation_excerpt": ""
+    },
+    {
+      "question_number": 13,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Which title best matches the passage?",
+        "options": [
+          "A. The Future of Artificial Intelligence",
+          "B. Ancient Buildings Around the World",
+          "C. How Timekeeping Shaped Civilisation",
+          "D. Why Mobile Phones Replaced Watches"
+        ],
+        "keywords": ["title"],
+        "paragraph": "Entire passage",
+        "sentence_start": "None",
+        "sentence_end": "None",
+        "trap_type": "Keyword matching",
+        "skill": "Title matching / Main theme synthesis",
+        "difficulty": "Easy",
+        "common_mistake": "Choosing a title that focuses on a single modern reference instead of the entire historical sweep."
+      },
+      "correct_answers": ["C"],
+      "explanation": "The entire passage reviews the progression of clock technology and its vast social, industrial, and maritime impacts on modern civilization.",
+      "citation_excerpt": ""
+    }
+  ]
+}

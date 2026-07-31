@@ -320,6 +320,63 @@ const ReadingResults = () => {
                     </div>
                   </div>
 
+                  {/* Question Skill Analytics Panel */}
+                  {qDetails.questionData && (qDetails.questionData.keywords || qDetails.questionData.skill || qDetails.questionData.trap_type || qDetails.questionData.common_mistake) && (
+                    <div className="bg-primary/5 border border-primary/10 rounded-xl p-5 space-y-4">
+                      <h5 className="text-xs font-mono uppercase tracking-wider text-primary font-bold flex items-center gap-1.5">
+                        <AppIcon name="Activity" size={14} />
+                        Question Skill Analytics
+                      </h5>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                        {qDetails.questionData.skill && (
+                          <div className="space-y-1">
+                            <span className="text-muted-foreground uppercase font-semibold block text-[10px]">Tested Skill:</span>
+                            <span className="font-semibold text-foreground bg-card border border-border px-2 py-1 rounded inline-block">
+                              {qDetails.questionData.skill}
+                            </span>
+                          </div>
+                        )}
+                        {qDetails.questionData.trap_type && (
+                          <div className="space-y-1">
+                            <span className="text-muted-foreground uppercase font-semibold block text-[10px]">Trap Type:</span>
+                            <span className="font-semibold text-destructive bg-destructive/5 border border-destructive/10 px-2 py-1 rounded inline-block">
+                              {qDetails.questionData.trap_type}
+                            </span>
+                          </div>
+                        )}
+                        {qDetails.questionData.keywords && qDetails.questionData.keywords.length > 0 && (
+                          <div className="space-y-1 sm:col-span-2">
+                            <span className="text-muted-foreground uppercase font-semibold block text-[10px]">Target Keywords:</span>
+                            <div className="flex flex-wrap gap-1.5 pt-0.5">
+                              {qDetails.questionData.keywords.map((kw, i) => (
+                                <span key={i} className="bg-primary/10 text-primary-foreground font-mono px-2.5 py-0.5 rounded text-[11px] font-bold">
+                                  {kw}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                        {(qDetails.questionData.paragraph || qDetails.questionData.sentence_start) && (
+                          <div className="space-y-1">
+                            <span className="text-muted-foreground uppercase font-semibold block text-[10px]">Evidence Location:</span>
+                            <span className="font-mono text-foreground font-bold">
+                              Paragraph {qDetails.questionData.paragraph || "N/A"}{" "}
+                              {qDetails.questionData.sentence_start ? `(Sentences ${qDetails.questionData.sentence_start}${qDetails.questionData.sentence_end ? `–${qDetails.questionData.sentence_end}` : ""})` : ""}
+                            </span>
+                          </div>
+                        )}
+                        {qDetails.questionData.common_mistake && (
+                          <div className="space-y-1 sm:col-span-2">
+                            <span className="text-muted-foreground uppercase font-semibold block text-[10px]">Common Mistake:</span>
+                            <p className="text-muted-foreground leading-relaxed italic bg-card border border-border p-2.5 rounded">
+                              {qDetails.questionData.common_mistake}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+
                   {/* Passage Text Citation Quote */}
                   {qDetails.citationExcerpt && (
                     <div className="space-y-2">

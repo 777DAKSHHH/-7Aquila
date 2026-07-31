@@ -1,0 +1,157 @@
+{
+  "title": "Practice Passage 18: The Mechanics of Volcanic Eruptions",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Mechanics of Volcanic Eruptions",
+    "sub_title": "Understanding magma chambers, central conduits, horizontal sills, vertical dikes, side vents, and explosive ash clouds.",
+    "content_html": "<p><strong>Paragraph A</strong></p><p><strong>[A1]</strong> Volcanic eruptions are among the most powerful geological forces on Earth. <strong>[A2]</strong> They occur when molten rock, known as magma, rises from deep within the Earth's mantle to the surface. <strong>[A3]</strong> As magma ascends, it accumulates in a large underground chamber located beneath the volcano. <strong>[A4]</strong> This chamber acts as a storage reservoir, where intense heat and pressure build up over thousands of years.</p><p><strong>Paragraph B</strong></p><p><strong>[B1]</strong> The structural anatomy of a volcano dictates how magma travels to the surface. <strong>[B2]</strong> The main vertical path is the central vent, also called the conduit. <strong>[B3]</strong> This main conduit connects the deep magma chamber directly to the primary opening at the peak of the volcano, known as the crater. <strong>[B4]</strong> Eruptions typically eject ash, gas, and lava through this primary crater.</p><p><strong>Paragraph C</strong></p><p><strong>[C1]</strong> However, magma does not always follow the central pathway. <strong>[C2]</strong> In many volcanoes, high pressure forces magma through cracks in the surrounding rock, forming secondary paths. <strong>[C3]</strong> A side vent is a secondary passage that branches off from the central conduit and opens on the flank of the volcano. <strong>[C4]</strong> Eruptions from these side vents can create smaller, secondary cones on the volcanic slopes.</p><p><strong>Paragraph D</strong></p><p><strong>[D1]</strong> Magma that cools and solidifies within horizontal cracks forms geological structures called sills. <strong>[D2]</strong> A sill is a horizontal sheet of volcanic rock that squeezes between existing layers of sedimentary rock. <strong>[D3]</strong> In contrast, magma that forces its way vertically through surrounding rock layers forms structures known as dikes. <strong>[D4]</strong> Dikes act as vertical walls of igneous rock that cut across horizontal rock strata.</p><p><strong>Paragraph E</strong></p><p><strong>[E1]</strong> During an explosive eruption, the composition of the ejected material changes rapidly. <strong>[E2]</strong> As gas-rich magma reaches the low pressure of the surface, dissolved gases expand violently. <strong>[E3]</strong> This expansion shatters the molten rock into tiny particles of ash, creating a massive ash cloud that rises into the atmosphere. <strong>[E4]</strong> These towering ash clouds can block sunlight and disrupt global air travel.</p><p><strong>Paragraph F</strong></p><p><strong>[F1]</strong> Lava flow is another major product of volcanic eruptions. <strong>[F2]</strong> Once magma reaches the surface, it is referred to as lava. <strong>[F3]</strong> The viscosity, or thickness, of the lava determines how fast and far it flows. <strong>[F4]</strong> Runny, low-viscosity lava creates wide, flat flows, whereas thick, high-viscosity lava builds steep volcanic domes.</p><p><strong>Paragraph G</strong></p><p><strong>[G1]</strong> Volcanoes are monitored carefully by geologists to predict eruptions. <strong>[G2]</strong> Scientists use seismographs to detect small earthquakes caused by magma moving underground. <strong>[G3]</strong> Tiltmeters are also used to measure slight changes in the slope of the volcano as pressure builds. <strong>[G4]</strong> Monitoring these geological signs helps save lives by allowing authorities to issue timely evacuation orders.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "diagram_labeling",
+      "instruction_text": "Label the diagram below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Label 1 (Molten rock under surface): [blank]"
+      },
+      "correct_answers": ["magma"],
+      "explanation": "Paragraph A explains molten rock under the surface is called magma.",
+      "citation_excerpt": "molten rock, known as magma, rises from deep"
+    },
+    {
+      "question_number": 2,
+      "question_type": "diagram_labeling",
+      "instruction_text": "Label the diagram below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Label 2 (Underground storage reservoir): magma [blank]"
+      },
+      "correct_answers": ["chamber", "magma chamber"],
+      "explanation": "Paragraph A states magma accumulates in a large underground chamber.",
+      "citation_excerpt": "accumulates in a large underground chamber located beneath the volcano."
+    },
+    {
+      "question_number": 3,
+      "question_type": "diagram_labeling",
+      "instruction_text": "Label the diagram below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Label 3 (Primary vertical path): central [blank]"
+      },
+      "correct_answers": ["conduit", "vent", "central conduit", "central vent"],
+      "explanation": "Paragraph B states the main vertical path is the central vent, also called the conduit.",
+      "citation_excerpt": "The main vertical path is the central vent, also called the conduit."
+    },
+    {
+      "question_number": 4,
+      "question_type": "diagram_labeling",
+      "instruction_text": "Label the diagram below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Label 4 (Opening at volcanic peak): [blank]"
+      },
+      "correct_answers": ["crater", "primary crater"],
+      "explanation": "Paragraph B states the primary opening at the peak of the volcano is known as the crater.",
+      "citation_excerpt": "primary opening at the peak of the volcano, known as the crater."
+    },
+    {
+      "question_number": 5,
+      "question_type": "diagram_labeling",
+      "instruction_text": "Label the diagram below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Label 5 (Branch pathway opening on flank): [blank]"
+      },
+      "correct_answers": ["side vent", "vent"],
+      "explanation": "Paragraph C states a side vent branches off from the central conduit and opens on the flank.",
+      "citation_excerpt": "A side vent is a secondary passage that branches off from the central conduit and opens on the flank"
+    },
+    {
+      "question_number": 6,
+      "question_type": "diagram_labeling",
+      "instruction_text": "Label the diagram below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Label 6 (Cool rock sheet squeezed horizontally): [blank]"
+      },
+      "correct_answers": ["sill", "sills"],
+      "explanation": "Paragraph D states magma solidifying in horizontal cracks forms structures called sills.",
+      "citation_excerpt": "solidifies within horizontal cracks forms geological structures called sills."
+    },
+    {
+      "question_number": 7,
+      "question_type": "diagram_labeling",
+      "instruction_text": "Label the diagram below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Label 7 (Cool rock sheet cutting vertically across strata): [blank]"
+      },
+      "correct_answers": ["dike", "dikes"],
+      "explanation": "Paragraph D states magma forcing its way vertically through rock layers forms dikes.",
+      "citation_excerpt": "vertically through surrounding rock layers forms structures known as dikes."
+    },
+    {
+      "question_number": 8,
+      "question_type": "diagram_labeling",
+      "instruction_text": "Label the diagram below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Label 8 (Ejected volcanic dust/particles suspended in atmosphere): [blank]"
+      },
+      "correct_answers": ["ash cloud", "cloud"],
+      "explanation": "Paragraph E states shattered rock particles form a massive ash cloud rising in the atmosphere.",
+      "citation_excerpt": "shatters the molten rock into tiny particles of ash, creating a massive ash cloud that rises"
+    },
+    {
+      "question_number": 9,
+      "question_type": "diagram_labeling",
+      "instruction_text": "Label the diagram below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Label 9 (Molten rock flowing over surface): [blank]"
+      },
+      "correct_answers": ["lava", "lava flow"],
+      "explanation": "Paragraph F notes once magma reaches the surface, it is referred to as lava.",
+      "citation_excerpt": "Once magma reaches the surface, it is referred to as lava."
+    },
+    {
+      "question_number": 10,
+      "question_type": "diagram_labeling",
+      "instruction_text": "Label the diagram below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Label 10 (Instrument detecting underground movements): [blank]"
+      },
+      "correct_answers": ["seismograph", "seismographs"],
+      "explanation": "Paragraph G explains geologists use seismographs to detect magma-induced earthquakes.",
+      "citation_excerpt": "Scientists use seismographs to detect small earthquakes caused by magma"
+    },
+    {
+      "question_number": 11,
+      "question_type": "diagram_labeling",
+      "instruction_text": "Label the diagram below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Label 11 (Instrument measuring slope changes): [blank]"
+      },
+      "correct_answers": ["tiltmeter", "tiltmeters"],
+      "explanation": "Paragraph G explains tiltmeters measure changes in the volcano's slope.",
+      "citation_excerpt": "Tiltmeters are also used to measure slight changes in the slope of the volcano"
+    },
+    {
+      "question_number": 12,
+      "question_type": "diagram_labeling",
+      "instruction_text": "Label the diagram below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Label 12 (Flow velocity factor of surface molten rock): [blank]"
+      },
+      "correct_answers": ["viscosity", "thickness"],
+      "explanation": "Paragraph F states viscosity, or thickness, determines how fast lava flows.",
+      "citation_excerpt": "The viscosity, or thickness, of the lava determines how fast and far it flows."
+    },
+    {
+      "question_number": 13,
+      "question_type": "diagram_labeling",
+      "instruction_text": "Label the diagram below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Label 13 (Subsurface molten rock rising from mantle): [blank]"
+      },
+      "correct_answers": ["magma"],
+      "explanation": "Paragraph A explains magma rises from the Earth's mantle.",
+      "citation_excerpt": "molten rock, known as magma, rises from deep within the Earth's mantle"
+    }
+  ]
+}

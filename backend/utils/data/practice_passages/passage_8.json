@@ -1,0 +1,261 @@
+{
+  "title": "Practice Passage 8: Why Green Roofs Matter in Modern Cities",
+  "test_type": "academic",
+  "difficulty": "easy",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "Why Green Roofs Matter in Modern Cities",
+    "sub_title": "How living rooftops are combating the urban heat island effect, fostering biodiversity, and managing storm runoff.",
+    "content_html": "<p><strong>Paragraph A</strong></p><p><strong>[A1]</strong> As cities continue to expand, many natural areas disappear beneath roads, buildings, and parking spaces. <strong>[A2]</strong> This rapid development changes the local environment in several ways, including higher temperatures and reduced habitats for wildlife. <strong>[A3]</strong> To address some of these problems, architects and environmental scientists have become increasingly interested in green roofs. <strong>[A4]</strong> A green roof is a building roof that is partially or completely covered with living plants grown in a specially designed layer of soil.</p><p><strong>Paragraph B</strong></p><p><strong>[B1]</strong> Although green roofs may appear to be a modern invention, the basic idea has existed for centuries. <strong>[B2]</strong> Historical records show that people in several cold regions placed grass and soil on rooftops to improve insulation. <strong>[B3]</strong> Modern green roofs, however, use carefully engineered drainage systems and lightweight materials that make them suitable for many different types of buildings. <strong>[B4]</strong> Advances in construction technology have made these systems easier to install than they were several decades ago.</p><p><strong>Paragraph C</strong></p><p><strong>[C1]</strong> One of the most noticeable advantages of green roofs is their ability to reduce building temperatures during warm weather. <strong>[C2]</strong> Plants absorb sunlight that would otherwise heat traditional roofing materials. <strong>[C3]</strong> As a result, some buildings require less electricity for air conditioning during summer months. <strong>[C4]</strong> Researchers have reported energy savings in many cities, although the amount varies according to climate, roof size, and plant type.</p><p><strong>Paragraph D</strong></p><p><strong>[D1]</strong> Green roofs also improve urban biodiversity. <strong>[D2]</strong> Birds, bees, butterflies, and other insects often use rooftop vegetation as resting or feeding areas. <strong>[D3]</strong> In cities where parks are limited, these roofs can provide small but valuable habitats. <strong>[D4]</strong> Scientists caution, however, that a single green roof cannot replace large natural ecosystems.</p><p><strong>Paragraph E</strong></p><p><strong>[E1]</strong> Another important benefit is improved rainwater management. <strong>[E2]</strong> During storms, plants and soil temporarily retain part of the rainfall. <strong>[E3]</strong> This slows the movement of water into drains, reducing pressure on urban drainage systems. <strong>[E4]</strong> Nevertheless, green roofs are only one component of effective flood management and cannot prevent flooding in every situation.</p><p><strong>Paragraph F</strong></p><p><strong>[F1]</strong> Despite these benefits, green roofs are not suitable for every building. <strong>[F2]</strong> Older buildings may require structural improvements before additional weight can be safely supported. <strong>[F3]</strong> Installation costs are generally higher than those of conventional roofs. <strong>[F4]</strong> However, supporters argue that lower energy use and reduced maintenance costs can offset some of the initial expense over time.</p><p><strong>Paragraph G</strong></p><p><strong>[G1]</strong> Interest in green roofs continues to increase around the world. <strong>[G2]</strong> Some city governments encourage their construction through financial incentives or planning policies. <strong>[G3]</strong> Others prefer to educate building owners about their environmental benefits rather than introduce new regulations. <strong>[G4]</strong> Experts agree that green roofs should be considered as part of a broader strategy for creating more sustainable cities.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in the reading passage? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Green roofs were first developed within the last fifty years.",
+        "keywords": ["modern invention", "centuries"],
+        "paragraph": "B",
+        "sentence_start": "B1",
+        "sentence_end": "B2",
+        "trap_type": "Time distortion",
+        "skill": "Time reference recognition",
+        "difficulty": "Easy",
+        "common_mistake": "Believing modern green roofs represent the origin of the technology."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph B states that although they may look modern, the basic idea of putting grass and soil on roofs has existed for centuries.",
+      "citation_excerpt": "Although green roofs may appear to be a modern invention, the basic idea has existed for centuries. Historical records show that people in several cold regions placed grass and soil on rooftops to improve insulation."
+    },
+    {
+      "question_number": 2,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in the reading passage? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Modern green roofs use technology that was unavailable in earlier centuries.",
+        "keywords": ["engineered drainage", "lightweight materials"],
+        "paragraph": "B",
+        "sentence_start": "B3",
+        "sentence_end": "B3",
+        "trap_type": "None",
+        "skill": "Comparison recognition",
+        "difficulty": "Easy",
+        "common_mistake": "Failing to connect modern elements to technological change."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph B notes that modern green roofs use carefully engineered drainage systems and lightweight materials, which differentiates them from ancient designs.",
+      "citation_excerpt": "Modern green roofs, however, use carefully engineered drainage systems and lightweight materials that make them suitable for many different types of buildings."
+    },
+    {
+      "question_number": 3,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in the reading passage? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Every building with a green roof experiences the same reduction in electricity use.",
+        "keywords": ["energy savings", "varies"],
+        "paragraph": "C",
+        "sentence_start": "C3",
+        "sentence_end": "C4",
+        "trap_type": "Extreme wording",
+        "skill": "Identifying qualifiers",
+        "difficulty": "Easy",
+        "common_mistake": "Ignoring the variation qualifier and assuming a uniform result."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph C notes that while energy savings occur, the amount varies based on climate, roof size, and plant type, so they are not the same for every building.",
+      "citation_excerpt": "As a result, some buildings require less electricity for air conditioning during summer months. Researchers have reported energy savings in many cities, although the amount varies according to climate, roof size, and plant type."
+    },
+    {
+      "question_number": 4,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in the reading passage? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Green roofs can provide habitats for some urban wildlife.",
+        "keywords": ["birds", "bees", "habitats"],
+        "paragraph": "D",
+        "sentence_start": "D1",
+        "sentence_end": "D3",
+        "trap_type": "None",
+        "skill": "Detail recognition",
+        "difficulty": "Easy",
+        "common_mistake": "Believing urban wildlife cannot exist on rooftop structures."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph D states that birds, bees, butterflies, and insects use the roofs as feeding or resting areas, providing small habitats.",
+      "citation_excerpt": "Green roofs also improve urban biodiversity. Birds, bees, butterflies, and other insects often use rooftop vegetation as resting or feeding areas. In cities where parks are limited, these roofs can provide small but valuable habitats."
+    },
+    {
+      "question_number": 5,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in the reading passage? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "A single green roof can replace a large natural habitat.",
+        "keywords": ["replace ecosystems"],
+        "paragraph": "D",
+        "sentence_start": "D4",
+        "sentence_end": "D4",
+        "trap_type": "None",
+        "skill": "Negative constraints recognition",
+        "difficulty": "Easy",
+        "common_mistake": "Overestimating the capacity of a single roof and missing the warning."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph D warns explicitly that a single green roof cannot replace large natural ecosystems.",
+      "citation_excerpt": "Scientists caution, however, that a single green roof cannot replace large natural ecosystems."
+    },
+    {
+      "question_number": 6,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in the reading passage? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Green roofs completely eliminate the risk of flooding in cities.",
+        "keywords": ["flood management"],
+        "paragraph": "E",
+        "sentence_start": "E4",
+        "sentence_end": "E4",
+        "trap_type": "Absolute claim",
+        "skill": "Distinguishing absolute vs partial claim",
+        "difficulty": "Easy",
+        "common_mistake": "Confusing a helper component with an all-inclusive solution."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph E states green roofs are only one component of flood management and cannot prevent flooding in all circumstances.",
+      "citation_excerpt": "Nevertheless, green roofs are only one component of effective flood management and cannot prevent flooding in every situation."
+    },
+    {
+      "question_number": 7,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in the reading passage? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Some older buildings may need strengthening before a green roof can be installed.",
+        "keywords": ["older buildings"],
+        "paragraph": "F",
+        "sentence_start": "F1",
+        "sentence_end": "F2",
+        "trap_type": "None",
+        "skill": "Detail recognition",
+        "difficulty": "Easy",
+        "common_mistake": "Assuming green roofs can be installed on any structure without alterations."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph F notes that older buildings may require structural improvements to support the additional weight.",
+      "citation_excerpt": "Despite these benefits, green roofs are not suitable for every building. Older buildings may require structural improvements before additional weight can be safely supported."
+    },
+    {
+      "question_number": 8,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in the reading passage? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Green roofs always cost less to install than traditional roofs.",
+        "keywords": ["installation costs"],
+        "paragraph": "F",
+        "sentence_start": "F3",
+        "sentence_end": "F3",
+        "trap_type": "Extreme wording",
+        "skill": "Cost comparison analysis",
+        "difficulty": "Easy",
+        "common_mistake": "Confusing long-term operational savings with initial setup costs."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph F states installation costs are generally higher than those of conventional roofs.",
+      "citation_excerpt": "Installation costs are generally higher than those of conventional roofs."
+    },
+    {
+      "question_number": 9,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in the reading passage? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Some governments actively encourage the construction of green roofs.",
+        "keywords": ["governments encourage"],
+        "paragraph": "G",
+        "sentence_start": "G2",
+        "sentence_end": "G2",
+        "trap_type": "None",
+        "skill": "Fact identification",
+        "difficulty": "Easy",
+        "common_mistake": "Overlooking policy incentives mentioned in the text."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph G states that some city governments encourage green roof construction using financial incentives or planning policies.",
+      "citation_excerpt": "Some city governments encourage their construction through financial incentives or planning policies."
+    },
+    {
+      "question_number": 10,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in the reading passage? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Every country has introduced laws requiring green roofs on new buildings.",
+        "keywords": ["laws", "every country"],
+        "paragraph": "G",
+        "sentence_start": "G2",
+        "sentence_end": "G3",
+        "trap_type": "Scope expansion",
+        "skill": "Distinguishing some vs all",
+        "difficulty": "Easy",
+        "common_mistake": "Assuming that active government encouragement implies universal laws in all countries."
+      },
+      "correct_answers": ["NOT GIVEN"],
+      "explanation": "The text mentions that 'some' city governments encourage construction, and others prefer education over regulations, but doesn't mention laws in 'every country'.",
+      "citation_excerpt": ""
+    },
+    {
+      "question_number": 11,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in the reading passage? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "The passage states that green roofs improve air quality.",
+        "keywords": ["air quality"],
+        "paragraph": "Entire passage",
+        "sentence_start": "None",
+        "sentence_end": "None",
+        "trap_type": "Added information",
+        "skill": "Identifying text scope",
+        "difficulty": "Easy",
+        "common_mistake": "Applying outside general knowledge about plants instead of strictly using the text."
+      },
+      "correct_answers": ["NOT GIVEN"],
+      "explanation": "Although plants generally improve air quality, the passage never mentions air quality in the text.",
+      "citation_excerpt": ""
+    },
+    {
+      "question_number": 12,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in the reading passage? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Researchers found that climate affects the amount of energy saved.",
+        "keywords": ["climate", "varies"],
+        "paragraph": "C",
+        "sentence_start": "C4",
+        "sentence_end": "C4",
+        "trap_type": "None",
+        "skill": "Factor correlation analysis",
+        "difficulty": "Easy",
+        "common_mistake": "Failing to link climate as a variance factor in the research findings."
+      },
+      "correct_answers": ["TRUE"],
+      "explanation": "Paragraph C notes that researchers reported energy savings, although the amount varies according to climate, roof size, and plant type.",
+      "citation_excerpt": "Researchers have reported energy savings in many cities, although the amount varies according to climate, roof size, and plant type."
+    },
+    {
+      "question_number": 13,
+      "question_type": "tfng",
+      "instruction_text": "Do the following statements agree with the information given in the reading passage? Write TRUE, FALSE, or NOT GIVEN.",
+      "question_data": {
+        "text": "Experts believe green roofs should be the only solution for sustainable cities.",
+        "keywords": ["broader strategy"],
+        "paragraph": "G",
+        "sentence_start": "G4",
+        "sentence_end": "G4",
+        "trap_type": "Exclusive wording",
+        "skill": "Identifying sole vs shared solutions",
+        "difficulty": "Easy",
+        "common_mistake": "Assuming a single recommended technique is the exclusive solution."
+      },
+      "correct_answers": ["FALSE"],
+      "explanation": "Paragraph G states experts agree green roofs should be considered 'part of a broader strategy' rather than the only solution.",
+      "citation_excerpt": "Experts agree that green roofs should be considered as part of a broader strategy for creating more sustainable cities."
+    }
+  ]
+}

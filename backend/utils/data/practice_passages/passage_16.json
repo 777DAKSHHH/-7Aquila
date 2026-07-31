@@ -1,0 +1,157 @@
+{
+  "title": "Practice Passage 16: How Coffee is Processed from Seed to Cup",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "How Coffee is Processed from Seed to Cup",
+    "sub_title": "Tracing harvesting, wet pulping, tank fermentation, patio drying, parchment hulling, and drum roasting.",
+    "content_html": "<p><strong>Paragraph A</strong></p><p><strong>[A1]</strong> The journey of coffee from a simple seed to a morning beverage is a complex industrial process. <strong>[A2]</strong> The coffee plant produces small red fruits known as coffee cherries. <strong>[A3]</strong> Inside each cherry, two seeds are found, which are eventually roasted to become coffee beans. <strong>[A4]</strong> Processing must begin immediately after harvesting to prevent the cherries from spoiling.</p><p><strong>Paragraph B</strong></p><p><strong>[B1]</strong> The first major stage is harvesting, which is typically done by hand. <strong>[B2]</strong> Workers select only the ripe red cherries, leaving unripe green cherries on the branches. <strong>[B3]</strong> Once harvested, the cherries are transported to a processing facility where they are cleaned. <strong>[B4]</strong> Floating cherries are removed, as they are dry and of lower quality.</p><p><strong>Paragraph C</strong></p><p><strong>[C1]</strong> Next, the outer skin and pulp of the cherry must be separated from the inner seeds. <strong>[C2]</strong> In the wet processing method, a machine called a pulper squeezes the cherries to remove the skin. <strong>[C3]</strong> The seeds, which are still covered in a sticky layer of mucilage, are then placed in large fermentation tanks. <strong>[C4]</strong> Fermentation breaks down the sticky mucilage layer over a period of 12 to 36 hours.</p><p><strong>Paragraph D</strong></p><p><strong>[D1]</strong> After fermentation, the beans are thoroughly washed with clean water. <strong>[D2]</strong> They must then be dried to reduce their moisture content to around 11 percent. <strong>[D3]</strong> Drying is completed by spreading the beans on concrete patios under the sun or using mechanical dryers. <strong>[D4]</strong> Workers rake the beans regularly to ensure they dry evenly and prevent mold growth.</p><p><strong>Paragraph E</strong></p><p><strong>[E1]</strong> The dry beans are covered in a protective paper-like layer called parchment. <strong>[E2]</strong> Before export, this parchment layer is removed by a machine during a process called hulling. <strong>[E3]</strong> The hulled beans are referred to as green coffee because of their color. <strong>[E4]</strong> These green beans are sorted by size, weight, and density to ensure uniform quality.</p><p><strong>Paragraph F</strong></p><p><strong>[F1]</strong> The final critical step is roasting, which transforms the chemical properties of the green beans. <strong>[F2]</strong> Roasters use high-temperature rotating drums to heat the beans to between 200 and 240 degrees Celsius. <strong>[F3]</strong> During roasting, the beans expand, change color to brown, and release aromatic oils that create the coffee flavor. <strong>[F4]</strong> The roasted beans are cooled immediately using air or water spray.</p><p><strong>Paragraph G</strong></p><p><strong>[G1]</strong> Finally, the beans are packaged in bags with one-way valves to prevent oxygen from entering while allowing carbon dioxide to escape. <strong>[G2]</strong> Consumers grind the beans and brew them with hot water, releasing the rich flavors. <strong>[G3]</strong> This sequential process demonstrates the care required to produce high-quality coffee. <strong>[G4]</strong> Understanding this flow highlights the connection between agriculture, manufacturing, and consumer enjoyment.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the flow chart below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Step 1: Harvesting - Hand-pick ripe [blank] and discard floating ones."
+      },
+      "correct_answers": ["coffee cherries", "cherries"],
+      "explanation": "Paragraph A and B define the fruit as coffee cherries, which are picked by hand.",
+      "citation_excerpt": "The coffee plant produces small red fruits known as coffee cherries... Workers select only the ripe red cherries"
+    },
+    {
+      "question_number": 2,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the flow chart below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Step 2: Pulping - Squeeze cherries in a mechanical [blank] to remove outer skins."
+      },
+      "correct_answers": ["pulper"],
+      "explanation": "Paragraph C notes a machine called a pulper squeezes the skin off.",
+      "citation_excerpt": "machine called a pulper squeezes the cherries to remove the skin."
+    },
+    {
+      "question_number": 3,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the flow chart below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Step 3: Fermentation - Store seeds in [blank] to break down sticky mucilage."
+      },
+      "correct_answers": ["fermentation tanks", "tanks"],
+      "explanation": "Paragraph C states seeds go into fermentation tanks to dissolve the mucilage.",
+      "citation_excerpt": "seeds... are then placed in large fermentation tanks. Fermentation breaks down the sticky mucilage layer"
+    },
+    {
+      "question_number": 4,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the flow chart below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Step 4: Washing & Drying - Wash beans and spread on concrete [blank] to dry under the sun."
+      },
+      "correct_answers": ["patios", "concrete patios"],
+      "explanation": "Paragraph D explains drying is completed on concrete patios or dryers.",
+      "citation_excerpt": "Drying is completed by spreading the beans on concrete patios under the sun"
+    },
+    {
+      "question_number": 5,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the flow chart below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Step 4: Washing & Drying - Rake regularly to prevent [blank] and ensure even drying."
+      },
+      "correct_answers": ["mold", "mold growth"],
+      "explanation": "Paragraph D states workers rake the beans to prevent mold growth.",
+      "citation_excerpt": "Workers rake the beans regularly to ensure they dry evenly and prevent mold growth."
+    },
+    {
+      "question_number": 6,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the flow chart below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Step 4: Washing & Drying - Continue drying until [blank] drops to 11%."
+      },
+      "correct_answers": ["moisture content", "moisture"],
+      "explanation": "Paragraph D states drying reduces moisture content to 11 percent.",
+      "citation_excerpt": "dried to reduce their moisture content to around 11 percent."
+    },
+    {
+      "question_number": 7,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the flow chart below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Step 5: Hulling - Remove the outer [blank] layer using a machine."
+      },
+      "correct_answers": ["parchment"],
+      "explanation": "Paragraph E states hulling machines remove the protective parchment layer.",
+      "citation_excerpt": "covered in a protective paper-like layer called parchment. Before export, this parchment layer is removed"
+    },
+    {
+      "question_number": 8,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the flow chart below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Step 6: Sorting - Inspect and sort [blank] by size and weight."
+      },
+      "correct_answers": ["green coffee", "green beans", "beans"],
+      "explanation": "Paragraph E explains green coffee beans are sorted for quality control.",
+      "citation_excerpt": "referred to as green coffee because of their color. These green beans are sorted by size, weight"
+    },
+    {
+      "question_number": 9,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the flow chart below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Step 7: Roasting - Place in rotating [blank] heated to high temperatures."
+      },
+      "correct_answers": ["drums", "rotating drums"],
+      "explanation": "Paragraph F states roasters use high-temperature rotating drums.",
+      "citation_excerpt": "Roasters use high-temperature rotating drums to heat the beans"
+    },
+    {
+      "question_number": 10,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the flow chart below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Step 7: Roasting - Heat beans to trigger expansion and release [blank] which give flavor."
+      },
+      "correct_answers": ["aromatic oils", "oils"],
+      "explanation": "Paragraph F notes roasting releases aromatic oils.",
+      "citation_excerpt": "roasting, the beans expand, change color to brown, and release aromatic oils that create the coffee flavor."
+    },
+    {
+      "question_number": 11,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the flow chart below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Step 7: Roasting - Cool immediately with air or [blank]."
+      },
+      "correct_answers": ["water spray", "water"],
+      "explanation": "Paragraph F notes roasted beans are cooled immediately using air or water spray.",
+      "citation_excerpt": "The roasted beans are cooled immediately using air or water spray."
+    },
+    {
+      "question_number": 12,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the flow chart below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Step 8: Packaging - Seal in bags with [blank] to keep oxygen out."
+      },
+      "correct_answers": ["one-way valves", "valves"],
+      "explanation": "Paragraph G states bags are sealed with one-way valves.",
+      "citation_excerpt": "packaged in bags with one-way valves to prevent oxygen from entering"
+    },
+    {
+      "question_number": 13,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the flow chart below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Step 8: Packaging - Valved bags allow [blank] to escape safely."
+      },
+      "correct_answers": ["carbon dioxide", "gas"],
+      "explanation": "Paragraph G states valves allow carbon dioxide to escape.",
+      "citation_excerpt": "prevent oxygen from entering while allowing carbon dioxide to escape."
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "title": "Practice Passage 13: The Search for Liquid Water on Mars",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Search for Liquid Water on Mars",
+    "sub_title": "Investigating ancient riverbeds, mineral deposits, subsurface ice lakes, and slope lineae on the Red Planet.",
+    "content_html": "<p><strong>Paragraph A</strong></p><p><strong>[A1]</strong> For decades, Mars has been the primary target for planetary scientists searching for extraterrestrial life. <strong>[A2]</strong> The planet is cold, dry, and has a very thin atmosphere, making the surface hostile to modern life forms. <strong>[A3]</strong> However, satellite images show features that resemble dried riverbeds and lake basins. <strong>[A4]</strong> These geological markings suggest that liquid water once flowed across the Martian surface in the ancient past.</p><p><strong>Paragraph B</strong></p><p><strong>[B1]</strong> Liquid water is considered the most critical ingredient for life as we know it. <strong>[B2]</strong> On Earth, wherever liquid water is found, microbial life typically exists. <strong>[B3]</strong> Planetary scientists believe that if Mars once possessed liquid water, it may also have supported primitive microscopic organisms. <strong>[B4]</strong> Consequently, searching for signs of water has been the central goal of Martian exploration missions.</p><p><strong>Paragraph C</strong></p><p><strong>[C1]</strong> Early robotic missions, such as the Viking landers in the 1970s, found no evidence of liquid water. <strong>[C2]</strong> The surface pressure on Mars is extremely low, meaning that liquid water would quickly evaporate or freeze. <strong>[C3]</strong> However, later rovers like Spirit and Opportunity discovered minerals that only form in the presence of water, such as hematite. <strong>[C4]</strong> These mineral discoveries confirmed that water must have persisted on Mars for long periods.</p><p><strong>Paragraph D</strong></p><p><strong>[D1]</strong> In recent years, scientists have focused on the possibility of underground water. <strong>[D2]</strong> Satellite radar scans have detected reflections beneath the ice caps at the Martian poles. <strong>[D3]</strong> Some researchers believe these reflections indicate the presence of large lakes of liquid water sealed deep beneath the ice. <strong>[D4]</strong> However, other scientists argue that the radar reflections could be caused by clay minerals or volcanic rock.</p><p><strong>Paragraph E</strong></p><p><strong>[E1]</strong> Another area of interest is the seasonal appearance of dark streaks on Martian slopes. <strong>[E2]</strong> These features, known as recurring slope lineae, appear during warm seasons and fade during colder months. <strong>[E3]</strong> Some experts suggest they are caused by flows of salty water, or brines, which have a lower freezing point than pure water. <strong>[E4]</strong> Nevertheless, other studies suggest the streaks may simply be dry flows of dust and sand.</p><p><strong>Paragraph F</strong></p><p><strong>[F1]</strong> Analyzing Martian meteorites has also provided valuable clues. <strong>[F2]</strong> These are rocks that were blasted off the surface of Mars by asteroid impacts and eventually landed on Earth. <strong>[F3]</strong> Some meteorites contain tiny bubbles of water trapped inside their mineral structures. <strong>[F4]</strong> Testing these bubbles allows scientists to study the history and chemical composition of ancient Martian water directly.</p><p><strong>Paragraph G</strong></p><p><strong>[G1]</strong> The search for Martian water continues with advanced rovers and planned sample-return missions. <strong>[G2]</strong> Scientists hope to bring rocks back to Earth where they can be analyzed in sophisticated laboratories. <strong>[G3]</strong> Determining whether Mars ever supported life remains one of the greatest scientific quests of our era. <strong>[G4]</strong> Finding even fossilized microbes would transform our understanding of our place in the universe.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Planetary scientists searching for signs of life target Mars, although the surface is considered [blank] due to freezing, dry conditions."
+      },
+      "correct_answers": ["hostile"],
+      "explanation": "Paragraph A notes that Mars is cold, dry, and has a thin atmosphere, making the surface hostile to life forms.",
+      "citation_excerpt": "The planet is cold, dry, and has a very thin atmosphere, making the surface hostile to modern life forms."
+    },
+    {
+      "question_number": 2,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Satellite photographs reveal geographic patterns resembling dried [blank] and lake basins."
+      },
+      "correct_answers": ["riverbeds", "dried riverbeds"],
+      "explanation": "Paragraph A states satellite images show features that resemble dried riverbeds.",
+      "citation_excerpt": "However, satellite images show features that resemble dried riverbeds and lake basins."
+    },
+    {
+      "question_number": 3,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Liquid water is the most important element needed to support [blank] as we know it."
+      },
+      "correct_answers": ["life"],
+      "explanation": "Paragraph B states liquid water is the most critical ingredient for life.",
+      "citation_excerpt": "Liquid water is considered the most critical ingredient for life as we know it."
+    },
+    {
+      "question_number": 4,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "On Earth, [blank] is found in any location containing liquid water."
+      },
+      "correct_answers": ["microbial life", "life"],
+      "explanation": "Paragraph B explains that on Earth, microbial life typically exists wherever water is found.",
+      "citation_excerpt": "On Earth, wherever liquid water is found, microbial life typically exists."
+    },
+    {
+      "question_number": 5,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Viking landers did not locate any evidence of water because Mars's [blank] is very low."
+      },
+      "correct_answers": ["surface pressure", "pressure"],
+      "explanation": "Paragraph C explains that Viking landers found no water, since low surface pressure causes water to freeze or evaporate.",
+      "citation_excerpt": "Viking landers in the 1970s, found no evidence of liquid water. The surface pressure on Mars is extremely low, meaning..."
+    },
+    {
+      "question_number": 6,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Opportunity and Spirit rovers discovered [blank], which is a mineral that forms only in watery conditions."
+      },
+      "correct_answers": ["hematite"],
+      "explanation": "Paragraph C states Spirit and Opportunity discovered hematite, which forms only in water.",
+      "citation_excerpt": " Opportunity discovered minerals that only form in the presence of water, such as hematite."
+    },
+    {
+      "question_number": 7,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Radar scans have identified reflections underneath Martian polar [blank]."
+      },
+      "correct_answers": ["ice caps", "polar ice caps"],
+      "explanation": "Paragraph D states radar scans detected reflections beneath the ice caps at Martian poles.",
+      "citation_excerpt": "Satellite radar scans have detected reflections beneath the ice caps at the Martian poles."
+    },
+    {
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Some researchers suggest subsurface reflections correspond to trapped liquid water, but others suggest [blank] or volcanic rock."
+      },
+      "correct_answers": ["clay minerals", "clay"],
+      "explanation": "Paragraph D notes that some scientists believe reflections could be clay minerals or volcanic rock.",
+      "citation_excerpt": "other scientists argue that the radar reflections could be caused by clay minerals or volcanic rock."
+    },
+    {
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Streaks appearing during hot seasons on Martian slopes are known as [blank]."
+      },
+      "correct_answers": ["recurring slope lineae", "slope lineae"],
+      "explanation": "Paragraph E defines dark streaks on Martian slopes as recurring slope lineae.",
+      "citation_excerpt": "These features, known as recurring slope lineae, appear during warm seasons and fade during colder months."
+    },
+    {
+      "question_index": 9,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Slope lineae could be caused by salty water, also known as [blank]."
+      },
+      "correct_answers": ["brines", "salty water"],
+      "explanation": "Paragraph E notes slope lineae might be caused by salty water, or brines, which have a lower freezing point.",
+      "citation_excerpt": "flows of salty water, or brines, which have a lower freezing point than pure water."
+    },
+    {
+      "question_number": 11,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Martian rocks are blasted into space by [blank] before landing on Earth as meteorites."
+      },
+      "correct_answers": ["asteroid impacts", "impacts"],
+      "explanation": "Paragraph F notes that Martian meteorites are rocks blasted off Mars by asteroid impacts.",
+      "citation_excerpt": "These are rocks that were blasted off the surface of Mars by asteroid impacts and eventually landed on Earth."
+    },
+    {
+      "question_number": 12,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Meteorites contain water trapped in mineral structures inside tiny [blank]."
+      },
+      "correct_answers": ["bubbles", "tiny bubbles"],
+      "explanation": "Paragraph F states meteorites contain tiny bubbles of water trapped inside their mineral structures.",
+      "citation_excerpt": "Some meteorites contain tiny bubbles of water trapped inside their mineral structures."
+    },
+    {
+      "question_number": 13,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Finding fossilized Martian [blank] would change our perspective of our role in the universe."
+      },
+      "correct_answers": ["microbes", "fossilized microbes"],
+      "explanation": "Paragraph G notes that finding fossilized microbes would transform our understanding.",
+      "citation_excerpt": "Finding even fossilized microbes would transform our understanding of our place in the universe."
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "title": "Practice Passage 15: The Rise of Biodegradable Plastics",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Rise of Biodegradable Plastics",
+    "sub_title": "Examining Polylactic Acid (PLA), Polyhydroxyalkanoates (PHA), industrial composting requirements, and sorting challenges.",
+    "content_html": "<p><strong>Paragraph A</strong></p><p><strong>[A1]</strong> Traditional plastics have created a massive environmental crisis. <strong>[A2]</strong> Because they are made from petroleum, these materials can take hundreds of years to break down in landfills. <strong>[A3]</strong> Much of this waste ends up in oceans, harming marine life and breaking into tiny particles known as microplastics. <strong>[A4]</strong> In response, scientists are developing biodegradable plastics as a sustainable alternative.</p><p><strong>Paragraph B</strong></p><p><strong>[B1]</strong> Biodegradable plastics are designed to decompose naturally through the action of living organisms like bacteria and fungi. <strong>[B2]</strong> Unlike conventional plastics, which simply shatter into smaller plastic fragments, biodegradable materials are converted into water, carbon dioxide, and organic compost. <strong>[B3]</strong> This conversion process prevents the accumulation of long-lasting synthetic chemicals in the environment. <strong>[B4]</strong> It represents a major step toward creating a circular economy.</p><p><strong>Paragraph C</strong></p><p><strong>[C1]</strong> One of the most common types of biodegradable plastic is Polylactic Acid, or PLA. <strong>[C2]</strong> PLA is made from plant-based starches, typically derived from corn or sugarcane. <strong>[C3]</strong> Because it is produced from agricultural crops, PLA has a much lower carbon footprint than petroleum-based plastics. <strong>[C4]</strong> It is widely used for food packaging, disposable cups, and 3D printing filaments.</p><p><strong>Paragraph D</strong></p><p><strong>[D1]</strong> Another promising category is Polyhydroxyalkanoates, commonly known as PHAs. <strong>[D2]</strong> PHAs are produced naturally by bacteria during the fermentation of sugars or lipids. <strong>[D3]</strong> The bacteria store PHA inside their cells as an energy reserve, similar to how animals store fat. <strong>[D4]</strong> PHAs are highly biodegradable and can decompose in marine environments within a few months, unlike PLA.</p><p><strong>Paragraph E</strong></p><p><strong>[E1]</strong> Despite their benefits, biodegradable plastics face significant challenges. <strong>[E2]</strong> A major issue is that most of these materials require industrial composting facilities to decompose. <strong>[E3]</strong> In these facilities, high temperatures and specific humidity levels are maintained to support microbial activity. <strong>[E4]</strong> If a biodegradable cup is simply thrown into a standard landfill, it may remain intact for decades due to a lack of oxygen.</p><p><strong>Paragraph F</strong></p><p><strong>[F1]</strong> Labeling and sorting also create confusion for consumers and waste management systems. <strong>[F2]</strong> Many people cannot distinguish between recyclable, biodegradable, and compostable plastics. <strong>[F3]</strong> If biodegradable plastics are mixed with traditional plastics during recycling, they can ruin the quality of the recycled material. <strong>[F4]</strong> Clearer standards and sorting technologies are required to resolve this mixing problem.</p><p><strong>Paragraph G</strong></p><p><strong>[G1]</strong> Ultimately, biodegradable plastics are only one part of the solution to plastic pollution. <strong>[G2]</strong> Experts emphasize that reducing overall plastic consumption remains the most effective environmental strategy. <strong>[G3]</strong> Developing better recycling infrastructures and using reusable containers are also critical components. <strong>[G4]</strong> Biodegradable materials are valuable tools, but changing consumer behavior is essential for long-term sustainability.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the notes below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Traditional plastic issues: Made from [blank], which takes centuries to degrade."
+      },
+      "correct_answers": ["petroleum"],
+      "explanation": "Paragraph A states traditional plastics are made from petroleum, causing degradation delays.",
+      "citation_excerpt": "Because they are made from petroleum, these materials can take hundreds of years to break down"
+    },
+    {
+      "question_number": 2,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the notes below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Traditional plastic issues: Fragment into ocean pollutants called [blank], harming marine ecosystems."
+      },
+      "correct_answers": ["microplastics"],
+      "explanation": "Paragraph A states ocean waste breaks down into microplastics.",
+      "citation_excerpt": "waste ends up in oceans, harming marine life and breaking into tiny particles known as microplastics."
+    },
+    {
+      "question_number": 3,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the notes below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Biodegradation Process: Decomposed naturally by organisms such as [blank] and fungi."
+      },
+      "correct_answers": ["bacteria"],
+      "explanation": "Paragraph B states biodegradable plastics decompose through the action of bacteria and fungi.",
+      "citation_excerpt": "decompose naturally through the action of living organisms like bacteria and fungi."
+    },
+    {
+      "question_number": 4,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the notes below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Biodegradation Process: Converted into water, carbon dioxide, and [blank] rather than synthetics."
+      },
+      "correct_answers": ["organic compost", "compost"],
+      "explanation": "Paragraph B explains that biodegradable materials convert to water, CO2, and organic compost.",
+      "citation_excerpt": "biodegradable materials are converted into water, carbon dioxide, and organic compost."
+    },
+    {
+      "question_number": 5,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the notes below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "PLA Characteristics: Formed from plant-based [blank]."
+      },
+      "correct_answers": ["starches", "plant-based starches"],
+      "explanation": "Paragraph C notes PLA is made from plant-based starches.",
+      "citation_excerpt": "PLA is made from plant-based starches, typically derived from corn or sugarcane."
+    },
+    {
+      "question_number": 6,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the notes below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "PLA Characteristics: Compared to petroleum plastics, it has a lower [blank]."
+      },
+      "correct_answers": ["carbon footprint"],
+      "explanation": "Paragraph C states agricultural sources give PLA a lower carbon footprint.",
+      "citation_excerpt": "Because it is produced from agricultural crops, PLA has a much lower carbon footprint than petroleum-based plastics."
+    },
+    {
+      "question_number": 7,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the notes below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "PHA Characteristics: Produced by bacteria during [blank] processes."
+      },
+      "correct_answers": ["fermentation"],
+      "explanation": "Paragraph D states PHAs are produced by bacteria during sugar/lipid fermentation.",
+      "citation_excerpt": "PHAs are produced naturally by bacteria during the fermentation of sugars or lipids."
+    },
+    {
+      "question_number": 8,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the notes below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "PHA Characteristics: Bacteria store PHA internally as an [blank] similar to fat."
+      },
+      "correct_answers": ["energy reserve", "reserve"],
+      "explanation": "Paragraph D explains that bacteria store PHA internally as an energy reserve.",
+      "citation_excerpt": "The bacteria store PHA inside their cells as an energy reserve, similar to how animals store fat."
+    },
+    {
+      "question_number": 9,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the notes below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "PHA Characteristics: Capable of decaying in [blank] within months."
+      },
+      "correct_answers": ["marine environments", "oceans"],
+      "explanation": "Paragraph D explains PHA degrades in marine environments quickly.",
+      "citation_excerpt": "PHAs are highly biodegradable and can decompose in marine environments within a few months, unlike PLA."
+    },
+    {
+      "question_number": 10,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the notes below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Composting Obstacles: Most require specialized [blank] to decompose."
+      },
+      "correct_answers": ["composting facilities", "industrial composting", "facilities"],
+      "explanation": "Paragraph E explains most biodegradable plastics require industrial composting facilities.",
+      "citation_excerpt": "A major issue is that most of these materials require industrial composting facilities to decompose."
+    },
+    {
+      "question_number": 11,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the notes below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Composting Obstacles: Standard landfills inhibit degradation due to a lack of [blank]."
+      },
+      "correct_answers": ["oxygen"],
+      "explanation": "Paragraph E explains that standard landfills lack oxygen, keeping items intact.",
+      "citation_excerpt": "thrown into a standard landfill, it may remain intact for decades due to a lack of oxygen."
+    },
+    {
+      "question_number": 12,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the notes below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Sorting Problems: Consumers experience [blank] when trying to differentiate plastic types."
+      },
+      "correct_answers": ["confusion"],
+      "explanation": "Paragraph F notes labeling and sorting create confusion for consumers.",
+      "citation_excerpt": "Labeling and sorting also create confusion for consumers and waste management systems."
+    },
+    {
+      "question_number": 13,
+      "question_type": "short_answer",
+      "instruction_text": "Complete the notes below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Sorting Problems: Mixing biodegradable items with recyclable plastics degrades the [blank] of recycled output."
+      },
+      "correct_answers": ["quality"],
+      "explanation": "Paragraph F states mixing biodegradable and traditional plastics ruins the quality of recycled material.",
+      "citation_excerpt": "If biodegradable plastics are mixed with traditional plastics during recycling, they can ruin the quality of the recycled material."
+    }
+  ]
+}

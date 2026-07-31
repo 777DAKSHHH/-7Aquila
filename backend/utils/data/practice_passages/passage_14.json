@@ -1,0 +1,157 @@
+{
+  "title": "Practice Passage 14: The Future of Cashless Economies",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "The Future of Cashless Economies",
+    "sub_title": "Analyzing the benefits, systemic risks, social exclusion, and privacy concerns in digital financial transitions.",
+    "content_html": "<p><strong>Paragraph A</strong></p><p><strong>[A1]</strong> The global financial system is undergoing a massive shift away from physical cash. <strong>[A2]</strong> In many modern nations, transactions are completed digitally using credit cards, mobile apps, and online transfers. <strong>[A3]</strong> Although paper currency has existed for centuries, its daily use is declining rapidly. <strong>[A4]</strong> Many economists believe that several countries will become almost entirely cashless within the next decade.</p><p><strong>Paragraph B</strong></p><p><strong>[B1]</strong> Proponents of a cashless society highlight several key benefits. <strong>[B2]</strong> Digital payments are highly convenient, allowing consumers to complete purchases instantly without carrying heavy coins or paper notes. <strong>[B3]</strong> For businesses, electronic transactions reduce the costs and risks of handling cash, such as theft and counting errors. <strong>[B4]</strong> Furthermore, governments can track digital payments more easily, helping to reduce tax evasion and financial crimes.</p><p><strong>Paragraph C</strong></p><p><strong>[C1]</strong> However, the transition to digital-only payments also presents serious challenges. <strong>[C2]</strong> A major concern is the risk of system failures and cyberattacks. <strong>[C3]</strong> If a country's electronic payment network crashes due to technical issues, economic activity can halt immediately. <strong>[C4]</strong> Without a cash backup, citizens may find themselves unable to purchase basic necessities like food or medicine during emergencies.</p><p><strong>Paragraph D</strong></p><p><strong>[D1]</strong> Another critical issue is social exclusion. <strong>[D2]</strong> Elderly citizens, low-income individuals, and rural residents may lack access to smartphone technology or bank accounts. <strong>[D3]</strong> These populations, often referred to as the unbanked, rely heavily on cash for daily survival. <strong>[D4]</strong> Forcing a rapid shift to digital payments risks locking vulnerable groups out of the modern economy.</p><p><strong>Paragraph E</strong></p><p><strong>[E1]</strong> Privacy advocates also express concerns about a cashless world. <strong>[E2]</strong> Every digital transaction leaves a permanent electronic record, detailing what was purchased, when, and where. <strong>[E3]</strong> This data is routinely collected and analyzed by banks, technology corporations, and marketing agencies. <strong>[E4]</strong> Critics warn that without cash, citizens lose their right to complete anonymous purchases, increasing corporate surveillance.</p><p><strong>Paragraph F</strong></p><p><strong>[F1]</strong> Different countries are adopting diverse paths toward a cashless state. <strong>[F2]</strong> In Sweden, cash is rarely accepted, and even small children use debit cards. <strong>[F3]</strong> In contrast, countries like Germany have resisted a cashless shift, with citizens preferring cash for privacy and budget control. <strong>[F4]</strong> These national variations demonstrate that cultural preferences play an important role in financial evolution.</p><p><strong>Paragraph G</strong></p><p><strong>[G1]</strong> Ultimately, the transition away from cash requires careful management. <strong>[G2]</strong> Governments must ensure that electronic networks are secure and that cash remains a valid payment option for vulnerable citizens. <strong>[G3]</strong> A balanced approach that protects privacy while utilizing digital convenience is necessary. <strong>[G4]</strong> The future of money is digital, but physical cash will likely remain a necessary backup for years to come.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "The international financial system is transitioning away from [blank] currency, which is declining in daily usage."
+      },
+      "correct_answers": ["physical cash", "cash"],
+      "explanation": "Paragraph A states the global system is undergoing a shift away from physical cash.",
+      "citation_excerpt": "The global financial system is undergoing a massive shift away from physical cash."
+    },
+    {
+      "question_number": 2,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Although [blank] has existed for centuries, many countries are expected to become cashless within ten years."
+      },
+      "correct_answers": ["paper currency", "currency"],
+      "explanation": "Paragraph A explains paper currency has existed for centuries but is declining.",
+      "citation_excerpt": "Although paper currency has existed for centuries, its daily use is declining rapidly."
+    },
+    {
+      "question_number": 3,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Supporters note digital formats are convenient and let buyers transact without carrying heavy coins or [blank]."
+      },
+      "correct_answers": ["paper notes", "notes"],
+      "explanation": "Paragraph B states digital formats let consumers buy instantly without carrying coins or paper notes.",
+      "citation_excerpt": "allowing consumers to complete purchases instantly without carrying heavy coins or paper notes."
+    },
+    {
+      "question_number": 4,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Businesses find digital payments reduce processing costs and lower risks like [blank] or calculation errors."
+      },
+      "correct_answers": ["theft"],
+      "explanation": "Paragraph B explains that electronic transactions reduce costs and risks such as theft and counting errors.",
+      "citation_excerpt": "reduce the costs and risks of handling cash, such as theft and counting errors."
+    },
+    {
+      "question_number": 5,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Governments can track digital exchanges, lowering [blank] and other illegal activities."
+      },
+      "correct_answers": ["tax evasion"],
+      "explanation": "Paragraph B notes that tracking digital payments helps reduce tax evasion and financial crimes.",
+      "citation_excerpt": "helping to reduce tax evasion and financial crimes."
+    },
+    {
+      "question_number": 6,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Conversely, the digital transition has issues, primarily the threat of cyberattacks or [blank]."
+      },
+      "correct_answers": ["system failures", "failures"],
+      "explanation": "Paragraph C notes a major concern is the risk of system failures and cyberattacks.",
+      "citation_excerpt": "A major concern is the risk of system failures and cyberattacks."
+    },
+    {
+      "question_number": 7,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Technical glitches that crash networks can instantly stop [blank]."
+      },
+      "correct_answers": ["economic activity", "activity"],
+      "explanation": "Paragraph C notes that network crashes cause economic activity to halt.",
+      "citation_excerpt": "If a country's electronic payment network crashes due to technical issues, economic activity can halt immediately."
+    },
+    {
+      "question_number": 8,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Under network failures, residents might not be able to acquire essential goods like food or [blank]."
+      },
+      "correct_answers": ["medicine"],
+      "explanation": "Paragraph C states that without cash, citizens cannot buy food or medicine during emergencies.",
+      "citation_excerpt": "Without a cash backup, citizens may find themselves unable to purchase basic necessities like food or medicine during emergencies."
+    },
+    {
+      "question_number": 9,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Social exclusion is another challenge. Vulnerable groups, sometimes called the [blank], depend on cash to live."
+      },
+      "correct_answers": ["unbanked"],
+      "explanation": "Paragraph D states that elderly, low-income, and rural citizens who lack tech are called the unbanked.",
+      "citation_excerpt": "These populations, often referred to as the unbanked, rely heavily on cash for daily survival."
+    },
+    {
+      "question_number": 10,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Digital payments leave trace records, which banks and [blank] collect and analyze."
+      },
+      "correct_answers": ["technology corporations", "corporations"],
+      "explanation": "Paragraph E states transactional history is analyzed by banks, tech corporations, and marketing groups.",
+      "citation_excerpt": "This data is routinely collected and analyzed by banks, technology corporations, and marketing agencies."
+    },
+    {
+      "question_number": 11,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Critics warn that electronic records threaten anonymous transactions, which leads to more [blank]."
+      },
+      "correct_answers": ["corporate surveillance", "surveillance"],
+      "explanation": "Paragraph E states that losing anonymous purchases increases corporate surveillance.",
+      "citation_excerpt": "citizens lose their right to complete anonymous purchases, increasing corporate surveillance."
+    },
+    {
+      "question_number": 12,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "Adoption rates vary. For example, [blank] rarely accepts physical cash, and kids use debit cards."
+      },
+      "correct_answers": ["Sweden"],
+      "explanation": "Paragraph F notes Sweden is almost cashless, and cash is rarely accepted.",
+      "citation_excerpt": "In Sweden, cash is rarely accepted, and even small children use debit cards."
+    },
+    {
+      "question_number": 13,
+      "question_type": "summary_completion",
+      "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question_data": {
+        "text": "On the other hand, [blank] has resisted cash elimination because citizens value privacy and budget control."
+      },
+      "correct_answers": ["Germany"],
+      "explanation": "Paragraph F notes Germany resists cashless payment, preferring cash for budget control.",
+      "citation_excerpt": "In contrast, countries like Germany have resisted a cashless shift, with citizens preferring cash for privacy..."
+    }
+  ]
+}

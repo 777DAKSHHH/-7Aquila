@@ -46,6 +46,7 @@ export const getReadingTests = async (filters = {}) => {
         difficulty,
         duration_minutes,
         test_set_id,
+        created_at,
         test_sets (
           name,
           description,
@@ -55,7 +56,8 @@ export const getReadingTests = async (filters = {}) => {
           id,
           passage_number,
           reading_questions (
-            id
+            id,
+            question_type
           )
         )
       `)

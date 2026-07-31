@@ -19,6 +19,14 @@ const TestTopicCard = ({ test }) => {
     }
   };
 
+  const isNewTest = (createdAt) => {
+    if (!createdAt) return false;
+    const createdDate = new Date(createdAt);
+    const diffTime = Math.abs(new Date() - createdDate);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays <= 14;
+  };
+
   const handleStartTest = () => {
     navigate(`/speaking-test-interface?testSetId=${test?.id}`);
   };
@@ -30,9 +38,11 @@ const TestTopicCard = ({ test }) => {
           <h3 className="text-lg md:text-xl font-heading font-semibold text-foreground mb-2">
             {test?.name}
           </h3>
-          <p className="text-sm md:text-base text-muted-foreground font-caption line-clamp-2">
-            {test?.description}
-          </p>
+          {test?.description && (
+            <p className="text-sm md:text-base text-muted-foreground font-caption line-clamp-2">
+              {test?.description}
+            </p>
+          )}
         </div>
         <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 ml-3">
           <Icon name="MessageSquare" size={20} color="var(--color-primary)" />
@@ -46,6 +56,11 @@ const TestTopicCard = ({ test }) => {
           <Icon name="Clock" size={16} />
           <span className="text-xs md:text-sm font-caption">15 min</span>
         </div>
+        {isNewTest(test?.created_at) && (
+          <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider font-mono bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400 border border-blue-200 dark:border-blue-800/40 animate-pulse">
+            New Added
+          </span>
+        )}
         {test?.previousAttempts > 0 && (
           <div className="flex items-center gap-1 text-muted-foreground">
             <Icon name="RotateCcw" size={16} />

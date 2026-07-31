@@ -1,0 +1,374 @@
+{
+  "title": "Practice Passage 20: Hidden Cities Beneath the Forest",
+  "test_type": "academic",
+  "difficulty": "intermediate",
+  "duration_minutes": 20,
+  "passage": {
+    "passage_number": 1,
+    "title": "Hidden Cities Beneath the Forest",
+    "sub_title": "How airborne laser scanning (LiDAR) is revealing massive, interconnected ancient urban centers beneath tropical rainforests.",
+    "content_html": "<p><strong>Paragraph A</strong></p><p><strong>[A1]</strong> For many years, archaeologists believed that dense tropical forests prevented the development of large, organised cities. <strong>[A2]</strong> Thick vegetation made exploration extremely difficult, while heavy rainfall often damaged ancient structures. <strong>[A3]</strong> As a result, researchers assumed that only small communities had lived in many rainforest regions. <strong>[A4]</strong> Recent discoveries, however, have challenged this long-standing belief.</p><p><strong>Paragraph B</strong></p><p><strong>[B1]</strong> One of the most significant advances has been the use of airborne laser scanning, often called LiDAR. <strong>[B2]</strong> Instead of relying only on photographs, this technology sends millions of laser pulses towards the ground from an aircraft. <strong>[B3]</strong> Some of these pulses pass through gaps in the tree canopy and reach the surface below. <strong>[B4]</strong> Computers then create detailed maps that reveal features hidden beneath the vegetation.</p><p><strong>Paragraph C</strong></p><p><strong>[C1]</strong> Using this technology, researchers have identified roads, reservoirs, terraces, and building foundations that were previously invisible. <strong>[C2]</strong> Many of these structures appear to be connected through carefully planned networks. <strong>[C3]</strong> This suggests that ancient populations were larger and more organised than earlier generations of archaeologists had imagined. <strong>[C4]</strong> The discoveries have encouraged scholars to reconsider traditional theories about rainforest civilisations.</p><p><strong>Paragraph D</strong></p><p><strong>[D1]</strong> Although LiDAR provides remarkable images, archaeologists emphasise that it cannot replace fieldwork. <strong>[D2]</strong> Maps produced by computers must still be checked on the ground. <strong>[D3]</strong> Excavations are necessary to determine the age, purpose, and history of each structure. <strong>[D4]</strong> Technology therefore assists archaeological research rather than replacing established scientific methods.</p><p><strong>Paragraph E</strong></p><p><strong>[E1]</strong> The new discoveries have also highlighted the engineering abilities of ancient societies. <strong>[E2]</strong> Large water reservoirs indicate careful planning for dry seasons. <strong>[E3]</strong> Raised agricultural fields suggest that people modified difficult landscapes to improve food production. <strong>[E4]</strong> Such achievements demonstrate sophisticated environmental knowledge rather than simple survival techniques.</p><p><strong>Paragraph F</strong></p><p><strong>[F1]</strong> Not everyone agrees about the interpretation of the new evidence. <strong>[F2]</strong> Some researchers believe certain structures were permanent settlements, while others argue that they were used only during particular seasons or ceremonies. <strong>[F3]</strong> Ongoing excavations continue to provide new information. <strong>[F4]</strong> Healthy scientific debate remains an essential part of archaeological research.</p><p><strong>Paragraph G</strong></p><p><strong>[G1]</strong> Beyond archaeology, these discoveries influence how modern societies view tropical forests. <strong>[G2]</strong> They remind us that landscapes often considered untouched by humans may actually contain evidence of thousands of years of human activity. <strong>[G3]</strong> Understanding this relationship may help guide future conservation efforts. <strong>[G4]</strong> The hidden cities beneath today's forests continue to reshape our understanding of both history and the natural world.</p>"
+  },
+  "questions": [
+    {
+      "question_number": 1,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for each paragraph from the list of headings below. Write the correct Roman numeral, i–ix.",
+      "question_data": {
+        "section": "Paragraph A",
+        "headings": [
+          "i. Technology reveals what the eye cannot see",
+          "ii. The importance of confirming discoveries through traditional methods",
+          "iii. Different opinions about recent findings",
+          "iv. Ancient engineering achievements",
+          "v. How new discoveries affect modern conservation",
+          "vi. Earlier misunderstandings about rainforest societies",
+          "vii. Evidence of organised urban planning",
+          "viii. The history of laser technology",
+          "ix. Problems caused by climate change"
+        ],
+        "keywords": ["misunderstandings", "believed", "assumed"],
+        "paragraph": "A",
+        "sentence_start": "A1",
+        "sentence_end": "A4",
+        "trap_type": "None",
+        "skill": "Identifying overall theme",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting engineering achievements because ancient structures are mentioned."
+      },
+      "correct_answers": ["vi"],
+      "explanation": "Paragraph A outlines the historical belief that rainforests could not support urban civilizations, showing it was a misunderstanding.",
+      "citation_excerpt": "For many years, archaeologists believed that dense tropical forests prevented... assumed that only small communities... challenged this long-standing belief."
+    },
+    {
+      "question_number": 2,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for each paragraph from the list of headings below. Write the correct Roman numeral, i–ix.",
+      "question_data": {
+        "section": "Paragraph B",
+        "headings": [
+          "i. Technology reveals what the eye cannot see",
+          "ii. The importance of confirming discoveries through traditional methods",
+          "iii. Different opinions about recent findings",
+          "iv. Ancient engineering achievements",
+          "v. How new discoveries affect modern conservation",
+          "vi. Earlier misunderstandings about rainforest societies",
+          "vii. Evidence of organised urban planning",
+          "viii. The history of laser technology",
+          "ix. Problems caused by climate change"
+        ],
+        "keywords": ["LiDAR", "laser pulses", "reveal"],
+        "paragraph": "B",
+        "sentence_start": "B1",
+        "sentence_end": "B4",
+        "trap_type": "Keyword matching",
+        "skill": "Core tech purpose mapping",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting laser history (viii) because LiDAR and laser pulses are introduced."
+      },
+      "correct_answers": ["i"],
+      "explanation": "Paragraph B focuses on how LiDAR works by sending laser pulses to create detailed maps that reveal features hidden beneath tree canopies.",
+      "citation_excerpt": "airborne laser scanning, often called LiDAR... maps that reveal features hidden beneath the vegetation."
+    },
+    {
+      "question_number": 3,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for each paragraph from the list of headings below. Write the correct Roman numeral, i–ix.",
+      "question_data": {
+        "section": "Paragraph C",
+        "headings": [
+          "i. Technology reveals what the eye cannot see",
+          "ii. The importance of confirming discoveries through traditional methods",
+          "iii. Different opinions about recent findings",
+          "iv. Ancient engineering achievements",
+          "v. How new discoveries affect modern conservation",
+          "vi. Earlier misunderstandings about rainforest societies",
+          "vii. Evidence of organised urban planning",
+          "viii. The history of laser technology",
+          "ix. Problems caused by climate change"
+        ],
+        "keywords": ["planned networks", "roads", "reservoirs"],
+        "paragraph": "C",
+        "sentence_start": "C1",
+        "sentence_end": "C4",
+        "trap_type": "Focussing on details",
+        "skill": "Settlement structure extraction",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting engineering achievements (iv) due to reservoirs and building foundations."
+      },
+      "correct_answers": ["vii"],
+      "explanation": "Paragraph C describes roads, reservoirs, and terraces connected via planned networks, which represents urban planning.",
+      "citation_excerpt": "roads, reservoirs, terraces, and building foundations... connected through carefully planned networks."
+    },
+    {
+      "question_number": 4,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for each paragraph from the list of headings below. Write the correct Roman numeral, i–ix.",
+      "question_data": {
+        "section": "Paragraph D",
+        "headings": [
+          "i. Technology reveals what the eye cannot see",
+          "ii. The importance of confirming discoveries through traditional methods",
+          "iii. Different opinions about recent findings",
+          "iv. Ancient engineering achievements",
+          "v. How new discoveries affect modern conservation",
+          "vi. Earlier misunderstandings about rainforest societies",
+          "vii. Evidence of organised urban planning",
+          "viii. The history of laser technology",
+          "ix. Problems caused by climate change"
+        ],
+        "keywords": ["fieldwork", "excavations", "checked on the ground"],
+        "paragraph": "D",
+        "sentence_start": "D1",
+        "sentence_end": "D4",
+        "trap_type": "None",
+        "skill": "Methodology analysis",
+        "difficulty": "Intermediate",
+        "common_mistake": "Believing LiDAR replaces ground checks entirely."
+      },
+      "correct_answers": ["ii"],
+      "explanation": "Paragraph D emphasizes that LiDAR maps must be checked on the ground using traditional excavations.",
+      "citation_excerpt": "cannot replace fieldwork. Maps produced by computers must still be checked on the ground. Excavations are necessary..."
+    },
+    {
+      "question_number": 5,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for each paragraph from the list of headings below. Write the correct Roman numeral, i–ix.",
+      "question_data": {
+        "section": "Paragraph E",
+        "headings": [
+          "i. Technology reveals what the eye cannot see",
+          "ii. The importance of confirming discoveries through traditional methods",
+          "iii. Different opinions about recent findings",
+          "iv. Ancient engineering achievements",
+          "v. How new discoveries affect modern conservation",
+          "vi. Earlier misunderstandings about rainforest societies",
+          "vii. Evidence of organised urban planning",
+          "viii. The history of laser technology",
+          "ix. Problems caused by climate change"
+        ],
+        "keywords": ["reservoirs", "agricultural fields", "engineering"],
+        "paragraph": "E",
+        "sentence_start": "E1",
+        "sentence_end": "E4",
+        "trap_type": "None",
+        "skill": "Concept matching",
+        "difficulty": "Intermediate",
+        "common_mistake": "Confusing general urban planning networks with structural engineering details."
+      },
+      "correct_answers": ["iv"],
+      "explanation": "Paragraph E highlights reservoirs and raised fields that prove the engineering abilities of these ancient populations.",
+      "citation_excerpt": "engineering abilities of ancient societies. Large water reservoirs indicate... Raised agricultural fields suggest..."
+    },
+    {
+      "question_number": 6,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for each paragraph from the list of headings below. Write the correct Roman numeral, i–ix.",
+      "question_data": {
+        "section": "Paragraph F",
+        "headings": [
+          "i. Technology reveals what the eye cannot see",
+          "ii. The importance of confirming discoveries through traditional methods",
+          "iii. Different opinions about recent findings",
+          "iv. Ancient engineering achievements",
+          "v. How new discoveries affect modern conservation",
+          "vi. Earlier misunderstandings about rainforest societies",
+          "vii. Evidence of organised urban planning",
+          "viii. The history of laser technology",
+          "ix. Problems caused by climate change"
+        ],
+        "keywords": ["not everyone agrees", "debate", "interpretation"],
+        "paragraph": "F",
+        "sentence_start": "F1",
+        "sentence_end": "F4",
+        "trap_type": "None",
+        "skill": "Argument tracking",
+        "difficulty": "Intermediate",
+        "common_mistake": "Assuming all scientists immediately agree with LiDAR maps."
+      },
+      "correct_answers": ["iii"],
+      "explanation": "Paragraph F reviews different interpretations and ongoing scientific debate among researchers.",
+      "citation_excerpt": "Not everyone agrees about the interpretation of the new evidence. Some researchers believe... while others argue..."
+    },
+    {
+      "question_number": 7,
+      "question_type": "matching_headings",
+      "instruction_text": "Choose the correct heading for each paragraph from the list of headings below. Write the correct Roman numeral, i–ix.",
+      "question_data": {
+        "section": "Paragraph G",
+        "headings": [
+          "i. Technology reveals what the eye cannot see",
+          "ii. The importance of confirming discoveries through traditional methods",
+          "iii. Different opinions about recent findings",
+          "iv. Ancient engineering achievements",
+          "v. How new discoveries affect modern conservation",
+          "vi. Earlier misunderstandings about rainforest societies",
+          "vii. Evidence of organised urban planning",
+          "viii. The history of laser technology",
+          "ix. Problems caused by climate change"
+        ],
+        "keywords": ["conservation", "forests", "modern societies"],
+        "paragraph": "G",
+        "sentence_start": "G1",
+        "sentence_end": "G4",
+        "trap_type": "None",
+        "skill": "Impact analysis",
+        "difficulty": "Intermediate",
+        "common_mistake": "Ignoring the environmental/conservation links at the end of the text."
+      },
+      "correct_answers": ["v"],
+      "explanation": "Paragraph G states that understanding the history of human activity in forests can help guide modern conservation efforts.",
+      "citation_excerpt": "Beyond archaeology, these discoveries influence... Understanding this relationship may help guide future conservation efforts."
+    },
+    {
+      "question_number": 8,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "What was the main reason archaeologists underestimated rainforest civilisations in the past?",
+        "options": [
+          "A. Ancient maps had been destroyed.",
+          "B. Forest conditions made investigation difficult.",
+          "C. Local communities refused to cooperate.",
+          "D. Most cities were built underground."
+        ],
+        "keywords": ["underestimated", "prevented", "vegetation"],
+        "paragraph": "A",
+        "sentence_start": "A1",
+        "sentence_end": "A2",
+        "trap_type": "None",
+        "skill": "Causal factor analysis",
+        "difficulty": "Intermediate",
+        "common_mistake": "Choosing underground cities, which is not mentioned in the text."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph A states thick vegetation and rain made exploration difficult, causing scientists to underestimate population size.",
+      "citation_excerpt": "Thick vegetation made exploration extremely difficult, while heavy rainfall often damaged ancient structures. As a result, researchers assumed..."
+    },
+    {
+      "question_number": 9,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "According to the passage, LiDAR works by",
+        "options": [
+          "A. removing trees from archaeological sites.",
+          "B. sending laser pulses towards the ground.",
+          "C. creating underground tunnels.",
+          "D. photographing ancient buildings directly."
+        ],
+        "keywords": ["laser pulses", "aircraft"],
+        "paragraph": "B",
+        "sentence_start": "B2",
+        "sentence_end": "B3",
+        "trap_type": "None",
+        "skill": "Detail recognition",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting removing trees, which is physically false; LiDAR only maps through gaps in the trees."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph B states LiDAR works by sending laser pulses toward the ground from an aircraft.",
+      "citation_excerpt": "this technology sends millions of laser pulses towards the ground from an aircraft."
+    },
+    {
+      "question_number": 10,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "Why is fieldwork still necessary?",
+        "options": [
+          "A. Computers cannot store archaeological data.",
+          "B. Aircraft cannot reach tropical forests.",
+          "C. Researchers must verify and study discoveries directly.",
+          "D. Laser equipment frequently produces inaccurate maps."
+        ],
+        "keywords": ["fieldwork", "checked on the ground"],
+        "paragraph": "D",
+        "sentence_start": "D1",
+        "sentence_end": "D3",
+        "trap_type": "None",
+        "skill": "Methodology justification",
+        "difficulty": "Intermediate",
+        "common_mistake": "Assuming laser equipment is faulty, which is not stated in the text."
+      },
+      "correct_answers": ["C"],
+      "explanation": "Paragraph D explains computer maps must be verified and excavations are needed to determine the structures' details.",
+      "citation_excerpt": "Maps produced by computers must still be checked on the ground. Excavations are necessary to determine the age, purpose..."
+    },
+    {
+      "question_number": 11,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "The reservoirs mentioned in Paragraph E suggest that ancient people",
+        "options": [
+          "A. traded mainly by river.",
+          "B. prepared for changes in water availability.",
+          "C. built homes beneath lakes.",
+          "D. depended entirely on rainfall."
+        ],
+        "keywords": ["reservoirs", "dry seasons"],
+        "paragraph": "E",
+        "sentence_start": "E2",
+        "sentence_end": "E2",
+        "trap_type": "None",
+        "skill": "Inference validation",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting trading by river, which is not linked to water storage in the text."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph E states reservoirs show planning for dry seasons, meaning they prepared for changes in water levels.",
+      "citation_excerpt": "Large water reservoirs indicate careful planning for dry seasons."
+    },
+    {
+      "question_number": 12,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "What does Paragraph F mainly illustrate?",
+        "options": [
+          "A. All archaeologists agree with the new evidence.",
+          "B. Scientific conclusions often continue to develop.",
+          "C. LiDAR technology has become outdated.",
+          "D. Excavations are no longer required."
+        ],
+        "keywords": ["ongoing excavations", "debate"],
+        "paragraph": "F",
+        "sentence_start": "F1",
+        "sentence_end": "F4",
+        "trap_type": "None",
+        "skill": "Synthesis of controversy",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting LiDAR technology is outdated, which contradicts the main thesis of the passage."
+      },
+      "correct_answers": ["B"],
+      "explanation": "Paragraph F notes disagreements and ongoing excavations that keep providing new information, showing scientific conclusions continue to develop.",
+      "citation_excerpt": "Ongoing excavations continue to provide new information. Healthy scientific debate remains..."
+    },
+    {
+      "question_number": 13,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B, C or D.",
+      "question_data": {
+        "text": "What is the writer's overall purpose?",
+        "options": [
+          "A. To criticise modern archaeology.",
+          "B. To explain how new technology has changed understanding of ancient rainforest societies.",
+          "C. To compare forests on different continents.",
+          "D. To describe how aircraft are designed."
+        ],
+        "keywords": ["reshape our understanding", "history"],
+        "paragraph": "Entire passage",
+        "sentence_start": "None",
+        "sentence_end": "None",
+        "trap_type": "None",
+        "skill": "Writer's intent analysis",
+        "difficulty": "Intermediate",
+        "common_mistake": "Selecting modern archaeology criticism, when the text actually praises LiDAR assistance."
+      },
+      "correct_answers": ["B"],
+      "explanation": "The overall text reviews how LiDAR technology has updated and reshaped historical understandings of rainforest societies.",
+      "citation_excerpt": ""
+    }
+  ]
+}

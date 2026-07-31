@@ -1,0 +1,602 @@
+{
+  "title": "Cambridge IELTS 19 Listening Test 2",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Part 1: Guitar Group Enquiry",
+      "audio_url": "/uploads/audio/CB-19.2.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer."
+    },
+    {
+      "section_number": 2,
+      "title": "Part 2: Working as a Lifeboat Volunteer",
+      "audio_url": "/uploads/audio/CB-19.2.mp3",
+      "instruction_text": "Questions 11–16: Choose the correct letter, A, B or C. Questions 17–20: Choose TWO letters, A–E."
+    },
+    {
+      "section_number": 3,
+      "title": "Part 3: Presentation on Recycling Footwear",
+      "audio_url": "/uploads/audio/CB-19.2.mp3",
+      "instruction_text": "Questions 21–24: Choose the correct letter, A, B or C. Questions 25–28: Choose FOUR answers from the box. Questions 29–30: Choose the correct letter, A, B or C."
+    },
+    {
+      "section_number": 4,
+      "title": "Part 4: Presentation on Tardigrades",
+      "audio_url": "/uploads/audio/CB-19.2.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer."
+    }
+  ],
+  "questions": [
+    {
+      "section_number": 1,
+      "question_number": 1,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Coordinator: Gary [blank]"
+      },
+      "correct_answers": ["Mathieson"],
+      "explanation": "The coordinator's name is Gary Mathieson."
+    },
+    {
+      "section_number": 1,
+      "question_number": 2,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Group Level: for [blank]"
+      },
+      "correct_answers": ["beginners"],
+      "explanation": "Gary describes the class as being for beginners."
+    },
+    {
+      "section_number": 1,
+      "question_number": 3,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Location: held at the [blank] in town."
+      },
+      "correct_answers": ["college"],
+      "explanation": "The lessons are held in a room at the local college."
+    },
+    {
+      "section_number": 1,
+      "question_number": 4,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Address: [blank] Street (First floor, Room T347)"
+      },
+      "correct_answers": ["New"],
+      "explanation": "The college is situated on New Street."
+    },
+    {
+      "section_number": 1,
+      "question_number": 5,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Time: Thursday morning at [blank]"
+      },
+      "correct_answers": ["11", "11.00", "11:00", "eleven"],
+      "explanation": "The group meets every Thursday at 11 am."
+    },
+    {
+      "section_number": 1,
+      "question_number": 6,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Recommended website: The perfect [blank]"
+      },
+      "correct_answers": ["instrument"],
+      "explanation": "Gary recommends a website called 'The Perfect Instrument'."
+    },
+    {
+      "section_number": 1,
+      "question_number": 7,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Tuning: done using an app or by [blank]."
+      },
+      "correct_answers": ["ear"],
+      "explanation": "Tuning can be completed with a specialized mobile app or entirely by ear."
+    },
+    {
+      "section_number": 1,
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Clapping: used by the teacher to help students keep [blank]."
+      },
+      "correct_answers": ["time", "rhythm"],
+      "explanation": "Gary uses clapping to help students keep time/rhythm."
+    },
+    {
+      "section_number": 1,
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Playing songs: students often listen to a [blank] of a song."
+      },
+      "correct_answers": ["recording"],
+      "explanation": "They listen to a recording of a song to get the rhythm."
+    },
+    {
+      "section_number": 1,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Solo play: students may sometimes be asked to play [blank]."
+      },
+      "correct_answers": ["alone", "solo"],
+      "explanation": "Gary occasionally asks students to play alone to build confidence."
+    },
+    {
+      "section_number": 2,
+      "question_number": 11,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What made David leave London and move to Northsea?",
+        "options": [
+          "A. He was eager to develop a hobby.",
+          "B. He wanted to work shorter hours.",
+          "C. He found his job in website design unsatisfying."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "David explains that he was keen on boats and moved to pursue this interest/hobby in his free time."
+    },
+    {
+      "section_number": 2,
+      "question_number": 12,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "The Lifeboat Institution in Northsea was built with money provided by",
+        "options": [
+          "A. a local organisation.",
+          "B. a local resident.",
+          "C. the local council."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Funds were provided by a generous member of the public (a local resident) who lived there all her life."
+    },
+    {
+      "section_number": 2,
+      "question_number": 13,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "In his health assessment, the doctor was concerned about the fact that David",
+        "options": [
+          "A. might be colour blind.",
+          "B. was rather short-sighted.",
+          "C. had undergone eye surgery."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "The doctors were concerned he might be colour blind, but it turned out he was fine."
+    },
+    {
+      "section_number": 2,
+      "question_number": 14,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "After arriving at the lifeboat station, they aim to launch the boat within:",
+        "options": [
+          "A. five minutes",
+          "B. six to eight minutes",
+          "C. eight and a half minutes"
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "The target launch window is between six to eight minutes."
+    },
+    {
+      "section_number": 2,
+      "question_number": 15,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "As a 'helmsman', David has the responsibility of deciding:",
+        "options": [
+          "A. who will be the members of his crew",
+          "B. what equipment it will be necessary to take",
+          "C. if the lifeboat should be launched"
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "The helmsman has the ultimate authority to decide if the boat should launch in a given scenario."
+    },
+    {
+      "section_number": 2,
+      "question_number": 16,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "As well as going out on the lifeboat, David:",
+        "options": [
+          "A. gives talks on safety at sea",
+          "B. helps with fundraising",
+          "C. recruits new volunteers"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "In addition to rescue missions, David gives educational talks on sea safety."
+    },
+    {
+      "section_number": 2,
+      "question_number": 17,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO things does David say about the lifeboat volunteer training?",
+        "options": [
+          "A. The residential course developed his leadership skills.",
+          "B. The training in use of ropes and knots was quite brief.",
+          "C. The training exercises have built up his mental strength.",
+          "D. The casualty care activities were particularly challenging for him.",
+          "E. The wave tank activities provided practice in survival techniques."
+        ]
+      },
+      "correct_answers": ["C", "E"],
+      "explanation": "David notes the exercises built mental strength/confidence, and the wave tank provided survival technique practice."
+    },
+    {
+      "section_number": 2,
+      "question_number": 18,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO things does David say about the lifeboat volunteer training?",
+        "options": [
+          "A. The residential course developed his leadership skills.",
+          "B. The training in use of ropes and knots was quite brief.",
+          "C. The training exercises have built up his mental strength.",
+          "D. The casualty care activities were particularly challenging for him.",
+          "E. The wave tank activities provided practice in survival techniques."
+        ]
+      },
+      "correct_answers": ["C", "E"],
+      "explanation": "David notes the exercises built mental strength/confidence, and the wave tank provided survival technique practice."
+    },
+    {
+      "section_number": 2,
+      "question_number": 19,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO things does David find most motivating about the work he does?",
+        "options": [
+          "A. working as part of a team",
+          "B. experiences when working in winter",
+          "C. being thanked by those he has helped",
+          "D. the fact that it keeps him fit",
+          "E. the chance to develop new equipment"
+        ]
+      },
+      "correct_answers": ["A", "B"],
+      "explanation": "He is motivated by team collaboration and the intense experience of winter call-outs."
+    },
+    {
+      "section_number": 2,
+      "question_number": 20,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO things does David find most motivating about the work he does?",
+        "options": [
+          "A. working as part of a team",
+          "B. experiences when working in winter",
+          "C. being thanked by those he has helped",
+          "D. the fact that it keeps him fit",
+          "E. the chance to develop new equipment"
+        ]
+      },
+      "correct_answers": ["A", "B"],
+      "explanation": "He is motivated by team collaboration and the intense experience of winter call-outs."
+    },
+    {
+      "section_number": 3,
+      "question_number": 21,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "At first, Don thought the topic of recycling footwear might be too",
+        "options": [
+          "A. limited in scope.",
+          "B. hard to research.",
+          "C. boring for listeners."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Don initially thought there wouldn't be enough material to speak on (limited scope)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 22,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "When discussing trainers, Bella and Don disagree about",
+        "options": [
+          "A. how popular they are among young people.",
+          "B. how suitable they are for school.",
+          "C. how quickly they wear out."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "They debate whether trainers look smart enough to be worn with school uniforms."
+    },
+    {
+      "section_number": 3,
+      "question_number": 23,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Bella says that she sometimes recycles shoes because",
+        "options": [
+          "A. they no longer fit.",
+          "B. she no longer likes them.",
+          "C. they are no longer in fashion."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Bella recycles shoes that are in perfect condition simply because she gets tired of them."
+    },
+    {
+      "section_number": 3,
+      "question_number": 24,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What did the article say that confused Don?",
+        "options": [
+          "A. More shoes are bought than are thrown away.",
+          "B. Less footwear is recycled now than in the past.",
+          "C. The manufacturing process uses less recycled material."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Don was confused that footwear recycling rates dropped to 6 percent despite rising sales."
+    },
+    {
+      "section_number": 3,
+      "question_number": 25,
+      "question_type": "matching",
+      "instruction_text": "What was the reason why the manager at the recycling centre rejected each of the following shoes? Choose FOUR answers from the box.",
+      "question_data": {
+        "text": "High-heeled shoes",
+        "options": [
+          "A. One shoe was missing.",
+          "B. The colour of one shoe had faded.",
+          "C. One shoe had a hole in it.",
+          "D. The shoes were too dirty.",
+          "E. The heels of the shoes were worn.",
+          "F. The stitching on the shoes was broken.",
+          "G. The shoes had the wrong size label.",
+          "H. The lining of the shoes was torn."
+        ]
+      },
+      "correct_answers": ["E"],
+      "explanation": "The manager rejected the high-heeled shoes because their heels were badly worn."
+    },
+    {
+      "section_number": 3,
+      "question_number": 26,
+      "question_type": "matching",
+      "instruction_text": "What was the reason why the manager at the recycling centre rejected each of the following shoes? Choose FOUR answers from the box.",
+      "question_data": {
+        "text": "Ankle boots",
+        "options": [
+          "A. One shoe was missing.",
+          "B. The colour of one shoe had faded.",
+          "C. One shoe had a hole in it.",
+          "D. The shoes were too dirty.",
+          "E. The heels of the shoes were worn.",
+          "F. The stitching on the shoes was broken.",
+          "G. The shoes had the wrong size label.",
+          "H. The lining of the shoes was torn."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "The ankle boots were rejected because one had faded in color due to sun exposure."
+    },
+    {
+      "section_number": 3,
+      "question_number": 27,
+      "question_type": "matching",
+      "instruction_text": "What was the reason why the manager at the recycling centre rejected each of the following shoes? Choose FOUR answers from the box.",
+      "question_data": {
+        "text": "Baby shoes",
+        "options": [
+          "A. One shoe was missing.",
+          "B. The colour of one shoe had faded.",
+          "C. One shoe had a hole in it.",
+          "D. The shoes were too dirty.",
+          "E. The heels of the shoes were worn.",
+          "F. The stitching on the shoes was broken.",
+          "G. The shoes had the wrong size label.",
+          "H. The lining of the shoes was torn."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Only one baby shoe was handed in, so it was rejected as a pair was missing."
+    },
+    {
+      "section_number": 3,
+      "question_number": 28,
+      "question_type": "matching",
+      "instruction_text": "What was the reason why the manager at the recycling centre rejected each of the following shoes? Choose FOUR answers from the box.",
+      "question_data": {
+        "text": "Trainers",
+        "options": [
+          "A. One shoe was missing.",
+          "B. The colour of one shoe had faded.",
+          "C. One shoe had a hole in it.",
+          "D. The shoes were too dirty.",
+          "E. The heels of the shoes were worn.",
+          "F. The stitching on the shoes was broken.",
+          "G. The shoes had the wrong size label.",
+          "H. The lining of the shoes was torn."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "The trainers sole had a large hole in it, making it unwearable."
+    },
+    {
+      "section_number": 3,
+      "question_number": 29,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Why did the project to make 'new' shoes out of old shoes fail?",
+        "options": [
+          "A. The materials used were of poor quality.",
+          "B. The cost of manufacturing was too high.",
+          "C. The shoes in the 'new' pairs were not completely alike."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "The project failed because the pairs of shoes constructed did not match each other perfectly."
+    },
+    {
+      "section_number": 3,
+      "question_number": 30,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Bella and Don agree that they can present their topic",
+        "options": [
+          "A. from a new angle.",
+          "B. in a creative format.",
+          "C. with a focus on local research."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "They decide to present the presentation from a new, unexpected angle."
+    },
+    {
+      "section_number": 4,
+      "question_number": 31,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Tardigrades are also known as water 'bears' (due to how they [blank]) and 'moss piglets'."
+      },
+      "correct_answers": ["move"],
+      "explanation": "Tardigrades are called water bears because they move with a slow, bear-like walk."
+    },
+    {
+      "section_number": 4,
+      "question_number": 32,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Physical appearance: A [blank] round body and four pairs of legs."
+      },
+      "correct_answers": ["short"],
+      "explanation": "Tardigrades have a short, plump body with four pairs of legs."
+    },
+    {
+      "section_number": 4,
+      "question_number": 33,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Physical appearance: Claws or [blank] for gripping."
+      },
+      "correct_answers": ["discs", "disk", "disks"],
+      "explanation": "Tardigrades utilize either sharp claws or suction discs to grip surfaces."
+    },
+    {
+      "section_number": 4,
+      "question_number": 34,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Absence of respiratory organs; body filled with a liquid that carries both [blank] and blood."
+      },
+      "correct_answers": ["oxygen"],
+      "explanation": "Instead of respiratory systems, they use a body liquid carrying blood and oxygen."
+    },
+    {
+      "section_number": 4,
+      "question_number": 35,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Mouth shaped like a [blank] with teeth called stylets."
+      },
+      "correct_answers": ["tube"],
+      "explanation": "Their mouth is shaped like a small, hollow tube containing stylets to pierce food."
+    },
+    {
+      "section_number": 4,
+      "question_number": 36,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Habitat: Very resilient and can exist in very low or high [blank]."
+      },
+      "correct_answers": ["temperatures"],
+      "explanation": "Tardigrades can survive exposure to extreme temperatures, high or low."
+    },
+    {
+      "section_number": 4,
+      "question_number": 37,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Cryptobiosis: A type of [blank] ensures their DNA is not damaged."
+      },
+      "correct_answers": ["protein"],
+      "explanation": "Tardigrades express a unique protective protein that shields their DNA."
+    },
+    {
+      "section_number": 4,
+      "question_number": 38,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Cryptobiosis: Research is underway to find out how many days they can stay alive in [blank]."
+      },
+      "correct_answers": ["space"],
+      "explanation": "Scientific experiments tested how many days they can survive in the vacuum of space."
+    },
+    {
+      "section_number": 4,
+      "question_number": 39,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Feeding: Consume liquids, e.g., those found in moss or [blank]."
+      },
+      "correct_answers": ["seaweed"],
+      "explanation": "Tardigrades feed on fluids, such as those extracted from moss or seaweed."
+    },
+    {
+      "section_number": 4,
+      "question_number": 40,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Conservation status: They are not considered to be [blank]."
+      },
+      "correct_answers": ["endangered"],
+      "explanation": "Tardigrades are highly abundant and are not considered endangered."
+    }
+  ]
+}
