@@ -179,6 +179,7 @@ export const useTask1Session = () => {
     sessionId: loading ? null : sessionId,
     answer,
     wordCount: writingAnalysis.wordCount,
+    session,
   });
 
   // Sprint 3 Phase 1: Integrate Submission Validation Engine

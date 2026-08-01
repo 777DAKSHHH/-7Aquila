@@ -15,7 +15,7 @@ import { SessionService } from "../../../../../services/assessment/sessionServic
  * - Registers tab visibility and beforeunload handlers.
  * - Exposes rich observable autosave state to presentation UI.
  */
-export const useTask1Autosave = ({ sessionId, answer, wordCount }) => {
+export const useTask1Autosave = ({ sessionId, answer, wordCount, session }) => {
   const [autosaveState, setAutosaveState] = useState({
     status: "idle", // 'idle' | 'typing' | 'saving' | 'saved' | 'retrying' | 'failed'
     lastSavedAt: null,
@@ -30,6 +30,11 @@ export const useTask1Autosave = ({ sessionId, answer, wordCount }) => {
   const isFirstRender = useRef(true);
   const latestDataRef = useRef({ answer, wordCount });
 
+  const isCompleted =
+    session?.status === "evaluated" ||
+    session?.status === "completed" ||
+    session?.is_draft === false;
+
   // Sync latest answer and wordCount to ref on every update
   useEffect(() => {
     latestDataRef.current = { answer, wordCount };
@@ -37,7 +42,7 @@ export const useTask1Autosave = ({ sessionId, answer, wordCount }) => {
 
   // Initialize AutoSaveService instance
   useEffect(() => {
-    if (!sessionId) return;
+    if (!sessionId || isCompleted) return;
 
     const instance = new AutoSaveService({
       delay: 2500, // 2.5s debounce delay
@@ -69,11 +74,11 @@ export const useTask1Autosave = ({ sessionId, answer, wordCount }) => {
         autosaveRef.current = null;
       }
     };
-  }, [sessionId]);
+  }, [sessionId, isCompleted]);
 
   // Detect answer text or word count changes
   useEffect(() => {
-    if (!sessionId || !autosaveRef.current) return;
+    if (!sessionId || !autosaveRef.current || isCompleted) return;
 
     // Skip initial hydration trigger
     if (isFirstRender.current) {
@@ -85,21 +90,21 @@ export const useTask1Autosave = ({ sessionId, answer, wordCount }) => {
       task1_answer: answer,
       task1_word_count: wordCount,
     });
-  }, [sessionId, answer, wordCount]);
+  }, [sessionId, answer, wordCount, isCompleted]);
 
   // Force immediate save action
   const forceSave = useCallback(async () => {
-    if (autosaveRef.current) {
+    if (autosaveRef.current && !isCompleted) {
       await autosaveRef.current.forceSave({
         task1_answer: latestDataRef.current.answer,
         task1_word_count: latestDataRef.current.wordCount,
       });
     }
-  }, []);
+  }, [isCompleted]);
 
   // Manual retry action
   const manualRetry = useCallback(async () => {
-    if (autosaveRef.current) {
+    if (autosaveRef.current && !isCompleted) {
       await autosaveRef.current.save(
         {
           task1_answer: latestDataRef.current.answer,
@@ -108,7 +113,7 @@ export const useTask1Autosave = ({ sessionId, answer, wordCount }) => {
         true
       );
     }
-  }, []);
+  }, [isCompleted]);
 
   return {
     autosaveState,

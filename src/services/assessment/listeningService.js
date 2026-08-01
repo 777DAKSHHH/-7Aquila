@@ -45,6 +45,7 @@ export const getListeningTests = async (filters = {}) => {
         difficulty,
         duration_minutes,
         test_set_id,
+        created_at,
         test_sets (
           name,
           description,

@@ -165,6 +165,7 @@ export const useTask2Session = () => {
     sessionId: loading ? null : sessionId,
     answer,
     wordCount: writingAnalysis.wordCount,
+    session,
   });
 
   // Integrate Submission Validation Engine

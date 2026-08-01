@@ -11,6 +11,14 @@ const ListeningTaskSelection = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+  const isNewTest = (createdAt) => {
+    if (!createdAt) return false;
+    const createdDate = new Date(createdAt);
+    const diffTime = Math.abs(new Date() - createdDate);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays <= 14;
+  };
+
   useEffect(() => {
     const fetchTests = async () => {
       try {
@@ -79,9 +87,16 @@ const ListeningTaskSelection = () => {
               <div key={test.id} className="bg-card border border-border rounded-xl p-6 flex flex-col justify-between shadow-sm hover:border-primary transition duration-base">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs uppercase font-mono tracking-wider text-primary font-semibold">
-                      Listening Test
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs uppercase font-mono tracking-wider text-primary font-semibold">
+                        Listening Test
+                      </span>
+                      {isNewTest(test.created_at) && (
+                        <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider font-mono bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400 border border-blue-200 dark:border-blue-800/40 animate-pulse">
+                          New Added
+                        </span>
+                      )}
+                    </div>
                     <span className="text-xs font-mono bg-muted px-2 py-0.5 rounded text-muted-foreground capitalize">
                       {test.difficulty}
                     </span>

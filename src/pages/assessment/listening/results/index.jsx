@@ -12,6 +12,22 @@ const getAudioUrl = (url) => {
   return `${API_BASE_URL}${url}`;
 };
 
+const QUESTION_TYPE_LABELS = {
+  sentence_completion: "Note Completion",
+  summary_completion: "Summary Completion",
+  table_completion: "Table Completion",
+  mcq_single: "Multiple Choice (single answer)",
+  mcq_multiple: "Multiple Choice (multiple answer)",
+  matching: "Matching",
+  matching_headings: "Matching Headings",
+  tfng: "True / False / Not Given",
+  ynng: "Yes / No / Not Given",
+  short_answer: "Short Answer",
+  diagram_labeling: "Diagram Labelling",
+  labelling: "Diagram Labelling",
+  map: "Map Labeling"
+};
+
 const ListeningResults = () => {
   const { sessionId } = useParams();
   const navigate = useNavigate();
@@ -232,6 +248,80 @@ const ListeningResults = () => {
           </div>
 
         </div>
+
+        {/* SECTION ANALYSIS */}
+        <div className="space-y-4 select-none">
+          <h3 className="text-xs font-bold uppercase tracking-wider font-mono text-muted-foreground">Section Analysis</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {sections.map((sec) => {
+              const sectionQuestions = sec.questions || [];
+              const qNums = sectionQuestions.map(q => q.question_number);
+              const sectionResults = gradedResults.filter(r => qNums.includes(r.questionNumber));
+              const correct = sectionResults.filter(r => r.isCorrect).length;
+              const total = qNums.length;
+              const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
+              const cleanTitle = sec.title.split(':').pop().trim();
+
+              return (
+                <div key={sec.id} className="bg-card border border-border rounded-xl p-4 space-y-1 hover:border-primary/50 transition duration-base">
+                  <p className="text-xs font-semibold text-muted-foreground font-caption truncate">
+                    Part {sec.section_number} · {cleanTitle}
+                  </p>
+                  <p className="text-lg font-bold text-foreground font-mono">
+                    {correct}/{total} · <span className="text-primary">{accuracy}%</span>
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* FOCUS AREAS */}
+        {(() => {
+          const focusAreasMap = {};
+          gradedResults.forEach((res) => {
+            const qType = res.questionType || "other";
+            if (!focusAreasMap[qType]) {
+              focusAreasMap[qType] = { correct: 0, total: 0 };
+            }
+            focusAreasMap[qType].total += 1;
+            if (res.isCorrect) {
+              focusAreasMap[qType].correct += 1;
+            }
+          });
+
+          const focusAreas = Object.keys(focusAreasMap).map((qType) => {
+            const label = QUESTION_TYPE_LABELS[qType] || qType.replace("_", " ");
+            const { correct, total } = focusAreasMap[qType];
+            const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
+            return {
+              label,
+              correct,
+              total,
+              accuracy
+            };
+          });
+
+          if (focusAreas.length === 0) return null;
+
+          return (
+            <div className="space-y-4 select-none">
+              <h3 className="text-xs font-bold uppercase tracking-wider font-mono text-muted-foreground">Focus Areas</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {focusAreas.map((area, idx) => (
+                  <div key={idx} className="bg-card border border-border rounded-xl p-4 space-y-1 hover:border-primary/50 transition duration-base">
+                    <p className="text-xs font-semibold text-muted-foreground font-caption truncate">
+                      {area.label}
+                    </p>
+                    <p className="text-lg font-bold text-foreground font-mono">
+                      {area.correct}/{area.total} · <span className="text-primary">{area.accuracy}%</span>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
 
         {/* 1-40 DIAGNOSTIC REVIEW PALETTE GRID */}
         <div className="bg-card border border-border rounded-2xl p-6 shadow-sm space-y-4 select-none">

@@ -181,6 +181,15 @@ const ReadingTaskSelection = () => {
             ) || 0;
             const isPracticePassage = passageCount === 1;
 
+            // Get unique question types for this specific test
+            const testQuestionTypes = Array.from(
+              new Set(
+                test.reading_passages?.flatMap(p => 
+                  p.reading_questions?.map(q => q.question_type)
+                ) || []
+              )
+            ).filter(Boolean);
+
             return (
               <div key={test.id} className="bg-card border border-border rounded-xl p-6 flex flex-col justify-between shadow-sm hover:border-primary transition duration-base">
                 <div className="space-y-2">
@@ -212,6 +221,15 @@ const ReadingTaskSelection = () => {
                   <p className="text-xs text-muted-foreground">
                     Duration: {test.duration_minutes} Minutes | {passageCount} {passageCount === 1 ? "Passage" : "Passages"} | {totalQuestions || 40} Questions
                   </p>
+                  {testQuestionTypes.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 pt-1.5">
+                      {testQuestionTypes.map((qType) => (
+                        <span key={qType} className="px-2.5 py-0.5 rounded-full text-[10px] font-medium font-caption bg-muted text-muted-foreground border border-border/80">
+                          {QUESTION_TYPE_LABELS[qType] || qType.replace("_", " ")}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
                 <div className="pt-4">
                   <Button variant="primary" fullWidth onClick={() => handleStartTest(test.id)}>

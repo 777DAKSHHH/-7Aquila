@@ -6,6 +6,21 @@ import PassageViewer from "../cbt/components/PassageViewer";
 import AppIcon from "components/AppIcon";
 import Button from "components/ui/Button";
 
+const QUESTION_TYPE_LABELS = {
+  tfng: "True / False / Not Given",
+  ynng: "Yes / No / Not Given",
+  mcq_single: "Multiple Choice (single answer)",
+  mcq_multiple: "Multiple Choice (multiple answer)",
+  matching_headings: "Matching Headings",
+  matching_info: "Matching Information",
+  matching_features: "Matching Features",
+  sentence_completion: "Note Completion",
+  summary_completion: "Summary Completion",
+  short_answer: "Short Answer",
+  diagram_labeling: "Diagram Labelling",
+  table_completion: "Table Completion"
+};
+
 const ReadingResults = () => {
   const { sessionId } = useParams();
   const navigate = useNavigate();
@@ -180,7 +195,7 @@ const ReadingResults = () => {
           {/* Left Column: Metrics Overview */}
           <div className="lg:col-span-1 space-y-6">
             <div className="bg-card border border-border rounded-2xl p-6 shadow-sm space-y-6">
-              <h3 className="text-sm font-mono uppercase tracking-wider text-muted-foreground font-semibold">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground font-mono">
                 Overall Performance
               </h3>
 
@@ -207,7 +222,7 @@ const ReadingResults = () => {
               </div>
 
               {/* Time Spent */}
-              <div className="border-t border-border pt-4 flex items-center justify-between text-sm">
+              <div className="border-t border-border pt-4 flex items-center justify-between text-sm select-none">
                 <span className="text-muted-foreground">Time Spent:</span>
                 <span className="font-semibold font-mono text-foreground">
                   {formatDuration(session.time_spent_seconds)}
@@ -215,10 +230,10 @@ const ReadingResults = () => {
               </div>
             </div>
 
-            {/* Passage Breakdown Cards */}
+            {/* Section Analysis Cards */}
             <div className="bg-card border border-border rounded-2xl p-6 shadow-sm space-y-4">
-              <h3 className="text-sm font-mono uppercase tracking-wider text-muted-foreground font-semibold">
-                Passage Accuracy Breakdowns
+              <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground font-mono">
+                Section Analysis
               </h3>
               <div className="space-y-3">
                 {passages.map((p, idx) => {
@@ -228,10 +243,10 @@ const ReadingResults = () => {
                     <div key={p.id} className="bg-muted/30 border border-border/60 rounded-xl p-4 flex items-center justify-between">
                       <div className="space-y-0.5">
                         <h4 className="text-sm font-bold text-foreground">Passage {p.passage_number}</h4>
-                        <p className="text-xs text-muted-foreground max-w-[180px] truncate">{p.title}</p>
+                        <p className="text-xs text-muted-foreground max-w-[150px] truncate">{p.title}</p>
                       </div>
                       <div className="text-right space-y-1">
-                        <span className="text-sm font-mono font-bold text-foreground">{score.correct} / {score.total}</span>
+                        <span className="text-sm font-mono font-bold text-foreground">{score.correct} / {score.total} · <span className="text-primary">{pct}%</span></span>
                         <div className="w-16 bg-muted rounded-full h-1.5 overflow-hidden">
                           <div className="bg-primary h-full rounded-full" style={{ width: `${pct}%` }}></div>
                         </div>
@@ -241,6 +256,58 @@ const ReadingResults = () => {
                 })}
               </div>
             </div>
+
+            {/* Focus Areas Cards */}
+            {(() => {
+              const focusAreasMap = {};
+              grading.results?.forEach((res) => {
+                const qType = res.questionType || "other";
+                if (!focusAreasMap[qType]) {
+                  focusAreasMap[qType] = { correct: 0, total: 0 };
+                }
+                focusAreasMap[qType].total += 1;
+                if (res.isCorrect) {
+                  focusAreasMap[qType].correct += 1;
+                }
+              });
+
+              const focusAreas = Object.keys(focusAreasMap).map((qType) => {
+                const label = QUESTION_TYPE_LABELS[qType] || qType.replace("_", " ");
+                const { correct, total } = focusAreasMap[qType];
+                const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
+                return {
+                  label,
+                  correct,
+                  total,
+                  accuracy
+                };
+              });
+
+              if (focusAreas.length === 0) return null;
+
+              return (
+                <div className="bg-card border border-border rounded-2xl p-6 shadow-sm space-y-4">
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground font-mono">
+                    Focus Areas
+                  </h3>
+                  <div className="space-y-3">
+                    {focusAreas.map((area, idx) => (
+                      <div key={idx} className="bg-muted/30 border border-border/60 rounded-xl p-4 flex items-center justify-between">
+                        <div className="space-y-0.5">
+                          <h4 className="text-sm font-bold text-foreground leading-snug">{area.label}</h4>
+                        </div>
+                        <div className="text-right space-y-1">
+                          <span className="text-sm font-mono font-bold text-foreground">{area.correct} / {area.total} · <span className="text-primary">{area.accuracy}%</span></span>
+                          <div className="w-16 bg-muted rounded-full h-1.5 overflow-hidden">
+                            <div className="bg-primary h-full rounded-full" style={{ width: `${area.accuracy}%` }}></div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
           </div>
 
           {/* Right Column: 40 Question Diagnostics grid and review Details */}
