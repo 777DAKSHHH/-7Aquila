@@ -154,7 +154,8 @@ export const scoreReadingSession = (userAnswers = {}, questions = [], testType =
     if (q.correct_answers && Array.isArray(q.correct_answers) && q.correct_answers.length > 1) {
       const sortedKeys = [...q.correct_answers].map(a => String(a).toLowerCase().trim()).sort();
       const sectionKey = q.passage_id || q.section_id;
-      const groupKey = `${sectionKey}_${JSON.stringify(sortedKeys)}`;
+      const optionsHash = JSON.stringify(q.question_data?.options || []);
+      const groupKey = `${sectionKey}_${JSON.stringify(sortedKeys)}_${optionsHash}`;
       
       if (!groupedQuestionsMap[groupKey]) {
         groupedQuestionsMap[groupKey] = [];

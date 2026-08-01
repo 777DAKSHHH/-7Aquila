@@ -129,7 +129,8 @@ export const scoreListeningSession = (userAnswers = {}, questions = []) => {
   for (const q of sortedQuestions) {
     if (q.correct_answers && Array.isArray(q.correct_answers) && q.correct_answers.length > 1) {
       const sortedKeys = [...q.correct_answers].map(a => String(a).toLowerCase().trim()).sort();
-      const groupKey = `${q.section_id}_${JSON.stringify(sortedKeys)}`;
+      const optionsHash = JSON.stringify(q.question_data?.options || []);
+      const groupKey = `${q.section_id}_${JSON.stringify(sortedKeys)}_${optionsHash}`;
       
       if (!groupedQuestionsMap[groupKey]) {
         groupedQuestionsMap[groupKey] = [];
