@@ -18,41 +18,117 @@ export const normalizeAnswer = (answer) => {
   return String(answer)
     .trim()
     .toLowerCase()
-    .replace(/\s+/g, " ") // Collapse multiple spaces to single space
-    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ""); // Strip punctuation
+    .replace(/\s+/g, " ")
+    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+};
+
+export const validateWordLimit = (userAns, instructionText) => {
+  if (!instructionText) return true;
+  const text = String(instructionText).toLowerCase();
+  
+  let maxWords = null;
+  let maxNumbers = null;
+  
+  if (text.includes("one word only")) {
+    maxWords = 1;
+    maxNumbers = 0;
+  } else if (text.includes("one word and/or a number") || text.includes("one word or a number")) {
+    maxWords = 1;
+    maxNumbers = 1;
+  } else if (text.includes("no more than two words and/or a number")) {
+    maxWords = 2;
+    maxNumbers = 1;
+  } else if (text.includes("no more than two words")) {
+    maxWords = 2;
+    maxNumbers = 0;
+  } else if (text.includes("no more than three words and/or a number")) {
+    maxWords = 3;
+    maxNumbers = 1;
+  } else if (text.includes("no more than three words")) {
+    maxWords = 3;
+    maxNumbers = 0;
+  }
+
+  if (maxWords === null) return true;
+
+  const clean = String(userAns).trim();
+  if (!clean) return true;
+
+  const tokens = clean.split(/\s+/).filter(Boolean);
+  
+  let wordsCount = 0;
+  let numbersCount = 0;
+
+  for (const token of tokens) {
+    const normalizedToken = token.replace(/[^0-9.,]/g, "");
+    const isNumber = normalizedToken.length > 0 && /^\d+(?:[.,]\d+)?$/.test(normalizedToken);
+    if (isNumber) {
+      numbersCount++;
+    } else {
+      wordsCount++;
+    }
+  }
+
+  if (maxWords > 0 && maxNumbers === 0) {
+    if (numbersCount > 0) return false;
+    if (wordsCount > maxWords) return false;
+  } else if (maxWords > 0 && maxNumbers > 0) {
+    if (wordsCount > maxWords || numbersCount > maxNumbers) return false;
+    if (wordsCount + numbersCount > maxWords + maxNumbers) return false;
+  }
+
+  return true;
 };
 
 /**
  * Evaluates a user answer against the array of correct answers.
  */
-export const matchSingleAnswer = (userAns, correctAns) => {
+export const matchSingleAnswer = (userAns, correctAns, instructionText = "", questionType = "") => {
   if (userAns === null || userAns === undefined || correctAns === null || correctAns === undefined) return false;
 
   const u = String(userAns).trim().toLowerCase();
   const c = String(correctAns).trim().toLowerCase();
 
+  // Rule 24: Slash-separated accepted answers
+  if (c.includes("/")) {
+    const parts = c.split("/");
+    return parts.some(part => matchSingleAnswer(userAns, part.trim(), instructionText, questionType));
+  }
+
   if (u === c) return true;
 
-  // Normalize by stripping punctuation and collapse whitespaces
-  const cleanU = u.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s+/g, " ").trim();
-  const cleanC = c.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").replace(/\s+/g, " ").trim();
+  // Word limits on text entry question types
+  const textEntryTypes = ["sentence_completion", "summary_completion", "table_completion", "short_answer", "form_completion", "flow_chart"];
+  if (questionType && textEntryTypes.includes(questionType)) {
+    if (!validateWordLimit(userAns, instructionText)) {
+      return false;
+    }
+  }
+
+  const puncRegex = /[.,\/#!$%\^&\*;:{}=\_`~()]/g;
+  const cleanU = u.replace(puncRegex, "").replace(/\s+/g, " ").trim();
+  const cleanC = c.replace(puncRegex, "").replace(/\s+/g, " ").trim();
 
   if (cleanU === cleanC) return true;
 
-  // Escape special regex chars helper
-  const escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  // Rule 20: Hyphenation normalization
+  const hyphenU = cleanU.replace(/-/g, " ").replace(/\s+/g, " ").trim();
+  const hyphenC = cleanC.replace(/-/g, " ").replace(/\s+/g, " ").trim();
+  if (hyphenU === hyphenC) return true;
 
-  // Check if correct answer is a single letter or roman numeral prefix
-  // e.g. correct is "ii", user answer is "ii. the limits..."
-  const prefixRegex = new RegExp(`^${escapeRegExp(cleanC)}(?:[^a-z0-9]|$)`);
-  if (prefixRegex.test(cleanU)) {
-    return true;
-  }
+  const stripHyphenU = cleanU.replace(/[-\s]/g, "");
+  const stripHyphenC = cleanC.replace(/[-\s]/g, "");
+  if (stripHyphenU === stripHyphenC) return true;
 
-  // Check reverse prefix mapping (e.g. correct is "ii. the limits...", user typed "ii")
-  const revPrefixRegex = new RegExp(`^${escapeRegExp(cleanU)}(?:[^a-z0-9]|$)`);
-  if (revPrefixRegex.test(cleanC)) {
-    return true;
+  // Prefix matching (ONLY for matching / multiple choice where prefix/suffixes matter)
+  const mcqOrMatchingTypes = ["mcq_single", "mcq_multiple", "matching", "matching_headings", "matching_info", "matching_features", "matching_endings", "map", "plan", "diagram"];
+  if (!questionType || mcqOrMatchingTypes.includes(questionType)) {
+    const escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const prefixRegex = new RegExp(`^${escapeRegExp(cleanC)}(?:[^a-z0-9]|$)`);
+    if (prefixRegex.test(cleanU)) return true;
+
+    const revPrefixRegex = new RegExp(`^${escapeRegExp(cleanU)}(?:[^a-z0-9]|$)`);
+    if (revPrefixRegex.test(cleanC)) return true;
   }
 
   return false;
@@ -61,7 +137,7 @@ export const matchSingleAnswer = (userAns, correctAns) => {
 /**
  * Evaluates a user answer against the array of correct answers.
  */
-export const checkAnswer = (userAnswer, correctAnswers) => {
+export const checkAnswer = (userAnswer, correctAnswers, instructionText = "", questionType = "") => {
   if (!correctAnswers || !Array.isArray(correctAnswers) || correctAnswers.length === 0) {
     return false;
   }
@@ -69,12 +145,12 @@ export const checkAnswer = (userAnswer, correctAnswers) => {
   if (Array.isArray(userAnswer)) {
     if (userAnswer.length !== correctAnswers.length) return false;
     return userAnswer.every(val => {
-      return correctAnswers.some(correct => matchSingleAnswer(val, correct));
+      return correctAnswers.some(correct => matchSingleAnswer(val, correct, instructionText, questionType));
     });
   }
 
   return correctAnswers.some(correct => {
-    return matchSingleAnswer(userAnswer, correct);
+    return matchSingleAnswer(userAnswer, correct, instructionText, questionType);
   });
 };
 
@@ -86,7 +162,6 @@ export const calculateReadingBand = (rawScore, testType = "academic") => {
   const score = Math.max(0, Math.min(40, Math.round(rawScore)));
 
   if (testType.toLowerCase() === "general") {
-    // IELTS General Training Reading raw-to-band mapping
     if (score === 40) return 9.0;
     if (score === 39) return 8.5;
     if (score >= 37) return 8.0;
@@ -106,7 +181,6 @@ export const calculateReadingBand = (rawScore, testType = "academic") => {
     if (score >= 1) return 1.0;
     return 0.0;
   } else {
-    // IELTS Academic Reading raw-to-band mapping
     if (score >= 39) return 9.0;
     if (score >= 37) return 8.5;
     if (score >= 35) return 8.0;
@@ -146,7 +220,6 @@ export const scoreReadingSession = (userAnswers = {}, questions = [], testType =
 
   const sortedQuestions = [...questions].sort((a, b) => a.question_number - b.question_number);
 
-  // Group questions by section and shared correct_answers list (only if it has length > 1)
   const groupedQuestionsMap = {};
   const ungroupedQuestions = [];
 
@@ -171,13 +244,11 @@ export const scoreReadingSession = (userAnswers = {}, questions = [], testType =
     const groupQs = groupedQuestionsMap[groupKey];
     const N = groupQs.length;
     
-    // Correct answers set (normalized)
     const firstQ = groupQs[0];
     const correctSet = new Set(
       firstQ.correct_answers.map(a => String(a).trim().toLowerCase())
     );
 
-    // Collect all unique user selections for this group
     const userSelections = new Set();
     groupQs.forEach(q => {
       const qNumStr = String(q.question_number);
@@ -196,23 +267,26 @@ export const scoreReadingSession = (userAnswers = {}, questions = [], testType =
       }
     });
 
-    // Calculate how many correct selections matches
-    let matches = 0;
-    userSelections.forEach(sel => {
-      const isMatched = Array.from(correctSet).some(correctVal => matchSingleAnswer(sel, correctVal));
-      if (isMatched) {
-        matches++;
+    // Rule 1, 3, 5, 6: No partial marking, size check, set matching
+    let groupIsCorrect = true;
+    if (userSelections.size !== N) {
+      groupIsCorrect = false;
+    } else {
+      for (const correctVal of correctSet) {
+        const hasMatch = Array.from(userSelections).some(sel => matchSingleAnswer(sel, correctVal, firstQ.instruction_text, firstQ.question_type));
+        if (!hasMatch) {
+          groupIsCorrect = false;
+          break;
+        }
       }
-    });
+    }
 
-    const scoreForGroup = Math.min(N, matches);
+    const scoreForGroup = groupIsCorrect ? N : 0;
     rawScore += scoreForGroup;
 
-    // Distribute correct/incorrect marks (first scoreForGroup questions marked true)
     for (let i = 0; i < N; i++) {
       const q = groupQs[i];
       const qNumStr = String(q.question_number);
-      const isCorrect = i < scoreForGroup;
       
       evaluatedQuestions[q.id] = {
         questionId: q.id,
@@ -220,7 +294,7 @@ export const scoreReadingSession = (userAnswers = {}, questions = [], testType =
         questionType: q.question_type,
         userAnswer: userAnswers[qNumStr] || null,
         correctAnswers: q.correct_answers,
-        isCorrect,
+        isCorrect: groupIsCorrect,
         explanation: q.explanation || null,
         citationExcerpt: q.citation_excerpt || null,
         questionData: q.question_data || null
@@ -235,23 +309,7 @@ export const scoreReadingSession = (userAnswers = {}, questions = [], testType =
     
     let isCorrect = false;
     if (q.correct_answers && q.correct_answers.length > 0) {
-      const normalizedUserList = [];
-      if (Array.isArray(userAnswer)) {
-        userAnswer.forEach(val => {
-          if (val) normalizedUserList.push(val);
-        });
-      } else if (userAnswer) {
-        const parts = String(userAnswer).split(",");
-        parts.forEach(part => {
-          if (part) normalizedUserList.push(part);
-        });
-      }
-
-      if (normalizedUserList.length > 0) {
-        isCorrect = normalizedUserList.some(userVal => {
-          return q.correct_answers.some(correctVal => matchSingleAnswer(userVal, correctVal));
-        });
-      }
+      isCorrect = checkAnswer(userAnswer, q.correct_answers, q.instruction_text, q.question_type);
     }
 
     if (isCorrect) {
@@ -271,7 +329,6 @@ export const scoreReadingSession = (userAnswers = {}, questions = [], testType =
     };
   }
 
-  // Populate results array in sorted order
   for (const q of sortedQuestions) {
     questionResults.push(evaluatedQuestions[q.id]);
   }
