@@ -15,16 +15,47 @@ export const normalizeAnswer = (answer) => {
     return answer.map(a => normalizeAnswer(a)).sort().filter(Boolean);
   }
 
-  return String(answer)
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, " ") // Collapse multiple spaces to single space
-    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, ""); // Strip punctuation
+  let clean = String(answer).trim();
+
+  // Unicode normalization (NFC/NFKC)
+  clean = clean.normalize("NFKC");
+
+  // Normalize quotes (smart quotes -> normal quotes)
+  clean = clean.replace(/[\u2018\u2019\u201B\u2039\u203A]/g, "'"); // single smart quotes
+  clean = clean.replace(/[\u201C\u201D\u201F\u00AB\u00BB]/g, '"'); // double smart quotes
+
+  // Ignore capitalization
+  clean = clean.toLowerCase();
+
+  // Normalize hyphens (replace smart/em/en dashes with standard hyphen or space)
+  clean = clean.replace(/[\u2010\u2011\u2012\u2013\u2014\u2015]/g, "-");
+
+  // Collapse multiple spaces into one
+  clean = clean.replace(/\s+/g, " ");
+
+  // Remove accidental trailing punctuation (like trailing periods or commas, except if it is part of a decimal or standard symbol)
+  clean = clean.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]+$/, "");
+
+  return clean.trim();
 };
 
-/**
- * Validates word limit based on IELTS instructions.
- */
+export const splitAlternatives = (correctAnsString) => {
+  if (!correctAnsString) return [];
+  const str = String(correctAnsString).trim();
+  
+  // Protect "and/or" from being split by the slash
+  const andOrPlaceholder = "___AND_OR_PLACEHOLDER___";
+  const protectedStr = str.replace(/and\/or/gi, andOrPlaceholder);
+
+  // Split by: OR, or, /, |, ;
+  const splitRegex = /\s+(?:or|OR)\s+|\s*[/|;]\s*/g;
+  const parts = protectedStr.split(splitRegex);
+
+  return parts
+    .map(p => p.replace(new RegExp(andOrPlaceholder, "g"), "and/or").trim())
+    .filter(Boolean);
+};
+
 export const validateWordLimit = (userAns, instructionText) => {
   if (!instructionText) return true;
   const text = String(instructionText).toLowerCase();
@@ -89,52 +120,44 @@ export const validateWordLimit = (userAns, instructionText) => {
 export const matchSingleAnswer = (userAns, correctAns, instructionText = "", questionType = "") => {
   if (userAns === null || userAns === undefined || correctAns === null || correctAns === undefined) return false;
 
-  const u = String(userAns).trim().toLowerCase();
-  const c = String(correctAns).trim().toLowerCase();
-
-  // Rule 24: Slash-separated accepted answers
-  if (c.includes("/")) {
-    const parts = c.split("/");
-    return parts.some(part => matchSingleAnswer(userAns, part.trim(), instructionText, questionType));
-  }
-
-  if (u === c) return true;
-
   // Word limits on text entry question types
-  const textEntryTypes = ["sentence_completion", "summary_completion", "table_completion", "short_answer", "form_completion", "flow_chart"];
+  const textEntryTypes = ["sentence_completion", "summary_completion", "table_completion", "short_answer", "form_completion", "flow_chart", "note_completion", "diagram_labeling"];
   if (questionType && textEntryTypes.includes(questionType)) {
     if (!validateWordLimit(userAns, instructionText)) {
       return false;
     }
   }
 
-  const puncRegex = /[.,\/#!$%\^&\*;:{}=\_`~()]/g;
-  const cleanU = u.replace(puncRegex, "").replace(/\s+/g, " ").trim();
-  const cleanC = c.replace(puncRegex, "").replace(/\s+/g, " ").trim();
+  const correctAlternatives = splitAlternatives(correctAns);
+  const normalizedUser = normalizeAnswer(userAns);
 
-  if (cleanU === cleanC) return true;
+  return correctAlternatives.some(alt => {
+    const normalizedAlt = normalizeAnswer(alt);
 
-  // Rule 20: Hyphenation normalization
-  const hyphenU = cleanU.replace(/-/g, " ").replace(/\s+/g, " ").trim();
-  const hyphenC = cleanC.replace(/-/g, " ").replace(/\s+/g, " ").trim();
-  if (hyphenU === hyphenC) return true;
+    if (normalizedUser === normalizedAlt) return true;
 
-  const stripHyphenU = cleanU.replace(/[-\s]/g, "");
-  const stripHyphenC = cleanC.replace(/[-\s]/g, "");
-  if (stripHyphenU === stripHyphenC) return true;
+    // Normalize hyphens where Cambridge permits
+    const hyphenU = normalizedUser.replace(/-/g, " ").replace(/\s+/g, " ").trim();
+    const hyphenC = normalizedAlt.replace(/-/g, " ").replace(/\s+/g, " ").trim();
+    if (hyphenU === hyphenC) return true;
 
-  // Prefix matching (ONLY for matching / multiple choice where prefix/suffixes matter)
-  const mcqOrMatchingTypes = ["mcq_single", "mcq_multiple", "matching", "matching_headings", "matching_info", "matching_features", "matching_endings", "map", "plan", "diagram"];
-  if (!questionType || mcqOrMatchingTypes.includes(questionType)) {
-    const escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    const prefixRegex = new RegExp(`^${escapeRegExp(cleanC)}(?:[^a-z0-9]|$)`);
-    if (prefixRegex.test(cleanU)) return true;
+    const stripHyphenU = normalizedUser.replace(/[-\s]/g, "");
+    const stripHyphenC = normalizedAlt.replace(/[-\s]/g, "");
+    if (stripHyphenU === stripHyphenC) return true;
 
-    const revPrefixRegex = new RegExp(`^${escapeRegExp(cleanU)}(?:[^a-z0-9]|$)`);
-    if (revPrefixRegex.test(cleanC)) return true;
-  }
+    // Prefix matching for MCQ/Matching headings/etc.
+    const mcqOrMatchingTypes = ["mcq_single", "mcq_multiple", "matching", "matching_headings", "matching_info", "matching_features", "matching_endings", "matching_sentence_endings", "map", "plan", "diagram"];
+    if (!questionType || mcqOrMatchingTypes.includes(questionType)) {
+      const escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const prefixRegex = new RegExp(`^${escapeRegExp(normalizedAlt)}(?:[^a-z0-9]|$)`);
+      if (prefixRegex.test(normalizedUser)) return true;
 
-  return false;
+      const revPrefixRegex = new RegExp(`^${escapeRegExp(normalizedUser)}(?:[^a-z0-9]|$)`);
+      if (revPrefixRegex.test(normalizedAlt)) return true;
+    }
+
+    return false;
+  });
 };
 
 /**
@@ -220,9 +243,19 @@ export const scoreListeningSession = (userAnswers = {}, questions = []) => {
     }
   }
 
+  // Filter out groups of size 1 (which are single questions with alternative answers)
+  const finalGroupedQuestionsMap = {};
+  for (const key in groupedQuestionsMap) {
+    if (groupedQuestionsMap[key].length > 1) {
+      finalGroupedQuestionsMap[key] = groupedQuestionsMap[key];
+    } else {
+      ungroupedQuestions.push(groupedQuestionsMap[key][0]);
+    }
+  }
+
   // 1. Process Grouped Questions (MCQs that can be in either order)
-  for (const groupKey in groupedQuestionsMap) {
-    const groupQs = groupedQuestionsMap[groupKey];
+  for (const groupKey in finalGroupedQuestionsMap) {
+    const groupQs = finalGroupedQuestionsMap[groupKey];
     const N = groupQs.length;
     
     // Correct answers set (normalized)

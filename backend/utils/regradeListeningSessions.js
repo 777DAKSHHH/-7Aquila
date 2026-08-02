@@ -12,9 +12,7 @@ import { scoreListeningSession } from "./listeningScoring.js";
 
 async function regrade() {
   const sessionIds = [
-    "9a1c8fb3-8c92-43a1-8bf0-5eefe51545f6",
-    "c285a380-e7ec-421b-b1d0-20f06b68b092",
-    "6935048a-ed4b-46d6-8a21-5fe09a12c6bc"
+    "50512b2f-0926-4460-abee-fb099993cf4f"
   ];
 
   for (const sid of sessionIds) {

@@ -113,10 +113,10 @@
       "question_type": "sentence_completion",
       "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
       "question_data": {
-        "text": "Clapping: used by the teacher to help students keep [blank]."
+        "text": "[blank]: used by the teacher to help students keep time."
       },
-      "correct_answers": ["time", "rhythm"],
-      "explanation": "Gary uses clapping to help students keep time/rhythm."
+      "correct_answers": ["clapping"],
+      "explanation": "Gary uses clapping to help students keep time."
     },
     {
       "section_number": 1,

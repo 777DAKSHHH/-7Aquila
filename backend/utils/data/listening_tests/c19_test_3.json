@@ -60,7 +60,7 @@
       "question_data": {
         "text": "Fish market – best to go before [blank] pm."
       },
-      "correct_answers": ["3.30", "three thirty", "half three"],
+      "correct_answers": ["3.30", "three thirty", "half three", "half past three", "3:30", "half 3"],
       "explanation": "It is best to arrive before 3.30 pm to get the best selection."
     },
     {
