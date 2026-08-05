@@ -258,61 +258,49 @@ export const scoreListeningSession = (userAnswers = {}, questions = []) => {
     const groupQs = finalGroupedQuestionsMap[groupKey];
     const N = groupQs.length;
     
-    // Correct answers set (normalized)
     const firstQ = groupQs[0];
-    const correctSet = new Set(
-      firstQ.correct_answers.map(a => String(a).trim().toLowerCase())
-    );
+    const correctOptions = [...firstQ.correct_answers];
 
-    // Collect all unique user selections for this group
-    const userSelections = new Set();
-    groupQs.forEach(q => {
-      const qNumStr = String(q.question_number);
-      const ans = userAnswers[qNumStr];
-      if (ans) {
-        if (Array.isArray(ans)) {
-          ans.forEach(val => {
-            if (val) userSelections.add(String(val).trim().toLowerCase());
-          });
-        } else {
-          const parts = String(ans).split(",");
-          parts.forEach(part => {
-            if (part) userSelections.add(part.trim().toLowerCase());
-          });
-        }
-      }
-    });
+    const matchedCorrectIndices = new Set();
+    const questionResultsList = [];
 
-    // Rule 1, 3, 5, 6: No partial marking, size check, set matching
-    let groupIsCorrect = true;
-    if (userSelections.size !== N) {
-      groupIsCorrect = false;
-    } else {
-      for (const correctVal of correctSet) {
-        const hasMatch = Array.from(userSelections).some(sel => matchSingleAnswer(sel, correctVal, firstQ.instruction_text, firstQ.question_type));
-        if (!hasMatch) {
-          groupIsCorrect = false;
-          break;
-        }
-      }
-    }
-
-    const scoreForGroup = groupIsCorrect ? N : 0;
-    rawScore += scoreForGroup;
-
-    // Distribute correct/incorrect marks (first scoreForGroup questions marked true)
     for (let i = 0; i < N; i++) {
       const q = groupQs[i];
       const qNumStr = String(q.question_number);
+      const userAnsRaw = userAnswers[qNumStr];
       
-      evaluatedQuestions[q.id] = {
-        questionId: q.id,
-        questionNumber: q.question_number,
-        questionType: q.question_type,
-        userAnswer: userAnswers[qNumStr] || null,
-        correctAnswers: q.correct_answers,
-        isCorrect: groupIsCorrect,
-        explanation: q.explanation || null
+      let matchedIndex = -1;
+      if (userAnsRaw) {
+        // Find an unmatched correct option that matches the user answer
+        for (let j = 0; j < correctOptions.length; j++) {
+          if (!matchedCorrectIndices.has(j)) {
+            const correctVal = correctOptions[j];
+            if (matchSingleAnswer(userAnsRaw, correctVal, q.instruction_text, q.question_type)) {
+              matchedIndex = j;
+              break;
+            }
+          }
+        }
+      }
+      
+      if (matchedIndex !== -1) {
+        matchedCorrectIndices.add(matchedIndex);
+        rawScore += 1;
+        questionResultsList.push({ q, userAnswer: userAnsRaw, isCorrect: true });
+      } else {
+        questionResultsList.push({ q, userAnswer: userAnsRaw, isCorrect: false });
+      }
+    }
+
+    for (const res of questionResultsList) {
+      evaluatedQuestions[res.q.id] = {
+        questionId: res.q.id,
+        questionNumber: res.q.question_number,
+        questionType: res.q.question_type,
+        userAnswer: res.userAnswer || null,
+        correctAnswers: res.q.correct_answers,
+        isCorrect: res.isCorrect,
+        explanation: res.q.explanation || null
       };
     }
   }

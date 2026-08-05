@@ -1,0 +1,583 @@
+{
+  "title": "Cambridge IELTS 21 Listening Test 2",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Part 1: One-day classes at Steynford College",
+      "audio_url": "/uploads/audio/CB-21.2-TEST-1.mp31.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer."
+    },
+    {
+      "section_number": 2,
+      "title": "Part 2: Melby Heritage Walk & Melby Coal Mine",
+      "audio_url": "/uploads/audio/CB-21.2-TEST-1.mp32.mp3",
+      "instruction_text": "Questions 11–14: Choose TWO letters, A–E. Questions 15–20: Label the map below. Choose the correct letter, A–I."
+    },
+    {
+      "section_number": 3,
+      "title": "Part 3: Student project: developing a new food product",
+      "audio_url": "/uploads/audio/CB-21.2-TEST-1.mp33.mp3",
+      "instruction_text": "Questions 21–26: Choose TWO letters, A–E. Questions 27–30: Choose the correct letter, A–F."
+    },
+    {
+      "section_number": 4,
+      "title": "Part 4: Challenges facing the cruise ship industry",
+      "audio_url": "/uploads/audio/CB-21.2-TEST-1.mp34.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer."
+    }
+  ],
+  "questions": [
+    {
+      "section_number": 1,
+      "question_number": 1,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Vietnamese food: 13 [blank]"
+      },
+      "correct_answers": ["January"],
+      "explanation": "The class takes place on the 13th of January."
+    },
+    {
+      "section_number": 1,
+      "question_number": 2,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Bread making: £[blank]"
+      },
+      "correct_answers": ["48", "forty-eight"],
+      "explanation": "The cost of the class is 48 pounds."
+    },
+    {
+      "section_number": 1,
+      "question_number": 3,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Bread making: make white bread, sourdough, and [blank]"
+      },
+      "correct_answers": ["pizza"],
+      "explanation": "Students learn to make pizza in this course."
+    },
+    {
+      "section_number": 1,
+      "question_number": 4,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Face massage: teacher trained in [blank]"
+      },
+      "correct_answers": ["India"],
+      "explanation": "The instructor completed their training in India."
+    },
+    {
+      "section_number": 1,
+      "question_number": 5,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Face massage: bring a [blank]"
+      },
+      "correct_answers": ["mirror"],
+      "explanation": "Students need to bring their own mirror to practice."
+    },
+    {
+      "section_number": 1,
+      "question_number": 6,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Candle making: 6 [blank]"
+      },
+      "correct_answers": ["April"],
+      "explanation": "The candle making class is on the 6th of April."
+    },
+    {
+      "section_number": 1,
+      "question_number": 7,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Candle making: only [blank] ingredients are used"
+      },
+      "correct_answers": ["natural"],
+      "explanation": "The course only uses natural ingredients."
+    },
+    {
+      "section_number": 1,
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Silk painting: £[blank]"
+      },
+      "correct_answers": ["67.50", "sixty-seven fifty"],
+      "explanation": "The course cost is 67.50 pounds."
+    },
+    {
+      "section_number": 1,
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Silk painting: bring an apron or old [blank]"
+      },
+      "correct_answers": ["shirt"],
+      "explanation": "Students are requested to bring a shirt or an apron to protect clothes."
+    },
+    {
+      "section_number": 1,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "DIY for beginners: learn to use a drill, saw, and [blank]"
+      },
+      "correct_answers": ["hammer"],
+      "explanation": "The class covers basic tools like a drill, saw, and hammer."
+    },
+    {
+      "section_number": 2,
+      "question_number": 11,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO pieces of advice are given about the Marsden Coastal Walk?",
+        "options": [
+          "A. Stop for lunch in an ancient town.",
+          "B. Don’t miss the ruins of a certain building.",
+          "C. Catch a boat to the start of this walk.",
+          "D. Be careful of the steep and rocky paths.",
+          "E. Don’t worry about getting lost."
+        ]
+      },
+      "correct_answers": ["B", "E"],
+      "explanation": "The speaker advises not to miss the ruins of the castle (B) and notes that there are clear signs so getting lost is not a concern (E)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 12,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO pieces of advice are given about the Marsden Coastal Walk?",
+        "options": [
+          "A. Stop for lunch in an ancient town.",
+          "B. Don’t miss the ruins of a certain building.",
+          "C. Catch a boat to the start of this walk.",
+          "D. Be careful of the steep and rocky paths.",
+          "E. Don’t worry about getting lost."
+        ]
+      },
+      "correct_answers": ["B", "E"],
+      "explanation": "The speaker advises not to miss the ruins of the castle (B) and notes that there are clear signs so getting lost is not a concern (E)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 13,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO things are said about the Melby Heritage Walk?",
+        "options": [
+          "A. This walk is mostly downhill.",
+          "B. The paths can get busy during the day.",
+          "C. This is a circular walk.",
+          "D. A tower stands on the site of an older structure.",
+          "E. There are far-reaching views the whole way."
+        ]
+      },
+      "correct_answers": ["C", "D"],
+      "explanation": "The Melby Heritage Walk starts and ends in the same place (C) and has a tower built on an older seventeenth-century lodge site (D)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 14,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO things are said about the Melby Heritage Walk?",
+        "options": [
+          "A. This walk is mostly downhill.",
+          "B. The paths can get busy during the day.",
+          "C. This is a circular walk.",
+          "D. A tower stands on the site of an older structure.",
+          "E. There are far-reaching views the whole way."
+        ]
+      },
+      "correct_answers": ["C", "D"],
+      "explanation": "The Melby Heritage Walk starts and ends in the same place (C) and has a tower built on an older seventeenth-century lodge site (D)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 15,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–I, next to Questions 15–20.",
+      "question_data": {
+        "text": "Exhibition",
+        "image_url": "/assets/images/c21_t2_p2.png",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+      },
+      "correct_answers": ["F"],
+      "explanation": "The exhibition area is located at F on the map."
+    },
+    {
+      "section_number": 2,
+      "question_number": 16,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–I, next to Questions 15–20.",
+      "question_data": {
+        "text": "Baths",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+      },
+      "correct_answers": ["B"],
+      "explanation": "The baths are located at B on the map."
+    },
+    {
+      "section_number": 2,
+      "question_number": 17,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–I, next to Questions 15–20.",
+      "question_data": {
+        "text": "Tools",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+      },
+      "correct_answers": ["D"],
+      "explanation": "The tool storage building is located at D on the map."
+    },
+    {
+      "section_number": 2,
+      "question_number": 18,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–I, next to Questions 15–20.",
+      "question_data": {
+        "text": "Vehicles",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+      },
+      "correct_answers": ["A"],
+      "explanation": "The transport vehicles area is located at A on the map."
+    },
+    {
+      "section_number": 2,
+      "question_number": 19,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–I, next to Questions 15–20.",
+      "question_data": {
+        "text": "Ponies",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+      },
+      "correct_answers": ["H"],
+      "explanation": "The pony stables are located at H on the map."
+    },
+    {
+      "section_number": 2,
+      "question_number": 20,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Choose the correct letter, A–I, next to Questions 15–20.",
+      "question_data": {
+        "text": "Education centre",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+      },
+      "correct_answers": ["E"],
+      "explanation": "The education centre is located at E on the map."
+    },
+    {
+      "section_number": 3,
+      "question_number": 21,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO facts in the sessions on food safety were new information for Nadia and Fergus?",
+        "options": [
+          "A. The role of bacteria in preserving certain foods.",
+          "B. How temperature fluctuations affect food safety.",
+          "C. The history of food preservation techniques.",
+          "D. Standard kitchen hygiene procedures.",
+          "E. The regulations governing food labelling."
+        ]
+      },
+      "correct_answers": ["B", "E"],
+      "explanation": "They both agreed they had no idea about temperature limits (B) and found the labelling rules new (E)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 22,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO facts in the sessions on food safety were new information for Nadia and Fergus?",
+        "options": [
+          "A. The role of bacteria in preserving certain foods.",
+          "B. How temperature fluctuations affect food safety.",
+          "C. The history of food preservation techniques.",
+          "D. Standard kitchen hygiene procedures.",
+          "E. The regulations governing food labelling."
+        ]
+      },
+      "correct_answers": ["B", "E"],
+      "explanation": "They both agreed they had no idea about temperature limits (B) and found the labelling rules new (E)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 23,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO reasons do they give for choosing a falafel snack product?",
+        "options": [
+          "A. It is cheap to produce.",
+          "B. It is popular with children.",
+          "C. It can be eaten easily on the move.",
+          "D. It is a healthy alternative to chips.",
+          "E. It is simple to make."
+        ]
+      },
+      "correct_answers": ["C", "D"],
+      "explanation": "They decided on it because it is portable/convenient on the go (C) and serves as a healthy alternative to chips (D)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 24,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO reasons do they give for choosing a falafel snack product?",
+        "options": [
+          "A. It is cheap to produce.",
+          "B. It is popular with children.",
+          "C. It can be eaten easily on the move.",
+          "D. It is a healthy alternative to chips.",
+          "E. It is simple to make."
+        ]
+      },
+      "correct_answers": ["C", "D"],
+      "explanation": "They decided on it because it is portable/convenient on the go (C) and serves as a healthy alternative to chips (D)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 25,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO things did the teacher say about the project grade and report?",
+        "options": [
+          "A. The report needs to include a bibliography.",
+          "B. The final mark will depend on the prototype.",
+          "C. The grade will be shared between team members.",
+          "D. The layout must follow a specific template.",
+          "E. The deadline cannot be extended."
+        ]
+      },
+      "correct_answers": ["A", "C"],
+      "explanation": "The teacher mentioned that a full bibliography is required (A) and the mark will be collective for the team members (C)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 26,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO things did the teacher say about the project grade and report?",
+        "options": [
+          "A. The report needs to include a bibliography.",
+          "B. The final mark will depend on the prototype.",
+          "C. The grade will be shared between team members.",
+          "D. The layout must follow a specific template.",
+          "E. The deadline cannot be extended."
+        ]
+      },
+      "correct_answers": ["A", "C"],
+      "explanation": "The teacher mentioned that a full bibliography is required (A) and the mark will be collective for the team members (C)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 27,
+      "question_type": "mcq_single",
+      "instruction_text": "What opinion is given about each stage of the student project? Choose the correct letter, A–F, next to Questions 27–30.",
+      "question_data": {
+        "text": "Initial aim",
+        "options": [
+          "A. This was challenging but enjoyable",
+          "B. This led to some disagreement",
+          "C. This was easy to decide on",
+          "D. This was helped by the guidelines provided",
+          "E. This seemed like an unnecessary stage",
+          "F. This involved selecting a new ingredient"
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "They quickly agreed on the falafel concept, making it easy to decide (C)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 28,
+      "question_type": "mcq_single",
+      "instruction_text": "What opinion is given about each stage of the student project? Choose the correct letter, A–F, next to Questions 27–30.",
+      "question_data": {
+        "text": "Literature review",
+        "options": [
+          "A. This was challenging but enjoyable",
+          "B. This led to some disagreement",
+          "C. This was easy to decide on",
+          "D. This was helped by the guidelines provided",
+          "E. This seemed like an unnecessary stage",
+          "F. This involved selecting a new ingredient"
+        ]
+      },
+      "correct_answers": ["D"],
+      "explanation": "The literature review guidelines provided by the tutor made the stage much easier (D)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 29,
+      "question_type": "mcq_single",
+      "instruction_text": "What opinion is given about each stage of the student project? Choose the correct letter, A–F, next to Questions 27–30.",
+      "question_data": {
+        "text": "Product development",
+        "options": [
+          "A. This was challenging but enjoyable",
+          "B. This led to some disagreement",
+          "C. This was easy to decide on",
+          "D. This was helped by the guidelines provided",
+          "E. This seemed like an unnecessary stage",
+          "F. This involved selecting a new ingredient"
+        ]
+      },
+      "correct_answers": ["F"],
+      "explanation": "Choosing the jackfruit ingredient meant selecting a brand new item for the recipe (F)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 30,
+      "question_type": "mcq_single",
+      "instruction_text": "What opinion is given about each stage of the student project? Choose the correct letter, A–F, next to Questions 27–30.",
+      "question_data": {
+        "text": "Product production",
+        "options": [
+          "A. This was challenging but enjoyable",
+          "B. This led to some disagreement",
+          "C. This was easy to decide on",
+          "D. This was helped by the guidelines provided",
+          "E. This seemed like an unnecessary stage",
+          "F. This involved selecting a new ingredient"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Frying and testing the product was difficult but fun (A)."
+    },
+    {
+      "section_number": 4,
+      "question_number": 31,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Problems with overtourism: [blank] is identified as one of the worst environmental threats."
+      },
+      "correct_answers": ["pollution"],
+      "explanation": "The speaker mentions that air and water pollution is the worst outcome."
+    },
+    {
+      "section_number": 4,
+      "question_number": 32,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Problems with overtourism: A tourist [blank] has been introduced in some cities to restrict visitor numbers."
+      },
+      "correct_answers": ["tax"],
+      "explanation": "A tourist tax was implemented to limit the influx of daily visitors."
+    },
+    {
+      "section_number": 4,
+      "question_number": 33,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Problems with overtourism: Shops in Bruges were criticized for only stocking [blank] and souvenirs."
+      },
+      "correct_answers": ["chocolate"],
+      "explanation": "Locals complained that the city center turned into a theme park with only chocolate shops."
+    },
+    {
+      "section_number": 4,
+      "question_number": 34,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Problems with overtourism: Dubrovnik manages arrivals by controlling the [blank] of ships."
+      },
+      "correct_answers": ["timing"],
+      "explanation": "Managing the timing and slots of ship arrivals prevented congestion."
+    },
+    {
+      "section_number": 4,
+      "question_number": 35,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Problems of perception: There is a common assumption regarding the high [blank] of cruise trips."
+      },
+      "correct_answers": ["cost"],
+      "explanation": "Many think cruises are prohibitively expensive."
+    },
+    {
+      "section_number": 4,
+      "question_number": 36,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Problems of perception: People often believe there are too many restrictive [blank] on board."
+      },
+      "correct_answers": ["rules"],
+      "explanation": "The perception of too many rules deters younger passengers."
+    },
+    {
+      "section_number": 4,
+      "question_number": 37,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Solutions: Cruise lines are introducing active options like boxing, [blank], and wellness programs."
+      },
+      "correct_answers": ["diving"],
+      "explanation": "New activities like scuba diving are now offered on-board."
+    },
+    {
+      "section_number": 4,
+      "question_number": 38,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Solutions: Food offerings now standardly include diverse [blank] food options."
+      },
+      "correct_answers": ["vegan"],
+      "explanation": "Vegan diets are well catered for on modern cruises."
+    },
+    {
+      "section_number": 4,
+      "question_number": 39,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Solutions: Providing reliable, high-speed [blank] is a major focus for lines."
+      },
+      "correct_answers": ["wifi"],
+      "explanation": "Reliable wifi is essential to attract younger, remote workers."
+    },
+    {
+      "section_number": 4,
+      "question_number": 40,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Solutions: Social media marketing is improved using premium promotional [blank]."
+      },
+      "correct_answers": ["videos"],
+      "explanation": "Short, engaging videos are utilized for modern digital campaigns."
+    }
+  ]
+}
