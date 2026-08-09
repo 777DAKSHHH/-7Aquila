@@ -1,0 +1,612 @@
+{
+  "title": "Cambridge IELTS 21 Listening Test 1",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Part 1: Oyster Bay Sailing Club Courses",
+      "audio_url": "/uploads/audio/a21t1l1.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer."
+    },
+    {
+      "section_number": 2,
+      "title": "Part 2: Working as a makeup trainee",
+      "audio_url": "/uploads/audio/a21t1l2.mp3",
+      "instruction_text": "Questions 11–16: Choose the correct letter, A, B or C. Questions 17–20: Match the duties with the correct approach, A, B or C."
+    },
+    {
+      "section_number": 3,
+      "title": "Part 3: Ocean Biodiversity Discussion",
+      "audio_url": "/uploads/audio/a21t1l3.mp3",
+      "instruction_text": "Questions 21–24: Choose TWO letters, A–E. Questions 25–30: Match the ocean biodiversity resources with the comments, A–H."
+    },
+    {
+      "section_number": 4,
+      "title": "Part 4: Sources of Rubber",
+      "audio_url": "/uploads/audio/a21t1l4.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer."
+    }
+  ],
+  "questions": [
+    {
+      "section_number": 1,
+      "question_number": 1,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Taster day: small groups (maximum [blank] people)"
+      },
+      "correct_answers": ["10", "ten"],
+      "explanation": "The maximum group size for the taster day is 10 people."
+    },
+    {
+      "section_number": 1,
+      "question_number": 2,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Level 1: theory covers [blank] and tides"
+      },
+      "correct_answers": ["weather"],
+      "explanation": "The theory session covers weather conditions and tides."
+    },
+    {
+      "section_number": 1,
+      "question_number": 3,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Level 1: practical skills include information on [blank]"
+      },
+      "correct_answers": ["safety"],
+      "explanation": "Level 1 practical training covers essential safety guidelines."
+    },
+    {
+      "section_number": 1,
+      "question_number": 4,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Cost and Booking: a [blank] is available for club members"
+      },
+      "correct_answers": ["discount"],
+      "explanation": "Club members receive a discount on course fees."
+    },
+    {
+      "section_number": 1,
+      "question_number": 5,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Useful item: a [blank] containing sailing terminology"
+      },
+      "correct_answers": ["dictionary"],
+      "explanation": "A specialized dictionary of sailing terms is provided or recommended."
+    },
+    {
+      "section_number": 1,
+      "question_number": 6,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Completion: students receive a [blank] at the end"
+      },
+      "correct_answers": ["certificate"],
+      "explanation": "A certificate is awarded upon successful completion of the course."
+    },
+    {
+      "section_number": 1,
+      "question_number": 7,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "What to bring: a [blank], a change of clothes, and toiletries"
+      },
+      "correct_answers": ["towel"],
+      "explanation": "Participants need to bring a towel, dry clothes, and toiletries."
+    },
+    {
+      "section_number": 1,
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Facilities: a [blank] is situated on site"
+      },
+      "correct_answers": ["cafe", "café"],
+      "explanation": "There is a cafe located at the sailing club."
+    },
+    {
+      "section_number": 1,
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Preparations: check out the [blank] on the club website before starting"
+      },
+      "correct_answers": ["videos"],
+      "explanation": "Students should watch the training videos on the website before starting."
+    },
+    {
+      "section_number": 1,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Storage: [blank] are available in changing rooms"
+      },
+      "correct_answers": ["lockers"],
+      "explanation": "Lockers are provided in the changing rooms for securing personal belongings."
+    },
+    {
+      "section_number": 2,
+      "question_number": 11,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What should trainees always expect to get when working on low-budget short films?",
+        "options": [
+          "A. travel expenses",
+          "B. a minimum wage",
+          "C. meals"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Trainees should expect to receive travel expenses on low-budget projects."
+    },
+    {
+      "section_number": 2,
+      "question_number": 12,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "According to the speaker, on big-budget films, trainees may get experience of",
+        "options": [
+          "A. makeup for special effects",
+          "B. working with different ethnicities",
+          "C. creating a variety of hair styles"
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Working on big-budget films offers valuable experience with diverse ethnic groups."
+    },
+    {
+      "section_number": 2,
+      "question_number": 13,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "The speaker says a problem for makeup artists is",
+        "options": [
+          "A. waiting around for hours doing nothing",
+          "B. being shouted at by their supervisor",
+          "C. dealing with difficult directors"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "A major complaint is the long waiting periods between scenes."
+    },
+    {
+      "section_number": 2,
+      "question_number": 14,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "How did the speaker feel when she met famous actors for the first time?",
+        "options": [
+          "A. very shy",
+          "B. very proud",
+          "C. very disappointed"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Meeting high-profile actors made the speaker feel extremely shy initially."
+    },
+    {
+      "section_number": 2,
+      "question_number": 15,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What advice does the speaker give about makeup kits?",
+        "options": [
+          "A. Always carry a basic kit with you",
+          "B. Only buy the best products for a makeup kit",
+          "C. Ask other makeup artists to check your kit"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "The speaker advises keeping a compact, essential kit with you at all times."
+    },
+    {
+      "section_number": 2,
+      "question_number": 16,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "What advice does the speaker give about creating a portfolio?",
+        "options": [
+          "A. Keep print and digital photos",
+          "B. Only include a small selection of photos",
+          "C. Get permission to use photos"
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "You must secure official permission before including actors' photos in your portfolio."
+    },
+    {
+      "section_number": 2,
+      "question_number": 17,
+      "question_type": "mcq_single",
+      "instruction_text": "Which approach is required for the following duties? Choose the correct letter, A, B or C, next to Questions 17–20.",
+      "question_data": {
+        "text": "Prepping an actor",
+        "options": [
+          "A. being well-organised",
+          "B. being flexible",
+          "C. working quickly"
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Prepping actors must be performed quickly to keep production on schedule (C)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 18,
+      "question_type": "mcq_single",
+      "instruction_text": "Which approach is required for the following duties? Choose the correct letter, A, B or C, next to Questions 17–20.",
+      "question_data": {
+        "text": "Continuity",
+        "options": [
+          "A. being well-organised",
+          "B. being flexible",
+          "C. working quickly"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Continuity requires high organization and keeping meticulous notes (A)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 19,
+      "question_type": "mcq_single",
+      "instruction_text": "Which approach is required for the following duties? Choose the correct letter, A, B or C, next to Questions 17–20.",
+      "question_data": {
+        "text": "General",
+        "options": [
+          "A. being well-organised",
+          "B. being flexible",
+          "C. working quickly"
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "General duties require adaptability and flexibility to handle varying tasks (B)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 20,
+      "question_type": "mcq_single",
+      "instruction_text": "Which approach is required for the following duties? Choose the correct letter, A, B or C, next to Questions 17–20.",
+      "question_data": {
+        "text": "Applying makeup",
+        "options": [
+          "A. being well-organised",
+          "B. being flexible",
+          "C. working quickly"
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Applying final makeup needs to be fast and precise on set (C)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 21,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO features of the lecture on ocean biodiversity had the greatest impact on the students?",
+        "options": [
+          "A. the references to local problems",
+          "B. the broad focus of the examples",
+          "C. the practical suggestions for solutions",
+          "D. the type of issues discussed",
+          "E. the implications for government policy"
+        ]
+      },
+      "correct_answers": ["B", "D"],
+      "explanation": "The students were impacted by the wide scope of the examples (B) and the long-term nature of the issues (D)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 22,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO features of the lecture on ocean biodiversity had the greatest impact on the students?",
+        "options": [
+          "A. the references to local problems",
+          "B. the broad focus of the examples",
+          "C. the practical suggestions for solutions",
+          "D. the type of issues discussed",
+          "E. the implications for government policy"
+        ]
+      },
+      "correct_answers": ["B", "D"],
+      "explanation": "The students were impacted by the wide scope of the examples (B) and the long-term nature of the issues (D)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 23,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO details about the research project particularly impressed the students?",
+        "options": [
+          "A. the team's previous successes",
+          "B. its wide geographical scale",
+          "C. the use of new technology",
+          "D. the extensive statistical evidence",
+          "E. the large range of specialists involved"
+        ]
+      },
+      "correct_answers": ["C", "E"],
+      "explanation": "They liked the application of advanced tools (C) and the inclusion of many different specialists (E)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 24,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO details about the research project particularly impressed the students?",
+        "options": [
+          "A. the team's previous successes",
+          "B. its wide geographical scale",
+          "C. the use of new technology",
+          "D. the extensive statistical evidence",
+          "E. the large range of specialists involved"
+        ]
+      },
+      "correct_answers": ["C", "E"],
+      "explanation": "They liked the application of advanced tools (C) and the inclusion of many different specialists (E)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 25,
+      "question_type": "mcq_single",
+      "instruction_text": "What comment do the students make about each resource? Choose the correct letter, A–H, next to Questions 25–30.",
+      "question_data": {
+        "text": "Article on invasive lionfish",
+        "options": [
+          "A. This is aimed at a very specialist audience.",
+          "B. This is now rather outdated.",
+          "C. This was an effective description of a new danger.",
+          "D. This suggests possible ways to improve the situation.",
+          "E. This does not give a balanced account.",
+          "F. This is too predictable to be useful.",
+          "G. This gives insufficient evidence for its claims.",
+          "H. This gives a clear explanation of the problems."
+        ]
+      },
+      "correct_answers": ["G"],
+      "explanation": "The article makes assertions about threats without providing solid supporting evidence (G)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 26,
+      "question_type": "mcq_single",
+      "instruction_text": "What comment do the students make about each resource? Choose the correct letter, A–H, next to Questions 25–30.",
+      "question_data": {
+        "text": "Documentary on microplastics",
+        "options": [
+          "A. This is aimed at a very specialist audience.",
+          "B. This is now rather outdated.",
+          "C. This was an effective description of a new danger.",
+          "D. This suggests possible ways to improve the situation.",
+          "E. This does not give a balanced account.",
+          "F. This is too predictable to be useful.",
+          "G. This gives insufficient evidence for its claims.",
+          "H. This gives a clear explanation of the problems."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "The documentary is ten years old and shows its age, representing outdated data (B)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 27,
+      "question_type": "mcq_single",
+      "instruction_text": "What comment do the students make about each resource? Choose the correct letter, A–H, next to Questions 25–30.",
+      "question_data": {
+        "text": "Podcast on ocean pollution",
+        "options": [
+          "A. This is aimed at a very specialist audience.",
+          "B. This is now rather outdated.",
+          "C. This was an effective description of a new danger.",
+          "D. This suggests possible ways to improve the situation.",
+          "E. This does not give a balanced account.",
+          "F. This is too predictable to be useful.",
+          "G. This gives insufficient evidence for its claims.",
+          "H. This gives a clear explanation of the problems."
+        ]
+      },
+      "correct_answers": ["F"],
+      "explanation": "The podcast states the obvious and is too predictable to offer value (F)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 28,
+      "question_type": "mcq_single",
+      "instruction_text": "What comment do the students make about each resource? Choose the correct letter, A–H, next to Questions 25–30.",
+      "question_data": {
+        "text": "Book on coastal ecosystems",
+        "options": [
+          "A. This is aimed at a very specialist audience.",
+          "B. This is now rather outdated.",
+          "C. This was an effective description of a new danger.",
+          "D. This suggests possible ways to improve the situation.",
+          "E. This does not give a balanced account.",
+          "F. This is too predictable to be useful.",
+          "G. This gives insufficient evidence for its claims.",
+          "H. This gives a clear explanation of the problems."
+        ]
+      },
+      "correct_answers": ["H"],
+      "explanation": "The book provides a very clear explanation of ecological challenges (H)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 29,
+      "question_type": "mcq_single",
+      "instruction_text": "What comment do the students make about each resource? Choose the correct letter, A–H, next to Questions 25–30.",
+      "question_data": {
+        "text": "Article on metal toxicity",
+        "options": [
+          "A. This is aimed at a very specialist audience.",
+          "B. This is now rather outdated.",
+          "C. This was an effective description of a new danger.",
+          "D. This suggests possible ways to improve the situation.",
+          "E. This does not give a balanced account.",
+          "F. This is too predictable to be useful.",
+          "G. This gives insufficient evidence for its claims.",
+          "H. This gives a clear explanation of the problems."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "The article uses highly technical terms and is geared toward specialists (A)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 30,
+      "question_type": "mcq_single",
+      "instruction_text": "What comment do the students make about each resource? Choose the correct letter, A–H, next to Questions 25–30.",
+      "question_data": {
+        "text": "Podcast on floating marine cities",
+        "options": [
+          "A. This is aimed at a very specialist audience.",
+          "B. This is now rather outdated.",
+          "C. This was an effective description of a new danger.",
+          "D. This suggests possible ways to improve the situation.",
+          "E. This does not give a balanced account.",
+          "F. This is too predictable to be useful.",
+          "G. This gives insufficient evidence for its claims.",
+          "H. This gives a clear explanation of the problems."
+        ]
+      },
+      "correct_answers": ["E"],
+      "explanation": "The podcast gives a one-sided presentation of human benefits without ecological balance (E)."
+    },
+    {
+      "section_number": 4,
+      "question_number": 31,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Background: Fossil fuels, [blank], and rubber are key to modern civilization."
+      },
+      "correct_answers": ["metal", "metals"],
+      "explanation": "Metals are identified alongside rubber and fossil fuels as fundamental resources."
+    },
+    {
+      "section_number": 4,
+      "question_number": 32,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Natural rubber production: The growth of the rubber tree is relatively [blank]."
+      },
+      "correct_answers": ["slow"],
+      "explanation": "Rubber trees require a slow growth cycle before tapping can begin."
+    },
+    {
+      "section_number": 4,
+      "question_number": 33,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Natural rubber production: It is hard to adjust supply to meet changing [blank]."
+      },
+      "correct_answers": ["demand"],
+      "explanation": "The long crop cycle makes it difficult to adjust supply to market demand."
+    },
+    {
+      "section_number": 4,
+      "question_number": 34,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Natural rubber production: Trees must grow in tropical areas near the [blank]."
+      },
+      "correct_answers": ["equator"],
+      "explanation": "Hevea trees require the climate found near the equator."
+    },
+    {
+      "section_number": 4,
+      "question_number": 35,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Natural rubber production: Unlike other materials, it is very difficult to [blank] rubber."
+      },
+      "correct_answers": ["recycle"],
+      "explanation": "The cross-linked chemical structure makes rubber difficult to recycle."
+    },
+    {
+      "section_number": 4,
+      "question_number": 36,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Risks: Monoculture plantations are highly vulnerable to a destructive [blank]."
+      },
+      "correct_answers": ["fungus"],
+      "explanation": "Leaf blight caused by a fungus poses a severe threat to single-species plantations."
+    },
+    {
+      "section_number": 4,
+      "question_number": 37,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Risks: Production is also impacted by extreme [blank] events."
+      },
+      "correct_answers": ["weather"],
+      "explanation": "Unpredictable and extreme weather events damage harvests."
+    },
+    {
+      "section_number": 4,
+      "question_number": 38,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Alternatives: Synthetic rubber is not as [blank] as natural rubber."
+      },
+      "correct_answers": ["strong"],
+      "explanation": "Synthetic rubber lacks the high tear strength and elasticity of natural rubber."
+    },
+    {
+      "section_number": 4,
+      "question_number": 39,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Alternatives: Dandelion rubber is extracted from the plant's [blank]."
+      },
+      "correct_answers": ["roots"],
+      "explanation": "The white latex fluid is harvested from the roots of the dandelion."
+    },
+    {
+      "section_number": 4,
+      "question_number": 40,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Alternatives: Dandelions can grow without needing high-quality [blank]."
+      },
+      "correct_answers": ["soil"],
+      "explanation": "Dandelions are robust and grow in poor quality soil."
+    }
+  ]
+}

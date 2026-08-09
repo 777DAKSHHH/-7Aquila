@@ -7,25 +7,25 @@
     {
       "section_number": 1,
       "title": "Part 1: One-day classes at Steynford College",
-      "audio_url": "/uploads/audio/CB-21.2-TEST-1.mp31.mp3",
+      "audio_url": "/uploads/audio/a21t2l1.mp3",
       "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer."
     },
     {
       "section_number": 2,
       "title": "Part 2: Melby Heritage Walk & Melby Coal Mine",
-      "audio_url": "/uploads/audio/CB-21.2-TEST-1.mp32.mp3",
+      "audio_url": "/uploads/audio/a21t2l2.mp3",
       "instruction_text": "Questions 11–14: Choose TWO letters, A–E. Questions 15–20: Label the map below. Choose the correct letter, A–I."
     },
     {
       "section_number": 3,
       "title": "Part 3: Student project: developing a new food product",
-      "audio_url": "/uploads/audio/CB-21.2-TEST-1.mp33.mp3",
+      "audio_url": "/uploads/audio/a21t2l3.mp3",
       "instruction_text": "Questions 21–26: Choose TWO letters, A–E. Questions 27–30: Choose the correct letter, A–F."
     },
     {
       "section_number": 4,
       "title": "Part 4: Challenges facing the cruise ship industry",
-      "audio_url": "/uploads/audio/CB-21.2-TEST-1.mp34.mp3",
+      "audio_url": "/uploads/audio/a21t2l4.mp3",
       "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer."
     }
   ],
@@ -38,7 +38,7 @@
       "question_data": {
         "text": "Vietnamese food: 13 [blank]"
       },
-      "correct_answers": ["January"],
+      "correct_answers": ["(the) 13(th) (of) January", "13.01", "13.1", "January", "13th January", "13 January"],
       "explanation": "The class takes place on the 13th of January."
     },
     {
@@ -93,7 +93,7 @@
       "question_data": {
         "text": "Candle making: 6 [blank]"
       },
-      "correct_answers": ["April"],
+      "correct_answers": ["(the) 6(th) (of) April", "06.04", "6.4", "April", "6th April", "6 April"],
       "explanation": "The candle making class is on the 6th of April."
     },
     {

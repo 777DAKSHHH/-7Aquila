@@ -115,6 +115,36 @@ export const validateWordLimit = (userAns, instructionText) => {
 };
 
 /**
+ * Expands options in parentheses to support both having the content and not having it.
+ * E.g. "metal(s)" -> ["metals", "metal"]
+ * E.g. "(the) 13(th) (of) January" -> ["the 13th of January", "13th of January", ...]
+ */
+export const expandParentheses = (str) => {
+  const regex = /\(([^)]+)\)/;
+  const match = str.match(regex);
+  if (!match) {
+    return [str];
+  }
+  
+  const optionalText = match[1];
+  const withParentheses = str.replace(regex, optionalText);
+  const withoutParentheses = str.replace(regex, "");
+  
+  const withExpanded = expandParentheses(withParentheses);
+  const withoutExpanded = expandParentheses(withoutParentheses);
+  
+  const combined = [...withExpanded, ...withoutExpanded];
+  const unique = [];
+  for (const item of combined) {
+    const cleaned = item.replace(/\s+/g, " ").trim();
+    if (!unique.includes(cleaned)) {
+      unique.push(cleaned);
+    }
+  }
+  return unique;
+};
+
+/**
  * Evaluates a user answer against the array of correct answers.
  */
 export const matchSingleAnswer = (userAns, correctAns, instructionText = "", questionType = "") => {
@@ -132,31 +162,34 @@ export const matchSingleAnswer = (userAns, correctAns, instructionText = "", que
   const normalizedUser = normalizeAnswer(userAns);
 
   return correctAlternatives.some(alt => {
-    const normalizedAlt = normalizeAnswer(alt);
+    const expandedAlts = expandParentheses(alt);
+    return expandedAlts.some(expandedAlt => {
+      const normalizedAlt = normalizeAnswer(expandedAlt);
 
-    if (normalizedUser === normalizedAlt) return true;
+      if (normalizedUser === normalizedAlt) return true;
 
-    // Normalize hyphens where Cambridge permits
-    const hyphenU = normalizedUser.replace(/-/g, " ").replace(/\s+/g, " ").trim();
-    const hyphenC = normalizedAlt.replace(/-/g, " ").replace(/\s+/g, " ").trim();
-    if (hyphenU === hyphenC) return true;
+      // Normalize hyphens where Cambridge permits
+      const hyphenU = normalizedUser.replace(/-/g, " ").replace(/\s+/g, " ").trim();
+      const hyphenC = normalizedAlt.replace(/-/g, " ").replace(/\s+/g, " ").trim();
+      if (hyphenU === hyphenC) return true;
 
-    const stripHyphenU = normalizedUser.replace(/[-\s]/g, "");
-    const stripHyphenC = normalizedAlt.replace(/[-\s]/g, "");
-    if (stripHyphenU === stripHyphenC) return true;
+      const stripHyphenU = normalizedUser.replace(/[-\s]/g, "");
+      const stripHyphenC = normalizedAlt.replace(/[-\s]/g, "");
+      if (stripHyphenU === stripHyphenC) return true;
 
-    // Prefix matching for MCQ/Matching headings/etc.
-    const mcqOrMatchingTypes = ["mcq_single", "mcq_multiple", "matching", "matching_headings", "matching_info", "matching_features", "matching_endings", "matching_sentence_endings", "map", "plan", "diagram"];
-    if (!questionType || mcqOrMatchingTypes.includes(questionType)) {
-      const escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-      const prefixRegex = new RegExp(`^${escapeRegExp(normalizedAlt)}(?:[^a-z0-9]|$)`);
-      if (prefixRegex.test(normalizedUser)) return true;
+      // Prefix matching for MCQ/Matching headings/etc.
+      const mcqOrMatchingTypes = ["mcq_single", "mcq_multiple", "matching", "matching_headings", "matching_info", "matching_features", "matching_endings", "matching_sentence_endings", "map", "plan", "diagram"];
+      if (!questionType || mcqOrMatchingTypes.includes(questionType)) {
+        const escapeRegExp = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const prefixRegex = new RegExp(`^${escapeRegExp(normalizedAlt)}(?:[^a-z0-9]|$)`);
+        if (prefixRegex.test(normalizedUser)) return true;
 
-      const revPrefixRegex = new RegExp(`^${escapeRegExp(normalizedUser)}(?:[^a-z0-9]|$)`);
-      if (revPrefixRegex.test(normalizedAlt)) return true;
-    }
+        const revPrefixRegex = new RegExp(`^${escapeRegExp(normalizedUser)}(?:[^a-z0-9]|$)`);
+        if (revPrefixRegex.test(normalizedAlt)) return true;
+      }
 
-    return false;
+      return false;
+    });
   });
 };
 

@@ -1,0 +1,648 @@
+{
+  "title": "Cambridge IELTS 21 Listening Test 4",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Part 1: Survey about shopping in Broadbeach",
+      "audio_url": "/uploads/audio/a21t4l1.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer."
+    },
+    {
+      "section_number": 2,
+      "title": "Part 2: The Annual Business Exhibition Overview",
+      "audio_url": "/uploads/audio/a21t4l2.mp3",
+      "instruction_text": "Questions 11–14: Choose TWO letters, A–E. Questions 15–20: Match the speakers with their topics, A–G."
+    },
+    {
+      "section_number": 3,
+      "title": "Part 3: Presentation on houses of the future",
+      "audio_url": "/uploads/audio/a21t4l3.mp3",
+      "instruction_text": "Questions 21–23: Choose the correct letter, A, B or C. Questions 24–30: Match the housing developments with the comments, A–I."
+    },
+    {
+      "section_number": 4,
+      "title": "Part 4: Music therapy for surgical patients",
+      "audio_url": "/uploads/audio/a21t4l4.mp3",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer."
+    }
+  ],
+  "questions": [
+    {
+      "section_number": 1,
+      "question_number": 1,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Name of street where she lives: [blank] Street"
+      },
+      "correct_answers": ["Leigh"],
+      "explanation": "The speaker names the street Leigh Street."
+    },
+    {
+      "section_number": 1,
+      "question_number": 2,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Usual mode of transport: [blank]"
+      },
+      "correct_answers": ["motorbike"],
+      "explanation": "Her usual mode of transport is a motorbike."
+    },
+    {
+      "section_number": 1,
+      "question_number": 3,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Reason for today's visit: appointment at the [blank]"
+      },
+      "correct_answers": ["hairdresser", "hairdressers"],
+      "explanation": "She is in town to go to the hairdresser."
+    },
+    {
+      "section_number": 1,
+      "question_number": 4,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Bought today: a [blank]"
+      },
+      "correct_answers": ["suit"],
+      "explanation": "She purchased a new suit today."
+    },
+    {
+      "section_number": 1,
+      "question_number": 5,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Planning to buy: a [blank]"
+      },
+      "correct_answers": ["laptop"],
+      "explanation": "She plans to buy a laptop next."
+    },
+    {
+      "section_number": 1,
+      "question_number": 6,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Preferred shopping day: [blank]"
+      },
+      "correct_answers": ["Monday"],
+      "explanation": "Monday is her preferred day for shopping."
+    },
+    {
+      "section_number": 1,
+      "question_number": 7,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Likes most: range of [blank] shops"
+      },
+      "correct_answers": ["coffee"],
+      "explanation": "She particularly likes the variety of coffee shops."
+    },
+    {
+      "section_number": 1,
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Dislikes: not enough shops selling [blank]"
+      },
+      "correct_answers": ["books"],
+      "explanation": "She complains about the lack of bookshops."
+    },
+    {
+      "section_number": 1,
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Suggestions: put some [blank] in the pedestrian area"
+      },
+      "correct_answers": ["plants"],
+      "explanation": "She suggests putting more plants in the walking zone."
+    },
+    {
+      "section_number": 1,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Suggestions: build a [blank] in the town centre"
+      },
+      "correct_answers": ["cinema"],
+      "explanation": "She suggests opening a cinema in the centre of town."
+    },
+    {
+      "section_number": 2,
+      "question_number": 11,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "In which TWO areas of the business exhibition did James Craig promote his company last year?",
+        "options": [
+          "A. The Digital Marketing Centre",
+          "B. The TalkCon Zone",
+          "C. The Breakout area",
+          "D. The Business Village",
+          "E. The Business Connections Zone"
+        ]
+      },
+      "correct_answers": ["C", "E"],
+      "explanation": "James Craig's company promoted itself in the Breakout area (C) and sponsored the Business Connections Zone (E)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 12,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "In which TWO areas of the business exhibition did James Craig promote his company last year?",
+        "options": [
+          "A. The Digital Marketing Centre",
+          "B. The TalkCon Zone",
+          "C. The Breakout area",
+          "D. The Business Village",
+          "E. The Business Connections Zone"
+        ]
+      },
+      "correct_answers": ["C", "E"],
+      "explanation": "James Craig's company promoted itself in the Breakout area (C) and sponsored the Business Connections Zone (E)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 13,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO facts are given about discounts on popular brands available to exhibitors?",
+        "options": [
+          "A. They are available to all members of exhibiting companies.",
+          "B. They can be used for both food and clothing.",
+          "C. They apply to all purchases over £100.",
+          "D. They are only valid during the exhibition week.",
+          "E. They must be claimed using an online portal."
+        ]
+      },
+      "correct_answers": ["A", "B"],
+      "explanation": "Exhibitor discounts are open to all staff of the exhibiting firms (A) and apply to food and clothing items (B)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 14,
+      "question_type": "mcq_multiple",
+      "instruction_text": "Choose TWO letters, A–E.",
+      "question_data": {
+        "text": "Which TWO facts are given about discounts on popular brands available to exhibitors?",
+        "options": [
+          "A. They are available to all members of exhibiting companies.",
+          "B. They can be used for both food and clothing.",
+          "C. They apply to all purchases over £100.",
+          "D. They are only valid during the exhibition week.",
+          "E. They must be claimed using an online portal."
+        ]
+      },
+      "correct_answers": ["A", "B"],
+      "explanation": "Exhibitor discounts are open to all staff of the exhibiting firms (A) and apply to food and clothing items (B)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 15,
+      "question_type": "mcq_single",
+      "instruction_text": "Match the speakers with their topics. Choose the correct letter, A–G, next to Questions 15–20.",
+      "question_data": {
+        "text": "Jim Clowrie",
+        "options": [
+          "A. Supporting job seekers",
+          "B. Dealing with personal problems",
+          "C. Effects of an unexpectedly rapid expansion",
+          "D. A global range of business experiences",
+          "E. Establishing a digital identity",
+          "F. Developing a company in response to changing markets",
+          "G. Combining business success with contributions to charities"
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Jim Clowrie talks about managing the effects of unexpectedly fast business expansion (C)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 16,
+      "question_type": "mcq_single",
+      "instruction_text": "Match the speakers with their topics. Choose the correct letter, A–G, next to Questions 15–20.",
+      "question_data": {
+        "text": "David France",
+        "options": [
+          "A. Supporting job seekers",
+          "B. Dealing with personal problems",
+          "C. Effects of an unexpectedly rapid expansion",
+          "D. A global range of business experiences",
+          "E. Establishing a digital identity",
+          "F. Developing a company in response to changing markets",
+          "G. Combining business success with contributions to charities"
+        ]
+      },
+      "correct_answers": ["G"],
+      "explanation": "David France details how to combine commercial success with charity support (G)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 17,
+      "question_type": "mcq_single",
+      "instruction_text": "Match the speakers with their topics. Choose the correct letter, A–G, next to Questions 15–20.",
+      "question_data": {
+        "text": "Oliver Stanton",
+        "options": [
+          "A. Supporting job seekers",
+          "B. Dealing with personal problems",
+          "C. Effects of an unexpectedly rapid expansion",
+          "D. A global range of business experiences",
+          "E. Establishing a digital identity",
+          "F. Developing a company in response to changing markets",
+          "G. Combining business success with contributions to charities"
+        ]
+      },
+      "correct_answers": ["D"],
+      "explanation": "Oliver Stanton shares insights from his international business experiences (D)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 18,
+      "question_type": "mcq_single",
+      "instruction_text": "Match the speakers with their topics. Choose the correct letter, A–G, next to Questions 15–20.",
+      "question_data": {
+        "text": "Francesca Heptonstall",
+        "options": [
+          "A. Supporting job seekers",
+          "B. Dealing with personal problems",
+          "C. Effects of an unexpectedly rapid expansion",
+          "D. A global range of business experiences",
+          "E. Establishing a digital identity",
+          "F. Developing a company in response to changing markets",
+          "G. Combining business success with contributions to charities"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Francesca Heptonstall presents on aiding job seekers in the employment market (A)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 19,
+      "question_type": "mcq_single",
+      "instruction_text": "Match the speakers with their topics. Choose the correct letter, A–G, next to Questions 15–20.",
+      "question_data": {
+        "text": "Salman Khan",
+        "options": [
+          "A. Supporting job seekers",
+          "B. Dealing with personal problems",
+          "C. Effects of an unexpectedly rapid expansion",
+          "D. A global range of business experiences",
+          "E. Establishing a digital identity",
+          "F. Developing a company in response to changing markets",
+          "G. Combining business success with contributions to charities"
+        ]
+      },
+      "correct_answers": ["F"],
+      "explanation": "Salman Khan covers modifying business models in response to dynamic markets (F)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 20,
+      "question_type": "mcq_single",
+      "instruction_text": "Match the speakers with their topics. Choose the correct letter, A–G, next to Questions 15–20.",
+      "question_data": {
+        "text": "Annie Craven",
+        "options": [
+          "A. Supporting job seekers",
+          "B. Dealing with personal problems",
+          "C. Effects of an unexpectedly rapid expansion",
+          "D. A global range of business experiences",
+          "E. Establishing a digital identity",
+          "F. Developing a company in response to changing markets",
+          "G. Combining business success with contributions to charities"
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Annie Craven speaks about coping with and overcoming personal problems in business (B)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 21,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Which aspect of their presentation are Mia and Leo both concerned about?",
+        "options": [
+          "A. keeping to the time limit",
+          "B. finding suitable examples",
+          "C. explaining complex theories"
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Mia and Leo both agree that tracking down specific examples is a key challenge."
+    },
+    {
+      "section_number": 3,
+      "question_number": 22,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "The students decide to focus their assignment on housing for",
+        "options": [
+          "A. family groups",
+          "B. single people",
+          "C. the elderly"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "They choose to focus on housing layouts suited to family groups and multi-generational households."
+    },
+    {
+      "section_number": 3,
+      "question_number": 23,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "The students agree that demand for accommodation in urban areas should be met by",
+        "options": [
+          "A. converting commercial properties",
+          "B. constructing tall buildings",
+          "C. developing suburban areas"
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "They agree that building taller high-density housing blocks is the primary solution."
+    },
+    {
+      "section_number": 3,
+      "question_number": 24,
+      "question_type": "mcq_single",
+      "instruction_text": "What comment do the students make about each housing development? Choose the correct letter, A–I, next to Questions 24–30.",
+      "question_data": {
+        "text": "Use of roof space for gardens",
+        "options": [
+          "A. This could cause unnecessary anxiety.",
+          "B. This would be especially beneficial for city residents.",
+          "C. This would be challenging for young people.",
+          "D. This would have environmental benefits.",
+          "E. This could encourage creativity.",
+          "F. This could lead to social problems.",
+          "G. This could enable retired people to share a project.",
+          "H. This would help some people but cause problems for others.",
+          "I. This would suit both existing and new members of a household."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Roof gardens are identified as particularly beneficial for metropolitan residents (B)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 25,
+      "question_type": "mcq_single",
+      "instruction_text": "What comment do the students make about each housing development? Choose the correct letter, A–I, next to Questions 24–30.",
+      "question_data": {
+        "text": "Shared working spaces",
+        "options": [
+          "A. This could cause unnecessary anxiety.",
+          "B. This would be especially beneficial for city residents.",
+          "C. This would be challenging for young people.",
+          "D. This would have environmental benefits.",
+          "E. This could encourage creativity.",
+          "F. This could lead to social problems.",
+          "G. This could enable retired people to share a project.",
+          "H. This would help some people but cause problems for others.",
+          "I. This would suit both existing and new members of a household."
+        ]
+      },
+      "correct_answers": ["E"],
+      "explanation": "Shared workspace layouts can help stimulate creative thinking and design (E)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 26,
+      "question_type": "mcq_single",
+      "instruction_text": "What comment do the students make about each housing development? Choose the correct letter, A–I, next to Questions 24–30.",
+      "question_data": {
+        "text": "Moveable internal walls",
+        "options": [
+          "A. This could cause unnecessary anxiety.",
+          "B. This would be especially beneficial for city residents.",
+          "C. This would be challenging for young people.",
+          "D. This would have environmental benefits.",
+          "E. This could encourage creativity.",
+          "F. This could lead to social problems.",
+          "G. This could enable retired people to share a project.",
+          "H. This would help some people but cause problems for others.",
+          "I. This would suit both existing and new members of a household."
+        ]
+      },
+      "correct_answers": ["I"],
+      "explanation": "Flexible interior configurations suit changing household rosters (I)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 27,
+      "question_type": "mcq_single",
+      "instruction_text": "What comment do the students make about each housing development? Choose the correct letter, A–I, next to Questions 24–30.",
+      "question_data": {
+        "text": "Smart mirrors in bathrooms",
+        "options": [
+          "A. This could cause unnecessary anxiety.",
+          "B. This would be especially beneficial for city residents.",
+          "C. This would be challenging for young people.",
+          "D. This would have environmental benefits.",
+          "E. This could encourage creativity.",
+          "F. This could lead to social problems.",
+          "G. This could enable retired people to share a project.",
+          "H. This would help some people but cause problems for others.",
+          "I. This would suit both existing and new members of a household."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Health monitoring mirrors might induce needless stress and worry in users (A)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 28,
+      "question_type": "mcq_single",
+      "instruction_text": "What comment do the students make about each housing development? Choose the correct letter, A–I, next to Questions 24–30.",
+      "question_data": {
+        "text": "Bike sheds with charging points",
+        "options": [
+          "A. This could cause unnecessary anxiety.",
+          "B. This would be especially beneficial for city residents.",
+          "C. This would be challenging for young people.",
+          "D. This would have environmental benefits.",
+          "E. This could encourage creativity.",
+          "F. This could lead to social problems.",
+          "G. This could enable retired people to share a project.",
+          "H. This would help some people but cause problems for others.",
+          "I. This would suit both existing and new members of a household."
+        ]
+      },
+      "correct_answers": ["D"],
+      "explanation": "Secure charging structures promote eco-friendly urban mobility choices (D)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 29,
+      "question_type": "mcq_single",
+      "instruction_text": "What comment do the students make about each housing development? Choose the correct letter, A–I, next to Questions 24–30.",
+      "question_data": {
+        "text": "Restriction of cars to certain areas",
+        "options": [
+          "A. This could cause unnecessary anxiety.",
+          "B. This would be especially beneficial for city residents.",
+          "C. This would be challenging for young people.",
+          "D. This would have environmental benefits.",
+          "E. This could encourage creativity.",
+          "F. This could lead to social problems.",
+          "G. This could enable retired people to share a project.",
+          "H. This would help some people but cause problems for others.",
+          "I. This would suit both existing and new members of a household."
+        ]
+      },
+      "correct_answers": ["H"],
+      "explanation": "Restricting car access aids pedestrians but causes transport problems for some commuters (H)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 30,
+      "question_type": "mcq_single",
+      "instruction_text": "What comment do the students make about each housing development? Choose the correct letter, A–I, next to Questions 24–30.",
+      "question_data": {
+        "text": "Communal vegetable plots",
+        "options": [
+          "A. This could cause unnecessary anxiety.",
+          "B. This would be especially beneficial for city residents.",
+          "C. This would be challenging for young people.",
+          "D. This would have environmental benefits.",
+          "E. This could encourage creativity.",
+          "F. This could lead to social problems.",
+          "G. This could enable retired people to share a project.",
+          "H. This would help some people but cause problems for others.",
+          "I. This would suit both existing and new members of a household."
+        ]
+      },
+      "correct_answers": ["G"],
+      "explanation": "Communal plots offer shared projects that are particularly suited for retired residents (G)."
+    },
+    {
+      "section_number": 4,
+      "question_number": 31,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Overview: Music therapy is increasingly used as part of [blank] care in hospitals."
+      },
+      "correct_answers": ["routine"],
+      "explanation": "Music therapy is becoming a standard feature of routine patient care."
+    },
+    {
+      "section_number": 4,
+      "question_number": 32,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Overview: Positive outcomes have been demonstrated in clinical [blank]."
+      },
+      "correct_answers": ["trials"],
+      "explanation": "Clinical trials have shown verified benefits for music therapy in hospital settings."
+    },
+    {
+      "section_number": 4,
+      "question_number": 33,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Pre-operative phase: Patients listen to [blank] music before surgery."
+      },
+      "correct_answers": ["calming"],
+      "explanation": "Listening to calming music reduces pre-operative stress levels."
+    },
+    {
+      "section_number": 4,
+      "question_number": 34,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Pre-operative phase: Speakers can be placed inside [blank] to deliver music."
+      },
+      "correct_answers": ["pillows"],
+      "explanation": "Speakers built directly into pillows deliver non-invasive audio."
+    },
+    {
+      "section_number": 4,
+      "question_number": 35,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Intra-operative phase: Used to target high levels of [blank] during local anaesthetic procedures."
+      },
+      "correct_answers": ["anxiety"],
+      "explanation": "Music helps patients cope with anxiety during wakeful surgeries under local anaesthesia."
+    },
+    {
+      "section_number": 4,
+      "question_number": 36,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Intra-operative phase: Reduced requirement for sedative [blank]."
+      },
+      "correct_answers": ["medication"],
+      "explanation": "Playing music decreases the dose of chemical medication required."
+    },
+    {
+      "section_number": 4,
+      "question_number": 37,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Intra-operative phase: Helpful when it is important for the patient to remain [blank]."
+      },
+      "correct_answers": ["awake"],
+      "explanation": "Music keeps patients calm when they must remain awake during surgery."
+    },
+    {
+      "section_number": 4,
+      "question_number": 38,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Post-operative phase: Pain relief is achieved through [blank] of the patient's focus."
+      },
+      "correct_answers": ["distraction"],
+      "explanation": "Pain perception is lowered by providing cognitive distraction."
+    },
+    {
+      "section_number": 4,
+      "question_number": 39,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Post-operative phase: Patient-selected music of a peaceful [blank] is best."
+      },
+      "correct_answers": ["nature"],
+      "explanation": "Relaxing, peaceful music of a natural profile has the highest efficacy."
+    },
+    {
+      "section_number": 4,
+      "question_number": 40,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer.",
+      "question_data": {
+        "text": "Post-operative phase: The patient can control the [blank] of the audio."
+      },
+      "correct_answers": ["volume"],
+      "explanation": "Giving the patient control over the music volume increases their sense of agency."
+    }
+  ]
+}
