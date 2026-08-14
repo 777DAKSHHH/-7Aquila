@@ -61,6 +61,21 @@ const ReadingResults = () => {
     loadResults();
   }, [sessionId]);
 
+  useEffect(() => {
+    if (!isReviewMode) return;
+    const timer = setTimeout(() => {
+      const el = document.getElementById(`q-citation-${selectedQuestionNum}`);
+      if (el) {
+        el.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+          inline: "nearest"
+        });
+      }
+    }, 120);
+    return () => clearTimeout(timer);
+  }, [selectedQuestionNum, activePassageIdx, isReviewMode]);
+
   // Format seconds into HH:MM:SS or MM:SS
   const formatDuration = (totalSeconds) => {
     const m = Math.floor(totalSeconds / 60);
@@ -90,11 +105,11 @@ const ReadingResults = () => {
         const escapedExcerpt = excerpt.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
         
         try {
-          // Highlight citations inside passage. We add a visual span tag.
+          // Highlight citations inside passage. We add a visual span tag with unique ID.
           const regex = new RegExp(`(${escapedExcerpt})`, "gi");
           html = html.replace(
             regex,
-            `<span class="bg-green-200/90 text-green-950 font-bold px-1 border-b-2 border-green-600 rounded" title="Question #${q.question_number} Citation (Answer: ${q.correct_answers.join('/')})">$1 <span class="text-[9px] uppercase tracking-wide bg-green-600 text-white rounded-full px-1.5 py-0.5 ml-1 select-none font-mono">Q${q.question_number}</span></span>`
+            `<span id="q-citation-${q.question_number}" class="bg-green-200/90 text-green-950 font-bold px-1 border-b-2 border-green-600 rounded transition-all" title="Question #${q.question_number} Citation (Answer: ${q.correct_answers.join('/')})">$1 <span class="text-[9px] uppercase tracking-wide bg-green-600 text-white rounded-full px-1.5 py-0.5 ml-1 select-none font-mono">Q${q.question_number}</span></span>`
           );
         } catch (err) {
           console.warn("Could not highlight excerpt:", excerpt, err);

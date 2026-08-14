@@ -1,0 +1,559 @@
+{
+  "title": "IELTS UPGRADE TEST 1",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Part 1: RESTAURANTS",
+      "audio_url": "/uploads/audio/IELTS UPGRADE Test 1.mp3",
+      "instruction_text": "Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer."
+    },
+    {
+      "section_number": 2,
+      "title": "Part 2: Knightsbridge Centre map & Town complex proposal",
+      "audio_url": "/uploads/audio/IELTS UPGRADE Test 1.mp3",
+      "instruction_text": "Questions 11–15: Label the map below. Write the correct letter, A–G. Questions 16–20: Choose the correct letter, A, B or C."
+    },
+    {
+      "section_number": 3,
+      "title": "Part 3: Discussion on Exams and Modules",
+      "audio_url": "/uploads/audio/IELTS UPGRADE Test 1.mp3",
+      "instruction_text": "Questions 21–25: Choose the correct letter, A, B or C. Questions 26–30: What does Elle say about the subjects? Choose the correct letter, A, B or C."
+    },
+    {
+      "section_number": 4,
+      "title": "Part 4: The Freudian Slip Lecture",
+      "audio_url": "/uploads/audio/IELTS UPGRADE Test 1.mp3",
+      "instruction_text": "Questions 31–35: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer. Questions 36–40: Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer."
+    }
+  ],
+  "questions": [
+    {
+      "section_number": 1,
+      "question_number": 1,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "The Royal: £4,000 to book event room for whole evening including 1 [blank]"
+      },
+      "correct_answers": ["catering costs", "catering cost"],
+      "explanation": "Transcript: 'There's more; the Royal has its own private event room, which can be booked for the entire evening for only £4,000, and, the icing on the cake: the price I've quoted you includes catering costs.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 2,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "The Royal: Guests can avail themselves of 2 [blank] on rooms at sister premises opposite (Royal Hotel)"
+      },
+      "correct_answers": ["a special discount", "special discount", "discount"],
+      "explanation": "Transcript: 'And another perk of booking this restaurant is that it is located in very close proximity to a hotel - the Royal Hotel. Wedding guests who want to stay there overnight will get a special discount on bookings.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 3,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Venue 1: Location: 3 [blank] City Hall"
+      },
+      "correct_answers": ["adjacent to", "next to"],
+      "explanation": "Transcript: 'We also have Venue 1. That's the establishment adjacent to City Hall.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 4,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Venue 1: Pricing: £ 4 [blank] to hire out both floors"
+      },
+      "correct_answers": ["4,500", "4500", "under 4,500", "under 4500", "just under 4,500", "just under 4500"],
+      "explanation": "Transcript: 'You mentioned that you were looking for more space; well, you can hire out both rooms in this venue for just under £4,500.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 5,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Venue 1: Notes: (i) Capacity to 5 [blank] 250 guests"
+      },
+      "correct_answers": ["host", "accommodate"],
+      "explanation": "Transcript: 'Essentially, you will be hiring out both floors of the restaurant for the evening and your guests will, unavoidably, have to be separated into two groups... I guess not, but the venue can, at least, host 250 guests.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 6,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Venue 1: Notes: (ii) Can arrange for a 6 [blank] to be provided"
+      },
+      "correct_answers": ["wedding band", "house band", "band"],
+      "explanation": "Transcript: 'Plus, did I mention that a wedding band can be provided free of charge?'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 7,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Name of third restaurant: 7 [blank]"
+      },
+      "correct_answers": ["ALIBI CLUB 9731", "Alibi Club 9731", "the Alibi Club 9731", "Alibi Club", "ALIBI CLUB"],
+      "explanation": "Transcript: 'There is the Alibi Club 9731.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 8,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Location of Alibi Club: Inside the 8 [blank], the city's tallest building"
+      },
+      "correct_answers": ["regency tower", "Regency Tower"],
+      "explanation": "Transcript: 'It's a huge place inside the Regency Tower - R-E-G-E-N-C-Y, the city's tallest building, so you are going to be guaranteed spectacular views.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 9,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Offer: £10,000, but prepared to offer a 50% discount on 9 [blank]"
+      },
+      "correct_answers": ["Monday bookings", "Monday booking", "Monday-evening bookings", "Monday evening bookings"],
+      "explanation": "Transcript: 'Well, there is a Monday-evening offer; Monday bookings get the venue for 50% less than the normal price.'"
+    },
+    {
+      "section_number": 1,
+      "question_number": 10,
+      "question_type": "table_completion",
+      "instruction_text": "Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Notes: 10 [blank] wedding cake provided"
+      },
+      "correct_answers": ["complimentary", "a complimentary", "free", "a free"],
+      "explanation": "Transcript: 'As part of the package, they'll also give you a complimentary cake for the occasion.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 11,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Write the correct letter, A–G, next to questions 11-15.",
+      "question_data": {
+        "text": "Ticket Office",
+        "image_url": "/assets/images/upgrade_t1_p2.png",
+        "options": ["A", "B", "C", "D", "E", "F", "G"]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'First of all, having two car parks is all well and good, but you only have a ticket office in one of them. What happens if a customer encounters a problem in Car Park 2? Does he have to go all the way over to Car Park 1 to get help? That'll have to change.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 12,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Write the correct letter, A–G, next to questions 11-15.",
+      "question_data": {
+        "text": "Designer Boutique",
+        "image_url": "/assets/images/upgrade_t1_p2.png",
+        "options": ["A", "B", "C", "D", "E", "F", "G"]
+      },
+      "correct_answers": ["F"],
+      "explanation": "Transcript: 'Another issue we have is the location of one shopping outlet in isolation on the opposite side of the road to the main complex. I'm referring to the Designer Boutique by the roundabout.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 13,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Write the correct letter, A–G, next to questions 11-15.",
+      "question_data": {
+        "text": "Garden Centre",
+        "image_url": "/assets/images/upgrade_t1_p2.png",
+        "options": ["A", "B", "C", "D", "E", "F", "G"]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'We very much approve of the placement of a flower bed in the centre of the complex, and, of course, it makes sense to have this leading into the Garden Centre as you have shown in your plans.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 14,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Write the correct letter, A–G, next to questions 11-15.",
+      "question_data": {
+        "text": "Cineplex Cinema",
+        "image_url": "/assets/images/upgrade_t1_p2.png",
+        "options": ["A", "B", "C", "D", "E", "F", "G"]
+      },
+      "correct_answers": ["E"],
+      "explanation": "Transcript: 'Also, the building in the main complex, near to Car Park 2, is the Cineplex Cinema.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 15,
+      "question_type": "matching",
+      "instruction_text": "Label the map below. Write the correct letter, A–G, next to questions 11-15.",
+      "question_data": {
+        "text": "Toilets",
+        "image_url": "/assets/images/upgrade_t1_p2.png",
+        "options": ["A", "B", "C", "D", "E", "F", "G"]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: '...the toilets are on the Garden Centre side of the building, which means they are even further away from the Cineplex. The only reason we could think of for laying out your plans in this manner is so that toilet users would be forced to walk through the electrical store in the middle of that building. Not acceptable.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 16,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "The building of the complex",
+        "options": [
+          "A. has now been approved and building work can start.",
+          "B. must not begin until the plans have been revised.",
+          "C. will be discussed for the first time at the next town planners’ meeting."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'At the next town planners' meeting, please present your revised plans and the council will then grant the go-ahead for work to begin.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 17,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "The investors originally applied for funding of",
+        "options": [
+          "A. £1.3 million from the council.",
+          "B. £0.3 million from the council.",
+          "C. £1 million from the council."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'As regards your application for grant aid, the council has rubber-stamped funding of £1.3 million, which is £0.3 million in excess of the amount you applied for.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 18,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "If the business remains operational for less than 5 years what will happen?",
+        "options": [
+          "A. The council will repay the grant in full.",
+          "B. All the grant aid money must be returned to the council.",
+          "C. Half the grant aid money must be returned to the council."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'First of all, if your business does not remain in operation for 5 years, the grant should be repaid in full.'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 19,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "How many employees of the business should come from within 5 miles of Newsworth?",
+        "options": [
+          "A. between 5 and 25 percent",
+          "B. 25 percent",
+          "C. 75 percent"
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'Secondly, you will be required to employ local people to work at the centre where at all possible. Of the 500 employees, 75% should come from within 5 miles of Newsworth...'"
+    },
+    {
+      "section_number": 2,
+      "question_number": 20,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "How many employees from more than 25 miles away from Newsworth can be employed?",
+        "options": [
+          "A. between 5 and 25 percent of the total workforce",
+          "B. 25 percent of the total workforce",
+          "C. none without council approval"
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: '...and the other 25% should be within a 25-mile radius of the town. Only under exceptional circumstances, and with the formal approval of the council, can you employ someone who does not fit the criteria I have just outlined.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 21,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Chris",
+        "options": [
+          "A. had to resit some of his exams.",
+          "B. passed his exams as expected.",
+          "C. was relieved to pass his exams."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'Chris: Not as poorly as I had been anticipating; I imagined there might be some resits in the offing, but, thankfully, I managed to just about pass every module, which was a huge relief.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 22,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Elle",
+        "options": [
+          "A. did badly in her Accounting exam because she had the hiccups.",
+          "B. passed her Accounting exam despite having a fever.",
+          "C. had to resit her Accounting exam."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'Elle: Well, I sat the Accounting exam with a fever, and, needless to say, didn't do so well. I ended up having to take it again in August.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 23,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Third year makes up",
+        "options": [
+          "A. 25% of the overall mark for the degree.",
+          "B. 42% of the overall mark for the degree.",
+          "C. 75% of the overall mark for the degree."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'Elle: Well, you know third year only counted for 25% of the overall grade for our degree. Fourth year makes up the rest, so you still have plenty of time to pull out a good grade; you just have to apply yourself a bit more seriously.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 24,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Elle doesn't want to study in the group because",
+        "options": [
+          "A. she prefers to study alone.",
+          "B. the situation with her accommodation has changed.",
+          "C. she prefers not to study on campus."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'Elle: It's not that; I'm all for a bit of group study, but bear in mind I don't live on campus anymore.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 25,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "Elle lives",
+        "options": [
+          "A. on campus.",
+          "B. in a place of her own.",
+          "C. with her parents."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'Elle: No. I couldn't find one, so I moved back in with the folks. Now I get the train in from home every day. It takes about half an hour so it's not so bad.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 26,
+      "question_type": "mcq_single",
+      "instruction_text": "What does Elle say about the following subjects? Choose the correct letter, A, B or C, next to questions 26-30.",
+      "question_data": {
+        "text": "Marketing",
+        "options": [
+          "A. She will study it.",
+          "B. She won’t study it.",
+          "C. She might study it."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'Elle: Me though, I'm not completely convinced I want to do that module; [referring to Marketing]'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 27,
+      "question_type": "mcq_single",
+      "instruction_text": "What does Elle say about the following subjects? Choose the correct letter, A, B or C, next to questions 26-30.",
+      "question_data": {
+        "text": "Human Resources",
+        "options": [
+          "A. She will study it.",
+          "B. She won’t study it.",
+          "C. She might study it."
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Transcript: 'Elle: I was leaning more towards Human Resources, though I haven't made up my mind completely yet.'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 28,
+      "question_type": "mcq_single",
+      "instruction_text": "What does Elle say about the following subjects? Choose the correct letter, A, B or C, next to questions 26-30.",
+      "question_data": {
+        "text": "Business Law",
+        "options": [
+          "A. She will study it.",
+          "B. She won’t study it.",
+          "C. She might study it."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'Elle: But then I wouldn't be able to do Business Law as it clashes on the timetable - no way!'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 29,
+      "question_type": "mcq_single",
+      "instruction_text": "What does Elle say about the following subjects? Choose the correct letter, A, B or C, next to questions 26-30.",
+      "question_data": {
+        "text": "Organisational Behaviour",
+        "options": [
+          "A. She will study it.",
+          "B. She won’t study it.",
+          "C. She might study it."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Transcript: 'Elle: I would sooner enrol in a class entailed watching the grass grow for an hour and a half every day. I can't stand that Professor Leon Smith; what an absolute bore!'"
+    },
+    {
+      "section_number": 3,
+      "question_number": 30,
+      "question_type": "mcq_single",
+      "instruction_text": "What does Elle say about the following subjects? Choose the correct letter, A, B or C, next to questions 26-30.",
+      "question_data": {
+        "text": "Finance",
+        "options": [
+          "A. She will study it.",
+          "B. She won’t study it.",
+          "C. She might study it."
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Transcript: 'Elle: I think Finance is an important module, wouldn't you agree? Chris: That's why I'm doing it! Elle: Will see you there then! We can sit together.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 31,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "Parapraxis is also known by the 31 [blank] a Freudian slip."
+      },
+      "correct_answers": ["more familiar name"],
+      "explanation": "Transcript: 'Lecturer: ...but you may recognise it by its more familiar name: a Freudian slip.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 32,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "In psychoanalysis, Freudian slips are not thought of as slips 32 [blank]"
+      },
+      "correct_answers": ["of the tongue"],
+      "explanation": "Transcript: 'Lecturer: Some would pass off these glitches in our speech as slips of the tongue...'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 33,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "Psychoanalysts believe they provide 33 [blank] into our deepest and most suppressed thoughts."
+      },
+      "correct_answers": ["an insight", "insight"],
+      "explanation": "Transcript: 'Lecturer: ...but in psychoanalysis... they take on much more significance, and, indeed, can often give an insight into the speaker's deepest and most suppressed inner thoughts.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 34,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "For a slip to be Freudian, the speaker must not be conscious of 34 [blank]"
+      },
+      "correct_answers": ["how he feels", "how they feel", "how she feels"],
+      "explanation": "Transcript: 'Lecturer: In other words, the speaker must not consciously be aware of how he feels.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 35,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "Freudian slips are said to reveal when 35 [blank] are present that the speaker is subconsciously trying to restrain or repress."
+      },
+      "correct_answers": ["intentions"],
+      "explanation": "Transcript: 'Lecturer: ...convinced, in the particular case of Freudian slips, that they revealed the presence of restrained or repressed intentions.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 36,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer.",
+      "question_data": {
+        "text": "Many cognitive psychologists believe the explanation for so-called Freudian slips is far 36 [blank] than Freud suggested."
+      },
+      "correct_answers": ["more simple", "simpler"],
+      "explanation": "Transcript: 'Lecturer: Many cognitive psychologists argue that slips of the tongue can be explained away for a much more simple reason;'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 37,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer.",
+      "question_data": {
+        "text": "They regard these spoken mistakes as no more than 37 [blank] caused by poor attention to detail etc."
+      },
+      "correct_answers": ["linguistic slips"],
+      "explanation": "Transcript: 'Lecturer: ...they are linguistic slips which result on account of poor attention to detail, insufficient knowledge, incomplete sense data and so on.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 38,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer.",
+      "question_data": {
+        "text": "There is a tendency, they argue, to use incorrect words when they are already close to the forefront of our thoughts, or when we have used them in a 38 [blank] before."
+      },
+      "correct_answers": ["similar context", "similar situations", "similar situation"],
+      "explanation": "Transcript: 'Lecturer: ...we sometimes use the wrong words because they are close to the forefront of our thoughts, having already been used very recently or having been used in a similar, but slightly different, context before.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 39,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer.",
+      "question_data": {
+        "text": "39 [blank] concur with the cognitive psychologist viewpoint, pointing out that we often use familiar words slightly out of context as a replacement for unfamiliar or archaic ones."
+      },
+      "correct_answers": ["linguists", "Linguists"],
+      "explanation": "Transcript: 'Lecturer: Linguists support this view and also point out that some sentences and phrases even lend themselves to error on account of the fact that they contain archaic or very old and rarely used words, or unusual expressions with forms that can easily be mixed up and confused.'"
+    },
+    {
+      "section_number": 4,
+      "question_number": 40,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer.",
+      "question_data": {
+        "text": "The slips happen when the words we choose are not 40 [blank] for the words we are trying to replace."
+      },
+      "correct_answers": ["adequate substitutes", "substitutes", "adequate substitute", "substitute"],
+      "explanation": "Transcript: 'Lecturer: ...but which may, in the particular context in which they are spoken, not make adequate substitutes for the replaced words or phrases.'"
+    }
+  ]
+}

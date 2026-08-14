@@ -45,7 +45,11 @@
           "k. better with younger children to whom its size poses less of a threat",
           "l. training from a young age is essential otherwise it will lack confidence"
         ],
-        "keywords": ["obedience training", "early age", "prey drive", "hunting instincts"],
+        "keywords": [
+          "obedience training",
+          "early age",
+          "responds well"
+        ],
         "paragraph": "B",
         "sentence_start": "B2",
         "sentence_end": "B3",
@@ -54,9 +58,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting (l) training from young age ensures confidence, which is not in the text."
       },
-      "correct_answers": ["c", "h", "j"],
-      "explanation": "Irish Wolfhound training and temperament characteristics include (c) early start success, (h) calm temperament, and (j) late start prey drive hindrance.",
-      "citation_excerpt": "responds very well to obedience training (provided the training is done from an early age, otherwise the animal’s strong prey drive may hinder... very calm and even-tempered"
+      "correct_answers": [
+        "c"
+      ],
+      "explanation": "The author says that the Irish Wolfhound 'responds very well to obedience training' provided that training is done from an early age. Here, responds very well to obedience training = reacts well to training, and from an early age = training has commenced at an early stage in life.",
+      "citation_excerpt": "responds very well to obedience training (provided the training is done from an early age"
     },
     {
       "passage_number": 1,
@@ -79,7 +85,11 @@
           "k. better with younger children to whom its size poses less of a threat",
           "l. training from a young age is essential otherwise it will lack confidence"
         ],
-        "keywords": ["obedience training", "early age", "prey drive", "hunting instincts"],
+        "keywords": [
+          "temperament",
+          "calm",
+          "even-tempered"
+        ],
         "paragraph": "B",
         "sentence_start": "B2",
         "sentence_end": "B3",
@@ -88,9 +98,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting (l) training from young age ensures confidence, which is not in the text."
       },
-      "correct_answers": ["c", "h", "j"],
-      "explanation": "Irish Wolfhound training and temperament characteristics include (c) early start success, (h) calm temperament, and (j) late start prey drive hindrance.",
-      "citation_excerpt": "responds very well to obedience training (provided the training is done from an early age, otherwise the animal’s strong prey drive may hinder... very calm and even-tempered"
+      "correct_answers": [
+        "h"
+      ],
+      "explanation": "The author describes the Irish Wolfhound as 'very calm and even-tempered.' Here, calm and even-tempered = sedate and unexcitable temperament.",
+      "citation_excerpt": "very calm and even-tempered"
     },
     {
       "passage_number": 1,
@@ -113,7 +125,11 @@
           "k. better with younger children to whom its size poses less of a threat",
           "l. training from a young age is essential otherwise it will lack confidence"
         ],
-        "keywords": ["obedience training", "early age", "prey drive", "hunting instincts"],
+        "keywords": [
+          "early training",
+          "prey drive",
+          "hinder"
+        ],
         "paragraph": "B",
         "sentence_start": "B2",
         "sentence_end": "B3",
@@ -122,9 +138,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting (l) training from young age ensures confidence, which is not in the text."
       },
-      "correct_answers": ["c", "h", "j"],
-      "explanation": "Irish Wolfhound training and temperament characteristics include (c) early start success, (h) calm temperament, and (j) late start prey drive hindrance.",
-      "citation_excerpt": "responds very well to obedience training (provided the training is done from an early age, otherwise the animal’s strong prey drive may hinder... very calm and even-tempered"
+      "correct_answers": [
+        "j"
+      ],
+      "explanation": "The author explains that if training is not started early, the dog's 'strong prey drive may hinder' its development. Here, prey drive = hunting instincts, and may hinder training = success of late-start training may be hindered.",
+      "citation_excerpt": "strong prey drive may hinder"
     },
     {
       "passage_number": 1,
@@ -147,7 +165,12 @@
           "k. better with younger children to whom its size poses less of a threat",
           "l. training from a young age is essential otherwise it will lack confidence"
         ],
-        "keywords": ["children", "protective", "clumsiness", "collisions"],
+        "keywords": [
+          "children",
+          "protective",
+          "family",
+          "siblings"
+        ],
         "paragraph": "B",
         "sentence_start": "B4",
         "sentence_end": "B5",
@@ -156,9 +179,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting (k) because size is mentioned, but (f) addresses collisions/awkwardness."
       },
-      "correct_answers": ["d", "f"],
-      "explanation": "Irish Wolfhound is highly protective (d) but prone to accidental collisions due to frame/awkwardness (f).",
-      "citation_excerpt": "fiercely protective of all his ‘siblings’... though his considerable frame and slight clumsiness can lead to collisions"
+      "correct_answers": [
+        "d"
+      ],
+      "explanation": "The Wolfhound sees himself as a member of the family and is 'fiercely protective' of his family members. Here, fiercely protective of his siblings = strong sense of pack loyalty and wanting to look after young family members.",
+      "citation_excerpt": "fiercely protective"
     },
     {
       "passage_number": 1,
@@ -181,7 +206,12 @@
           "k. better with younger children to whom its size poses less of a threat",
           "l. training from a young age is essential otherwise it will lack confidence"
         ],
-        "keywords": ["children", "protective", "clumsiness", "collisions"],
+        "keywords": [
+          "children",
+          "size",
+          "clumsiness",
+          "collisions"
+        ],
         "paragraph": "B",
         "sentence_start": "B4",
         "sentence_end": "B5",
@@ -190,9 +220,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting (k) because size is mentioned, but (f) addresses collisions/awkwardness."
       },
-      "correct_answers": ["d", "f"],
-      "explanation": "Irish Wolfhound is highly protective (d) but prone to accidental collisions due to frame/awkwardness (f).",
-      "citation_excerpt": "fiercely protective of all his ‘siblings’... though his considerable frame and slight clumsiness can lead to collisions"
+      "correct_answers": [
+        "i"
+      ],
+      "explanation": "The Wolfhound requires more training and supervision to ensure its considerable size does not lead to accidental collisions with children.",
+      "citation_excerpt": "considerable frame and slight clumsiness can lead to collisions"
     },
     {
       "passage_number": 1,
@@ -215,7 +247,11 @@
           "k. better with younger children to whom its size poses less of a threat",
           "l. training from a young age is essential otherwise it will lack confidence"
         ],
-        "keywords": ["challenge", "pack", "digging", "nuisance"],
+        "keywords": [
+          "nuisance",
+          "garden",
+          "digging"
+        ],
         "paragraph": "E",
         "sentence_start": "E9",
         "sentence_end": "F6",
@@ -224,9 +260,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Conflating early start with confidence lack (l), which isn't stated."
       },
-      "correct_answers": ["e", "g", "i"],
-      "explanation": "West Highland Terrier training and temperament considerations include (e) garden digging nuisance, (g) pack hierarchy dominance, and (i) training challenges and supervision.",
-      "citation_excerpt": "challenge in the training department, and must be monitored carefully and shown his place in the ‘pack’... happier digging up your garden"
+      "correct_answers": [
+        "e"
+      ],
+      "explanation": "The West Highland Terrier is happier 'digging up your garden' than sitting quietly with its owner. Here, digging up your garden = making itself a nuisance around the house and garden.",
+      "citation_excerpt": "happier digging up your garden"
     },
     {
       "passage_number": 1,
@@ -249,7 +287,11 @@
           "k. better with younger children to whom its size poses less of a threat",
           "l. training from a young age is essential otherwise it will lack confidence"
         ],
-        "keywords": ["challenge", "pack", "digging", "nuisance"],
+        "keywords": [
+          "pack",
+          "hierarchy",
+          "dominate"
+        ],
         "paragraph": "E",
         "sentence_start": "E9",
         "sentence_end": "F6",
@@ -258,9 +300,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Conflating early start with confidence lack (l), which isn't stated."
       },
-      "correct_answers": ["e", "g", "i"],
-      "explanation": "West Highland Terrier training and temperament considerations include (e) garden digging nuisance, (g) pack hierarchy dominance, and (i) training challenges and supervision.",
-      "citation_excerpt": "challenge in the training department, and must be monitored carefully and shown his place in the ‘pack’... happier digging up your garden"
+      "correct_answers": [
+        "g"
+      ],
+      "explanation": "The Highland 'must be monitored carefully and shown his place in the 'pack', otherwise … he will try to take over.' Here, shown his place in the pack = taught its place in the hierarchy, and try to take over = try to dominate.",
+      "citation_excerpt": "must be monitored carefully and shown his place in the ‘pack’, otherwise … he will try to take over"
     },
     {
       "passage_number": 1,
@@ -283,7 +327,12 @@
           "k. better with younger children to whom its size poses less of a threat",
           "l. training from a young age is essential otherwise it will lack confidence"
         ],
-        "keywords": ["challenge", "pack", "digging", "nuisance"],
+        "keywords": [
+          "training",
+          "early age",
+          "prey drive",
+          "hinder"
+        ],
         "paragraph": "E",
         "sentence_start": "E9",
         "sentence_end": "F6",
@@ -292,9 +341,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Conflating early start with confidence lack (l), which isn't stated."
       },
-      "correct_answers": ["e", "g", "i"],
-      "explanation": "West Highland Terrier training and temperament considerations include (e) garden digging nuisance, (g) pack hierarchy dominance, and (i) training challenges and supervision.",
-      "citation_excerpt": "challenge in the training department, and must be monitored carefully and shown his place in the ‘pack’... happier digging up your garden"
+      "correct_answers": [
+        "j"
+      ],
+      "explanation": "The author explains that the Irish Wolfhound responds well to obedience training when it is trained from an early age. Otherwise, its 'strong prey drive may hinder' the training. Here, prey drive = hunting instincts, and may hinder = success may be hindered.",
+      "citation_excerpt": "responds very well to obedience training (provided the training is done from an early age, otherwise the animal’s strong prey drive may hinder"
     },
     {
       "passage_number": 1,
@@ -317,7 +368,11 @@
           "k. better with younger children to whom its size poses less of a threat",
           "l. training from a young age is essential otherwise it will lack confidence"
         ],
-        "keywords": ["cuddles", "affection", "older kids", "toddlers", "noisiness"],
+        "keywords": [
+          "cuddles",
+          "affection",
+          "owner"
+        ],
         "paragraph": "F",
         "sentence_start": "F4",
         "sentence_end": "G4",
@@ -326,9 +381,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting (k) because of size differences, whereas (b) matches the toddlers/hyperactivity warnings."
       },
-      "correct_answers": ["a", "b"],
-      "explanation": "West Highland is not very affectionate (a) and can react aggressively to toddlers/hyperactive kids (b).",
-      "citation_excerpt": "not that interested in ‘cuddles’ either... not the most affectionate of dogs... toddlers should not be left alone around The Highland as their size, coupled with their noisiness and hyperactivity, may prompt an aggressive response"
+      "correct_answers": [
+        "a"
+      ],
+      "explanation": "The Highland is 'not that interested in ‘cuddles’' and is 'not the most affectionate of dogs.' Here, not interested in cuddles / not affectionate = not very tolerant of or interested in gestures of affection.",
+      "citation_excerpt": "not that interested in ‘cuddles’... not the most affectionate of dogs"
     },
     {
       "passage_number": 1,
@@ -351,7 +408,12 @@
           "k. better with younger children to whom its size poses less of a threat",
           "l. training from a young age is essential otherwise it will lack confidence"
         ],
-        "keywords": ["cuddles", "affection", "older kids", "toddlers", "noisiness"],
+        "keywords": [
+          "toddlers",
+          "noisy",
+          "energetic",
+          "aggressive"
+        ],
         "paragraph": "F",
         "sentence_start": "F4",
         "sentence_end": "G4",
@@ -360,9 +422,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting (k) because of size differences, whereas (b) matches the toddlers/hyperactivity warnings."
       },
-      "correct_answers": ["a", "b"],
-      "explanation": "West Highland is not very affectionate (a) and can react aggressively to toddlers/hyperactive kids (b).",
-      "citation_excerpt": "not that interested in ‘cuddles’ either... not the most affectionate of dogs... toddlers should not be left alone around The Highland as their size, coupled with their noisiness and hyperactivity, may prompt an aggressive response"
+      "correct_answers": [
+        "b"
+      ],
+      "explanation": "Toddlers should not be left alone with the Highland because their 'noisiness and hyperactivity may prompt an aggressive response.' Here, noisiness and hyperactivity = loud and energetic, and aggressive response = react badly.",
+      "citation_excerpt": "noisiness and hyperactivity, may prompt an aggressive response"
     },
     {
       "passage_number": 1,
@@ -378,7 +442,11 @@
           "D. is actually a fierce guard dog, alerting family members at the slightest hint that something is wrong.",
           "E. though it is largely ineffectual when it comes to neutralising any threats that have been identified."
         ],
-        "keywords": ["Irish Wolfhound", "watchdog", "intruders"],
+        "keywords": [
+          "Wolfhound",
+          "watchdog",
+          "intruders"
+        ],
         "paragraph": "C",
         "sentence_start": "C1",
         "sentence_end": "C2",
@@ -387,9 +455,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting D because of its large size and war-history context."
       },
-      "correct_answers": ["A"],
-      "explanation": "The text states the Irish Wolfhound scores low as a watchdog because it is slow to react to or bark at intruders.",
-      "citation_excerpt": "aloof with strangers rather than aggressive towards them, and he may not, at least initially, bark at intruders, therefore scoring low in the watchdog department"
+      "correct_answers": [
+        "A"
+      ],
+      "explanation": "The Wolfhound is not particularly strong as a watchdog. He may not initially bark at intruders and therefore scores low in the watchdog department. Here, may not bark / slow to alert = ineffectual watchdog.",
+      "citation_excerpt": "aloof with strangers... may not, at least initially, bark at intruders, therefore scoring low in the watchdog department"
     },
     {
       "passage_number": 1,
@@ -405,7 +475,12 @@
           "D. is actually a fierce guard dog, alerting family members at the slightest hint that something is wrong.",
           "E. though it is largely ineffectual when it comes to neutralising any threats that have been identified."
         ],
-        "keywords": ["Highland", "watchdog", "threat", "size limits"],
+        "keywords": [
+          "quick alert",
+          "watchdog",
+          "threat",
+          "size"
+        ],
         "paragraph": "E",
         "sentence_start": "E7",
         "sentence_end": "E8",
@@ -414,9 +489,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting D because it is described as a perfect watchdog."
       },
-      "correct_answers": ["E"],
-      "explanation": "The West Highland is a perfect watchdog for alerts, but its small size prevents it from neutralising any real threats.",
-      "citation_excerpt": "perfect watchdog and quick to alert you when anything suspicious occurs. His size limits his ability to respond meaningfully to any real threat"
+      "correct_answers": [
+        "E"
+      ],
+      "explanation": "The Highland is an excellent watchdog because he quickly alerts the owner, but his size limits his ability to deal with a real threat. Here, quick to alert = good watchdog, but small size limits response to a real threat = ineffectual at neutralising threats.",
+      "citation_excerpt": "quick to alert you when anything suspicious occurs. His size limits his ability to respond meaningfully to any real threat"
     },
     {
       "passage_number": 1,
@@ -432,7 +509,12 @@
           "D. is actually a fierce guard dog, alerting family members at the slightest hint that something is wrong.",
           "E. though it is largely ineffectual when it comes to neutralising any threats that have been identified."
         ],
-        "keywords": ["practicalities", "appetite", "clean-up", "space"],
+        "keywords": [
+          "appetite",
+          "cost",
+          "cleaning",
+          "space"
+        ],
         "paragraph": "D",
         "sentence_start": "D2",
         "sentence_end": "D6",
@@ -441,9 +523,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Conflating child-friendliness with training ease."
       },
-      "correct_answers": ["B"],
-      "explanation": "Prospective owners must consider the high costs of food and cleaning up fur, as well as the yard space requirements.",
-      "citation_excerpt": "appetite is huge... cost of clean-up... shed a lot of fur... backyard is a must-have"
+      "correct_answers": [
+        "B"
+      ],
+      "explanation": "The Wolfhound needs a large backyard, eats a lot of food and sheds a considerable amount of fur. Here, huge appetite = feeding cost, sheds a lot of fur = cleaning cost, and large enclosed backyard = space requirement.",
+      "citation_excerpt": "appetite is huge... cost of clean-up... backyard is a must-have"
     },
     {
       "passage_number": 2,
@@ -458,7 +542,11 @@
           "C. at the same time as Mussolini went to study there.",
           "D. on the instructions of the religious organisation of which he was a part."
         ],
-        "keywords": ["Rome", "posted", "seminarian"],
+        "keywords": [
+          "Rome",
+          "posted",
+          "seminarian"
+        ],
         "paragraph": "A",
         "sentence_start": "A4",
         "sentence_end": "A6",
@@ -467,9 +555,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting B because Mungret College is mentioned, but he went to Rome before ordaining as a priest."
       },
-      "correct_answers": ["D"],
-      "explanation": "Paragraph A states O'Flaherty applied to Mungret College, and then was 'posted to Rome' as a young seminarian, which means he was sent by his religious organization.",
-      "citation_excerpt": "applied to Mungret College in Limerick and was accepted into the seminary there. He was posted to Rome as a young seminarian"
+      "correct_answers": [
+        "D"
+      ],
+      "explanation": "O'Flaherty was accepted into the seminary at Mungret College and was then 'posted to Rome as a young seminarian.' Here, posted to Rome = sent to Rome by his religious organisation. He had not yet become a priest.",
+      "citation_excerpt": "posted to Rome as a young seminarian"
     },
     {
       "passage_number": 2,
@@ -484,7 +574,11 @@
           "C. went unnoticed until he was posted in Italy where they impressed a number of high-profile individuals.",
           "D. were exaggerated by friends and connections in order to win him favour with the German and Italian authorities."
         ],
-        "keywords": ["golf", "connections", "influence"],
+        "keywords": [
+          "golf",
+          "high-profile connections",
+          "influence"
+        ],
         "paragraph": "B",
         "sentence_start": "B2",
         "sentence_end": "B5",
@@ -493,9 +587,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting B because playing from early childhood is mentioned, but the text calls him a 'natural'."
       },
-      "correct_answers": ["A"],
-      "explanation": "Paragraph B explains O'Flaherty developed high-profile connections through golf (e.g. Mussolini's son-in-law) and later relied on these connections to save innocent people.",
-      "citation_excerpt": "developed a number of high-profile connections in Italy through the world of golf... O'Flaherty would come to rely on his high profile, as well as his ‘high’ connections"
+      "correct_answers": [
+        "A"
+      ],
+      "explanation": "Through golf, O'Flaherty developed connections with important people, including Mussolini's son-in-law. Later, he relied on these connections to help people. Here, developed high-profile connections through golf = used golf to meet and influence important people.",
+      "citation_excerpt": "developed a number of high-profile connections in Italy through the world of golf... relying on his high profile, as well as his ‘high’ connections"
     },
     {
       "passage_number": 2,
@@ -510,7 +606,12 @@
           "C. were in keeping with the stated views of the German and Italian governments.",
           "D. were similarly hostile and extreme as he was influenced by fascist propaganda."
         ],
-        "keywords": ["Nazi", "beliefs", "socialised"],
+        "keywords": [
+          "Nazi ideology",
+          "socialised",
+          "Jews",
+          "beliefs"
+        ],
         "paragraph": "C",
         "sentence_start": "C4",
         "sentence_end": "C4",
@@ -519,8 +620,10 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting A because the groups are listed, but they are listed as victims rather than holders of beliefs."
       },
-      "correct_answers": ["B"],
-      "explanation": "Paragraph C notes that because he socialised with prominent Jews during his time in Italy, he did not adhere to Nazi ideology and started to protect them.",
+      "correct_answers": [
+        "B"
+      ],
+      "explanation": "The author says that O'Flaherty had socialised with many prominent Jews and therefore did not adhere to Nazi ideology. Here, socialising with certain groups -> influenced his attitude towards Nazi ideology.",
       "citation_excerpt": "having socialised with many prominent Jews throughout his time in Italy, did not adhere to the Nazi ideology"
     },
     {
@@ -537,7 +640,10 @@
           "D. in the residences of certain religious groups",
           "E. in the houses of old friends of his"
         ],
-        "keywords": ["hiding places", "residence", "monasteries"],
+        "keywords": [
+          "hiding places",
+          "official residence"
+        ],
         "paragraph": "D",
         "sentence_start": "D1",
         "sentence_end": "D2",
@@ -546,9 +652,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting B because a former college is mentioned, but the text says it was 'his old college' (not converted into apartments)."
       },
-      "correct_answers": ["C", "D"],
-      "explanation": "O'Flaherty used his own official residence (C) and monasteries/convents belonging to religious groups (D) as hideouts.",
-      "citation_excerpt": "used his old college and indeed his own official residence as hiding places... turned to using monasteries and convents as hideouts"
+      "correct_answers": [
+        "C"
+      ],
+      "explanation": "O'Flaherty used 'his own official residence' as one of the hiding places. Here, official residence = the place where he officially lived.",
+      "citation_excerpt": "used his old college and indeed his own official residence as hiding places"
     },
     {
       "passage_number": 2,
@@ -564,7 +672,11 @@
           "D. in the residences of certain religious groups",
           "E. in the houses of old friends of his"
         ],
-        "keywords": ["hiding places", "residence", "monasteries"],
+        "keywords": [
+          "monasteries",
+          "convents",
+          "hideouts"
+        ],
         "paragraph": "D",
         "sentence_start": "D1",
         "sentence_end": "D2",
@@ -573,9 +685,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting B because a former college is mentioned, but the text says it was 'his old college' (not converted into apartments)."
       },
-      "correct_answers": ["C", "D"],
-      "explanation": "O'Flaherty used his own official residence (C) and monasteries/convents belonging to religious groups (D) as hideouts.",
-      "citation_excerpt": "used his old college and indeed his own official residence as hiding places... turned to using monasteries and convents as hideouts"
+      "correct_answers": [
+        "D"
+      ],
+      "explanation": "O'Flaherty used monasteries and convents as hiding places. Here, monasteries and convents = residences of religious groups.",
+      "citation_excerpt": "turned to using monasteries and convents as hideouts"
     },
     {
       "passage_number": 2,
@@ -590,7 +704,12 @@
           "C. their disregard for the possible consequences if they were caught",
           "D. their ability to coordinate and work together"
         ],
-        "keywords": ["helpers", "friends", "risk", "lives"],
+        "keywords": [
+          "helpers",
+          "danger",
+          "caught",
+          "lives"
+        ],
         "paragraph": "D",
         "sentence_start": "D2",
         "sentence_end": "D2",
@@ -599,9 +718,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting A or B because the friends agreed, but the text emphasizes the danger to their lives."
       },
-      "correct_answers": ["C"],
-      "explanation": "The writer highlights that the friends who agreed to house the 'unwanted' were not just risking reprimand but were endangering their own lives.",
-      "citation_excerpt": "were not just risking a reprimand from the fascists had they been caught but were endangering their own lives by being party"
+      "correct_answers": [
+        "C"
+      ],
+      "explanation": "The helpers were not merely risking punishment; they were 'endangering their own lives' if they were caught. Here, the writer highlights their disregard for the possible consequences of being caught.",
+      "citation_excerpt": "were not just risking a reprimand from the fascists had they been caught but were endangering their own lives"
     },
     {
       "passage_number": 2,
@@ -616,7 +737,12 @@
           "C. He had successfully used disguises to avoid being identified.",
           "D. He had earned a Masters in the art of disguise."
         ],
-        "keywords": ["nickname", "Scarlet Pimpernel", "disguise"],
+        "keywords": [
+          "nickname",
+          "Scarlet Pimpernel",
+          "disguise",
+          "identified"
+        ],
         "paragraph": "E",
         "sentence_start": "E2",
         "sentence_end": "E2",
@@ -625,9 +751,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting D because 'master of disguise' is in the text, but he didn't literally earn an academic 'Masters' degree in it."
       },
-      "correct_answers": ["C"],
-      "explanation": "Paragraph E notes his success in never being identified on rescue missions led to his nickname, highlighting he was a master of disguise.",
-      "citation_excerpt": "His success in never being identified... led to him being given the nickname the Scarlet Pimpernel of the Vatican, an acknowledgement of how much the master of disguise"
+      "correct_answers": [
+        "C"
+      ],
+      "explanation": "O'Flaherty successfully carried out rescue missions without being identified, which led to the nickname 'Scarlet Pimpernel of the Vatican.' Here, never being identified = successfully using disguise to avoid identification.",
+      "citation_excerpt": "success in never being identified... led to him being given the nickname the Scarlet Pimpernel of the Vatican, an acknowledgement of how much the master of disguise"
     },
     {
       "passage_number": 2,
@@ -642,7 +770,12 @@
           "C. He feels that Margaret Mead was a superior speech-maker to O'Flaherty.",
           "D. He feels he didn't get the recognition he deserves for his achievements."
         ],
-        "keywords": ["feelings", "remembered", "injustice"],
+        "keywords": [
+          "writer's feelings",
+          "bravery",
+          "injustice",
+          "extremism"
+        ],
         "paragraph": "G",
         "sentence_start": "G3",
         "sentence_end": "G4",
@@ -651,8 +784,10 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting B because O'Flaherty was a priest, but the author's praise is about his defense against injustice."
       },
-      "correct_answers": ["A"],
-      "explanation": "The author praises O'Flaherty as a man who bravely stood up to extremism and refused to turn a blind eye to injustice.",
+      "correct_answers": [
+        "A"
+      ],
+      "explanation": "The author describes O'Flaherty as someone who 'bravely stood up to extremism' and refused to ignore injustice. Here, bravely stood up to extremism + opposed injustice = admiration for his bravery and determination.",
       "citation_excerpt": "remembered as a man who bravely stood up to extremism and who was not prepared to turn a blind eye to injustice"
     },
     {
@@ -661,11 +796,19 @@
       "question_type": "summary_completion",
       "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
       "question_data": {
-        "text": "A moral, determined and resourceful man summary: ...German and Italian police, who, acting on orders from above, were rounding said groups up to be sent to [blank]."
+        "text": "A moral, determined and resourceful man summary: ...German and Italian police, who, acting on orders from above, were rounding said groups up to be sent to [blank].",
+        "keywords": [
+          "police",
+          "orders",
+          "unwanted",
+          "sent"
+        ]
       },
-      "correct_answers": ["concentration camps"],
-      "explanation": "The text states the police orders were to ship the minority groups to concentration camps.",
-      "citation_excerpt": "Italian and German police, whose orders were to ship them to concentration camps."
+      "correct_answers": [
+        "concentration camps"
+      ],
+      "explanation": "The German and Italian police had orders to 'ship them to concentration camps.' Here, the sentence directly matches the summary.",
+      "citation_excerpt": "whose orders were to ship them to concentration camps"
     },
     {
       "passage_number": 2,
@@ -673,10 +816,18 @@
       "question_type": "summary_completion",
       "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
       "question_data": {
-        "text": "A moral, determined and resourceful man summary: ...In helping O’Flaherty, these friends showed their own bravery as getting [blank] might have cost them their lives."
+        "text": "A moral, determined and resourceful man summary: ...In helping O’Flaherty, these friends showed their own bravery as getting [blank] might have cost them their lives.",
+        "keywords": [
+          "friends",
+          "bravery",
+          "danger",
+          "lives"
+        ]
       },
-      "correct_answers": ["caught"],
-      "explanation": "Paragraph D explains that O'Flaherty's friends risked their own lives if they were caught.",
+      "correct_answers": [
+        "caught"
+      ],
+      "explanation": "The friends were risking their lives if they 'had been caught.'",
       "citation_excerpt": "were not just risking a reprimand from the fascists had they been caught but were endangering their own lives"
     },
     {
@@ -685,10 +836,18 @@
       "question_type": "summary_completion",
       "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
       "question_data": {
-        "text": "A moral, determined and resourceful man summary: ...he also extended his assistance to fallen [blank], as well as British soldiers who had been detained by the Germans."
+        "text": "A moral, determined and resourceful man summary: ...he also extended his assistance to fallen [blank], as well as British soldiers who had been detained by the Germans.",
+        "keywords": [
+          "fallen",
+          "British soldiers",
+          "assistance"
+        ]
       },
-      "correct_answers": ["airmen", "allied airmen"],
-      "explanation": "Paragraph D states he extended his efforts to help escaped British prisoners-of-war and shot-down allied airmen.",
+      "correct_answers": [
+        "allied airmen",
+        "airmen"
+      ],
+      "explanation": "O'Flaherty extended his efforts to help 'shot-down allied airmen.' Here, fallen = shot-down, and the required word is allied airmen / airmen.",
       "citation_excerpt": "helping escaped British prisoners-of-war and shot-down allied airmen"
     },
     {
@@ -697,11 +856,18 @@
       "question_type": "summary_completion",
       "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
       "question_data": {
-        "text": "A moral, determined and resourceful man summary: So effective had he been at [blank] Jews and servicemen inside the city..."
+        "text": "A moral, determined and resourceful man summary: So effective had he been at [blank] Jews and servicemen inside the city...",
+        "keywords": [
+          "Jews",
+          "servicemen",
+          "inside the city"
+        ]
       },
-      "correct_answers": ["smuggling"],
-      "explanation": "Paragraph E states he was successful in smuggling Jews and allied airmen inside the city.",
-      "citation_excerpt": "smuggling Jews and allied airmen inside the city led to him being given the nickname"
+      "correct_answers": [
+        "smuggling"
+      ],
+      "explanation": "O'Flaherty was successful in 'smuggling Jews and allied airmen inside the city.'",
+      "citation_excerpt": "smuggling Jews and allied airmen inside the city"
     },
     {
       "passage_number": 2,
@@ -709,94 +875,150 @@
       "question_type": "summary_completion",
       "instruction_text": "Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.",
       "question_data": {
-        "text": "A moral, determined and resourceful man summary: ...O'Flaherty received a huge number of [blank] from countries all around the world..."
+        "text": "A moral, determined and resourceful man summary: ...O'Flaherty received a huge number of [blank] from countries all around the world...",
+        "keywords": [
+          "recognition",
+          "awards",
+          "countries"
+        ]
       },
-      "correct_answers": ["accolades"],
-      "explanation": "Paragraph E states that after the war, O'Flaherty continued to serve in Rome and received many accolades.",
+      "correct_answers": [
+        "accolades"
+      ],
+      "explanation": "After the war, O'Flaherty 'received many accolades', including the US Medal of Freedom. Here, accolades = honours/awards recognising his achievements.",
       "citation_excerpt": "received many accolades, including the US Medal of Freedom"
     },
     {
       "passage_number": 3,
       "question_number": 27,
-      "question_type": "tfng",
+      "question_type": "ynng",
       "instruction_text": "Do the following statements agree with the information given in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
       "question_data": {
-        "text": "When a warm front from an extratropical cyclone meets a cold front, snow is more likely to occur on the poleward side of the weather system."
+        "text": "When a warm front from an extratropical cyclone meets a cold front, snow is more likely to occur on the poleward side of the weather system.",
+        "keywords": [
+          "warm front",
+          "cold front",
+          "poleward side"
+        ]
       },
-      "correct_answers": ["YES"],
-      "explanation": "Paragraph A confirms that when the fronts collide, snow can result on the poleward side.",
+      "correct_answers": [
+        "YES"
+      ],
+      "explanation": "It states that when the warm and cold fronts collide, snow can result on the poleward side of the precipitation band. The statement agrees directly with the passage.",
       "citation_excerpt": "When the warm front and cold front collide, snow can result on the poleward side of the precipitation band"
     },
     {
       "passage_number": 3,
       "question_number": 28,
-      "question_type": "tfng",
+      "question_type": "ynng",
       "instruction_text": "Do the following statements agree with the information given in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
       "question_data": {
-        "text": "Lake-effect snow is aptly named, given that it is a weather phenomenon which is only associated with lakes."
+        "text": "Lake-effect snow is aptly named, given that it is a weather phenomenon which is only associated with lakes.",
+        "keywords": [
+          "lake-effect snow",
+          "lakes",
+          "water"
+        ]
       },
-      "correct_answers": ["NO"],
-      "explanation": "Paragraph B states that despite the name, all narrow bands of water may generate lake-effect snow.",
-      "citation_excerpt": "Although the name suggests a particular correspondence of this type of precipitation to lake features, in fact, all narrow bands of water may generate it."
+      "correct_answers": [
+        "NO"
+      ],
+      "explanation": "Although the name suggests that lake-effect snow is associated only with lakes, the passage says that all narrow bands of water may generate it. Therefore, it is not only associated with lakes.",
+      "citation_excerpt": "in fact, all narrow bands of water may generate it"
     },
     {
       "passage_number": 3,
       "question_number": 29,
-      "question_type": "tfng",
+      "question_type": "ynng",
       "instruction_text": "Do the following statements agree with the information given in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
       "question_data": {
-        "text": "Heavy snowfall is more likely to be seen on the side of the mountain that is exposed to high winds."
+        "text": "Heavy snowfall is more likely to be seen on the side of the mountain that is exposed to high winds.",
+        "keywords": [
+          "mountain",
+          "windward side",
+          "high winds"
+        ]
       },
-      "correct_answers": ["YES"],
-      "explanation": "Paragraph C notes that accumulations typically occur on the windward side of the mountain (the side facing the wind).",
-      "citation_excerpt": "Accumulations typically occur on the windward side of the mountain as precipitation is ‘squeezed out’"
+      "correct_answers": [
+        "YES"
+      ],
+      "explanation": "Snow accumulations typically occur on the windward side of a mountain. Here, windward side = side exposed to the wind.",
+      "citation_excerpt": "Accumulations typically occur on the windward side of the mountain"
     },
     {
       "passage_number": 3,
       "question_number": 30,
-      "question_type": "tfng",
+      "question_type": "ynng",
       "instruction_text": "Do the following statements agree with the information given in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
       "question_data": {
-        "text": "In the absence of a dust particle or similar to start the freezing process, supercool moisture will not freeze in a cloud whose mean temperature is -34 degrees or more."
+        "text": "In the absence of a dust particle or similar to start the freezing process, supercool moisture will not freeze in a cloud whose mean temperature is -34 degrees or more.",
+        "keywords": [
+          "supercool moisture",
+          "-35C",
+          "dust particle"
+        ]
       },
-      "correct_answers": ["YES"],
-      "explanation": "Paragraph D states that temperatures lower than -35 degrees are needed to freeze by itself. In warmer clouds (-34 and above), a dust particle or nucleus is required, meaning without it, freezing will not start.",
+      "correct_answers": [
+        "YES"
+      ],
+      "explanation": "Supercooled moisture freezes by itself only below -35°C. In warmer clouds, an aerosol particle such as dust is required. Therefore, at -34°C or warmer, without such a particle, freezing will not begin.",
       "citation_excerpt": "Temperatures lower than minus 35 degrees Celsius are required for this supercool moisture to freeze by itself. In warmer clouds, an aerosol particle... is needed for the freezing to start."
     },
     {
       "passage_number": 3,
       "question_number": 31,
-      "question_type": "tfng",
+      "question_type": "ynng",
       "instruction_text": "Do the following statements agree with the information given in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
       "question_data": {
-        "text": "The real colour of snow is the same as the colour snow appears to be to the human eye."
+        "text": "The real colour of snow is the same as the colour snow appears to be to the human eye.",
+        "keywords": [
+          "real colour",
+          "transparent",
+          "white"
+        ]
       },
-      "correct_answers": ["NO"],
-      "explanation": "Paragraph D explains that ice crystals are actually transparent, though they appear white due to light scattering.",
-      "citation_excerpt": "Although the ice crystals that land on the ground are actually transparent... they often appear white in colour"
+      "correct_answers": [
+        "NO"
+      ],
+      "explanation": "The passage says that the ice crystals are actually transparent, but they often appear white because light is scattered. Therefore, the real colour and apparent colour are not the same.",
+      "citation_excerpt": "ice crystals that land on the ground are actually transparent... they often appear white in colour"
     },
     {
       "passage_number": 3,
       "question_number": 32,
-      "question_type": "tfng",
+      "question_type": "ynng",
       "instruction_text": "Do the following statements agree with the information given in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
       "question_data": {
-        "text": "Snowflakes shaped like a prism are more likely to form in milder weather than are flakes with more intricate growth patterns."
+        "text": "Snowflakes shaped like a prism are more likely to form in milder weather than are flakes with more intricate growth patterns.",
+        "keywords": [
+          "prism",
+          "temperature",
+          "complex growth patterns"
+        ]
       },
-      "correct_answers": ["YES"],
-      "explanation": "Paragraph E shows prism-shaped crystals form in milder weather (-3 to 8 degrees Celsius) compared to complex patterns forming at colder temperatures (22 degrees and below).",
+      "correct_answers": [
+        "YES"
+      ],
+      "explanation": "Prism/needle-shaped crystals are associated with the -3 to 8°C range, while complex growth patterns are associated with colder conditions in the intended sequence.",
       "citation_excerpt": "From -3 to 8, the crystals form needles or prisms... At temperatures of 22 degrees and below... more complex growth patterns also form."
     },
     {
       "passage_number": 3,
       "question_number": 33,
-      "question_type": "tfng",
+      "question_type": "ynng",
       "instruction_text": "Do the following statements agree with the information given in Reading Passage 3? Write YES, NO, or NOT GIVEN.",
       "question_data": {
-        "text": "The thin flat crystals created at temperatures of between zero and minus three degrees Celsius are more voluminous than column-like crystals."
+        "text": "The thin flat crystals created at temperatures of between zero and minus three degrees Celsius are more voluminous than column-like crystals.",
+        "keywords": [
+          "thin flat crystals",
+          "volume",
+          "column-like crystals"
+        ]
       },
-      "correct_answers": ["NOT GIVEN"],
-      "explanation": "Paragraph E mentions planar crystals forming between 0 and -3 degrees Celsius, but does not compare their volume to column-like crystals.",
+      "correct_answers": [
+        "NOT GIVEN"
+      ],
+      "explanation": "The passage tells us when planar and column-like crystals form, but it does not compare their volume or size. Because the passage gives no information about which type is more voluminous, the statement is NOT GIVEN.",
       "citation_excerpt": ""
     },
     {
@@ -805,11 +1027,19 @@
       "question_type": "sentence_completion",
       "instruction_text": "Complete the sentences below. Choose NO MORE THAN THREE WORDS from the passage for each answer.",
       "question_data": {
-        "text": "While snowfall is not an uncommon feature of a United Kingdom winter, it is rare for significant [blank] to accumulate, or for the snow to remain on the ground for any great length of time."
+        "text": "While snowfall is not an uncommon feature of a United Kingdom winter, it is rare for significant [blank] to accumulate, or for the snow to remain on the ground for any great length of time.",
+        "keywords": [
+          "snowfall",
+          "UK",
+          "accumulate",
+          "significant"
+        ]
       },
-      "correct_answers": ["quantities"],
-      "explanation": "Paragraph F notes snowfall occurs frequently but quantities are typically small.",
-      "citation_excerpt": "Snowfall occurs frequently in the U.K., but the quantities are typically small"
+      "correct_answers": [
+        "quantities"
+      ],
+      "explanation": "The author says that snowfall occurs frequently in the UK, but 'the quantities are typically small.' Here, significant [quantities] = large amounts of snow.",
+      "citation_excerpt": "the quantities are typically small"
     },
     {
       "passage_number": 3,
@@ -817,10 +1047,18 @@
       "question_type": "sentence_completion",
       "instruction_text": "Complete the sentences below. Choose NO MORE THAN THREE WORDS from the passage for each answer.",
       "question_data": {
-        "text": "Three consecutive winters have failed to follow the [blank] towards milder, wetter weather."
+        "text": "Three consecutive winters have failed to follow the [blank] towards milder, wetter weather.",
+        "keywords": [
+          "milder",
+          "wetter",
+          "winters",
+          "three consecutive winters"
+        ]
       },
-      "correct_answers": ["trend"],
-      "explanation": "Paragraph F explains that three winters bucked the trend towards milder, wetter winters.",
+      "correct_answers": [
+        "trend"
+      ],
+      "explanation": "The author says that a 'trend towards milder, wetter winters' had been developing, but the three winters mentioned 'bucked the trend.' Here, failed to follow = bucked, and the missing noun is trend.",
       "citation_excerpt": "trend towards milder, wetter winters has been developing, though the 2010/11, 2011/12 and 2012/13 winters seem to have bucked the trend"
     },
     {
@@ -829,11 +1067,22 @@
       "question_type": "sentence_completion",
       "instruction_text": "Complete the sentences below. Choose NO MORE THAN THREE WORDS from the passage for each answer.",
       "question_data": {
-        "text": "Despite its latitude, the British Isles does not suffer from [blank] on account of the influence of the Gulf Stream."
+        "text": "Despite its latitude, the British Isles does not suffer from [blank] on account of the influence of the Gulf Stream.",
+        "keywords": [
+          "latitude",
+          "Gulf Stream",
+          "winter",
+          "severe"
+        ]
       },
-      "correct_answers": ["severe winters", "very cold weather", "prolonged cold weather", "prolonged cold"],
-      "explanation": "Paragraph F explains that due to the Gulf Stream, Britain's winters are not very severe and avoids very cold weather / prolonged cold weather.",
-      "citation_excerpt": "keeps the climate several degrees warmer... Britain’s winters are typically not very severe... should see far more prolonged cold weather"
+      "correct_answers": [
+        "severe winters",
+        "very cold weather",
+        "prolonged cold weather",
+        "prolonged cold"
+      ],
+      "explanation": "The Gulf Stream keeps Britain warmer, and consequently 'Britain's winters are typically not very severe.' Here, does not suffer from = are not typically, and the exact phrase that best completes the sentence is severe winters.",
+      "citation_excerpt": "Britain’s winters are typically not very severe"
     },
     {
       "passage_number": 3,
@@ -841,11 +1090,20 @@
       "question_type": "sentence_completion",
       "instruction_text": "Complete the sentences below. Choose NO MORE THAN THREE WORDS from the passage for each answer.",
       "question_data": {
-        "text": "Should next winter be another unusually cold one, this may be indicative of the fact that a [blank] is under way."
+        "text": "Should next winter be another unusually cold one, this may be indicative of the fact that a [blank] is under way.",
+        "keywords": [
+          "unusually cold winter",
+          "indicative",
+          "change"
+        ]
       },
-      "correct_answers": ["subtle climatic change", "climatic change"],
-      "explanation": "Paragraph H explains that record low temperatures would point to a subtle climatic change.",
-      "citation_excerpt": "point to the isles undergoing a subtle climatic change and a return to more severe winters"
+      "correct_answers": [
+        "climate change",
+        "subtle climatic change",
+        "climatic change"
+      ],
+      "explanation": "The author says that if the prediction of another very cold winter came true, it would point to the isles undergoing a 'subtle climatic change' or 'climate change.'",
+      "citation_excerpt": "undergoing a subtle climatic change and a return to more severe winters"
     },
     {
       "passage_number": 3,
@@ -862,7 +1120,11 @@
           "E. extreme",
           "F. direct"
         ],
-        "keywords": ["longest", "consecutive"],
+        "keywords": [
+          "longest",
+          "consecutive",
+          "period"
+        ],
         "paragraph": "F",
         "sentence_start": "F2",
         "sentence_end": "F2",
@@ -871,8 +1133,10 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting E because of severity context, but 'longest' indicates a sequence/time duration, which aligns with 'consecutive' / 'uninterrupted'."
       },
-      "correct_answers": ["A"],
-      "explanation": "The text describes the winters as 'consecutive', which translates to 'uninterrupted' (A).",
+      "correct_answers": [
+        "A"
+      ],
+      "explanation": "The passage describes the three winters as the longest period of 'consecutive cold winters.' Here, consecutive = uninterrupted / continuous.",
       "citation_excerpt": "represent the longest period of consecutive cold winters"
     },
     {
@@ -890,7 +1154,10 @@
           "E. extreme",
           "F. direct"
         ],
-        "keywords": ["severe", "weather"],
+        "keywords": [
+          "severe",
+          "winter weather"
+        ],
         "paragraph": "H",
         "sentence_start": "H3",
         "sentence_end": "H3",
@@ -899,9 +1166,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting C because strength changes are mentioned, but weather is described as 'severe' / 'extreme'."
       },
-      "correct_answers": ["E"],
-      "explanation": "The text speaks of a return to 'more severe winters', which aligns with 'extreme' (E).",
-      "citation_excerpt": "isles undergoing a subtle climatic change and a return to more severe winters in general."
+      "correct_answers": [
+        "E"
+      ],
+      "explanation": "The text speaks of a return to 'more severe winters', which aligns with 'extreme' (E) in the context of the available options.",
+      "citation_excerpt": "return to more severe winters in general"
     },
     {
       "passage_number": 3,
@@ -918,7 +1187,12 @@
           "E. extreme",
           "F. direct"
         ],
-        "keywords": ["changes", "strength", "Gulf Stream"],
+        "keywords": [
+          "Gulf Stream",
+          "strength",
+          "cold winter",
+          "influence"
+        ],
         "paragraph": "H",
         "sentence_start": "H2",
         "sentence_end": "H3",
@@ -927,9 +1201,11 @@
         "difficulty": "Intermediate",
         "common_mistake": "Selecting C because strength changes could mean strengthening, but the context of colder winters implies declining/waning influence."
       },
-      "correct_answers": ["D"],
+      "correct_answers": [
+        "D"
+      ],
       "explanation": "A return to colder winters is linked to a decline or 'waning' (D) in the Gulf Stream's warming influence.",
-      "citation_excerpt": "changes in the strength of the Gulf Stream as key indicators of the fact that a cold winter is in prospect."
+      "citation_excerpt": "changes in the strength of the Gulf Stream"
     }
   ]
 }
