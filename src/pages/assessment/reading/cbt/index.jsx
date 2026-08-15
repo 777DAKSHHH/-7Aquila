@@ -30,6 +30,25 @@ const ReadingCbtTest = () => {
   const [stickyNotes, setStickyNotes] = useState([]);
   const [flaggedQuestions, setFlaggedQuestions] = useState([]);
   const [textSize, setTextSize] = useState("medium"); // small, medium, large
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    return () => document.removeEventListener("fullscreenchange", handleFullscreenChange);
+  }, []);
+
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch((err) => {
+        console.error(`Error attempting to enable fullscreen: ${err.message}`);
+      });
+    } else {
+      document.exitFullscreen();
+    }
+  };
 
   // Timer & Autosave states
   const [secondsRemaining, setSecondsRemaining] = useState(3600);
@@ -445,7 +464,7 @@ const ReadingCbtTest = () => {
             </button>
           </div>
 
-          <div className="flex items-center gap-1 text-xs">
+          <div className="flex items-center gap-1 text-xs border-r border-border pr-4 mr-2">
             <button
               onClick={() => setTextSize("small")}
               className={`w-6 h-6 rounded flex items-center justify-center font-bold ${textSize === "small" ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-muted"}`}
@@ -468,6 +487,14 @@ const ReadingCbtTest = () => {
               A
             </button>
           </div>
+
+          <button
+            onClick={toggleFullscreen}
+            className="w-8 h-8 rounded flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted transition-all duration-base mr-2"
+            title={isFullscreen ? "Exit Fullscreen" : "Enter Fullscreen"}
+          >
+            <AppIcon name={isFullscreen ? "Minimize2" : "Maximize2"} size={18} />
+          </button>
 
           <div
             className={`flex items-center gap-2 px-3 py-1.5 rounded-lg font-mono font-bold text-sm border ${

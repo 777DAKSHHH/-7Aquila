@@ -7,25 +7,25 @@
     {
       "section_number": 1,
       "title": "Part 1: RESTAURANTS",
-      "audio_url": "/uploads/audio/IELTS UPGRADE Test 1.mp3",
+      "audio_url": "/uploads/audio/Practice Test 1.mp3",
       "instruction_text": "Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer."
     },
     {
       "section_number": 2,
       "title": "Part 2: Knightsbridge Centre map & Town complex proposal",
-      "audio_url": "/uploads/audio/IELTS UPGRADE Test 1.mp3",
+      "audio_url": "/uploads/audio/Practice Test 1.mp3",
       "instruction_text": "Questions 11–15: Label the map below. Write the correct letter, A–G. Questions 16–20: Choose the correct letter, A, B or C."
     },
     {
       "section_number": 3,
       "title": "Part 3: Discussion on Exams and Modules",
-      "audio_url": "/uploads/audio/IELTS UPGRADE Test 1.mp3",
+      "audio_url": "/uploads/audio/Practice Test 1.mp3",
       "instruction_text": "Questions 21–25: Choose the correct letter, A, B or C. Questions 26–30: What does Elle say about the subjects? Choose the correct letter, A, B or C."
     },
     {
       "section_number": 4,
       "title": "Part 4: The Freudian Slip Lecture",
-      "audio_url": "/uploads/audio/IELTS UPGRADE Test 1.mp3",
+      "audio_url": "/uploads/audio/Practice Test 1.mp3",
       "instruction_text": "Questions 31–35: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer. Questions 36–40: Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer."
     }
   ],
@@ -36,7 +36,44 @@
       "question_type": "table_completion",
       "instruction_text": "Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
       "question_data": {
-        "text": "The Royal: £4,000 to book event room for whole evening including 1 [blank]"
+        "text": "The Royal: £4,000 to book event room for whole evening including 1 [blank]",
+        "table_layout": {
+          "headers": ["NAME", "LOCATION", "PRICING", "NOTES"],
+          "rows": [
+            [
+              [{ "text": "The Royal" }],
+              [{ "text": "<strong>Just off</strong> Burgundy Road in the heart of the city <em>(Example)</em>" }],
+              [
+                { "text": "£4,000 to book event room for whole evening including " },
+                { "question": 1 }
+              ],
+              [
+                { "text": "Guests can avail themselves of " },
+                { "question": 2 },
+                { "text": " on rooms at sister premises opposite (Royal Hotel)" }
+              ]
+            ],
+            [
+              [{ "text": "Venue 1" }],
+              [
+                { "question": 3 },
+                { "text": " City Hall" }
+              ],
+              [
+                { "text": "£ " },
+                { "question": 4 },
+                { "text": " to hire out both floors" }
+              ],
+              [
+                { "text": "(i) Capacity to " },
+                { "question": 5 },
+                { "text": " 250 guests<br/>(ii) Can arrange for a " },
+                { "question": 6 },
+                { "text": " to be provided" }
+              ]
+            ]
+          ]
+        }
       },
       "correct_answers": ["catering costs", "catering cost"],
       "explanation": "Transcript: 'There's more; the Royal has its own private event room, which can be booked for the entire evening for only £4,000, and, the icing on the cake: the price I've quoted you includes catering costs.'"
@@ -102,7 +139,28 @@
       "question_type": "table_completion",
       "instruction_text": "Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
       "question_data": {
-        "text": "Name of third restaurant: 7 [blank]"
+        "text": "Name of third restaurant: 7 [blank]",
+        "table_layout": {
+          "headers": [],
+          "rows": [
+            [
+              [
+                { "question": 7 },
+                { "text": " Inside the " },
+                { "question": 8 },
+                { "text": " the city's tallest building" }
+              ],
+              [
+                { "text": "£10,000, but prepared to offer a 50% discount on " },
+                { "question": 9 }
+              ],
+              [
+                { "question": 10 },
+                { "text": " wedding cake provided" }
+              ]
+            ]
+          ]
+        }
       },
       "correct_answers": ["ALIBI CLUB 9731", "Alibi Club 9731", "the Alibi Club 9731", "Alibi Club", "ALIBI CLUB"],
       "explanation": "Transcript: 'There is the Alibi Club 9731.'"

@@ -1,5 +1,74 @@
 import React from "react";
 
+// Helper to render a cell containing text and questions
+const RenderCell = ({ cell, userAnswers, onChange }) => {
+  return (
+    <div className="text-sm text-foreground leading-relaxed font-sans">
+      {cell.map((block, idx) => {
+        if (block.text !== undefined) {
+          return (
+            <span 
+              key={idx} 
+              dangerouslySetInnerHTML={{ __html: block.text }} 
+            />
+          );
+        }
+        if (block.question !== undefined) {
+          const qNum = block.question;
+          const val = userAnswers[String(qNum)] || "";
+          return (
+            <span key={idx} className="inline-flex items-center gap-1.5 mx-1.5 my-0.5">
+              <span className="flex-shrink-0 flex items-center justify-center w-5 h-5 rounded-full bg-primary text-primary-foreground font-mono text-[10px] font-bold">
+                {qNum}
+              </span>
+              <input
+                type="text"
+                value={val}
+                onChange={(e) => onChange(qNum, e.target.value)}
+                placeholder="type answer..."
+                className="px-2 py-0.5 w-32 h-8 rounded border border-input bg-background text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary inline-block font-mono"
+              />
+            </span>
+          );
+        }
+        return null;
+      })}
+    </div>
+  );
+};
+
+const TableLayout = ({ tableLayout, userAnswers, onChange }) => {
+  const { headers = [], rows = [] } = tableLayout;
+  return (
+    <div className="w-full overflow-x-auto my-6 border border-border/80 rounded-xl bg-card shadow-sm">
+      <table className="w-full border-collapse text-left">
+        {headers && headers.length > 0 && (
+          <thead>
+            <tr className="border-b border-border bg-muted/30">
+              {headers.map((h, idx) => (
+                <th key={idx} className="p-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                  {h}
+                </th>
+              ))}
+            </tr>
+          </thead>
+        )}
+        <tbody className="divide-y divide-border/60">
+          {rows.map((row, rowIdx) => (
+            <tr key={rowIdx} className="hover:bg-muted/5 transition-colors">
+              {row.map((cell, cellIdx) => (
+                <td key={cellIdx} className="p-4 align-top border-r border-border/60 last:border-r-0">
+                  <RenderCell cell={cell} userAnswers={userAnswers} onChange={onChange} />
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
 // Inline MCQ Single Component
 const MultipleChoiceSingle = ({ question, value, onChange }) => {
   const { question_number, question_data } = question;
@@ -270,6 +339,10 @@ const ListeningQuestionPane = ({ questions = [], userAnswers = {}, onAnswerChang
         const questionWithImage = group.questions.find(q => q.question_data?.image_url);
         const imageUrl = questionWithImage?.question_data?.image_url;
 
+        // Detect if any question in the group has a table layout
+        const questionWithTable = group.questions.find(q => q.question_data?.table_layout);
+        const tableLayout = questionWithTable?.question_data?.table_layout;
+
         return (
           <section key={groupIdx} className="space-y-6">
             <div className="bg-primary/5 border border-primary/20 rounded-xl p-4 text-sm text-foreground/90 font-medium leading-relaxed shadow-sm">
@@ -305,9 +378,17 @@ const ListeningQuestionPane = ({ questions = [], userAnswers = {}, onAnswerChang
               </div>
             )}
 
-            <div className="space-y-4">
-              {group.questions.map((q) => renderQuestion(q))}
-            </div>
+            {tableLayout ? (
+              <TableLayout
+                tableLayout={tableLayout}
+                userAnswers={userAnswers}
+                onChange={onAnswerChange}
+              />
+            ) : (
+              <div className="space-y-4">
+                {group.questions.map((q) => renderQuestion(q))}
+              </div>
+            )}
           </section>
         );
       })}
