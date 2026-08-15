@@ -4,3 +4,5 @@ backend/.env
 dist
 build
 .DS_Store
+backend/uploads/audio/*.mp3
+backend/uploads/speaking/*.mp3

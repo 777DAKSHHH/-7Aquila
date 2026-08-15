@@ -7,25 +7,25 @@
     {
       "section_number": 1,
       "title": "Part 1: Oyster Bay Sailing Club Courses",
-      "audio_url": "/uploads/audio/a21t1l1.mp3",
+      "audio_url": "https://ehmakddeerzjcleqlasi.supabase.co/storage/v1/object/public/audios/a21t1l1.mp3",
       "instruction_text": "Complete the notes below. Write ONE WORD AND/OR A NUMBER for each answer."
     },
     {
       "section_number": 2,
       "title": "Part 2: Working as a makeup trainee",
-      "audio_url": "/uploads/audio/a21t1l2.mp3",
+      "audio_url": "https://ehmakddeerzjcleqlasi.supabase.co/storage/v1/object/public/audios/a21t1l2.mp3",
       "instruction_text": "Questions 11–16: Choose the correct letter, A, B or C. Questions 17–20: Match the duties with the correct approach, A, B or C."
     },
     {
       "section_number": 3,
       "title": "Part 3: Ocean Biodiversity Discussion",
-      "audio_url": "/uploads/audio/a21t1l3.mp3",
+      "audio_url": "https://ehmakddeerzjcleqlasi.supabase.co/storage/v1/object/public/audios/a21t1l3.mp3",
       "instruction_text": "Questions 21–24: Choose TWO letters, A–E. Questions 25–30: Match the ocean biodiversity resources with the comments, A–H."
     },
     {
       "section_number": 4,
       "title": "Part 4: Sources of Rubber",
-      "audio_url": "/uploads/audio/a21t1l4.mp3",
+      "audio_url": "https://ehmakddeerzjcleqlasi.supabase.co/storage/v1/object/public/audios/a21t1l4.mp3",
       "instruction_text": "Complete the notes below. Write ONE WORD ONLY for each answer."
     }
   ],
