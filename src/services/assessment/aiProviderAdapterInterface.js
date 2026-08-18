@@ -50,8 +50,14 @@ export const OpenAIProviderAdapter = {
       console.warn("[Rocket OpenAI Adapter] Failed to resolve auth session:", e);
     }
 
+    const isLocal =
+      typeof window !== "undefined" &&
+      (window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1" ||
+        window.location.hostname.startsWith("192.168."));
+
     // Dev Fallback / Mock Response when API Key or Auth Token is missing in local environment
-    if ((!apiKey || apiKey === "your-openai-api-key-here") && !token) {
+    if (isLocal && (!apiKey || apiKey === "your-openai-api-key-here") && !token) {
       console.warn("[Rocket OpenAI Adapter] No active API key or user session found. Executing environment fallback mode.");
       await new Promise((resolve) => setTimeout(resolve, 1200));
  
