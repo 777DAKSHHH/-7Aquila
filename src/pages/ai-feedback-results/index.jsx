@@ -13,6 +13,7 @@ import ErrorAnalysisPanel from './components/ErrorAnalysisPanel';
 import TranscriptViewer from './components/TranscriptViewer.jsx';
 import IdealAnswerPanel from './components/IdealAnswerPanel.jsx';
 import StudentLevelBadge from './components/StudentLevelBadge';
+import DiagnosticsPanel from './components/DiagnosticsPanel';
 
 const parseAIFeedback = (feedbackText) => {
   if (!feedbackText) {
@@ -352,6 +353,8 @@ const AIFeedbackResults = () => {
               
               <ErrorAnalysisPanel errors={parsedFeedback?.errors} />
             </div>
+
+            <DiagnosticsPanel analytics={parsedFeedback?.analytics} />
 
             <VocabularyEnhancement
               recommendations={parsedFeedback?.vocabulary?.recommendations || []}
