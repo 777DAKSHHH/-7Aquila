@@ -852,8 +852,7 @@ Return ONLY JSON in this exact structure:
   "strengths": ["...", "..."],
   "improvements": ["...", "..."],
   "level": "..."
-}
-``
+}`
         },
         {
           role: "user",
