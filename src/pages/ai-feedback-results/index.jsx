@@ -14,6 +14,7 @@ import TranscriptViewer from './components/TranscriptViewer.jsx';
 import IdealAnswerPanel from './components/IdealAnswerPanel.jsx';
 import StudentLevelBadge from './components/StudentLevelBadge';
 import DiagnosticsPanel from './components/DiagnosticsPanel';
+import AdvancedDiagnosticsPanel from './components/AdvancedDiagnosticsPanel';
 
 const parseAIFeedback = (feedbackText) => {
   if (!feedbackText) {
@@ -355,6 +356,7 @@ const AIFeedbackResults = () => {
             </div>
 
             <DiagnosticsPanel analytics={parsedFeedback?.analytics} />
+            <AdvancedDiagnosticsPanel analytics={parsedFeedback?.analytics} />
 
             <VocabularyEnhancement
               recommendations={parsedFeedback?.vocabulary?.recommendations || []}

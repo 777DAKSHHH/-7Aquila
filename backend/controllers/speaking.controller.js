@@ -642,6 +642,19 @@ D. Bottleneck Analysis:
 E. Self-Correction Recognition:
    - Identify 1-2 instances where the student corrected their own grammar or pronunciation during speech, or note if they did not self-correct.
 
+Also include the following Advanced Diagnostic blocks inside the JSON output format under analytics.advanced_diagnostics:
+A. PEEL Argument Builder:
+   - Take the student's raw response ideas for each question and map them into a structured PEEL argument (Point, Explanation, Example, Link) to show them how they could have expanded it logically.
+B. Grammatical Diversity Matrix:
+   - Checklist of key grammar structures (Conditionals, Passive Voice, Relative Clauses, Inversions, Modal Verbs) indicating if they were "used" or are "missing".
+   - Give 1 grammar upgrade example showing an original simple sentence from the transcript transformed into an upgraded complex sentence.
+C. Overused Word Tracker:
+   - List basic, repetitive words used by the student, their counts, and high-level academic synonyms/alternatives.
+D. Next Milestone Score Simulator:
+   - Map their current speaking band, the target next milestone band (+0.5 higher), and 2-3 clear actionable milestones to achieve it.
+E. Intonation/Rhythm Audit:
+   - Provide thought-grouping advice, rhythmic pacing feedback, and a word-chunking comparative example.
+
 -------------------------------------
 SECTION 5: VOCABULARY ENHANCEMENT
 -------------------------------------
@@ -747,7 +760,55 @@ Return ONLY JSON in this exact structure:
         "corrected_to": "...",
         "outcome": "..."
       }
-    ]
+    ],
+    "advanced_diagnostics": {
+      "peel_argument_builder": [
+        {
+          "question": "...",
+          "student_idea": "...",
+          "peel_structure": {
+            "point": "...",
+            "explanation": "...",
+            "example": "...",
+            "link": "..."
+          }
+        }
+      ],
+      "grammatical_diversity_matrix": {
+        "checklist": [
+          {
+            "structure_type": "...",
+            "count": number,
+            "status": "..."
+          }
+        ],
+        "grammar_upgrade_example": {
+          "original_simple_sentence": "...",
+          "upgraded_complex_sentence": "...",
+          "structure_type_used": "..."
+        }
+      },
+      "overused_word_tracker": [
+        {
+          "word": "...",
+          "frequency": number,
+          "suggested_alternatives": ["...", "..."]
+        }
+      ],
+      "score_milestone_simulator": {
+        "current_band": number,
+        "next_milestone_band": number,
+        "actionable_steps": ["...", "..."]
+      },
+      "intonation_rhythm_audit": {
+        "thought_grouping_advice": "...",
+        "rhythmic_pacing_note": "...",
+        "word_chunking_example": {
+          "problematic_chunk": "...",
+          "correct_chunk": "..."
+        }
+      }
+    }
   },
   "errors": [
     {
@@ -791,7 +852,8 @@ Return ONLY JSON in this exact structure:
   "strengths": ["...", "..."],
   "improvements": ["...", "..."],
   "level": "..."
-}`
+}
+``
         },
         {
           role: "user",
