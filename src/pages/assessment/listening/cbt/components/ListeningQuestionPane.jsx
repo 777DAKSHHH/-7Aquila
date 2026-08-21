@@ -258,6 +258,52 @@ const SentenceCompletion = ({ question, value = "", onChange }) => {
   );
 };
 
+// Dropdown Select component for Matching Questions
+const MatchingDropdown = ({ question, value = "", onChange }) => {
+  const { question_number, question_data } = question;
+  const { text, options = [] } = question_data;
+
+  // Parse options to get simple letter/value and label
+  const parsedOptions = options.map((opt) => {
+    if (typeof opt === "string") {
+      const match = opt.match(/^([A-Z])[\.\s]+(.*)/i);
+      if (match) {
+        return { value: match[1].toUpperCase(), label: opt };
+      }
+      return { value: opt, label: opt };
+    }
+    return { value: opt.value, label: opt.label || opt.value };
+  });
+
+  return (
+    <div id={`question-${question_number}`} className="p-4 bg-muted/20 border border-border/60 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="flex items-start gap-3">
+        <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground font-mono text-xs font-bold mt-0.5">
+          {question_number}
+        </span>
+        <div className="text-sm font-semibold text-foreground leading-relaxed">
+          {text}
+        </div>
+      </div>
+
+      <div className="flex-shrink-0 w-full md:w-auto">
+        <select
+          value={value}
+          onChange={(e) => onChange(question_number, e.target.value)}
+          className="flex h-10 w-full md:w-56 rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 font-semibold cursor-pointer hover:bg-muted/30 transition-colors"
+        >
+          <option value="">Select option...</option>
+          {parsedOptions.map((opt, idx) => (
+            <option key={idx} value={opt.value}>
+              {opt.label}
+            </option>
+          ))}
+        </select>
+      </div>
+    </div>
+  );
+};
+
 const ListeningQuestionPane = ({ questions = [], userAnswers = {}, onAnswerChange }) => {
   const renderQuestion = (q) => {
     const qValue = userAnswers[String(q.question_number)];
@@ -275,6 +321,15 @@ const ListeningQuestionPane = ({ questions = [], userAnswers = {}, onAnswerChang
       case "mcq_multiple":
         return (
           <MultipleChoiceMultiple
+            key={q.id}
+            question={q}
+            value={qValue}
+            onChange={onAnswerChange}
+          />
+        );
+      case "matching":
+        return (
+          <MatchingDropdown
             key={q.id}
             question={q}
             value={qValue}

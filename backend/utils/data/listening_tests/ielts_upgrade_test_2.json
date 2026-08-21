@@ -1,0 +1,596 @@
+{
+  "title": "IELTS UPGRADE TEST 2",
+  "test_type": "academic",
+  "difficulty": "all",
+  "duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "title": "Part 1: John and Amanda Houghton",
+      "audio_url": "https://ehmakddeerzjcleqlasi.supabase.co/storage/v1/object/public/audios/IELTS%20UPGRADE%20TEST%20-%202.mp3",
+      "instruction_text": "Complete the notes below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer."
+    },
+    {
+      "section_number": 2,
+      "title": "Part 2: Office Move Overview & Floor Plan",
+      "audio_url": "https://ehmakddeerzjcleqlasi.supabase.co/storage/v1/object/public/audios/IELTS%20UPGRADE%20TEST%20-%202.mp3",
+      "instruction_text": "Questions 11–13: Label the chart below. Write the correct letter, A–E. Questions 14–20: Label the floor plan below. Write the correct letter, A–J."
+    },
+    {
+      "section_number": 3,
+      "title": "Part 3: Biophysics Team at Kelheim Discussion",
+      "audio_url": "https://ehmakddeerzjcleqlasi.supabase.co/storage/v1/object/public/audios/IELTS%20UPGRADE%20TEST%20-%202.mp3",
+      "instruction_text": "Questions 21–26: Which attitude is associated with the following people during the conversation? Choose six answers from the box and write the correct letter, A–H. Questions 27–30: Choose the correct letter, A, B or C."
+    },
+    {
+      "section_number": 4,
+      "title": "Part 4: Conducting an Archaeological Dig",
+      "audio_url": "https://ehmakddeerzjcleqlasi.supabase.co/storage/v1/object/public/audios/IELTS%20UPGRADE%20TEST%20-%202.mp3",
+      "instruction_text": "Questions 31–40: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer."
+    }
+  ],
+  "questions": [
+    {
+      "section_number": 1,
+      "question_number": 1,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Show: 1 [blank]",
+        "word_limit_text": "NO MORE THAN THREE WORDS AND/OR A NUMBER"
+      },
+      "correct_answers": ["Lions and Penguins"],
+      "explanation": "BA: Well, there's a matinee show and an evening show. The matinee show is called Lions and Penguins... C: I'll stick with Lions and Penguins please."
+    },
+    {
+      "section_number": 1,
+      "question_number": 2,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Seats: 2 [blank] Row 1, B, C and D",
+        "word_limit_text": "NO MORE THAN THREE WORDS AND/OR A NUMBER"
+      },
+      "correct_answers": ["Royal Circle"],
+      "explanation": "BA: Oh, you're in luck! There are only three seats left in the Royal Circle and they're all together. C: Nice! ... BA: So that's the Royal Circle, Row 1, B, C and D."
+    },
+    {
+      "section_number": 1,
+      "question_number": 3,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Start time: 2:00 p.m. 3 [blank] 3:00 p.m.",
+        "word_limit_text": "NO MORE THAN THREE WORDS AND/OR A NUMBER"
+      },
+      "correct_answers": ["Interval"],
+      "explanation": "BA: Now the matinee performance starts at 2:00 p.m. and you should be seated about 15 minutes before the curtains open. The interval will be at three for 15 minutes and the play will finish at 4:15."
+    },
+    {
+      "section_number": 1,
+      "question_number": 4,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Ticket (£): 45.00 4 [blank]",
+        "word_limit_text": "NO MORE THAN THREE WORDS AND/OR A NUMBER"
+      },
+      "correct_answers": ["per person"],
+      "explanation": "BA: Well, tickets are £45... BA: Per person."
+    },
+    {
+      "section_number": 1,
+      "question_number": 5,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Total Price (£): 90.00 ( 5 [blank] one free)",
+        "word_limit_text": "NO MORE THAN THREE WORDS AND/OR A NUMBER"
+      },
+      "correct_answers": ["buy two get"],
+      "explanation": "BA: But we're running a deal this week where if you buy two you get another at no cost. C: Buy two get one free?"
+    },
+    {
+      "section_number": 1,
+      "question_number": 6,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "- £30 cancellation fee for cancellations within 10 days of the 6 [blank]",
+        "word_limit_text": "NO MORE THAN THREE WORDS AND/OR A NUMBER"
+      },
+      "correct_answers": ["performance"],
+      "explanation": "BA: There is a cancellation fee, which only applies if you cancel within ten days of the performance, and that's £30."
+    },
+    {
+      "section_number": 1,
+      "question_number": 7,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "- Dates are not 7 [blank]",
+        "word_limit_text": "NO MORE THAN THREE WORDS AND/OR A NUMBER"
+      },
+      "correct_answers": ["flexible"],
+      "explanation": "BA: And just to let you know, the dates are not flexible. If you want to change when you go to see the performance, you have to cancel and start again."
+    },
+    {
+      "section_number": 1,
+      "question_number": 8,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the notes below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "- £ 8 [blank] per seat to change your seating arrangements",
+        "word_limit_text": "NO MORE THAN THREE WORDS AND/OR A NUMBER"
+      },
+      "correct_answers": ["10 charge", "10"],
+      "explanation": "BA: And one last thing: if you want to change your seats, there's a £10 charge per person, or per seat if you like."
+    },
+    {
+      "section_number": 1,
+      "question_number": 9,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the form below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Pay to the order of: 9 [blank]",
+        "image_url": "/assets/images/upgrade_t2_check.png",
+        "word_limit_text": "NO MORE THAN THREE WORDS AND/OR A NUMBER"
+      },
+      "correct_answers": ["Starr Theatre Bookings", "Starr Theater Bookings", "Starr Theatre Booking", "Starr Theater Booking"],
+      "explanation": "C: Will you accept a cheque? BA: Yes, that'll be absolutely fine. You can make it out to Starr Theatre Bookings: that's Starr - S-T-A-R-R Theatre Bookings."
+    },
+    {
+      "section_number": 1,
+      "question_number": 10,
+      "question_type": "sentence_completion",
+      "instruction_text": "Complete the form below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question_data": {
+        "text": "Memo Booking Ref: 10 [blank]",
+        "image_url": "/assets/images/upgrade_t2_check.png",
+        "word_limit_text": "NO MORE THAN THREE WORDS AND/OR A NUMBER"
+      },
+      "correct_answers": ["BUKTHTR14582"],
+      "explanation": "BA: And just write the booking reference on the cheque... It's BUKTHTR14582. That's BUKTHTR14582."
+    },
+    {
+      "section_number": 2,
+      "question_number": 11,
+      "question_type": "matching",
+      "instruction_text": "Label the chart below. Write the correct letter, A–E, next to questions 11-13.",
+      "question_data": {
+        "text": "Online Sales Department",
+        "image_url": "/assets/images/upgrade_t2_chart.png",
+        "options": ["A", "B", "C", "D", "E"]
+      },
+      "correct_answers": ["D"],
+      "explanation": "Manager: Once again, the Online Sales Department has outperformed the rest of the company. (This matches D, the tallest bar on the chart)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 12,
+      "question_type": "matching",
+      "instruction_text": "Label the chart below. Write the correct letter, A–E, next to questions 11-13.",
+      "question_data": {
+        "text": "Retail Sales Department",
+        "image_url": "/assets/images/upgrade_t2_chart.png",
+        "options": ["A", "B", "C", "D", "E"]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Manager: A little more surprising is how well the Retail Sales Department did. Indeed, if it continues to perform like this it will threaten the second-most profitable arm of the business - Design, but for the moment it must content itself with third place. (Third place is represented by bar A)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 13,
+      "question_type": "matching",
+      "instruction_text": "Label the chart below. Write the correct letter, A–E, next to questions 11-13.",
+      "question_data": {
+        "text": "Design Department",
+        "image_url": "/assets/images/upgrade_t2_chart.png",
+        "options": ["A", "B", "C", "D", "E"]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Manager: Indeed, if it continues to perform like this it will threaten the second-most profitable arm of the business - Design... (Second-most profitable is represented by bar C)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 14,
+      "question_type": "matching",
+      "instruction_text": "Label the floor plan below. Write the correct letter, A–J, next to questions 14-20.",
+      "question_data": {
+        "text": "Customer Service",
+        "image_url": "/assets/images/upgrade_t2_floorplan.png",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+      },
+      "correct_answers": ["H"],
+      "explanation": "Manager: Now, Tina, your customer service team is going to be placed in the open plan area to the right just behind the fire escape. (This matches cubicle H)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 15,
+      "question_type": "matching",
+      "instruction_text": "Label the floor plan below. Write the correct letter, A–J, next to questions 14-20.",
+      "question_data": {
+        "text": "Human Resources",
+        "image_url": "/assets/images/upgrade_t2_floorplan.png",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+      },
+      "correct_answers": ["F"],
+      "explanation": "Manager: On the other side of the floor, near the left fire escape, there is a cubicle allocated to each of the legal, human resources and sales teams. Sales, you guys will be nearest the fire escape; HR, in the middle... (Middle cubicle on the left is F)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 16,
+      "question_type": "matching",
+      "instruction_text": "Label the floor plan below. Write the correct letter, A–J, next to questions 14-20.",
+      "question_data": {
+        "text": "Legal",
+        "image_url": "/assets/images/upgrade_t2_floorplan.png",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+      },
+      "correct_answers": ["G"],
+      "explanation": "Manager: ...HR, in the middle, legal at the other end. (Legal is at the far end of the left cubicles, which matches G)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 17,
+      "question_type": "matching",
+      "instruction_text": "Label the floor plan below. Write the correct letter, A–J, next to questions 14-20.",
+      "question_data": {
+        "text": "Manager",
+        "image_url": "/assets/images/upgrade_t2_floorplan.png",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+      },
+      "correct_answers": ["J"],
+      "explanation": "Manager: Now, Frank, my assistant manager, will be behind you guys at the back in the left-corner office. I'll be opposite him in the other corner office. (The narrator manager's office is back-right, which is J)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 18,
+      "question_type": "matching",
+      "instruction_text": "Label the floor plan below. Write the correct letter, A–J, next to questions 14-20.",
+      "question_data": {
+        "text": "Finance",
+        "image_url": "/assets/images/upgrade_t2_floorplan.png",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+      },
+      "correct_answers": ["A"],
+      "explanation": "Manager: Moving to the front of the floor now; well, starting from the front entrance, nearest to you on the plan, on the left-hand side we've got the finance team... (Front-left cubicle matches A)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 19,
+      "question_type": "matching",
+      "instruction_text": "Label the floor plan below. Write the correct letter, A–J, next to questions 14-20.",
+      "question_data": {
+        "text": "Marketing",
+        "image_url": "/assets/images/upgrade_t2_floorplan.png",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+      },
+      "correct_answers": ["B"],
+      "explanation": "Manager: ...on the left-hand side we've got the finance team and marketing above them. (Above Finance A is B)."
+    },
+    {
+      "section_number": 2,
+      "question_number": 20,
+      "question_type": "matching",
+      "instruction_text": "Label the floor plan below. Write the correct letter, A–J, next to questions 14-20.",
+      "question_data": {
+        "text": "Research",
+        "image_url": "/assets/images/upgrade_t2_floorplan.png",
+        "options": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+      },
+      "correct_answers": ["C"],
+      "explanation": "Manager: On the other side we've got the research guys opposite marketing... (Opposite Marketing B is C)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 21,
+      "question_type": "matching",
+      "instruction_text": "Which attitude is associated with the following people during the conversation? Choose six answers from the box and write the correct letter, A–H, next to questions 21-26.",
+      "question_data": {
+        "text": "The Biophysics Team at Kelheim",
+        "options": [
+          "A. critical",
+          "B. relaxed",
+          "C. unsympathetic",
+          "D. grateful",
+          "E. insincere",
+          "F. unrealistic",
+          "G. welcoming",
+          "H. imaginative"
+        ]
+      },
+      "correct_answers": ["C"],
+      "explanation": "L: My team in the Biophysics Department were not very understanding of how it feels to be a new guy and really were quite hard on me. (This matches C, unsympathetic)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 22,
+      "question_type": "matching",
+      "instruction_text": "Which attitude is associated with the following people during the conversation? Choose six answers from the box and write the correct letter, A–H, next to questions 21-26.",
+      "question_data": {
+        "text": "The Professor’s Manager at Kelheim",
+        "options": [
+          "A. critical",
+          "B. relaxed",
+          "C. unsympathetic",
+          "D. grateful",
+          "E. insincere",
+          "F. unrealistic",
+          "G. welcoming",
+          "H. imaginative"
+        ]
+      },
+      "correct_answers": ["A"],
+      "explanation": "L: I knew, based on how quick he was to point out what you were doing wrong all the time, that it would be a challenge to have to work closely with him... (This matches A, critical)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 23,
+      "question_type": "matching",
+      "instruction_text": "Which attitude is associated with the following people during the conversation? Choose six answers from the box and write the correct letter, A–H, next to questions 21-26.",
+      "question_data": {
+        "text": "The Professor’s Employees at Kelheim",
+        "options": [
+          "A. critical",
+          "B. relaxed",
+          "C. unsympathetic",
+          "D. grateful",
+          "E. insincere",
+          "F. unrealistic",
+          "G. welcoming",
+          "H. imaginative"
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "L: They were at ease with me and the way I did things, so the department functioned really well for a time. (This matches B, relaxed)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 24,
+      "question_type": "matching",
+      "instruction_text": "Which attitude is associated with the following people during the conversation? Choose six answers from the box and write the correct letter, A–H, next to questions 21-26.",
+      "question_data": {
+        "text": "The Kelheim Directors",
+        "options": [
+          "A. critical",
+          "B. relaxed",
+          "C. unsympathetic",
+          "D. grateful",
+          "E. insincere",
+          "F. unrealistic",
+          "G. welcoming",
+          "H. imaginative"
+        ]
+      },
+      "correct_answers": ["F"],
+      "explanation": "L: ...being new to management, I'd never dealt with directors or the like before, and their expectations were just not very practical: they had their head in the clouds if you ask me! (This matches F, unrealistic)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 25,
+      "question_type": "matching",
+      "instruction_text": "Which attitude is associated with the following people during the conversation? Choose six answers from the box and write the correct letter, A–H, next to questions 21-26.",
+      "question_data": {
+        "text": "Dr Michael Stout",
+        "options": [
+          "A. critical",
+          "B. relaxed",
+          "C. unsympathetic",
+          "D. grateful",
+          "E. insincere",
+          "F. unrealistic",
+          "G. welcoming",
+          "H. imaginative"
+        ]
+      },
+      "correct_answers": ["G"],
+      "explanation": "L: I have Michael to thank for showing me the ropes. He was very considerate of the new faculty members and assisted me no end. (This matches G, welcoming)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 26,
+      "question_type": "matching",
+      "instruction_text": "Which attitude is associated with the following people during the conversation? Choose six answers from the box and write the correct letter, A–H, next to questions 21-26.",
+      "question_data": {
+        "text": "The Professor’s Current Students",
+        "options": [
+          "A. critical",
+          "B. relaxed",
+          "C. unsympathetic",
+          "D. grateful",
+          "E. insincere",
+          "F. unrealistic",
+          "G. welcoming",
+          "H. imaginative"
+        ]
+      },
+      "correct_answers": ["D"],
+      "explanation": "S1: Well sir, we're very glad to have you as ours; that's for sure. S2: Yeah, you make all the stuff sound so interesting... (This matches D, grateful)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 27,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "27 The students",
+        "options": [
+          "A. haven’t found the mutant gene yet.",
+          "B. haven’t been able to study the mutant gene on its own yet.",
+          "C. haven’t been able to confirm the results of their tests yet."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "S1: Yeah, but until we isolate it, testing cannot commence so the whole project is on hold at the moment. (This matches B)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 28,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "28 The project is",
+        "options": [
+          "A. six months behind schedule.",
+          "B. ahead of schedule but making slow progress now.",
+          "C. in a six-month testing phase."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "L: After all, correct me if I'm wrong, but did we not say a timeframe of maybe six months just to identify the culprit? S1: Yes, but having done that so quickly in the space of a week, it's frustrating to have to wait now. (This matches B)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 29,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "29 The infection associated with the mutant gene",
+        "options": [
+          "A. is passed directly from parent to child.",
+          "B. affects every second generation.",
+          "C. cannot be passed on to the next or subsequent generation."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "S2: We have managed to establish that the gene mutation bypasses every other generation... If the parent is infected, the child will be a silent carrier, who will go on to infect any children he or she has. (This matches B)."
+    },
+    {
+      "section_number": 3,
+      "question_number": 30,
+      "question_type": "mcq_single",
+      "instruction_text": "Choose the correct letter, A, B or C.",
+      "question_data": {
+        "text": "30 The students think that",
+        "options": [
+          "A. Bird Flu may cure the mutant-gene infection.",
+          "B. a symptom of Bird Flu may be key to fighting the mutant-gene infection.",
+          "C. a low body temperature may cure the mutant-gene infection."
+        ]
+      },
+      "correct_answers": ["B"],
+      "explanation": "S3: We don't think it was the virus, but the accompanying fever. His body temperature was raised to 105. We have a hypothesis that the mutant gene couldn't cope with such an excessive internal body temperature. (Fever is a symptom, matches B)."
+    },
+    {
+      "section_number": 4,
+      "question_number": 31,
+      "question_type": "sentence_completion",
+      "instruction_text": "Questions 31–40: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "First find a suitable dig site by surface-collecting - aim to locate a midden (place where 31 [blank] used to be dumped).",
+        "word_limit_text": "NO MORE THAN THREE WORDS"
+      },
+      "correct_answers": ["refuse", "rubbish"],
+      "explanation": "Lecturer: Ideally, you'll look to find a 'midden'; that is m-i-d-d-e-n. an archaic term for a refuse site... people would simply dig a random hole and designate it as the spot to throw rubbish in, and that's your 'midden'."
+    },
+    {
+      "section_number": 4,
+      "question_number": 32,
+      "question_type": "sentence_completion",
+      "instruction_text": "Questions 31–40: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "If surface-collecting does not prove fruitful, quiz 32 [blank] to see what they know about the area and redirect your search based on any firm tips you receive.",
+        "word_limit_text": "NO MORE THAN THREE WORDS"
+      },
+      "correct_answers": ["local people", "the local people"],
+      "explanation": "Lecturer: Alternatively, if your surface-collecting doesn't yield many finds, consider asking the local people of the area what they know."
+    },
+    {
+      "section_number": 4,
+      "question_number": 33,
+      "question_type": "sentence_completion",
+      "instruction_text": "Questions 31–40: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "Separate your finds into categories. Then clean the ones you think are important - avoid using 33 [blank] as this can cause damage to delicate pieces.",
+        "word_limit_text": "NO MORE THAN THREE WORDS"
+      },
+      "correct_answers": ["washing detergents", "washing detergent", "detergents", "detergent"],
+      "explanation": "Lecturer: Use plain water as washing detergents can damage delicate pieces and cause etchings and the like to vanish."
+    },
+    {
+      "section_number": 4,
+      "question_number": 34,
+      "question_type": "sentence_completion",
+      "instruction_text": "Questions 31–40: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "Use your findings to 34 [blank] the area where digging should commence.",
+        "word_limit_text": "NO MORE THAN THREE WORDS"
+      },
+      "correct_answers": ["pinpoint"],
+      "explanation": "Lecturer: Now, having done this groundwork, you should be in a position to pinpoint the area which is likely to produce the best results, and, therefore, ready to start your dig."
+    },
+    {
+      "section_number": 4,
+      "question_number": 35,
+      "question_type": "sentence_completion",
+      "instruction_text": "Questions 31–40: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "Gather your tools together. If you don’t have the right tools, the faculty permits students to 35 [blank]",
+        "word_limit_text": "NO MORE THAN THREE WORDS"
+      },
+      "correct_answers": ["borrow equipment", "borrow tools"],
+      "explanation": "Lecturer: Borrow equipment from the faculty here if you do not have the right tools at home."
+    },
+    {
+      "section_number": 4,
+      "question_number": 36,
+      "question_type": "sentence_completion",
+      "instruction_text": "Questions 31–40: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "Make a box screen if you haven’t got one. Use four 36 [blank] to make the box frame, connecting them with L-brackets.",
+        "word_limit_text": "NO MORE THAN THREE WORDS"
+      },
+      "correct_answers": ["planks of wood", "planks"],
+      "explanation": "Lecturer: You'll need four planks of wood, cut to measure, either to fit together as a square or rectangular box."
+    },
+    {
+      "section_number": 4,
+      "question_number": 37,
+      "question_type": "sentence_completion",
+      "instruction_text": "Questions 31–40: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "Add a mesh frame to the base using heavy-duty staples 37 [blank] .",
+        "word_limit_text": "NO MORE THAN THREE WORDS"
+      },
+      "correct_answers": ["or nails", "nails"],
+      "explanation": "Lecturer: Attach a one-quarter-inch mesh frame to the base using heavy-duty staples or nails."
+    },
+    {
+      "section_number": 4,
+      "question_number": 38,
+      "question_type": "sentence_completion",
+      "instruction_text": "Questions 31–40: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "A two-by-four-foot screen is best for anyone who is going to 38 [blank] .",
+        "word_limit_text": "NO MORE THAN THREE WORDS"
+      },
+      "correct_answers": ["sift by hand"],
+      "explanation": "Lecturer: If you are going to sift by hand, then design your box to 2 foot by four foot dimensions..."
+    },
+    {
+      "section_number": 4,
+      "question_number": 39,
+      "question_type": "sentence_completion",
+      "instruction_text": "Questions 31–40: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "Now the actual digging of the 39 [blank] can commence. Dig one large enough...",
+        "word_limit_text": "NO MORE THAN THREE WORDS"
+      },
+      "correct_answers": ["pit"],
+      "explanation": "Lecturer: Now, with your tools in hand, it is time to start the dig proper. Firstly, you will need to dig a pit. I'd caution against the temptation to dig a very small one..."
+    },
+    {
+      "section_number": 4,
+      "question_number": 40,
+      "question_type": "sentence_completion",
+      "instruction_text": "Questions 31–40: Complete the notes below. Write NO MORE THAN THREE WORDS for each answer.",
+      "question_data": {
+        "text": "...and highlight the edges using string or cord so that they are 40 [blank] .",
+        "word_limit_text": "NO MORE THAN THREE WORDS"
+      },
+      "correct_answers": ["clearly defined"],
+      "explanation": "Lecturer: Place a stake and an eyehook at each corner of the pit and pull some string or cord through each stake to keep the edges of the pit clearly defined."
+    }
+  ]
+}
